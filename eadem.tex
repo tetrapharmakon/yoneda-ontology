@@ -1,0 +1,56 @@
+\documentclass{amsart}
+\author{Fouche and Denta}
+\title{Yoneda lemma as a structural ``eadem sunt''}
+\usepackage{fouche}
+\setlength{\epigraphwidth}{.6\textwidth}
+\begin{document}
+\maketitle
+\section{Introduction}
+\epigraph{\textsc{Eadem svnt qvorvm vnvm potest svbstitvi alteri per transmvtationem}}{Leibniz, if he knew category theory}
+Serve un paragrafo che spieghi diffusamente dove prendiamo le categorie, e di conseguenza da dove deriviamo il metalinguaggio in cui ha senso la nozione di uguaglianza (metalinguistica).
+\section{Preliminaries on variable set theory}
+A first result is the equivalence of $I$-variable sets and the slice $\Set/I$: 
+\begin{proposition}
+  
+\end{proposition}
+\begin{proof}
+  
+\end{proof}
+\begin{remark}
+  A more abstract look at this construction regards it as a particular instance of the \emph{Grothendieck construction}: the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$. In this case, $I$ is regarded as a discrete category, so that all functors $\clE \to I$ are discrete fibrations.
+\end{remark}
+We observe that the category of variable sets is a topos: we break the result into the verification of the various axioms:
+\begin{proposition}
+$\Set/I$ is cartesian closed.
+\end{proposition}
+\begin{proof}
+  
+\end{proof}
+\begin{proposition}
+$\Set/I$ has a subobject classifier.
+\end{proposition}
+\begin{proof}
+  
+\end{proof}
+\begin{proposition}
+$\Set/I$ is cocomplete and accessible.
+\end{proposition}
+\begin{proof}
+  
+\end{proof}
+Accessibility is a corollary of Yoneda in the following form: every $F : I \to \Set$ is a colimit of representables
+\[
+F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)  
+\]
+($\clE(F)$ is small because in this case $\clE(F)\cong\coprod_{i\in I}Fi$)
+\begin{itemize}
+  \item classifo dei sottoggetti
+  \item internal language
+\end{itemize}
+\section{}
+\section{Nine copper coins}
+\epigraph{Explicaron que una cosa es igualdad y otra identidad y formularon una especie de reductio
+ad absurdum, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches
+padecen un vivo dolor. ¿No sería ridículo -interrogaron- pretender que ese dolor es el
+mismo?}{JLB ---Tl\"on, Uqbar, Orbis Tertius}
+\end{document}
