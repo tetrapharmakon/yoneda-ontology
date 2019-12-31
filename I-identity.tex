@@ -18,11 +18,14 @@
 
 \author{Fouche and Denta}
 \title{Categorical ontology I}
-\subtitle{identity and Yoneda lemma}
+\subtitle{Identity and Yoneda lemma}
 \usepackage{fouche}
 \setlength{\epigraphwidth}{.6\textwidth}
 \begin{document}
 \maketitle
+\begin{abstract}
+  As it stands, Yoneda lemma allows for a decent solution of the identity problem in ontology. Identity is not a primitive concept; instead it is a relational, context-dependent notion. Identity and existence through time is then solved by topos theory. As both a test-bench for the language and proof of concept we offer a possible topos-theoretic solution of the famous paradox of the nine coins. In this perspective, there is no need to agglomerate the category of Being into a unique subject.
+\end{abstract}
 \section{Introduction}
 \epigraph{\textsc{Eadem svnt qvorvm vnvm potest svbstitvi alteri per transmvtationem}}{Leibniz, if he knew category theory}
 Serve un paragrafo che spieghi diffusamente dove prendiamo le categorie, e di conseguenza da dove deriviamo il metalinguaggio in cui ha senso la nozione di uguaglianza (metalinguistica).
@@ -60,12 +63,11 @@ Accessibility is a corollary of Yoneda in the following form: every $F : I \to \
 \[
 F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)  
 \]
-($\clE(F)$ is small because in this case $\clE(F)\cong\coprod_{i\in I}Fi$)
-\begin{itemize}
-  \item classifo dei sottoggetti
-  \item internal language
-\end{itemize}
-\section{}
+($\clE(F)$ is small because in this case $\clE(F)\cong\coprod_{i\in I}Fi$).
+\begin{corollary}
+  The category of variable sets is a Grotendieck topos.
+\end{corollary}
+\section{The internal language of variable sets}
 \section{Nine copper coins}
 \epigraph{Explicaron que una cosa es igualdad y otra identidad y formularon una especie de reductio
 ad absurdum, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches

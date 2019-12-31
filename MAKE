@@ -1,0 +1,12 @@
+case "$1" in
+"I") 
+latexmk -pdf -pvc I-identity ;;
+"I")
+latexmk -pdf -pvc II-homot ;;
+"III")
+latexmk -pdf -pvc III-mereo ;;
+"all")
+latexmk -pdf I-identity
+latexmk -pdf II-homot
+latexmk -pdf III-mereo ;;
+esac

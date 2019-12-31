@@ -1,8 +1,36 @@
 \documentclass{amsart}
+
+\makeatletter
+\def\@settitle{\begin{center}%
+  \baselineskip14\p@\relax
+  \bfseries
+  \uppercasenonmath\@title
+  \@title
+  \ifx\@subtitle\@empty\else
+     \\[1ex]\uppercasenonmath\@subtitle
+     \footnotesize\mdseries\@subtitle
+  \fi
+  \end{center}%
+}
+\def\subtitle#1{\gdef\@subtitle{#1}}
+\def\@subtitle{}
+\makeatother
+
 \author{Fouche and Denta}
 \title{Categorical Ontology III}
-\title{Mereology}
+\subtitle{Mereology}
 \usepackage{fouche}
 \begin{document}
+\maketitle 
+\begin{abstract}
+  As it stands, mereology is just the internal language of the category of ordinals/cardinals.
+
+  We outline a theory of ordinals/cardinals in every sufficiently structured category (e.g. in ever topos), to show how subtle the choice of axioms for a mereology can be, in terms of the internal and external properties of the ambient category (two-caued logic, being Boolean, IAC, having an infinite NNO\dots).
+
+  This shall serve as a guidance to study the totality of mereological theories as a whole, instead of focusing on the study now of this, now of that explicit model, with peculiarities and limitations. Ideally, a ``mereological theory'' will be none other than the theory of ordinals in the internal language of a topos, and a ``mereotopological theory'' the theory of ordinals in the internal language of a geometric topos.
+\end{abstract}
+\section{}
+\section{}
+\section{}
 \section{}
 \end{document}

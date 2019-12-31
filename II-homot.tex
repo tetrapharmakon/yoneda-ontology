@@ -1,9 +1,32 @@
 \documentclass{amsart}
+
+\makeatletter
+\def\@settitle{\begin{center}%
+  \baselineskip14\p@\relax
+  \bfseries
+  \uppercasenonmath\@title
+  \@title
+  \ifx\@subtitle\@empty\else
+     \\[1ex]\uppercasenonmath\@subtitle
+     \footnotesize\mdseries\@subtitle
+  \fi
+  \end{center}%
+}
+\def\subtitle#1{\gdef\@subtitle{#1}}
+\def\@subtitle{}
+\makeatother
+
 \author{Fouche and Denta}
 \title{Categorical ontology II}
 \subtitle{No identity without homotopy}
 \usepackage{fouche}
 \begin{document}
+\maketitle
+\begin{abstract}
+  The branch of topology named \emph{homotopy theory} recently defied a well\hyp{}established ontological assumptions such as the identity principle; the many commonalities between category theory and homotopy theory suggest that ``identity'' is not a primitive concept, but instead depends on our concrete representation of mathematical entities. When $X,Y$ are objects in a category $\clC$, there is often a class of ``equivalences'' $W \subseteq \hom(\clC)$ prescribing that $X,Y$ shouldn't be distinguished; equality (better, some sort of homotopy \emph{equivalence}) is then defined \emph{ex post} in terms of $W$, changing as the ambient category $\clC$ does; this yields a $W$-parametric notion of identity $\equiv_W$, allowing categories to be categorified versions of \emph{Bishop sets}, i.e. pairs $(S,\rho)$ where $\rho$ is an equivalence relation on $S$ prescribing a $\rho$-equality.
+
+  As both a test-bench for the language and proof of concept we offer a possible homotopy-theoretic approach to Black's ancient two spheres' problem. The interlocutors of Black's imaginary dialogue inhabit respectively an Euclidean world and an affine world, and this affects their perception of the ``two'' spheres.
+\end{abstract}
 \section{Introduction}
 \section{Homotopy theory}
 l'80\% del paper mi sa che si scrive scopiazzando dalla mia vecchia nota per i filosofi. Questa parte deve introdurre
@@ -14,6 +37,7 @@ l'80\% del paper mi sa che si scrive scopiazzando dalla mia vecchia nota per i f
   \item \dots tutta roba che già c'è nel documento per i viennesi.
 \end{itemize}
 \section{No identity without homotopy}
+\epigraph{I am arguing for the thesis that identity is relative}{\cite{}}
 \section{Two exactly similar spheres}
 \epigraph{Le soleil est un globe froid, solide et homogène. Sa surface est divisée en carrés d’un mètre, qui sont les bases de longues pyramides renversées, filetées, longues de 696999 kilomètres, les pointes à un kilomètre du centre. }{A. Jarry ---Deuxième lettre à lord Kelvin.}
 \end{document}
