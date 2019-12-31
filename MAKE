@@ -1,12 +1,16 @@
 case "$1" in
 "I") 
-latexmk -pdf -pvc I-identity ;;
+latexmk -pdf -pvc I-identity 
+latexmk -c ;;
 "I")
-latexmk -pdf -pvc II-homot ;;
+latexmk -pdf -pvc II-homot 
+latexmk -c ;;
 "III")
-latexmk -pdf -pvc III-mereo ;;
+latexmk -pdf -pvc III-mereo 
+latexmk -c ;;
 "all")
 latexmk -pdf I-identity
 latexmk -pdf II-homot
-latexmk -pdf III-mereo ;;
+latexmk -pdf III-mereo 
+latexmk -c ;;
 esac
