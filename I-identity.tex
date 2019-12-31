@@ -1,6 +1,24 @@
 \documentclass{amsart}
+
+\makeatletter
+\def\@settitle{\begin{center}%
+  \baselineskip14\p@\relax
+  \bfseries
+  \uppercasenonmath\@title
+  \@title
+  \ifx\@subtitle\@empty\else
+     \\[1ex]\uppercasenonmath\@subtitle
+     \footnotesize\mdseries\@subtitle
+  \fi
+  \end{center}%
+}
+\def\subtitle#1{\gdef\@subtitle{#1}}
+\def\@subtitle{}
+\makeatother
+
 \author{Fouche and Denta}
-\title{Yoneda lemma as a structural ``eadem sunt''}
+\title{Categorical ontology I}
+\subtitle{identity and Yoneda lemma}
 \usepackage{fouche}
 \setlength{\epigraphwidth}{.6\textwidth}
 \begin{document}
