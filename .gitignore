@@ -13,6 +13,7 @@
 .*.lb
 *.pdf
 *.rtf
+*.bak*
 
 
 ## Intermediate documents:

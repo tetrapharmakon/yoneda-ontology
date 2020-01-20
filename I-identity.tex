@@ -16,10 +16,13 @@
 \def\@subtitle{}
 \makeatother
 
+\newcommand{\true}{\texttt{t}}
+\def\id{\text{id}}
 \author{Fouche and Denta}
 \title{Categorical ontology I}
 \subtitle{Identity and Yoneda lemma}
 \usepackage{fouche}
+
 \setlength{\epigraphwidth}{.6\textwidth}
 \begin{document}
 \maketitle
@@ -30,31 +33,80 @@
 \epigraph{\textsc{Eadem svnt qvorvm vnvm potest svbstitvi alteri per transmvtationem}}{Leibniz, if he knew category theory}
 Serve un paragrafo che spieghi diffusamente dove prendiamo le categorie, e di conseguenza da dove deriviamo il metalinguaggio in cui ha senso la nozione di uguaglianza (metalinguistica).
 \section{Preliminaries on variable set theory}
-A first result is the equivalence of $I$-variable sets and the slice $\Set/I$: 
+In some of our proofs it will be crucial to treat the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \ref{}) on the same ground; once the following result is proved, we freely refer to each of these two categories as \emph{variable sets}.
 \begin{proposition}
-  
+Let $I$ be a set, regarded as a discrete category; let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism) between these two categories. 
 \end{proposition}
 \begin{proof}
+  Let us give a very hands-on proof: consider an object $F_h : X\to I$ of $\Set/I$, and define a function as $i\mapsto h^\leftarrow(i)$; of course, since $I$, being a set, is a discrete category, this sets up a functor $I \to \Set$. 
+
+  In the opposite direction, let $F : I \to \Set$ be a functor. This defines a function $h_F : \coprod_{i\in I}Fi \to I$, where $\coprod_{i\in I} Fi$ is the disjoint union of all the sets $Fi$.
+  The claim follows from the fact that the correspondences $h\mapsto F_h$ and $F\mapsto h_F$ are mutually inverse.
   
+  This is however obvious: the function $F_{h_F}$ sends $i\in I$ to the set $h_F^\leftarrow(i)=Fi$, and the function $h_{F_h} \in \Set/I$ has domain $\coprod_{i\in I}F_h(i) = \coprod_{i\in I}h^\leftarrow(i)=X$ (as $i$ runs over the set $I$, the disjoint union of all preimages $h^\leftarrow(i)$ equals the domain of $h$, i.e. the set $X$).
 \end{proof}
 \begin{remark}
-  A more abstract look at this construction regards it as a particular instance of the \emph{Grothendieck construction}: the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$. In this case, $I$ is regarded as a discrete category, so that all functors $\clE \to I$ are discrete fibrations.
+  A more abstract look at this result regards it as a particular instance of the \emph{Grothendieck construction} (see \cite{}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \ref{}). In this case, the domain $\clC=I$ is a discrete category, so that all functors $\clE \to I$ are discrete fibrations.
 \end{remark}
-We observe that the category of variable sets is a topos: we break the result into the verification of the various axioms:
+The next crucial step of our analysis is the observation that the category of variable sets is a topos: we break the result into the verification of the various axioms, as given in \cite{}.
 \begin{proposition}
-$\Set/I$ is cartesian closed.
+The category of variable sets is cartesian closed.
 \end{proposition}
 \begin{proof}
-  
+  We shall first show that the category of variable sets admits products: this is obvious in $\Set/I$, products are precisely pullbacks; note that theorem \ref{} gives an identification
+  \[\vcenter{\scriptsize\xymatrix@!=1mm{
+& X\times_I Y \ar[dd]^h \ar@[lightgray][dr]\ar@[lightgray][dl]&  \\
+{\color{lightgray} X} \ar@[lightgray][dr]_{\color{lightgray} f}&& {\color{lightgray} Y} \ar@[lightgray][dl]^{\color{lightgray} g}\\
+& I &
+  }}\iff i\mapsto h^\leftarrow(i) = \Big\{(x,y) \in X\times_I Y \mid h(x,y)=i\Big\}\]
+  and given the universal property of a pullback, this yields a canonical bijection $h^\leftarrow(i)\cong f^\leftarrow(i)\times g^\leftarrow(i)$. This is exactly the definition of the product of the two functors $F_f, F_g : I\to \Set$.
+
+  Next, we shall show that each functor $\firstblank \times_I Y$ has a right adjoint $Y \pitchfork_I\firstblank$. The functor $\Set^I \to \Set^I : Z\mapsto Y\pitchfork_I Z$ where $Y\pitchfork_I Z : i \mapsto \Set(Y_i, Z_i)$ does the job. This sets up the bijection 
+  \[\begin{array}{c}
+    \xymatrix{X\times_I Y \ar[r] & Z} \\ \hline
+    \xymatrix{X \ar[r] & Y\pitchfork_I Z}
+  \end{array}\]
+  and by a completely analogous argument (the functor $\firstblank\times_I\secondblank$ gives a symmetric monoidal structure to variable sets), 
+  \[\begin{array}{c}
+    \xymatrix{X\times_I Y \ar[r] & Z} \\ \hline
+    \xymatrix{Y \ar[r] & X\pitchfork_I Z;}
+  \end{array}\]
+  this concludes the proof that the category of variable sets is cartesian closed.
 \end{proof}
 \begin{proposition}
-$\Set/I$ has a subobject classifier.
+The category of variable sets has a subobject classifier.
 \end{proposition}
 \begin{proof}
-  
+  Recall from \ref{} that we shall find a variable set $\Omega$ such that there is a bijection
+  \[\begin{array}{c}
+    \xymatrix{A \ar[r] & \Omega} \\ \hline
+    \textsf{Sub}_I(A)
+  \end{array}\]
+  where $\textsf{Sub}_I(A)$ denotes the set of isomorphism classes of monomorphisms into $A$, in the category of variable sets.\footnote{A monomorphism into $A$ as an object of $\Set^I$ is nothing but a family of injections $s_i : S_i \to A_i$; a monomorphism in $\Set/I$ is a set $S$ in a commutative triangle 
+  \[\scriptsize
+  \xymatrix@!=1mm{S\ar[rr]\ar[dr]_s && A\ar[dl]^a \\ &I&}\]}
+
+  In order to find such an object, we look at what shape shall $\Omega$ have, and what role its universal property plays in its characterization:
+  \begin{itemize}
+    \item 
+    \item 
+  \end{itemize}
+  For the sake of simplicity, for the rest of the proof we fix as category of variable sets the slice $\Set/I$.
+
+  From this we make the following guess: as an object of $\Set/I$, $\Omega$ is the object $\pi_I : I\times \{0,1\} \to I$. We are thus left with the verification that $\pi_I$ has the correct structure and universal property.
+
+  First, we shall find a monomorphism $\true : * \to \Omega$ in $\Set/I$, i.e. an injective function $I\to \Omega$ that has $\pi_I$ as left inverse. This generalised element ``chooses the $\lceil$true$\rceil$ truth value'' in $\Omega$. (Evidently, the identity $\id_I : I \to I$ is the terminal object in $\Set/I$.)
+
+  It turns out that the function $I \to I\times \{0,1\}$ plays the r\^ole of $\true$: indeed, given a monomorphism $S \hookrightarrow A$ the commutative square 
+  \[
+  \vcenter{\xymatrix{
+    S\ar[d]\ar[r] & I \ar[d]^{\true}\\
+    A \ar[r]_{\chi_S} & I\times \{0,1\}
+  }}  
+  \]
 \end{proof}
 \begin{proposition}
-$\Set/I$ is cocomplete and accessible.
+The category of variable sets is cocomplete and accessible.
 \end{proposition}
 \begin{proof}
   
@@ -65,12 +117,12 @@ F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)
 \]
 ($\clE(F)$ is small because in this case $\clE(F)\cong\coprod_{i\in I}Fi$).
 \begin{corollary}
-  The category of variable sets is a Grotendieck topos.
+  The category of variable sets is a Grothendieck topos.
 \end{corollary}
 \section{The internal language of variable sets}
+\epigraph{I am hard but I am fair; there is no racial bigotry here. [\dots\unkern] Here you are all equally worthless.}{GySgt Hartman}
 \section{Nine copper coins}
-\epigraph{Explicaron que una cosa es igualdad y otra identidad y formularon una especie de reductio
-ad absurdum, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches
+\epigraph{Explicaron que una cosa es \emph{igualdad}, y otra \emph{identidad}, y formularon una especie de \emph{reductio ad absurdum}, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches
 padecen un vivo dolor. ¿No sería ridículo -interrogaron- pretender que ese dolor es el
 mismo?}{JLB ---Tl\"on, Uqbar, Orbis Tertius}
 \end{document}

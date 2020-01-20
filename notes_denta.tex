@@ -1,0 +1,174 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\usepackage{xcolor,amsmath,amsfonts}
+
+\newenvironment{fo}[1]{\color{red} \textbf{Fouche said}: #1}{\color{black}}
+\newenvironment{de}[1]{\color{blue} \textbf{Denta said}: #1}{\color{black}}
+
+\begin{document}
+	
+	\title{Appunti per ``Yoneda Lemma as a Structural \textit{Eadem Sunt}''}
+	\author{D. Denta}
+	\maketitle
+	
+	\tableofcontents
+	\section{CT come metalinguaggio}
+	[Il linguaggio categoriale ci permette di rilevare gli pseudo-problemi delle formulazioni tradizionali dell'ontologia contemporanea più avanzata, di dissolverli e/o risolverli, concentrandosi su ciò che rimane, lo ``scheletro'' del problema, espresso con poche nozioni basilari della \textit{Homotopy Type Theory}].
+
+	\fo{SACRO DIO CANE, gli a capo con il doppio backslash no però, eh.}\endfo
+	Se ci è concesso un gioco di parole, nostra ambizione è suggerire non, come paventa la tradizione analitica, un \textit{uso corretto del linguaggio}, quanto piuttosto un \textit{uso del linguaggio corretto}, il quale è, ovviamente, quello della \textbf{CT}. 
+	[Una delle caratteristiche messe in evidenza dal linguaggio di \textbf{CT} è l'inutilità e impossibilità di parlare sensatamente di ontologia in senso ``assoluto''; si può farlo solo relativamente a una data teoria $T$, come già alcuni pensatori (ad esempio, Peter Geach) avevano suggerito. 
+	\fo{Ok. Io porrei così la questione (ed è il motivo per cui avevo chiesto di stare attenti a linguaggio VS metalinguaggio): sin dal lavoro di Lawvere riguardante la semantica funtoriale, le categorie sono le teorie che vogliamo interpretare, ma anche i luoghi in cui vogliamo interpretare quelle teorie: una teoria è infatti una categoria --piccola-- che realizza un dato linguaggio logico $L$, e allo stesso tempo una categoria --grande-- è ``l'Universo'' all'interno del quale vogliamo fare Matematica; vi sono diversi punti su cui insistere, alcuni non molto chiari persino ai matematici; per esempio il fatto che non esiste una matematica sola; ne esiste una --con la sua algebra, la sua analisi e la sua teoria dei gruppi-- per ogni categoria entro la quale vogliamo 
+	
+	In sintesi: in teoria delle categorie sono oggetti puramente sintattici: è il contesto a incarnare questa sintassi in una semantica, a dare significato ai simboli. Il linguaggio è più povero, perché ora non si parla più di un numero 6, ma di "qualsiasi cosa il numero 6 significhi, in relazione al contesto dove esso è inserito"; la matematica è quella cosa che si fa nelle categorie, e per ogni teoria matematica serve una classe di categorie diversa (abeliane per fare geometria algebrica; topos o CCC per fare logica; categorie modello per fare topologia algebrica; categorie algebriche per fare algebra universale\dots
+	
+	La teoria delle categorie dice una cosa che i matematici tendono a non capire bene, e che genera una certa confusione: tutta la matematica che un professore associato a Berkeley che si occupa di, diciamo, combinatoria, o sistemi dinamici ha visto nella sua carriera, tutta quella che ha prodotto, che i suoi colleghi gli hanno insegnato, che lui ha insegnato ai suoi studenti, su cui ha formulato congetture entusiasmanti... tutta quella matematica succede dentro \emph{una sola} categoria. Io invece ne conosco almeno due, e conosco dei modi per prendere la matematica nel suo complesso, ossia l'intera teoria dei gruppi, l'intera teoria degli anelli, l'intera teoria di Galois, l'intera topologia algebrica, e portarla da una categoria all'altra. 
+	
+	In questo senso la teoria delle categorie "è più grande della matematica nel suo complesso" e ne fa da fondazione; in questo senso è un metalinguaggio dove è possibile rifare la matematica nella sua interezza. L'idea, che è anche ciò che i matematici tendono a non capire bene, e che senza la teoria delle categorie non si riesce nemmeno a enunciare, è che \emph{le teorie matematiche sono a loro volta oggetti matematici}, e in quanto tali sono passibili dello stesso studio di cui sono passibili gli oggetti di cui quelle teorie parlano. Ovviamente questo è impreciso, perché scopre il fianco a paradossi terribili: altrettanto ovviamente, il motivo per cui sto essendo impreciso è che l'idea è molto piu importante della sua formalizzazione. Una formalizzazione in questo senso, però, è possibile.
+
+  Prevedibilmente, gli oggetti matematici in questione sono proprio le categorie, che di CT sono l'oggetto di studio: "la teoria dei gruppi" è quell'oggetto matematico che chiamo la categoria dei gruppi. Ma posso andare più in là e definire una "teoria" come una particolare categoria T, e considerare i suoi "modelli", ossia i modi di realizzare la teoria T "dentro" un'altra categoria, per esempio quella degli insiemi, o quella dei gruppi abeliani, etc. Allora, se chiamo questi modelli "funtori", e scrivo $T \to Set$ per uno di tali funtori, la totalità di questi modelli forma una categoria che "dice le stesse cose che la matematica classica dice sulla teoria che corrisponde a $T$". Incidentalmente "l'unificazione della matematica attraverso la teoria dei topos" è una generalizzazione di questo problema: se scrivo $(T,Set)$ per la categoria dei modelli di $T$, cosa implica aver trovato che $(T,Set)\cong (S,Set)$ (molto: $T,S$ non possono essere troppo lontane come teorie, se hanno gli stessi modelli, no?)
+
+Niente più e niente meno che un teorema del tipo: se due gruppi agiscono nello stesso modo sugli stessi insiemi, quanto distanti sono quei gruppi? Solo che qui non si parla di gruppi, ma di teorie matematiche nella loro interezza; e non di fumosi concetti da filosofo, no, sono definizioni precise, che parlano con rigore di cose che senza questo linguaggio non è nemmeno pensabile dire.
+
+Allora tanto vale studiare tutte quelle cose con cui si fa matematica, nella loro interezza. E la parte di matematica che si occupa di studiare le categorie, cioè le varie parti della matematica come singoli oggetti matematici nella loro mutua interazione come si chiamerà\dots?}\endfo
+	Nell'ottica relazionale ispirata dall'uso dei concetti categoriali, è naturale ammettere la ``relatività ontologica''. Questione sulla quale in filosofia si dibatte da decenni e che, in \textbf{CT}, è naturalmente implicata. Alcuni esempi classici dell'ontologia (vedremo qui il paradosso di Borges, e in un lavoro successivo, le sfere distinte di Black) sono più agevolmente decodificabili, e risolvibili, analizzati in riferimento al contesto, cioè $dom(T)$ di una data $T$]. 
+	\fo{Sì. Vale la pena notare che il nostro claim sarà ``sia nel paradosso delle nove monete di rame, sia nell'esperimento mentale di Black, esistono una categoria $\mathcal C_{\text{Bor}}$ e una categoria $\mathcal C_\text{Bla}$ con oportune proprietà, per cui il ragionamento paradossale (\emph{le nove monete non sono esistite nella notte tra mercoledì e giovedì}, e \emph{le due sfere non sono due perché non vi è modo di distinguerle}) svaniscono.''
+	La natura figmentale dell'esempio delle due sfere si riassume così: un interlocutore pensa le sfere in uno spazio euclideo; l'altro interlocutore in uno spazio affine. A generare il paradosso è semplicemente l'incapacità dei due (e di Black) di notare che la conversazione avviene \emph{riguardo agli stessi oggetti} ma in categorie diverse: per $A$, nella categoria dove c'è una mappa tra le due sfere quando hanno lo stesso centro e lo stesso raggio --sono quindi ``euclideanamente uguali''; per $B$, nella categoria dove c'è un isomorfismo tra le due sfere quando tra loro c'è una trasformazione \emph{affine}. Allora $A$ vede diverse cose che $B$ vede uguali, perché opera un quoziente rispetto a una relazione di equivalenza più fine di quella che opera $A$. Questo esempio da solo permette di introdurre praticamente tutti gli strumenti di cui renderemo conto in ``no identity w/out homotopy'':
+	\begin{itemize}
+		\item Questo esempio rende lampante il fatto che una categoria è determinata dai suoi morfismi molto più che dai suoi oggetti;
+		\item mette in chiaro in un esempio specifico il fatto che la relazione di identità non è primitiva; è contestuale. Ed è binaria, perché è un caso particolare di una nozione di omotopia (meglio: è la nozione di isomorfismo in una categoria dell'omotopia, che resta indotta dalla nozione di omotopia di cui $\mathcal C$ era dotata. No identity without homotopy, appunto).
+		\item Questo è né più né meno che il contenuto strutturale del programma di Klein: le figure dello spazio restano sempre le stesse, raccolte nella classe $\mathbb S$; ciò che cambia è il gruppo(ide) $\mathcal G$ che facciamo agire sulle figure e di cui prendiamo la categoria delle azioni $\mathbb S /\!\!/\mathcal G$; ``il mondo'' con la sua nozione di identità è l'insieme di Bishop
+		\[\Big\{ \pi_0(\mathbb S/\!\!/\mathcal G) \mid [x] \equiv [y] \iff \exists \varphi : x \to y\Big\}\]
+		\item Permette di prevedere cosa penserebbe del problema un ipotetico interlocutore $C$ che vivesse in un mondo proiettivo (una sfera e un'iperbole sono lo stesso oggetto) o in uno topologico (una sfera e un cubo sono lo stesso oggetto), etc. Ovviamente si può ragionare anche viceversa: basta trovare un contesto dove due oggetti spazialmente coincidenti non sono ``lo stesso'' oggetto. La sfida è che bisogna uscire da fondazione insiemistica (l'assioma di estensionalità è precisamente l'asserto per cui due cose che hanno gli stessi punti sono una cosa sola); invece di impelagarsi nella costruzione precisa di un controesempio (ce ne sono, in fondazioni type-teoretiche), penso sia meglio dire semplicemente: ``ecco, vedete? Il principio di identità è  a tutti gli effetti l'assioma di estensionalità: voi trovate assurdo che a dichiarare uguali due enti non sia sufficiente dire che hanno gli stessi atomi. Eppure questo è possibile: voi classici non avete la nozione di identità più forte in assoluto, state nel mezzo; e la metateoria risultante dal prendere una nozione di identità più stringente è semmai ancor piu interessante di quella cui siete abituati. Quindi la nozione di uguaglianza non è \emph{immutabile, scolpita nel tempo}\footnote{Non sei l'unico che apprezza il cinema impegnato}. E' un assioma: se lo vuoi lo prendi, altrimenti non lo prendi. E se non lo prendi si apre un mondo, perché ammetti che due cose sono uguali anche quando non hanno gli stessi punti, oppure che \emph{non basta} avere gli stessi punti per essere uguali, nello stesso senso in cui non è sufficiente che due insiemi siano in biiezione affinché siano omeomorfi, o isomorfi come gruppi, etc.'' Chiaramente, questo lastrica la strada al lemma di Yoneda, che ``è l'assioma di estensionalità in CT'' (lo introdurrei esattamente con queste parole, e spenderei una parte congrua del lavoro a darne una introduzione \emph{ad usum delphini} che invece che di trasformazioni naturali e gruppianellicampi parli di ontologia e di estensionalità).
+	\end{itemize}
+	Qual è il punto di tutto questo? Che una sfera è molte cose: è uno spazio topologico, è una varietà algebrica, è una varietà differenziale, è un gruppo di Lie (non in dimensione 2, ma per esempio in dimensione 1 o 3), è una superficie di Riemann, è questo ed è quell'altro. $A$ e $B$ nell'esempio di Black parlano uno di una sfera $S^2_A$ che appartiene a una categoria $A$, e l'altro di una sfera $S^2_B$ che appartiene a una categoria $B$. Il paradosso nasce quindi da un uso scorretto e impreciso del formalismo.
+	
+	Per quanto riguarda Borges invece, in un topos di insiemi variabili ${\sf Set}/I$, indicizzati da un opportuna base $I$ sconnessa (ad esempio, ma è solo un esempio, $[0,1/3)\cup [1/3,1]$), le nove monete di rame non hanno ragione di ``perseverare nell'esistenza'' nella notte tra mercoledì e giovedì, nel senso che la funzione che ne mappa l'esistenza può assumere valore ${\sf true}$ in certi momenti e $\sf 0$ in altri. Quello indicizzato da $[0,1/3)\cup (2/3,1]$ è un mondo che ``smette di esistere'' per un po', nella notte tra mercoledì e giovedì, e ``torna ad esserci'' subito dopo, senza che i suoi abitanti siano stati spostati o alterati in alcun modo. Questo perché una funzione che assume valori diversi (mettiamo costantemente 1 e costantemente 0) su diverse componenti connesse ha una discontinuità in $1/3$ \emph{per noi} ma non per il linguaggio interno della categoria ${\sf Set}/I$.
+	
+	Ritengo comunque doveroso precisare che la vera ragione per cui il paradosso delle nove monete non sta in piedi è molto più primitiva: il rame non può arrugginire.}\endfo
+	\section{Introduzione di entità astratte (matematiche) in ontologia}
+	Sviluppare questo appunto di Carnap sull'introduzione di qualunque tipo di entità astratte in semantica (ma vale anche in ontologia). Per un filosofo non è una ovvietà, e l'articolo di Carnap è un esempio di tentativo di spiegare come si procede nello sviluppo di una disciplina:
+	\begin{quotation}
+		we take the position that
+		the introduction of the new ways of speaking does not need any theoretical justification
+		because it does not imply any assertion of reality [...].  it is a
+		practical, not a theoretical question; it is the question of whether or not to accept the new
+		linguistic forms. The acceptance cannot be judged as being either true or false because it is
+		not an assertion. It can only be judged as being more or less expedient, fruitful, conducive to
+		the aim for which the language is intended. Judgments of this kind supply the motivation for
+		the decision of accepting or rejecting the kind of entities. [Carnap, 1956]
+	\end{quotation}
+	\section{The structuralist way}
+	Summary: \textit{nozione (in un certo senso ``a priori'') di struttura, suo development in mathematical history, rapporto con \textbf{CT}, sottigliezze del bourbakismo}
+	\begin{quotation}
+		\begin{flushright}
+		\textit{Le due posizioni} [strutturalismo e deduttivismo] \textit{dicono poco,ma non dicono sciocchezze, non corrono il rischio di essere falsificate.} [Lolli, 2002]
+	\end{flushright}
+	\end{quotation}
+\begin{quotation}
+	\begin{flushright}
+		\textit{CT emphasized structure instead substance}. [Kr\"omer, 2007]
+	\end{flushright}
+\end{quotation}
+	Nel corso del '900 la direzione dell'evoluzione della matematica ha portato la disciplina inizialmente a frazionarsi in differenti sotto-discipline, con loro oggetti e linguaggi specifici, e poi a trovare un'inattesa unificazione sotto un'unica nozione portante, quella di \textbf{struttura}, e lo strumento formale che meglio ne caratterizzato il concetto, le \textbf{categorie}. 
+	Questo processo ha portato spontaneamente ad una revisione epistemologica della matematica e ha ispirato, nell'evolversi degli strumenti operativi, una revisione sia dei suoi fondamenti che della sua ontologia. Per molti studiosi è innegabile che 
+	\begin{quotation}
+		[the] mathematical uses of the tool CT and epistemological
+		considerations having CT as their object cannot be separated, neither historically
+		nor philosophically. [Kr\"omer, 2007]
+	\end{quotation} 
+	Ciò è però avvenuto prescindendo sia dallo specifico dibattito fondazionale (attivissimo all'epoca in cui apparse il gruppo Bourbaki, che ha avviato il processo strutturale) sia da più generali considerazioni filosofiche, anche di mera filosofia della matematica. 
+	
+	La nozione di \textit{struttura} è, in un certo senso, un concetto ``a priori''; vale a dire uno strumento utile nella pratica matematica e per caratterizzare un particolare ontological viewpoint. Non solo non è definito formalmente ma caso per caso i matematici stabiliscono quando esso possiede o meno significato (nel contesto di una $T$ data). La pratica matematica, nella via strutturalista, produce una ontologia ``naturale'', che alcuni, in seguito, sentirono il dovere di caratterizzare con più precisione. D'altronde, analogamente a quanto suggeriva Carnap rispetto alla semantica,
+	\begin{quotation}
+		 mathematicians creating
+		their discipline were apparently not seeking to justify the constitution of the
+		objects studied by making assumptions as to their ontology. [Kr\"omer, 2007]
+	\end{quotation}  
+Ma, al netto dei tentativi (anche dello stesso gruppo Bourbaki), ciò che conta è che l'abitudine a ragionare in termini di strutture abbia prodotto implicite posizioni epistemologiche e ontologiche.
+Questione che meriterebbe una lunga riflessione autonoma. Per i nostri scopi basti enunciare una distinzione che Kr\"omer riprende in parte da [Corry, 1996]: quella tra \textbf{structuralism} e \textbf{structural mathematics}: 
+\begin{itemize}
+	\item[\textbf{(1)}] Structuralism: \textit{the philosophical
+		position regarding structures as the subject matter of mathematics}
+	\item[\textbf{(2)}] Structural Mathematics: \textit{the methodological approach to look in a given problem
+		“for the structure”}
+\end{itemize}   
+\textbf{(1)} implica \textbf{(2)} ma non è necessaria l'implicazione inversa. Tuttavia è essa spesso venuta spontanea nella riflessione teorica durante la storia della matematica recente (l'ontologia ``naturale'' appunto). L'uso della \textbf{CT} come metalinguaggio, nonostante la compromissione storica con lo strutturalismo, non rende tuttavia automatico il passaggio da \textbf{(2)} a \textbf{(1)}. ma suggerisce che l'ontologia non solo dipende dalla ``ideologia'' (in senso quineano) di $T$, cioè dalla potenza espressiva della teoria, ma è influenzata dal modello epistemologico che l'uso dello stesso linguaggio formale ispira.
+
+L'utilità della distinzione di Kr\"omer è però un'altra: invece di incespicarsi in una definizione possibilmente non ambigua di \textit{struttura} (con le conseguenze indesiderate che potrebbe avere nella pratica operativa) si può ridurre (o ridefinire) la filosofia \textbf{(1)} alla metodologia \textbf{(2)}, dicendo che:
+\begin{quotation}
+	\textbf{structuralism is the claim that mathematics
+	is essentially structural mathematics} [Kr\"omer, 2007]
+\end{quotation}	
+(la pratica operativa che ``entra'' nella definizione di strutturalismo evita il decennale dibattito delle humanities sui medesimi concetti).
+
+Ciò è equivalente a dire: la pratica strutturale è essa stessa la sua filosofia.
+ 
+Gli storici tentativi di spiegazione del termine ``struttura'' attuati da Bourbaki negli anni a seguire dalla pubblicazione degli \textit{Elements}, sono la prima sistematica elaborazione di una filosofia che si accordasse con la fecondità operativa della \textit{structural mathematics}. Il suo obiettivo è quello di ``\textit{assembling of all possible ways in which given set can be endowed with certain structure}'' [Kr\``omer, 2007], e per farlo elabora, nel programmatico \textit{The Architecture of Mathematics} (redatto dal solo Dieudonné), pubblicato nel 1950, una strategia formale. Pur specificando che ''\textit{this definition is not sufficiently general for the needs of mathematics}`` [Bourbaki, 1950], codifica una serie di operational steps tramite i quali una struttura su un insieme è ''assembled set-theoretically``. Adotta, insomma, una prospettiva ''riduzionista" nella quale
+\begin{quotation}
+	the structureless sets are
+	the raw material of structure building which in Bourbaki’s analysis is “unearthed”
+	in a quasi-archaeological, reverse manner; they are the most general objects which
+	can, in a rewriting from scratch of mathematics, successively be endowed with
+	ever more special and richer structures. [K\"omer, 2007]
+\end{quotation}
+A conti fatti, dunque, nello strutturalismo bourbakista la nozione di \textit{set} non sparisce definitivamente davanti a quella di struttura.Il lavoro filosofico da fare per ottenere uno struttualismo integrale era ancora lunga. Va detto poi che
+\begin{quotation}
+	like any other scientist's
+	system of images of knowledge, Bourbaki's own system has been subject
+	to criticism, it has evolved through the years, and, occasionally, it has
+	included ideas that are in opposition to the actual work whose setting the
+	images provide. Since Bourbaki gathered together various leading mathematicians,
+	it has also been the case that members of the group professed changing
+	beliefs, often conflicting with one another at the level of the images of knowledge. [Corry, 1996]
+\end{quotation}  
+	Corry - in riferimento a Bourbaki - preferisce parlare di \textit{images of mathematics} piuttosto che di \textit{philosophy}. Il nostro percorso sembrerebbe quindi procedere da una ``immagine'' ad una peculiare metodologia, che a sua volta informa una ``filosofia spontanea'' e giunge ad avere gli strumenti per intervenire su una qualunque ontologia; grazie alle categorie gli enti di cui ci si occupa sono divenuti così astratti da poter essere applicati al di fuori del campo matematico. [qui quello che sembra voglia dire non è proprio quello che voglio dire. Da eliminare quasi certamente]. 
+	
+	Quello che Dieudonné auspicava come ``\textit{the unifying role of the mathematical structure}'' è svolto dalla \textbf{CT} che ha mostrato di catturare perfettamente la nozione di struttura, [in nota: ``\textbf{CT} can bee seen a theoretical treatment of what mathematicians used to call ''structure`` [Kr\''omer, 2007]] senza le impurità bourbakiste o i difetti di altre nozioni meno aderenti alla pratica effettiva, pur avendo uno storico \textit{fil rouge} con quella particolare ``immagine'' della matematica alla base dello strutturalismo originario. 
+	\section{Per una ontologia operativa}
+	cenni a proposte già esistenti di ontologia relazionale (ciò che c'è di più vicino ad una prospettiva di tipo strutturalista) [Whitehead, Brentano, Simons (\textit{Parts. A Study in Ontology}), Kuhlmann, \textit{Structural Realism} di Landry e Rickles] \textit{questa è roba da trattare meglio nel paper sulla mereologia}; usare la storia novecentesca della matematica come esempio di ciò che dovrebbe fare l'ontologia col ``nuovo'' linguaggio di cui la forniamo. [esempio delineato nel paragrafo precedente] 
+	Il nostro bersaglio principale è la nozione di \textit{identità}, la quale - una volta sostituita con opportune procedure della \textbf{CT}, a seconda dei contesti (di qui la relatività ontologica), in particolare se sostituita con la nozione di \textit{omotopia tra mappe continue} - inficerebbe anche la nozione, indefinita e vaga, di \textit{esistenza}. Difatti nella prospettiva classica, quineana, l'esistenza - tradizionalmente cardine della ricerca ontologica - si definisce tramite la nozione, più (illusoriamente) semplice e primitiva, di identità: ``\textit{A esiste}'' sse ``\textit{qualcosa è identico ad A}'' (questo ``qualcosa'' è una variabile vincolata ad un quantificatore esistenziale. Ricordiamo che, nella prospettiva classica, l'impegno ontologico varia sul dominio della teoria, il quantificatore è un semplice operatore). 
+	
+	Il motivo per cui riteniamo di dover agire in questa direzione è dovuto agli innumerevoli problemi che la nozione di identità classica (criterio di Leibniz, sue varianti, ma anche definizioni successive in sua vece) si porta dietro, rilevati da molti filosofi nel corso del secolo passato, e non superabili rifiutando solo l'identità leibniziana o abbracciando la prospettiva mereologica (ma ci riserviamo di parlarne in lavori successivi). Il motivo per cui molti filosofi, pur sottolineando l'inadeguatezza della nozione, non hanno mai seriamente proposto di sostituirla, crediamo sia per mancanza sia di un linguaggio adatto sia di alternative teoriche rigorose in esso espimibili. 
+	L'\textit{Homotopy Type Theory}, e più in generale la \textbf{CT}, rispondono a queste esigenze, e attuano quella sostituzione finora mai realizzata. 
+	Come si è accennato nel precedente paragrafo l'uso di questi strumenti concettuali ha aiutato la pratica matematica e ha involontariamente ispirato una visione epistemologica, e poi ontologica, della disciplina, vale a dire dei suoi oggetti di studio. A coloro che obiettano che bisogna prima sapere \textit{cos'è} una struttura prima di lavorare con essa noi rispondiamo, con Kr\"omer, che 
+	\begin{quotation}
+		this reproach is empty and one tries to explain the clearer by the more obscure when giving priority to ontology in such situations [...]. Structure occurs in the dealing with something and does
+		not exist independently of this dealing. [Kr\"omer, 2007] 
+	\end{quotation}
+		 Aumentiamo le capacità teoretiche della disciplina e ne restringiamo le ambizioni, facendo dipendere qualunque riflessione su domini di oggetti dalla teoria che si propone di descriverli (e, quindi, dal suo specifico linguaggio, traducibile efficacemente in termini categoriali). 
+		
+		La categoria $C$ produce la sua \textbf{duale} $C^{OP}$ che ha stessi oggetti e stesse frecce di $C$ ma le frecce sono nel verso opposto, cioè con interscambio tra dominio e codominio. Si ha anche che $(C^{OP})^{OP} = C$, cioè la \textbf{biduale} di $C$ è sè stessa.
+
+		Alcune conseguenze per la cosiddetta ``verità categoriale'': se $\alpha$ è una proposizione del linguaggio delle categorie, chiamiamo \textbf{duale} di $\alpha$ la proposizione $\alpha^{OP}$ che si ottiene sostituendo in essa i vari concetti con i corrispettivi duali (dominio con codominio e viceversa, etc). Quindi: 
+		\begin{quote}
+			Se $\alpha$ è \textbf{vera} in $C$ allora $\alpha^{OP}$ è vera in $C^{OP}$ 
+		\end{quote}
+	
+	In particolare, se $\alpha$ è una \textbf{verità categoriale}, vale a dire una quote vera in \textit{ogni} categoria allora $\alpha$ è vera in ogni categoria che sia duale a qualche categoria. In ogni categoria duale di ogni categoria in cui valga $\alpha$ deve valere anche $\alpha^{OP}$, quindi in ogni categoria biduale di una qualche categoria vale $\alpha^{OP}$. Ma, come sappiamo,ogni categoria è la propria biduale. Perciò:
+	
+	\begin{quote}
+		Se $\alpha$ è una \textbf{verità categoriale} lo è anche $\alpha^{OP}$
+	\end{quote}
+	
+	La ``creazione'' di una categoria duale non è necessariamente qualcosa di matematicamente significativo; non è cioè detto che l'oggetto prodotto sia utilizzabile o ben definibile: [riportare esempi dal Casari]
+	Il linguaggio categoriale, quindi, permette di vedere la differenza tra la semplice manipolazione di concetti operativamente utili e la produzione di enti (categorie) effettivamente cogenti. Un vero e proprio esercizio di concettualizzazione, che unisce rigore a immaginazione creativa. Ad esempio nella categoria $\textbf{Pfn}$ non c'è una moltiplicazione di enti ma una moltiplicazione dei concetti utili a formare un ente (nello specifico una tripla di oggetti) che si distingua sensatamente da enti simili (cosa che la \textit{Set Theory} non permette di fare, nel caso in esame e in molti altri).
+	
+Sappiamo che nella storia della \textbf{CT} l'accettazione dell'evidenza dei risultati è avvenuta a prescindere da un dibattito intorno alla scarsa precisione e coerenza logica degli stessi. Le categorie sono nate come strumento concettuale e, senza preoccuparsi delle sottigliezze della ricerca fondazionale, [mettere in nota: La pratica matematica ha fatto il lavoro che il solo dibattito fondazionale non poteva fare, e talvolta ostacolava (Poincarè ironizzava sulle dimostrazioni dei Prinicpia di 1+1=2 non a caso). Ha fatto filosofia calcolando!]
+hanno catturato efficacemente tutte le nozioni della matematica moderna, rivelandosi utili e feconde. Nostro claim è che si riveleranno tali anche con le usuali nozioni metafisiche. Si tratta di adottare, in fondo, una prospettiva pragmatica:
+\begin{quotation}
+	that structural mathematics is characterized as an activity by a treatment of things as if one were dealing with structures. From the pragmatist viewpoint, we do not know much more about structures than how to deal with them, after all.
+\end{quotation} 
+La ``traduzione'' dei problemi dell'ontologia nel linguaggio di \textbf{CT} permette di manipolare meglio nozioni (non solo, come si sa, matematiche) ma metamatematiche e metafisiche, e ci dota di un approccio più compatto e di una visione più ``leggera'' e occamista delle questioni vertenti su oggetti e esistenza. Non giustifichiamo questo approccio a priori ma ne assumiamo la fecondità già provata in letteratura, soprattutto paragonata a quella degli approcci set-theoretic (di cui già è informata la totalità delle ontologie formali).\\
+Memori delle storiche osservazioni di Carnap, non riteniamo che questo approccio ``operativo'' all'ontologia (che non è puro \textit{problem solving} ma anche chiarificazione concettuale) implichi necessariamente l'adesione incondizionata ad uno strutturalismo filosofico integrale - o a sue varianti specifiche come la teoria \textbf{ROS} -, esattamente come non avviene nel passaggio dalla \textit{structural mathematics} allo strutturalismo vero e proprio (o al bourbakismo). La sua importanza è principalmente metodologica. (\textit{Au contraire} risulta necessario per chi appoggia posizioni strutturaliste al di fuori della matematica cominciare a fare ontologia in termini categoriali, nelle modalità qui indicate). Tuttavia il suo valore euristico è tale che invitiamo a porsi comunque in questa prospettiva; argomentazioni indipendenti, poi, come dimostra la vicenda Bourbaki, potranno essere valutate e giustificate separatamente senza inficiare i risultati raggiunti.
+
+Ed infine fughiamo il dubbio che l'intento sia una completa matematizzazione della filosofia: non c'è nessuna aspirazione programmatica, solo il tentativo di presentare questioni note in linguaggio differente, e risolverle in tal modo. 
+\section{Categorizzare Borges}
+Applicheremo la nostra ``ontologia categoriale'' (più semplicemente: l'uso del linguaggio di \textbf{CT} per trattare questioni ontologiche) all'elenco delle mini-metafisiche borgesiane di \textit{Tl\``on} esposte - a guisa di sintesi di tutte le simpatiche ''follie`` della storia della filosofia - nel racconto che apre \textit{Ficciones}. Tutto il racconto è una specie di laboratorio per coloro che vogliono maneggiare diverse teorie metafisiche, anche di poco variabili le une dalle altre, e permette a noi di mostrare come pochi concetti categoriali siano sufficienti a trattare una gran numero di teorie differenti (sempre in un'ottica relazionale). 
+
+Ci concentremo in particolare sul paradosso dei \textit{Nine Copper Coins}, diffusamente affrontato da Borges, unica stentata teoria ''realista`` esprimibile nella mentalità idealistica degli abitanti di Tl\''on. 
+	[Sviluppare meglio questa parte: il racconto di Borges è un piccolo laboratorio di metafisica divertente, e vale la pena sfruttarlo un po'].
+\end{document}

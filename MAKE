@@ -13,4 +13,6 @@ latexmk -pdf I-identity
 latexmk -pdf II-homot
 latexmk -pdf III-mereo 
 latexmk -c ;;
+"d")
+latexmk -pdf notes_denta.tex
 esac
