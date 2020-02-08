@@ -30,16 +30,24 @@
 \section{Introduction}
 \section{Two exactly similar spheres}
 \epigraph{This is my rifle. There are many like it, but this one is mine.}{\emph{The Rifleman's Creed}}
-% \epigraph{Le soleil est un globe froid, solide et homogène. Sa surface est divisée en carrés d’un mètre, qui sont les bases de longues pyramides renversées, filetées, longues de 696999 kilomètres, les pointes à un kilomètre du centre. }{A. Jarry ---\emph{Deuxième lettre à lord Kelvin}.}
-La \emph{aporia delle due sfere identiche} è stata enunciata per la prima volta da M. Black in \cite{} per incrinare la validità acritica con cui il principio di identità degli indiscernibili viene adottato a fare da base all'ontologia. Esso si riassume circa come segue: si supponga che l'universo sia costituito solo da due sfere perfettamente identiche in tutto e per tutto, con medesime proprietà formali e materiali. Esse risulterebbero assolutamente indistinguibili. Per determinarne l'identità numerica dovrebbe bastare l'unica proprietà che presumibilmente non hanno in comune, cioé la locazione spaziale. Tuttavia:\par
-"[A:] \i Ognuna delle due sfere sarà certamente diversa dall'altra per essere a una certa distanza da quell'altra, ma a distanza nulla da sé stessa; vale a dire essa avrà almeno una relazione con sé stessa - l'essere a distanza nulla da o l'essere nello stesso luogo di - che non ha con l'altra. (...)   \par
-B: (...) Ognuna avrà la caratteristica relazionale di essere a una distanza di 2 miglia, diciamo, dal centro di una sfera di un diametro, ecc. E ognuna avrà la caratteristica relazionale (...) di essere nello stesso luogo di se stessa. le due sono simili per questo riguardo come per chiunque altro. \par
-A: Ma ogni sfera occupa un luogo diverso; e questo varrà a distinguerle\par
-B: Ciò suona come se voi pensaste che i luoghi abbiano una qualche esistenza indipendente \i0 (...). [qui il ragionamento sui luoghi é di natura relazionale, e credo sia inevitabile nella nostra prospettiva ragionare cos\'ec] \i Dire che due sfere sono in luoghi diversi equivale appunto a dire che c'é una certa distanza tra 2 sfere e abbiamo visto che questo non varrà a distinguerle. Ognuna é a una certa distanza - invero la stessa distanza - dall'altra
+La \emph{aporia delle due sfere identiche} è stata enunciata per la prima volta da M. Black in \cite{} per incrinare la validità acritica con cui il principio di identità degli indiscernibili viene adottato in ontologia.
+
+Tale ``paradosso'' si riassume circa come segue: si supponga che l'universo sia costituito solo da due sfere perfettamente identiche, con medesime proprietà formali e materiali. Esse risulterebbero assolutamente indistinguibili. Per determinarne l'identità numerica dovrebbe bastare l'unica proprietà che presumibilmente non hanno in comune, cioé la locazione spaziale. Tuttavia:
+
+"[A:] Ognuna delle due sfere sarà certamente diversa dall'altra per essere a una certa distanza da quell'altra, ma a distanza nulla da sé stessa; vale a dire essa avrà almeno una relazione con sé stessa - l'essere a distanza nulla da o l'essere nello stesso luogo di - che non ha con l'altra. (...)
+
+B: (...) Ognuna avrà la caratteristica relazionale di essere a una distanza di 2 miglia, diciamo, dal centro di una sfera di un diametro, ecc. E ognuna avrà la caratteristica relazionale (...) di essere nello stesso luogo di se stessa. le due sono simili per questo riguardo come per chiunque altro.
+
+A: Ma ogni sfera occupa un luogo diverso; e questo varrà a distinguerle
+
+B: Ciò suona come se voi pensaste che i luoghi abbiano una qualche esistenza indipendente (...). [qui il ragionamento sui luoghi é di natura relazionale, e credo sia inevitabile nella nostra prospettiva ragionare cos\'e] Dire che due sfere sono in luoghi diversi equivale appunto a dire che c'é una certa distanza tra 2 sfere e abbiamo visto che questo non varrà a distinguerle. Ognuna é a una certa distanza - invero la stessa distanza - dall'altra
 
 Dopo una discussione sofferta, e non povera di argomenti, i due interlocutori non arrivano a un accordo; il lettore è invitato a notare che si possono produrre molti argomenti in sfavore della buona posizione di questa aporia, dai più ingenui (se marchio una delle due sfere con un segno rosso, sull'altra ne appare uno identico? Se sì, ``le sfere'' sono una sola; se no, erano due.), ai più intricati.
 
 Lo scopo della sezione finale di questo articolo è utilizzare il linguaggio introdotto nelle precedenti per ascrivere, definitivamente e in modo incontrovertibile, questo paradosso a un uso scorretto del linguaggio.
+
+
+In breve: sia nel paradosso delle nove monete di rame, sia nell'esperimento mentale di Black, esistono una categoria $\mathcal C_{\text{Bor}}$ e una categoria $\mathcal C_\text{Bla}$ con oportune proprietà, per cui il ragionamento paradossale (\emph{le nove monete non sono esistite nella notte tra mercoledì e giovedì}, e \emph{le due sfere non sono due perché non vi è modo di distinguerle}) svaniscono.
 
 In particolare, nel nostro linguaggio, in particolare in quello introdotto in \ref{}, la natura figmentale dell'aporia delle due sfere si riassume così: un interlocutore, $A$, pensa le sfere in uno spazio euclideo; l'altro interlocutore, $B$, le pensa in uno spazio affine.
 
@@ -56,31 +64,54 @@ Allora, semplicemente, $A$ vede diverse cose che $B$ vede uguali, perché $A$ op
 Qual è il punto di tutto questo? Che una sfera è molte cose: è uno spazio topologico, è una varietà algebrica, è una varietà differenziale, è un gruppo di Lie (non in dimensione 2, ma per esempio in dimensione 1 o 3), è una superficie di Riemann, è questo ed è quell'altro. $A$ e $B$ nell'esempio di Black parlano uno di una sfera $S^2_A$ che appartiene a una categoria $A$, e l'altro di una sfera $S^2_B$ che appartiene a una categoria $B$. Il paradosso nasce quindi da un uso scorretto e impreciso del formalismo.
 
 \section{The actual work}
-Da dove iniziamo allora; per esempio dal ricostruire il nucleo del programma di Erlangen. Sicché
-	\begin{itemize}
-		\item Definizione di gruppo(ide);
-		\item Definizione di azione di un gruppo(ide) su un insieme/categoria;
-		\item Definzione dell'action groupoid e delle sue componenti connesse: il $\pi_0$ dell'action groupoid di una certa azione è l'oggetto di studio della geometria (breve digressione su come questa geometria sia una geometria discreta, i.e. algebra lineare senza topologia, o su campi finiti, così come continua, i.e. geodiff su varietà, e azioni di gruppi di Lie che sono gruppi strutturali di fibrati);
-		\item Esempi vari dalla geometria classica: qual è il gruppo, qual è l'insieme su cui agisce, nei vari tipi di geometria:
-		      \[proiettiva \supset affine \supset lineare \supset euclidea\]
-		\item Come questo, a partire dalla geometria, diventa una teoria ontologica: l'identità è sempre una identità nel $\pi_0$ di un action groupoid.
-		\item Allora, l'esempio delle sfere di Black è quello di due bambini che litigano per un giocattolo che chiamano in modi diversi.
-	\end{itemize}
+% Da dove iniziamo allora; per esempio dal ricostruire il nucleo del programma di Erlangen. Sicché
+% 	\begin{itemize}
+% 		\item Definizione di gruppo(ide);
+% 		\item Definizione di azione di un gruppo(ide) su un insieme/categoria;
+% 		\item Definzione dell'action groupoid e delle sue componenti connesse: il $\pi_0$ dell'action groupoid di una certa azione è l'oggetto di studio della geometria (breve digressione su come questa geometria sia una geometria discreta, i.e. algebra lineare senza topologia, o su campi finiti, così come continua, i.e. geodiff su varietà, e azioni di gruppi di Lie che sono gruppi strutturali di fibrati);
+% 		\item Esempi vari dalla geometria classica: qual è il gruppo, qual è l'insieme su cui agisce, nei vari tipi di geometria:
+% 		      \[proiettiva \supset affine \supset lineare \supset euclidea\]
+% 		\item Come questo, a partire dalla geometria, diventa una teoria ontologica: l'identità è sempre una identità nel $\pi_0$ di un action groupoid.
+% 		\item Allora, l'esempio delle sfere di Black è quello di due bambini che litigano per un giocattolo che chiamano in modi diversi.
+% 	\end{itemize}
 \begin{definition}[Groupoid]
-
+A \emph{groupoid} is a category where all morphisms are invertible; a \emph{group} is a groupoid with a single object $\star$. Endomorphisms of $G$ are the \emph{elements} of the group; the set of elements of $G$ becomes a monoid under composition.
 \end{definition}
 \begin{definition}[Actegory]
-
+Let $\clC$ be a category, and $\clG$ be a groupoid; a (left) actegory structure on $\clC$ consists of a functor
+\[
+\lambda : \clG \times \clC \to \clC
+\]
+such that
+\begin{itemize}
+  \item
+\end{itemize}
+This amounts to the choice of an \emph{action} of the groupoid $\clG$ over the categry $\clC$, i.e. of a strong monoidal functor $\lambda : \clG \to [\clC,\clC]$.
 \end{definition}
+\begin{remark}
+  A \emph{right} actegory structure consists not of a functor $\rho : \clC \times \clG \to \clC$ such that axioms ... are satisfied; instead it consists of a left actegory structure with respect to the groupoid $\clG^\op$. This complies with the fact that in classical algebra a right group action is a left action of the opposite group $G^\op$.
+\end{remark}
+\begin{notation}
+  We denote a left $\clG$-actegory structure on $\clC$ as $\lhd_\clG$ or simply $\lhd$; so, the action of $G \in\clG$ on $C \in \clC$ is denoted $G\lhd C$, and similarly for $\varphi\lhd f$. In particular, the action of a group $G$ on $\clC$ is completely determined by a homomorphism from $G$ to the group of self-equivalences of $\clC$.
+\end{notation}
 \begin{definition}[Action groupoid of an actegory]
-
+Let $(\clC,\lhd_\clG)$ be an actegory; we define the \emph{action groupoid} of $(\clC,\lhd_\clG)$ as the category having the same objects of $\clC$, and where there is a morphism $X\to G\lhd X$ for every $X\in\clC, G\in\clG$.
 \end{definition}
+\begin{example}
+un po' di esempi
+\end{example}
+\begin{example}
+di action groupoid
+\end{example}
+\begin{example}
+nella natura
+\end{example}
 \begin{definition}[Connected components functor]
-
+Every directed graph $\underline G$, with set of vertices $V$ and set of edges $E$, defines a quotient set of $V$ by the equivalence relation generated by $A\approx B$ if there is an arrow $A\to B$; the symmetric and transitive closure of this relation yields a quotient $V/R$ that is usually denoted as the set of \emph{connected components} $\pi_0(\underline G)$. This is a functor ${\sf Gph} \to \Set$, and if we now regard a category $\clC$ as a mere directed graph we obtain a well-defined set $\pi_0(\clC)$ of connected components of a category.
 \end{definition}
 \subsection{Klein program, with groupoids}
 \begin{remark}[In the discrete as well as in the continuous]
-
+Breve digressione su come questa geometria sia una geometria discreta, i.e. algebra lineare senza topologia, o su campi finiti, così come continua, i.e. geodiff su varietà, e azioni di gruppi di Lie che sono gruppi strutturali di fibrati
 \end{remark}
 \begin{example}
   A roundup of examples from all geometry
