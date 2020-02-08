@@ -1,0 +1,92 @@
+\documentclass{amsart}
+
+\makeatletter
+\def\@settitle{\begin{center}%
+  \baselineskip14\p@\relax
+  \bfseries
+  \uppercasenonmath\@title
+  \@title
+  \ifx\@subtitle\@empty\else
+     \\[1ex]\uppercasenonmath\@subtitle
+     \footnotesize\mdseries\@subtitle
+  \fi
+  \end{center}%
+}
+\def\subtitle#1{\gdef\@subtitle{#1}}
+\def\@subtitle{}
+\makeatother
+
+\author{Fouche and Denta}
+\title{Categorical ontology II}
+\subtitle{A geometric look on identity}
+\usepackage{fouche}
+\begin{document}
+\maketitle
+\begin{abstract}
+  [\dots]
+
+  As both a test-bench for the language and proof of concept we offer a possible homotopy-theoretic approach to Black's ancient two spheres' problem. The interlocutors of Black's imaginary dialogue inhabit respectively an Euclidean world and an affine world, and this affects their perception of the ``two'' spheres.
+\end{abstract}
+\section{Introduction}
+\section{Two exactly similar spheres}
+\epigraph{This is my rifle. There are many like it, but this one is mine.}{\emph{The Rifleman's Creed}}
+% \epigraph{Le soleil est un globe froid, solide et homogène. Sa surface est divisée en carrés d’un mètre, qui sont les bases de longues pyramides renversées, filetées, longues de 696999 kilomètres, les pointes à un kilomètre du centre. }{A. Jarry ---\emph{Deuxième lettre à lord Kelvin}.}
+La \emph{aporia delle due sfere identiche} è stata enunciata per la prima volta da M. Black in \cite{} per incrinare la validità acritica con cui il principio di identità degli indiscernibili viene adottato a fare da base all'ontologia. Esso si riassume circa come segue: si supponga che l'universo sia costituito solo da due sfere perfettamente identiche in tutto e per tutto, con medesime proprietà formali e materiali. Esse risulterebbero assolutamente indistinguibili. Per determinarne l'identità numerica dovrebbe bastare l'unica proprietà che presumibilmente non hanno in comune, cioé la locazione spaziale. Tuttavia:\par
+"[A:] \i Ognuna delle due sfere sarà certamente diversa dall'altra per essere a una certa distanza da quell'altra, ma a distanza nulla da sé stessa; vale a dire essa avrà almeno una relazione con sé stessa - l'essere a distanza nulla da o l'essere nello stesso luogo di - che non ha con l'altra. (...)   \par
+B: (...) Ognuna avrà la caratteristica relazionale di essere a una distanza di 2 miglia, diciamo, dal centro di una sfera di un diametro, ecc. E ognuna avrà la caratteristica relazionale (...) di essere nello stesso luogo di se stessa. le due sono simili per questo riguardo come per chiunque altro. \par
+A: Ma ogni sfera occupa un luogo diverso; e questo varrà a distinguerle\par
+B: Ciò suona come se voi pensaste che i luoghi abbiano una qualche esistenza indipendente \i0 (...). [qui il ragionamento sui luoghi é di natura relazionale, e credo sia inevitabile nella nostra prospettiva ragionare cos\'ec] \i Dire che due sfere sono in luoghi diversi equivale appunto a dire che c'é una certa distanza tra 2 sfere e abbiamo visto che questo non varrà a distinguerle. Ognuna é a una certa distanza - invero la stessa distanza - dall'altra
+
+Dopo una discussione sofferta, e non povera di argomenti, i due interlocutori non arrivano a un accordo; il lettore è invitato a notare che si possono produrre molti argomenti in sfavore della buona posizione di questa aporia, dai più ingenui (se marchio una delle due sfere con un segno rosso, sull'altra ne appare uno identico? Se sì, ``le sfere'' sono una sola; se no, erano due.), ai più intricati.
+
+Lo scopo della sezione finale di questo articolo è utilizzare il linguaggio introdotto nelle precedenti per ascrivere, definitivamente e in modo incontrovertibile, questo paradosso a un uso scorretto del linguaggio.
+
+In particolare, nel nostro linguaggio, in particolare in quello introdotto in \ref{}, la natura figmentale dell'aporia delle due sfere si riassume così: un interlocutore, $A$, pensa le sfere in uno spazio euclideo; l'altro interlocutore, $B$, le pensa in uno spazio affine.
+
+A generare il paradosso è l'incapacità dei due (e di Black) di notare che la conversazione avviene sì riguardo agli stessi oggetti, ma \emph{in categorie diverse}, o meglio, in diversi action groupoid associati ad uno stesso spazio geometrico $\mathbb S$: per $A$, nella categoria dove c'è una mappa tra le due sfere quando hanno lo stesso centro e lo stesso raggio --sono quindi ``euclideanamente uguali''; per $B$, nella categoria dove c'è un isomorfismo tra le due sfere quando tra loro c'è una trasformazione \emph{affine}.
+
+Allora, semplicemente, $A$ vede diverse cose che $B$ vede uguali, perché $A$ opera un quoziente rispetto a una relazione di equivalenza più fine di quella che opera $B$. Questo esempio da solo introduce praticamente tutti gli strumenti di cui rendiamo conto in questo lavoro:
+\begin{itemize}
+	\item rende lampante il fatto che una categoria è determinata dai suoi morfismi molto più che dai suoi oggetti; $A$ e $B$ sono convinti di parlare delle stesse cose, perché $|\mathcal C_A|=|\mathcal C_B|$, ma la seconda ha molti più morfismi, e quindi può far collassare molti più oggetti rispetto alla sua nozione di ``uguaglianza categoriale'' (dobbiamo stabilire una volta per tutte dei nomi per le cose cui vogliamo riferirci).
+	\item mette in chiaro in un esempio specifico il fatto che la relazione di identità non è primitiva; è contestuale; è indotta dalla nozione di uguaglianza che ogni categoria si porta dietro. Ed è binaria, perché è un caso particolare di una nozione di omotopia (meglio: è la nozione di isomorfismo in una categoria dell'omotopia, che resta indotta dalla nozione di omotopia di cui $\mathcal C$ era dotata. No identity without homotopy, appunto).
+	\item Questo è né più né meno che il contenuto strutturale del programma di Klein: le figure dello spazio restano sempre le stesse, raccolte nella classe $\mathbb S$; ciò che cambia è il gruppo(ide) $\mathcal G$ che facciamo agire sulle figure e di cui prendiamo la categoria delle azioni $\mathbb S /\!\!/\mathcal G$; ``il mondo'' con la sua nozione di identità è l'insieme di Bishop
+	      \[\Big\{ \pi_0(\mathbb S/\!\!/\mathcal G) \mid [x] \equiv [y] \iff \exists \varphi : x \to y\Big\}\]
+	\item Permette di prevedere cosa penserebbe del problema un ipotetico interlocutore $C$ che vivesse in un mondo proiettivo (una sfera e un'iperbole sono lo stesso oggetto) o in uno topologico (una sfera e un cubo sono lo stesso oggetto), etc. Ovviamente si può ragionare anche viceversa: basta trovare un contesto dove due oggetti spazialmente coincidenti non sono ``lo stesso'' oggetto. La sfida è che bisogna uscire da fondazione insiemistica (l'assioma di estensionalità è precisamente l'asserto per cui due cose che hanno gli stessi punti sono una cosa sola); invece di impelagarsi nella costruzione precisa di un controesempio (ce ne sono, in fondazioni type-teoretiche: per esempio i tipi $\mathbb N : \sf Ord$ e $\mathbb N : \sf Mon$ sono diversi -hanno diverse proprietà universali), penso sia meglio dire semplicemente: ``ecco, vedete? Il principio di identità è  a tutti gli effetti l'assioma di estensionalità: voi trovate assurdo che a dichiarare uguali due enti non sia sufficiente dire che hanno gli stessi atomi. Eppure questo è possibile: voi classici non avete la nozione di identità più forte in assoluto, state nel mezzo; e la metateoria risultante dal prendere una nozione di identità più stringente è semmai ancor piu interessante di quella cui siete abituati. Quindi la nozione di uguaglianza non è \emph{immutabile, scolpita nel tempo}\footnote{Non sei l'unico che apprezza il cinema impegnato}. E' un assioma: se lo vuoi lo prendi, altrimenti non lo prendi. E se non lo prendi si apre un mondo, perché ammetti che due cose sono uguali anche quando non hanno gli stessi punti, oppure che \emph{non basta} avere gli stessi punti per essere uguali, nello stesso senso in cui non è sufficiente che due insiemi siano in biiezione affinché siano omeomorfi, o isomorfi come gruppi, etc.'' Chiaramente, questo lastrica la strada al lemma di Yoneda, che ``è l'assioma di estensionalità in CT'' (lo introdurrei esattamente con queste parole, e spenderei una parte congrua del lavoro a darne una introduzione \emph{ad usum delphini} che invece che di trasformazioni naturali e gruppianellicampi parli di ontologia e di estensionalità).
+\end{itemize}
+Qual è il punto di tutto questo? Che una sfera è molte cose: è uno spazio topologico, è una varietà algebrica, è una varietà differenziale, è un gruppo di Lie (non in dimensione 2, ma per esempio in dimensione 1 o 3), è una superficie di Riemann, è questo ed è quell'altro. $A$ e $B$ nell'esempio di Black parlano uno di una sfera $S^2_A$ che appartiene a una categoria $A$, e l'altro di una sfera $S^2_B$ che appartiene a una categoria $B$. Il paradosso nasce quindi da un uso scorretto e impreciso del formalismo.
+
+\section{The actual work}
+Da dove iniziamo allora; per esempio dal ricostruire il nucleo del programma di Erlangen. Sicché
+	\begin{itemize}
+		\item Definizione di gruppo(ide);
+		\item Definizione di azione di un gruppo(ide) su un insieme/categoria;
+		\item Definzione dell'action groupoid e delle sue componenti connesse: il $\pi_0$ dell'action groupoid di una certa azione è l'oggetto di studio della geometria (breve digressione su come questa geometria sia una geometria discreta, i.e. algebra lineare senza topologia, o su campi finiti, così come continua, i.e. geodiff su varietà, e azioni di gruppi di Lie che sono gruppi strutturali di fibrati);
+		\item Esempi vari dalla geometria classica: qual è il gruppo, qual è l'insieme su cui agisce, nei vari tipi di geometria:
+		      \[proiettiva \supset affine \supset lineare \supset euclidea\]
+		\item Come questo, a partire dalla geometria, diventa una teoria ontologica: l'identità è sempre una identità nel $\pi_0$ di un action groupoid.
+		\item Allora, l'esempio delle sfere di Black è quello di due bambini che litigano per un giocattolo che chiamano in modi diversi.
+	\end{itemize}
+\begin{definition}[Groupoid]
+
+\end{definition}
+\begin{definition}[Actegory]
+
+\end{definition}
+\begin{definition}[Action groupoid of an actegory]
+
+\end{definition}
+\begin{definition}[Connected components functor]
+
+\end{definition}
+\subsection{Klein program, with groupoids}
+\begin{remark}[In the discrete as well as in the continuous]
+
+\end{remark}
+\begin{example}
+  A roundup of examples from all geometry
+\[proiettiva \supset affine \supset lineare \supset euclidea\]
+\end{example}
+Effects on ontology: identity always is an identity in the $\pi_0$ of a certain action groupoid.
+
+\section{Two exactly similar spheres, again}
+\end{document}
