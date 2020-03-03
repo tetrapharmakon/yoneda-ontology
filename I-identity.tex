@@ -1,5 +1,6 @@
 \documentclass{amsart}
 
+
 \makeatletter
 \def\@settitle{\begin{center}%
   \baselineskip14\p@\relax
@@ -16,12 +17,26 @@
 \def\@subtitle{}
 \makeatother
 
+\newcommand{\var}[3][]{
+  \left[\begin{smallmatrix} #2 \\
+  #1\downarrow \\ #3
+  \end{smallmatrix}\right]}
+\newcommand{\cvar}[3]{
+  \begin{xsmallmatrix}{0em}
+  & #1 \\ #2 & \downarrow \\ & #3
+  \end{xsmallmatrix}}
+
+
 \newcommand{\true}{\texttt{t}}
 \def\id{\text{id}}
 \author{Fouche and Denta}
 \title{Categorical ontology I}
 \subtitle{Identity and Yoneda lemma}
 \usepackage{fouche}
+
+\newcommand{\po}[1][dr]{\save*!/#1+1.5pc/#1:(1,-1)@^{|-}\restore}
+\newcommand{\pb}[1][dr]{\save*!/#1-1.5pc/#1:(-1,1)@^{|-}\restore}
+
 
 \setlength{\epigraphwidth}{.6\textwidth}
 \begin{document}
@@ -37,22 +52,54 @@ Serve un paragrafo che spieghi diffusamente dove prendiamo le categorie, e di co
 
 Ontology rests upon the principl of identity. It is this very principle that here we aim to unhinge.
 \section{Preliminaries on variable set theory}
-In some of our proofs it will be crucial to treat the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \ref{}) on the same ground; once the following result is proved, we freely refer to each of these two categories as \emph{variable sets}.
+In some of our proofs it will be crucial to blur the distinction between the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \ref{}); once the following result is proved, we freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
 \begin{proposition}
-Let $I$ be a set, regarded as a discrete category; let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism) between these two categories.
+Let $I$ be a set, regarded as a discrete category, and let $\Set^I$ be the category of functors $F : I \to \Set$; moreover, let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism) between $\Set^I$ and $\Set/I$.
 \end{proposition}
 \begin{proof}
-  Let us give a very hands-on proof: consider an object $F_h : X\to I$ of $\Set/I$, and define a function as $i\mapsto h^\leftarrow(i)$; of course, since $I$, being a set, is a discrete category, this sets up a functor $I \to \Set$.
+  Let us give a very hands-on proof, based on the fact that the category $\Set^I$ coincides on its own right with the category of $I$-indexed families of objects, i.e. with the category whose objects are $(\underline X)_I := \{X_i\mid i\in I\}$, and morphisms $(\underline X)_I\to (\underline Y)_I$ the families $\{f_i : X_i \to Y_i\mid i \in I\}$. 
+  
+  Consider an object $h : X\to I$ of $\Set/I$, and define a function as $i\mapsto h^\leftarrow(i)$; of course, $(X(h))_I := \{h^\leftarrow(i) \mid i \in I\}$ is a $I$-indexed family, and since $I$ can be regarded as a discrete category, this is sufficient to define a functor $F_h : I \to \Set$.
 
-  In the opposite direction, let $F : I \to \Set$ be a functor. This defines a function $h_F : \coprod_{i\in I}Fi \to I$, where $\coprod_{i\in I} Fi$ is the disjoint union of all the sets $Fi$.
-  The claim follows from the fact that the correspondences $h\mapsto F_h$ and $F\mapsto h_F$ are mutually inverse.
+  Let us define a functor in the opposite direction: let $F : I \to \Set$ be a functor. This defines a function $h_F : \coprod_{i\in I}Fi \to I$, where $\coprod_{i\in I} Fi$ is the disjoint union of all the sets $Fi$.
 
-  This is however obvious: the function $F_{h_F}$ sends $i\in I$ to the set $h_F^\leftarrow(i)=Fi$, and the function $h_{F_h} \in \Set/I$ has domain $\coprod_{i\in I}F_h(i) = \coprod_{i\in I}h^\leftarrow(i)=X$ (as $i$ runs over the set $I$, the disjoint union of all preimages $h^\leftarrow(i)$ equals the domain of $h$, i.e. the set $X$).
+  The claim now follows if we show that the correspondences $h\mapsto F_h$ and $F\mapsto h_F$ are mutually inverse.
+
+  This is however easy to verify: the function $F_{h_F}$ sends $i\in I$ to the set $h_F^\leftarrow(i)=Fi$, and the function $h_{F_h} \in \Set/I$ has domain $\coprod_{i\in I}F_h(i) = \coprod_{i\in I}h^\leftarrow(i)=X$ (as $i$ runs over the set $I$, the disjoint union of all preimages $h^\leftarrow(i)$ equals the domain of $h$, i.e. the set $X$).
 \end{proof}
 \begin{remark}
-  A more abstract look at this result regards it as a particular instance of the \emph{Grothendieck construction} (see \cite{}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \ref{}). In this case, the domain $\clC=I$ is a discrete category, so that all functors $\clE \to I$ are discrete fibrations.
+  A more abstract look at this result regards the equivalence $\Set/I\cong \Set^I$ as a particular instance of the \emph{Grothendieck construction} (see \cite{}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \ref{}). In this case, the domain $\clC=I$ is a discrete category, hence all functors $\clE \to I$ are, trivially, discrete fibrations.
 \end{remark}
 The next crucial step of our analysis is the observation that the category of variable sets is a topos: we break the result into the verification of the various axioms, as given in \cite{}.
+
+First, we recall a few basic facts and definitions on topos theory.
+\begin{definition}
+	An \emph{elementary topos} is a category $\clE$
+	\begin{itemize}
+		\item which is \emph{cartesian closed}, i.e. each functor $\firstblank\times A$ has a right adjoint $[A, \firstblank]$;
+		\item having a \emph{subobject classifier}, i.e. an object $\Omega\in\clE$ such that the functor $\text{Sub} : \clE^\text{op}\to \Set$ sending $A$ into the set of isomorphism classes of monomorphisms $\var{U}{A}$ is representable by the object $\Omega$.
+		      \index{Subobject classifier}
+	\end{itemize}
+	The natural bijection $\clE(A,\Omega)\cong\text{Sub}(A)$ is obtained pulling back the monomorphism $U\subseteq A$ along a \emph{universal arrow} $t : 1\to \Omega$, as in the diagram
+	\[
+		\vcenter{\xymatrix{
+				U \pb\ar[r]\ar[d]& 1\ar[d]^t \\
+				A \ar[r]_{\chi_U}& \Omega
+			}}
+	\]
+	so, the bijection is induced by the map $\var{U}{A}\mapsto \chi_U$.
+\end{definition}
+\begin{definition}\label{grotop}\index{Topos!Grothendieck ---}
+	A \emph{Grothendieck topos} is an elementary topos that, in addition, is locally finitely presentable.
+\end{definition}
+Whenever we spoke about sheaves on a topological space or a Grothendieck site, we wer secretly talking about topos theory; the notion of Grothendieck topos is intimately connected with co\fshyp{}end calculus, as we have seen all along chapter 3, and especially in \ref{giraudo}.
+
+In fact, Giraud theorem gives a proof for the difficult implication of the following \emph{recognition principle} for Grothendieck toposes: 
+\begin{theorem}
+	Let $\clE$ be a category; then $\clE$ is a Grothendieck topos if and only if it is a left exact reflection of a category $\Cat(\clA^\text{op},\Set)$ of presheaves on a small category $\clA$.
+\end{theorem}
+(recall that a \emph{left exact reflection} of $\clC$ is a reflective subcategory $\cate{R}\hookrightarrow \clC$ such that the reflector $r : \clC \to \cate{R}$ preserves finite limits. It is a reasonably easy exercise to prove that a left exact reflection of a Grothendieck topos is again a Grothendieck topos; Giraud proved that all Grothendieck toposes arise this way.)
+
 \begin{proposition}
 The category of variable sets is cartesian closed.
 \end{proposition}
@@ -127,4 +174,40 @@ F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)
 \epigraph{I am hard but I am fair; there is no racial bigotry here. [\dots\unkern] Here you are all equally worthless.}{GySgt Hartman}
 \section{Nine copper coins}
 \epigraph{Explicaron que una cosa es \emph{igualdad}, y otra \emph{identidad}, y formularon una especie de \emph{reductio ad absurdum}, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches padecen un vivo dolor. ¿No sería ridículo -interrogaron- pretender que ese dolor es el mismo?}{JLB ---Tl\"on, Uqbar, Orbis Tertius}
+\appendix
+\section{Category theory}
+\todo[inline]{E' probabilmente saggio mettere qui anche la digressione con le definizioni di topos}
+For us, an \emph{ordinal number} will be any well\hyp{}ordered set, and a \emph{cardinal number} is any ordinal which is not in bijection with a smaller ordinal. Every set $X$ has a unique \emph{cardinality}, i.e. a cardinal $\kappa$ with a bijection $\kappa \cong X$ such that there are no bijections from a smaller ordinal. We freely employ results that depend on the axiom of choice when needed. A cardinal $\kappa$ is \emph{regular} if no set of cardinality $\kappa$ is the union of fewer than $\kappa$ sets of cardinality less than $\kappa$; all cardinals in the following subsection are assumed regular without further mention.
+
+\index{Category!filtered ---}\index{Filtered category}
+Let $\kappa$ be a cardinal; we say that a category $\clA$ is $\kappa$\hyp{}filtered if for every category $\clJ\in\Cat_{<\kappa}$ with less than $\kappa$ objects, $\clA$ is injective with respect to the cone completion $\clJ\to \clJ^\rhd$; this means that every diagram
+\[
+	\vcenter{\xymatrix{
+			\clJ\ar[d]\ar[r]^D & \clA \\
+			\clJ^\rhd\ar@{.>}[ur]_{\bar D}
+		}}
+\]
+has a dotted filler $\bar D : \clJ^\rhd \to \clA$.
+
+We say that a category $\clC$ admits filtered colimits if for every filtered category $\clA$ and every diagram $D : \clA \to \clC$, the colimit $\colim D$ exists as an object of $\clC$. Of course, whenever an ordinal $\alpha$ is regarded as a category, it is a filtered category, so a category that admits all $\kappa$\hyp{}filtered colimits admits all colimits of chains
+\[
+	C_0 \to C_1 \to \cdots \to C_\alpha \to\cdots
+\]
+with less than $\kappa$ terms. A useful, completely elementary result is that the existence of colimits over all ordinals less than $\kappa$ implies the existence of $\kappa$\hyp{}filtered colimits; this relies on the fact that every filtered category $\clA$ admits a cofinal functor (see \ref{finalfunctor}) from an ordinal $\alpha_\clA$.
+\begin{definition}\label{accepre}\index{Category!accessible ---}\index{Accessible category}\index{Category!presentable ---}\index{Presentable category}
+	Let $\clC$ be a category;
+	\begin{itemize}
+		\item We say that $\clC$ is \emph{$\kappa$\hyp{}accessible} if it admits $\kappa$\hyp{}filtered colimits, and if it has a \emph{small} subcategory $\cate{S}\subset \clA$ of $\kappa$\hyp{}presentable objects such that every $A\in\clA$ is a $\kappa$\hyp{}filtered colimit of objects in $\cate{S}$.
+		\item We say that $\clC$ is \emph{(locally) $\kappa$\hyp{}presentable} if it is accessible and cocomplete.
+	\end{itemize}
+	The theory of presentable and accessible categories is a cornerstone of \emph{categorical logic}, i.e. of the translation of model theory into the language of category theory.
+
+	Accessible and presentable categories admit \emph{representation theorems}:
+	\begin{itemize}
+		\item A category $\clC$ is accessible if and only if it is equivalent to the ind\hyp{}completion $\text{Ind}_\kappa(\cate{S})$ of a small category, i.e. to the completion of a small category $\cate{S}$ under  $\kappa$\hyp{}filtered colimits;
+		\item A category $\clC$ is presentable if and only if it is a full reflective subcategory of a category of presheaves $i : \clC \to \Cat(\cate{S}^\op,\Set)$, such that the embedding functor $i$ commutes with $\kappa$\hyp{}filtered colimts.
+	\end{itemize}
+\end{definition}
+All categories of usual algebraic structures are (finitely) accessible, and they are locally (finitely) presentable as soon as they are cocomplete; an example of a category which is $\aleph_1$\hyp{}presentable but not $\aleph_0$\hyp{}presentable: the category of metric spaces and short maps.
+
 \end{document}
