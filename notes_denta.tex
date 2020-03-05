@@ -137,7 +137,9 @@ Quello che Dieudonné auspicava come ``\textit{the unifying role of the mathemat
 \fo{Quello che è contenuto tra la precedente nota e questa mi sfugge: probabilmente dovremmo parlarne a voce e mi devi far capire di cosa stai parlando \emph{davvero} qui...}\endfo
 \section{Per una ontologia operativa}
 cenni a proposte già esistenti di ontologia relazionale (ciò che c'è di più vicino ad una prospettiva di tipo strutturalista) [Whitehead, Brentano, Simons (\textit{Parts. A Study in Ontology}), Kuhlmann, \textit{Structural Realism} di Landry e Rickles] \textit{questa è roba da trattare meglio nel paper sulla mereologia}; usare la storia novecentesca della matematica come esempio di ciò che dovrebbe fare l'ontologia col ``nuovo'' linguaggio di cui la forniamo. [esempio delineato nel paragrafo precedente]
-Il nostro bersaglio principale è la nozione di \textit{identità}, la quale - una volta sostituita con opportune procedure della \textbf{CT}, a seconda dei contesti (di qui la relatività ontologica), in particolare se sostituita con la nozione di \textit{omotopia tra mappe continue} - inficerebbe anche la nozione, indefinita e vaga, di \textit{esistenza}. Difatti nella prospettiva classica, quineana, l'esistenza - tradizionalmente cardine della ricerca ontologica - si definisce tramite la nozione, più (illusoriamente) semplice e primitiva, di identità: ``\textit{A esiste}'' sse ``\textit{qualcosa è identico ad A}'' (questo ``qualcosa'' è una variabile vincolata ad un quantificatore esistenziale. Ricordiamo che, nella prospettiva classica, l'impegno ontologico varia sul dominio della teoria, il quantificatore è un semplice operatore).
+
+
+Il nostro bersaglio principale è la nozione di \textit{identità}, la quale \marginpar{$(ID_1)$} una volta sostituita con opportune procedure della \textbf{CT}, a seconda dei contesti (di qui la relatività ontologica), in particolare se sostituita con la nozione di \textit{omotopia tra mappe continue} - inficerebbe anche la nozione, indefinita e vaga, di \textit{esistenza}. Difatti nella prospettiva classica, quineana, l'esistenza - tradizionalmente cardine della ricerca ontologica - si definisce tramite la nozione, più (illusoriamente) semplice e primitiva, di identità: ``\textit{A esiste}'' sse ``\textit{qualcosa è identico ad A}'' (questo ``qualcosa'' è una variabile vincolata ad un quantificatore esistenziale. Ricordiamo che, nella prospettiva classica, l'impegno ontologico varia sul dominio della teoria, il quantificatore è un semplice operatore).
 
 Il motivo per cui riteniamo di dover agire in questa direzione è dovuto agli innumerevoli problemi che la nozione di identità classica (criterio di Leibniz, sue varianti, ma anche definizioni successive in sua vece) si porta dietro, rilevati da molti filosofi nel corso del secolo passato, e non superabili rifiutando solo l'identità leibniziana o abbracciando la prospettiva mereologica (ma ci riserviamo di parlarne in lavori successivi). Il motivo per cui molti filosofi, pur sottolineando l'inadeguatezza della nozione, non hanno mai seriamente proposto di sostituirla, crediamo sia per mancanza sia di un linguaggio adatto sia di alternative teoriche rigorose in esso espimibili.
 L'\textit{Homotopy Type Theory}, e più in generale la \textbf{CT}, rispondono a queste esigenze, e attuano quella sostituzione finora mai realizzata.
@@ -148,15 +150,15 @@ Come si è accennato nel precedente paragrafo l'uso di questi strumenti concettu
 \end{quotation}
 Aumentiamo le capacità teoretiche della disciplina e ne restringiamo le ambizioni, facendo dipendere qualunque riflessione su domini di oggetti dalla teoria che si propone di descriverli (e, quindi, dal suo specifico linguaggio, traducibile efficacemente in termini categoriali).
 
-La categoria $C$ produce la sua \textbf{duale} $C^{OP}$ che ha stessi oggetti e stesse frecce di $C$ ma le frecce sono nel verso opposto, cioè con interscambio tra dominio e codominio. Si ha anche che $(C^{OP})^{OP} = C$, cioè la \textbf{biduale} di $C$ è sè stessa.
+La categoria $C$ produce la sua \textbf{duale} $C^{op}$ che ha stessi oggetti e stesse frecce di $C$ ma le frecce sono nel verso opposto, cioè con interscambio tra dominio e codominio. Si ha anche che $(C^{op})^{op} = C$, cioè la \textbf{biduale} di $C$ è sè stessa.
 
-Alcune conseguenze per la cosiddetta ``verità categoriale'': se $\alpha$ è una proposizione del linguaggio delle categorie, chiamiamo \textbf{duale} di $\alpha$ la proposizione $\alpha^{OP}$ che si ottiene sostituendo in essa i vari concetti con i corrispettivi duali (dominio con codominio e viceversa, etc). Quindi:
+Alcune conseguenze per la cosiddetta ``verità categoriale'': se $\alpha$ è una proposizione del linguaggio delle categorie, chiamiamo \textbf{duale} di $\alpha$ la proposizione $\alpha^{op}$ che si ottiene sostituendo in essa i vari concetti con i corrispettivi duali (dominio con codominio e viceversa, etc). Quindi:
 \begin{quote}
-	Se $\alpha$ è \textbf{vera} in $C$ allora $\alpha^{OP}$ è vera in $C^{OP}$
+	Se $\alpha$ è \textbf{vera} in $C$ allora $\alpha^{op}$ è vera in $C^{op}$
 \end{quote}
-In particolare, se $\alpha$ è una \textbf{verità categoriale}, vale a dire una quote vera in \textit{ogni} categoria allora $\alpha$ è vera in ogni categoria che sia duale a qualche categoria. In ogni categoria duale di ogni categoria in cui valga $\alpha$ deve valere anche $\alpha^{OP}$, quindi in ogni categoria biduale di una qualche categoria vale $\alpha^{OP}$. Ma, come sappiamo,ogni categoria è la propria biduale. Perciò:
+In particolare, se $\alpha$ è una \textbf{verità categoriale}, vale a dire una quote vera in \textit{ogni} categoria allora $\alpha$ è vera in ogni categoria che sia duale a qualche categoria. In ogni categoria duale di ogni categoria in cui valga $\alpha$ deve valere anche $\alpha^{op}$, quindi in ogni categoria biduale di una qualche categoria vale $\alpha^{op}$. Ma, come sappiamo,ogni categoria è la propria biduale. Perciò:
 \begin{quote}
-	Se $\alpha$ è una \textbf{verità categoriale} lo è anche $\alpha^{OP}$
+	Se $\alpha$ è una \textbf{verità categoriale} lo è anche $\alpha^{op}$
 \end{quote}
 La ``creazione'' di una categoria duale non è necessariamente qualcosa di matematicamente significativo; non è cioè detto che l'oggetto prodotto sia utilizzabile o ben definibile: [riportare esempi dal Casari]
 Il linguaggio categoriale, quindi, permette di vedere la differenza tra la semplice manipolazione di concetti operativamente utili e la produzione di enti (categorie) effettivamente cogenti. Un vero e proprio esercizio di concettualizzazione, che unisce rigore a immaginazione creativa. Ad esempio nella categoria $\textbf{Pfn}$ non c'è una moltiplicazione di enti ma una moltiplicazione dei concetti utili a formare un ente (nello specifico una tripla di oggetti) che si distingua sensatamente da enti simili (cosa che la \textit{Set Theory} non permette di fare, nel caso in esame e in molti altri).
@@ -204,11 +206,52 @@ Si può persino dire di più, attribuendo alla matematica una natura duplice: es
 
 In questa prospettiva è evidente che la matematica (non la sua storia, non la sua filosofia, la sua \emph{pratica}) sia utile ad approcciare le domande essenziali dell'ontologia: cosa sono ``le cose'', cosa rende le cose ciò che sono e non, piuttosto, diverse.
 
-In tale prospettiva è auto-evidente che l'abitudine al pensiero corretto (la pratica della matematica ha questa come definizione possibile) sia l'unico modo onesto di spiegare la cogenza degli enti; ma è deprimente e innegabile che un certo dibattito filosofico si sia reso impermeabile al linguaggio matematico. A volte ciò è fatto con una certa sufficienza nei confronti degli ingegni minuti, e altre volte semplicemente con l'ingenuità dei profani. Riparare a uno strappo avvenuto molto tempo fa, dovuto a diverse finalità e diverso lessico specifico, non è cosa cui possa ambire il lavoro di due sole persone. Se, però, il lettore di queste note chiede una motivazione estesa per il nostro lavoro, un progetto di ampio respiro in cui esso si inserisca, in breve un \emph{programma}, la troverà ora: esiste una matematica il cui scopo è risolvere alcuni problemi della filosofia, nello stesso senso in cui certa matematica ``risolve'' il problema del moto dei corpi celesti. Non annichilisce completamente la domanda: propone dei modelli entro i quali formularla; mette in evidenza ciò che è banale conseguenza degli assiomi di quel modello e, per contro, ciò che non lo è, ciò che per essere risolto chiede che il linguaggio sia espanso, modificato, affilato. Avvicinare da matematici questa disciplina mai nominata, che è poi solamente ciò che la filosofia dovrebbe essere fin dall'inizio: pensiero igienico e bene informato, è lo scopo di questi testi.
+In tale prospettiva è auto-evidente \footnote{Vietato usare le parole "evidente" o "auto-evidente" D.D.} che l'abitudine al pensiero corretto (la pratica della matematica ha questa come definizione possibile) sia l'unico modo onesto di spiegare la cogenza degli enti; ma è deprimente e innegabile che un certo dibattito filosofico si sia reso impermeabile al linguaggio matematico. A volte ciò è fatto con una certa sufficienza nei confronti degli ingegni minuti, e altre volte semplicemente con l'ingenuità dei profani. Riparare a uno strappo avvenuto molto tempo fa, dovuto a diverse finalità e diverso lessico specifico, non è cosa cui possa ambire il lavoro di due sole persone. Se, però, il lettore di queste note chiede una motivazione estesa per il nostro lavoro, un progetto di ampio respiro in cui esso si inserisca, in breve un \emph{programma}, la troverà ora: esiste una matematica il cui scopo è risolvere alcuni problemi della filosofia, nello stesso senso in cui certa matematica ``risolve'' il problema del moto dei corpi celesti. Non annichilisce completamente la domanda: propone dei modelli entro i quali formularla; mette in evidenza ciò che è banale conseguenza degli assiomi di quel modello e, per contro, ciò che non lo è, ciò che per essere risolto chiede che il linguaggio sia espanso, modificato, affilato. Avvicinare da matematici questa disciplina mai nominata, che è poi solamente ciò che la filosofia dovrebbe essere fin dall'inizio: pensiero igienico e bene informato, è lo scopo di questi testi.
 
 Non potendo risolvere il problema dell'ontologia (un tale fine sarebbe megalomane e mal posto), ci proponiamo qui perlomeno di iniziare a scardinare alcune credenze assodate di un certo cattivo ``filosofo quadratico medio''; puntare il dito su alcune problematiche che la prosa è incapace di notare, perché le manca il lessico specifico; suggerire che \emph{nel linguaggio giusto}, quando le parole significano la cosa giusta e sono strumenti di episteme invece che mere formule magiche, alcune questioni essenziali dell'ontologia recente si dissolvono in un filo di fumo, e altre diventano semplicemente ``la domanda sbagliata'': non quesiti sciocchi o falsi, bensì domande che non si dovevano fare, che non significano né ciò che i loro propalatori speravano, né altro.
 
 Questo linguaggio giusto, igienico, non è la matematica; ma in quanto presupposto al linguaggio, la matematica ha un'enorme capacità igienica a determinare da cosa la \emph{characteristica universalis} debba essere composta. Lo scopo di questo lavoro è svelare alcuni frammenti del suo lessico, \emph{mostrando} al di là della vana speculazione che un certo modo di operare ha rendimento superiore ad altri, che parlano del, e attorno al, nulla. Siamo poi tanto certi di stare parlando nel modo giusto, che lo facciamo sfacciatamente, scomodando e destrutturando il più difficile dei problemi, per poi restituirlo intatto, ma completamente cambiato: il principio di identità. 
 
-Cosa significa che \emph{due cose sono, invece, una} è un problema che ci arrovella fin da quando otteniamo la ragione e la parola; ciò perché il problema è tanto elementare quanto sfuggente: l'unica maniera in cui possiamo esibire ragionamento certo è il calcolo; del resto, se la sintassi non vede che l'uguaglianza in senso più stretto possibile, la prassi deve diventare in fretta capace di una maggiore elasticità: per un istante ho postulato che ci fossero ``due'' cose, non una. E non è forse questo a renderle due? E questa terza cosa che le distingue, è davvero diversa da entrambe?
+Cosa significa che \emph{due cose sono, invece, una} è un problema che ci arrovella \marginpar{$(ID_2)$} fin da quando otteniamo la ragione e la parola; ciò perché il problema è tanto elementare quanto sfuggente: l'unica maniera in cui possiamo esibire ragionamento certo è il calcolo; del resto, se la sintassi non vede che l'uguaglianza in senso più stretto possibile, la prassi deve diventare in fretta capace di una maggiore elasticità: per un istante ho postulato che ci fossero ``due'' cose, non una. E non è forse questo a renderle due? E questa terza cosa che le distingue, è davvero diversa da entrambe?
+
+
+\section{Introduction}
+\subsection{CT as metalanguage}
+\begin{quotation}
+	\begin{flushright}
+		"\textit{La filosofia dovrebbe imitare i metodi delle scienze che ottengono dei successi}" (C.S.Peirce, 1868)
+	\end{flushright}
+\end{quotation}
+
+Schema: 
+\begin{itemize}
+	\item \textit{Captatio benevolentiae} (finta): Ci rendiamo conto che fare filosofia utilizzando modelli matematici è storicamente sospetto di riduzionismo o formalismo
+	\item matematica come Ur-linguaggio (eviterei il primo capoverso di Section 6 perchè può sembrare una frettolosa definizione di matematica, data per buona (anche se ne uscirebbe fuori un bel piccolo paperino))
+	\item il linguaggio giusto per fare ontologia: la \emph{Category Theory}; Fosco cerca di "tecnicalizzare" prima parte rossa 
+	\item piccola nota storica: cenni al concetto di struttura in matematica e al bourbakismo
+	\item sottolineare utilità (ontologica) dei concetti emersi in quel periodo storico (non tanto nel dibattito fondazionale, quanto nella pratica matematica "strutturale"); cenno distinzione Kr\"omer-Corry tra structuralism e structural mathematics (soprattutto per dire quella roba per cui la pratica strutturale è essa da sola la filosofia necessaria alla matematica)
+	\item Come Lawvere allarga gli orizzonti del dibattito: dalle strutture ai funtori (e rende ancor più evidenti le conclusioni del punto precedente)
+	\item detto questo: (più breve e secco di ciò che sembra): cosa è una \emph{teoria} in \textbf{CT} (è una categoria, ovviamente; prima parte rossa di Fo); le categorie sono sia la teorie che gli oggetti delle teorie che i "contesti" delle teorie; metalinguaggio adatto a fare matematica e - noi diciamo - anche ontologia (le teorie sono teorie in fondo, che siano matematiche o metafisiche; si tratta nel secondo caso magari di dover fare un lavoro preliminare di chiarificazione/formalizzazione e poi lavorarci \emph{dentro} una categoria)
+\end{itemize}
+
+
+
+
+
+
+\subsection{Towards an Operative Ontology: the notion of identity}
+\begin{itemize}
+	\item dalle brevi riflessioni storico-filosofiche sopra si sottolinea la fecondità di questo approccio nella \emph{pratica} matematica (che ha ricadute anche sulla sua ontologia) (cit. di Kr\"omer quando ridicolizza l'atteggiamento filosofico di voler sapere \emph{prima} cos'è una struttura, senza preoccuparsi di verificare che sia utile e funzioni)
+	\item (forse cit. Carnap, tra l'altro quella roba indicata nelle bozze la dice anche per l'ontologia non solo per la semantica) quindi bisogna fare ontologia in modo operativo (cioè bisogna appunto \emph{farla}) utilizzando il linguaggio categoriale; cosa fa questo linguaggio? (mix tra inizio delle mie note e soprattutto Section 6 (o forse meglio quando si parla del linguaggio in 7.1) e parte finale Section 4 (cioè i filosofi devono capire che quando operano in questo modo non stanno sostenendo automaticamente tesi metafisiche forti, tipo uno strutturalismo integrale))
+	\item cenni a relatività ontologica praticamente implicita e scontata in questo approccio (dipendenza dell'ontologia dalla teoria in cui stiamo operando): intuizione che a qualche filosofo era venuta, inascoltato. Aiuta a vedere con occhio diverso concetti base come l'\emph{ontological committment} 
+	\item noi speroniamo l'identità: $(ID_1) + (ID_2)$
+	\item seconda parte rossa Fo (solo sulle monete di rame)
+	
+\end{itemize}
+Si può pensare di mettere una nota programmatica nelle conclusioni. (in generale non mi ci vuole niente a mettere insieme questo schema in un discorso compiuto (forse solo la parte su Lawvere è più ostica anche se appunti che linkano tutte le cose ce li ho (perlopiù tratti dal paper del 65(?)). La \textit{Homotopy Type Theory} è una immensa riflessione sul principio di identità. \textbf{Rilevante}: nella metateoria che utilizziamo le categorie sono i "luoghi" dentro i quali si fa matematica. Idea base da far emergere nell'introduzione.  
+
+
+
+
+
 \end{document} 
