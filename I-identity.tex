@@ -26,7 +26,6 @@
   & #1 \\ #2 & \downarrow \\ & #3
   \end{xsmallmatrix}}
 
-
 \newcommand{\true}{\texttt{t}}
 \def\id{\text{id}}
 \author{Fouche and Denta}
@@ -34,6 +33,8 @@
 \subtitle{Identity and Yoneda lemma}
 \usepackage{fouche}
 
+\usepackage{minted}
+\def\mil#1{\mintinline{haskell}{#1}}
 \newcommand{\po}[1][dr]{\save*!/#1+1.5pc/#1:(1,-1)@^{|-}\restore}
 \newcommand{\pb}[1][dr]{\save*!/#1-1.5pc/#1:(-1,1)@^{|-}\restore}
 
@@ -48,8 +49,41 @@
 \end{abstract}
 \section{Introduction}
 \epigraph{\textsc{Eadem svnt qvorvm vnvm potest svbstitvi alteri per transmvtationem}}{Leibniz, if only he knew category theory}
-Serve un paragrafo che spieghi diffusamente dove prendiamo le categorie, e di conseguenza da dove deriviamo il metalinguaggio in cui ha senso la nozione di uguaglianza (metalinguistica). L'inizio del paper mi è apparso in sogno:
+\subsection{What is this series}
+[...]
+\subsection{On our choice of metatheory and foundation}
+In his influential paper \cite{} William Lawvere proposes a foundation of mathematics based on category theory. To appreciate the depth and breadth of such an impressive piece of work, however, the word ``foundation'' must be taken in the particular sense intended by mathematicians:
+\begin{quote}
+  [\dots\unkern] here, by "foundation" we mean a single system of first-order axioms in which all usual
+  mathematical objects can be defined and all their usual properties proved.
+\end{quote}
+This sounds at the same time a bit cryptic and unsatisfactory; the only perspective on the matter is that a foundation of mathematics is \emph{de facto} a set of first order axioms organised in a Gentzen-like deduction system.
 
+The fact that the theory so determined has a model, i.e. it can be interpreted inside a given familiar structure, is both the key assumption and the less relevant aspect of the construction; ``having a model'' is a slightly improper way to ensure that, \emph{assuming the existence of a naive set theory}, axioms of $\clL$ can be satisfied by a naive set. Alternatively, and more crudely, assuming the existence of a model of ZFC, $\clL$ has a model inside that model of ZFC.
+
+A series of works unhinging some aspects of ontology through category theory should at least try to tackle such a simple and yet diabolic question as ``where'' are the symbols forming the first-order theory of ETCC. 
+
+Of course, asking that they inhabit a set of symbols, called alphabet, appears somewhat circular: aren't sets in themselves already a mathematical object? How can they be a piece of the teory they aim to be a foundation of?
+
+Following this path would have, however, catastrophic consequences on the quality and depth of our exposition The usual choice is thus to assume that, wherever and whatever they are, these symbols ``are'', and our r\^ole is descriptive rather than generative.
+
+This state of affairs has, to the best of our moderate knowledge on the subject, various possible explanations:
+\begin{itemize}
+  \item On one hand, it constitutes the heritage of Bourbaki's authoritarian stance on formalism in pure mathematics;
+  \item on the other hand, a different stance would result in barely no difference for the ``working class''; mathematicians are irreducible pragmatists, somewhat blind to the consequences of their philosophical stances.
+\end{itemize}
+An fiercy formalist perspective would require us to concoct a formal system where symbols and letters do not exist outside of the Gentzen-like deductive system we specified together with $\clL$.
+
+This perspective proved itself to be quite useful in working mathematics; consider for example the type declaration rules of a typed functional programming language: such a concise declaration as 
+\begin{minted}{haskell}
+  data Nat = Z | S Nat
+\end{minted}
+makes no assumption on ``what'' \mil{Z} and \mil{S :: Nat -> Nat} are; instead, it treats them as meaningful formally (in terms of the admissible derivations a well-formed expression is subject to) and intuitively (in terms of the fact that they model natural numbers).
+
+Rather than try to revert this state of affairs we silently comply to it as everyone else; but we feel contempt after a brief and honest declaration of intents towards where our metatheory lives. Such a metateory hinges again on work of Lawvere, and especially on the series of works on functorial semantics.
+\subsection{Categories as places}
+[...]
+\subsection{Identity}
 Ontology rests upon the principl of identity. It is this very principle that here we aim to unhinge.
 \section{Preliminaries on variable set theory}
 In some of our proofs it will be crucial to blur the distinction between the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \ref{}); once the following result is proved, we freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
