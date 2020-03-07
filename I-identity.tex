@@ -54,37 +54,46 @@
 \subsection{On our choice of metatheory and foundation}
 In his influential paper \cite{} William Lawvere proposes a foundation of mathematics based on category theory. To appreciate the depth and breadth of such an impressive piece of work, however, the word ``foundation'' must be taken in the particular sense intended by mathematicians:
 \begin{quote}
-  [\dots\unkern] here, by "foundation" we mean a single system of first-order axioms in which all usual
-  mathematical objects can be defined and all their usual properties proved.
+  [\dots\unkern] a single system of first-order axioms in which all usual mathematical objects can be defined and all their usual properties proved.
 \end{quote}
-This sounds at the same time a bit cryptic and unsatisfactory; the only perspective on the matter is that a foundation of mathematics is \emph{de facto} a set of first order axioms organised in a Gentzen-like deduction system.
+Such a position sounds at the same time a bit cryptic to unravel, and unsatisfactory; Lawvere's (and others') stance on the matter is that a foundation of mathematics is \emph{de facto} just a set $\clL$ of first order axioms organised in a Gentzen-like deduction system. The deductive system generated in this way reproduces mathematics as we know and practice it, i.e. provides a formalisation for something that already exists and needs no further explanation.
 
-The fact that the theory so determined has a model, i.e. it can be interpreted inside a given familiar structure, is both the key assumption and the less relevant aspect of the construction; ``having a model'' is a slightly improper way to ensure that, \emph{assuming the existence of a naive set theory}, axioms of $\clL$ can be satisfied by a naive set. Alternatively, and more crudely, assuming the existence of a model of ZFC, $\clL$ has a model inside that model of ZFC.
+It is not a vacuous truth that $\clL$ exists somewhere: the fact that the theory so determined has indeed a model, i.e the fact that it can be interpreted inside a given familiar structure, is both the key assumption and the less relevant aspect of the construction; ``having a model'' is a slightly improper way to ensure that, \emph{assuming the existence of a naive set theory}, axioms of $\clL$ can be satisfied by a naive set. Alternatively, and more crudely, assuming the existence of a model of ZFC, $\clL$ has a model inside that model of ZFC. 
 
-A series of works unhinging some aspects of ontology through category theory should at least try to tackle such a simple and yet diabolic question as ``where'' are the symbols forming the first-order theory of ETCC. 
+A series of works attempting to unhinge some aspects of ontology through category theory should at least try to tackle such a simple and yet diabolic question as ``where'' are the symbols forming the first-order theory of ETCC. And yet, everyone just believes in sets, and solves the issue with a leap of faith from which all else follows.
 
-Of course, asking that they inhabit a set of symbols, called alphabet, appears somewhat circular: aren't sets in themselves already a mathematical object? How can they be a piece of the teory they aim to be a foundation of?
+This appears somewhat circular: aren't sets in themselves already a mathematical object? How can they be a piece of the teory they aim to be a foundation of?
 
-Following this path would have, however, catastrophic consequences on the quality and depth of our exposition The usual choice is thus to assume that, wherever and whatever they are, these symbols ``are'', and our r\^ole is descriptive rather than generative.
+Following this path would have, however, catastrophic consequences on the quality and depth of our exposition The usual choice is thus to assume that, wherever and whatever they are, these symbols ``are'', and our r\^ole is \emph{descriptive} rather than generative.
 
 This state of affairs has, to the best of our moderate knowledge on the subject, various possible explanations:
 \begin{itemize}
   \item On one hand, it constitutes the heritage of Bourbaki's authoritarian stance on formalism in pure mathematics;
-  \item on the other hand, a different stance would result in barely no difference for the ``working class''; mathematicians are irreducible pragmatists, somewhat blind to the consequences of their philosophical stances.
+  \item on the other hand, a different position would result in barely no difference for the ``working class''; mathematicians are irreducible pragmatists, somewhat blind to the consequences of their philosophical stances.
 \end{itemize}
-An fiercy formalist perspective would require us to concoct a formal system where symbols and letters do not exist outside of the Gentzen-like deductive system we specified together with $\clL$.
+So, symbols and letters do not exist outside of the Gentzen-like deductive system we specified together with $\clL$.
 
-This perspective proved itself to be quite useful in working mathematics; consider for example the type declaration rules of a typed functional programming language: such a concise declaration as 
+As arid as it may seem, this perspective proved itself to be quite useful in working mathematics; consider for example the type declaration rules of a typed functional programming language: such a concise declaration as 
 \begin{minted}{haskell}
   data Nat = Z | S Nat
 \end{minted}
 makes no assumption on ``what'' \mil{Z} and \mil{S :: Nat -> Nat} are; instead, it treats them as meaningful formally (in terms of the admissible derivations a well-formed expression is subject to) and intuitively (in terms of the fact that they model natural numbers).
 
-Rather than try to revert this state of affairs we silently comply to it as everyone else; but we feel contempt after a brief and honest declaration of intents towards where our metatheory lives. Such a metateory hinges again on work of Lawvere, and especially on the series of works on functorial semantics.
+Taken as an operative rule, this reveals exactly what is our stance towards foundations: we are ``structuralist in the metatheory'', meaning that we treat the symbols of a FOT or the constructors of a type system irregardless of their origin, provided the same relation occur between criptomorphic collections of labeled atoms.
+
+We are thus structuralists in the metatheory, and yet with a grain of salt, with a transparent for the consequences and limits of this partialisation. On the one hand, pragmatism works; generates rules of evaluation for the truth of sentences. On the other hand, this sounds like a Munchhausen-like explanation of the value of this approach, by means of the approach itself. Yet there seems to be no way to do better: answering this question means being able to give a foundation of language.
+
+This because ``our'' metatheory is something near to a structuralist theory of language; thus, a foundation for such a metatheory shall inhabit a meta-metatheory\dots 
+
+% \todo[inline]{Trovare il modo di dire che questo modo di operare è coerente perché rende ``strutturalisti nella metateoria'': il luogo dove i simboli di una FOT o i costruttori di un data type vivono è irrilevante stanti le medesime relazioni tra insiemi equipotenti di simboli. Noi siamo, quindi, strutturalisti nella metateoria, ma tentiamo di esserlo accortamente, dando conto in maniera trasparente delle conseguenze e dei limiti di questo approccio: un pregio, funziona. Un difetto: è una risposta alla Munchhausen, che spiega sé stessa mediante sé stessa. Ma di meglio non si può fare, perché una risposta ``vera'' a questa domanda abita il linguaggio e in un certo senso lo fonda. Siccome, detta brevemente, la nostra metateoria è una teoria strutturalista del linguaggio, rispondere alla domanda significherebbe fondare la metateoria\dots{} su una meta-metateoria. }
+
+Thus, rather than try to revert this state of affairs we silently comply to it as everyone else; but we feel contempt after a brief and honest declaration of intents towards where our metatheory lives. Such a metateory hinges again on work of Lawvere, and especially on the series of works on functorial semantics.
 \subsection{Categories as places}
 [...]
 \subsection{Identity}
 Ontology rests upon the principl of identity. It is this very principle that here we aim to unhinge.
+
+Cosa significa che \emph{due cose sono, invece, una} è un problema che ci arrovella fin da quando otteniamo la ragione e la parola; ciò perché il problema è tanto elementare quanto sfuggente: l'unica maniera in cui possiamo esibire ragionamento certo è il calcolo; del resto, se la sintassi non vede che l'uguaglianza in senso più stretto possibile, la prassi deve diventare in fretta capace di una maggiore elasticità: per un istante ho postulato che ci fossero ``due'' cose, non una. E non è forse questo a renderle due? E questa terza cosa che le distingue, è davvero diversa da entrambe?
 \section{Preliminaries on variable set theory}
 In some of our proofs it will be crucial to blur the distinction between the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \ref{}); once the following result is proved, we freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
 \begin{proposition}
