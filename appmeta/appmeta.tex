@@ -1,0 +1,264 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\usepackage{xcolor,amsmath,amsfonts,amssymb}
+
+\newenvironment{fo}[1]{\color{red} \textbf{Fouche said}: #1}{\color{black}}
+\newenvironment{de}[1]{\color{blue} \textbf{Denta said}: #1}{\color{black}}
+
+\newcommand{\numberset}{\mathbb}
+\newcommand{\N}{\numberset{N}}
+
+\usepackage{booktabs}
+\usepackage{caption}
+
+
+
+
+\begin{document}
+	\title{Everything you always wanted to know about introduction of our paper (and we're afraid to ask)}
+	\maketitle
+	
+	\section{Introduction}
+	\subsection{What is this series}
+	Per quanto possa sembrare sospetto usare la matematica per risolvere questioni tradizionalmente di pertinenza della filosofia, ciò che noi riteniamo di poter fare è fornire un linguaggio adeguato entro il quale parlare di ontologia, prendendolo dalla matematica; se ci è concesso un gioco di parole non si tratta, come la tradizione in filosofia analitica ha da sempre paventato, di fare un \emph{uso corretto del linguaggio} quanto piuttosto un \emph{uso del linguaggio corretto}. Tale linguaggio è preso appunto dalla matematica, ed è la \emph{Category Theory} (d'ora in poi \textbf{CT}). Mostreremo come le categorie siano state feconde nella pratica matematica e come possano esserlo analogamente in ontologia. Il motivo è che con esse è possibile (idea prima di esse addirittura inesprimibile) trattare le teorie matematiche come oggetti matematici \footnote{Ogni categoria ha un suo linguaggio interno, come si vedrà, e ogni classe di categorie modella una logica; a loro volta le categorie devono stare in una categoria più grande (in \emph{Type Theory} c'è un postulato che permette di evitare gli ovvi paradossi del caso, stabilendo una gerarchia di tipi; una volta scritto un tipo "esiste", è un oggetto esplicitamente e manifestamente linguistico, senza che si pongano i problemi che dichiareremo e prudentemente eviteremo più sotto)}. 
+	
+	\subsection{On our choice of metatheory and foundation}
+	
+	
+	Nel corso del '900 la direzione dell'evoluzione della matematica ha portato la disciplina inizialmente a frazionarsi in differenti sotto-discipline, con loro oggetti e linguaggi specifici, e poi a trovare un'inattesa unificazione sotto la nozione portante di \textbf{struttura}, e lo strumento formale che meglio ne caratterizzato il concetto, le \textbf{categorie}.
+	Questo processo ha portato spontaneamente ad una revisione epistemologica della matematica e ha ispirato, nell'evolversi degli strumenti operativi, una revisione sia dei suoi fondamenti che della sua ontologia. Per molti è innegabile che
+	\begin{quotation}
+		[the] mathematical uses of the tool CT and epistemological
+		considerations having CT as their object cannot be separated, neither historically
+		nor philosophically. [Kr\"omer, 2007]
+	\end{quotation}
+	Ciò è però avvenuto prescindendo dallo specifico dibattito fondazionale, all'epoca attivissimo. \cite{,,,}
+		
+		
+		La pratica matematica, nella via strutturalista, produce una ontologia ``naturale'', che alcuni, in seguito, sentirono il dovere di caratterizzare con più precisione. D'altronde, analogamente a quanto suggeriva Carnap \footnote{Alcune parole che i filosofi dovrebbero tenere a mente, sulla liceità dell'impiego di entità astratte (nello specifico matematiche) nella riflessione semantica, valevoli anche in ontologia:
+		\begin{quote}
+			we take the position that
+			the introduction of the new ways of speaking does not need any theoretical justification
+			because it does not imply any assertion of reality [...].  it is a
+			practical, not a theoretical question; it is the question of whether or not to accept the new
+			linguistic forms. The acceptance cannot be judged as being either true or false because it is
+			not an assertion. It can only be judged as being more or less expedient, fruitful, conducive to
+			the aim for which the language is intended. Judgments of this kind supply the motivation for
+			the decision of accepting or rejecting the kind of entities. [Carnap, 1956]
+	\end{quote}} rispetto alla semantica,
+	\begin{quotation}
+		mathematicians creating
+		their discipline were apparently not seeking to justify the constitution of the
+		objects studied by making assumptions as to their ontology. [Kr\"omer, 2007]
+	\end{quotation}
+	Ma, al netto dei tentativi (anche dello stesso gruppo Bourbaki), ciò che conta è che l'abitudine a ragionare in termini di strutture abbia prodotto implicite posizioni epistemologiche e ontologiche.
+	Questione che meriterebbe una lunga riflessione autonoma. Per i nostri scopi basti enunciare una distinzione che Kr\"omer riprende in parte da [Corry, 1996]: quella tra \textbf{structuralism} e \textbf{structural mathematics}:
+	\begin{itemize}
+		\item[\textbf{(1)}] Structuralism: \textit{the philosophical
+			position regarding structures as the subject matter of mathematics}
+		\item[\textbf{(2)}] Structural Mathematics: \textit{the methodological approach to look in a given problem
+			“for the structure”}
+	\end{itemize}
+	\textbf{(1)} implica \textbf{(2)} ma non è necessaria l'implicazione inversa. \fo{Si può cioè fare matematica strutturale senza essere strutturalisti; prendendo cioè posizioni diverse, o anche opposte, rispetto allo strutturalismo in sé. Dire questo è importante perché noi siamo molto fortemente strutturalisti --``nella metateoria''--, diciamo perché ci crediamo, ma è importante sottolineare che si può godere dei frutti senza credere nell'albero. Questo è perfettamente espresso dalla footnote 2 con la cit di Carnap.}\endfo Tuttavia è essa spesso venuta spontanea nella riflessione teorica durante la storia della matematica recente (l'ontologia ``naturale'' appunto). L'uso della \textbf{CT} come metalinguaggio, nonostante la compromissione storica con lo strutturalismo, non rende tuttavia automatico il passaggio da \textbf{(2)} a \textbf{(1)}. ma suggerisce che l'ontologia non solo dipende dalla ``ideologia'' (in senso quineano) di $T$ \fo{Chi è $T$?}\endfo, cioè dalla potenza espressiva della teoria, ma è influenzata dal modello epistemologico che l'uso dello stesso linguaggio formale ispira.
+	
+	L'utilità della distinzione di Kr\"omer è però un'altra: invece di incespicarsi in una definizione possibilmente non ambigua di \textit{struttura} (con le conseguenze indesiderate che potrebbe avere nella pratica operativa) si può ridurre (o ridefinire) la filosofia \textbf{(1)} alla metodologia \textbf{(2)}, dicendo che:
+	\begin{quotation}
+		\textbf{structuralism is the claim that mathematics
+			is essentially structural mathematics} [Kr\"omer, 2007]
+	\end{quotation}
+	(la pratica operativa che ``entra'' nella definizione di strutturalismo evita il decennale dibattito delle \textit{humanities} sui medesimi concetti).
+	
+	Ciò è equivalente a dire: la pratica strutturale è essa stessa la sua filosofia.
+	
+	Gli storici tentativi di spiegazione del termine ``struttura'' attuati da Bourbaki negli anni a seguire dalla pubblicazione degli \textit{Elements} \cite{,,,}, sono la prima sistematica elaborazione di una filosofia che si accordasse con la fecondità operativa della \textit{structural mathematics}. Il suo obiettivo è quello di ``\textit{assembling of all possible ways in which given set can be endowed with certain structure}'' [Kr\``omer, 2007], e per farlo elabora, nel programmatico \textit{The Architecture of Mathematics} (redatto dal solo Dieudonné), pubblicato nel 1950, una strategia formale. Pur specificando che ``\textit{this definition is not sufficiently general for the needs of mathematics}'' [Bourbaki, 1950], codifica una serie di operational steps tramite i quali una struttura su un insieme è ``assembled set-theoretically''. Adotta, insomma, una prospettiva ``riduzionista'' nella quale
+	\begin{quotation}
+		the structureless sets are
+		the raw material of structure building which in Bourbaki’s analysis is “unearthed”
+		in a quasi-archaeological, reverse manner; they are the most general objects which
+		can, in a rewriting from scratch of mathematics, successively be endowed with
+		ever more special and richer structures. [K\"omer, 2007]
+	\end{quotation}
+	A conti fatti, dunque, nello strutturalismo bourbakista la nozione di \textit{set} non sparisce definitivamente davanti a quella di struttura. The path towards an "integral" structuralism was still long.
+	
+	In his influential paper \cite{} William Lawvere proposes a foundation of mathematics based on category theory. To appreciate the depth and breadth of such an impressive piece of work, however, the word ``foundation'' must be taken in the particular sense intended by mathematicians:
+	\begin{quote}
+		[\dots\unkern] a single system of first-order axioms in which all usual mathematical objects can be defined and all their usual properties proved.
+	\end{quote}
+	Such a position sounds at the same time a bit cryptic to unravel, and unsatisfactory; Lawvere's (and others') stance on the matter is that a foundation of mathematics is \emph{de facto} just a set $\mathcal{L}$ of first order axioms organised in a Gentzen-like deduction system. The deductive system so generated reproduces mathematics as we know and practice it, i.e. provides a formalisation for something that already exists and needs no further explanation, and that we call ``mathematics''.
+	
+	It is not a vacuous truth that $\mathcal{L}$ exists somewhere: the fact that the theory so determined has a nontrivial model, i.e the fact that it can be interpreted inside a given familiar structure, is both the key assumption we make, and the less relevant aspect of the construction itself; showing that $\mathcal{L}$ ``has a model'' is --although slightly improperly-- meant to ensure that, \emph{assuming the existence of a naive set theory} (meaning assuming the existence of structures called "sets"), axioms of $\mathcal{L}$ can be satisfied by a naive set. Alternatively, and more crudely, assuming the existence of a model of ZFC, $\mathcal{L}$ has a model inside that model of ZFC. 
+	
+	A series of works attempting to unhinge some aspects of ontology through category theory should at least try to tackle such a simple and yet diabolic question as ``where'' are the symbols forming the first-order theory of ETCC. And yet, everyone just believes \footnote{Non so se dire proprio così; ci rifletterei} in sets, and solves the issue of ``where'' they are with a leap of faith from which all else follows.
+	
+	This might appear somewhat circular: aren't sets in themselves already a mathematical object? How can they be a piece of the theory they aim to be a foundation of?
+	
+	Following this path would have, however, catastrophic consequences on the quality and depth of our exposition. The usual choice is thus to assume that, wherever and whatever they are, these symbols ``are'', and our r\^ole in unveiling mathematics is \emph{descriptive} rather than generative \footnote{Agazzi fa notare giustamente che non si può legittimamente affermare che gli assiomi, dal punto di vista costruttivista, "creino" gli oggetti matematici, dal che la risposta alla domanda "dove sono?" sarebbe "da nessuna parte". L'unica cosa che si può dire certamente è che essi "precisano, in modo rigoroso ed esatto, ancorché implicito, il \emph{significato} degli oggetti matematici" (e sembra che anche in matematica, come è uso in filosofia del linguaggio, sia assennato tenere ferma la distinzione tra significato di un'espressione e sua denotazione). Ecco noi ci fermiamo su questa soglia. \fo{Non sono perfettamente d'accordo: gli assiomi stanno nel linguaggio; il linguaggio esiste per assioma. La sintassi esiste per assioma (è falso, ma è quasi vero); dopodiché l'interpretazione, la semantica, cioè il significato non-triviale attribuito a stringhe di simboli nella sintassi, quello no: esistono teorie senza modelli; esistono teorie con troppi modelli, esistono teorie con un solo modello\dots}\endfo}.
+	
+	This state of affairs has, to the best of our moderate knowledge on the subject, various possible explanations:
+	\begin{itemize}
+		\item On one hand, it constitutes the heritage of Bourbaki's authoritarian stance on formalism in pure mathematics;
+		\item on the other hand, a different position would result in barely no difference for the ``working class''; mathematicians are irreducible pragmatists, somewhat blind to the consequences of their philosophical stances.
+	\end{itemize}
+	So, symbols and letters do not exist outside of the Gentzen-like deductive system we specified together with $\mathcal{L}$.
+	
+	As arid as it may seem, this perspective proved itself to be quite useful in working mathematics; consider for example the type declaration rules of a typed functional programming language: such a concise declaration as
+	
+
+\de{Qui l'esempio che fai credo sia parecchio indicativo. Tu stesso hai detto "un tipo quando lo scrivi c'è". E qualcuno mi ha fatto notare che è difficile tradurre informalmente la \emph{Type Theory}; per cui quello che mi viene da dire è: è una teoria particolarmente "astratta-nel-senso-di-Agazzi"? cioè la sua natura puramente linguistica è esplicita? (i tipi stanno dove li scrivi, senza altro da aggiungere). Nel caso magari lo accennerei in nota, fermo restando che il discorso che fai qui, io lo traduco più semplicemente come qui sotto, e aggiungo magari esempietto più soft per filosofi/logici. Parliamone}\endde 
+	
+	makes no assumption on ``what'' Z and S :: Nat -> Nat are; instead, it treats these constructors as meaningful formally (in terms of the admissible derivations a well-formed expression is subject to) and intuitively (in terms of the fact that they model natural numbers: every data structure that has those two constructors must be the type $\N$ of natural numbers).
+	Possiamo tradurre "formally" con "synctactically" (di modo che, ad esempio, gli assiomi di PA sono significanti per via delle derivazioni formali che ci permettono di fare) e "intuitively" con "semantically" (gli assiomi di PA si presume abbiano un modello, di solito quello standard). 
+	
+	Taken as an operative rule, this reveals exactly what is our stance towards foundations: we are ``structuralist in the metatheory'', meaning that we treat the symbols of a first-order theory or the constructors of a type system irregardless of their origin, \de{questa non la inserisco direttamente nel testo, ancora: ergo per noi nel metalinguaggio gli oggetti del linguaggio sono strutture (o li trattiamo come tali), sospendendo il giudizio su cosa effettivamente \emph{siano} fuori dal metalinguaggio. Mettiamola così:}\endde
+	\begin{center}
+\begin{tabular}{lccr}\toprule 
+	$L$ & Oggetti & Denotazioni & Ontologia \\
+	\midrule
+	\textbf{Language} & Categories & Theories & ?? \\
+	\midrule
+	\textbf{Metalanguage} & Categories & "Places" & Strutture 
+\end{tabular} 
+\end{center}
+
+\de{Ed ecco perchè, come si spiegherà in 1.4, non è necessario abbracciare lo strutturalismo metafisico "forte"}\endde provided the same relation occur between criptomorphic collections of labeled atoms.
+
+Si può fare ciò proprio perché ci si è posti nell'ottica relazionale, implicita nella teoria che usiamo (lo strutturalismo, come si sa, comporta l'uso di ontologie relazionali) e quindi possiamo parlare di relazioni tra oggetti senza dire cosa siano gli oggetti, se non, formalmente, i termini posti ai lati estremi dei funtori. Sappiamo dire \footnote{perchè operativamente li trattiamo così} cosa sono gli oggetti della teoria dal punto di vista della metateoria (strutture e relazioni tra esse) ma non cosa sono \textit{nella} teoria, se non simboli, sulla cui fondazione non ci pronunciamo. 
+	
+	In this precise sense we are thus structuralists in the metatheory, and yet we do so with a grain of salt, maintaining a transparent approach to the consequences and limits of this partialisation. On the one hand, pragmatism works \footnote{Ed invero agli ontologi stiamo chiedendo di diventare pragmatisti o, per meglio dire, operativisti}; it generates rules of evaluation for the truth of sentences. On the other hand, this sounds like a Munchhausen-like explanation of its the value, in terms of itself. Yet there seems to be no way to do better: answering the initial question would give no less than a foundation of language.
+	
+	And this for no other reason that ``our'' metatheory is something near to a structuralist theory of language; thus, a foundation for such a metatheory shall inhabit a meta-metatheory\dots{} and so on.
+	
+	Thus, rather than trying to revert this state of affairs we silently comply to it as everyone else does; but we feel contempt after a brief and honest declaration of intents towards where our metatheory lives. Such a metatheory hinges again on work of Lawvere, and especially on the series of works on functorial semantics.
+	
+	
+	\subsection{Categories as Places}
+	
+	
+	[\emph{qui va messa la breve parte quasi-tecnica su cos'è una categoria; poi si rimanda all'appendice chiaramente}
+	
+	Si può pensare anche di inserire qui la parte dove si spiega il lemmma di Yoneda in termini di "principio di estensionalità"; ma forse è meglio non appesantire troppo l'introduzione, e metterla dopo, magari nella parte "applicativa" sulle nove monete]
+	
+	
+	Una \emph{teoria}, infatti, non è altro che una \emph{small category} che realizza un dato linguaggio logico $L$, ma è anche vero che l'intera matematica si trova \emph{dentro} una categoria (grande). Parlando figurato, le teorie sono categorie e i "luoghi" in cui interpretiamo le teorie sono a loro volta categorie. In \textbf{CT} le categorie sono, quindi, oggetti puramente sintattici, ed è il contesto in cui si opera a determinare una semantica. Già in semantica logica una \emph{interpretazione} $\mathcal{I}$ di un enunciato $\alpha$ è una funzione che associa elementi di un insieme (di solito l'insieme dei valori di verità) alle variabili libere in $\alpha$. Nella storia della \textbf{CT} (caratterizzata da un rifiuto dell'impostazione \emph{set-theoretic} a livello fondazionale) una serie di generalizzazioni e raffinamenti dello stesso procedimento hanno condotto alla nozione di funtore e quindi alla semantica funtoriale di Lawvere.
+	
+	Un funtore $F$ da una categoria $\mathcal{A}$ a una categoria $\mathcal{B}$ è una mappa denotata da $F: \mathcal{A} \to \mathcal{B}$ che associa ad ogni oggetto $X$ di $\mathcal{A}$ un oggetto $F(X)$ di $\mathcal{B}$ e ad ogni morfismo $f: X \to Y$ di $\mathcal{A}$ il morfismo $F(f): F(X) \to F(Y)$ di $\mathcal{B}$, tale da soddisfare le seguenti proprietà:
+	\begin{itemize}
+		\item Per ogni $f: X \to Y$ e $g: Y \to Z$ vale $F(g \circ f)= F(f) \circ F(g)$
+		\item $F(id_X) = id_{F(X)}$ per ogni $X \in \mathcal{A}$
+	\end{itemize}
+	
+Lawvere, dopo aver costruito il sistema formale "elementare" ETAC (\emph{Elementary Theory of Abstract Category}), presenta una teoria della categoria di tutte le categorie (ETCC) che fornisca modelli per la teoria elementare. Quindi ci dà un linguaggio sintattico, in cui le categorie non sono altro che \emph{termini}, e poi una metateoria nella quale poter considerare categorie di categorie etc, che è poi alla fine una teoria funtoriale, dove ogni ffbf di ETAC diventa una formula della \emph{basic theory} di ETCC in cui si specifica su quale modello operano i termini:
+\begin{quotation}
+	If $\Phi$ is any theorem of elementary theory of abstract categories, then $ \forall \mathcal{A} (\mathcal{A} \models \Phi)$ is a theorem of basic theory of category of all categories [Lawvere, 1965]
+\end{quotation}
+e aggiunge, un po'ambiguamente, "\textit{every object in a world described by basic theory is, at least, a category}". Altri esempi: $\Delta_i$ in ETAC (che indica dom/cod) diventa $\mathcal{A} \models \Delta_i$ in BT; $\forall x [\dots]$ in ETAC diventa $\forall x [x \in \mathcal{A} \rightarrow \dots]$ in BT etc etc.
+
+
+	Se, come si è detto, una teoria non è altro che una categoria $T$, i funtori sono i "modelli" di $T$ entro cui interpretarla. In altre parole, preso il funtore $T \to Set$, la totalità di questi modelli forma una categoria che "dice le stesse cose che la matematica classica dice sulla teoria che corrisponde a $T$". In questo linguaggio non si parla più di un numero 6 ma di "qualsiasi cosa il numero 6 significhi in relazione al contesto dove è inserito". 
+	In questo senso è corretto affermare che ETAC è il metalinguaggio con il quale si può fare tutta la matematica. Per ogni teoria matematica serve una classe di categorie diversa (abeliane per fare geometria algebrica; topos o CCC per fare logica; categorie modello per fare topologia algebrica etc). \fo{Aggiungere qui una nota tecnica spezzerebbe la continuità del discorso, che invece fila molto bene; scrivo in coda al testo quello che qui, nella versione definitiva, ci limiteremo a reffare e apparirà in appendice o altrove.}\endfo
+
+	In questo senso la teoria delle categorie "è più grande della matematica nel suo complesso" e ne fa da fondazione; in questo senso è un metalinguaggio dove è possibile rifare la matematica nella sua interezza. L'idea è che \emph{le teorie matematiche sono a loro volta oggetti matematici}, e in quanto tali sono passibili dello stesso studio di cui sono passibili gli oggetti di cui quelle teorie parlano.
+	
+	 Nulla vieta, a questo punto, di considerare qualuque teoria ontologica come una categoria, previo lavoro di chiarificazione/formalizzazione che lo stesso linguaggio categoriale ci permette di eseguire. Tra i vantaggi, visibili già in matematica, la possibilità di leggere le teorie in termini di relazioni (sospendendo \emph{ontological committment} sugli oggetti) e i concetti come \emph{context-dependent}. Un efficace "slogan" filosofico, a riassumere entrambi i presupposti, lo si può trovare in un paper di Jean-Pierre Marquis [Marquis, 1997]:
+	 \begin{quote}
+	 	[...] \emph{to be} is \emph{to be related}, and the "essence" of an "entity" is given by its relations to its "environment"
+	 \end{quote}
+	 
+	  Sappiamo che nella storia della \textbf{CT} l'accettazione dell'evidenza dei risultati è avvenuta a prescindere da un dibattito intorno alla scarsa precisione e coerenza logica degli stessi. Le categorie sono nate come strumento concettuale e, senza preoccuparsi delle sottigliezze della ricerca fondazionale, hanno catturato efficacemente tutte le nozioni della matematica moderna, rivelandosi utili e feconde. Nostro claim è che si riveleranno tali anche con le usuali nozioni metafisiche. Si tratta di adottare, in fondo, una prospettiva pragmatica:
+	  \begin{quotation}
+	  	that structural mathematics is characterized as an activity by a treatment of things as if one were dealing with structures. From the pragmatist viewpoint, we do not know much more about structures than how to deal with them, after all.
+	  \end{quotation}
+	  La ``traduzione'' dei problemi dell'ontologia nel linguaggio di \textbf{CT} permette di manipolare meglio nozioni (non solo, come si sa, matematiche) ma metamatematiche e metafisiche, e ci dota di un approccio più compatto e di una visione più ``leggera'' e occamista delle questioni vertenti su oggetti e esistenza. Non giustifichiamo questo approccio a priori ma ne assumiamo la fecondità già provata in letteratura \fo{Ma mettere qui un ``Mt7,16'' ci ingrazia i severiniani secondo te?}\endfo, soprattutto paragonata a quella degli approcci set-theoretic (di cui già è informata la totalità delle ontologie formali).
+	 
+	 In \textbf{CT} possiamo "tradurre" i problemi classici dell'ontologia, fornire modelli entro i quali formularne meglio presupposti e domande, evidenziare ciò che è banale conseguenza degli assiomi di quel modello e ciò che non lo è, risolverli e, in alcuni casi, dissolverli, rivelandone la natura figmentale. Si tratta di fornire un \emph{ambiente} ben definito nel quale questioni ritenute oggetto di dibattito filosofico possano illuminarsi in modi nuovi o scomparire. E questo non per qualche perverso istinto riduzionistico, ma per poterne parlare in termini efficaci e nel linguaggio adatto a inquadrarli: tentare, con gli strumenti più avanzati e raffinati dell'astrazione matematica, di rispondere a delle domande, produrre conoscenza, e non solo dibattito; inscrivere antiche o recenti questioni in un nuovo paradigma, volto a superare e al contempo far avanzare la ricerca.
+	
+	Come ogni paradigma lo dotiamo di una sintassi con la quale "nominare" concetti e dare definizioni, e di una semantica che produca modelli, e quindi contesti, entro i quali "guardare" le teorie; questa sintassi e questa semantica non ce le inventiamo: sono già nella matematica e da lì le preleviamo. 
+	
+	
+	\subsection{Towards an Operative Ontology. Identity}
+	
+	Riassumiamo i vantaggi del fare ontologia usando la teoria delle categorie:
+	\begin{itemize}
+		\item Prima di tutto in questo modo ontologia, ci si permetta la battuta, la si \emph{fa} effettivamente. Vale a dire, come mostreremo nel resto del lavoro e in altri successivi, si affrontano di petto le questioni e le si risolvono. Stiamo perciò suggerendo un approccio \emph{problem solving}
+		\item Lo strutturalismo "debole" implicito in questa visione è da noi mantenuto solo a livello metateorico, e consente di guardare alle relazioni tra oggetti all'interno delle teorie. Anche qui, l'approccio relazionale è assunto in quanto proficuo in senso pratico, operativo, e - come vedremo al termine del paragrafo - non implica l'adesione incondizionata a uno strutturalismo "forte".
+		\item Come conseguenza fondamentale del punto precedente nessun concetto viene studiato in senso "assoluto" (qualunque cosa ciò significhi) ma relativamente al contesto in cui opera, e alla teoria che stiamo adottando per definirlo.  
+	\end{itemize}
+	Ontology rests upon the principle of identity. It is this very principle that here we aim to unhinge.
+	
+	Cosa significa che \emph{due cose sono, invece, una} è un problema che ci arrovella fin da quando otteniamo la ragione e la parola; ciò perché il problema è tanto elementare quanto sfuggente: l'unica maniera in cui possiamo esibire ragionamento certo è il calcolo; del resto, se la sintassi non vede che l'uguaglianza in senso più stretto possibile, la prassi deve diventare in fretta capace di una maggiore elasticità: per un istante ho postulato che ci fossero ``due'' cose, non una. E non è forse questo a renderle due? E questa terza cosa che le distingue, è davvero diversa da entrambe?
+	
+	Ciò che risulterà evidente è che la nozione di identità è, appunto, \emph{context-dependent}, e questo risolve il dibattito che, almeno da [Geach,\dots], impegna i filosofi, in merito alla sua eventuale relatività ontologica. 
+	
+	Sostituire la nozione classica vuol dire rivedere i fondamenti dell'ontologia: la stessa nozione centrale di \emph{esistenza}, nella tradizione quineana, si definisce tramite la nozione, più (illusoriamente) semplice e primitiva, di identità: ``\textit{A esiste}'' sse ``\textit{qualcosa è identico ad A}'' (questo ``qualcosa'' è una variabile vincolata ad un quantificatore esistenziale).
+	
+	Il motivo per cui riteniamo di dover agire in questa direzione è dovuto agli innumerevoli problemi che la nozione di identità classica (criterio di Leibniz, sue varianti, ma anche definizioni successive in sua vece) si porta dietro, rilevati da molti filosofi nel corso del secolo passato, e non superabili rifiutando solo l'identità leibniziana o abbracciando la prospettiva mereologica (ma ci riserviamo di parlarne in lavori successivi). Il motivo per cui molti filosofi, pur sottolineando l'inadeguatezza della nozione, non hanno mai seriamente proposto di sostituirla, crediamo sia per mancanza sia di un linguaggio adatto sia di alternative teoriche rigorose in esso espimibili.
+	L'\textit{Homotopy Type Theory}, e più in generale la \textbf{CT}, rispondono a queste esigenze, e attuano quella sostituzione finora mai realizzata. \fo{Esempio di come HoTT sia strutturalista nella metateoria è che in HoTT si può definire cos'è una categoria, e dopo averlo fatto si scopre che la sintassi interpreta ``essere uguali'' per due oggetti/termini di tipo categoria $A,B : \mathcal C$ come ``essere isomorfi'', o come ``essere omotopi'' quando $\mathcal C$ viene interpretato come un tipo \emph{di omotopia}, $A,B : \mathcal C$ come punti di questo spazio, e $A=_{\mathcal C}B : \sf Prop$ come un'omotopia tra $A$ e $B$. Vale anche la pena notare che in teoria dei tipi la relatività ontologica della nozione di identità \emph{è un assunto}: ogni tipo $X$ è equipaggiato con una ``sua'' nozione di identità $=_X$ che è locale, è ``la sua'' e nulla a a che vedere, a priori, con $=_Y$ per un altro tipo $Y$. Ogni uguaglianza istanziata per termini di tipo diverso è quindi inammissibile \emph{nel linguaggio} ancor prima che nella semantica.}\endfo
+	
+	
+	Come si è detto nel paragrafo 1.2 l'uso di questi strumenti concettuali ha aiutato la pratica matematica e ha involontariamente ispirato una visione epistemologica, e poi ontologica, della disciplina, vale a dire dei suoi oggetti di studio. A coloro che obiettano che bisogna prima sapere \textit{cos'è} una struttura prima di lavorare con essa noi rispondiamo, con Kr\"omer, che
+	\begin{quotation}
+		this reproach is empty and one tries to explain the clearer by the more obscure when giving priority to ontology in such situations [...]. Structure occurs in the dealing with something and does
+		not exist independently of this dealing. [Kr\"omer, 2007]
+	\end{quotation}
+	
+	
+	
+	Memori delle osservazioni di Carnap [nota \dots], non riteniamo che questo approccio ``operativo'' all'ontologia (che non è puro \textit{problem solving} ma anche chiarificazione concettuale) implichi necessariamente l'adesione incondizionata ad uno strutturalismo filosofico integrale - o a sue varianti specifiche come la teoria \textbf{ROS} -, esattamente come abbiamo visto non avvenire nel passaggio dalla \textit{structural mathematics} allo strutturalismo vero e proprio (o al bourbakismo). La sua importanza è principalmente metodologica. (\textit{Au contraire} risulta necessario per chi appoggia posizioni strutturaliste al di fuori della matematica cominciare a fare ontologia in termini categoriali, nelle modalità qui indicate). 
+	
+\section{Categorie come teorie e come posti}
+	Le categorie in matematica hanno una duplice natura: da un lato, le strutture che siamo intenzionati a descrivere si organizzano naturalmente in categorie; dall'altro, una \emph{singola} categoria, che trattiamo come universo semantico e che fissiamo una volta per tutte, è il luogo in cui ciascuna di queste teorie viene interpretata. In altre parole, da un lato esiste la categoria dei gruppi; dall'altro essa è semplicemente una sottocategoria ``dell'unica categoria che esiste'', quella degli insiemi. 
+
+	L'\emph{algebra universale} è la parte di matematica che si occupa di formalizzare l'idea che le strutture matematiche sono, a loro volta, oggetti matematici degni di attenzione: vedi \cite{,} per referenze classiche. Essa prende le mosse dalla seguente definizione: 
+
+	da Grillet
+
+	In tale prospettiva, la struttura astratta che intendiamo studiare consta di uno ``schizzo'' \cite{ehresmann,lair} che rappresenta il più generico degli arrangiamenti di operazioni e proprietà di queste operazioni; questo schizzo è rappresentato pictorialmente da un grafo (diretto e con radice), che modella le reciproche relazioni intercorrenti tra i vari simboli di operazione di un dato tipo d'algebra $T$ (si veda ancora Grillet per la definizione di variety: algebra universale soggetta a equazioni)
+
+	Nel caso dei monoidi, tale grafo è
+\[here be picture\]
+soggetto alle relazioni [omissis]. Nel caso dei gruppi al grafo dei monoidi si aggiunge il simbolo di operazine $\iota : [1] \to [1]$ che modella l'inversione; esso è soggetto all'identità addizionale [omissis].
+
+In questo senso la categoria generata dal grafo $\mathcal{L}_{Grp}$ ``è'' la teoria che ci prefiggevamo di studiare, e ciò perché il essa abbiamo denotato ogni forma possibile di relazione tra simboli astratti delle varie arietà.
+
+A partire dall'identità, dalle mappe $\{m,e,i\}$ dalle loro composizioni meaningful e dai loro prodotti possiamo definire induttivamente il generico morfismo di $\mathcal{L}_{Grp}$ come una parola del tipo
+\[\sigma ::= 1 \mid m \mid e \mid i \mid \sigma \circ \sigma' \mid \sigma\times \sigma'\]
+(si veda [Grillet, XV.2] dove si genera per via induttiva un simile sistema di operazioni $n$-arie) Una specificazione simil-BNF come questa ovviamente non ha niente di speciale relativo ai gruppi e si può ripetere per i simboli di operazione di una generica algebra universale di tipo $T$:
+\[\tau ::= 1 \mid \sigma \mid \tau \circ \tau' \mid \tau\times \tau'\]
+dove $\sigma\in\Sigma$ varia nella segnatura di $T$. Si può anche presentare una stessa struttura algebrica (tipo, i gruppi) mediante diverse segnature; vedi Higman-Neumann; il vantaggio qui è che pur avendo diverse presentazioni, la categoria i cui morfismi sono generati induttivamente da quella BNF rule è la stessa $\mathcal{L}_{Grp}$, indipendentemente dal set di generatori scelto per essa.
+
+Per modellare questa costruzione che abbiamo finora sketchato nel linguaggio delle categorie, si spinge all'estremo l'intuizione data dal remark \ref{}, e si considera esattamente la categoria generata dal grafo che ha per vertici i numeri naturali, ed esattamente una edge $f_\omega : X^n \to X$ per ogni simbolo di operazione $f_\omega, \omega \in\Omega_n$.
+
+Definizione, teoria di Lawvere
+
+Definizione, modello di una teoria di Lawvere 
+
+Proposizione, caratterizzazione delle teorie di Lawvere? 
+
+Ora, osservazione: la categoria degli insiemi è stata l'unico posto in cui abbiamo interpretato la sintassi della nostra teoria $\mathcal L$; ovviamente possiamo rifarlo in una generica categoria con prodotti finiti e ottenere gli $L$-modelli in $\mathcal C$; nella definizione cambia poco; nulla, formalmente. Ma è un risultato profondo perché \emph{sconnette} la teoria dal \emph{luogo} in cui quella teoria è interpretata: ad un tempo, sappiamo parlare di grppi interni a Set, i cari vecchi gruppi della matematica ingenua; di gruppi topologici, dove le funzioni $m,i$ sono automaticamente continue, o di Lie, dove sono differenziabili; di monoidi nella categoria dei gruppi abeliani, e vengono fuori gli anelli; di monoidi nella categoria dei poset, e vengono fuori i quantali\dots 
+
+In tale prospettiva, la categoria degli insiemi è stata segretamente presa come universo semantico di riferimento; se ne sarebbe potuta prendere un altra, e interpretare lì la teoria astratta dei gruppi o dei monoidi o di una qualsiasi varietà d'algebre.
+
+Più precisamente ancora, as sets correspond (tautologically, I'd say) to the category $[1,Set]$, it is natural to wonder what structures internal to more general functor categories like $[C,Set]$ are. 
+
+In a stunning turn of events, a $[C,Set]$-model for groups, monoids or else, i.e. a functor $Th(Grp)\to [C,Set]$ preserving finite products, is *precisely* a functor $C\to Set$ such that each $Fc$ is an abelian group: the "models" for the "theory" of abelian groups internally to $[C,Set]$ are precisely the $Mod(T)$-valued functors $C\to Set$, taking values in the subcategory of models for the theory in study interpreted in $Set$. If we call $Mod_{Th(\Omega)}( K)$ the $\Omega$-structures internal to the category $K$ *we can "shift" the $Mod(-)$ correspondence in and out $[C,Set]$*:
+$$
+Mod_{Th(AbGrp)}([C,Set]) \cong [C, Mod_{Th(AbGrp)}(Set)]
+$$
+So, somehow, once you are able to classify models for $\Omega$-structures in $Set =[1,Set]$, you are automatically able to classify models in every other $[C,Set]$. So sets, in this respect, play a very central rôle.
+
+The internalization paradigm sketched above shows that "small" mathematicians could live in a single big, finitely complete category $K$, without even worrying about the presence of models for their theories outside it. 
+
+Thus, if you admit them to be big enough (i.e. if you leave the somewhat unsatisfying picture that "all categories are small"), each category works as a universe in which you can speak mathematical language ("speak the language of mathematics" is synonym, since model theory, with "studying models for the theory of $\Omega$-structures" as long as $\Omega$ runs over all possible theories). Small mathematicians are born in $K$, so they only see $K$-models for $Th(\Omega)$. 
+
+So *categories are merely (!) universes in which you can interpret theories*: if you look from high enough there is plenty of other objects having the same properties of $Set$, and you shouldn't be afraid to move there (or rather, you shouldn't insist on living in $Set$. A category models a theory, it has a \emph{syntax}, in that it describes the compositional nature of relational structures; but a category also offers a way to interpret a syntax, so it is a \emph{semantics}. It is a relational structure, fixed once and for all, lying on the background, in which all other relational structures are interpreted.
+
+It is nearly impossible to underestimate the profundity of the remark by which each category $K$, taken alone, is a different placein which the entirety of mathematical structures can be re-enacted. This POV is investigated in our \ref{}, where we see how this allows to intepret different kinds of logics in different kinds of categories; the particular shape of semantics that you can interpret in $K$ is no more, no less than a reflection of the nice categorical properties of $K$ (does it have finite co/limits? Does it have a nice factorization system? Does it have a subobject classifier? Is the poset $Sub(A)$ of subobjects of $A$ a lattice, is it modular, distributive, complemented...? -evidently this last question is about the internal logic of the category: propositions are the set, or rather the type, of "elements" for which the proposition is "true"; in nice cases, they are also arrows with codomain a space of truth values).
+
+Categories of sheaves are nice objects in this respect because they share almost all these good properties, and thus they host a particularly nice and expressive kind of internal logic: subobjects can be joined, united, complemented; finite and even infinite conjunctions exist. Subobjects are realized by maps to a "classifying" object $\Omega$, whose "elements" are truth values of propositions; each slice category $Sh(C)/P$ has the same properties and the functors $Sh(C)/P \leftrightarrows Sh(C)/Q$ induced by maps $P\to Q$ are "nice" (they preserve this structure).
+\end{document}
+
+
+
