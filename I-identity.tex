@@ -49,7 +49,7 @@
 \maketitle
 \begin{abstract}
   As it stands, Yoneda lemma allows for a definitive solution of the identity problem in ontology. Identity shall not be seen as a primitive concept; it is instead a relational, and context-dependent, notion. We put the philosophical problems of \emph{identity} and \emph{existence through time} through a structuralist lens, and we solve them by means of topos theory. In our perspective, there is no need to agglomerate the category of Being into a unique subject.
-  
+
   We offer a possible topos-theoretic solution of the famous paradox of the nine coins, as both a test-bench for our language, and a proof of concept of two Borges' fanatics.
 \end{abstract}
 \section{Introduction}
@@ -63,7 +63,7 @@ In his influential paper \cite{} William Lawvere proposes a foundation of mathem
 \end{quote}
 Such a position sounds at the same time a bit cryptic to unravel, and unsatisfactory; Lawvere's (and others') stance on the matter is that a foundation of mathematics is \emph{de facto} just a set $\clL$ of first order axioms organised in a Gentzen-like deduction system. The deductive system so generated reproduces mathematics as we know and practice it, i.e. provides a formalisation for something that already exists and needs no further explanation, and that we call ``mathematics''.
 
-It is not a vacuous truth that $\clL$ exists somewhere: the fact that the theory so determined has a nontrivial model, i.e the fact that it can be interpreted inside a given familiar structure, is both the key assumption we make, and the less relevant aspect of the construction itself; showing that $\clL$ ``has a model'' is --although slightly improperly-- meant to ensure that, \emph{assuming the existence of a naive set theory}, axioms of $\clL$ can be satisfied by a naive set. Alternatively, and more crudely, assuming the existence of a model of ZFC, $\clL$ has a model inside that model of ZFC. 
+It is not a vacuous truth that $\clL$ exists somewhere: the fact that the theory so determined has a nontrivial model, i.e the fact that it can be interpreted inside a given familiar structure, is both the key assumption we make, and the less relevant aspect of the construction itself; showing that $\clL$ ``has a model'' is --although slightly improperly-- meant to ensure that, \emph{assuming the existence of a naive set theory}, axioms of $\clL$ can be satisfied by a naive set. Alternatively, and more crudely, assuming the existence of a model of ZFC, $\clL$ has a model inside that model of ZFC.
 
 A series of works attempting to unhinge some aspects of ontology through category theory should at least try to tackle such a simple and yet diabolic question as ``where'' are the symbols forming the first-order theory of ETCC. And yet, everyone just believes in sets, and solves the issue of ``where'' they are with a leap of faith from which all else follows.
 
@@ -78,7 +78,7 @@ This state of affairs has, to the best of our moderate knowledge on the subject,
 \end{itemize}
 So, symbols and letters do not exist outside of the Gentzen-like deductive system we specified together with $\clL$.
 
-As arid as it may seem, this perspective proved itself to be quite useful in working mathematics; consider for example the type declaration rules of a typed functional programming language: such a concise declaration as 
+As arid as it may seem, this perspective proved itself to be quite useful in working mathematics; consider for example the type declaration rules of a typed functional programming language: such a concise declaration as
 \begin{minted}{haskell}
   data Nat = Z | S Nat
 \end{minted}
@@ -100,11 +100,11 @@ Cosa significa che \emph{due cose sono, invece, una} è un problema che ci arrov
 \section{Preliminaries on variable set theory}
 In some of our proofs it will be crucial to blur the distinction between the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \ref{}); once the following result is proved, we freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
 \begin{proposition}
-Let $I$ be a set, regarded as a discrete category, and let $\Set^I$ be the category of functors $F : I \to \Set$; moreover, let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism) between $\Set^I$ and $\Set/I$.
+  Let $I$ be a set, regarded as a discrete category, and let $\Set^I$ be the category of functors $F : I \to \Set$; moreover, let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism) between $\Set^I$ and $\Set/I$.
 \end{proposition}
 \begin{proof}
-  Let us give a very hands-on proof, based on the fact that the category $\Set^I$ coincides on its own right with the category of $I$-indexed families of objects, i.e. with the category whose objects are $(\underline X)_I := \{X_i\mid i\in I\}$, and morphisms $(\underline X)_I\to (\underline Y)_I$ the families $\{f_i : X_i \to Y_i\mid i \in I\}$. 
-  
+  Let us give a very hands-on proof, based on the fact that the category $\Set^I$ coincides on its own right with the category of $I$-indexed families of objects, i.e. with the category whose objects are $(\underline X)_I := \{X_i\mid i\in I\}$, and morphisms $(\underline X)_I\to (\underline Y)_I$ the families $\{f_i : X_i \to Y_i\mid i \in I\}$.
+
   Consider an object $h : X\to I$ of $\Set/I$, and define a function as $i\mapsto h^\leftarrow(i)$; of course, $(X(h))_I := \{h^\leftarrow(i) \mid i \in I\}$ is a $I$-indexed family, and since $I$ can be regarded as a discrete category, this is sufficient to define a functor $F_h : I \to \Set$.
 
   Let us define a functor in the opposite direction: let $F : I \to \Set$ be a functor. This defines a function $h_F : \coprod_{i\in I}Fi \to I$, where $\coprod_{i\in I} Fi$ is the disjoint union of all the sets $Fi$.
@@ -120,68 +120,68 @@ The next crucial step of our analysis is the observation that the category of va
 
 First, we recall a few basic facts and definitions on topos theory.
 \begin{definition}
-	An \emph{elementary topos} is a category $\clE$
-	\begin{itemize}
-		\item which is \emph{cartesian closed}, i.e. each functor $\firstblank\times A$ has a right adjoint $[A, \firstblank]$;
-		\item having a \emph{subobject classifier}, i.e. an object $\Omega\in\clE$ such that the functor $\text{Sub} : \clE^\text{op}\to \Set$ sending $A$ into the set of isomorphism classes of monomorphisms $\var{U}{A}$ is representable by the object $\Omega$.
-		      \index{Subobject classifier}
-	\end{itemize}
-	The natural bijection $\clE(A,\Omega)\cong\text{Sub}(A)$ is obtained pulling back the monomorphism $U\subseteq A$ along a \emph{universal arrow} $t : 1\to \Omega$, as in the diagram
-	\[
-		\vcenter{\xymatrix{
-				U \pb\ar[r]\ar[d]& 1\ar[d]^t \\
-				A \ar[r]_{\chi_U}& \Omega
-			}}
-	\]
-	so, the bijection is induced by the map $\var{U}{A}\mapsto \chi_U$.
+  An \emph{elementary topos} is a category $\clE$
+  \begin{itemize}
+    \item which is \emph{cartesian closed}, i.e. each functor $\firstblank\times A$ has a right adjoint $[A, \firstblank]$;
+    \item having a \emph{subobject classifier}, i.e. an object $\Omega\in\clE$ such that the functor $\text{Sub} : \clE^\text{op}\to \Set$ sending $A$ into the set of isomorphism classes of monomorphisms $\var{U}{A}$ is representable by the object $\Omega$.
+          \index{Subobject classifier}
+  \end{itemize}
+  The natural bijection $\clE(A,\Omega)\cong\text{Sub}(A)$ is obtained pulling back the monomorphism $U\subseteq A$ along a \emph{universal arrow} $t : 1\to \Omega$, as in the diagram
+  \[
+    \vcenter{\xymatrix{
+        U \pb\ar[r]\ar[d]& 1\ar[d]^t \\
+        A \ar[r]_{\chi_U}& \Omega
+      }}
+  \]
+  so, the bijection is induced by the map $\var{U}{A}\mapsto \chi_U$.
 \end{definition}
 \begin{definition}\label{grotop}\index{Topos!Grothendieck ---}
-	A \emph{Grothendieck topos} is an elementary topos that, in addition, is locally finitely presentable.
+  A \emph{Grothendieck topos} is an elementary topos that, in addition, is locally finitely presentable.
 \end{definition}
 Whenever we spoke about sheaves on a topological space or a Grothendieck site, we wer secretly talking about topos theory; the notion of Grothendieck topos is intimately connected with co\fshyp{}end calculus, as we have seen all along chapter 3, and especially in \ref{giraudo}.
 
-In fact, Giraud theorem gives a proof for the difficult implication of the following \emph{recognition principle} for Grothendieck toposes: 
+In fact, Giraud theorem gives a proof for the difficult implication of the following \emph{recognition principle} for Grothendieck toposes:
 \begin{theorem}
-	Let $\clE$ be a category; then $\clE$ is a Grothendieck topos if and only if it is a left exact reflection of a category $\Cat(\clA^\text{op},\Set)$ of presheaves on a small category $\clA$.
+  Let $\clE$ be a category; then $\clE$ is a Grothendieck topos if and only if it is a left exact reflection of a category $\Cat(\clA^\text{op},\Set)$ of presheaves on a small category $\clA$.
 \end{theorem}
 (recall that a \emph{left exact reflection} of $\clC$ is a reflective subcategory $\cate{R}\hookrightarrow \clC$ such that the reflector $r : \clC \to \cate{R}$ preserves finite limits. It is a reasonably easy exercise to prove that a left exact reflection of a Grothendieck topos is again a Grothendieck topos; Giraud proved that all Grothendieck toposes arise this way.)
 
 \begin{proposition}
-The category of variable sets is cartesian closed.
+  The category of variable sets is cartesian closed.
 \end{proposition}
 \begin{proof}
   We shall first show that the category of variable sets admits products: this is obvious in $\Set/I$, products are precisely pullbacks; note that theorem \ref{} gives an identification
   \[\vcenter{\scriptsize\xymatrix@!=1mm{
-& X\times_I Y \ar[dd]^h \ar@[lightgray][dr]\ar@[lightgray][dl]&  \\
-{\color{lightgray} X} \ar@[lightgray][dr]_{\color{lightgray} f}&& {\color{lightgray} Y} \ar@[lightgray][dl]^{\color{lightgray} g}\\
-& I &
-  }}\iff i\mapsto h^\leftarrow(i) = \Big\{(x,y) \in X\times_I Y \mid h(x,y)=i\Big\}\]
+    & X\times_I Y \ar[dd]^h \ar@[lightgray][dr]\ar@[lightgray][dl]&  \\
+    {\color{lightgray} X} \ar@[lightgray][dr]_{\color{lightgray} f}&& {\color{lightgray} Y} \ar@[lightgray][dl]^{\color{lightgray} g}\\
+    & I &
+    }}\iff i\mapsto h^\leftarrow(i) = \Big\{(x,y) \in X\times_I Y \mid h(x,y)=i\Big\}\]
   and given the universal property of a pullback, this yields a canonical bijection $h^\leftarrow(i)\cong f^\leftarrow(i)\times g^\leftarrow(i)$. This is exactly the definition of the product of the two functors $F_f, F_g : I\to \Set$.
 
   Next, we shall show that each functor $\firstblank \times_I Y$ has a right adjoint $Y \pitchfork_I\firstblank$. The functor $\Set^I \to \Set^I : Z\mapsto Y\pitchfork_I Z$ where $Y\pitchfork_I Z : i \mapsto \Set(Y_i, Z_i)$ does the job. This sets up the bijection
   \[\begin{array}{c}
-    \xymatrix{X\times_I Y \ar[r] & Z} \\ \hline
-    \xymatrix{X \ar[r] & Y\pitchfork_I Z}
-  \end{array}\]
+      \xymatrix{X\times_I Y \ar[r] & Z}               \\ \hline
+      \xymatrix{X \ar[r]           & Y\pitchfork_I Z}
+    \end{array}\]
   and by a completely analogous argument (the functor $\firstblank\times_I\secondblank$ gives a symmetric monoidal structure to variable sets),
   \[\begin{array}{c}
-    \xymatrix{X\times_I Y \ar[r] & Z} \\ \hline
-    \xymatrix{Y \ar[r] & X\pitchfork_I Z;}
-  \end{array}\]
+      \xymatrix{X\times_I Y \ar[r] & Z}                \\ \hline
+      \xymatrix{Y \ar[r]           & X\pitchfork_I Z;}
+    \end{array}\]
   this concludes the proof that the category of variable sets is cartesian closed.
 \end{proof}
 \begin{proposition}
-The category of variable sets has a subobject classifier.
+  The category of variable sets has a subobject classifier.
 \end{proposition}
 \begin{proof}
   Recall from \ref{} that we shall find a variable set $\Omega$ such that there is a bijection
   \[\begin{array}{c}
-    \xymatrix{A \ar[r] & \Omega} \\ \hline
-    \textsf{Sub}_I(A)
-  \end{array}\]
+      \xymatrix{A \ar[r] & \Omega} \\ \hline
+      \textsf{Sub}_I(A)
+    \end{array}\]
   where $\textsf{Sub}_I(A)$ denotes the set of isomorphism classes of monomorphisms into $A$, in the category of variable sets.\footnote{A monomorphism into $A$ as an object of $\Set^I$ is nothing but a family of injections $s_i : S_i \to A_i$; a monomorphism in $\Set/I$ is a set $S$ in a commutative triangle
   \[\scriptsize
-  \xymatrix@!=1mm{S\ar[rr]\ar[dr]_s && A\ar[dl]^a \\ &I&}\]}
+    \xymatrix@!=1mm{S\ar[rr]\ar[dr]_s && A\ar[dl]^a \\ &I&}\]}
 
   In order to find such an object, we look at what shape shall $\Omega$ have, and what role its universal property plays in its characterization:
   \begin{itemize}
@@ -196,21 +196,21 @@ The category of variable sets has a subobject classifier.
 
   It turns out that the function $I \to I\times \{0,1\}$ plays the r\^ole of $\true$: indeed, given a monomorphism $S \hookrightarrow A$ the commutative square
   \[
-  \vcenter{\xymatrix{
-    S\ar[d]\ar[r] & I \ar[d]^{\true}\\
-    A \ar[r]_{\chi_S} & I\times \{0,1\}
-  }}
+    \vcenter{\xymatrix{
+        S\ar[d]\ar[r] & I \ar[d]^{\true}\\
+        A \ar[r]_{\chi_S} & I\times \{0,1\}
+      }}
   \]
 \end{proof}
 \begin{proposition}
-The category of variable sets is cocomplete and accessible.
+  The category of variable sets is cocomplete and accessible.
 \end{proposition}
 \begin{proof}
 
 \end{proof}
 Accessibility is a corollary of Yoneda in the following form: every $F : I \to \Set$ is a colimit of representables
 \[
-F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)
+  F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)
 \]
 ($\clE(F)$ is small because in this case $\clE(F)\cong\coprod_{i\in I}Fi$).
 \begin{corollary}
@@ -222,62 +222,129 @@ The internal language of a topos $\clE$ is a formal language defined by \emph{ty
 \begin{itemize}
   \item \emph{Types} are the objects of $\clE$
   \item \emph{Terms} of type $X$ are morphisms of codomain $X$, usually denoted $\alpha,\beta,\sigma,\tau : U \to X$.
-  \begin{itemize}
-  \item Suitable terms are variables: the identity arrow of $X\in\clE$ is the variable  $x : X \to X$. For technical reasons we shall keep a countable number of variables of the same type distinguished: $x,x',x'',\dots : X \to X$ are all interpreted as $1_X$.
-  \end{itemize}
+        \begin{itemize}
+          \item Suitable terms are variables: the identity arrow of $X\in\clE$ is the variable  $x : X \to X$. For technical reasons we shall keep a countable number of variables of the same type distinguished: $x,x',x'',\dots : X \to X$ are all interpreted as $1_X$.
+        \end{itemize}
   \item Generic terms may depend on multiple variables; the domain of a term of type $X$ is the \emph{domain of definition} of a term.
 \end{itemize}
-  A number of inductive clauses define the other terms of the language:
-  \begin{itemize}
-    \item the identity arrow of an object $X\in\clE$ is a term of type $X$;
-    \item given terms $\sigma : U \to X$ and $\tau :  V\to Y$ there exists a term $\lr{\sigma}{\tau}$ of type $X\times Y$ obtained from the pullback 
-    \[\xymatrix{
-      W \ar[d]\ar[r]\ar[dr]|{\lr{\sigma}{\tau}} & X \times V \ar[d]\\
-      U\times Y \ar[r]& X\times Y 
-    }\]
-    \item Given terms $\sigma : U \to X, \tau : V \to X$ of the same type $X$, there is a term $[\sigma = \tau] : W \xto{\lr{\sigma}{\tau}} X\times X \xto{\delta_X} \Omega$, where $\delta_X : X\times X \to \Omega$ is defined as the classifying map of the mono $X \hookrightarrow X\times X$.
-    \item Given a term $\sigma : U \to X$ and a term $f : X \to Y$, tere is a term $f[\sigma] := f\circ\sigma : U \to Y$.
-    \item Given terms $\theta :  V \to Y^X$ and $\sigma : U\to X$, there is a term 
-    \[
-    W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y
-    \]
-    \item In the particular case $Y=\Omega$, the term above is denoted 
-    \[[\sigma\in\theta] : W\lr{\theta}{\sigma} \to \Omega\]
-    \item If $x$ is a variable of type $X$, and $\sigma : X\times U \to Z$, there is a term 
-    \[\lambda x.\sigma : U \xto{\eta} (X\times U)^X \xto{\sigma^X} Z^X\]
-    obtained as the mate of $\sigma$.
-  \end{itemize}
-  These rules can of course be also presented as the formation rules for a Gentzen-like deductive system: let us rewrite them in this formalism.
-  \[ \begin{array}{cc}
-    \infer{1_X : X \to X}{} & 
-    \infer{\lr{\sigma}{\tau} : W\lr{\theta}{\sigma} \to X \times Y }{\sigma : U \to X && \tau : V \to Y} \\[1em] 
-    \infer{[\sigma=\tau] : W \to \Omega}{\sigma : U \to X && \tau : V \to X} & 
-    \infer{f[\sigma] : U \to Y}{\sigma : U \to X && f : X \to Y} \\[1em] 
-    \infer{W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y}{\theta :  V \to Y^X && \sigma : U\to X} &
-    \infer{\lambda x.\sigma = \sigma^X\circ\eta : U \to (X\times U)^X \to Z^X}{ x: X && \sigma : X\times U \to Z} 
+A number of inductive clauses define the other terms of the language:
+\begin{itemize}
+  \item the identity arrow of an object $X\in\clE$ is a term of type $X$;
+  \item given terms $\sigma : U \to X$ and $\tau :  V\to Y$ there exists a term $\lr{\sigma}{\tau}$ of type $X\times Y$ obtained from the pullback
+        \[\xymatrix{
+          W \ar[d]\ar[r]\ar[dr]|{\lr{\sigma}{\tau}} & X \times V \ar[d]\\
+          U\times Y \ar[r]& X\times Y
+          }\]
+  \item Given terms $\sigma : U \to X, \tau : V \to X$ of the same type $X$, there is a term $[\sigma = \tau] : W \xto{\lr{\sigma}{\tau}} X\times X \xto{\delta_X} \Omega$, where $\delta_X : X\times X \to \Omega$ is defined as the classifying map of the mono $X \hookrightarrow X\times X$.
+  \item Given a term $\sigma : U \to X$ and a term $f : X \to Y$, tere is a term $f[\sigma] := f\circ\sigma : U \to Y$.
+  \item Given terms $\theta :  V \to Y^X$ and $\sigma : U\to X$, there is a term
+        \[
+          W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y
+        \]
+  \item In the particular case $Y=\Omega$, the term above is denoted
+        \[[\sigma\in\theta] : W\lr{\theta}{\sigma} \to \Omega\]
+  \item If $x$ is a variable of type $X$, and $\sigma : X\times U \to Z$, there is a term
+        \[\lambda x.\sigma : U \xto{\eta} (X\times U)^X \xto{\sigma^X} Z^X\]
+        obtained as the mate of $\sigma$.
+\end{itemize}
+These rules can of course be also presented as the formation rules for a Gentzen-like deductive system: let us rewrite them in this formalism.
+\[ \begin{array}{cc}
+    \infer{1_X : X \to X}{}                                                              &
+    \infer{\lr{\sigma}{\tau} : W\lr{\theta}{\sigma} \to X \times Y }{\sigma : U \to X    &   & \tau : V \to Y}             \\[1em]
+    \infer{[\sigma=\tau] : W \to \Omega}{\sigma : U \to X                                &   & \tau : V \to X}           &
+    \infer{f[\sigma] : U \to Y}{\sigma : U \to X                                         &   & f : X \to Y}                \\[1em]
+    \infer{W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y}{\theta :  V \to Y^X &   & \sigma : U\to X}          &
+    \infer{\lambda x.\sigma = \sigma^X\circ\eta : U \to (X\times U)^X \to Z^X}{ x: X     &   & \sigma : X\times U \to Z}
   \end{array}\]
-  To formulas of the language of $\clE$ we apply the usual operations and rules of first-order logic: logical connectives are induced by the structure of internal Heyting algebra of $\Omega$: given formulas $\varphi,\psi$ we define
-  \begin{itemize}
-    \item $\varphi\lor \psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\lor} \Omega$;
-    \item $\varphi\land\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\land} \Omega$;
-    \item $\varphi\Rightarrow\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\Rightarrow} \Omega$;
-    \item $\lnot\varphi$ is the formula $U \to \Omega \xto{\lnot} \Omega$.
-  \end{itemize}
-  \todo[inline]{universal quantifiers}
-  Each formula $\varphi : U \to \Omega$ defines a subobject $\{x\mid \varphi\} \subseteq U$ of its domain of definition; this is the subobject classified by $\varphi$, and must be thought as the subobject where ``$\varphi$ is true''.
+To formulas of the language of $\clE$ we apply the usual operations and rules of first-order logic: logical connectives are induced by the structure of internal Heyting algebra of $\Omega$: given formulas $\varphi,\psi$ we define
+\begin{itemize}
+  \item $\varphi\lor \psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\lor} \Omega$;
+  \item $\varphi\land\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\land} \Omega$;
+  \item $\varphi\Rightarrow\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\Rightarrow} \Omega$;
+  \item $\lnot\varphi$ is the formula $U \to \Omega \xto{\lnot} \Omega$.
+\end{itemize}
+\todo[inline]{universal quantifiers}
+Each formula $\varphi : U \to \Omega$ defines a subobject $\{x\mid \varphi\} \subseteq U$ of its domain of definition; this is the subobject classified by $\varphi$, and must be thought as the subobject where ``$\varphi$ is true''.
 
-  If $\varphi : U\to\Omega$ is a formula, we say that $\varphi$ is \emph{universally valid} if $\{x\mid\varphi\}\cong U$. If $\varphi$ is universally valid in $\clE$, we write ``$\clE\Vdash \varphi$'' (read: ``$\clE$ believes in $\varphi$'').
+If $\varphi : U\to\Omega$ is a formula, we say that $\varphi$ is \emph{universally valid} if $\{x\mid\varphi\}\cong U$. If $\varphi$ is universally valid in $\clE$, we write ``$\clE\Vdash \varphi$'' (read: ``$\clE$ believes in $\varphi$'').
 
-  Examples of universally valid formulas:
-  \begin{itemize}
-    \item $\clE\Vdash [x=x]$
-    \item $\clE\Vdash [(x \in_X \{x\mid\varphi\}) \iff \varphi]$
-    \item $\clE\Vdash \varphi$ if and only if $\clE \Vdash \forall x.\varphi$
-    \item $\clE\Vdash [\varphi \Rightarrow \lnot\lnot\varphi]$
-  \end{itemize}
-  \todo[inline]{Ora facciamo delle considerazioni sul lingo interno di $\Set/I$}
-  \section{Nine copper coins}
+Examples of universally valid formulas:
+\begin{itemize}
+  \item $\clE\Vdash [x=x]$
+  \item $\clE\Vdash [(x \in_X \{x\mid\varphi\}) \iff \varphi]$
+  \item $\clE\Vdash \varphi$ if and only if $\clE \Vdash \forall x.\varphi$
+  \item $\clE\Vdash [\varphi \Rightarrow \lnot\lnot\varphi]$
+\end{itemize}
+\todo[inline]{Ora facciamo delle considerazioni sul lingo interno di $\Set/I$}
+Chi sono tipi e termini; chi sono le proposizioni e come si scrive il calcolo proposizionale in $\Set/I$; i quantificatori, in dettaglio pornografico.
+
+L'oggetto dei numeri naturali e il principio di induzione nel topos degli insiemi variabili.
+\section{Nine copper coins}
 \epigraph{Explicaron que una cosa es \emph{igualdad}, y otra \emph{identidad}, y formularon una especie de \emph{reductio ad absurdum}, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches padecen un vivo dolor. ¿No sería ridículo -interrogaron- pretender que ese dolor es el mismo?}{JLB ---Tl\"on, Uqbar, Orbis Tertius}
+According to our description of the internal language of variable sets, \emph{propositions} in $\Set/I$ are morpisms of the form
+\[p : U \to \Omega_I\]
+
+where $\Omega_I$ is the subobject classifier of \ref{}; recall that
+\begin{itemize}
+  \item the object $\Omega_I = \{0,1\}\times I \to I$ becomes a variable set in a canonical way with the projection $\pi_I : \Omega_I \to I$ on the second factor;
+  \item the universal monic $I \to \Omega_I$ consists of a section of $\pi_I$, precisely the one that sends $i : I$ to the pair $(i,1) : \Omega_I$;
+  \item every subobject $U \hookrightarrow A$ of an object $A$ results as a pullback (in $\Set/I$) along true:
+        \[here be diagram\]
+\end{itemize}
+So, a proposition is a morphism of the following kind: it is a function $p : U \to \Omega_I$, defined on a certain domain, and such that
+$$
+  \begin{array}{ccc}
+    U           & \overset{p}\to & \{0,1\}\times I \\
+    u\downarrow &                & \downarrow\pi   \\
+    I           & =              & I
+  \end{array}
+$$
+(it mustbe a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the "variable domain" $U$.
+
+To get a grip dei vari ruoli di diverse classi di proposizioni, e dato che noi ci concentreremo -costruendola e nihilo- su una proposizione particolare, ossia quella che asserisce l'esistenza e il perdurare nell'esistenza di una freccia scoccata da un arco e persa tra gli arbusti, consideriamo la seguente proposizione:
+\[p : \mathbb R \to \Omega_I\]
+"al tempo $t : \mathbb R$ la freccia esiste" (per ragioni psicologiche, qui $I$ è un intervallo di $R$, diciamo $[0,1]$ per fissare le idee e perché è una scelta standard di logica sfumata). Also, La nozione di "persistenza nel tempo" è collegata a quella di identità laddove si può dire che a persiste se è identica a se stessa in ogni frame blablabla.
+
+$A = \{x : U \mid p(x) = (1,t_x), t_x > 0\} = p^\leftarrow(\{1\}\times (0,1])$ tempi in cui la freccia esiste almeno un po';
+$B = \{x : U \mid p(x) = (1,1)\} = p^\leftarrow((1,1))$ tempi in cui la freccia esiste che più non si può;
+$E_t = \{ x : U \mid p(x)=(1,t)\}$ tempi in cui la freccia esiste un dato po'.
+
+Ogni sorta di osservazione si può ora fare: la logica classica si recupera così; e in effetti se ne recupera una per ogni fetta di $I$ ad un punto specifico; l'esistenza ora è "vera con forza" o "falsa con forza", e la forza è data dal parametro $i\in I$; è quindi naturale assumere $I$ totalmente ordinato e denso (o forse no: bisogna capire se e come qui stiamo smanettando con un modello di logica temporale)
+
+Generica notazione: $p(x)=(1,t)$ si legge "$p$ è vera con forza $t$"; idem per $p(x)=(0,t)$: $p$ è falsa con forza $t$: chiaramente, se $I=[0,1]$ possiamo prenderlo col suo ordine solito (cita il mitico paper di Freyd su una caratterizzazione completamente algebrica dell'intervallo) e avere un poset dei valori di verità; è anche un'algebra di Heyting? (E' facile controllare; solo, ora non ho veramente voglia di scrivere)
+
+Il paradosso di Borges allora paradosso non è: è una sentenza perfettamente lecita, che non ha niente di paradossale nel linguaggio interno degli insiemi variabili, e che appare invece paradossale per gli abitanti della copia di $\Set$ che sta dentro gli insiemi variabili."Perdurare nell'esistenza" al massimo grado possibile è un attributo divino.
+
+Da notare anche questi passaggi:
+
+1) A cento anni dall’enunciazione del problema, un pensatore non meno brillante dell'eresiarca, ma di tradizione ortodossa, formulò un'ipotesi molto audace.  Secondo  questa  felice  congettura,  -  v'è  un solo  soggetto:  questo soggetto indivisibile è ciascuno degli esseri dell'universo, i quali sono organi e maschere della divinità. X è Y ed è Z. Z scopre tre monete perché ricorda che X le ha perdute.
+2) Il processo è periodico: il hrön di dodicesimo grado comincia già di nuovo a decadere.
+3) Più strano e più  puro di ogni hrön è talvolta l'ur la cosa prodotta per suggestione, l’oggetto evocato dalla speranza. La gran maschera d’oro cui ho accennato ne è un illustre esempio
+
+1 e 2 dicono qualcosa su chi è I in Set/I; secondo 2) la struttura di I è ciclica (e contata in base 12, chiaramente);  1) è solo un modo letterario di riferirsi a un oggetto universale dentro Set/I; potremmo divertirci a pensare qual è (l'oggetto terminale? Il rappresentante di un altro funtore particolare?)
+3 ci devo pensare: gli ur sono particolari hrönir. Potrebbero essere un po' di tutto, funzioni derivabili verso I, funzioni che sono "vere 1" su un dominio denso, funzioni che sono non-false su un dominio denso
+
+$p(x) = (0,1/2)$
+
+$p(x) = (1,1/2)$
+
+
+$p(x) = (0,1/3)$
+
+$p(x) = (0,1/\pi)$
+
+$p(x) = \text{la freccia esiste}$
+$p$ è super vera
+$p(x)=(1,1)$
+
+$p$ è vera un po', non tanto
+$p(x) =(1,t<1)$
+
+$p$ è falsa un po'
+$p(x) =(0,t<1)$
+
+$\pi p$ non deve essere continua; quando è continua la freccia perdura nell'esistenza, e questi oggetti divini si chiamano hrön
+$\pi_I \circ p : U \to \{0,1\}\times I \to I$
 \appendix
 \section{Category theory}
 \todo[inline]{E' probabilmente saggio mettere qui anche la digressione con le definizioni di topos}
@@ -286,31 +353,31 @@ For us, an \emph{ordinal number} will be any well\hyp{}ordered set, and a \emph{
 \index{Category!filtered ---}\index{Filtered category}
 Let $\kappa$ be a cardinal; we say that a category $\clA$ is $\kappa$\hyp{}filtered if for every category $\clJ\in\Cat_{<\kappa}$ with less than $\kappa$ objects, $\clA$ is injective with respect to the cone completion $\clJ\to \clJ^\rhd$; this means that every diagram
 \[
-	\vcenter{\xymatrix{
-			\clJ\ar[d]\ar[r]^D & \clA \\
-			\clJ^\rhd\ar@{.>}[ur]_{\bar D}
-		}}
+  \vcenter{\xymatrix{
+      \clJ\ar[d]\ar[r]^D & \clA \\
+      \clJ^\rhd\ar@{.>}[ur]_{\bar D}
+    }}
 \]
 has a dotted filler $\bar D : \clJ^\rhd \to \clA$.
 
 We say that a category $\clC$ admits filtered colimits if for every filtered category $\clA$ and every diagram $D : \clA \to \clC$, the colimit $\colim D$ exists as an object of $\clC$. Of course, whenever an ordinal $\alpha$ is regarded as a category, it is a filtered category, so a category that admits all $\kappa$\hyp{}filtered colimits admits all colimits of chains
 \[
-	C_0 \to C_1 \to \cdots \to C_\alpha \to\cdots
+  C_0 \to C_1 \to \cdots \to C_\alpha \to\cdots
 \]
 with less than $\kappa$ terms. A useful, completely elementary result is that the existence of colimits over all ordinals less than $\kappa$ implies the existence of $\kappa$\hyp{}filtered colimits; this relies on the fact that every filtered category $\clA$ admits a cofinal functor (see \ref{finalfunctor}) from an ordinal $\alpha_\clA$.
 \begin{definition}\label{accepre}\index{Category!accessible ---}\index{Accessible category}\index{Category!presentable ---}\index{Presentable category}
-	Let $\clC$ be a category;
-	\begin{itemize}
-		\item We say that $\clC$ is \emph{$\kappa$\hyp{}accessible} if it admits $\kappa$\hyp{}filtered colimits, and if it has a \emph{small} subcategory $\cate{S}\subset \clA$ of $\kappa$\hyp{}presentable objects such that every $A\in\clA$ is a $\kappa$\hyp{}filtered colimit of objects in $\cate{S}$.
-		\item We say that $\clC$ is \emph{(locally) $\kappa$\hyp{}presentable} if it is accessible and cocomplete.
-	\end{itemize}
-	The theory of presentable and accessible categories is a cornerstone of \emph{categorical logic}, i.e. of the translation of model theory into the language of category theory.
+  Let $\clC$ be a category;
+  \begin{itemize}
+    \item We say that $\clC$ is \emph{$\kappa$\hyp{}accessible} if it admits $\kappa$\hyp{}filtered colimits, and if it has a \emph{small} subcategory $\cate{S}\subset \clA$ of $\kappa$\hyp{}presentable objects such that every $A\in\clA$ is a $\kappa$\hyp{}filtered colimit of objects in $\cate{S}$.
+    \item We say that $\clC$ is \emph{(locally) $\kappa$\hyp{}presentable} if it is accessible and cocomplete.
+  \end{itemize}
+  The theory of presentable and accessible categories is a cornerstone of \emph{categorical logic}, i.e. of the translation of model theory into the language of category theory.
 
-	Accessible and presentable categories admit \emph{representation theorems}:
-	\begin{itemize}
-		\item A category $\clC$ is accessible if and only if it is equivalent to the ind\hyp{}completion $\text{Ind}_\kappa(\cate{S})$ of a small category, i.e. to the completion of a small category $\cate{S}$ under  $\kappa$\hyp{}filtered colimits;
-		\item A category $\clC$ is presentable if and only if it is a full reflective subcategory of a category of presheaves $i : \clC \to \Cat(\cate{S}^\op,\Set)$, such that the embedding functor $i$ commutes with $\kappa$\hyp{}filtered colimts.
-	\end{itemize}
+  Accessible and presentable categories admit \emph{representation theorems}:
+  \begin{itemize}
+    \item A category $\clC$ is accessible if and only if it is equivalent to the ind\hyp{}completion $\text{Ind}_\kappa(\cate{S})$ of a small category, i.e. to the completion of a small category $\cate{S}$ under  $\kappa$\hyp{}filtered colimits;
+    \item A category $\clC$ is presentable if and only if it is a full reflective subcategory of a category of presheaves $i : \clC \to \Cat(\cate{S}^\op,\Set)$, such that the embedding functor $i$ commutes with $\kappa$\hyp{}filtered colimts.
+  \end{itemize}
 \end{definition}
 All categories of usual algebraic structures are (finitely) accessible, and they are locally (finitely) presentable as soon as they are cocomplete; an example of a category which is $\aleph_1$\hyp{}presentable but not $\aleph_0$\hyp{}presentable: the category of metric spaces and short maps.
 

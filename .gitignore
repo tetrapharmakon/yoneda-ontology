@@ -14,7 +14,7 @@
 *.pdf
 *.rtf
 *.bak*
-
+*.xopp
 
 ## Intermediate documents:
 *.dvi
