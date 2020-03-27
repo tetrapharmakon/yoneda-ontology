@@ -10,7 +10,7 @@ latexmk -c ;;
 "III")
 latexmk -pdf -shell-escape -pvc III-homot.tex
 latexmk -c ;;
-"III")
+"IV")
 latexmk -pdf -shell-escape -pvc IV-mereo.tex
 latexmk -c ;;
 "all")
@@ -20,5 +20,13 @@ latexmk -pdf III-homot
 latexmk -pdf IV-mereo
 latexmk -c ;;
 "d")
-latexmk -pdf notes_denta.tex
+latexmk -pdf notes_denta.tex ;;
+"app")
+cd appmeta/
+latexmk -pdf appmeta.tex 
+cd ..;;
+"git")
+git add -A 
+git commit -m "automated update"
+git push ;;
 esac
