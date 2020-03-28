@@ -16,6 +16,13 @@
 *.bak*
 *.xopp
 
+!grillet-universal-algebra.pdf
+!note-1.pdf
+!FREY_a_2_categorical_analysis_of_tripos_to_topos.pdf
+!PITTS_topos_theory_in_retrospect.pd
+!FREY_a_2_categorical_analysis_of_tripos_to_topos.pdf
+!PITTS_topos_theory_in_retrospect.pdf
+
 ## Intermediate documents:
 *.dvi
 *.xdv

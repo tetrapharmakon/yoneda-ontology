@@ -34,7 +34,7 @@
 \def\id{\text{id}}
 \author{Fouche and Denta}
 \title{Categorical ontology I}
-\subtitle{Identity and Yoneda lemma}
+\subtitle{Existence}
 \usepackage{fouche}
 \usepackage{proof}
 
@@ -48,9 +48,9 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-  As it stands, Yoneda lemma allows for a definitive solution of the identity problem in ontology. Identity shall not be seen as a primitive concept; it is instead a relational, and context-dependent, notion. We put the philosophical problems of \emph{identity} and \emph{existence through time} through a structuralist lens, and we solve them by means of topos theory. In our perspective, there is no need to agglomerate the category of Being into a unique subject.
+  % As it stands, Yoneda lemma allows for a definitive solution of the identity problem in ontology. Identity shall not be seen as a primitive concept; it is instead a relational, and context-dependent, notion. We put the philosophical problems of \emph{identity} and \emph{existence through time} through a structuralist lens, and we solve them by means of topos theory. In our perspective, there is no need to agglomerate the category of Being into a unique subject.
 
-  We offer a possible topos-theoretic solution of the famous paradox of the nine coins, as both a test-bench for our language, and a proof of concept of two Borges' fanatics.
+  % We offer a possible topos-theoretic solution of the famous paradox of the nine coins, as both a test-bench for our language, and a proof of concept of two Borges' fanatics.
 \end{abstract}
 \section{Introduction}
 \epigraph{\textsc{Eadem svnt qvorvm vnvm potest svbstitvi alteri per transmvtationem}}{Leibniz, if only he knew category theory}
@@ -92,8 +92,60 @@ And this for no other reason that ``our'' metatheory is something near to a stru
 
 Thus, rather than trying to revert this state of affairs we silently comply to it as everyone else does; but we feel contempt after a brief and honest declaration of intents towards where our metatheory lives. Such a metatheory hinges again on work of Lawvere, and especially on the series of works on functorial semantics.
 \subsection{Categories as places}
-[...]
-\subsection{Identity}
+Le categorie in matematica hanno una duplice natura: da un lato, le strutture che siamo intenzionati a descrivere si organizzano naturalmente in categorie; dall'altro, una \emph{singola} categoria, che trattiamo come universo semantico e che fissiamo una volta per tutte, è il luogo in cui ciascuna di queste teorie viene interpretata. In altre parole, da un lato esiste la categoria dei gruppi; dall'altro essa è semplicemente una sottocategoria ``dell'unica categoria che esiste'', quella degli insiemi.
+
+L'\emph{algebra universale} è la parte di matematica che si occupa di formalizzare l'idea che le strutture matematiche sono, a loro volta, oggetti matematici degni di attenzione: vedi \cite{,} per referenze classiche. Essa prende le mosse dalla seguente definizione:
+
+da Grillet
+
+In tale prospettiva, la struttura astratta che intendiamo studiare consta di uno ``schizzo'' \cite{ehresmann,lair} che rappresenta il più generico degli arrangiamenti di operazioni e proprietà di queste operazioni; questo schizzo è rappresentato pictorialmente da un grafo (diretto e con radice), che modella le reciproche relazioni intercorrenti tra i vari simboli di operazione di un dato tipo d'algebra $T$ (si veda ancora Grillet per la definizione di variety: algebra universale soggetta a equazioni)
+
+Nel caso dei monoidi, tale grafo è
+\[here be picture\]
+soggetto alle relazioni [omissis]. Nel caso dei gruppi al grafo dei monoidi si aggiunge il simbolo di operazine $\iota : [1] \to [1]$ che modella l'inversione; esso è soggetto all'identità addizionale [omissis].
+
+In questo senso la categoria generata dal grafo $\mathcal{L}_{Grp}$ ``è'' la teoria che ci prefiggevamo di studiare, e ciò perché il essa abbiamo denotato ogni forma possibile di relazione tra simboli astratti delle varie arietà.
+
+A partire dall'identità, dalle mappe $\{m,e,i\}$ dalle loro composizioni meaningful e dai loro prodotti possiamo definire induttivamente il generico morfismo di $\mathcal{L}_{Grp}$ come una parola del tipo
+\[\sigma ::= 1 \mid m \mid e \mid i \mid \sigma \circ \sigma' \mid \sigma\times \sigma'\]
+(si veda [Grillet, XV.2] dove si genera per via induttiva un simile sistema di operazioni $n$-arie) Una specificazione simil-BNF come questa ovviamente non ha niente di speciale relativo ai gruppi e si può ripetere per i simboli di operazione di una generica algebra universale di tipo $T$:
+\[\tau ::= 1 \mid \sigma \mid \tau \circ \tau' \mid \tau\times \tau'\]
+dove $\sigma\in\Sigma$ varia nella segnatura di $T$. Si può anche presentare una stessa struttura algebrica (tipo, i gruppi) mediante diverse segnature; vedi Higman-Neumann; il vantaggio qui è che pur avendo diverse presentazioni, la categoria i cui morfismi sono generati induttivamente da quella BNF rule è la stessa $\mathcal{L}_{Grp}$, indipendentemente dal set di generatori scelto per essa.
+
+Per modellare questa costruzione che abbiamo finora sketchato nel linguaggio delle categorie, si spinge all'estremo l'intuizione data dal remark \ref{}, e si considera esattamente la categoria generata dal grafo che ha per vertici i numeri naturali, ed esattamente una edge $f_\omega : X^n \to X$ per ogni simbolo di operazione $f_\omega, \omega \in\Omega[n]$.
+
+Definizione, teoria di Lawvere
+
+Esempio le due teorie triviali, e i loro modelli.
+
+Definizione, modello di una teoria di Lawvere
+
+Proposizione, caratterizzazione delle teorie di Lawvere?
+
+Ora, osservazione: la categoria degli insiemi è stata l'unico posto in cui abbiamo interpretato la sintassi della nostra teoria $\mathcal L$; ovviamente possiamo rifarlo in una generica categoria con prodotti finiti e ottenere gli $L$-modelli in $\mathcal C$; nella definizione cambia poco; nulla, formalmente. Ma è un risultato profondo perché \emph{sconnette} la teoria dal \emph{luogo} in cui quella teoria è interpretata: ad un tempo, sappiamo parlare di grppi interni a Set, i cari vecchi gruppi della matematica ingenua; di gruppi topologici, dove le funzioni $m,i$ sono automaticamente continue, o di Lie, dove sono differenziabili; di monoidi nella categoria dei gruppi abeliani, e vengono fuori gli anelli;  di monoidi nella categoria dei poset, e vengono fuori i quantali\dots
+
+In tale prospettiva, la categoria degli insiemi è stata segretamente presa come universo semantico di riferimento; se ne sarebbe potuta prendere un altra, e interpretare lì la teoria astratta dei gruppi o dei monoidi o di una qualsiasi varietà d'algebre.
+
+Più precisamente ancora, as sets correspond (tautologically, I'd say) to the category $[1,Set]$, it is natural to wonder what structures internal to more general functor categories like $[C,Set]$ are. This generalisation is compelling: in case $C$ is discrete, we get back the well-known category of variable sets of \ref{}.
+
+In a stunning turn of events now, a $[C,Set]$-model for groups, monoids or else, i.e. a functor $Th(Grp)\to [C,Set]$ preserving finite products, is \emph{precisely} a functor $C\to Set$ such that each $Fc$ is an abelian group: the "models" for the "theory" of abelian groups internally to $[C,Set]$ are precisely the $Mod(T)$-valued functors $C\to Set$, taking values in the subcategory of models for the theory in study interpreted in $Set$. If we call $Mod_{Th(\Omega)}( K)$ the $\Omega$-structures internal to the category $K$ we can "shift" the $Mod(-)$ construction in and out $[C,Set]$ at our will:
+$$
+  Mod_{Th(\Omega)}([C,Set]) \cong [C, Mod_{Th(\Omega)}(Set)]
+$$
+Once you are able to classify models for $\Omega$-structures in $Set =[1,Set]$, you are automatically able to classify models in every other $[C,Set]$. Sets, in this respect, play a very central rôle.
+
+The procedure of interpreting a given ``theory'' inside an abstract finitely complete category $K$ is something that is only possible in the functorial paradigm, treating a theory as a category, and an interpretation as a functor. This discipline goes under many names and has various nuances: functorial categorical, or functorial, semantics \cite{}, internalisation of structures \cite{}, categorical algebra \cite{}.
+
+The internalization paradigm sketched above suggests how ``small'' mathematicians often happily develop their mathematics without ever exiting a single finitely complete category $K$, without even suspecting the presence of models for their theories outside $K$. Come gli adepti della setta della fenice, che non si chiamano tra loro con lo stesso nome con cui il mondo esterno li conosce, con ``teoria dei gruppi'' i categoristi intendono una struttura diversa e più profonda da quella intesa da quelli per cui un gruppo è un insieme.
+
+Thus, if you admit them to be big enough (i.e. if you leave the somewhat unsatisfying picture that "all categories are small" and you fix a semantic universe like $Set$), \emph{each} category works as a universe in which you can speak mathematical language (i.e. "study models for the theory of $\Omega$-structures" as long as $\Omega$ runs over all possible theories). Small mathematicians are born in $K$, so they only see $K$-models for $Th(\Omega)$.
+
+So categories exhibit a double nature: they are the theories we want to study, but also the places where we want to embody those theories, universes in which to interpret theories: looking from high enough, there is plenty of other places where one can move, other than $Set$. Small categories model theories, it has a \emph{syntax}, in that they describe a relational structure using compositionality; but large categories offer a way to interpret the syntax, so being a \emph{semantics}. A large relational structure is fixed once and for all, lying on the background, in which all other relational structures are interpreted.
+
+It is nearly impossible to underestimate the profundity of the remark by which each category $K$, taken alone, is a different place in which the entirety of mathematical structures can be re-enacted. This POV is investigated in our \ref{}, where we see how this allows to intepret different kinds of logics in different kinds of categories; the particular shape of semantics that you can interpret in $K$ is no more, no less than a reflection of the nice categorical properties of $K$ (does it have finite co/limits? Does it have a nice factorization system? Does it have a subobject classifier? Is the poset $Sub(A)$ of subobjects of $A$ a lattice, is it modular, distributive, complemented...? -evidently this last question is about the internal logic of the category: propositions are the set, or rather the type, of "elements" for which the proposition is "true"; in nice cases, they are also arrows with codomain a space of truth values).
+
+Categories of sheaves are nice objects in this respect because they share almost all these good properties, and thus they host a particularly nice and expressive kind of internal logic: subobjects can be joined, united, complemented; finite and even infinite conjunctions exist. Subobjects are realized by maps to a "classifying" object $\Omega$, whose "elements" are truth values of propositions; each slice category $Sh(C)/P$ has the same properties and the functors $Sh(C)/P \leftrightarrows Sh(C)/Q$ induced by maps $P\to Q$ are "nice" (they preserve this structure).
+\subsection{Existence: persistence of identity}
 Ontology rests upon the principl of identity. It is this very principle that here we aim to unhinge.
 
 Cosa significa che \emph{due cose sono, invece, una} è un problema che ci arrovella fin da quando otteniamo la ragione e la parola; ciò perché il problema è tanto elementare quanto sfuggente: l'unica maniera in cui possiamo esibire ragionamento certo è il calcolo; del resto, se la sintassi non vede che l'uguaglianza in senso più stretto possibile, la prassi deve diventare in fretta capace di una maggiore elasticità: per un istante ho postulato che ci fossero ``due'' cose, non una. E non è forse questo a renderle due? E questa terza cosa che le distingue, è davvero diversa da entrambe?
@@ -279,7 +331,7 @@ Examples of universally valid formulas:
 Chi sono tipi e termini; chi sono le proposizioni e come si scrive il calcolo proposizionale in $\Set/I$; i quantificatori, in dettaglio pornografico.
 
 L'oggetto dei numeri naturali e il principio di induzione nel topos degli insiemi variabili.
-\section{Nine copper coins}
+\section{Nine copper coins, and other toposes}
 \epigraph{Explicaron que una cosa es \emph{igualdad}, y otra \emph{identidad}, y formularon una especie de \emph{reductio ad absurdum}, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches padecen un vivo dolor. ¿No sería ridículo -interrogaron- pretender que ese dolor es el mismo?}{JLB ---Tl\"on, Uqbar, Orbis Tertius}
 According to our description of the internal language of variable sets, \emph{propositions} in $\Set/I$ are morpisms of the form
 \[p : U \to \Omega_I\]
@@ -291,6 +343,8 @@ where $\Omega_I$ is the subobject classifier of \ref{}; recall that
   \item every subobject $U \hookrightarrow A$ of an object $A$ results as a pullback (in $\Set/I$) along true:
         \[here be diagram\]
 \end{itemize}
+L'insieme $I$ deve essere pensato in questa prospettiva come a un ``moltiplicatore'', oppure come uno ``sfumatore'' di valori di verità. Introduciamo questa notazione: diciamo che $p : U \to \Omega_I$ è vera (risp., falsa), nel contesto $x :U$, con \emph{forza} $t$ se $p(x) =(1,t)$ (risp., $p(x)=(0,t)$).
+
 So, a proposition is a morphism of the following kind: it is a function $p : U \to \Omega_I$, defined on a certain domain, and such that
 $$
   \begin{array}{ccc}
@@ -299,9 +353,12 @@ $$
     I           & =              & I
   \end{array}
 $$
-(it mustbe a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the "variable domain" $U$.
+(it mustbe a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the "variable domain" $U$. Questa è una osservazione importante perché dice che la ``forza'' con cui $p$ è vera è completamente determinata dalla struttura di $U$ come oggetto di $\Set/I$.
 
-To get a grip dei vari ruoli di diverse classi di proposizioni, e dato che noi ci concentreremo -costruendola e nihilo- su una proposizione particolare, ossia quella che asserisce l'esistenza e il perdurare nell'esistenza di una freccia scoccata da un arco e persa tra gli arbusti, consideriamo la seguente proposizione:
+To get a grip dei vari ruoli di diverse classi di proposizioni, e dato che noi ci concentreremo -costruendola e nihilo- su una classe di proposizioni particolare, è conveniente discutere ora quale struttura $I$ debba avere.
+
+
+Concentriamoci ora sulla proposizione
 \[p : \mathbb R \to \Omega_I\]
 "al tempo $t : \mathbb R$ la freccia esiste" (per ragioni psicologiche, qui $I$ è un intervallo di $R$, diciamo $[0,1]$ per fissare le idee e perché è una scelta standard di logica sfumata). Also, La nozione di "persistenza nel tempo" è collegata a quella di identità laddove si può dire che a persiste se è identica a se stessa in ogni frame blablabla.
 
@@ -344,7 +401,22 @@ $p$ è falsa un po'
 $p(x) =(0,t<1)$
 
 $\pi p$ non deve essere continua; quando è continua la freccia perdura nell'esistenza, e questi oggetti divini si chiamano hrön
-$\pi_I \circ p : U \to \{0,1\}\times I \to I$
+$\pi_I \circ p : U \to \{0,1\}\times I \to I$.
+
+\begin{itemize}
+  \item Differenti scelte di $I$ dànno luogo a differenti categorie di insiemi variabili; in ciascuna di queste è possibile esprimere diversi paradossi: l'insieme ``nudo'' $I$  viene equipaggiato con maggior struttura (per esempio una struttura d'ordine o topologica) per dare ai valori di verità analoga maggiore struttura.
+
+  \item il paradosso delle monete o della freccia: X perde le monete, e la forza con cui esistono si abbassa; cresce, e torna massima, ma non per tutte le monete, quando X le ritrova sul portone,  e Y ne trova altre arrugginite per la pioggia (ma siccome il rame non arrugginisce, non sono arrugginite "a causa" della pioggia: in una sorta di principio di wormhole, eventi indipendenti sulla terra sono dipendenti su Tlön, perché l'evento A influenza, in uno spazio pluridimensionale di scelte di z di verità, l'evento B in modi che gli sarebbero vietati se fosse sulla Terra.) $\Omega_I = \{0<1\}\times I$ dove $I$ è un qualsiasi insieme con più di un elemento; esempio minimale, $I=\{N,S\}$ (suddivisione del mondo, e delle ontologie del mondo, in due emisferi), esempio psicologicamente interessante: $I=[0,1]$ (c'è un continuo non numerabile di forze distinte con cui una proprietà può essere vera o falsa); $[0,1]$ è anche il luogo standard dove interpretare logiche sfumate, sebbene lì in senso probabilistico.
+  \item Altro esempio interessante è $I=\{0,\frac{1}{2}, 1\}$: $\Omega_I$ in questo caso è l'insieme totalmente ordinato $\{0<1<2<3\}$, o meglio $\{\perp <  \square < \blacksquare < \top\}$. Ci sono due valori di verità intermedi tra vero e falso, che sono ``quasi vero'' e ``quasi falso''. In un setting come questo tuttavia, eventi nello spazio continuo dovrebbero dar luogo a cambi istantanei di stato; è invece ragionevole che la forza con cui $p$ è vera vari continuamente se dipende da variabili continue.\footnote{Il fatto che a rigore tali variazioni continue di valore di verità non avvengano nel nostro mondo è alla base della famiglia di paradossi del \emph{separating instant}: quanto è ben definita la nozione di ``istante del decesso''? Quanto è ben definita la nozione di istante di tempo?}
+
+        Per questo motivo è piu conveniente prendere per $I$ una struttura continua; e prenderla in maniera tale che sia univocamente caratterizzata da queste proprietà. Per esempio possiamo prendere $I=[0,1]$; in \cite{} Freyd caratterizza $I$ come l'oggetto universale con certe proprietà, e bla bla bla.
+  \item Il Berkeley idealista degli infiniti istanti di tempo continuo, disconnessi e incomunicabili: $\Omega_I = \coprod_{t : [0,1]} \{ 0 < 1 \}$. E' evidente come questa struttura logica influenzi il linguaggio: i termini sono costruiti per accrezione istantanea, per somma disgiunta dei costituenti e delle loro proprietà: ``aereo-chiaro sopra scuro rotondo''; oggetti determinati dalla sola simultaneità, più che da una dipendenza logica. Altra conferma di ciò, l'abbandono della consequenzialità temporale sta nel passo ``Spinoza attribuisce alla sua inesauribile divinità i modi del pensiero e dell'estensione; su Tlön, nessuno comprenderebbe la giustapposizione del  secondo (che caratterizza solo alcuni stati) e del primo, che è un sinonimo  perfetto del cosmo. In altre parole: non concepiscono che lo spaziale perduri  nel tempo. La percezione di una fumata all'orizzonte, e poi della campagna  incendiata, e poi della sigaretta mal spenta che provocò l'incendio, è  considerata un esempio di associazione di idee.'' Ciò si lega anche al passo ``L'universo è paragonabile a quelle crittografie in cui non tutti i segni hanno un valore, e che solo è vero ciò che accade ogni trecento notti'': un mondo dove ogni trecento notti $p(x) =(\top,1)$, e per le successive 299 notti $p$ ha forza $<1$.
+  \item la lotteria a Babilonia: proposizioni $p : U \to \Omega_{[0,1]}$ possono essere fortemente discontinue: allora esse descrivono un evento innescato come termine finale di una catena di eventi apparentemente disconnessi e paradossali;\footnote{Assumendo una base reale per lo spazio dei parametri da cui $p$ dipende, la sua dipendenza continua è la seguente proprietà: \dots; ciò significa che eventi vicini --nello spazio o nella consequenzialità-- non possono avere valori di verità diversi} in questo mondo, un modello del quale è probabilmente la Babilonia dei ``sorteggi impersonali, di proposito indefinito'', azioni apparentemente scorrelate tra loro (scagliare ``nelle acque dell'Eufrate uno zaffiro di Taprobana''; sciogliere ``dal tetto d'una torre [\dots\unkern] un uccello''; togliere (o aggiungere) ``un granello di rena ai grani innumerevoli della spiaggia'', hanno ``conseguenze, a volte, tremende''.
+  \item Per quanto riguarda le proposizioni che sono continue nelle proprie variabili, invece, esempio canonico sono le ``tigri di cristallo'' e le ``torri di sangue'' di Tl\"{o}n: oggetti ed entità usuali, diversi da quelli ``classici'' per un dettaglio solo (il colore, la consistenza, il materiale di cui sono composte). Oppure dipendenti in maniera \emph{monotona} e continua dai loro paramentri: $p$ è tanto più vera quanta più gente la osserva, perché ``Le cose, su Tlön, si duplicano; ma tendono anche a cancellarsi e a  perdere i dettagli quando la gente le dimentichi. È classico l'esempio di  un'antica soglia, che perdurò finchè un mendicante venne a visitarla, e che alla  morte di colui fu perduta di vista. Talvolta pochi uccelli, un cavallo, salvarono le  rovine di un anfiteatro. ''
+        \[\textstyle p(\exists\text{rovine dell'anfiteatro}, n) = \big(\top, 1-\frac{1}{n}\big)\]
+        se $n$ è il numero di persone che vede l'anfiteatro.
+\end{itemize}
+\section{Vistas on ontologies}
 \appendix
 \section{Category theory}
 \todo[inline]{E' probabilmente saggio mettere qui anche la digressione con le definizioni di topos}
