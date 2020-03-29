@@ -158,8 +158,10 @@ e aggiunge, un po'ambiguamente, "\textit{every object in a world described by ba
 
 
 	Se, come si è detto, una teoria non è altro che una categoria $T$, i funtori sono i "modelli" di $T$ entro cui interpretarla. In altre parole, preso il funtore $T \to Set$, la totalità di questi modelli forma una categoria che "dice le stesse cose che la matematica classica dice sulla teoria che corrisponde a $T$". In questo linguaggio non si parla più di un numero 6 ma di "qualsiasi cosa il numero 6 significhi in relazione al contesto dove è inserito". 
-	In questo senso è corretto affermare che ETAC è il metalinguaggio con il quale si può fare tutta la matematica. Per ogni teoria matematica serve una classe di categorie diversa (abeliane per fare geometria algebrica; topos o CCC per fare logica; categorie modello per fare topologia algebrica etc). \fo{Aggiungere qui una nota tecnica spezzerebbe la continuità del discorso, che invece fila molto bene; scrivo in coda al testo quello che qui, nella versione definitiva, ci limiteremo a reffare e apparirà in appendice o altrove.}\endfo
-
+	In questo senso è corretto affermare che ETAC è il metalinguaggio con il quale si può fare tutta la matematica. Per ogni teoria matematica serve una classe di categorie diversa (abeliane per fare geometria algebrica; topos o CCC per fare logica; categorie modello per fare topologia algebrica etc). 
+	
+	SPARTIACQUE
+	
 	In questo senso la teoria delle categorie "è più grande della matematica nel suo complesso" e ne fa da fondazione; in questo senso è un metalinguaggio dove è possibile rifare la matematica nella sua interezza. L'idea è che \emph{le teorie matematiche sono a loro volta oggetti matematici}, e in quanto tali sono passibili dello stesso studio di cui sono passibili gli oggetti di cui quelle teorie parlano.
 	
 	 Nulla vieta, a questo punto, di considerare qualuque teoria ontologica come una categoria, previo lavoro di chiarificazione/formalizzazione che lo stesso linguaggio categoriale ci permette di eseguire. Tra i vantaggi, visibili già in matematica, la possibilità di leggere le teorie in termini di relazioni (sospendendo \emph{ontological committment} sugli oggetti) e i concetti come \emph{context-dependent}. Un efficace "slogan" filosofico, a riassumere entrambi i presupposti, lo si può trovare in un paper di Jean-Pierre Marquis [Marquis, 1997]:
@@ -207,62 +209,7 @@ e aggiunge, un po'ambiguamente, "\textit{every object in a world described by ba
 	
 	
 	Memori delle osservazioni di Carnap [nota \dots], non riteniamo che questo approccio ``operativo'' all'ontologia (che non è puro \textit{problem solving} ma anche chiarificazione concettuale) implichi necessariamente l'adesione incondizionata ad uno strutturalismo filosofico integrale - o a sue varianti specifiche come la teoria \textbf{ROS} -, esattamente come abbiamo visto non avvenire nel passaggio dalla \textit{structural mathematics} allo strutturalismo vero e proprio (o al bourbakismo). La sua importanza è principalmente metodologica. (\textit{Au contraire} risulta necessario per chi appoggia posizioni strutturaliste al di fuori della matematica cominciare a fare ontologia in termini categoriali, nelle modalità qui indicate). 
-	
-\section{Categorie come teorie e come posti}
-	Le categorie in matematica hanno una duplice natura: da un lato, le strutture che siamo intenzionati a descrivere si organizzano naturalmente in categorie; dall'altro, una \emph{singola} categoria, che trattiamo come universo semantico e che fissiamo una volta per tutte, è il luogo in cui ciascuna di queste teorie viene interpretata. In altre parole, da un lato esiste la categoria dei gruppi; dall'altro essa è semplicemente una sottocategoria ``dell'unica categoria che esiste'', quella degli insiemi. 
-
-	L'\emph{algebra universale} è la parte di matematica che si occupa di formalizzare l'idea che le strutture matematiche sono, a loro volta, oggetti matematici degni di attenzione: vedi \cite{,} per referenze classiche. Essa prende le mosse dalla seguente definizione: 
-
-	da Grillet
-
-	In tale prospettiva, la struttura astratta che intendiamo studiare consta di uno ``schizzo'' \cite{ehresmann,lair} che rappresenta il più generico degli arrangiamenti di operazioni e proprietà di queste operazioni; questo schizzo è rappresentato pictorialmente da un grafo (diretto e con radice), che modella le reciproche relazioni intercorrenti tra i vari simboli di operazione di un dato tipo d'algebra $T$ (si veda ancora Grillet per la definizione di variety: algebra universale soggetta a equazioni)
-
-	Nel caso dei monoidi, tale grafo è
-\[here be picture\]
-soggetto alle relazioni [omissis]. Nel caso dei gruppi al grafo dei monoidi si aggiunge il simbolo di operazine $\iota : [1] \to [1]$ che modella l'inversione; esso è soggetto all'identità addizionale [omissis].
-
-In questo senso la categoria generata dal grafo $\mathcal{L}_{Grp}$ ``è'' la teoria che ci prefiggevamo di studiare, e ciò perché il essa abbiamo denotato ogni forma possibile di relazione tra simboli astratti delle varie arietà.
-
-A partire dall'identità, dalle mappe $\{m,e,i\}$ dalle loro composizioni meaningful e dai loro prodotti possiamo definire induttivamente il generico morfismo di $\mathcal{L}_{Grp}$ come una parola del tipo
-\[\sigma ::= 1 \mid m \mid e \mid i \mid \sigma \circ \sigma' \mid \sigma\times \sigma'\]
-(si veda [Grillet, XV.2] dove si genera per via induttiva un simile sistema di operazioni $n$-arie) Una specificazione simil-BNF come questa ovviamente non ha niente di speciale relativo ai gruppi e si può ripetere per i simboli di operazione di una generica algebra universale di tipo $T$:
-\[\tau ::= 1 \mid \sigma \mid \tau \circ \tau' \mid \tau\times \tau'\]
-dove $\sigma\in\Sigma$ varia nella segnatura di $T$. Si può anche presentare una stessa struttura algebrica (tipo, i gruppi) mediante diverse segnature; vedi Higman-Neumann; il vantaggio qui è che pur avendo diverse presentazioni, la categoria i cui morfismi sono generati induttivamente da quella BNF rule è la stessa $\mathcal{L}_{Grp}$, indipendentemente dal set di generatori scelto per essa.
-
-Per modellare questa costruzione che abbiamo finora sketchato nel linguaggio delle categorie, si spinge all'estremo l'intuizione data dal remark \ref{}, e si considera esattamente la categoria generata dal grafo che ha per vertici i numeri naturali, ed esattamente una edge $f_\omega : X^n \to X$ per ogni simbolo di operazione $f_\omega, \omega \in\Omega[n]$.
-
-Definizione, teoria di Lawvere
-
-Esempio le due teorie triviali, e i loro modelli.
-
-Definizione, modello di una teoria di Lawvere 
-
-Proposizione, caratterizzazione delle teorie di Lawvere? 
-
-Ora, osservazione: la categoria degli insiemi è stata l'unico posto in cui abbiamo interpretato la sintassi della nostra teoria $\mathcal L$; ovviamente possiamo rifarlo in una generica categoria con prodotti finiti e ottenere gli $L$-modelli in $\mathcal C$; nella definizione cambia poco; nulla, formalmente. Ma è un risultato profondo perché \emph{sconnette} la teoria dal \emph{luogo} in cui quella teoria è interpretata: ad un tempo, sappiamo parlare di grppi interni a Set, i cari vecchi gruppi della matematica ingenua; di gruppi topologici, dove le funzioni $m,i$ sono automaticamente continue, o di Lie, dove sono differenziabili; di monoidi nella categoria dei gruppi abeliani, e vengono fuori gli anelli;  di monoidi nella categoria dei poset, e vengono fuori i quantali\dots 
-
-In tale prospettiva, la categoria degli insiemi è stata segretamente presa come universo semantico di riferimento; se ne sarebbe potuta prendere un altra, e interpretare lì la teoria astratta dei gruppi o dei monoidi o di una qualsiasi varietà d'algebre.
-
-Più precisamente ancora, as sets correspond (tautologically, I'd say) to the category $[1,Set]$, it is natural to wonder what structures internal to more general functor categories like $[C,Set]$ are. This generalisation is compelling: in case $C$ is discrete, we get back the well-known category of variable sets of \ref{}.
-
-In a stunning turn of events now, a $[C,Set]$-model for groups, monoids or else, i.e. a functor $Th(Grp)\to [C,Set]$ preserving finite products, is \emph{precisely} a functor $C\to Set$ such that each $Fc$ is an abelian group: the "models" for the "theory" of abelian groups internally to $[C,Set]$ are precisely the $Mod(T)$-valued functors $C\to Set$, taking values in the subcategory of models for the theory in study interpreted in $Set$. If we call $Mod_{Th(\Omega)}( K)$ the $\Omega$-structures internal to the category $K$ we can "shift" the $Mod(-)$ construction in and out $[C,Set]$ at our will:
-$$
-Mod_{Th(\Omega)}([C,Set]) \cong [C, Mod_{Th(\Omega)}(Set)]
-$$
-Once you are able to classify models for $\Omega$-structures in $Set =[1,Set]$, you are automatically able to classify models in every other $[C,Set]$. Sets, in this respect, play a very central rôle.
-
-The procedure of interpreting a given ``theory'' inside an abstract finitely complete category $K$ is something that is only possible in the functorial paradigm, treating a theory as a category, and an interpretation as a functor. This discipline goes under many names and has various nuances: functorial categorical, or functorial, semantics \cite{}, internalisation of structures \cite{}, categorical algebra \cite{}.
-
-The internalization paradigm sketched above suggests how ``small'' mathematicians often happily develop their mathematics without ever exiting a single finitely complete category $K$, without even suspecting the presence of models for their theories outside $K$. Come gli adepti della setta della fenice, che non si chiamano tra loro con lo stesso nome con cui il mondo esterno li conosce, con ``teoria dei gruppi'' i categoristi intendono una struttura diversa e più profonda da quella intesa da quelli per cui un gruppo è un insieme.
-
-Thus, if you admit them to be big enough (i.e. if you leave the somewhat unsatisfying picture that "all categories are small" and you fix a semantic universe like $Set$), \emph{each} category works as a universe in which you can speak mathematical language (i.e. "study models for the theory of $\Omega$-structures" as long as $\Omega$ runs over all possible theories). Small mathematicians are born in $K$, so they only see $K$-models for $Th(\Omega)$. 
-
-So categories exhibit a double nature: they are the theories we want to study, but also the places where we want to embody those theories, universes in which to interpret theories: looking from high enough, there is plenty of other places where one can move, other than $Set$. Small categories model theories, it has a \emph{syntax}, in that they describe a relational structure using compositionality; but large categories offer a way to interpret the syntax, so being a \emph{semantics}. A large relational structure is fixed once and for all, lying on the background, in which all other relational structures are interpreted.
-
-It is nearly impossible to underestimate the profundity of the remark by which each category $K$, taken alone, is a different place in which the entirety of mathematical structures can be re-enacted. This POV is investigated in our \ref{}, where we see how this allows to intepret different kinds of logics in different kinds of categories; the particular shape of semantics that you can interpret in $K$ is no more, no less than a reflection of the nice categorical properties of $K$ (does it have finite co/limits? Does it have a nice factorization system? Does it have a subobject classifier? Is the poset $Sub(A)$ of subobjects of $A$ a lattice, is it modular, distributive, complemented...? -evidently this last question is about the internal logic of the category: propositions are the set, or rather the type, of "elements" for which the proposition is "true"; in nice cases, they are also arrows with codomain a space of truth values).
-
-Categories of sheaves are nice objects in this respect because they share almost all these good properties, and thus they host a particularly nice and expressive kind of internal logic: subobjects can be joined, united, complemented; finite and even infinite conjunctions exist. Subobjects are realized by maps to a "classifying" object $\Omega$, whose "elements" are truth values of propositions; each slice category $Sh(C)/P$ has the same properties and the functors $Sh(C)/P \leftrightarrows Sh(C)/Q$ induced by maps $P\to Q$ are "nice" (they preserve this structure).
-\end{document}
+	\end{document}
 
 
 

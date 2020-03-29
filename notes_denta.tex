@@ -342,7 +342,7 @@ $\pi_I \circ p : U \to \{0,1\}\times I \to I$
 \subsection{risposte all'idealista}
 All'idealista, il berkeleyano puro, che volesse dedurre, da questa "esistenza ad intermittenza" della freccia, ch'essa in realtà non sussiste, potremmo obiettare che sta parlando male. In questo modello è scorretto dire che $p$ è falsa in tutti i punti di $I$, ma che semmai è "falsa con forza $t$" dove $t \in I$. 
 
-Ad essere ancora più pignoli, alla domanda se la freccia esista o meno la risposta corretta è a sua volta una domanda: "In quale $I$ sei? Qual è il tuo classificatore di sottoggetti?". Indicato il proprio punto (che sia un riferimento temporale, spaziale o di qualunque altro genere) allora si può rispondere mettendo un numero reale al posto di $t$, indicando cioè la "forza" di esistenza dell'oggetto. 
+Ad essere ancora più pignoli, alla domanda se la freccia esista o meno la risposta corretta è a sua volta una domanda: "In quale $I$ sei?". Indicato il proprio punto (che sia un riferimento temporale, spaziale o di qualunque altro genere) allora si può rispondere mettendo un numero reale al posto di $t$, indicando cioè la "forza" di esistenza dell'oggetto. 
 
 Sostituire nozioni classiche (identità, persistenza-nel-tempo) con nozioni precise suggerite dal linguaggio che proponiamo, vuol dire perciò modificare anche il linguaggio naturale. Quando l'idealista afferma che negli istanti in cui chiude gli occhi la sua casa non esiste più, sta anch'egli parlando di "forza" nel senso qui definito: lo deve solo esplicitare. Si mette in un universo (un topos) "non-classico" con più valori di verità e deve semplicemente calcolare \emph{qual è} il valore di $p$. 
 
@@ -350,6 +350,27 @@ Il modello fa più di quello che prometteva: è una descrizione adeguata del mon
 
 Da notare che abbiamo potuto modellizzare il paradosso senza impiegare un framework di logica temporale; è lecito interpretare gli elementi di $I$ come istanti, ma non necessario. La descrizione in termini temporali è un sottocaso del modello più generale che abbiamo fornito. Persino un presentista o l'idealista coerente di Borges (che dalle tesi berkeleyane deduce l'inesistenza del tempo) può stabilire la verità di $p$ senza abiurare alla sua posizione ontologica, ma deve poi accettare il risultato del calcolo. 
 
-L'ampliamento dei valori di verità si traduce in un ampliamento delle risposte possibili da dare alla domanda sulla freccia. Non indichiamo quella "corretta" ma il topos in cui trovarla, il contesto di discorso dal quale non si può prescindere, intuitivamente un contesto fuzzy, che evita le sterili dicotomie in cui era impantanato il dibattito da qualche secolo.  Se ci mettiamo in un contesto paraconsistentista è possibile inoltre modellizzare tutto "dialogo ontologico" tra soggetti, plausibilmente con un approccio non aggiuntivo, e una semantica di Rescher-Brandom o una Lewis' strategy. La densità di $I$ è la proprietà che permette l'accordo intersoggettivo in Tl\"on.     
+L'ampliamento dei valori di verità si traduce in un ampliamento delle risposte possibili da dare alla domanda sulla freccia. Non indichiamo quella "corretta" ma il topos in cui trovarla, il contesto di discorso dal quale non si può prescindere, intuitivamente un contesto fuzzy, che evita le sterili dicotomie in cui era impantanato il dibattito da qualche secolo.  Se ci mettiamo in un contesto paraconsistentista è possibile inoltre modellizzare tutto "dialogo ontologico" tra soggetti, plausibilmente con un approccio non aggiuntivo, e una semantica di Rescher-Brandom o una Lewis' strategy. La densità di $I$ è la proprietà che permette l'accordo intersoggettivo in Tl\"on. 
+
+\subsection{aggiunte tristemente dispersive}
+
+Faccio una piccola riflessione/domanda, anche se so che a questo punto è come suggerire di fare un quinto paper e impazzire definitivamente.
+
+I mondi impossibili, coimpossibili etc di Rescher e Brandom possono essere riletti come topos? Cioè possiamo sostituire (o lavorare dentro) i topos ai mondi impossbili? Di base essi sono la naturale estensione delle teorie dei mondi possibili, e possono servire a studiare il contenuto proposizionale, gli stati di credenza (o, perché no, la "posizione percettiva" dell'osservatore che interviene nella nostra versione dei paradossi borgesiani; tale per cui "più persone percepiscono la freccia in quell'istante maggiore è la forza $t$ che rende vera $p$"). (Peraltro di solito gli ontologi presentano i mondi impossibili mettendoci dentro le cose più strane: dal solito cerchio quadrato alle tigri di cristallo appunto. Se queste due cose sono presenti in due mondi $w_1$ e $w_2$ ma non in entrambi è ovvio che essi siano due diversi modi in cui il mondo può "non essere").
+
+L'orribile notazione classica per indicare la sussistenza o meno di stati di cose è questa: $|P|_w = +$ e $|P|_w = -$. Cioè "lo stato di cose descritto da $P$ sussiste/non sussiste nel mondo $w$".
+
+Questi mondi alla Rescher-Brandom sono ottenuti con due operazioni ricorsive su mondi standard:
+\begin{itemize}
+	\item \textbf{Schematizzazione:} Un mondo schematico $w_1 \cap w_2$ è un mondo in cui sussistono tutti e soli gli stati di cose sussistenti in $w_1$ e $w_2$:
+	\[ |P|_{w_1 \cap w_2} = + \iff |P|_{w_1} = + \land |P|_{w_2} = + \]
+	
+	\item \textbf{Sovrapposizione:} Un mondo $w_1 \cup w_2$ è un mondo in cui sussistono tutti e soli gli stati di cose sussistenti in almeno uno dei due mondi di partenza:
+	\[ |P|_{w_1 \cup w_2} = + \iff |P|_{w_1} = + \lor |P|_{w_2} = +\]
+\end{itemize}     
+
+Ora, lasciando perdere il fatto che tutta la costruzione viene messa in piedi per servire una logica non aggiuntiva, per cui è lecito avere $|P|_w = |\neg P|_w = +$ per qualche mondo inconsistente $w$ ottenuto per sovrapposizione, ma non si dà mai il caso in cui $|P \land \neg P|_w = +$, in realtà credo sia molto facile generalizzare tutta la teoria in modo che si adatti a logiche differenti (in cui si vuole far "saltare" il terzo escluso o altro, e non il PNC) e sono certo che qualcuno lo abbia fatto. Il punto è: la teoria dei topos fornisce mondi in cui si può far questo \emph{meglio}?
+
+So che allarga troppo il discorso ma son cose che l'ontologo curioso si chiede. Credo possa essere utile far notare che, a parte l'ovvia questione che con le categorie si fa ontologia meglio, in generale si migliorano anche gli approcci in cui c'è già della matematica o della logica (ovvia conseguenza delle cose spiegate in 1.3, certo). Non è una cosa diversa da quella che faremo con la mereologia. Nozioni abbastanza elastiche e "strutturali" di mondi, che ampliano la semantica kripkeana, sono considerate un ottimo strumento in ontologia; se i topos svolgono meglio questa funzione perché non rilevarlo? 
 
 \end{document} 
