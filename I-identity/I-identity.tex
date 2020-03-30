@@ -1,0 +1,61 @@
+\documentclass{amsart}
+
+\makeatletter
+\def\@settitle{\begin{center}%
+  \baselineskip14\p@\relax
+  \bfseries
+  \uppercasenonmath\@title
+  \@title
+  \ifx\@subtitle\@empty\else
+     \\[1ex]\uppercasenonmath\@subtitle
+     \footnotesize\mdseries\@subtitle
+  \fi
+  \end{center}%
+}
+\def\subtitle#1{\gdef\@subtitle{#1}}
+\def\@subtitle{}
+\makeatother
+
+\newcommand{\var}[3][]{
+  \left[\begin{smallmatrix} #2 \\
+  #1\downarrow \\ #3
+  \end{smallmatrix}\right]}
+\newcommand{\cvar}[3]{
+  \begin{xsmallmatrix}{0em}
+  & #1 \\ #2 & \downarrow \\ & #3
+  \end{xsmallmatrix}}
+
+\def\la{\langle}
+\def\ra{\rangle}
+\def\lr#1#2{\la #1,#2\ra}
+
+\newcommand{\true}{\texttt{t}}
+\def\id{\text{id}}
+\author{Fouche and Denta}
+\title{Categorical ontology I}
+\subtitle{Existence}
+\usepackage{fouche}
+\usepackage{proof}
+
+\usepackage{minted}
+\def\mil#1{\mintinline{haskell}{#1}}
+\newcommand{\po}[1][dr]{\save*!/#1+1.5pc/#1:(1,-1)@^{|-}\restore}
+\newcommand{\pb}[1][dr]{\save*!/#1-1.5pc/#1:(-1,1)@^{|-}\restore}
+
+
+\setlength{\epigraphwidth}{.6\textwidth}
+\setcounter{tocdepth}{1}
+\begin{document}
+\maketitle
+\begin{abstract}
+
+\end{abstract}
+\tableofcontents
+\input{I-identity/sections/01-introduction.tex}
+\input{I-identity/sections/02-variable-sets.tex}
+\input{I-identity/sections/03-internal-language.tex}
+\input{I-identity/sections/04-nine-coins.tex}
+\input{I-identity/sections/05-vistas.tex}
+\appendix
+\input{I-identity/sections/AA-categories.tex}
+\end{document}

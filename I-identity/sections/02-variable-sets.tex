@@ -1,0 +1,119 @@
+\section{Preliminaries on variable set theory}
+In some of our proofs it will be crucial to blur the distinction between the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \ref{}); once the following result is proved, we freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
+\begin{proposition}
+  Let $I$ be a set, regarded as a discrete category, and let $\Set^I$ be the category of functors $F : I \to \Set$; moreover, let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism) between $\Set^I$ and $\Set/I$.
+\end{proposition}
+\begin{proof}
+  Let us give a very hands-on proof, based on the fact that the category $\Set^I$ coincides on its own right with the category of $I$-indexed families of objects, i.e. with the category whose objects are $(\underline X)_I := \{X_i\mid i\in I\}$, and morphisms $(\underline X)_I\to (\underline Y)_I$ the families $\{f_i : X_i \to Y_i\mid i \in I\}$.
+
+  Consider an object $h : X\to I$ of $\Set/I$, and define a function as $i\mapsto h^\leftarrow(i)$; of course, $(X(h))_I := \{h^\leftarrow(i) \mid i \in I\}$ is a $I$-indexed family, and since $I$ can be regarded as a discrete category, this is sufficient to define a functor $F_h : I \to \Set$.
+
+  Let us define a functor in the opposite direction: let $F : I \to \Set$ be a functor. This defines a function $h_F : \coprod_{i\in I}Fi \to I$, where $\coprod_{i\in I} Fi$ is the disjoint union of all the sets $Fi$.
+
+  The claim now follows if we show that the correspondences $h\mapsto F_h$ and $F\mapsto h_F$ are mutually inverse.
+
+  This is however easy to verify: the function $F_{h_F}$ sends $i\in I$ to the set $h_F^\leftarrow(i)=Fi$, and the function $h_{F_h} \in \Set/I$ has domain $\coprod_{i\in I}F_h(i) = \coprod_{i\in I}h^\leftarrow(i)=X$ (as $i$ runs over the set $I$, the disjoint union of all preimages $h^\leftarrow(i)$ equals the domain of $h$, i.e. the set $X$).
+\end{proof}
+\begin{remark}
+  A more abstract look at this result regards the equivalence $\Set/I\cong \Set^I$ as a particular instance of the \emph{Grothendieck construction} (see \cite{}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \ref{}). In this case, the domain $\clC=I$ is a discrete category, hence all functors $\clE \to I$ are, trivially, discrete fibrations.
+\end{remark}
+The next crucial step of our analysis is the observation that the category of variable sets is a topos: we break the result into the verification of the various axioms, as given in \cite{}.
+
+First, we recall a few basic facts and definitions on topos theory.
+\begin{definition}
+  An \emph{elementary topos} is a category $\clE$
+  \begin{itemize}
+    \item which is \emph{cartesian closed}, i.e. each functor $\firstblank\times A$ has a right adjoint $[A, \firstblank]$;
+    \item having a \emph{subobject classifier}, i.e. an object $\Omega\in\clE$ such that the functor $\text{Sub} : \clE^\text{op}\to \Set$ sending $A$ into the set of isomorphism classes of monomorphisms $\var{U}{A}$ is representable by the object $\Omega$.
+          \index{Subobject classifier}
+  \end{itemize}
+  The natural bijection $\clE(A,\Omega)\cong\text{Sub}(A)$ is obtained pulling back the monomorphism $U\subseteq A$ along a \emph{universal arrow} $t : 1\to \Omega$, as in the diagram
+  \[
+    \vcenter{\xymatrix{
+        U \pb\ar[r]\ar[d]& 1\ar[d]^t \\
+        A \ar[r]_{\chi_U}& \Omega
+      }}
+  \]
+  so, the bijection is induced by the map $\var{U}{A}\mapsto \chi_U$.
+\end{definition}
+\begin{definition}\label{grotop}
+  A \emph{Grothendieck topos} is an elementary topos that, in addition, is locally finitely presentable.
+\end{definition}
+Whenever we spoke about sheaves on a topological space or a Grothendieck site, we wer secretly talking about topos theory; the notion of Grothendieck topos is intimately connected with co\fshyp{}end calculus, as we have seen all along chapter 3, and especially in \ref{giraudo}.
+
+In fact, Giraud theorem gives a proof for the difficult implication of the following \emph{recognition principle} for Grothendieck toposes:
+\begin{theorem}
+  Let $\clE$ be a category; then $\clE$ is a Grothendieck topos if and only if it is a left exact reflection of a category $\Cat(\clA^\text{op},\Set)$ of presheaves on a small category $\clA$.
+\end{theorem}
+(recall that a \emph{left exact reflection} of $\clC$ is a reflective subcategory $\cate{R}\hookrightarrow \clC$ such that the reflector $r : \clC \to \cate{R}$ preserves finite limits. It is a reasonably easy exercise to prove that a left exact reflection of a Grothendieck topos is again a Grothendieck topos; Giraud proved that all Grothendieck toposes arise this way.)
+
+\begin{proposition}
+  The category of variable sets is cartesian closed.
+\end{proposition}
+\begin{proof}
+  We shall first show that the category of variable sets admits products: this is obvious in $\Set/I$, products are precisely pullbacks; note that theorem \ref{} gives an identification
+  \[\vcenter{\scriptsize\xymatrix@!=1mm{
+    & X\times_I Y \ar[dd]^h \ar@[lightgray][dr]\ar@[lightgray][dl]&  \\
+    {\color{lightgray} X} \ar@[lightgray][dr]_{\color{lightgray} f}&& {\color{lightgray} Y} \ar@[lightgray][dl]^{\color{lightgray} g}\\
+    & I &
+    }}\iff i\mapsto h^\leftarrow(i) = \Big\{(x,y) \in X\times_I Y \mid h(x,y)=i\Big\}\]
+  and given the universal property of a pullback, this yields a canonical bijection $h^\leftarrow(i)\cong f^\leftarrow(i)\times g^\leftarrow(i)$. This is exactly the definition of the product of the two functors $F_f, F_g : I\to \Set$.
+
+  Next, we shall show that each functor $\firstblank \times_I Y$ has a right adjoint $Y \pitchfork_I\firstblank$. The functor $\Set^I \to \Set^I : Z\mapsto Y\pitchfork_I Z$ where $Y\pitchfork_I Z : i \mapsto \Set(Y_i, Z_i)$ does the job. This sets up the bijection
+  \[\begin{array}{c}
+      \xymatrix{X\times_I Y \ar[r] & Z}               \\ \hline
+      \xymatrix{X \ar[r]           & Y\pitchfork_I Z}
+    \end{array}\]
+  and by a completely analogous argument (the functor $\firstblank\times_I\secondblank$ gives a symmetric monoidal structure to variable sets),
+  \[\begin{array}{c}
+      \xymatrix{X\times_I Y \ar[r] & Z}                \\ \hline
+      \xymatrix{Y \ar[r]           & X\pitchfork_I Z;}
+    \end{array}\]
+  this concludes the proof that the category of variable sets is cartesian closed.
+\end{proof}
+\begin{proposition}
+  The category of variable sets has a subobject classifier.
+\end{proposition}
+\begin{proof}
+  Recall from \ref{} that we shall find a variable set $\Omega$ such that there is a bijection
+  \[\begin{array}{c}
+      \xymatrix{A \ar[r] & \Omega} \\ \hline
+      \textsf{Sub}_I(A)
+    \end{array}\]
+  where $\textsf{Sub}_I(A)$ denotes the set of isomorphism classes of monomorphisms into $A$, in the category of variable sets.\footnote{A monomorphism into $A$ as an object of $\Set^I$ is nothing but a family of injections $s_i : S_i \to A_i$; a monomorphism in $\Set/I$ is a set $S$ in a commutative triangle
+  \[\scriptsize
+    \xymatrix@!=1mm{S\ar[rr]\ar[dr]_s && A\ar[dl]^a \\ &I&}\]}
+
+  In order to find such an object, we look at what shape shall $\Omega$ have, and what role its universal property plays in its characterization:
+  \begin{itemize}
+    \item
+    \item
+  \end{itemize}
+  For the sake of simplicity, for the rest of the proof we fix as category of variable sets the slice $\Set/I$.
+
+  From this we make the following guess: as an object of $\Set/I$, $\Omega$ is the object $\pi_I : I\times \{0,1\} \to I$. We are thus left with the verification that $\pi_I$ has the correct structure and universal property.
+
+  First, we shall find a monomorphism $\true : * \to \Omega$ in $\Set/I$, i.e. an injective function $I\to \Omega$ that has $\pi_I$ as left inverse. This generalised element ``chooses the $\lceil$true$\rceil$ truth value'' in $\Omega$. (Evidently, the identity $\id_I : I \to I$ is the terminal object in $\Set/I$.)
+
+  It turns out that the function $I \to I\times \{0,1\}$ plays the r\^ole of $\true$: indeed, given a monomorphism $S \hookrightarrow A$ the commutative square
+  \[
+    \vcenter{\xymatrix{
+        S\ar[d]\ar[r] & I \ar[d]^{\true}\\
+        A \ar[r]_{\chi_S} & I\times \{0,1\}
+      }}
+  \]
+\end{proof}
+\begin{proposition}
+  The category of variable sets is cocomplete and accessible.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+Accessibility is a corollary of Yoneda in the following form: every $F : I \to \Set$ is a colimit of representables
+\[
+  F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)
+\]
+($\clE(F)$ is small because in this case $\clE(F)\cong\coprod_{i\in I}Fi$).
+\begin{corollary}
+  The category of variable sets is a Grothendieck topos.
+\end{corollary}

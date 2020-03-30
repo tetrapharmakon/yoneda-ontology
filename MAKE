@@ -2,16 +2,16 @@
 
 case "$1" in
 "I")
-latexmk -pdf -shell-escape -pvc I-identity.tex
+latexmk -pdf -shell-escape -pvc -jobname=I-identity/I-identity I-identity/I-identity.tex
 latexmk -c ;;
 "II")
-latexmk -pdf -shell-escape -pvc II-spheres.tex
+latexmk -pdf -shell-escape -pvc -jobname=I-identity/I-identity.pdf II-spheres.tex
 latexmk -c ;;
 "III")
-latexmk -pdf -shell-escape -pvc III-homot.tex
+latexmk -pdf -shell-escape -pvc -jobname=I-identity/I-identity.pdf III-homot.tex
 latexmk -c ;;
 "IV")
-latexmk -pdf -shell-escape -pvc IV-mereo.tex
+latexmk -pdf -shell-escape -pvc -jobname=I-identity/I-identity.pdf IV-mereo.tex
 latexmk -c ;;
 "all")
 latexmk -pdf -shell-escape I-identity
