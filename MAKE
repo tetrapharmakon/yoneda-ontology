@@ -14,10 +14,10 @@ latexmk -c ;;
 latexmk -pdf -shell-escape -pvc IV-mereo.tex
 latexmk -c ;;
 "all")
-latexmk -pdf I-identity
-latexmk -pdf II-spheres
-latexmk -pdf III-homot
-latexmk -pdf IV-mereo
+latexmk -pdf -shell-escape I-identity
+latexmk -pdf -shell-escape II-spheres
+latexmk -pdf -shell-escape III-homot
+latexmk -pdf -shell-escape IV-mereo
 latexmk -c ;;
 "d")
 latexmk -pdf notes_denta.tex ;;
