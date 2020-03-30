@@ -3,28 +3,38 @@
 case "$1" in
 "I")
 latexmk -pdf -shell-escape -pvc -jobname=I-identity/I-identity I-identity/I-identity.tex
-latexmk -c ;;
-"II")
-latexmk -pdf -shell-escape -pvc -jobname=I-identity/I-identity.pdf II-spheres.tex
-latexmk -c ;;
-"III")
-latexmk -pdf -shell-escape -pvc -jobname=I-identity/I-identity.pdf III-homot.tex
-latexmk -c ;;
-"IV")
-latexmk -pdf -shell-escape -pvc -jobname=I-identity/I-identity.pdf IV-mereo.tex
-latexmk -c ;;
-"all")
-latexmk -pdf -shell-escape I-identity
-latexmk -pdf -shell-escape II-spheres
-latexmk -pdf -shell-escape III-homot
-latexmk -pdf -shell-escape IV-mereo
-latexmk -c ;;
-"d")
-latexmk -pdf notes_denta.tex ;;
-"app")
-cd appmeta/
-latexmk -pdf appmeta.tex 
+cd I-identity
+latexmk -c 
 cd ..;;
+"II")
+latexmk -pdf -shell-escape -pvc -jobname=II-spheres/II-spheres.pdf II-spheres/II-spheres.tex
+cd II-spheres
+latexmk -c 
+cd ..;;
+"III")
+latexmk -pdf -shell-escape -pvc -jobname=III-homot/III-homot.pdf III-homot/III-homot.tex
+cd III-homot
+latexmk -c 
+cd ..;;
+"IV")
+latexmk -pdf -shell-escape -pvc -jobname=IV-mereo/IV-mereo.pdf IV-mereo/IV-mereo.tex
+cd IV-mereo
+latexmk -c 
+cd ..;;
+# "all")
+# latexmk -pdf -shell-escape I-identity
+# latexmk -pdf -shell-escape II-spheres
+# latexmk -pdf -shell-escape III-homot
+# latexmk -pdf -shell-escape IV-mereo
+# cd I-identity
+# latexmk -c 
+# cd ..;;
+# "d")
+# latexmk -pdf notes_denta.tex ;;
+# "app")
+# cd appmeta/
+# latexmk -pdf appmeta.tex 
+# cd ..;;
 "git")
 git add -A 
 git commit -m "automated update"
