@@ -11,10 +11,11 @@
 *.cb
 *.cb2
 .*.lb
-*.pdf
 *.rtf
 *.bak*
 *.xopp
+_minted-I-identity/*
+*.pygstyle
 
 !grillet-universal-algebra.pdf
 !note-1.pdf
