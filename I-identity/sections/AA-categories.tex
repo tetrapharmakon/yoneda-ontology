@@ -1,6 +1,16 @@
 \section{Category theory}
 \subsection{Fundamentals of CT}
-Chiaramente non scriviamo niente che non sia strettamente indispensabile; citiamo però varie fonti atte allo scopo di imparare un po' di CT.
+Throughout the paper we employ standard basic category-theoretic terminology, and thus we refrain from giving a self contained exposition of elementary definitions. Instead, we rely on famous and wide-spread sources like \cite{Bor1,Bor2,McL,riehlcontext,leinster2014basic,simmons2011introduction}.
+
+Precise references for the basic definitions can be found
+\begin{itemize}
+  \item for the definition of category, functor, and natural transformation, in \cite[]{}, \cite[]{}, \cite[]{}, \cite[]{}, \cite[]{}.
+  \item For the definition of co/limit and adjunction, in \cite[]{}, \cite[]{}, \cite[]{}, \cite[]{}.
+  \item For the definition of accessible and locally presentable category in \cite[]{}, \cite[]{}, \cite[]{}, \cite[]{}.
+  \item Basic facts about ordinal and cardnal numbers can be found in \cite[]{}; a comprehensive reference on basic and non-basic set theory is \cite{jech2013set}.
+  \item The standard source for Lawvere functorial semantics is Lawvere's PhD thesis \cite{lawvere1963functorial}; more modern accounts are \cite{hyland2007category}.
+  \item Standard references for topos theory are \cite{mac1992sheaves,JohnstonePT}.
+\end{itemize}
 \subsection{Toposes}\leavevmode
 \todo[inline]{E' probabilmente saggio mettere qui anche la digressione con le definizioni di topos}
 For us, an \emph{ordinal number} will be any well\hyp{}ordered set, and a \emph{cardinal number} is any ordinal which is not in bijection with a smaller ordinal. Every set $X$ has a unique \emph{cardinality}, i.e. a cardinal $\kappa$ with a bijection $\kappa \cong X$ such that there are no bijections from a smaller ordinal. We freely employ results that depend on the axiom of choice when needed. A cardinal $\kappa$ is \emph{regular} if no set of cardinality $\kappa$ is the union of fewer than $\kappa$ sets of cardinality less than $\kappa$; all cardinals in the following subsection are assumed regular without further mention.
@@ -85,5 +95,5 @@ The last technical remark that we collect sheds a light on the discorso prolisso
 \cate{Mod}(M, \cate{Mod}(L,\Set)).
 \]
 \begin{definition}
-  Tensor product of theories
+  Given two theories $\clL$ and $\clM$ it is possible to construct a new theory called the \emph{tensor product} $\clL \otimes \clM$; this new theory can be characterized by the following universal property: the models of $\clL \otimes \clM$ consist of the category of $\clL$-models interpreted in the category of $\clM$-models or, equivalently (and this is remarkable) of $\clM$-models interpreted in the category of $\clL$-models.
 \end{definition}
