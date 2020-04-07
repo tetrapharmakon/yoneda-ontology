@@ -1,0 +1,11 @@
+#!/bin/env bash
+
+case "$1" in
+"I")
+latexmk -pdf -shell-escape -pvc I-identity.tex
+latexmk -c ;;
+"git")
+git add -A 
+git commit -m "automated update"
+git push ;;
+esac
