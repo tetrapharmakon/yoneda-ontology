@@ -5,7 +5,7 @@
 \subsection{On our choice of metatheory and foundation}
 In his influential paper \cite{} William Lawvere proposes a foundation of mathematics based on category theory. To appreciate the depth and breadth of such an impressive piece of work, however, the word ``foundation'' must be taken in the particular sense intended by mathematicians:
 \begin{quote}
-  [\dots\unkern] a single system of first-order axioms in which all usual mathematical objects can be defined and all their usual properties proved.
+	[\dots\unkern] a single system of first-order axioms in which all usual mathematical objects can be defined and all their usual properties proved.
 \end{quote}
 Such a position sounds at the same time a bit cryptic to unravel, and unsatisfactory; Lawvere's (and others') stance on the matter is that a foundation of mathematics is \emph{de facto} just a set $\clL$ of first order axioms organised in a Gentzen-like deduction system. The deductive system so generated reproduces mathematics as we know and practice it, i.e. provides a formalisation for something that already exists and needs no further explanation, and that we call ``mathematics''.
 
@@ -19,8 +19,8 @@ Following this path would have, however, catastrophic consequences on the qualit
 
 This state of affairs has, to the best of our moderate knowledge on the subject, various possible explanations:
 \begin{itemize}
-  \item On one hand, it constitutes the heritage of Bourbaki's authoritarian stance on formalism in pure mathematics;
-  \item on the other hand, a different position would result in barely no difference for the ``working class''; mathematicians are irreducible pragmatists, somewhat blind to the consequences of their philosophical stances.
+	\item On one hand, it constitutes the heritage of Bourbaki's authoritarian stance on formalism in pure mathematics;
+	\item on the other hand, a different position would result in barely no difference for the ``working class''; mathematicians are irreducible pragmatists, somewhat blind to the consequences of their philosophical stances.
 \end{itemize}
 So, symbols and letters do not exist outside of the Gentzen-like deductive system we specified together with $\clL$.
 
@@ -38,9 +38,9 @@ And this for no other reason that ``our'' metatheory is something near to a stru
 
 Thus, rather than trying to revert this state of affairs we silently comply to it as everyone else does; but we feel contempt after a brief and honest declaration of intents towards where our metatheory lives. Such a metatheory hinges again on work of Lawvere, and especially on the series of works on functorial semantics.
 \subsection{Categories as places}
-Lo scopo di questa sezione è chiarire in quale senso preciso una teoria matematica si può pensare come una categoria; tale categoria dà una rappresentazione grafica delle operazioni che definiscono una struttura (algebrica nel senso di \cite{Kurosh:o:altri}); un'idea simile permette di realizzare una categoria che rappresenta un dato linguaggio $L$, e un topos ottenuto come categoria universale che ha $L$ come linguaggio interno (citare free toposes, Lambek-Scott e Freyd); in tale senso è possibile costruire un ``luogo'' in cui ritrovare l'intera matematica e 
+Lo scopo di questa sezione è chiarire in quale senso preciso una teoria matematica si può pensare come una categoria; tale categoria dà una rappresentazione grafica delle operazioni che definiscono una struttura (algebrica nel senso di \cite{Kurosh:o:altri}); un'idea simile permette di realizzare una categoria che rappresenta un dato linguaggio $L$, e un topos ottenuto come categoria universale che ha $L$ come linguaggio interno (citare free toposes, Lambek-Scott e Freyd); in tale senso è possibile costruire un ``luogo'' in cui ritrovare l'intera matematica e
 \begin{quote}
-  Jim Lambek proposed to use the free topos as ambient world to do mathematics in; see (Lambek 2004). Being syntactically constructed, but universally determined, with higher-order intuitionistic type theory as internal language he saw it as a reconciliation of the three classical schools of philosophy of mathematics, namely formalism, platonism, and intuitionism. His latest views on this variant of categorical foundations can be found in (Lambek-Scott 2011).
+	Jim Lambek proposed to use the free topos as ambient world to do mathematics in; see (Lambek 2004). Being syntactically constructed, but universally determined, with higher-order intuitionistic type theory as internal language he saw it as a reconciliation of the three classical schools of philosophy of mathematics, namely formalism, platonism, and intuitionism. His latest views on this variant of categorical foundations can be found in (Lambek-Scott 2011).
 \end{quote}
 In \textbf{CT} le categorie sono, quindi, oggetti puramente sintattici, ed è il contesto in cui si opera a determinare una semantica. Già in semantica logica una \emph{interpretazione} $\mathcal{I}$ di un enunciato $\alpha$ è una funzione che associa elementi di un insieme (di solito l'insieme dei valori di verità) alle variabili libere in $\alpha$. Nella storia della \textbf{CT} (caratterizzata da un rifiuto dell'impostazione \emph{set-theoretic} a livello fondazionale) una serie di generalizzazioni e raffinamenti dello stesso procedimento hanno condotto alla nozione di funtore e quindi alla \emph{semantica funtoriale} di Lawvere. Nella sottosezione che segue ci occupiamo di introdurre tale teoria; nella successiva tracciamo, in maniera più discorsiva, alcune conseguenze filosofiche che questa prospettiva ha sull'ontologia degli oggetti matematici (e dunque sull'ontologia degli oggetti che queste teorie descrivono) sottolineando i tratti salienti dell'impostazione che seguiamo.
 \subsubsection{Theories and their models}
@@ -58,10 +58,10 @@ In tale prospettiva si inseriscono le ricerche in algebra categoriale \cite{}, s
 
 La \emph{semantica funtoriale} nasce nella tesi di doc di Lawvere per sistematizzare l'\emph{algebra universale}, la parte di matematica che studia le strutture matematiche in quanto oggetti matematici: vedi \cite{,} per referenze classiche. Essa prende le mosse dalla seguente definizione:
 \begin{definition}
-  A \emph{type $\fkT$ of universal algebra} is a pair $(T,\underline{\alpha})$ where $T$ is a set called the (\emph{algebraic}) \emph{signature} of the theory, and $\underline\alpha$ a function $T \to \bbN$ that assigns to every element $t\in T$ a natural number $n_t : \bbN$ called the \emph{arity} of the function symbol $t$.
+	A \emph{type $\fkT$ of universal algebra} is a pair $(T,\underline{\alpha})$ where $T$ is a set called the (\emph{algebraic}) \emph{signature} of the theory, and $\underline\alpha$ a function $T \to \bbN$ that assigns to every element $t\in T$ a natural number $n_t : \bbN$ called the \emph{arity} of the function symbol $t$.
 \end{definition}
 \begin{definition}
-  A (\emph{universal}) \emph{algebra} of type $\fkT$ is a pair $(A,f^A)$ where $A$ is a set and $f^A : T \to \prod_{t\in T} \Set(A^{n_t},A )$ is a function that sends every function symbol $t : T$ to a function $f^A_t : A^{n_t} \to A$; $f^A_t$ is called the $n_t$-ary operation on $A$ associated to the function symbol $t : T$.
+	A (\emph{universal}) \emph{algebra} of type $\fkT$ is a pair $(A,f^A)$ where $A$ is a set and $f^A : T \to \prod_{t\in T} \Set(A^{n_t},A )$ is a function that sends every function symbol $t : T$ to a function $f^A_t : A^{n_t} \to A$; $f^A_t$ is called the $n_t$-ary operation on $A$ associated to the function symbol $t : T$.
 \end{definition}
 It is evident that avremmo potuto sostituire $\Set$ con un'altra categoria $\clC$ a nostro piacere, a patto di poter parlare di $A^n$ per ogni $n : \bbN$, ossia a patto che $\clC$ avesse prodotti finiti. Definire una algebra universale in $\clC$ come una coppia $(A,f^A)$ dove $A : \clC$ e $f^A : T \to \prod_{t\in T} \clC(A^{n_t},A )$ è una generalizzazione praticamente a costo zero; tuttavia, è possibile andare più in là, e astrarre maggiormente anche la nozione di type of universal algebra.
 
@@ -73,7 +73,7 @@ Per formalizzare questa costruzione che abbiamo finora sketchato nel linguaggio 
 
 Un piccolo primer su functorial semantics sta nellappendice \ref{}.
 
-Ora, osservazione: la categoria degli insiemi è stata l'unico posto in cui abbiamo interpretato la sintassi della nostra teoria $\clL$; come detto sopra possiamo rifarlo in una generica categoria con prodotti finiti $\clC$ e ottenere gli $L$-modelli in $\clC$; nella definizione cambia poco; formalmente, nulla. 
+Ora, osservazione: la categoria degli insiemi è stata l'unico posto in cui abbiamo interpretato la sintassi della nostra teoria $\clL$; come detto sopra possiamo rifarlo in una generica categoria con prodotti finiti $\clC$ e ottenere gli $L$-modelli in $\clC$; nella definizione cambia poco; formalmente, nulla.
 
 Ma questo è un risultato profondo perché \emph{sconnette} la teoria dal \emph{luogo} in cui quella teoria è interpretata: ad un tempo, sappiamo parlare di grppi interni a Set, i cari vecchi gruppi della matematica ingenua; di gruppi topologici, dove le funzioni $m,i$ sono automaticamente continue, o di Lie, dove sono differenziabili; di monoidi nella categoria dei gruppi abeliani, e vengono fuori gli anelli;  di monoidi nella categoria dei poset, e vengono fuori i quantali\dots
 
@@ -81,13 +81,13 @@ In tale prospettiva, la categoria degli insiemi è stata segretamente presa come
 
 Ciò non è scorrelato dalla nostra escursione nel mondo dei topos: ad ogni teoria $\fkT$ si associa un topos, detto \emph{free topos} $\clE(\fkT)$ sulla teoria, tale per cui esista una biiezione tra i modelli di $\fkT$ in un altro topos $\clF$, e i \emph{morfismi logici} $\clE(\fkT) \to \clF$:
 \[\begin{array}{c}
-  A \\ \hline  B
-\end{array}\]
+		A \\ \hline  B
+	\end{array}\]
 Vediamo esplicitamente come si comporta questa costruzia nel caso di un topos di prefasci: sets tautologically correspond to the category $[1,Set]$, so it is natural to wonder what $fkT$-models are in more general functor categories like $[C,Set]$. All the more because this generalisation is compelling to our discussion: in case $C$ is discrete, we get back the well-known category of variable sets of \ref{}.
 
 In a stunning turn of events now, a $[C,Set]$-model for groups, monoids or else, i.e. a functor $Th(\fkT)\to [C,Set]$ preserving finite products, is \emph{precisely} a functor $C\to Set$ such that each $Fc$ is a $\fkT$-model: this gives rise to the following ``commutative property for semantics'': $\fkT$-models in $[C,Set]$ are precisely the $Mod(\fkT)$-valued functors $C\to Mod(\fkT)$, i.e. those functors $C \to \Set$ taking values in the subcategory of models for the theory in study interpreted in $Set$. In other words we can "shift" the $Mod(-)$ construction in and out $[C,Set]$ at our will:
-\[ 
-  Mod_{Th(\Omega)}([C,Set]) \cong [C, Mod_{Th(\Omega)}(Set)]
+\[
+	Mod_{Th(\Omega)}([C,Set]) \cong [C, Mod_{Th(\Omega)}(Set)]
 \]
 \todo[inline]{Questa notazione non è molto consistente; va riscritto con cura.}
 Now, the procedure of interpreting a given ``theory'' inside an abstract finitely complete category $K$ is something that is only possible in the functorial paradigm, treating a theory as a category, and an interpretation as a functor. This discipline goes under many names and has various nuances: functorial categorical, or functorial, semantics \cite{}, internalisation of structures \cite{}, categorical algebra \cite{}.
@@ -103,17 +103,17 @@ It is nearly impossible to underestimate the profundity of the remark by which e
 Nel senso precisato dalla sottosezione precedente la teoria delle categorie "è più grande della matematica nel suo complesso" e ne fa da fondazione; ogni categoria è \emph{un} universo in cui la totalità della matematica si può re-enactare; in questo senso è un metalinguaggio dove è possibile rifare la matematica nella sua interezza. L'idea è che \emph{le teorie matematiche sono a loro volta oggetti matematici}, e in quanto tali sono passibili dello stesso studio di cui sono passibili gli oggetti di cui quelle teorie parlano.
 
 Nulla vieta, a questo punto, di considerare qualuque teoria ontologica come una categoria, previo lavoro di chiarificazione/formalizzazione che lo stesso linguaggio categoriale ci permette di eseguire. Tra i vantaggi, visibili già in matematica, la possibilità di leggere le teorie in termini di relazioni (sospendendo \emph{ontological committment} sugli oggetti) e i concetti come \emph{context-dependent}. Un efficace "slogan" filosofico, a riassumere entrambi i presupposti, lo si può trovare in un paper di Jean-Pierre Marquis [Marquis, 1997]:
-	 \begin{quote}
-	 	[...] \emph{to be} is \emph{to be related}, and the "essence" of an "entity" is given by its relations to its "environment"
-	 \end{quote}
+\begin{quote}
+	[...] \emph{to be} is \emph{to be related}, and the "essence" of an "entity" is given by its relations to its "environment"
+\end{quote}
 Sappiamo che nella storia della \textbf{CT} l'accettazione dell'evidenza dei risultati è avvenuta a prescindere da un dibattito intorno alla scarsa precisione e coerenza logica degli stessi. Le categorie sono nate come strumento concettuale e, senza preoccuparsi delle sottigliezze della ricerca fondazionale, hanno catturato efficacemente tutte le nozioni della matematica moderna, rivelandosi utili e feconde. Nostro claim è che si riveleranno tali anche con le usuali nozioni metafisiche. Si tratta di adottare, in fondo, una prospettiva pragmatica:
-	  \begin{quote}
-	  	that structural mathematics is characterized as an activity by a treatment of things as if one were dealing with structures. From the pragmatist viewpoint, we do not know much more about structures than how to deal with them, after all.
-	  \end{quote}
+\begin{quote}
+	that structural mathematics is characterized as an activity by a treatment of things as if one were dealing with structures. From the pragmatist viewpoint, we do not know much more about structures than how to deal with them, after all.
+\end{quote}
 La ``traduzione'' dei problemi dell'ontologia nel linguaggio di \textbf{CT} permette di manipolare meglio nozioni (non solo, come si sa, matematiche) ma metamatematiche e metafisiche, e ci dota di un approccio più compatto e di una visione più ``leggera'' e occamista delle questioni vertenti su oggetti e esistenza. Non giustifichiamo questo approccio a priori ma ne testimoniamo la fecondità già provata in letteratura\footnote{Cf. Mt7,16, giusto per ingraziarsi i severiniani.}, soprattutto paragonata a quella degli approcci set-theoretic (di cui già è informata la totalità delle ontologie formali).
-	 
+
 In \textbf{CT} possiamo "tradurre" i problemi classici dell'ontologia, fornire modelli entro i quali formularne meglio presupposti e domande, evidenziare ciò che è banale conseguenza degli assiomi di quel modello e ciò che non lo è, risolverli e, in alcuni casi, dissolverli, rivelandone la natura figmentale. Si tratta di fornire un \emph{ambiente} ben definito nel quale questioni ritenute oggetto di dibattito filosofico possano illuminarsi in modi nuovi o scomparire. E questo non per qualche perverso istinto riduzionistico, ma per poterne parlare in termini efficaci e nel linguaggio adatto a inquadrarli: tentare, con gli strumenti più avanzati e raffinati dell'astrazione matematica, di rispondere a delle domande, produrre conoscenza, e non solo dibattito; inscrivere antiche o recenti questioni in un nuovo paradigma, volto a superare e al contempo far avanzare la ricerca.
-	
+
 Come ogni paradigma lo dotiamo di una sintassi con la quale "nominare" concetti e dare definizioni, e di una semantica che produca modelli, e quindi contesti, entro i quali "guardare" le teorie; questa sintassi e questa semantica non ce le inventiamo: sono già nella matematica e da lì le preleviamo.
 \subsection{Existence: persistence of identity}
 Ontology rests upon the principl of identity. It is this very principle that here we aim to unhinge.
