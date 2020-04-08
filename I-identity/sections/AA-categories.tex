@@ -4,12 +4,13 @@ Throughout the paper we employ standard basic category-theoretic terminology, an
 
 Precise references for the basic definitions can be found
 \begin{itemize}
-  \item for the definition of category, functor, and natural transformation, in \cite[]{}, \cite[]{}, \cite[]{}, \cite[]{}, \cite[]{}.
-  \item For the definition of co/limit and adjunction, in \cite[]{}, \cite[]{}, \cite[]{}, \cite[]{}.
-  \item For the definition of accessible and locally presentable category in \cite[]{}, \cite[]{}, \cite[]{}, \cite[]{}.
-  \item Basic facts about ordinal and cardnal numbers can be found in \cite[]{}; a comprehensive reference on basic and non-basic set theory is \cite{jech2013set}.
+  \item for the definition of category, functor, and natural transformation, in \cite[1.2.1]{Bor1}, \cite[I.2]{McL}, \cite[1.2.2]{Bor1}, \cite[I.3]{McL}, \cite[1.3.1]{Bor1}.
+  \item The Yoneda lemma is stated as \cite[1.3.3]{Bor1}, \cite[III.2]{McL}.
+  \item For the definition of co/limit and adjunction, in \cite[2.6.2]{Bor1}, \cite[III.3]{McL}, \cite[2.6.6]{Bor1}, \cite[III.4]{McL}.
+  \item For the definition of accessible and locally presentable category in \cite[5.3.1]{Bor2}, \cite[5.2.1]{Bor2}, \cite{Adamek1994}.%, \cite[]{}.
+  \item Basic facts about ordinal and cardinal numbers can be found in \cite[]{}; a comprehensive reference on basic and non-basic set theory is \cite{jech2013set}.
   \item The standard source for Lawvere functorial semantics is Lawvere's PhD thesis \cite{lawvere1963functorial}; more modern accounts are \cite{hyland2007category}.
-  \item Standard references for topos theory are \cite{mac1992sheaves,JohnstonePT}.
+  \item Standard references for topos theory are \cite{mac1992sheaves,JohnstonePT}. See in particular \cite[VI.5]{mac1992sheaves} and \cite[5.4]{JohnstonePT} for what concerns the Mitchell-Bénabou language of a topos.
 \end{itemize}
 \subsection{Toposes}\leavevmode
 \todo[inline]{E' probabilmente saggio mettere qui anche la digressione con le definizioni di topos}
@@ -28,7 +29,9 @@ We say that a category $\clC$ admits filtered colimits if for every filtered cat
 \[
   C_0 \to C_1 \to \cdots \to C_\alpha \to\cdots
 \]
-with less than $\kappa$ terms. A useful, completely elementary result is that the existence of colimits over all ordinals less than $\kappa$ implies the existence of $\kappa$\hyp{}filtered colimits; this relies on the fact that every filtered category $\clA$ admits a cofinal functor (see \ref{finalfunctor}) from an ordinal $\alpha_\clA$.
+with less than $\kappa$ terms. A useful, completely elementary result is that the existence of colimits over all ordinals less than $\kappa$ implies the existence of $\kappa$\hyp{}filtered colimits; this relies on the fact that every filtered category $\clA$ admits a cofinal functor (see \cite[]{Bor1}) from an ordinal $\alpha_\clA$.
+
+We say that a functor $F : \clA \to \clB$ \emph{commutes with} or \emph{preserves} filtered colimits if whenever $\clJ$ is a filtered category, $D : \clJ \to \clA$ is a diagram with colimit $L=\colim_\clJ D_j$, then $F(L)$ is the colimit of the composition $F\circ D$. Anoter common name for such an $F$ is a \emph{finitary} functor, or a functor \emph{with rank $\omega$}.
 \begin{definition}\label{accepre}
   Let $\clC$ be a category;
   \begin{itemize}
@@ -58,8 +61,11 @@ Every Lawvere theory comes equipped with a functor $p : \cate{Fin}^\op \to \clC$
     & \cate{Fin}^\op \ar[dr]^q \ar[dl]_p & \\ 
     \clL \ar[rr]_h && \clM 
   }\]
-  is commutative. It is evident that $\cate{Law}$ is the undercategory $\cate{Fin^\op}/\Cat$ (see \cite[]{}).
+  is commutative. It is evident that $\cate{Law}$ is the subcategory of the undercategory $\cate{Fin^\op}/\Cat$ (see \cite[]{}) made by those functors that preserve finite products.
 \end{definition}
+\begin{remark}
+  The category $\textsf{Law}$ has no nonidentity 2-cells; this is a consequence of the fact that a natural transformation $\alpha : h \To k$ that makes the triangle ``commute'', i.e. $\alpha * p = \id_q$ must be the identity on all objects.
+\end{remark}
 \begin{example}[The trivial theories]
 The category $\cate{Fin}^\op$, opposite to the category of finite sets and functions, is the initial object in the category  $\cate{Law}$; the terminal object is constructed as follows: the category $\clT$ has objects the natural numbers, and $\clT([n],[m])=\{*\}$ for every $n,m\in \bbN$. It is evident that given this definition, there is a unique identity-on-objects functor $\clL \to \clT$ for every other Lawvere theory $(p,\clL)$.
 \end{example}
@@ -86,14 +92,21 @@ Observe that the mere request that $\alpha : L \to L'$ is a natural transformati
   is a pullback of categories. The functor $u$ is completely determined by the fact that $u(L) = L[1]$, $r$ is an inclusion, and $N_j(A) = \lambda F.\Set(F,A)$ is the functor induced by the inclusion $j : \cate{Fin} \subset \Set$.
 \end{corollary}
 \begin{corollary}
-  The category of models $\cate{Mod}(p,\clL)$ of a Lawvere theory is a locally presentable, accessibly embedded, complete and cocomplete subcategory of $[\clL,\Set]$. Moreover, the forgetful functor $u : \cate{Mod}(p,\clL) \to \Set$ of \ref{} is \emph{monadic} in the sense of \cite[]{}. A complete proof of all these facts is in \cite[]{}, \cite[]{}, \cite[]{}. A terse argument goes as follows: the functors $p^*, N_j$ are accessible right adjoints between locally presentable categories; therefore, so is the pullback diagram: $r$ is a fully faithful, accessible right adjoint, and $u$ is an accessible right adjoint, that moreover reflects isomorphisms. \cite[]{} proves that it preserves the colimits of split coequalizers, and thus the adjunction $f \dashv u$ is monadic by \cite[]{}.
+  The category of models $\cate{Mod}(p,\clL)$ of a Lawvere theory is a locally presentable, accessibly embedded, complete and cocomplete subcategory of $[\clL,\Set]$. Moreover, the forgetful functor $u : \cate{Mod}(p,\clL) \to \Set$ of \ref{} is \emph{monadic} in the sense of \cite[]{}. A complete proof of all these facts is in \cite[]{}, \cite[]{}, \cite[]{}. A terse argument goes as follows: the functors $p^*, N_j$ are accessible right adjoints between locally presentable categories; therefore, so is the pullback diagram: $r$ is a fully faithful, accessible right adjoint, and $u$ is an accessible right adjoint, that moreover reflects isomorphisms. It can be directly proved that it preserves the colimits of split coequalizers, and thus the adjunction $f \dashv u$ is monadic by \cite[4.4.4]{Bor2}.
 \end{corollary}
-The last technical remark that we collect sheds a light on the discorso prolisso in \ref{}: the models of a thelory $\clL$ interpreted in the category of models of a theory $M$ correspond to the models of a theory $L \otimes M$, defined by a suitable universal property: 
+The last technical remark that we collect sheds a light on the discorso prolisso in \ref{}: the models of a thelory $\clL$ interpreted in the category of models of a theory $M$ correspond to the models of a theory $\clL \otimes \clM$, defined by a suitable universal property: 
 \[
-\cate{Mod}(L\otimes M,\Set)  \cong
-\cate{Mod}(L, \cate{Mod}(M,\Set))  \cong
-\cate{Mod}(M, \cate{Mod}(L,\Set)).
+\cate{Mod}(\clL\otimes \clM,\Set)  \cong
+\cate{Mod}(\clL, \cate{Mod}(\clM,\Set))  \cong
+\cate{Mod}(\clM, \cate{Mod}(\clL,\Set)).
 \]
 \begin{definition}
   Given two theories $\clL$ and $\clM$ it is possible to construct a new theory called the \emph{tensor product} $\clL \otimes \clM$; this new theory can be characterized by the following universal property: the models of $\clL \otimes \clM$ consist of the category of $\clL$-models interpreted in the category of $\clM$-models or, equivalently (and this is remarkable) of $\clM$-models interpreted in the category of $\clL$-models.
 \end{definition}
+\begin{theorem}
+  (\cite[4.6.2]{Bor2}) There is an equivalence between the following two categories:
+  \begin{itemize}
+    \item the category of Lawvere theories, regarded as a non-full subcategory of the category $\textsc{Fin}^\op/\Cat$, i.e. where a morphism of Lawvere theories consists of a functor $h : \clL \to \clM$ that preserves finite products;
+    \item the category of \emph{finitary} monads, i.e. those monads that preserve filtered colimits, and morphisms of monads in the sense of \cite[4.5.8]{Bor2}
+  \end{itemize}
+\end{theorem}

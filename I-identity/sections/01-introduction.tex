@@ -67,20 +67,6 @@ It is evident that avremmo potuto sostituire $\Set$ con un'altra categoria $\clC
 
 In effetti, la struttura astratta che intendiamo studiare consta di uno ``schizzo'' \cite{ehresmann,lair} che rappresenta il più generico degli arrangiamenti di operazioni e proprietà di queste operazioni; questo schizzo è rappresentato pictorialmente da un grafo (diretto e con radice), che modella le arietà dei vari simboli di operazione di un dato tipo d'algebra $T$ (si veda ancora Grillet per la definizione di variety: un'algebra universale soggetta a equazioni, ossia una coppia $(A,R)$ ove $A$ è un'algebra di tipo $\fkT$ e $R\subseteq A^\star \times A^\star$ è un sottoinsieme di coppie di parole in un opportuno monoide di Kleene modificato).
 
-% Nel caso, ad esempio, dei monoidi, tale grafo è
-% \[
-%   \begin{tikzpicture}[xscale=2,>=stealth, baseline=(current bounding box.center)]
-%   \node (1) at (0,0) {$[1]$};
-%   \node (0) at (-1,0) {$[0]$};
-%   \node (2) at (1,0) {$[2]$};
-%   \draw[->] (0) --node[below] {$e$} (1);
-%   \draw[->] (2) --node[below] {$m$} (1);
-
-%   \path (1) edge[loop above, min distance=1cm, ->] node[above] {$i$} (1);
-% \end{tikzpicture} 
-% \]
-% soggetto alle relazioni di associatività e identità. Nel caso dei gruppi al grafo dei monoidi si aggiunge il simbolo di operazine $\iota : [1] \to [1]$ che modella l'inversione; esso è soggetto all'identità addizionale $m \circ (1\times \iota) = 1 = m \circ (\iota \times 1)$.
-
 In questo senso la categoria generata, in un senso opportuno, dal grafo $\mathcal{L}_{Grp}$ ``è'' la teoria che ci prefiggevamo di studiare, e ogni funtore $G: \clL_{Grp} \to \Set$ con la proprietà che $G([n+m]) \cong G[n] \times G[m]$ determina una ``immagine'' in $\Set$ della ``teoria astratta'' dei gruppi, che abbiamo codificato in una opportuna categoria con prodotti finiti. La teoria in questo senso diventa un oggetto matematico molto concreto, e altrettanto concreti diventano i suoi \emph{modelli}: funtori $\clL \to \Set$ con la proprietà di essere determinati dalla immagine di $[1]$ (tale insieme $G=G[1]$ è il \emph{carrier} della struttura algebrica; nella definizione di algebra di tipo $\fkT$ esso è null'altro che il primo termine della coppia $(A,f^A)$);  la seguente notazione è quindi consistente: se $\clL$ è una teoria e $G : \clL \to \Set$ un suo modello, deve valere $G[n]=G^n = G \times G \times\dots\times G$; confondiamo quindi le due notazioni.
 
 Per formalizzare questa costruzione che abbiamo finora sketchato nel linguaggio delle categorie, si spinge all'estremo l'intuizione data dal remark \ref{}, e si considera esattamente la categoria generata dal grafo che ha per vertici i numeri naturali, e come generatori dei morfismi le funzioni di insiemi, a cui si aggiunge esattamente una edge $f_t : X^n \to X$ per ogni simbolo di operazione $t \in T_n = \underline{\alpha}^\leftarrow(n)$.

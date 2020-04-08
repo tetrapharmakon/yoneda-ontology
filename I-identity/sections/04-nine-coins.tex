@@ -33,11 +33,11 @@ To get a grip of the different roles of various classes of propositions, and giv
 
 The main result of the present section is a roundup of examples showing that it is possible to concoct categories of variable sets where some seemingly paradoxical constructions coming from J.L. Borges' literary world have, instead, a perfectly ``classical'' behaviour when looked with the lenses of the logic of variable set theory.
 
-Each of the examples in our roundup \ref{bla,bli,blu,ble,blo} is organised as follows: we recall the shape of a paradoxical statement in Borges' literary world. Then, we show in which topos this reduces to an intuitive statement expressed in the syntax of a variable set category.
+Each of the examples in our roundup \ref{bla} \ref{bli} \ref{blu} is organised as follows: we recall the shape of a paradoxical statement in Borges' literary world. Then, we show in which topos this reduces to an intuitive statement expressed in the syntax of a variable set category.
 
 More than often, we use $I=[0,1]$ as base of variable sets; as already said, there are different reasons for this choice: the most intuitive is that if a truth value is given with a \emph{strength} $t\in I$ it is a natural request to be able to \emph{compare} elements in this set; in particular, it should always be possible to assess what truth value is stronger. 
 
-For this reason, even if this assumption is never strictly necessary (the only constraint is that $I$ is totally, or partially, ordered set by a relation $\le$), a natural choice for $I$ is a \emph{continuum} (=a dense total order with LUP --see \cite{descriptive-set-theory}). An alternative choice drops the density assumption: in that case the (unique) finite total order $\Delta[n] = \{0 < 1 <\dots < n\}$, or the countable total order $I=\omega = \bigcup_n \Delta[n]$ are all pretty natural choices for $I$ (although it is way more natural for $I$ to have a minimum \emph{and} a maximum element).\footnote{We're oly interested in the notion of an abstract interval here: a continuum $X$ endowed with an operation $X \to X \vee X$ of ``zooming'', uniquely defined by this property. In a famous paper Freyd characterises ``the interval'' as the terminal interval coalgebra: see \cite[]{}; for our purposes, note that $[0,1]$ is a natural choice: it is a frame, thus a Heyting algebra $\fkH =([0,1],\land,\lor,\Rightarrow)$ with respect to the pseudo-complement operation given by $(x \Rightarrow z) := \bigvee_{x\land y \le z} y$ (it is immediate that $x \land a \le b$ if and only if $a \le x \Rightarrow b$ for every $a,b\in [0,1]$).} In each of these cases ``classical'' logic is recovered as a projection: propositions $p$ can be true or false with strength $1$,\footnote{Here $I$ is represented as an interval whose minimal and maximal element are respectively $0$ and $1$; of course these are just placeholders, but it is harmless for the reader to visualise $I$ as the interval $[0,1]$.} the maximum element of $I$:
+For this reason, even if this assumption is never strictly necessary (the only constraint is that $I$ is totally, or partially, ordered set by a relation $\le$), a natural choice for $I$ is a \emph{continuum} (=a dense total order with LUP --see \cite{moschovakis2009descriptive}). An alternative choice drops the density assumption: in that case the (unique) finite total order $\Delta[n] = \{0 < 1 <\dots < n\}$, or the countable total order $I=\omega = \bigcup_n \Delta[n]$ are all pretty natural choices for $I$ (although it is way more natural for $I$ to have a minimum \emph{and} a maximum element).\footnote{We're oly interested in the notion of an abstract interval here: a continuum $X$ endowed with an operation $X \to X \vee X$ of ``zooming'', uniquely defined by this property. In a famous paper Freyd characterises ``the interval'' as the terminal interval coalgebra: see \cite[]{}; for our purposes, note that $[0,1]$ is a natural choice: it is a frame, thus a Heyting algebra $\fkH =([0,1],\land,\lor,\Rightarrow)$ with respect to the pseudo-complement operation given by $(x \Rightarrow z) := \bigvee_{x\land y \le z} y$ (it is immediate that $x \land a \le b$ if and only if $a \le x \Rightarrow b$ for every $a,b\in [0,1]$).} In each of these cases ``classical'' logic is recovered as a projection: propositions $p$ can be true or false with strength $1$,\footnote{Here $I$ is represented as an interval whose minimal and maximal element are respectively $0$ and $1$; of course these are just placeholders, but it is harmless for the reader to visualise $I$ as the interval $[0,1]$.} the maximum element of $I$:
 \begin{center}
   \begin{tikzpicture}
     \draw[gray!70,dashed] (2,1.25) -- (2,-.25) node[below] {$\{\perp,\top\}$};
@@ -92,8 +92,8 @@ The interest in such a literary calembour is manifold, and the results are surpr
 To sum up, readers willing to find an original result in this paper, might find it precisely here: we underline how Borges' alternative worlds (Babylon, Tl\"on \ dots) are mathematically consistent places, worthy of existence as much as our world, just based on a different internal logic. And they are so just thanks to a base-sensitive theory of existence --ontology breaks in a spectrum of ontolog\emph{ies}, one for each category/world.
 
 The first paradox we aim to frame in the right topos is the famous nine copper coins argument, used by the philosophers of Tlön to construct a paradoxical object whose existence persists over time, in absence of a consciousness continually perceiving it and maintaining in a state of being.
-\begin{example}[Nine copper coins]
-  First, we recall the exact statement of the paradox from \cite{}:\footnote{The translation we employ is classical and comes from \cite{}: 
+\begin{example}[Nine copper coins]\label{bla}
+  First, we recall the exact statement of the paradox from \cite{}:\footnote{The translation we employ is classical and comes from \cite{tlonEN}: 
   \begin{quote}
     \hspace{.5em} Tuesday, $X$ crosses a deserted road and loses nine copper coins. On Thursday, $Y$ finds in the road four coins, somewhat rusted by Wednesday's rain. On Friday, $Z$ discovers three coins in the road. On Friday morning, $X$ finds two coins in the corridor of his house. The heresiarch would deduce from this story the reality - i.e., the continuity - of the nine coins which were recovered. 
     
@@ -119,13 +119,13 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 \end{quote}
     \item There is one and only one reason why the paradox of the nine copper coins is invalid: copper does not rust.
   \end{itemize}
-  It is obvious that both constructions leverage on the same argument to build an efficient aporia: the mysterious persistence of things through time without a perceivent consciousness. We concentrate on the copper coins dilemma, per il semplice fatto che Finzioni è raggiungibile molto piu facilmente ai nostri lettori; incidentally, we happen to be able to rectify the ``rust counterargument'' without appealing to the assumption that copper can rust on Tl\"on due to a difference in Tl\"onian chemistry.% to Tl\"on philosophers offriamo una rettificazione alla ``critica della ruggine'', che non si basa sull'ipotesi (vietata in una prospettiva di igiene occamista) che oltre alla metafisica, anche la fisica di Tl\"on abbia comportamenti diversi da quelli sulla terra.
+  It is obvious that both constructions leverage on the same argument to build an efficient aporia: the mysterious persistence of things through time without a perceivent consciousness. We concentrate on the copper coins dilemma, per il semplice fatto che Finzioni è raggiungibile molto piu facilmente ai nostri lettori; incidentally, we happen to be able to rectify the ``rust counterargument'' without appealing to the assumption that copper can rust on Tl\"on due to a difference in Tl\"onian chemistry.
 
   Expressed in natural language, our solution to the paradox goes more or less as follows: $X$ loses their coins on Tuesday, and the force $\varphi$ with which they ``exist'' lowers; it grows back in the following days, going back to a maximum value when $X$ retrieves two of their coins on the front door. $Y$ findings of other coins raises their existence force to a maximum. The coins that $Y$ has found rusted (or rather, the surface copper oxidized: this is possible, but water is rarely sufficient to ignite the process alone --certainly not in the space of a few hours.\footnote{in una sorta di principio di wormhole, eventi indipendenti sulla terra sono dipendenti su Tlön, perché l'evento A influenza, in uno spazio pluridimensionale di scelte di z di verità, l'evento B in modi che gli sarebbero vietati se fosse sulla Terra.} 
   
   In this perspective, Tl\"on classifier of truth values can be taken as $\Omega_I = \{0<1\}\times I$, where $I$ is any set with more than one element; a minimal example can be $I=\{N,S\}$ (justifying this choice from inside Tl\"on is easy: the planet is subdivided into two emispheres; each of which now has its own logic ``line'' independent from the other), but as explained in \ref{} a more natural choice for our purposes is the closed real interval $I=[0,1]$.
   
-  This allows for a continuum of possible forces with which a truth value can be true or false;  it is tobe noted that $[0,1]$ is also the most natural place on which to interpret fuzzy logic, albeit the interest for $[0,1$ therein can be easily and better motivated starting from probability theory. (But see \cite{} for an interesting perspective on how to develop basic measure teory out of $[0,1]$.)
+  This allows for a continuum of possible forces with which a truth value can be true or false;  it is tobe noted that $[0,1]$ is also the most natural place on which to interpret fuzzy logic, albeit the interest for $[0,1]$ therein can be easily and better motivated starting from probability theory. (But see \cite{} for an interesting perspective on how to develop basic measure teory out of $[0,1]$.)
 
   We now start to formalise properly what we said until now.
 
@@ -134,8 +134,8 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
     \item senza perdita di generalità possiamo supporre l'insieme $C = \{c_1,\dots,c_9\}$ delle monete totalmente ordinato e partizionato in modo tale che le prime due monete siano quelle ritrovate da $X$ il martedì, le seconde quattro quelle che $Y$ ritrova sul cammino, e le ultime 3 quelle viste da $Z$. Allora
     \[C = C_X \sqcup C_Y \sqcup C_Z.\]
     and $C_X = \{c_{X1}, c_{X2}\}$, $C_Y = \{
-    c_{Y1},c_{Y2},c_{Y3},c_{Y4}\}$, $C_Z= \{c_{Z1}, c_{Z2}, c_{Z3}\}$ As already said, the truth multiplier $I$ is the closed interval $[0,1]$ with its canonical order --so with its canonical structure of Heyting algebra, and if needed, endowed with the usual topology inherited by the real line.%;  we do notnon operiamo l'identificazione $(\top,0) \sim (\perp,1)$ o $(\perp,0) = (\top,1)$.
-    \item Propositions of interest for us are of the following form:% Le proposizioni di cui ci occupiamo sono della forma
+    c_{Y1},c_{Y2},c_{Y3},c_{Y4}\}$, $C_Z= \{c_{Z1}, c_{Z2}, c_{Z3}\}$ As already said, the truth multiplier $I$ is the closed interval $[0,1]$ with its canonical order --so with its canonical structure of Heyting algebra, and if needed, endowed with the usual topology inherited by the real line.
+    \item Propositions of interest for us are of the following form:
     \[\lambda gcd.p(g, c, d) : \{X,Y,Z\}\times C\times W \to \Omega_I\]
     where $W$ is a set of days, that for the sake of explicitness can be taken equal to the set of weekdays $S,M,T$ (strictly speaking, the paradox involves just the interval $[Tu,Fri]$). $p(g,c,d)$ has to be read as ``in $g$'s frame of existence the coin $c$ exists at day $d$ with strength $p(g,c,d)$''
   \end{itemize}
@@ -164,26 +164,50 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
       \coordinate (1) at (0,0);
       \coordinate (2) at (1/2, 1/5);
       \coordinate (3) at (3/4,1);
-      \draw[ultra thick,red] (1) -- (2) -- (3);
+      \draw[ultra thick,red] (1) -- (2) node[right] {\scriptsize $1/5$} -- (3);
       \draw[thin,yellow] (1) -- (2) -- (3);
-      \draw[blue] (1) -- (1/2,1) -- (3/4,1/4);
-      \node[fill=gray!90] (cloud) at (1/4,1/2) {\large\color{black} \faCloud};
+      \draw[blue] (1) -- (1/2,1) node[above] {\scriptsize $p(Y, c_Y)=(\top,1)$} -- (3/4,1/4) node[right] {\scriptsize $1/4$};
+      \node[fill=gray!60] (cloud) at (1/4,1/2) {\large\color{black} \faCloud};
       \draw[thick] (0,0) rectangle (1,1);
       \end{tikzpicture}
-      \caption{A pictorial representation of the truth forces of coins in different days; piecewise linear model. $X$ is red, $Z$ is yellow, $Y$ is blue.}
+      \caption{A pictorial representation of the truth forces of coins in different days, a piecewise linear model. $X$ is red, $Z$ is yellow, $Y$ is blue. Time is considered as a continuum marked at weekdays.}
   \end{figure}
 \end{center}
 \end{example}
-\begin{example}[Lo zaffiro di Taprobana]
-  la lotteria a Babilonia: proposizioni $p : U \to \Omega_{[0,1]}$ possono essere fortemente discontinue: allora esse descrivono un evento innescato come termine finale di una catena di eventi apparentemente disconnessi e paradossali;\footnote{Assumendo una base reale per lo spazio dei parametri da cui $p$ dipende, la sua dipendenza continua è la seguente proprietà: \dots; ciò significa che eventi vicini --nello spazio o nella consequenzialità-- non possono avere valori di verità diversi} in questo mondo, un modello del quale è probabilmente la Babilonia dei ``sorteggi impersonali, di proposito indefinito'', azioni apparentemente scorrelate tra loro (scagliare ``nelle acque dell'Eufrate uno zaffiro di Taprobana''; sciogliere ``dal tetto d'una torre [\dots\unkern] un uccello''; togliere (o aggiungere) ``un granello di rena ai grani innumerevoli della spiaggia'', hanno ``conseguenze, a volte, tremende''.
+\begin{remark}[Continuity for a proposition]\label{continuiti}
+  Let $p : U \to \Omega_I$ be a proposition; here we investigate what does it mean for $p$ to be (globally) continuous with respect to the Euclidean topology on $I=[0,1]$, in the assumption that its domain of definition $U$ is metrizable (this is true for example when $U$ is a subset of space-time). The condition is that 
+  \[ \forall \epsilon > 0,\,\exists \delta > 0 : |x-y|< \delta \To |px-py| < \epsilon \]
+  Da questo segue immediatamente che quando $p$ è continua nel suo dominio, i valori di verità di $p$ in configurazioni ``vicine'' in un senso opportuno sono dati con forze allo stesso modo vicine (chiaramente questa è una descrizione spannometrica della nozione di continuità\dots).
+
+  All elementary topology results apply to such a proposition: the set of forces with which $p$ is true or false is a connected subset of $\Omega_I$, compact if $U$ was compact.
+\end{remark}
+\begin{example}[Discontinuity, Lo zaffiro di Taprobana]\label{bli}
+  la lotteria a Babilonia come in \cite{babil}: proposizioni $p : U \to \Omega_{[0,1]}$ possono essere fortemente discontinue nelle variabili/contesto da cui dipendono: tali proposizioni descrivono eventi apparentemente caotici, innescati come termine finale di una catena di eventi tra loro disconnessi e paradossali;\footnote{Assumendo una base reale per lo spazio dei parametri da cui $p$ dipende, la sua dipendenza continua è la proprietà enunciata in \ref{continuiti}; ciò significa che eventi vicini --nello spazio o nella consequenzialità temporale-- non possono avere valori di verità diversi, e forze ``vicine'' in un senso opportuno.} un modello di questo unvierso si trova probabilmente nella Babilonia di \cite{babil}, e nei ``sorteggi impersonali, di proposito indefinito'' che caratterizzano l'operato della Compagnia, azioni apparentemente scorrelate tra loro (scagliare ``nelle acque dell'Eufrate uno zaffiro di Taprobana''; sciogliere ``dal tetto d'una torre [\dots\unkern] un uccello''; togliere (o aggiungere) ``un granello di rena ai grani innumerevoli della spiaggia''; queste azioni hanno ``conseguenze, a volte, tremende''.
 \end{example}
-\begin{example}[Pochi uccelli, un cavallo]
-  Per quanto riguarda le proposizioni che sono continue nelle proprie variabili, invece, esempio canonico sono le ``tigri di cristallo'' e le ``torri di sangue'' di Tl\"{o}n: oggetti ed entità usuali, diversi da quelli ``classici'' per un dettaglio solo (il colore, la consistenza, il materiale di cui sono composte). Oppure dipendenti in maniera \emph{monotona} e continua dai loro paramentri: $p$ è tanto più vera quanta più gente la osserva, perché ``Le cose, su Tlön, si duplicano; ma tendono anche a cancellarsi e a  perdere i dettagli quando la gente le dimentichi. È classico l'esempio di  un'antica soglia, che perdurò finchè un mendicante venne a visitarla, e che alla  morte di colui fu perduta di vista. Talvolta pochi uccelli, un cavallo, salvarono le  rovine di un anfiteatro. ''
-        \[\textstyle p(\exists\text{rovine dell'anfiteatro}, n) = \big(\top, 1-\frac{1}{n}\big)\]
-        se $n$ è il numero di persone che vede l'anfiteatro.
+\begin{example}[Continuity: a few birds, a horse]\label{blu}
+  Per quanto riguarda le proposizioni che sono continue nelle proprie variabili, invece, esempio canonico sono le ``tigri di cristallo'' e le ``torri di sangue'' di Tl\"{o}n: oggetti ed entità usuali, diversi da quelli ``classici'' per un dettaglio solo (il colore, la consistenza, il materiale di cui sono composte): la loro esistenza è sfumata, forte meno del massimo, cosicché tigri di carne e una torre di pietra sono tali che $p=(\top,1)$, le loro controparti su Tl\"on esistono con meno forza. 
+  
+  Un altro esempio illustre è fatto da ogetti la cui forza di esistenza dipende in maniera \emph{monotona} e continua dai loro parametri: per esempio una proposizione $p$ può essere tanto più vera quanta più gente la osserva, perché ``le cose, su Tlön, si duplicano; ma tendono anche a cancellarsi e a  perdere i dettagli quando la gente le dimentichi. È classico l'esempio di  un'antica soglia, che perdurò finchè un mendicante venne a visitarla, e che alla  morte di colui fu perduta di vista. Talvolta pochi uccelli, un cavallo, salvarono le  rovine di un anfiteatro. ''
+
+  In questa situazione, poniamo ad esempio che la forza di esistenza di alcune rovine --modellate come è ingenuo fare, come un corpo rigido $R$ nello spazio, dipenda dal numero dei suoi osservatori:
+        \[\textstyle p(R, n) = \big(\top, 1-\frac{1}{n}\big)\]
 \end{example}
+Succedono cose interessanti anche a cambiare topologia su $I$: per esempio, su $[0,1]$ possiamo mettere brutalmente la topologia discreta
 \begin{example}[La campagna incendiata]
   Il Berkeley idealista degli infiniti istanti di tempo continuo, disconnessi e incomunicabili: $\Omega_I = \coprod_{t : [0,1]} \{ 0 < 1 \}$. E' evidente come questa struttura logica influenzi il linguaggio: i termini sono costruiti per accrezione istantanea, per somma disgiunta dei costituenti e delle loro proprietà: ``aereo-chiaro sopra scuro rotondo''; oggetti determinati dalla sola simultaneità, più che da una dipendenza logica. Altra conferma di ciò, l'abbandono della consequenzialità temporale sta nel passo ``Spinoza attribuisce alla sua inesauribile divinità i modi del pensiero e dell'estensione; su Tlön, nessuno comprenderebbe la giustapposizione del  secondo (che caratterizza solo alcuni stati) e del primo, che è un sinonimo  perfetto del cosmo. In altre parole: non concepiscono che lo spaziale perduri  nel tempo. La percezione di una fumata all'orizzonte, e poi della campagna  incendiata, e poi della sigaretta mal spenta che provocò l'incendio, è  considerata un esempio di associazione di idee.'' Ciò si lega anche al passo ``L'universo è paragonabile a quelle crittografie in cui non tutti i segni hanno un valore, e che solo è vero ciò che accade ogni trecento notti'': un mondo dove ogni trecento notti $p(x) =(\top,1)$, e per le successive 299 notti $p$ ha forza $<1$.
+  \begin{center}
+\begin{figure}
+  \begin{tikzpicture}[xscale=4, yscale=2]
+    \fill[gray!30] (0,0) rectangle (1,1);
+    \foreach \i in {.1,1,...,10}
+    \draw[xshift=\i, yshift=-\i, ultra thin, fill=gray!30, opacity=.5] (0,0) rectangle (1,1);
+    \draw[->, >=stealth, thin] (-.1,0) -- (-.1,1.5);
+    \draw[->, >=stealth, thin] (-.1,0) -- (.5,-3/5);
+    \draw[gray!60, xshift=.5cm, yshift=.25cm] (0,0) .. controls (.5,0) and (0,-.5) .. (.5,0);
+          \end{tikzpicture}    
+\caption{Il tempo come sequenza infinita, e infitamente suddivisibile, di istanti distinti: il paradosso Berkeleyano.}
+\end{figure}
+  \end{center}
 \end{example}
 \begin{example}
   
