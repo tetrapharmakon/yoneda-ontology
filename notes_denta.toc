@@ -1,15 +1,15 @@
 \babel@toc {italian}{}
 \babel@toc {italian}{}
-\contentsline {section}{\numberline {1}CT come metalinguaggio}{1}%
-\contentsline {section}{\numberline {2}Introduzione di entità astratte (matematiche) in ontologia}{5}%
-\contentsline {section}{\numberline {3}The structuralist way}{6}%
-\contentsline {section}{\numberline {4}Per una ontologia operativa}{9}%
-\contentsline {section}{\numberline {5}Categorizzare Borges}{12}%
-\contentsline {section}{\numberline {6}Sulla natura programmatica di questa serie}{14}%
-\contentsline {section}{\numberline {7}Introduction}{15}%
-\contentsline {subsection}{\numberline {7.1}CT as metalanguage}{15}%
-\contentsline {subsection}{\numberline {7.2}Towards an Operative Ontology: the notion of identity}{18}%
-\contentsline {subsection}{\numberline {7.3}risposte all'idealista}{21}%
-\contentsline {subsubsection}{\numberline {7.3.1}impressioni e cose che vanno dette meglio o magari messe in 5}{21}%
-\contentsline {subsubsection}{\numberline {7.3.2}cose dette in zoom}{22}%
-\contentsline {subsection}{\numberline {7.4}aggiunte tristemente dispersive}{23}%
+\contentsline {section}{\numberline {1}CT come metalinguaggio}{1}% 
+\contentsline {section}{\numberline {2}Introduzione di entit\IeC {\`a} astratte (matematiche) in ontologia}{5}% 
+\contentsline {section}{\numberline {3}The structuralist way}{6}% 
+\contentsline {section}{\numberline {4}Per una ontologia operativa}{9}% 
+\contentsline {section}{\numberline {5}Categorizzare Borges}{12}% 
+\contentsline {section}{\numberline {6}Sulla natura programmatica di questa serie}{14}% 
+\contentsline {section}{\numberline {7}Introduction}{15}% 
+\contentsline {subsection}{\numberline {7.1}CT as metalanguage}{15}% 
+\contentsline {subsection}{\numberline {7.2}Towards an Operative Ontology: the notion of identity}{18}% 
+\contentsline {subsection}{\numberline {7.3}risposte all'idealista}{21}% 
+\contentsline {subsubsection}{\numberline {7.3.1}impressioni e cose che vanno dette meglio o magari messe in 5}{21}% 
+\contentsline {subsubsection}{\numberline {7.3.2}cose dette in zoom}{22}% 
+\contentsline {subsection}{\numberline {7.4}aggiunte tristemente dispersive}{23}% 

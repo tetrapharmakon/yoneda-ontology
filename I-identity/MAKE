@@ -1,11 +1,19 @@
 #!/bin/env bash
 
 case "$1" in
+"Ip")
+  latexmk -pdf -shell-escape -pvc I-identity.tex
+  latexmk -c ;;
 "I")
-latexmk -pdf -shell-escape -pvc I-identity.tex
-latexmk -c ;;
+  latexmk -pdf -shell-escape I-identity.tex
+  latexmk -c ;;
+"clobber")
+  latexmk -C 
+  cd appmeta 
+  latexmk -C 
+  cd .. ;;
 "git")
-git add -A 
-git commit -m "automated update"
-git push ;;
+  git add -A 
+  git commit -m "automated update"
+  git push ;;
 esac
