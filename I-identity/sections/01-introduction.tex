@@ -3,7 +3,7 @@
 \subsection{What is this series}
 [...]
 \subsection{On our choice of metatheory and foundation}
-In his influential paper \cite{} William Lawvere proposes a foundation of mathematics based on category theory. To appreciate the depth and breadth of such an impressive piece of work, however, the word ``foundation'' must be taken in the particular sense intended by mathematicians:
+In his influential paper \cite{lajolla} William Lawvere proposes a foundation of mathematics based on category theory. To appreciate the depth and breadth of such an impressive piece of work, however, the word ``foundation'' must be taken in the particular sense intended by mathematicians:
 \begin{quote}
 	[\dots\unkern] a single system of first-order axioms in which all usual mathematical objects can be defined and all their usual properties proved.
 \end{quote}
@@ -44,7 +44,7 @@ Lo scopo di questa sezione è chiarire in quale senso preciso una teoria matemat
 \end{quote}
 In \textbf{CT} le categorie sono, quindi, oggetti puramente sintattici, ed è il contesto in cui si opera a determinare una semantica. Già in semantica logica una \emph{interpretazione} $\mathcal{I}$ di un enunciato $\alpha$ è una funzione che associa elementi di un insieme (di solito l'insieme dei valori di verità) alle variabili libere in $\alpha$. Nella storia della \textbf{CT} (caratterizzata da un rifiuto dell'impostazione \emph{set-theoretic} a livello fondazionale) una serie di generalizzazioni e raffinamenti dello stesso procedimento hanno condotto alla nozione di funtore e quindi alla \emph{semantica funtoriale} di Lawvere. Nella sottosezione che segue ci occupiamo di introdurre tale teoria; nella successiva tracciamo, in maniera più discorsiva, alcune conseguenze filosofiche che questa prospettiva ha sull'ontologia degli oggetti matematici (e dunque sull'ontologia degli oggetti che queste teorie descrivono) sottolineando i tratti salienti dell'impostazione che seguiamo.
 \subsubsection{Theories and their models}
-Nel già citato \cite{}, Lawvere, dopo aver costruito il sistema formale "elementare" ETAC (\emph{Elementary Theory of Abstract Category}), presenta una teoria della categoria di tutte le categorie (ETCC) che fornisca modelli per la teoria elementare. Quindi ci dà un linguaggio sintattico, in cui le categorie non sono altro che \emph{termini}, e poi una metateoria nella quale poter considerare categorie di categorie etc, che è poi alla fine una teoria funtoriale, dove ogni ffbf di ETAC diventa una formula della \emph{basic theory} di ETCC in cui si specifica su quale modello operano i termini:
+Nel già citato \cite{lajolla}, Lawvere, dopo aver costruito il sistema formale "elementare" ETAC (\emph{Elementary Theory of Abstract Category}), presenta una teoria della categoria di tutte le categorie (ETCC) che fornisca modelli per la teoria elementare. Quindi ci dà un linguaggio sintattico, in cui le categorie non sono altro che \emph{termini}, e poi una metateoria nella quale poter considerare categorie di categorie etc, che è poi alla fine una teoria funtoriale, dove ogni ffbf di ETAC diventa una formula della \emph{basic theory} di ETCC in cui si specifica su quale modello operano i termini:
 \begin{quote}
 	If $\Phi$ is any theorem of elementary theory of abstract categories, then $ \forall \clA (\clA \models \Phi)$ is a theorem of basic theory of category of all categories [Lawvere, 1965]
 \end{quote}
@@ -54,9 +54,9 @@ Le categorie in matematica hanno una duplice natura: da un lato, le strutture ch
 
 In una prospettiva categoriale tuttavia questa sistematizzazione è assai insoddisfacente, perché attribuisce alla categoria degli insiemi un ruolo privilegiato che essa non possiede: essa è solo \emph{uno} dei possibili compromessi tra diverse esigenze per ciò che una fondazione della matematica deve essere. Vorremmo invece essere in grado di parlare di strutture disembodied dai posti dove quelle strutture vengono interpretate, per poter approcciare la fondazione della matematica in maniera agnostica: non è importante cosa il modello fondazionale contiene, è importante la sua proprietà universale.
 
-In tale prospettiva si inseriscono le ricerche in algebra categoriale \cite{}, semantica funtoriale \cite{lawthesis,hyland_power}, logica categoriale \cite{}, e teoria dei topos \cite{} che, nel corso degli ultimi sessant'anni, hanno caratterizzato la ricerca in CT.
+In tale prospettiva si inseriscono le ricerche in algebra categoriale \cite{Janelidze2004}, semantica funtoriale \cite{lawvere1963functorial,hyland2007category}, logica categoriale \cite{lambek1988introduction}, e teoria dei topos \cite{JohnstonePT} che, nel corso degli ultimi sessant'anni, hanno caratterizzato la ricerca in CT.
 
-La \emph{semantica funtoriale} nasce nella tesi di doc di Lawvere per sistematizzare l'\emph{algebra universale}, la parte di matematica che studia le strutture matematiche in quanto oggetti matematici: vedi \cite{,} per referenze classiche. Essa prende le mosse dalla seguente definizione:
+La \emph{semantica funtoriale} nasce nella tesi di doc di Lawvere per sistematizzare l'\emph{algebra universale}, la parte di matematica che studia le strutture matematiche in quanto oggetti matematici: vedi \cite{manes2012algebraic} per referenze classiche. Essa prende le mosse dalla seguente definizione:
 \begin{definition}
 	A \emph{type $\fkT$ of universal algebra} is a pair $(T,\underline{\alpha})$ where $T$ is a set called the (\emph{algebraic}) \emph{signature} of the theory, and $\underline\alpha$ a function $T \to \bbN$ that assigns to every element $t\in T$ a natural number $n_t : \bbN$ called the \emph{arity} of the function symbol $t$.
 \end{definition}
@@ -90,7 +90,7 @@ In a stunning turn of events now, a $[C,Set]$-model for groups, monoids or else,
 	Mod_{Th(\Omega)}([C,Set]) \cong [C, Mod_{Th(\Omega)}(Set)]
 \]
 \todo[inline]{Questa notazione non è molto consistente; va riscritto con cura.}
-Now, the procedure of interpreting a given ``theory'' inside an abstract finitely complete category $K$ is something that is only possible in the functorial paradigm, treating a theory as a category, and an interpretation as a functor. This discipline goes under many names and has various nuances: functorial categorical, or functorial, semantics \cite{}, internalisation of structures \cite{}, categorical algebra \cite{}.
+Now, the procedure of interpreting a given ``theory'' inside an abstract finitely complete category $K$ is something that is only possible in the functorial paradigm, treating a theory as a category, and an interpretation as a functor. This discipline goes under many names and has various nuances: categorical, or \emph{functorial}, semantics \cite{lawvere1963functorial}, \emph{internalisation} of structures, \emph{categorical algebra}.
 
 The internalization paradigm sketched above suggests how ``small'' mathematicians often happily develop their mathematics without ever exiting a single finitely complete category $K$, without even suspecting the presence of models for their theories outside $K$. Come gli adepti della setta della fenice, che non si chiamano tra loro con lo stesso nome con cui il mondo esterno li conosce, con ``teoria dei gruppi'' i categoristi intendono una struttura diversa e più profonda da quella intesa da quelli per cui un gruppo è un insieme.
 
