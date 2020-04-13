@@ -59,5 +59,26 @@ Examples of universally valid formulas:
 \end{itemize}
 \todo[inline]{Ora facciamo delle considerazioni sul lingo interno di $\Set/I$}
 Chi sono tipi e termini; chi sono le proposizioni e come si scrive il calcolo proposizionale in $\Set/I$; i quantificatori, in dettaglio pornografico.
+\begin{definition}
+	Types and terms of $\clL(\Set/I)$.
+\end{definition}
+\begin{definition}
+	Propositional calculus, quantifiers.
+\end{definition}
+\begin{remark}
+	Like every other Grothendieck topos, the category $\Set/I$ has a \emph{natural number object} (see \cite[??]{mac1992sheaves}); here we shall outline its construction. It is a general fact that such a natural number object in the category of variable sets, consists of the constant functor on $\bbN : \Set$, when we realise variable sets as functors $I \to \Set$: thus, in fibered terms, the natural number object is just $\pi_I : \bbN \times I \to I$.
 
-L'oggetto dei numeri naturali e il principio di induzione nel topos degli insiemi variabili.
+	A natural number object provides the category $\clE$ it lives in with a notion of \emph{recursion} and with a notion of $\clE$-induction principle: namely, we can interpret the sentence
+	\[\textstyle\big(Q0\land \bigwedge_{i\le n} Qi\Rightarrow Q(i+1)\big)\Rightarrow \bigwedge_{n : \bbN} Qn.\]
+	In the category of variable sets, the universal property of $\pi_I : \bbN\times I \to I$ amounts to the following fact: given any diagram of solid arrows 
+	\[
+	\xymatrix{
+		I \ar[r]^0 \ar@{=}[d] & \bbN\times I\ar@{.>}[d]^u \ar[r]^{s\times I} & \bbN \times I\ar@{.>}[d]^u \\ 
+		I \ar[r]_x & X \ar[r]_f & X
+	}	
+	\]
+	where every arrow carry a structure of morphism over $I$ (and $0 : i \mapsto (0,i)$, $s\times I : (n,i) \mapsto (n+1,i)$), there is a unique way to complete it with the dotted arrow, i.e. with a function $u : \bbN \times I \to X$ such that 
+	\[u \circ (s\times I) = f \circ u.\]
+	Clearly, $u$ must be defined by induction: if it exists, the commutativity of the left square amounts to the request that $u(0,i)=x(i)$ for every $i : I$. Given this, the inductive step is 
+	\[u(s(n,i)) = u(n+1,i) f(u(n,i)).\]
+\end{remark}

@@ -66,7 +66,7 @@ We now glance at \emph{topos theory}:
 \begin{definition}\label{grotop}
 	A \emph{Grothendieck topos} is an elementary topos that, in addition, is locally finitely presentable.
 \end{definition}
-Whenever we spoke about sheaves on a topological space or a Grothendieck site, we wer secretly talking about topos theory; the notion of Grothendieck topos is intimately connected with co\fshyp{}end calculus, as we have seen all along chapter 3, and especially in \ref{giraudo}.
+Whenever we spoke about sheaves on a topological space or a Grothendieck site, we wer secretly talking about topos theory; the notion of Grothendieck topos is intimately connected with co\fshyp{}end calculus, as we have seen all along chapter 3, and especially in \autoref{giraudo}.
 
 In fact, Giraud theorem gives a proof for the difficult implication of the following \emph{recognition principle} for Grothendieck toposes:
 \begin{theorem}
@@ -118,9 +118,9 @@ Observe that the mere request that $\alpha : L \to L'$ is a natural transformati
 	is a pullback of categories. The functor $u$ is completely determined by the fact that $u(L) = L[1]$, $r$ is an inclusion, and $N_j(A) = \lambda F.\Set(F,A)$ is the functor induced by the inclusion $j : \cate{Fin} \subset \Set$.
 \end{corollary}
 \begin{corollary}
-	The category of models $\cate{Mod}(p,\clL)$ of a Lawvere theory is a locally presentable, accessibly embedded, complete and cocomplete subcategory of $[\clL,\Set]$. Moreover, the forgetful functor $u : \cate{Mod}(p,\clL) \to \Set$ of \ref{} is \emph{monadic} in the sense of \cite[4.4.1]{Bor2}. A complete proof of all these facts is in \cite[3.4.5]{Bor2}, \cite[3.9.1]{Bor2}, \cite[5.2.2.a]{Bor2}. A terse argument goes as follows: the functors $p^*, N_j$ are accessible right adjoints between locally presentable categories; therefore, so is the pullback diagram: $r$ is a fully faithful, accessible right adjoint, and $u$ is an accessible right adjoint, that moreover reflects isomorphisms. It can be directly proved that it preserves the colimits of split coequalizers, and thus the adjunction $f \dashv u$ is monadic by \cite[4.4.4]{Bor2}.
+	The category of models $\cate{Mod}(p,\clL)$ of a Lawvere theory is a locally presentable, accessibly embedded, complete and cocomplete subcategory of $[\clL,\Set]$. Moreover, the forgetful functor $u : \cate{Mod}(p,\clL) \to \Set$ of \autoref{} is \emph{monadic} in the sense of \cite[4.4.1]{Bor2}. A complete proof of all these facts is in \cite[3.4.5]{Bor2}, \cite[3.9.1]{Bor2}, \cite[5.2.2.a]{Bor2}. A terse argument goes as follows: the functors $p^*, N_j$ are accessible right adjoints between locally presentable categories; therefore, so is the pullback diagram: $r$ is a fully faithful, accessible right adjoint, and $u$ is an accessible right adjoint, that moreover reflects isomorphisms. It can be directly proved that it preserves the colimits of split coequalizers, and thus the adjunction $f \dashv u$ is monadic by \cite[4.4.4]{Bor2}.
 \end{corollary}
-The last technical remark that we collect sheds a light on the discorso prolisso in \ref{}: the models of a thelory $\clL$ interpreted in the category of models of a theory $M$ correspond to the models of a theory $\clL \otimes \clM$, defined by a suitable universal property:
+The last technical remark that we collect sheds a light on the discorso prolisso in \autoref{}: the models of a thelory $\clL$ interpreted in the category of models of a theory $M$ correspond to the models of a theory $\clL \otimes \clM$, defined by a suitable universal property:
 \[
 	\cate{Mod}(\clL\otimes \clM,\Set)  \cong
 	\cate{Mod}(\clL, \cate{Mod}(\clM,\Set))  \cong
@@ -137,5 +137,5 @@ The last technical remark that we collect sheds a light on the discorso prolisso
 	\end{itemize}
 \end{theorem}
 \begin{proof}
-	The proof goes as follows: given a Lawvere theory $p : \textsf{Fin}^\op \to \clL$, we have shown that the functor $u : \cate{Mod}(p) \to \Set$ in the pullback square \ref{} has a left adjoint $f : \Set \to \cate{Mod}(p)$; the composition $uf$ is thus a monad on $\Set$. This is functorial, when a morphism of monads is defined
+	The proof goes as follows: given a Lawvere theory $p : \textsf{Fin}^\op \to \clL$, we have shown that the functor $u : \cate{Mod}(p) \to \Set$ in the pullback square \autoref{} has a left adjoint $f : \Set \to \cate{Mod}(p)$; the composition $uf$ is thus a monad on $\Set$. This is functorial, when a morphism of monads is defined
 \end{proof}
