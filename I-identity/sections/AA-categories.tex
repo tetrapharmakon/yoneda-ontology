@@ -8,12 +8,12 @@ Precise references for the basic definitions can be found
 	\item The Yoneda lemma is stated as \cite[1.3.3]{Bor1}, \cite[III.2]{McL}.
 	\item For the definition of co/limit and adjunction, in \cite[2.6.2]{Bor1}, \cite[III.3]{McL}, \cite[2.6.6]{Bor1}, \cite[III.4]{McL}.
 	\item For the definition of accessible and locally presentable category in \cite[5.3.1]{Bor2}, \cite[5.2.1]{Bor2}, \cite{Adamek1994}.%, \cite[]{}.
-	\item Basic facts about ordinal and cardinal numbers can be found in \cite{kunen}; a comprehensive reference on basic and non-basic set theory is \cite{jech2013set}.
+	\item Basic facts about ordinal and cardinal numbers can be found in \cite{kunen}; another comprehensive reference on basic and non-basic set theory is \cite{jech2013set}.
 	\item The standard source for Lawvere functorial semantics is Lawvere's PhD thesis \cite{lawvere1963functorial}; more modern accounts are \cite{hyland2007category}.
 	\item Standard references for topos theory are \cite{mac1992sheaves,JohnstonePT}. See in particular \cite[VI.5]{mac1992sheaves} and \cite[5.4]{JohnstonePT} for what concerns the Mitchell-Bénabou language of a topos.
 \end{itemize}
 \subsection{Toposes}\leavevmode
-For us, an \emph{ordinal number} will be any well\hyp{}ordered set, and a \emph{cardinal number} is any ordinal which is not in bijection with a smaller ordinal. Every set $X$ has a unique \emph{cardinality}, i.e. a cardinal $\kappa$ with a bijection $\kappa \cong X$ such that there are no bijections from a smaller ordinal. We freely employ results that depend on the axiom of choice when needed. A cardinal $\kappa$ is \emph{regular} if no set of cardinality $\kappa$ is the union of fewer than $\kappa$ sets of cardinality less than $\kappa$; all cardinals in the following subsection are assumed regular without further mention.
+For us, an \emph{ordinal number} will be any well\hyp{}ordered set, and a \emph{cardinal number} is any ordinal which is not in bijection with a smaller ordinal. Every set $X$ admits a unique \emph{cardinality}, i.e. a least ordinal $\kappa$ with a bijection $\kappa \cong X$ such that there are no bijections from a smaller ordinal. We freely employ results that depend on the axiom of choice when needed. A cardinal $\kappa$ is \emph{regular} if no set of cardinality $\kappa$ is the union of fewer than $\kappa$ sets of cardinality less than $\kappa$; all cardinals in the following subsection are assumed regular without further mention.
 
 Let $\kappa$ be a cardinal; we say that a category $\clA$ is $\kappa$\hyp{}filtered if for every category $\clJ\in\Cat_{<\kappa}$ with less than $\kappa$ objects, $\clA$ is injective with respect to the cone completion $\clJ\to \clJ^\rhd$; this means that every diagram
 \[
@@ -132,7 +132,10 @@ The last technical remark that we collect sheds a light on the discorso prolisso
 \begin{theorem}
 	(\cite[4.6.2]{Bor2}) There is an equivalence between the following two categories:
 	\begin{itemize}
-		\item the category of Lawvere theories, regarded as a non-full subcategory of the category $\textsf{Fin}^\op/\Cat$, i.e. where a morphism of Lawvere theories consists of a functor $h : \clL \to \clM$ that preserves finite products;
-		\item the category of \emph{finitary} monads, i.e. those monads that preserve filtered colimits, and morphisms of monads in the sense of \cite[4.5.8]{Bor2}
+		\item $\cate{Law}$, regarded as a non-full subcategory of the category $\textsf{Fin}^\op/\Cat$, i.e. where a morphism of Lawvere theories consists of a functor $h : \clL \to \clM$ that preserves finite products;
+		\item \emph{finitary} monads, i.e. those monads that preserve filtered colimits, and morphisms of monads in the sense of \cite[4.5.8]{Bor2}.
 	\end{itemize}
 \end{theorem}
+\begin{proof}
+	The proof goes as follows: given a Lawvere theory $p : \textsf{Fin}^\op \to \clL$, we have shown that the functor $u : \cate{Mod}(p) \to \Set$ in the pullback square \ref{} has a left adjoint $f : \Set \to \cate{Mod}(p)$; the composition $uf$ is thus a monad on $\Set$. This is functorial, when a morphism of monads is defined
+\end{proof}
