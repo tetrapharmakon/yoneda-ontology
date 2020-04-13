@@ -14,6 +14,8 @@
 \def\@subtitle{}
 \makeatother
 
+\usepackage{xspace}
+
 \newcommand{\var}[3][]{
   \left[\begin{smallmatrix} #2 \\
   #1\downarrow \\ #3
@@ -44,11 +46,11 @@
 \subtitle{Existence}
 \usepackage{proof}
 
-% \usepackage{minted}
-% \def\mil#1{\mintinline{haskell}{#1}}
 \newcommand{\po}[1][dr]{\save*!/#1+1.5pc/#1:(1,-1)@^{|-}\restore}
 \newcommand{\pb}[1][dr]{\save*!/#1-1.5pc/#1:(-1,1)@^{|-}\restore}
 
+\def\theory#1{\textsf{#1}}
+  \def\CT{\theory{CT}\@\xspace}
 
 \setlength{\epigraphwidth}{.6\textwidth}
 \setcounter{tocdepth}{1}
