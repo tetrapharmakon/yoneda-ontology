@@ -1,4 +1,4 @@
-\section{Nine copper coins, and other toposes}
+\section{Nine copper coins, and other toposes}\label{sec_coins}
 \epigraph{
 	Explicaron que una cosa es \emph{igualdad}, y otra \emph{identidad}, y formularon una especie de \emph{reductio ad absurdum}, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches padecen un vivo dolor. ¿No sería ridículo -interrogaron- pretender que ese dolor es el mismo?
 }{JLB ---Tl\"on, Uqbar, Orbis Tertius}
@@ -19,8 +19,8 @@ where $\Omega_I$ is the subobject classifier of $\Set/I$ described in \autoref{v
 	      (see \autoref{variable_sets_have_omega} for a complete proof)
 \end{itemize}
 The set $I$ in this context acts as a \emph{multiplier} of truth values, in that every proposition can have a pair $(\epsilon, i)$ as truth value. We introduce the following notation: a proposition $p : U \to \Omega_I$ is \emph{true}, in context $x :U$, with \emph{strength} $t$, if $p(x) =(1,t)$ (resp., $p(x)=(0,t)$).
-
-So, a proposition is a morphism of the following kind: a function $p : U \to \Omega_I$, defined on a certain domain, and such that
+\begin{remark}\label{very_importanta_force}
+A proposition in the internal language of variable sets is a morphism of the following kind: a function $p : U \to \Omega_I$, defined on a certain domain, and such that
 \[
 	\xymatrix{
 		U\ar[d]_u\ar[r]^-p  & \{0,1\}\times I \ar[d]^{\pi_I}\\
@@ -28,7 +28,7 @@ So, a proposition is a morphism of the following kind: a function $p : U \to \Om
 	}
 \]
 (it must be a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the "variable domain" $U$. This is an important observation: the strength with which $p$ is true/false is completely determined by the structure of its domain, in the form of the function $u : U \to I$ that renders the pair $(U,u)$ an object of $\Set/I$.
-
+\end{remark}
 To get a grip of the different roles of various classes of propositions, and given that our interest will be limited to a certain class of particular propositions that we will construct \emph{ex nihilo}, it is now convenient to discuss what constraints we have to put on the structure of $I$: of course, the richest this structure is, the better will the category $\Set/I$ behave: it is for example possible to equip $I$ with an order structure, or a natural topology. Among different choices of truth multiplier, yielding different categories of variable sets, and different kinds of internal logic therein, we will privilege those that make $I$ behave like a space of strengths: a dense, linear order with LUP, thus not really far from being a closed, bounded subset of the real line.
 
 The main result of the present section is a roundup of examples showing that it is possible to concoct categories of variable sets where some seemingly paradoxical constructions coming from J.L. Borges' literary world have, instead, a perfectly ``classical'' behaviour when looked with the lenses of the logic of variable set theory.
