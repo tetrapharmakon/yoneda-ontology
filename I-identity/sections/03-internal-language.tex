@@ -82,5 +82,7 @@ Chi sono tipi e termini; chi sono le proposizioni e come si scrive il calcolo pr
 	where every arrow carry a structure of morphism over $I$ (and $0 : i \mapsto (0,i)$, $s\times I : (n,i) \mapsto (n+1,i)$), there is a unique way to complete it with the dotted arrow, i.e. with a function $u : \bbN \times I \to X$ such that 
 	\[u \circ (s\times I) = f \circ u.\]
 	Clearly, $u$ must be defined by induction: if it exists, the commutativity of the left square amounts to the request that $u(0,i)=x(i)$ for every $i : I$. Given this, the inductive step is 
-	\[u(s(n,i)) = u(n+1,i) f(u(n,i)).\]
+	\[ 
+		u(s(n,i)) = u(n+1,i) = f(u(n,i))
+	\]
 \end{remark}
