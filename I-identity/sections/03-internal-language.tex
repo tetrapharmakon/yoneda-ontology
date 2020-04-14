@@ -1,5 +1,6 @@
 \section{The internal language of variable sets}
 \epigraph{I am hard but I am fair; there is no racial bigotry here. [\dots\unkern] Here you are all equally worthless.}{GySgt Hartman}
+\begin{definition}\label{da_lang}
 The internal language of a topos $\clE$ is a formal language defined by \emph{types} and \emph{terms}; suitable terms form the class of variables. Other terms form the class of \emph{formul\ae}.
 \begin{itemize}
 	\item \emph{Types} are the objects of $\clE$
@@ -45,6 +46,7 @@ To formulas of the language of $\clE$ we apply the usual operations and rules of
 	\item $\varphi\Rightarrow\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\Rightarrow} \Omega$;
 	\item $\lnot\varphi$ is the formula $U \to \Omega \xto{\lnot} \Omega$.
 \end{itemize}
+\end{definition}
 \todo[inline]{universal quantifiers}
 Each formula $\varphi : U \to \Omega$ defines a subobject $\{x\mid \varphi\} \subseteq U$ of its domain of definition; this is the subobject classified by $\varphi$, and must be thought as the subobject where ``$\varphi$ is true''.
 

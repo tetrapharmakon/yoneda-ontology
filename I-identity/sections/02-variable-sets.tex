@@ -1,5 +1,5 @@
 \section{Preliminaries on variable set theory}
-In some of our proofs it will be crucial to blur the distinction between the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \autoref{}); once the following result is proved, we freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
+In some of our proofs it will be crucial to blur the distinction between the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \cite[??]{Bor1}); once the following result is proved, we freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
 \begin{proposition}\label{variabbo_set}
 	Let $I$ be a set, regarded as a discrete category, and let $\Set^I$ be the category of functors $F : I \to \Set$; moreover, let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism) between $\Set^I$ and $\Set/I$.
 \end{proposition}
@@ -15,7 +15,7 @@ In some of our proofs it will be crucial to blur the distinction between the cat
 	This is however easy to verify: the function $F_{h_F}$ sends $i\in I$ to the set $h_F^\leftarrow(i)=Fi$, and the function $h_{F_h} \in \Set/I$ has domain $\coprod_{i\in I}F_h(i) = \coprod_{i\in I}h^\leftarrow(i)=X$ (as $i$ runs over the set $I$, the disjoint union of all preimages $h^\leftarrow(i)$ equals the domain of $h$, i.e. the set $X$).
 \end{proof}
 \begin{remark}
-	A more abstract look at this result regards the equivalence $\Set/I\cong \Set^I$ as a particular instance of the \emph{Grothendieck construction} (see \cite[1.1]{Leinster2004}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \autoref{}). In this case, the domain $\clC=I$ is a discrete category, hence all functors $\clE \to I$ are, trivially, discrete fibrations.
+	A more abstract look at this result regards the equivalence $\Set/I\cong \Set^I$ as a particular instance of the \emph{Grothendieck construction} (see \cite[1.1]{Leinster2004}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \cite[??]{leinster2006operads}). In this case, the domain $\clC=I$ is a discrete category, hence all functors $\clE \to I$ are, trivially, discrete fibrations.
 \end{remark}
 The next crucial step of our analysis is the observation that the category of variable sets is a topos: we break the result into the verification of the various axioms, as explained in \autoref{eletop} and \autoref{grotop}.
 
@@ -23,7 +23,7 @@ The next crucial step of our analysis is the observation that the category of va
 	The category of variable sets is Cartesian closed.
 \end{proposition}
 \begin{proof}
-	We shall first show that the category of variable sets admits products: this is obvious in $\Set/I$, products are precisely pullbacks; note that theorem \autoref{} gives an identification
+	We shall first show that the category of variable sets admits products: this is obvious in $\Set/I$, products are precisely pullbacks; note that \autoref{variabbo_set} gives an identification
 	\[\vcenter{\scriptsize\xymatrix@!=1mm{
 		& X\times_I Y \ar[dd]^h \ar@[lightgray][dr]\ar@[lightgray][dl]&  \\
 		{\color{lightgray} X} \ar@[lightgray][dr]_{\color{lightgray} f}&& {\color{lightgray} Y} \ar@[lightgray][dl]^{\color{lightgray} g}\\
@@ -43,11 +43,11 @@ The next crucial step of our analysis is the observation that the category of va
 		\end{array}\]
 	this concludes the proof that the category of variable sets is Cartesian closed.
 \end{proof}
-\begin{proposition}
+\begin{proposition}\label{variable_sets_have_omega}
 	The category of variable sets has a subobject classifier.
 \end{proposition}
 \begin{proof}
-	Recall from \autoref{} that we shall find a variable set $\Omega$ such that there is a bijection
+	From \autoref{eletop} we know that we shall find a variable set $\Omega$ such that there is a bijection
 	\[\begin{array}{c}
 			\xymatrix{A \ar[r] & \Omega} \\ \hline
 			\textsf{Sub}_I(A)

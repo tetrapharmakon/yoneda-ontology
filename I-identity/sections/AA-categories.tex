@@ -1,4 +1,4 @@
-kunen\section{Category theory}
+\section{Category theory}
 \subsection{Fundamentals of CT}
 Throughout the paper we employ standard basic category-theoretic terminology, and thus we refrain from giving a self contained exposition of elementary definitions. Instead, we rely on famous and wide-spread sources like \cite{Bor1,Bor2,McL,riehlcontext,leinster2014basic,simmons2011introduction}.
 
@@ -73,7 +73,7 @@ In fact, Giraud theorem gives a proof for the difficult implication of the follo
 	Let $\clE$ be a category; then $\clE$ is a Grothendieck topos if and only if it is a left exact reflection of a category $\Cat(\clA^\op,\Set)$ of presheaves on a small category $\clA$.
 \end{theorem}
 (recall that a \emph{left exact reflection} of $\clC$ is a reflective subcategory $\clR\hookrightarrow \clC$ such that the reflector $r : \clC \to \clR$ preserves finite limits. It is a reasonably easy exercise to prove that a left exact reflection of a Grothendieck topos is again a Grothendieck topos; Giraud proved that all Grothendieck toposes arise this way.)
-\subsection{A little primer on algebraic theories}
+\subsection{A little primer on algebraic theories}\label{funsemanzi}
 The scope of this short subsection is to collect a reasonably self-contained account of functorial semantics. It is unrealistic to aim at such a big target as providing a complete account of it in a single appendix; the reader is warmly invited to parallel their study with more classical references as \cite{lawvere1963functorial}.
 \begin{definition}[Lawvere theory]
 	A \emph{Lawvere theory} is a category having objects the natural numbers, and where the sum on natural numbers has the universal property of a categorical product, as defined e.g. in \cite[2.1.4]{Bor1}.
@@ -107,7 +107,7 @@ Observe that the mere request that $\alpha : L \to L'$ is a natural transformati
 		\item there exists a set $A$ such that $L\circ p = \Set(j[n],A)$.
 	\end{itemize}
 \end{proposition}
-\begin{corollary}
+\begin{corollary}\label{da_pull}
 	The square
 	\[
 		\xymatrix{
@@ -118,9 +118,9 @@ Observe that the mere request that $\alpha : L \to L'$ is a natural transformati
 	is a pullback of categories. The functor $u$ is completely determined by the fact that $u(L) = L[1]$, $r$ is an inclusion, and $N_j(A) = \lambda F.\Set(F,A)$ is the functor induced by the inclusion $j : \cate{Fin} \subset \Set$.
 \end{corollary}
 \begin{corollary}
-	The category of models $\cate{Mod}(p,\clL)$ of a Lawvere theory is a locally presentable, accessibly embedded, complete and cocomplete subcategory of $[\clL,\Set]$. Moreover, the forgetful functor $u : \cate{Mod}(p,\clL) \to \Set$ of \autoref{} is \emph{monadic} in the sense of \cite[4.4.1]{Bor2}. A complete proof of all these facts is in \cite[3.4.5]{Bor2}, \cite[3.9.1]{Bor2}, \cite[5.2.2.a]{Bor2}. A terse argument goes as follows: the functors $p^*, N_j$ are accessible right adjoints between locally presentable categories; therefore, so is the pullback diagram: $r$ is a fully faithful, accessible right adjoint, and $u$ is an accessible right adjoint, that moreover reflects isomorphisms. It can be directly proved that it preserves the colimits of split coequalizers, and thus the adjunction $f \dashv u$ is monadic by \cite[4.4.4]{Bor2}.
+	The category of models $\cate{Mod}(p,\clL)$ of a Lawvere theory is a locally presentable, accessibly embedded, complete and cocomplete subcategory of $[\clL,\Set]$. Moreover, the forgetful functor $u : \cate{Mod}(p,\clL) \to \Set$ of \autoref{da_pull} is \emph{monadic} in the sense of \cite[4.4.1]{Bor2}. A complete proof of all these facts is in \cite[3.4.5]{Bor2}, \cite[3.9.1]{Bor2}, \cite[5.2.2.a]{Bor2}. A terse argument goes as follows: the functors $p^*, N_j$ are accessible right adjoints between locally presentable categories; therefore, so is the pullback diagram: $r$ is a fully faithful, accessible right adjoint, and $u$ is an accessible right adjoint, that moreover reflects isomorphisms. It can be directly proved that it preserves the colimits of split coequalizers, and thus the adjunction $f \dashv u$ is monadic by \cite[4.4.4]{Bor2}.
 \end{corollary}
-The last technical remark that we collect sheds a light on the discorso prolisso in \autoref{}: the models of a thelory $\clL$ interpreted in the category of models of a theory $M$ correspond to the models of a theory $\clL \otimes \clM$, defined by a suitable universal property:
+The last technical remark that we collect sheds a light on the discorso prolisso in \autoref{as_places}: the models of a thelory $\clL$ interpreted in the category of models of a theory $M$ correspond to the models of a theory $\clL \otimes \clM$, defined by a suitable universal property:
 \[
 	\cate{Mod}(\clL\otimes \clM,\Set)  \cong
 	\cate{Mod}(\clL, \cate{Mod}(\clM,\Set))  \cong
@@ -137,5 +137,5 @@ The last technical remark that we collect sheds a light on the discorso prolisso
 	\end{itemize}
 \end{theorem}
 \begin{proof}
-	The proof goes as follows: given a Lawvere theory $p : \textsf{Fin}^\op \to \clL$, we have shown that the functor $u : \cate{Mod}(p) \to \Set$ in the pullback square \autoref{} has a left adjoint $f : \Set \to \cate{Mod}(p)$; the composition $uf$ is thus a monad on $\Set$. This is functorial, when a morphism of monads is defined
+	The proof goes as follows: given a Lawvere theory $p : \textsf{Fin}^\op \to \clL$, we have shown that the functor $u : \cate{Mod}(p) \to \Set$ in the pullback square \autoref{da_pull} has a left adjoint $f : \Set \to \cate{Mod}(p)$; the composition $uf$ is thus a monad on $\Set$. This is functorial, when a morphism of monads is defined
 \end{proof}
