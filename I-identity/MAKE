@@ -17,7 +17,9 @@ case "$1" in
   git commit -m "safety update"
   git push
 # ^ do a push for safety reason: one never knows what rm deletes...
-  find . -regex ".*[Cc]onfli.+." -not -name ".tex" -exec mv -v {} ~/.local/share/Trash/ \;
+  find . -regex ".*[Cc]onfli.+." \
+    -not -name ".tex" \
+    -exec mv -v {} ~/.local/share/Trash/ \;
   latexmk -C
   cd appmeta
   latexmk -C
