@@ -19,7 +19,7 @@ case "$1" in
 # ^ do a push for safety reason: one never knows what rm deletes...
   for i in [find sections/ -regex ".*[Cc]onfli.+." -not -name ".tex"] 
   do 
-  detox $i 
+  detox "$i"
   done
   latexmk -C
   cd appmeta
