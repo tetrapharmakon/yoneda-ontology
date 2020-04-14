@@ -1,6 +1,6 @@
 \section{Preliminaries on variable set theory}
 In some of our proofs it will be crucial to blur the distinction between the category of functors $I \to \Set$ and the slice category $\Set/I$ (see \autoref{}); once the following result is proved, we freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
-\begin{proposition}
+\begin{proposition}\label{variabbo_set}
 	Let $I$ be a set, regarded as a discrete category, and let $\Set^I$ be the category of functors $F : I \to \Set$; moreover, let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism) between $\Set^I$ and $\Set/I$.
 \end{proposition}
 \begin{proof}
@@ -20,7 +20,7 @@ In some of our proofs it will be crucial to blur the distinction between the cat
 The next crucial step of our analysis is the observation that the category of variable sets is a topos: we break the result into the verification of the various axioms, as explained in \autoref{eletop} and \autoref{grotop}.
 
 \begin{proposition}
-	The category of variable sets is cartesian closed.
+	The category of variable sets is Cartesian closed.
 \end{proposition}
 \begin{proof}
 	We shall first show that the category of variable sets admits products: this is obvious in $\Set/I$, products are precisely pullbacks; note that theorem \autoref{} gives an identification
@@ -41,7 +41,7 @@ The next crucial step of our analysis is the observation that the category of va
 			\xymatrix{X\times_I Y \ar[r] & Z}                \\ \hline
 			\xymatrix{Y \ar[r]           & X\pitchfork_I Z;}
 		\end{array}\]
-	this concludes the proof that the category of variable sets is cartesian closed.
+	this concludes the proof that the category of variable sets is Cartesian closed.
 \end{proof}
 \begin{proposition}
 	The category of variable sets has a subobject classifier.
