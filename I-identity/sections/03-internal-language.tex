@@ -85,6 +85,8 @@ Chi sono tipi e termini; chi sono le proposizioni e come si scrive il calcolo pr
 	\[u \circ (s\times I) = f \circ u.\]
 	Clearly, $u$ must be defined by induction: if it exists, the commutativity of the left square amounts to the request that $u(0,i)=x(i)$ for every $i : I$. Given this, the inductive step is 
 	\[ 
-		u(s(n,i)) = u(n+1,i) = f(u(n,i))
+		u(s(n,i)) = u(n+1,i) = f(u(n,i)).
 	\]
+	This recursively defines a function with the desired properties; it is clear that these requests uniquely determine $u$.
 \end{remark}
+Such a terse exposition obviously does not exhaust such a vast topic as recursion theory conducted with category-theoretic tools. The interested reader shall consult \cite{jacobs1997tutorial} for a crystal-clear introductory account, and \cite{cockett2008introduction,cockett2014total} for more recent and modern development of recursion theory.
