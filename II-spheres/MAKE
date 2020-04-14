@@ -1,0 +1,24 @@
+#!/bin/env bash
+
+case "$1" in
+"Ip")
+  latexmk -pdf -shell-escape -pvc II-spheres.tex
+  latexmk -c ;;
+"I")
+  latexmk -pdf -shell-escape II-spheres.tex
+  latexmk -c ;;
+"clobber")
+  git add -A
+  git commit -m "safety update"
+  git push
+# ^ do a push for safety reason: one never knows what rm deletes...
+  find . -regex ".*conflitto.+." -not -name ".tex" | detox | xargs rm
+  latexmk -C
+  cd appmeta
+  latexmk -C
+  cd .. ;;
+"git")
+  git add -A
+  git commit -m "automated update"
+  git push ;;
+esac
