@@ -70,7 +70,7 @@ In order to aid the reader understand the explicit way in which $I$ ``multiplies
 	Siccome il caso $I=[0,1]$ con la topologia euclidea è quello piu naturale per diversi motivi, definiamo alcuni insiemi di interesse per una data proposizione $p : U \to \Omega_I$ per questa scelta di $I$:
 	\begin{itemize}
 		\item $A^\top = \{x : U \mid p(x) = (1,t_x), t_x > 0\} = p^\leftarrow(\{1\}\times (0,1])$ e $A^\perp = \{x : U \mid p(x) = (0,t_x), t_x > 0\}$; cose vere (risp., false) con forza maggiore di zero. Sono le funzioni $u : U \to I$ tali che $u^\leftarrow 0 = \varnothing$.
-		\item $B^\top = \{x : U \mid p(x) = (1,1)\} = p^\leftarrow((1,1))$ e $B^\perp = \{x : U \mid p(x) = (0,1)\}$ cose vere (risp.,false).
+		\item $B^\top = \{x : U \mid p(x) = (1,1)\} = p^\leftarrow((1,1))$ \footnote{Si può interpretare anche come \emph{"le cose persistono nel tempo"}, e abbiamo catturato la nozione di time-persistence, cfr. 1.4} e $B^\perp = \{x : U \mid p(x) = (0,1)\}$ cose vere (risp.,false).
 		\item $E_t^\top = \{ x : U \mid p(x)=(1,t)\}$ e $E_t^\perp = \{ x : U \mid p(x)=(0,t)\}$; cose vere (risp., false) con forza $t$.
 	\end{itemize}
 \end{remark}
@@ -80,7 +80,7 @@ Jorge Luis Borges' literary work is well-known for being made by paradoxical wor
 
 In the present section we choose \emph{Fictions}, Borges' famous collection of novels, as source of inspiration for possible and impossible worlds and their ontology.
 
-Usualmente la costruzione di un ``mondo impossibile'' va circa come segue: \dots ; noi rovesciamo tale prospettiva, e invece di depennare dal computo degli universi i mondi le cui caratteristiche do not comply with sensorial experience, or imply paradoxical entities/constructs, we accept their existence for bizarre that it may seem, and we try to deduce what kind of logic can consistently generate such statements.
+Usualmente la costruzione di un ``mondo impossibile'' (variamente impiegato nelle semantiche paraconsistenti) va circa come segue: since the classic work of Rescher and Brandom [\cite{??}] it is obtained with recursive operations on (kripkean) standard worlds \dots ; noi rovesciamo tale prospettiva, e invece di depennare dal computo degli universi i mondi le cui caratteristiche do not comply with sensorial experience, or imply paradoxical entities/constructs, we accept their existence for bizarre that it may seem, and we try to deduce what kind of logic can consistently generate such statements.
 
 The interest in such a literary calembour is manifold, and the results are surprising:
 \begin{itemize}
@@ -151,7 +151,7 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 			\sum_{c_Z\in C_Z} p(Z,c_Z,V) = (\top,1)
 		\end{cases}
 	\]
-	In an admissible configuration the subsets $ C_X, C_Y, C_Z $ can only attain an existence $p(g,c,d) \lneq (\top,1)$; that is no coin completely exists \emph{locally}. But for an hypothetical external observer, capable of adding up the forces with which the various parts of $C$ exist, the coins \emph{globally} exist `` in some secret way, of understanding forbidden to men'' (or rather, to $ X, Y, Z $).
+	In an admissible configuration the subsets $ C_X, C_Y, C_Z $ can only attain an existence $p(g,c,d) \lneq (\top,1)$; that is no coin completely exists \emph{locally}. But for an hypothetical external observer, capable of adding up the forces with which the various parts of $C$ exist, the coins \emph{globally} exist `` in some secret way, of understanding forbidden to men'' \footnote{Non si tratta di un gioco di prestigio che lascia tutto invariato. In ogni discorso sull'esistenza le cose ci sono "in some secret way". L'idealista borgesiano che arriva a negare il tempo (al di là del fatto che non ci siano riferimenti temporali nel modello) sta bello comodo in $B^\bot$ ma non sa dirci nulla sul modo in cui questi oggetti "non esistono" (resp. l'empirista puro in $B^\top$ sul modo in cui "esistono"). Non è la nostra modellizzazione "inusuale", infatti, a mettere in questo imbarazzo l'ontologo. Quello che ora conta è che può stabilire un "grado" di esistenza delle partizioni e determinare qual è il grado di esistenza della loro unione. } (or rather, to $ X, Y, Z $).
 	\begin{center}
 		\begin{figure}
 			\begin{tikzpicture}[xscale=6, yscale=4]
