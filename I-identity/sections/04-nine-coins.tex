@@ -182,10 +182,29 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 	\[ \forall \epsilon > 0,\,\exists \delta > 0 : |x-y|< \delta \To |px-py| < \epsilon \]
 	Da questo segue immediatamente che quando $p$ è continua nel suo dominio, i valori di verità di $p$ in configurazioni ``vicine'' in un senso opportuno sono dati con forze allo stesso modo vicine (chiaramente questa è una descrizione spannometrica della nozione di continuità\dots).
 
-	All elementary topology results apply to such a proposition: the set of forces with which $p$ is true or false is a connected subset of $\Omega_I$, compact if $U$ was compact.
+	All elementary topology results apply to such a proposition: for example the set of forces with which $p$ is true or false is a connected subset of $\Omega_I$, compact if $U$ was compact.
 \end{remark}
+Continuity and discontinuity of a proposition $p : U \to \Omega_I$ now capture quite well other pieces of Borges' literary universe: here we provide two examples. We refrain from a deep, quantitative analysis, and we invite the reader to fill the details of our reasoning as a pleasant re-reading exercise of \cite{babil} and \cite{tlonEN}.\footnote{The plot of \cite{babil} in a nutshell is: in Babylon, a lottery game infiltrates reality to the point that it ends up governing the actions of all men; freeing them from free will while coorting them into pawns of an infinite, inescapable, unknowable game, governed by an iron, seemingly chaotic, probabilistic logic.}
 \begin{example}[Discontinuity, Lo zaffiro di Taprobana]\label{bli}
-	la lotteria a Babilonia come in \cite{babil}: proposizioni $p : U \to \Omega_{[0,1]}$ possono essere fortemente discontinue nelle variabili/contesto da cui dipendono: tali proposizioni descrivono eventi apparentemente caotici, innescati come termine finale di una catena di eventi tra loro disconnessi e paradossali;\footnote{Assumendo una base reale per lo spazio dei parametri da cui $p$ dipende, la sua dipendenza continua è la proprietà enunciata in \autoref{continuiti}; ciò significa che eventi vicini --nello spazio o nella consequenzialità temporale-- non possono avere valori di verità diversi, e forze ``vicine'' in un senso opportuno.} un modello di questo unvierso si trova probabilmente nella Babilonia di \cite{babil}, e nei ``sorteggi impersonali, di proposito indefinito'' che caratterizzano l'operato della Compagnia, azioni apparentemente scorrelate tra loro (scagliare ``nelle acque dell'Eufrate uno zaffiro di Taprobana''; sciogliere ``dal tetto d'una torre [\dots\unkern] un uccello''; togliere (o aggiungere) ``un granello di rena ai grani innumerevoli della spiaggia''; queste azioni hanno ``conseguenze, a volte, tremende''.
+	Propositions $p : U \to \Omega_{[0,1]}$ that are allowed to be discontinuous in its variables depend unpredictably from their context: such propositions model seemingly chaotic events triggered as the end terms of a chain of disconnected prior events; in fact, if we assume a real base for the domain of $p$, its continuity as stated in \autoref{continuiti} roughly means that events in the same neighbourhood --``near'' in space or temporally contiguous-- can't have too much different truth/force values. 
+	
+	A model for such a universe, where ``terrible consequences'' sometimes follow from the ``impersonal drawings, whose purpose is unclear'' characterising the Company's actions: azioni apparentemente scorrelate tra loro (scagliare ``nelle acque dell'Eufrate uno zaffiro di Taprobana''; sciogliere ``dal tetto d'una torre [\dots\unkern] un uccello''; togliere (o aggiungere) ``un granello di rena ai grani innumerevoli della spiaggia'', quando inserite in una sequenza come in \autoref{}, possono generare per iterazione sistemi dinamici non banali.
+
+	Consideriamo ad esempio il sistema dinamico di insiemi variabili $(\nabla\circ p, [0,1])$ ottenuto dalle iterazioni della composizione $f := \nabla \circ p : [0,1] \to [0,1]$ (si veda \autoref{} per la notazione che chiama $\nabla : I\amalg I \to I$ la fold map di $I$). Siamo in questa situazione 
+	\[\def\line{\draw (0,0) -- (1,0); \draw (0,.5) -- (1,.5);}
+		\begin{tikzpicture}
+			\line 
+			\fill (.395,0) circle (1pt);
+			\foreach \i/\j/\k in {2.25/.382/0,4.5/.537/.5,6.75/.874/.5,9/.128/0}{
+			\begin{scope}[xshift=\i cm]
+			\line 
+			\fill (\j,\k) circle (1pt);
+			\node at (-.5,.375) {$\overset{\scriptscriptstyle\nabla\circ p}\mapsto$};
+			\end{scope}
+			}
+			\end{tikzpicture}			
+	\]
+	E' chiaro che il comportamento al limite di una tale successione dipende fortemente dalle proprietà analitiche di continuità di $f$ (cf. \cite{dynsys} per una intro ai sistemi dinamici uno-dimensionali e per le loro applicazioni si veda \cite{,,,}). Una serie ripetuta di sorteggi riesce allora a smuovere in maniera caotica lo spazio delle configurazioni su cui $p$ viene valutata.\footnote{Si possono ovviamente imporre a $p$ miriadi di condizioni di terminazione; la serie dei sorteggi può arrestarsi quando $p$ ha forza massima, o minima, o un prescritto valore, o è fuori di un determinato range di forze\dots{} Le speculazioni e le specializzazioni atte a descrivere un dato fenomeno sono innumerevoli: le lasciamo ai mistagoghi della compagnia, o ai leoni di Qaphqa.}
 \end{example}
 \begin{example}[Continuity: a few birds, a horse]\label{blu}
 	Per quanto riguarda le proposizioni che sono continue nelle proprie variabili, invece, esempio canonico sono le ``tigri di cristallo'' e le ``torri di sangue'' di Tl\"{o}n: oggetti ed entità usuali, diversi da quelli ``classici'' per un dettaglio solo (il colore, la consistenza, il materiale di cui sono composte): la loro esistenza è sfumata, forte meno del massimo, cosicché tigri di carne e una torre di pietra sono tali che $p=(\top,1)$, le loro controparti su Tl\"on esistono con meno forza.

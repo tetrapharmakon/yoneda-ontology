@@ -90,3 +90,11 @@ Chi sono tipi e termini; chi sono le proposizioni e come si scrive il calcolo pr
 	This recursively defines a function with the desired properties; it is clear that these requests uniquely determine $u$.
 \end{remark}
 Such a terse exposition obviously does not exhaust such a vast topic as recursion theory conducted with category-theoretic tools. The interested reader shall consult \cite{jacobs1997tutorial} for a crystal-clear introductory account, and \cite{cockett2008introduction,cockett2014total} for more recent and modern development of recursion theory.
+
+The object of natural numbers of $\Set/I$ is easily seen to match the definition of the \emph{initial object} \cite[]{Bor1} of the category $\cate{Dyn}/I$ so defined:
+\begin{itemize}
+	\item the objects of $\cate{Dyn}/I$ are \emph{dynamical systems} in $\Set/I$, i.e. the triples $(x,X,f)$, where $X : \Set/I$ (say, with structure map $\xi : X \to I$), $x : (I,\id_I) \to (X,\xi)$ and $f : X \to X$ is an endo-morphism of variable sets;
+	\item given two dynamical systems $(x,X,f)$ and $(y,Y,g)$ a \emph{morphism} between them is a function $u  :X \to Y$ such that the diagram
+	\[yadda yadda\]
+	commutes in all its parts.
+\end{itemize}
