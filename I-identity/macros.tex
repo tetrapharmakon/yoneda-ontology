@@ -14,48 +14,61 @@
 \def\@subtitle{}
 \makeatother
 
-\usepackage{xspace}
+\newcommand{\var}[3][]{%
+\left[%
+\begin{smallmatrix}
+  #2            \\%
+  #1 \downarrow \\%
+  #3%
+\end{smallmatrix}%
+\right]%
+}
+%
+\newcommand{\cvar}[3]{%
+\begin{xsmallmatrix}{0em}%
+  & #1         \\ 
+  #2 & \downarrow \\ 
+  & #3%
+\end{xsmallmatrix}%
+}
 
-\newcommand{\var}[3][]{
-  \left[\begin{smallmatrix} #2 \\
-  #1\downarrow \\ #3
-  \end{smallmatrix}\right]}
-\newcommand{\cvar}[3]{
-  \begin{xsmallmatrix}{0em}
-  & #1 \\ #2 & \downarrow \\ & #3
-  \end{xsmallmatrix}}
-
-\def\la{\langle}
+\newcommand{\po}[1][dr]{\save*!/#1+1.5pc/#1:(1,-1)@^{|-}\restore}
+\newcommand{\pb}[1][dr]{\save*!/#1-1.5pc/#1:(-1,1)@^{|-}\restore}
+\def\theory#1{\textsf{#1}}
+\def\CT{\theory{CT}\@\xspace}
+\setlength{\epigraphwidth}{.6\textwidth}
+\setcounter{tocdepth}{1}
+%
 \def\ra{\rangle}
+\def\la{\langle}
 \def\lr#1#2{\la #1,#2\ra}
 \def\tr{\textsf{t}}
 \newcommand{\true}{\texttt{t}}
 \def\id{\text{id}}
+
+%== authors' info
 \author{Dario Dentamaro}
-\address{Dario \textsc{Dentamaro}: }
+\address{ Dario \textsc{Dentamaro}: 
+        }
 \email{dio@cane.it}
+%
 \author{Fosco Loregian}
-\address{%
-  Fosco \textsc{Loregian}: %
-  Tallinn University of Technology, %
-  Institute of Cybernetics, Akadeemia tee 15/2,%
-  12618 Tallinn, Estonia}
+\address{ Fosco \textsc{Loregian}:%
+          Tallinn University of Technology,%
+          Institute of Cybernetics, Akadeemia tee 15/2,%
+          12618 Tallinn, Estonia%
+        }
 \email{fosco.loregian@taltech.ee}
 \email{fosco.loregian@gmail.com}
+
+%== metadata
 \title{Categorical ontology I}
 \subtitle{Existence}
-\usepackage{proof}
+
+\usepackage{ xspace
+           , proof
+           , fontawesome
+           , listings
+           }
 
 \renewcommand*{\ttdefault}{cmvtt}
-
-\newcommand{\po}[1][dr]{\save*!/#1+1.5pc/#1:(1,-1)@^{|-}\restore}
-\newcommand{\pb}[1][dr]{\save*!/#1-1.5pc/#1:(-1,1)@^{|-}\restore}
-
-\def\theory#1{\textsf{#1}}
-  \def\CT{\theory{CT}\@\xspace}
-
-\setlength{\epigraphwidth}{.6\textwidth}
-\setcounter{tocdepth}{1}
-
-\usepackage{fontawesome}
-\usepackage{listings}
