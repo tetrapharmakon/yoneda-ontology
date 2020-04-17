@@ -213,10 +213,22 @@ Continuity and discontinuity of a proposition $p : U \to \Omega_I$ now capture q
 Un altro esempio compelling è quello della monotonia di una proposizione che dipende, poniamo, da un certo numero di osservatori che acknowledgeano l'``esistenza'' di un oggetto (fisico o concettuale) in gran numero, e da ciò l'esistenza dell'oggetto acquista forza.
 \begin{example}[Continuity: a few birds, a horse]\label{blu}
 	% Consideriamo l'esempio delle ``tigri di cristallo'' e le ``torri di sangue'' di Tl\"{o}n: oggetti ed entità usuali, diversi da quelli ``classici'' per un dettaglio solo (il colore, la consistenza, il materiale di cui sono composte): la loro esistenza è sfumata, forte meno del massimo, cosicché tigri di carne e una torre di pietra sono tali che $p=(\top,1)$, le loro controparti su Tl\"on esistono con meno forza.
-	Consideriamo oggetti la cui forza di esistenza dipende in maniera \emph{monotona} e continua dai loro parametri: per esempio una proposizione $p$ può essere tanto più vera quanta più gente la osserva, perché ``le cose, su Tlön, si duplicano; ma tendono anche a cancellarsi e a  perdere i dettagli quando la gente le dimentichi. È classico l'esempio di  un'antica soglia, che perdurò finchè un mendicante venne a visitarla, e che alla  morte di colui fu perduta di vista. Talvolta pochi uccelli, un cavallo, salvarono le  rovine di un anfiteatro. ''
-
+	Consideriamo oggetti la cui forza di esistenza dipende in maniera \emph{monotona} e continua dai loro parametri: per esempio una proposizione $p$ può essere tanto più vera quanta più gente la osserva, perché 
+	\begin{quote}
+		le cose, su Tlön, si duplicano; ma tendono anche a cancellarsi e a  perdere i dettagli quando la gente le dimentichi. È classico l'esempio di  un'antica soglia, che perdurò finchè un mendicante venne a visitarla, e che alla  morte di colui fu perduta di vista. Talvolta pochi uccelli, un cavallo, salvarono le  rovine di un anfiteatro. \hfill\cite{tlonEN}
+	\end{quote}
 	In questa situazione, poniamo ad esempio che la forza di esistenza di alcune rovine --modellate come è ingenuo fare, come un corpo rigido $R$ nello spazio, dipenda dal numero dei suoi osservatori:
 	\[\textstyle p(R, n) = \big(\top, 1-\frac{1}{n}\big)\]
+	\begin{figure}[h]
+	\begin{center}
+		\begin{tikzpicture}[xscale=1.25]
+			\draw[<->, thick] (0,1.5) |- (5,0);
+			\foreach \j/\i in {1/.05,2/.3,3/.5.5,4/.8,5/1}
+			\node[opacity=\i] at (\j,.65) {\fontsize{30}{30}\selectfont \Tribar};
+			\end{tikzpicture}			
+	\end{center}
+	\caption{On Tl\"on, there are things that exist stronger the more you believe in them. This is a consequence of the strength $p(\Tribar)$ monotonically depending on an increasing variable $n$ (``trust'' in that existence, ``belief'' that \Tribar exists.)}
+\end{figure}
 \end{example}
 Succedono cose interessanti anche a cambiare topologia su $I$: per esempio, su $[0,1]$ possiamo mettere brutalmente la topologia discreta; in questo modo $I$ è l'unione disgiunta dei suoi punti $\{ \{t\} \mid t\in [0,1]\}$, e il classifo è l'unione disgiunta di $[0,1]$ copie di $\{0,1\}$. (See \autoref{fig:berkeley} for a picture.)
 \begin{example}[La campagna incendiata] 

@@ -1,6 +1,26 @@
 \section{Vistas on ontologies}
 \epigraph{¿No basta un salo término repetido para desbaratar y confundir la serie del tiempo? ¿Los fervorosos que se entregan a una línea de Shakespeare no son, literalmente, Shakespeare?}{\cite{confutacion}}
-\subsection{Dialogo con l'idealista} 
+E' soddisfacente aver rifrasato alcune parti dell'opera di Borges usando le categorie, sia come esercizio letterario, sia come test bench per il claim che facciamo: che per astratta che sia una teoria dell'ontologia possa avere un lato quantitativo. 
+
+Chiaramente l'idea può andare al di là di Borges. Nella presente sezione tratteggiamo in che modo, e con quale obiettivo di lunga distanza. Iniziamo con una analisi più classica, ma non meno borgesiana, dell'idealismo classico à la Berkeley in \autoref{berkelei}. Poi facciamo un discorso più di ampio respiro, meno concreto ma più fondativo del lavoro che (si spera) seguirà.
+
+Il punto di vista sotteso a questo paper si può riassumere così: una ``ontologia'' $\clO$ è una categoria. La teoria dell'esistenza è relativa ad una data ontologia $\clO$, e corrisponde al suo linguaggio interno $\clL(\clO)$, nell'aggiunzione sintassi-semantica di \cite{}.
+
+Il linguaggio interno di una ontologia $\clO$ allora è l'insieme delle cose che puoi dire a propos degli elementi costituenti l'ontologia/categoria (iniziamo da qui a trattare i due termini come sinonimi).
+
+Se l'ontologia corrisponde allo studio dell'essere, è un commento cheap notare che una "categoria" è proprio un attributo dell'essere per Aristotele; se noi siamo strutturalisti nella metateoria, non possiamo conoscere l'ente se non mediante i suoi attributi; col che, una ontologia per noi corrisponde ad un modo di intendere gli attributi dell'essere: appunto, ad una categoria. E la totalità di questi modi di intendere, cioè la \emph{meta}ontologia, deve allora essere la teoria di quei modi individuali, ossia la teoria delle categorie.
+
+Il cerchio sembra, così, chiudersi coerentemente sulla nostra scelta: le categorie e la loro teoria corrispondono 1:1 all'ontologia e alla sua teoria. Ma in quale senso questa è una prospettiva soddisfacente? In quale senso essa non limita troppo lo scope di ciò di cui possiamo parlare? Lo fa fedelmente? Su cosa è fondata?
+
+Nessuna di queste domande è peregrina; ma pertiene alla \emph{meta}ontologia. In \autoref{frutti} proviamo a proporre in quale modo la risolviamo. Il problema posto dalla metaontologia è profondo, ed ovviamente non abbiamo alcuna ambizione a risolverlo compiutamente. In \autoref{metaon} proponiamo un esempio: per Quine e la sua scuola, "ontologia" è il dominio di oggetti su cui variano i quantificatori; questo non è falso, ma mostriamo di saper fare di meglio; nel nostro linguaggio, ontologia come la intende Quine è ancora una categoria, perché (si veda \autoref{}) un quantificatore esist/univ altro non è che un particolare tipo di funtore
+\[\forall,\exists : PX \to PY\]
+tra poset guardati come categorie \emph{interne} all'ontologia $\clE$ dove noi viviamo; è facile immaginare che questo pattern non si arresti. Per Quine è metaontologia ciò che per noi è ontologia, perché noi viviamo ``un universo più in alto'' nella gerarchia cumulativa di fondazioni e meta-fondazioni: la nostra ontologia ha una dimensionalità più alta, e ospita quella quineana come struttura interna. E quindi esiste, \emph{da qualche parte}, un linguaggio per cui è ontologia ciò che per noi è metaontologia (e quindi un linguaggio che declassa Quine a sub-ontologia, qualsiasi cosa questo voglia dire).
+
+Trovare questo ``da qualche parte'' e il fondo di questa torre di tartarughe è lo scopo della ricerca, di tradizione molto antica, in seno alla quale vogliamo inserire questo lavoro.
+
+Non facciamo alcun commento tecnico in merito a come, se, e quando, questo ambizioso scopo si possa raggiungere. Ci limitiamo a notare che questo modo di procedere e di inquadrare il lavoro di Quine non è dissimile dalla prassi del cosiddetto ``negative thinking'' in CT: the belief that un ente ad alta dimensionalità/complessità si possa comprendere per mezzo dell'analogia con le sue controparti a bassa dimensionalià/complessità; si veda \cite{,,,}.
+
+\subsection{Dialogo con l'idealista}\label{berkelei}
 Let us reconsider \autoref{bla}; although in passing, we mentioned famous Berkeley's view of perception as a bundle of stimulation incapable to cohere. Let's say clearly that endeavouring on such a wide ground as classical idealism isn't the purpose of our work; yet, in his novel Borges regards Tl\"on's language and philosophy as a concrete realisation of Berkeley's theory of knowledge. %\footnote{cerchiamo di dire che non ci frega molto dell'idealista in sè. Il paper non è una tentativo di confutazione dell'idealismo. Ma, Borges docet, la metafisica di Berkeley è un caso estremo per far valere un discorso più ampio, che viene chiarito nel resto della sezione}. All'idealista, il berkeleyano puro, che volesse dedurre, da questa "esistenza ad intermittenza" delle monete, ch'esse in realtà non sussistano, potremmo obiettare che sta parlando male. 
 
 Within topos theory, è scorretto dire che $p$ è falsa in "assoluto", ma che semmai è "falsa con forza $t$" dove $t \in I$. Il berkeleyano vorrebbe ottenere (accettato che le monete esistano solo un po' in alcuni punti) che $\sum_u p(u,c,d) = (\bot,1)$. Non può per costruzione, ma se volesse deve fornire un modello alternativo del paradosso che sia altrettando valido (ci sembra sia difficile comunque non parlare in termini di "forze" o loro equivalenti, in "istanti" singoli).  
@@ -17,8 +37,13 @@ Da notare (come anticipato in 1.4) che abbiamo potuto modellizzare il paradosso 
 
 La nostra sembra una posizione intermedia tra empirismo e idealismo. La critica dell'idealista al metodo scientifico sono le prove indirette di esistenze (come le dimostrazioni non costruttive che non piacciono agli intuizionisti). La nostra è una visione fuzzy dell'esistenza: sei libero di assumere che la barca invisibile che nessuno vede, se non perché l'acqua si sposta, non esista, o assumere che la barca ci sia ma con una forza minore del massimo. (è un po' un tentativo di risoluzione epistemica del paradosso. cfr quando si parla di "maggiore è il numero di osservatori più intenso è il grado di esistenza delle monete"). Se si usa questo linguaggio non ti basta più dire che la barca non esiste perché non la vedi, cosa che non spiega lo spostamento dell'acqua \footnote{Anche il metafisico che non assume avvenga il processo di causazione deve spiegare la relazione (qualunque essa sia, se c'è) o comunque la correlazione tra il fenomeno "la barca si muove" (che presuppone l'esistenza della barca) e il fenomeno "l'acqua si sposta", non collegato, ad esempio, al fenomeno dell'esistenza delle nuvole}. In più con la possibilità del compromesso dato dalla densità di $I$.
 \todo[inline]{discorso su scollamento linguaggio formale/naturale} %la questione è epistemologica, credo; ci ho riflettuto e si era già accennato in salotto #2; eventuali critiche e dibattiti non possono avvenire nel linguaggio naturale%
+\subsection{Dai loro frutti voi li riconoscerete}\label{frutti}
+\todo[inline]{yadda yadda Yoneda}
 
-\subsection{Metaontology} Gli osservatori di Tl\"on non riescono a dire nulla sulle monete degli altri, neanche con strength. Il nostro modello è inutilizzabile \emph{dentro} Tl\"on; ed è dovuto alla diversità di linguaggio dell'abitante di Tlon. Sospendiamo il giudizio su cosa venga "prima", se l'ontologia o il linguaggio (gli autori hanno posizioni divergenti ma la ricerca assume pragmaticamente il secondo) ma senza dubbio essi sono strettamente correlati.
+
+\subsection{Metaontology} \label{metaon} 
+\todo[inline]{yadda yadda Quine}
+Gli osservatori di Tl\"on non riescono a dire nulla sulle monete degli altri, neanche con strength. Il nostro modello è inutilizzabile \emph{dentro} Tl\"on; ed è dovuto alla diversità di linguaggio dell'abitante di Tlon. Sospendiamo il giudizio su cosa venga "prima", se l'ontologia o il linguaggio (gli autori hanno posizioni divergenti ma la ricerca assume pragmaticamente il secondo) ma senza dubbio essi sono strettamente correlati.
 
 Possiamo imprecisamente definire l'ontologia come "ciò che gli oggetti \emph{sono} \footnote{cioè come si comportano nel modello} all'interno di un linguaggio".
 
