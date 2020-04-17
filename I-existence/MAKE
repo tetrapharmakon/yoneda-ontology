@@ -24,4 +24,7 @@ case "$1" in
   git add -A
   git commit -m "automated update"
   git push ;;
+"zip")
+  rm zipped-I.zip
+  zip -r zipped-I . -x .gitignore '_appmeta/*' *.pdf *.bib *.bat MAKE
 esac

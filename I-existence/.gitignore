@@ -13,6 +13,7 @@
 .*.lb
 *.rtf
 *.bak*
+*.zip
 *.xopp
 _minted-I-identity/*
 *.pygstyle
