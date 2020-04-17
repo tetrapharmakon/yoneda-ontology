@@ -75,12 +75,12 @@ Chi sono tipi e termini; chi sono le proposizioni e come si scrive il calcolo pr
 	for every $Q : \bbN \to \Omega_I$.
 	
 	In the category of variable sets, the universal property of $\pi_I : \bbN\times I \to I$ amounts to the following fact: given any diagram of solid arrows 
-	\[
-	\xymatrix{
+	\begin{equation}\label{natnumeq}
+	\vcenter{\xymatrix{
 		I \ar[r]^0 \ar@{=}[d] & \bbN\times I\ar@{.>}[d]^u \ar[r]^{s\times I} & \bbN \times I\ar@{.>}[d]^u \\ 
 		I \ar[r]_x & X \ar[r]_f & X
-	}	
-	\]
+	}}
+	\end{equation}
 	where every arrow carry a structure of morphism over $I$ (and $0 : i \mapsto (0,i)$, $s\times I : (n,i) \mapsto (n+1,i)$), there is a unique way to complete it with the dotted arrow, i.e. with a function $u : \bbN \times I \to X$ such that 
 	\[u \circ (s\times I) = f \circ u.\]
 	Clearly, $u$ must be defined by induction: if it exists, the commutativity of the left square amounts to the request that $u(0,i)=x(i)$ for every $i : I$. Given this, the inductive step is 
@@ -95,6 +95,8 @@ The object of natural numbers of $\Set/I$ is easily seen to match the definition
 \begin{itemize}
 	\item the objects of $\cate{Dyn}/I$ are \emph{dynamical systems} in $\Set/I$, i.e. the triples $(x,X,f)$, where $X : \Set/I$ (say, with structure map $\xi : X \to I$), $x : (I,\id_I) \to (X,\xi)$ and $f : X \to X$ is an endo-morphism of variable sets;
 	\item given two dynamical systems $(x,X,f)$ and $(y,Y,g)$ a \emph{morphism} between them is a function $u  :X \to Y$ such that the diagram
-	\[yadda yadda\]
-	commutes in all its parts.
+	in \eqref{natnumeq} commutes in all its parts.
 \end{itemize}
+The reason why such a triple $(x,X,f)$ identifies as a (discrete) dynamical system is easily seen: the function $x : I \to X$ works as initial seed for a recursive application of $f$, in such a way that every $f : X \to X$ defines a sequence 
+\[u_{n+1} := f(u_n)\]
+of its iterates. The system now lends itself to all sorts of questions: is there a fixed point for \(u_n(x)\)? Does the limit of \(u_n(x)\) belong to \(X\) (not obvious: consider \(X=[0,1[\) and \(u_n(x)\equiv 1-\frac{1}{n}\))? Is \(u_n(x)\) continuous in \(x\)? Etc.

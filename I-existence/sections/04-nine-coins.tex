@@ -191,7 +191,9 @@ Continuity and discontinuity of a proposition $p : U \to \Omega_I$ now capture q
 	A model for such a universe, where ``terrible consequences'' sometimes follow from the ``impersonal drawings, whose purpose is unclear'' characterising the Company's actions: azioni apparentemente scorrelate tra loro (scagliare ``nelle acque dell'Eufrate uno zaffiro di Taprobana''; sciogliere ``dal tetto d'una torre [\dots\unkern] un uccello''; togliere (o aggiungere) ``un granello di rena ai grani innumerevoli della spiaggia'', quando inserite in una sequenza come in \autoref{}, possono generare per iterazione sistemi dinamici non banali.
 
 	Consideriamo ad esempio il sistema dinamico di insiemi variabili $(\nabla\circ p, [0,1])$ ottenuto dalle iterazioni della composizione $f := \nabla \circ p : [0,1] \to [0,1]$ (si veda \autoref{} per la notazione che chiama $\nabla : I\amalg I \to I$ la fold map di $I$). Siamo in questa situazione 
-	\[\def\line{\draw (0,0) -- (1,0); \draw (0,.5) -- (1,.5);}
+	\begin{center}
+		\begin{figure}
+		\def\line{\draw (0,0) -- (1,0); \draw (0,.5) -- (1,.5);}
 		\begin{tikzpicture}
 			\line 
 			\fill (.395,0) circle (1pt);
@@ -202,14 +204,16 @@ Continuity and discontinuity of a proposition $p : U \to \Omega_I$ now capture q
 			\node at (-.5,.375) {$\overset{\scriptscriptstyle\nabla\circ p}\mapsto$};
 			\end{scope}
 			}
-			\end{tikzpicture}			
-	\]
+		\end{tikzpicture}
+		\caption{A dynamical system induced by the Company's infinite, impersonal drawings.}
+		\end{figure}
+	\end{center}
 	E' chiaro che il comportamento al limite di una tale successione dipende fortemente dalle proprietà analitiche di continuità di $f$ (cf. \cite{dynsys} per una intro ai sistemi dinamici uno-dimensionali e per le loro applicazioni si veda \cite{,,,}). Una serie ripetuta di sorteggi riesce allora a smuovere in maniera caotica lo spazio delle configurazioni su cui $p$ viene valutata.\footnote{Si possono ovviamente imporre a $p$ miriadi di condizioni di terminazione; la serie dei sorteggi può arrestarsi quando $p$ ha forza massima, o minima, o un prescritto valore, o è fuori di un determinato range di forze\dots{} Le speculazioni e le specializzazioni atte a descrivere un dato fenomeno sono innumerevoli: le lasciamo ai mistagoghi della compagnia, o ai leoni di Qaphqa.}
 \end{example}
+Un altro esempio compelling è quello della monotonia di una proposizione che dipende, poniamo, da un certo numero di osservatori che acknowledgeano l'``esistenza'' di un oggetto (fisico o concettuale) in gran numero, e da ciò l'esistenza dell'oggetto acquista forza.
 \begin{example}[Continuity: a few birds, a horse]\label{blu}
-	Per quanto riguarda le proposizioni che sono continue nelle proprie variabili, invece, esempio canonico sono le ``tigri di cristallo'' e le ``torri di sangue'' di Tl\"{o}n: oggetti ed entità usuali, diversi da quelli ``classici'' per un dettaglio solo (il colore, la consistenza, il materiale di cui sono composte): la loro esistenza è sfumata, forte meno del massimo, cosicché tigri di carne e una torre di pietra sono tali che $p=(\top,1)$, le loro controparti su Tl\"on esistono con meno forza.
-
-	Un altro esempio illustre è fatto da ogetti la cui forza di esistenza dipende in maniera \emph{monotona} e continua dai loro parametri: per esempio una proposizione $p$ può essere tanto più vera quanta più gente la osserva, perché ``le cose, su Tlön, si duplicano; ma tendono anche a cancellarsi e a  perdere i dettagli quando la gente le dimentichi. È classico l'esempio di  un'antica soglia, che perdurò finchè un mendicante venne a visitarla, e che alla  morte di colui fu perduta di vista. Talvolta pochi uccelli, un cavallo, salvarono le  rovine di un anfiteatro. ''
+	% Consideriamo l'esempio delle ``tigri di cristallo'' e le ``torri di sangue'' di Tl\"{o}n: oggetti ed entità usuali, diversi da quelli ``classici'' per un dettaglio solo (il colore, la consistenza, il materiale di cui sono composte): la loro esistenza è sfumata, forte meno del massimo, cosicché tigri di carne e una torre di pietra sono tali che $p=(\top,1)$, le loro controparti su Tl\"on esistono con meno forza.
+	Consideriamo oggetti la cui forza di esistenza dipende in maniera \emph{monotona} e continua dai loro parametri: per esempio una proposizione $p$ può essere tanto più vera quanta più gente la osserva, perché ``le cose, su Tlön, si duplicano; ma tendono anche a cancellarsi e a  perdere i dettagli quando la gente le dimentichi. È classico l'esempio di  un'antica soglia, che perdurò finchè un mendicante venne a visitarla, e che alla  morte di colui fu perduta di vista. Talvolta pochi uccelli, un cavallo, salvarono le  rovine di un anfiteatro. ''
 
 	In questa situazione, poniamo ad esempio che la forza di esistenza di alcune rovine --modellate come è ingenuo fare, come un corpo rigido $R$ nello spazio, dipenda dal numero dei suoi osservatori:
 	\[\textstyle p(R, n) = \big(\top, 1-\frac{1}{n}\big)\]
@@ -237,7 +241,4 @@ Succedono cose interessanti anche a cambiare topologia su $I$: per esempio, su $
       \label{fig:berkeley}
 		\end{figure}
 	\end{center}
-\end{example}
-\begin{example}
-
 \end{example}

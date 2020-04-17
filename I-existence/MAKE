@@ -2,10 +2,10 @@
 
 case "$1" in
 "Ip")
-  latexmk -pdf -shell-escape -pvc I-identity.tex
+  latexmk -pdf -shell-escape -pvc I-existence.tex
   latexmk -c ;;
 "I")
-  latexmk -pdf -shell-escape I-identity.tex
+  latexmk -pdf -shell-escape I-existence.tex
   latexmk -c ;;
 "a")
   cd appmeta
