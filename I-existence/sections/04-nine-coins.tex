@@ -20,14 +20,14 @@ where $\Omega_I$ is the subobject classifier of $\Set/I$ described in \autoref{v
 \end{itemize}
 The set $I$ in this context acts as a \emph{multiplier} of truth values, in that every proposition can have a pair $(\epsilon, i)$ as truth value. We introduce the following notation: a proposition $p : U \to \Omega_I$ is \emph{true}, in context $x :U$, with \emph{strength} $t$, if $p(x) =(1,t)$ (resp., $p(x)=(0,t)$).
 \begin{remark}\label{very_importanta_force}
-A proposition in the internal language of variable sets is a morphism of the following kind: a function $p : U \to \Omega_I$, defined on a certain domain, and such that
-\[
-	\xymatrix{
-		U\ar[d]_u\ar[r]^-p  & \{0,1\}\times I \ar[d]^{\pi_I}\\
-		I \ar@{=}[r]& I
-	}
-\]
-(it must be a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the "variable domain" $U$. This is an important observation: the strength with which $p$ is true/false is completely determined by the structure of its domain, in the form of the function $u : U \to I$ that renders the pair $(U,u)$ an object of $\Set/I$.
+	A proposition in the internal language of variable sets is a morphism of the following kind: a function $p : U \to \Omega_I$, defined on a certain domain, and such that
+	\[
+		\xymatrix{
+			U\ar[d]_u\ar[r]^-p  & \{0,1\}\times I \ar[d]^{\pi_I}\\
+			I \ar@{=}[r]& I
+		}
+	\]
+	(it must be a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the "variable domain" $U$. This is an important observation: the strength with which $p$ is true/false is completely determined by the structure of its domain, in the form of the function $u : U \to I$ that renders the pair $(U,u)$ an object of $\Set/I$.
 \end{remark}
 To get a grip of the different roles of various classes of propositions, and given that our interest will be limited to a certain class of particular propositions that we will construct \emph{ex nihilo}, it is now convenient to discuss what constraints we have to put on the structure of $I$: of course, the richest this structure is, the better will the category $\Set/I$ behave: it is for example possible to equip $I$ with an order structure, or a natural topology. Among different choices of truth multiplier, yielding different categories of variable sets, and different kinds of internal logic therein, we will privilege those that make $I$ behave like a space of strengths: a dense, linear order with LUP, thus not really far from being a closed, bounded subset of the real line.
 
@@ -122,11 +122,11 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 	It is obvious that both constructions leverage on the same argument to build an efficient aporia: the mysterious persistence of things through time without a perceivent consciousness. We concentrate on the copper coins dilemma, per il semplice fatto che Finzioni è raggiungibile molto piu facilmente ai nostri lettori; incidentally, we happen to be able to rectify the ``rust counterargument'' without appealing to the assumption that copper can rust on Tl\"on due to a difference in Tl\"onian chemistry.
 
 	Expressed in natural language, our solution to the paradox goes more or less as follows: $X$ loses their coins on Tuesday, and the force $\varphi$ with which they ``exist'' lowers; it grows back in the following days, going back to a maximum value when $X$ retrieves two of their coins on the front door. $Y$ findings of other coins raises their existence force to a maximum. The coins that $Y$ has found rusted (or rather, the surface copper oxidized: this is possible, but water is rarely sufficient to ignite the process alone --certainly not in the space of a few hours.\footnote{in una sorta di principio di wormhole, eventi indipendenti sulla terra sono dipendenti su Tlön, perché l'evento A influenza, in uno spazio pluridimensionale di scelte di z di verità, l'evento B in modi che gli sarebbero vietati se fosse sulla Terra.}
-\begin{remark}\label{our_beloved_interval}
-	In this perspective, Tl\"on classifier of truth values can be taken as $\Omega_I = \{0<1\}\times I$, where $I$ is any set with more than one element; a minimal example can be $I=\{N,S\}$ (justifying this choice from inside Tl\"on is easy: the planet is subdivided into two emispheres; each of which now has its own logic ``line'' independent from the other), but as explained in \autoref{our_beloved_interval} a more natural choice for our purposes is the closed real interval $I=[0,1]$.
+	\begin{remark}\label{our_beloved_interval}
+		In this perspective, Tl\"on classifier of truth values can be taken as $\Omega_I = \{0<1\}\times I$, where $I$ is any set with more than one element; a minimal example can be $I=\{N,S\}$ (justifying this choice from inside Tl\"on is easy: the planet is subdivided into two emispheres; each of which now has its own logic ``line'' independent from the other), but as explained in \autoref{our_beloved_interval} a more natural choice for our purposes is the closed real interval $I=[0,1]$.
 
-	This allows for a continuum of possible forces with which a truth value can be true or false;  it is tobe noted that $[0,1]$ is also the most natural place on which to interpret fuzzy logic, albeit the interest for $[0,1]$ therein can be easily and better motivated starting from probability theory. (But see \cite{} for an interesting perspective on how to develop basic measure teory out of $[0,1]$.)
-\end{remark}
+		This allows for a continuum of possible forces with which a truth value can be true or false;  it is tobe noted that $[0,1]$ is also the most natural place on which to interpret fuzzy logic, albeit the interest for $[0,1]$ therein can be easily and better motivated starting from probability theory. (But see \cite{} for an interesting perspective on how to develop basic measure teory out of $[0,1]$.)
+	\end{remark}
 	We now start to formalise properly what we said until now.
 
 	To set our basic assumptions straight, we proceed as follows:
@@ -153,7 +153,7 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 	\]
 	In an admissible configuration the subsets $ C_X, C_Y, C_Z $ can only attain an existence $p(g,c,d) \lneq (\top,1)$; that is no coin completely exists \emph{locally}. But for an hypothetical external observer, capable of adding up the forces with which the various parts of $C$ exist, the coins \emph{globally} exist `` in some secret way, of understanding forbidden to men'' \footnote{Non si tratta di un gioco di prestigio che lascia tutto invariato. In ogni discorso sull'esistenza le cose ci sono "in some secret way". L'idealista borgesiano che arriva a negare il tempo (al di là del fatto che non ci siano riferimenti temporali nel modello) sta bello comodo in $B^\bot$ ma non sa dirci nulla sul modo in cui questi oggetti "non esistono" (resp. l'empirista puro in $B^\top$ sul modo in cui "esistono"). Non è la nostra modellizzazione "inusuale", infatti, a mettere in questo imbarazzo l'ontologo. Quello che ora conta è che può stabilire un "grado" di esistenza delle partizioni e determinare qual è il grado di esistenza della loro unione. } (or rather, to $ X, Y, Z $).
 	\begin{center}
-		\begin{figure}
+		\begin{figure}[h]
 			\begin{tikzpicture}[xscale=6, yscale=4]
 				\coordinate (1) at (0,0);
 				\foreach \i/\j in {1/W,2/Th,3/Fr}{
@@ -175,8 +175,8 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 	\end{center}
 \end{example}
 \begin{remark}\label{di_navi_e_numeri}
-  L'aritmetica di Tlon; proposizioni a forza additiva; parallelismi tra la nave di Teseo e le nove monete.
-\end{remark}  
+	L'aritmetica di Tlon; proposizioni a forza additiva; parallelismi tra la nave di Teseo e le nove monete.
+\end{remark}
 \begin{remark}[Continuity for a proposition]\label{continuiti}
 	Let $p : U \to \Omega_I$ be a proposition; here we investigate what does it mean for $p$ to be (globally) continuous with respect to the Euclidean topology on $I=[0,1]$, in the assumption that its domain of definition $U$ is metrizable (this is true for example when $U$ is a subset of space-time). The condition is that
 	\[ \forall \epsilon > 0,\,\exists \delta > 0 : |x-y|< \delta \To |px-py| < \epsilon \]
@@ -186,26 +186,26 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 \end{remark}
 Continuity and discontinuity of a proposition $p : U \to \Omega_I$ now capture quite well other pieces of Borges' literary universe: here we provide two examples. We refrain from a deep, quantitative analysis, and we invite the reader to fill the details of our reasoning as a pleasant re-reading exercise of \cite{babil} and \cite{tlonEN}.\footnote{The plot of \cite{babil} in a nutshell is: in Babylon, a lottery game infiltrates reality to the point that it ends up governing the actions of all men; freeing them from free will while coorting them into pawns of an infinite, inescapable, unknowable game, governed by an iron, seemingly chaotic, probabilistic logic.}
 \begin{example}[Discontinuity, Lo zaffiro di Taprobana]\label{bli}
-	Propositions $p : U \to \Omega_{[0,1]}$ that are allowed to be discontinuous in its variables depend unpredictably from their context: such propositions model seemingly chaotic events triggered as the end terms of a chain of disconnected prior events; in fact, if we assume a real base for the domain of $p$, its continuity as stated in \autoref{continuiti} roughly means that events in the same neighbourhood --``near'' in space or temporally contiguous-- can't have too much different truth/force values. 
-	
+	Propositions $p : U \to \Omega_{[0,1]}$ that are allowed to be discontinuous in its variables depend unpredictably from their context: such propositions model seemingly chaotic events triggered as the end terms of a chain of disconnected prior events; in fact, if we assume a real base for the domain of $p$, its continuity as stated in \autoref{continuiti} roughly means that events in the same neighbourhood --``near'' in space or temporally contiguous-- can't have too much different truth/force values.
+
 	A model for such a universe, where ``terrible consequences'' sometimes follow from the ``impersonal drawings, whose purpose is unclear'' characterising the Company's actions: azioni apparentemente scorrelate tra loro (scagliare ``nelle acque dell'Eufrate uno zaffiro di Taprobana''; sciogliere ``dal tetto d'una torre [\dots\unkern] un uccello''; togliere (o aggiungere) ``un granello di rena ai grani innumerevoli della spiaggia'', quando inserite in una sequenza come in \autoref{}, possono generare per iterazione sistemi dinamici non banali.
 
-	Consideriamo ad esempio il sistema dinamico di insiemi variabili $(\nabla\circ p, [0,1])$ ottenuto dalle iterazioni della composizione $f := \nabla \circ p : [0,1] \to [0,1]$ (si veda \autoref{} per la notazione che chiama $\nabla : I\amalg I \to I$ la fold map di $I$). Siamo in questa situazione 
+	Consideriamo ad esempio il sistema dinamico di insiemi variabili $(\nabla\circ p, [0,1])$ ottenuto dalle iterazioni della composizione $f := \nabla \circ p : [0,1] \to [0,1]$ (si veda \autoref{} per la notazione che chiama $\nabla : I\amalg I \to I$ la fold map di $I$). Siamo in questa situazione
 	\begin{center}
-		\begin{figure}
-		\def\line{\draw (0,0) -- (1,0); \draw (0,.5) -- (1,.5);}
-		\begin{tikzpicture}
-			\line 
-			\fill (.395,0) circle (1pt);
-			\foreach \i/\j/\k in {2.25/.382/0,4.5/.537/.5,6.75/.874/.5,9/.128/0}{
-			\begin{scope}[xshift=\i cm]
-			\line 
-			\fill (\j,\k) circle (1pt);
-			\node at (-.5,.375) {$\overset{\scriptscriptstyle\nabla\circ p}\mapsto$};
-			\end{scope}
-			}
-		\end{tikzpicture}
-		\caption{A dynamical system induced by the Company's infinite, impersonal drawings.}
+		\begin{figure}[h]
+			\def\line{\draw (0,0) -- (1,0); \draw (0,.5) -- (1,.5);}
+			\begin{tikzpicture}
+				\line
+				\fill (.395,0) circle (1pt);
+				\foreach \i/\j/\k in {2.25/.382/0,4.5/.537/.5,6.75/.874/.5,9/.128/0}{
+						\begin{scope}[xshift=\i cm]
+							\line
+							\fill (\j,\k) circle (1pt);
+							\node at (-.5,.375) {$\overset{\scriptscriptstyle\nabla\circ p}\mapsto$};
+						\end{scope}
+					}
+			\end{tikzpicture}
+			\caption{A dynamical system induced by the Company's infinite, impersonal drawings.}
 		\end{figure}
 	\end{center}
 	E' chiaro che il comportamento al limite di una tale successione dipende fortemente dalle proprietà analitiche di continuità di $f$ (cf. \cite{dynsys} per una intro ai sistemi dinamici uno-dimensionali e per le loro applicazioni si veda \cite{,,,}). Una serie ripetuta di sorteggi riesce allora a smuovere in maniera caotica lo spazio delle configurazioni su cui $p$ viene valutata.\footnote{Si possono ovviamente imporre a $p$ miriadi di condizioni di terminazione; la serie dei sorteggi può arrestarsi quando $p$ ha forza massima, o minima, o un prescritto valore, o è fuori di un determinato range di forze\dots{} Le speculazioni e le specializzazioni atte a descrivere un dato fenomeno sono innumerevoli: le lasciamo ai mistagoghi della compagnia, o ai leoni di Qaphqa.}
@@ -213,34 +213,38 @@ Continuity and discontinuity of a proposition $p : U \to \Omega_I$ now capture q
 Un altro esempio compelling è quello della monotonia di una proposizione che dipende, poniamo, da un certo numero di osservatori che acknowledgeano l'``esistenza'' di un oggetto (fisico o concettuale) in gran numero, e da ciò l'esistenza dell'oggetto acquista forza.
 \begin{example}[Continuity: a few birds, a horse]\label{blu}
 	% Consideriamo l'esempio delle ``tigri di cristallo'' e le ``torri di sangue'' di Tl\"{o}n: oggetti ed entità usuali, diversi da quelli ``classici'' per un dettaglio solo (il colore, la consistenza, il materiale di cui sono composte): la loro esistenza è sfumata, forte meno del massimo, cosicché tigri di carne e una torre di pietra sono tali che $p=(\top,1)$, le loro controparti su Tl\"on esistono con meno forza.
-	Consideriamo oggetti la cui forza di esistenza dipende in maniera \emph{monotona} e continua dai loro parametri: per esempio una proposizione $p$ può essere tanto più vera quanta più gente la osserva, perché 
+	Consideriamo oggetti la cui forza di esistenza dipende in maniera \emph{monotona} e continua dai loro parametri: per esempio una proposizione $p$ può essere tanto più vera quanta più gente la osserva, perché
 	\begin{quote}
-		le cose, su Tlön, si duplicano; ma tendono anche a cancellarsi e a  perdere i dettagli quando la gente le dimentichi. È classico l'esempio di  un'antica soglia, che perdurò finchè un mendicante venne a visitarla, e che alla  morte di colui fu perduta di vista. Talvolta pochi uccelli, un cavallo, salvarono le  rovine di un anfiteatro. \hfill\cite{tlonEN}
+		Things became duplicated in Tlön; they also tend to become effaced and lose their details when they are forgotten. A classic example is the doorway which survived so long it was visited by a beggar and disappeared at his death. At times some birds, a horse, have saved the ruins of an amphitheater.  \hfill\cite{tlonEN}
 	\end{quote}
 	In questa situazione, poniamo ad esempio che la forza di esistenza di alcune rovine --modellate come è ingenuo fare, come un corpo rigido $R$ nello spazio, dipenda dal numero dei suoi osservatori:
 	\[\textstyle p(R, n) = \big(\top, 1-\frac{1}{n}\big)\]
 	\begin{figure}[h]
-	\begin{center}
-		\begin{tikzpicture}[xscale=1.25]
-			\draw[<->, thick] (0,1.5) |- (5,0);
-			\foreach \j/\i in {1/.05,2/.3,3/.5.5,4/.8,5/1}
-			\node[opacity=\i] at (\j,.65) {\fontsize{30}{30}\selectfont \Tribar};
-			\end{tikzpicture}			
-	\end{center}
-	\caption{On Tl\"on, there are things that exist stronger the more you believe in them. This is a consequence of the strength $p(\Tribar)$ monotonically depending on an increasing variable $n$ (``trust'' in that existence, ``belief'' that \Tribar exists.)}
-\end{figure}
+		\begin{center}
+			\begin{tikzpicture}[xscale=1.25]
+				\draw[<->, thick] (0,1.5) |- (5,0);
+				\foreach \j/\i in { 1/.2
+													, 2/.35
+													, 3/.55
+													, 4/.8
+													, 5/1}
+				\node[opacity=\i] at (\j,.65) {\fontsize{30}{30}\selectfont \Tribar};
+			\end{tikzpicture}
+		\end{center}
+		\caption{On Tl\"on, there are things that exist stronger the more you believe in them. This is a consequence of the strength $p(\Tribar)$ monotonically depending on an increasing variable $n$ (``trust'' in that existence, ``belief'' that \Tribar exists.)}
+	\end{figure}
 \end{example}
 Succedono cose interessanti anche a cambiare topologia su $I$: per esempio, su $[0,1]$ possiamo mettere brutalmente la topologia discreta; in questo modo $I$ è l'unione disgiunta dei suoi punti $\{ \{t\} \mid t\in [0,1]\}$, e il classifo è l'unione disgiunta di $[0,1]$ copie di $\{0,1\}$. (See \autoref{fig:berkeley} for a picture.)
-\begin{example}[La campagna incendiata] 
-  Il Berkeley idealista degli infiniti istanti di tempo continuo, disconnessi e incomunicabili: $\Omega_I = \coprod_{t : [0,1]} \{ 0 < 1 \}$. E' evidente come questa particolare struttura logica influenzi il linguaggio piegandolo a diventare l'istantaneismo berkeleyano: i termini sono costruiti per accrezione istantanea, per somma disgiunta dei costituenti e delle loro proprietà: ``aereo-chiaro sopra scuro rotondo''; oggetti determinati dalla loro simultaneità, e non da una dipendenza logica: il significato si costruisce per accrezione di istanti simultanei, e non per sequenzialità temporale (vedi \autoref{di_navi_e_numeri} per un legame tra questo principio, la natura additiva della forza di verità in Tlon, e la particolare forma dell'aritmetica Tloniana). 
-  
-  Il rifiuto della consequenzialità temporale per gli abitanti di Tlon sta nel passo 
-  \begin{quote}
-    \hspace{.5em} Spinoza attribuisce alla sua inesauribile divinità i modi del pensiero e dell'estensione; su Tlön, nessuno comprenderebbe la giustapposizione del  secondo (che caratterizza solo alcuni stati) e del primo, che è un sinonimo  perfetto del cosmo. In altre parole: non concepiscono che lo spaziale perduri  nel tempo. La percezione di una fumata all'orizzonte, e poi della campagna  incendiata, e poi della sigaretta mal spenta che provocò l'incendio, è  considerata un esempio di associazione di idee.
-  \end{quote} 
-  Ciò si lega anche al passo ``L'universo è paragonabile a quelle crittografie in cui non tutti i segni hanno un valore, e che solo è vero ciò che accade ogni trecento notti'': un mondo dove ogni trecento notti $p(x) =(\top,1)$, e per le successive 299 notti $p$ ha forza $<1$.
+\begin{example}[La campagna incendiata]
+	Il Berkeley idealista degli infiniti istanti di tempo continuo, disconnessi e incomunicabili: $\Omega_I = \coprod_{t : [0,1]} \{ 0 < 1 \}$. E' evidente come questa particolare struttura logica influenzi il linguaggio piegandolo a diventare l'istantaneismo berkeleyano: i termini sono costruiti per accrezione istantanea, per somma disgiunta dei costituenti e delle loro proprietà: ``aereo-chiaro sopra scuro rotondo''; oggetti determinati dalla loro simultaneità, e non da una dipendenza logica: il significato si costruisce per accrezione di istanti simultanei, e non per sequenzialità temporale (vedi \autoref{di_navi_e_numeri} per un legame tra questo principio, la natura additiva della forza di verità in Tlon, e la particolare forma dell'aritmetica Tloniana).
+
+	Il rifiuto della consequenzialità temporale per gli abitanti di Tlon sta nel passo
+	\begin{quote}
+		\hspace{.5em} Spinoza ascribes to his inexhaustible divinity the attributes of extension and thought; no one in Tlön would understand the juxtaposition of the first (which is typical only of certain states) and the second - which is a perfect synonym of the cosmos. In other words, they do not conceive that the spatial persists in time. The perception of a cloud of smoke on the horizon and then of the burning field and then of the half-extinguished cigarette that produced the blaze is considered an example of association of ideas.   \hfill\cite{tlonEN}
+	\end{quote}
+	Ciò si lega anche al passo ``L'universo è paragonabile a quelle crittografie in cui non tutti i segni hanno un valore, e che solo è vero ciò che accade ogni trecento notti'': un mondo dove ogni trecento notti $p(x) =(\top,1)$, e per le successive 299 notti $p$ ha forza $<1$.
 	\begin{center}
-		\begin{figure}
+		\begin{figure}[h]
 			\begin{tikzpicture}[xscale=4, yscale=2]
 				\fill[gray!30] (0,0) rectangle (1,1);
 				\foreach \i in {.1,1,...,10}
@@ -249,8 +253,8 @@ Succedono cose interessanti anche a cambiare topologia su $I$: per esempio, su $
 				\draw[->, >=stealth, thin] (-.1,0) -- (.5,-3/5);
 				\draw[gray!60, xshift=.5cm, yshift=.25cm] (0,0) .. controls (.5,0) and (0,-.5) .. (.5,0);
 			\end{tikzpicture}
-      \caption{Il tempo come sequenza infinita, e infitamente suddivisibile, di istanti distinti: il paradosso Berkeleyano.}
-      \label{fig:berkeley}
+			\caption{Il tempo come sequenza infinita, e infitamente suddivisibile, di istanti distinti: il paradosso Berkeleyano.}
+			\label{fig:berkeley}
 		\end{figure}
 	\end{center}
 \end{example}

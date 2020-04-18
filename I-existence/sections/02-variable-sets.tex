@@ -22,7 +22,7 @@ In some of our proofs it will be crucial to blur the distinction between the cat
 	A more abstract look at this result regards the equivalence $\Set/I\cong \Set^I$ as a particular instance of the \emph{Grothendieck construction} (see \cite[1.1]{Leinster2004}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \cite[1.1]{Leinster2004}). In this case, the domain $\clC=I$ is a discrete category, hence all functors $\clE \to I$ are, trivially, discrete fibrations.
 \end{remark}
 \begin{remark}
-The next crucial step of our analysis is the observation that the category of variable sets is a topos: we break the result into the verification of the various axioms, as exposed in \autoref{eletop} and \autoref{grotop}. It will be crucial in our discussion that the category of sets is itself a topos: in particular, it is cartesian closed, and admits the set $\{\perp,\top\}$ as subobject classifier.\footnote{This is a classical model of set theory, as opposed to an intuitionistic model, where $\Omega$ consists of a more general Heyting algebra $H$; the core of all our argument is very rarely affected by this choice, which is mainly due to expository reasons. The reader shall feel free to replace the minimal Heyting algebra $\{\perp,\top\}$ with a more generic one, and they are invited to adapt the arguments accordingly.}
+	The next crucial step of our analysis is the observation that the category of variable sets is a topos: we break the result into the verification of the various axioms, as exposed in \autoref{eletop} and \autoref{grotop}. It will be crucial in our discussion that the category of sets is itself a topos: in particular, it is cartesian closed, and admits the set $\{\perp,\top\}$ as subobject classifier.\footnote{This is a classical model of set theory, as opposed to an intuitionistic model, where $\Omega$ consists of a more general Heyting algebra $H$; the core of all our argument is very rarely affected by this choice, which is mainly due to expository reasons. The reader shall feel free to replace the minimal Heyting algebra $\{\perp,\top\}$ with a more generic one, and they are invited to adapt the arguments accordingly.}
 \end{remark}
 \begin{proposition}
 	The category of variable sets is Cartesian closed in the sense of \cite[p.335]{Bor1}.
@@ -49,7 +49,7 @@ The next crucial step of our analysis is the observation that the category of va
 \end{proof}
 \begin{proposition}\label{variable_sets_have_omega}
 	The category of variable sets has a subobject classifier.
-\end{proposition} 
+\end{proposition}
 \begin{proof}
 	From \autoref{eletop} we know that we shall find a variable set $\Omega$ such that there is a bijection
 	\[\begin{array}{c}
@@ -68,20 +68,20 @@ The next crucial step of our analysis is the observation that the category of va
 	It turns out that the function $I \to I\times \{\perp,\top\}$ choosing the level-1 copy of $I\cong I\times \{\top\}$ plays the r\^ole of $\true$: in the following, we shortly denote $\Omega_I$ such a product set. Now, given a monomorphism $S \hookrightarrow A$ the commutative square
 	\[
 		\vcenter{\xymatrix{
-				S\ar[d]\ar[r] & I \ar[d]^{\true}\\
-				A \ar[r]_-{\chi_S} & \Omega_I
-			}}
+		S\ar[d]\ar[r] & I \ar[d]^{\true}\\
+		A \ar[r]_-{\chi_S} & \Omega_I
+		}}
 	\]
 	is easily seen to be a pullback; in fact, every morphism of variable sets $\chi_S : A \to \Omega_I$ must send the element $a : A$ to a pair $(i,\epsilon) : I\times \{\perp,\top\}$. The pullback of $\chi$ and $\true$, as defined above, consists of the subset of the product $A\times I$ such that $\chi(a)=\true(i)=(i,\top)$; this defines a variable set $S=(\chi(i,\top))_I$, and such a correspondence is clearly invertible: every variable set arises in this way, and defines a ``characteristic'' function $\chi_S : (A,f : A \to I) \to (\Omega_I,\pi_I)$:
-	\[\chi_S(a) = 
-	\begin{cases}
-		(f(a), \top) & \text{ if } a\in S \\
-		(f(a), \perp) & \text{ if } a\notin S 
-	\end{cases}\]
+	\[\chi_S(a) =
+		\begin{cases}
+			(f(a), \top)  & \text{ if } a\in S    \\
+			(f(a), \perp) & \text{ if } a\notin S
+		\end{cases}\]
 	This concludes the proof of the fact that $\Set/I$ admits a subobject classifier.
 \end{proof}
 \begin{remark}
-	A straightforward but important remark is now in order. The structure of subobject classifier of $\Omega_I$, and in particular the shape of a characteristic function $\chi_S : A \to \Omega_I$ for a subobject $S\subseteq A$ in $\Set/I$, is explicitly obtained using the structure map $f$ of the variable set $f : A\to I$. 
+	A straightforward but important remark is now in order. The structure of subobject classifier of $\Omega_I$, and in particular the shape of a characteristic function $\chi_S : A \to \Omega_I$ for a subobject $S\subseteq A$ in $\Set/I$, is explicitly obtained using the structure map $f$ of the variable set $f : A\to I$.
 
 	This will turn out to be very useful along our main section, where we shall note that a proposition in the internal language of $\Set/I$ amounts to a function $p : U \to \Omega_I$, having as domain a variable set $u : U \to I$, whose structure map uniquely determines the ``strength'' (see \autoref{very_importanta_force}) of the proposition $p$. In a nutshell, : the reader shall however not be worried; we will duly justify each of these nontrivial conceptual steps along \autoref{sec_coins}.
 \end{remark}

@@ -1,6 +1,6 @@
 \section{Category theory}
 \epigraph{El atanor está apagado -repitió- y están llenos de polvo los alambiques. En este tramo
-de mi larga jornada uso de otros instrumentos.}{\cite{arena}}
+	de mi larga jornada uso de otros instrumentos.}{\cite{arena}}
 \subsection{Fundamentals of CT}
 Throughout the paper we employ standard basic category-theoretic terminology, and thus we refrain from giving a self contained exposition of elementary definitions. Instead, we rely on famous and wide-spread sources like \cite{Bor1,Bor2,McL,riehlcontext,leinster2014basic,simmons2011introduction}.
 
@@ -36,15 +36,15 @@ We say that a functor $F : \clA \to \clB$ \emph{commutes with} or \emph{preserve
 \begin{definition}\label{accepre}
 	Let $\clC$ be a category;
 	\begin{itemize}
-		\item We say that $\clC$ is \emph{$\kappa$\hyp{}accessible} if it admits $\kappa$\hyp{}filtered colimits, and if it has a \emph{small} subcategory $\cate{S}\subset \clA$ of $\kappa$\hyp{}presentable objects such that every $A\in\clA$ is a $\kappa$\hyp{}filtered colimit of objects in $\cate{S}$.
+		\item We say that $\clC$ is \emph{$\kappa$\hyp{}accessible} if it admits $\kappa$\hyp{}filtered colimits, and if it has a \emph{small} subcategory $\clS\subset \clA$ of $\kappa$\hyp{}presentable objects such that every $A\in\clA$ is a $\kappa$\hyp{}filtered colimit of objects in $\clS$.
 		\item We say that $\clC$ is \emph{(locally) $\kappa$\hyp{}presentable} if it is accessible and cocomplete.
 	\end{itemize}
 	The theory of presentable and accessible categories is a cornerstone of \emph{categorical logic}, i.e. of the translation of model theory into the language of category theory.
 
 	Accessible and presentable categories admit \emph{representation theorems}:
 	\begin{itemize}
-		\item A category $\clC$ is accessible if and only if it is equivalent to the ind\hyp{}completion $\text{Ind}_\kappa(\cate{S})$ of a small category, i.e. to the completion of a small category $\cate{S}$ under  $\kappa$\hyp{}filtered colimits;
-		\item A category $\clC$ is presentable if and only if it is a full reflective subcategory of a category of presheaves $i : \clC \to \Qat(\cate{S}^\op,\Set)$, such that the embedding functor $i$ commutes with $\kappa$\hyp{}filtered colimts.
+		\item A category $\clC$ is accessible if and only if it is equivalent to the ind\hyp{}completion $\text{Ind}_\kappa(\clS)$ of a small category, i.e. to the completion of a small category $\clS$ under  $\kappa$\hyp{}filtered colimits;
+		\item A category $\clC$ is presentable if and only if it is a full reflective subcategory of a category of presheaves $i : \clC \to \Qat(\clS^\op,\Set)$, such that the embedding functor $i$ commutes with $\kappa$\hyp{}filtered colimts.
 	\end{itemize}
 \end{definition}
 All categories of usual algebraic structures are (finitely) accessible, and they are locally (finitely) presentable as soon as they are cocomplete; an example of a category which is $\aleph_1$\hyp{}presentable but not $\aleph_0$\hyp{}presentable: the category of metric spaces and short maps.
