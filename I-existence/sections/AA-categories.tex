@@ -17,7 +17,7 @@ Precise references for the basic definitions can be found
 \subsection{Toposes}\leavevmode
 For us, an \emph{ordinal number} will be any well\hyp{}ordered set, and a \emph{cardinal number} is any ordinal which is not in bijection with a smaller ordinal. Every set $X$ admits a unique \emph{cardinality}, i.e. a least ordinal $\kappa$ with a bijection $\kappa \cong X$ such that there are no bijections from a smaller ordinal. We freely employ results that depend on the axiom of choice when needed. A cardinal $\kappa$ is \emph{regular} if no set of cardinality $\kappa$ is the union of fewer than $\kappa$ sets of cardinality less than $\kappa$; all cardinals in the following subsection are assumed regular without further mention.
 
-Let $\kappa$ be a cardinal; we say that a category $\clA$ is $\kappa$\hyp{}filtered if for every category $\clJ\in\Cat_{<\kappa}$ with less than $\kappa$ objects, $\clA$ is injective with respect to the cone completion $\clJ\to \clJ^\rhd$; this means that every diagram
+Let $\kappa$ be a cardinal; we say that a category $\clA$ is $\kappa$\hyp{}filtered if for every category $\clJ\in\Qat_{<\kappa}$ with less than $\kappa$ objects, $\clA$ is injective with respect to the cone completion $\clJ\to \clJ^\rhd$; this means that every diagram
 \[
 	\vcenter{\xymatrix{
 			\clJ\ar[d]\ar[r]^D & \clA \\
@@ -44,7 +44,7 @@ We say that a functor $F : \clA \to \clB$ \emph{commutes with} or \emph{preserve
 	Accessible and presentable categories admit \emph{representation theorems}:
 	\begin{itemize}
 		\item A category $\clC$ is accessible if and only if it is equivalent to the ind\hyp{}completion $\text{Ind}_\kappa(\cate{S})$ of a small category, i.e. to the completion of a small category $\cate{S}$ under  $\kappa$\hyp{}filtered colimits;
-		\item A category $\clC$ is presentable if and only if it is a full reflective subcategory of a category of presheaves $i : \clC \to \Cat(\cate{S}^\op,\Set)$, such that the embedding functor $i$ commutes with $\kappa$\hyp{}filtered colimts.
+		\item A category $\clC$ is presentable if and only if it is a full reflective subcategory of a category of presheaves $i : \clC \to \Qat(\cate{S}^\op,\Set)$, such that the embedding functor $i$ commutes with $\kappa$\hyp{}filtered colimts.
 	\end{itemize}
 \end{definition}
 All categories of usual algebraic structures are (finitely) accessible, and they are locally (finitely) presentable as soon as they are cocomplete; an example of a category which is $\aleph_1$\hyp{}presentable but not $\aleph_0$\hyp{}presentable: the category of metric spaces and short maps.
@@ -70,7 +70,7 @@ We now glance at \emph{topos theory}:
 \end{definition}
 The well-known \emph{Giraud theorem} gives a proof for the difficult implication of the following \emph{recognition principle} for Grothendieck toposes:
 \begin{theorem}
-	Let $\clE$ be a category; then $\clE$ is a Grothendieck topos if and only if it is a left exact reflection of a category $\Cat(\clA^\op,\Set)$ of presheaves on a small category $\clA$.
+	Let $\clE$ be a category; then $\clE$ is a Grothendieck topos if and only if it is a left exact reflection of a category $\Qat(\clA^\op,\Set)$ of presheaves on a small category $\clA$.
 \end{theorem}
 (recall that a \emph{left exact reflection} of $\clC$ is a reflective subcategory $\clR\hookrightarrow \clC$ such that the reflector $r : \clC \to \clR$ preserves finite limits. It is a reasonably easy exercise to prove that a left exact reflection of a Grothendieck topos is again a Grothendieck topos; Giraud proved that all Grothendieck toposes arise this way.)
 \subsection{A little primer on algebraic theories}\label{funsemanzi}
@@ -87,7 +87,7 @@ Every Lawvere theory comes equipped with a functor $p : \cate{Fin}^\op \to \clC$
 			& \cate{Fin}^\op \ar[dr]^q \ar[dl]_p & \\
 			\clL \ar[rr]_h && \clM
 		}\]
-	is commutative. It is evident that $\cate{Law}$ is the subcategory of the undercategory $\cate{Fin^\op}/\Cat$ (see e.g. \cite[I.6]{McL}for a precise definition) made by those functors that preserve finite products.
+	is commutative. It is evident that $\cate{Law}$ is the subcategory of the undercategory $\cate{Fin^\op}/\Qat$ (see e.g. \cite[I.6]{McL}for a precise definition) made by those functors that preserve finite products.
 \end{definition}
 \begin{remark}
 	The category $\textsf{Law}$ has no nonidentity 2-cells; this is a consequence of the fact that a natural transformation $\alpha : h \To k$ that makes the triangle ``commute'', i.e. $\alpha * p = \id_q$ must be the identity on all objects.
@@ -132,7 +132,7 @@ The last technical remark that we collect sheds a light on the discorso prolisso
 \begin{theorem}
 	(\cite[4.6.2]{Bor2}) There is an equivalence between the following two categories:
 	\begin{itemize}
-		\item $\cate{Law}$, regarded as a non-full subcategory of the category $\textsf{Fin}^\op/\Cat$, i.e. where a morphism of Lawvere theories consists of a functor $h : \clL \to \clM$ that preserves finite products;
+		\item $\cate{Law}$, regarded as a non-full subcategory of the category $\textsf{Fin}^\op/\Qat$, i.e. where a morphism of Lawvere theories consists of a functor $h : \clL \to \clM$ that preserves finite products;
 		\item \emph{finitary} monads, i.e. those monads that preserve filtered colimits, and morphisms of monads in the sense of \cite[4.5.8]{Bor2}.
 	\end{itemize}
 \end{theorem}
