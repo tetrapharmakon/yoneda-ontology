@@ -23,13 +23,19 @@
 \end{smallmatrix}%
 \right]%
 }
+
+\newenvironment{xsmallmatrix}[1]
+  {\renewcommand\thickspace{\kern#1}\smallmatrix}
+  {\endsmallmatrix}
 %
 \newcommand{\cvar}[3]{%
+\left[
 \begin{xsmallmatrix}{0em}%
   & #1         \\ 
   #2 & \downarrow \\ 
   & #3%
 \end{xsmallmatrix}%
+\right]
 }
 
 \newcommand{\po}[1][dr]{\save*!/#1+1.5pc/#1:(1,-1)@^{|-}\restore}

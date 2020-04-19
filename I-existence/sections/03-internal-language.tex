@@ -48,7 +48,7 @@
 	\end{itemize}
 \end{definition}
 Universal quantifiers admit an interpretation in the Mitchell-Bénabou language of $\clE$: the following definition comes from \cite[VI]{mac1992sheaves}.
-\begin{definition}
+\begin{definition}\label{quantifezzi}
 	Let $\clE$ be a topos, and let $\varphi : U\times V \to \Omega$ be a formula defined on a product type $U\times V$. The variable $u:U$ can be now quantified over yielding a new formula 
 	\[\forall u.\varphi(u,v) : V \to \Omega\]
 	which no longer contains $u$ as a free variable.
@@ -74,14 +74,35 @@ Examples of universally valid formulas:
 	\item $\clE\Vdash \varphi$ if and only if $\clE \Vdash \forall x.\varphi$
 	\item $\clE\Vdash [\varphi \Rightarrow \lnot\lnot\varphi]$
 \end{itemize}
-% \todo[inline]{Ora facciamo delle considerazioni sul lingo interno di $\Set/I$}
-% Chi sono tipi e termini; chi sono le proposizioni e come si scrive il calcolo proposizionale in $\Set/I$; i quantificatori, in dettaglio pornografico.
+Let us now glance at the internal language of variable sets. This will turn out to be the cornerstone for the analysis in \autoref{sec_coins}.
+
+Here we just unwind \autoref{da_lang} at its very surface; we invite the reader to endeavour in the instructive exercise to fill all details properly.
 \begin{definition}
-	Types and terms of $\clL(\Set/I)$.\todo[inline]{yadda yadda}
+	Types and terms of $\clL(\Set/I)$ are respectively arrows $\var{U}{I}$ with codomain $I$, and commutative triangles 
+	\[\xymatrix{
+		U \ar[rr]^\sigma \ar[dr]_u && X\ar[dl]^x \\
+		&I&
+	}\]
+	Given this, we define 
+	\begin{itemize}
+		\item \emph{product terms} as functions $\sigma : U_1\times_I U_2 \times_I\dots \times_I U_n \to X$;
+		\item terms $\la \sigma,\tau\ra$ obtained as the (diagonal map in the) pullback 
+		\[\xymatrix{
+			W\la \sigma,\tau\ra \pb \ar[d]\ar[r]& X \times_I V \ar[d]\ar@[lightgray]@/^1pc/[ddr]\\ 
+			U \times_I Y \ar[r]\ar@[lightgray]@/_1pc/[drr] & X \times_I Y \ar@[lightgray][dr]\\
+			&&**[r] \color{lightgray} I \times_I I\cong I
+		}\]
+		\item terms $[\sigma=\tau]$, obtained as compositions 
+		\[\xymatrix{ W\la \sigma,\tau\ra \ar[r]^{\la \sigma,\tau\ra} & X \times_I Y \ar[r]^{\delta_X} & \Omega_I }\]
+		where $\delta_X : X \times_I X \to \Omega$ classifies the mono $m : X \to X\times_I X$ obtained by the universal property of the pullback $X\times_I X$ as the kernel pair of $\cvar{X}{x}{I}$.
+	\end{itemize}
+	The cartesian closed structure of $\Set/I$ (cf. \autoref{carclo}) yields terms (we denote $B^A:= A\pitchfork B$ in the notation of \autoref{carclo})
+	\begin{itemize}
+		\item $[\sigma\in\theta] : W\la \theta,\sigma\ra \to Y^X \times_I X \to \Omega_I$ from suitable $\sigma,\theta$;
+		\item $U \to (X\times_I U)^X \xto{\sigma^X} Z^X$ ($\lambda$-abstraction on $x : X$) from a suitable $\sigma : X\times_I U \to Z$.
+	\end{itemize}
 \end{definition}
-\begin{definition}
-	Propositional calculus, quantifiers.\todo[inline]{yadda yadda}
-\end{definition}
+Quantifiers can be deduced in a similar way, starting from their general definition in \autoref{quantifezzi}.
 \begin{remark}
 	Like every other Grothendieck topos, the category $\Set/I$ has a \emph{natural number object} (see \cite[??]{mac1992sheaves}); here we shall outline its construction. It is a general fact that such a natural number object in the category of variable sets, consists of the constant functor on $\bbN : \Set$, when we realise variable sets as functors $I \to \Set$: thus, in fibered terms, the natural number object is just $\pi_I : \bbN \times I \to I$.
 
