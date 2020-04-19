@@ -142,4 +142,18 @@ The last technical remark that we collect sheds a light on the discorso prolisso
 \todo[inline]{ category internal to a finitely complete universe}
 \begin{definition}
 	\label{internista}
+	Let  $\clC$ be a category with finite limits. An \emph{internal category} $\underline{A}$ consists of a pair $(A_0, A_1)$ of objects of $\clC$, endowed with morphisms $s,t,c,i$ as in the following diagram 
+	\[
+	\xymatrix{
+		A_1 \times_{A_0} A_1 \ar[r]|-c \ar@<6pt>[r]^-{p_0}  \ar@<-6pt>[r]_-{p_1} & A_1 \ar@<6pt>[r]^s  \ar@<-6pt>[r]_t & A_0 \ar[l]|i
+	}	
+	\]
+	where $A_1 \times_{A_0} A_1$ is obtained pulling back $s,t$. These data must satisfy the following axioms, resembling the category axioms:
+	\begin{enumtag}{ic}
+		\item $i$ equalises the pair $(s,t)$, i.e. $s\circ i= t\circ i$, and this composition makes the identity $1_{A_0}$;
+		\item $t\circ p_1 = t\circ c$ and $s\circ p_0 = s \circ c$;
+		\item $c\circ\la 1_{A_1},i\circ s\ra = c\circ\la i\circ t, 1_{A_1}\ra$, and this composition makes the identity $1_{A_1}$;
+		\item $c$ is \emph{associative}, i.e. $c \circ (1_{A_1}\times_{A_0} c)= c \circ (c \times_{A_0} 1_{A_1})$.
+	\end{enumtag}
 \end{definition}
+These axioms are meant to re-enact the definition of category, as an abstract ``object of objects'' and ``object of morphisms'', endowed with maps $s,t: A_1 \to A_0$ sending every morphism to its \emph{source} and \emph{target}, with an \emph{identity selector} map $i : A_0 \to A_1$ and with a composition partial binary operation $c : A_1 \times A_1 \to A_1$ whose domain is the object of \emph{composable} arrows. Cf. \cite[8]{Bor1} for a torough discussion.
