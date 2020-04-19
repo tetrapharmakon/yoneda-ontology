@@ -234,9 +234,12 @@
 \makeatother
 
 \tcbuselibrary{most}
-\tcolorboxenvironment{quote}{blanker,
-before skip=10pt,after skip=10pt,
-borderline west={6mm}{5pt}{gray!15}}
+\tcolorboxenvironment{quote}{ blanker
+                            , before skip=10pt
+                            , after skip=10pt
+                            , borderline west={6mm}{5pt}{gray!15}
+                            , breakable
+                            }
 
 \newcommand{\pto}{\mathop{\ooalign{\hfil\kern-2pt$\mapstochar$\hfil\cr\hfil$\to$\hfil}}}
 
