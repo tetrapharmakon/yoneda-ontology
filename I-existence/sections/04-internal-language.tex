@@ -49,18 +49,18 @@
 \end{definition}
 Universal quantifiers admit an interpretation in the Mitchell-Bénabou language of $\clE$: the following definition comes from \cite[VI]{mac1992sheaves}.
 \begin{definition}\label{quantifezzi}
-	Let $\clE$ be a topos, and let $\varphi : U\times V \to \Omega$ be a formula defined on a product type $U\times V$. The variable $u:U$ can be now quantified over yielding a new formula 
+	Let $\clE$ be a topos, and let $\varphi : U\times V \to \Omega$ be a formula defined on a product type $U\times V$. The variable $u:U$ can be now quantified over yielding a new formula
 	\[\forall u.\varphi(u,v) : V \to \Omega\]
 	which no longer contains $u$ as a free variable.
 
-	The term $\forall u.\varphi(u,v)$ is obtained by composition of $\lambda u.\varphi(u,v) : V \to V\to\Omega^U$ with the unique right adjoint $\forall_t : \Omega^U \to \Omega$ to the precomposition $t^*:\Omega \to \Omega^U$\footnote{The arrow $t:U\to 1$ is the \emph{t}erminal map, and $t^* : \Omega^1\to \Omega^U$ is induced by precomposition; it sends a term $x : \Omega$ to the constant function $t^*x=\lambda u.x$.} in the diagram 
+	The term $\forall u.\varphi(u,v)$ is obtained by composition of $\lambda u.\varphi(u,v) : V \to V\to\Omega^U$ with the unique right adjoint $\forall_t : \Omega^U \to \Omega$ to the precomposition $t^*:\Omega \to \Omega^U$\footnote{The arrow $t:U\to 1$ is the \emph{t}erminal map, and $t^* : \Omega^1\to \Omega^U$ is induced by precomposition; it sends a term $x : \Omega$ to the constant function $t^*x=\lambda u.x$.} in the diagram
 	\[\xymatrix{
-		V \ar[r]^{\lambda u.\varphi} & \Omega^U \ar[r]^{\forall_t} & \Omega
-	}\]
-	(see \cite[IV.9]{mac1992sheaves}). Similarly, we obtain a term $\exists u.\varphi(u,v)$ from the composition 
+			V \ar[r]^{\lambda u.\varphi} & \Omega^U \ar[r]^{\forall_t} & \Omega
+		}\]
+	(see \cite[IV.9]{mac1992sheaves}). Similarly, we obtain a term $\exists u.\varphi(u,v)$ from the composition
 	\[\xymatrix{
-		V \ar[r]^{\lambda u.\varphi} & \Omega^U \ar[r]^{\exists_t} & \Omega
-	}\]
+			V \ar[r]^{\lambda u.\varphi} & \Omega^U \ar[r]^{\exists_t} & \Omega
+		}\]
 	with the left adjoint $\exists_t \dashv t$.
 \end{definition}
 Each formula $\varphi : U \to \Omega$ defines a subobject $\{x\mid \varphi\} \subseteq U$ of its domain of definition; this is the subobject classified by $\varphi$, and must be thought as the subobject where ``$\varphi$ is true''.
@@ -78,23 +78,23 @@ Let us now glance at the internal language of variable sets. This will turn out 
 
 Here we just unwind \autoref{da_lang} at its very surface; we invite the reader to endeavour in the instructive exercise to fill all details properly.
 \begin{definition}
-	Types and terms of $\clL(\Set/I)$ are respectively arrows $\var{U}{I}$ with codomain $I$, and commutative triangles 
+	Types and terms of $\clL(\Set/I)$ are respectively arrows $\var{U}{I}$ with codomain $I$, and commutative triangles
 	\[\xymatrix{
-		U \ar[rr]^\sigma \ar[dr]_u && X\ar[dl]^x \\
-		&I&
-	}\]
-	Given this, we define 
+			U \ar[rr]^\sigma \ar[dr]_u && X\ar[dl]^x \\
+			&I&
+		}\]
+	Given this, we define
 	\begin{itemize}
 		\item \emph{product terms} as functions $\sigma : U_1\times_I U_2 \times_I\dots \times_I U_n \to X$;
-		\item terms $\la \sigma,\tau\ra$ obtained as the (diagonal map in the) pullback 
-		\[\xymatrix{
-			W\la \sigma,\tau\ra \pb \ar[d]\ar[r]& X \times_I V \ar[d]\ar@[lightgray]@/^1pc/[ddr]\\ 
-			U \times_I Y \ar[r]\ar@[lightgray]@/_1pc/[drr] & X \times_I Y \ar@[lightgray][dr]\\
-			&&**[r] \color{lightgray} I \times_I I\cong I
-		}\]
-		\item terms $[\sigma=\tau]$, obtained as compositions 
-		\[\xymatrix{ W\la \sigma,\tau\ra \ar[r]^{\la \sigma,\tau\ra} & X \times_I Y \ar[r]^{\delta_X} & \Omega_I }\]
-		where $\delta_X : X \times_I X \to \Omega$ classifies the mono $m : X \to X\times_I X$ obtained by the universal property of the pullback $X\times_I X$ as the kernel pair of $\cvar{X}{x}{I}$.
+		\item terms $\la \sigma,\tau\ra$ obtained as the (diagonal map in the) pullback
+		      \[\xymatrix{
+			      W\la \sigma,\tau\ra \pb \ar[d]\ar[r]& X \times_I V \ar[d]\ar@[lightgray]@/^1pc/[ddr]\\
+			      U \times_I Y \ar[r]\ar@[lightgray]@/_1pc/[drr] & X \times_I Y \ar@[lightgray][dr]\\
+			      &&**[r] \color{lightgray} I \times_I I\cong I
+			      }\]
+		\item terms $[\sigma=\tau]$, obtained as compositions
+		      \[\xymatrix{ W\la \sigma,\tau\ra \ar[r]^{\la \sigma,\tau\ra} & X \times_I Y \ar[r]^{\delta_X} & \Omega_I }\]
+		      where $\delta_X : X \times_I X \to \Omega$ classifies the mono $m : X \to X\times_I X$ obtained by the universal property of the pullback $X\times_I X$ as the kernel pair of $\cvar{X}{x}{I}$.
 	\end{itemize}
 	The cartesian closed structure of $\Set/I$ (cf. \autoref{carclo}) yields terms (we denote $B^A:= A\pitchfork B$ in the notation of \autoref{carclo})
 	\begin{itemize}
