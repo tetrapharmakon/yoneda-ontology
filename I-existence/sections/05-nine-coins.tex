@@ -80,7 +80,7 @@ Jorge Luis Borges' literary work is well-known for being made by paradoxical wor
 
 In the present section we choose \emph{Fictions}, Borges' famous collection of novels, as source of inspiration for possible and impossible worlds and their ontology.
 
-Usualmente la costruzione di un ``mondo impossibile'' (variamente impiegato nelle semantiche paraconsistenti) va circa come segue: since the classic work of Rescher and Brandom [\cite{??}] it is obtained with recursive operations on (kripkean) standard worlds \dots ; noi rovesciamo tale prospettiva, e invece di depennare dal computo degli universi i mondi le cui caratteristiche do not comply with sensorial experience, or imply paradoxical entities/constructs, we accept their existence for bizarre that it may seem, and we try to deduce what kind of logic can consistently generate such statements.
+Usualmente la costruzione di un ``mondo impossibile'' (variamente impiegato nelle semantiche paraconsistenti) va circa come segue: since the classic work of Rescher and Brandom [\cite{10.2307/20127724}] it is obtained with recursive operations on (kripkean) standard worlds \dots ; noi rovesciamo tale prospettiva, e invece di depennare dal computo degli universi i mondi le cui caratteristiche do not comply with sensorial experience, or imply paradoxical entities/constructs, we accept their existence for bizarre that it may seem, and we try to deduce what kind of logic can consistently generate such statements.
 
 The interest in such a literary calembour is manifold, and the results are surprising:
 \begin{itemize}
@@ -128,12 +128,12 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 	\begin{definition}[Admissible coins]
 		We now define an \emph{admissible} configuration of coins any arrangement of $C$ such that the following two conditions are satisfied:
 		\begin{enumtag}{ad}
-			\item for all day $d$ and coin $c$, we have
+			\item \label{ad:uno} for all day $d$ and coin $c$, we have
 			\[
 				\sum_{u\in \{X,Y,Z\}} p(u,c,d) = (\top, 1)
 			\]
 			where we denote as ``sum'' the logical conjunction in $\Omega_I$: this means that day by day, the \emph{global} existence of the group of coins constantly attains the maximum; it is the \emph{local} existence that lowers when the initial conglomerate of coins is partitioned.
-			\item Moreover,
+			\item \label{ad:due} Moreover,
 			\[
 				\begin{cases}
 					\sum_{c_X\in C_X} p(X,c_X,V) = (\top,1) \\
