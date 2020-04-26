@@ -10,18 +10,18 @@ We begin by assessing the equivalence between two different but equivalent descr
 	Let $I$ be a set, regarded as a discrete category, and let $\Set^I$ be the category of functors $F : I \to \Set$; moreover, let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism when a coherent choice of coproduct has been made: see \cite[1.5.1]{Bor1}) between $\Set^I$ and $\Set/I$.
 \end{proposition}
 \begin{proof}
-	Our proof is based on the fact that we can represent the category $\Set^I$ as the category of $I$-indexed families of objects, i.e. with the category whose objects are $(\underline X)_I := \{X_i\mid i\in I\}$, and morphisms $(\underline X)_I\to (\underline Y)_I$ the families $\{f_i : X_i \to Y_i\mid i \in I\}$. Given this, the two categories obviously identify, as a functor $F : I \to \Set$ amounts to a choice of sets $A_i := F(i)$, and functoriality reduces to the property that identity arrows in $I$ go to identity functions $A_i \to A_i$.
+	Our proof is based on the fact that we can represent the category $\Set^I$ as the category of $I$-indexed families of objects, i.e. with the category whose objects are $(\underline X)_I := \{X_i\mid i: I\}$, and morphisms $(\underline X)_I\to (\underline Y)_I$ the families $\{f_i : X_i \to Y_i\mid i : I\}$. Given this, the two categories obviously identify, as a functor $F : I \to \Set$ amounts to a choice of sets $A_i := F(i)$, and functoriality reduces to the property that identity arrows in $I$ go to identity functions $A_i \to A_i$.
 
-	Let us consider an object $h : X\to I$ of $\Set/I$, and define a function $i\mapsto h^\leftarrow(i)$; of course, $(X(h))_I := \{h^\leftarrow(i) \mid i \in I\}$ is a $I$-indexed family, and since $I$ can be regarded as a discrete category, this is sufficient to define a functor $F_h : I \to \Set$.
+	Let us consider an object $h : X\to I$ of $\Set/I$, and define a function $i\mapsto h^\leftarrow(i)$; of course, $(X(h))_I := \{h^\leftarrow(i) \mid i : I\}$ is a $I$-indexed family, and since $I$ can be regarded as a discrete category, this is sufficient to define a functor $F_h : I \to \Set$.
 
-	Let us define a functor in the opposite direction: let $F : I \to \Set$ be a functor. This defines a function $h_F : \coprod_{i\in I}Fi \to I$, where $\coprod_{i\in I} Fi$ is the disjoint union of all the sets $Fi$.
+	Let us define a functor in the opposite direction: let $F : I \to \Set$ be a functor. This defines a function $h_F : \coprod_{i: I}Fi \to I$, where $\coprod_{i: I} Fi$ is the disjoint union of all the sets $Fi$.
 
 	The claim now follows from the fact that the correspondences $h\mapsto F_h$ and $F\mapsto h_F$ are mutually inverse.
 
-	This is easy to verify: the function $F_{h_F}$ sends $i\in I$ to the set $h_F^\leftarrow(i)=Fi$, and the function $h_{F_h} \in \Set/I$ has domain $\coprod_{i\in I}F_h(i) = \coprod_{i\in I}h^\leftarrow(i)=X$ (as $i$ runs over the set $I$, the disjoint union of all preimages $h^\leftarrow(i)$ equals the domain of $h$, i.e. the set $X$).
+	This is easy to verify: the function $F_{h_F}$ sends $i: I$ to the set $h_F^\leftarrow(i)=Fi$, and the function $h_{F_h} : \Set/I$ has domain $\coprod_{i: I}F_h(i) = \coprod_{i: I}h^\leftarrow(i)=X$ (as $i$ runs over the set $I$, the disjoint union of all preimages $h^\leftarrow(i)$ equals the domain of $h$, i.e. the set $X$).
 \end{proof}
 \begin{notation}
-	The present remark is meant to establish a bit of terminology: by virtue of \autoref{variabbo_set} above, an object of the category of variable sets is equally denoted pair $(A,f : A \to I)$, as a function $h : I \to \Set$, or as the family of sets $\{h(i) \mid i \in I\} = \{A_i\mid i\in I\}$. We call the function $f$ the \emph{structure map} of the variable set $A$, and we call the function $F_h$ the functor \emph{associated}, or corresponding, to the variable set in study. Common parlance almost always blurs the distinction between these objects.
+	The present remark is meant to establish a bit of terminology: by virtue of \autoref{variabbo_set} above, an object of the category of variable sets is equally denoted pair $(A,f : A \to I)$, as a function $h : I \to \Set$, or as the family of sets $\{h(i) \mid i : I\} = \{A_i\mid i: I\}$. We call the function $f$ the \emph{structure map} of the variable set $A$, and we call the function $F_h$ the functor \emph{associated}, or corresponding, to the variable set in study. Common parlance almost always blurs the distinction between these objects.
 \end{notation}
 \begin{remark}
 	A more abstract look at this result establishes the equivalence $\Set/I\cong \Set^I$ as a particular instance of the \emph{Grothendieck construction} (see \cite[1.1]{Leinster2004}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \cite[1.1]{Leinster2004}). In this case, the domain $\clC=I$ is a discrete category, hence all functors $\clE \to I$ are, trivially, discrete fibrations.
@@ -38,7 +38,7 @@ We begin by assessing the equivalence between two different but equivalent descr
 		& X\times_I Y \ar[dd]^h \ar@[lightgray][dr]\ar@[lightgray][dl]&  \\
 		{\color{lightgray} X} \ar@[lightgray][dr]_{\color{lightgray} f}&& {\color{lightgray} Y} \ar@[lightgray][dl]^{\color{lightgray} g}\\
 		& I &
-		}}\iff i\mapsto h^\leftarrow(i) = \Big\{(x,y) \in X\times_I Y \mid h(x,y)=i\Big\}\]
+		}}\iff i\mapsto h^\leftarrow(i) = \Big\{(x,y) : X\times_I Y \mid h(x,y)=i\Big\}\]
 	Now, this yields a canonical bijection $h^\leftarrow(i)\cong f^\leftarrow(i)\times g^\leftarrow(i)$. This is exactly the definition of the product of the two associated functors $F_f, F_g : I\to \Set$.
 
 	To complete the proof, we shall show that each functor $\firstblank \times_I Y$ has a right adjoint $Y \pitchfork_I\firstblank$. The functor $\Set^I \to \Set^I : Z\mapsto Y\pitchfork_I Z$ where $Y\pitchfork_I Z : i \mapsto \Set(Y_i, Z_i)$ does the job. This, together with a straightforward verification, sets up the bijection
@@ -83,7 +83,7 @@ We begin by assessing the equivalence between two different but equivalent descr
 	is easily seen to be a pullback; in fact, every morphism of variable sets $\chi_S : A \to \Omega_I$ must send the element $a : A$ to a pair $(i,\epsilon) : I\times \{\perp,\top\}$. The pullback of $\chi$ and $\true$, as defined above, consists of the subset of the product $A\times I$ such that $\chi(a)=\true(i)=(i,\top)$; this defines a variable set $S=(\chi(i,\top))_I$, and such a correspondence is clearly invertible: every variable set arises in this way, and defines a ``characteristic'' function $\chi_S : (A,\cvar{A}{f}{I}) \to (\Omega_I,\pi_I)$:
 	\[\chi_S(a) =
 		\begin{cases}
-			(f(a), \top)  & \text{ if } a\in S    \\
+			(f(a), \top)  & \text{ if } a: S    \\
 			(f(a), \perp) & \text{ if } a\notin S
 		\end{cases}\]
 	This concludes the proof of the fact that $\Set/I$ admits a subobject classifier.
@@ -91,7 +91,7 @@ We begin by assessing the equivalence between two different but equivalent descr
 \begin{remark}
 	A straightforward but important remark is now in order. The structure of subobject classifier of $\Omega_I$, and in particular the shape of a characteristic function $\chi_S : A \to \Omega_I$ for a subobject $S\subseteq A$ in $\Set/I$, is explicitly obtained using the structure map $f$ of the variable set $f : A\to I$.
 
-	This will turn out to be very useful along our main section, where we shall note that a proposition in the internal language of $\Set/I$ amounts to a function $p : U \to \Omega_I$, having as domain a variable set $u : U \to I$, whose structure map uniquely determines the ``strength'' (see \autoref{very_importanta_force}) of the proposition $p$. In a nutshell, $p(x)$ is a truth value in $\Omega_I$; the fact that $p$ is a morphism \emph{of variable sets} however forces this truth value to be $(u(x),\epsilon) \in I\times \{\perp,\top\}$. We invite the baffled reader not to worry now; we will duly justify each of these conceptual steps along \autoref{sec_coins}.
+	This will turn out to be very useful along our main section, where we shall note that a proposition in the internal language of $\Set/I$ amounts to a function $p : U \to \Omega_I$, having as domain a variable set $u : U \to I$, whose structure map uniquely determines the ``strength'' (see \autoref{very_importanta_force}) of the proposition $p$. In a nutshell, $p(x)$ is a truth value in $\Omega_I$; the fact that $p$ is a morphism \emph{of variable sets} however forces this truth value to be $(u(x),\epsilon) : I\times \{\perp,\top\}$. We invite the baffled reader not to worry now; we will duly justify each of these conceptual steps along \autoref{sec_coins}.
 \end{remark}
 \begin{proposition}
 	The category of variable sets is cocomplete and accessible.
@@ -104,7 +104,7 @@ We begin by assessing the equivalence between two different but equivalent descr
 	\[
 		F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)
 	\]
-	(the category of elements \cite{Bor1} $\clE(F)$ of $F:\Set^I$ is small because in this case $\clE(F)\cong\coprod_{i\in I}Fi$).
+	(the category of elements \cite{Bor1} $\clE(F)$ of $F:\Set^I$ is small because in this case $\clE(F)\cong\coprod_{i: I}Fi$).
 \end{proof}
 \begin{corollary}
 	The category of variable sets is a Grothendieck topos.

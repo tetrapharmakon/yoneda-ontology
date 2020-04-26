@@ -93,7 +93,7 @@ Every Lawvere theory comes equipped with a functor $p : \cate{Fin}^\op \to \clC$
 	The category $\textsf{Law}$ has no nonidentity 2-cells; this is a consequence of the fact that a natural transformation $\alpha : h \To k$ that makes the triangle ``commute'', i.e. $\alpha * p = \id_q$ must be the identity on all objects.
 \end{remark}
 \begin{example}[The trivial theories]
-	The category $\cate{Fin}^\op$, opposite to the category of finite sets and functions, is the initial object in the category  $\cate{Law}$; the terminal object is constructed as follows: the category $\clT$ has objects the natural numbers, and $\clT([n],[m])=\{*\}$ for every $n,m\in \bbN$. It is evident that given this definition, there is a unique identity-on-objects functor $\clL \to \clT$ for every other Lawvere theory $(p,\clL)$.
+	The category $\cate{Fin}^\op$, opposite to the category of finite sets and functions, is the initial object in the category  $\cate{Law}$; the terminal object is constructed as follows: the category $\clT$ has objects the natural numbers, and $\clT([n],[m])=\{*\}$ for every $n,m: \bbN$. It is evident that given this definition, there is a unique identity-on-objects functor $\clL \to \clT$ for every other Lawvere theory $(p,\clL)$.
 \end{example}
 \begin{definition}[Model of a Lawvere theory]
 	A \emph{model} for a Lawvere theory $(p ,\clL)$ consists of a product-preserving functor $L : \clL \to \Set$. The subcategory $[\clL,\Set]_\times \subset [\clL, \Set]$ of models of the theory $\clL$ is \emph{full}, i.e. a morphism of models $L \to L'$ consists of a natural transformation $\alpha : L \Rightarrow L'$ between the two functors.
