@@ -84,5 +84,19 @@
 
 \newenvironment{italian}{\color{green!60!black}}{\color{black}}
 
+\newcommand{\dia}[1]{
+\begin{tikzpicture}
+\node[draw,rounded corners=1, thin, inner sep=1pt] {\tiny #1};
+\end{tikzpicture}
+}
+
+\def\S{\dia{S}}
+\def\M{\dia{M}}
+\def\Tu{\dia{Tu}}
+\def\W{\dia{W}}
+\def\Th{\dia{Th}}
+\def\F{\dia{F}}
+\def\Sa{\dia{Sa}}
+
 % \usepackage{fontspec}
 % \newfontfamily{\dev}[Script=Devanagari]{Halant Regular}
