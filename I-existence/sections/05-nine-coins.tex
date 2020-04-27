@@ -67,10 +67,10 @@ In order to aid the reader understand the explicit way in which $I$ ``multiplies
 	endowed with the product order. The resulting poset is partially ordered, and in fact a Heyting algebra, because it results as the product of two Heyting algebras: the Boole algebra $\{0<1\}$ and the frame of open subsets of the Sierpinski space $\{a,b\}$ (the topology is $\tau_S = \{\varnothing, \{a\}, \{a,b\}\}$).
 \end{remark}
 \begin{remark}\label{alcuni_set}
-	Given that $I=[0,1]$ ndowed with its usual Euclidean topology is one of our most natural choices, we explicitly define some interesting sets obtained out of $\Omega_I$ or out of a proposition $p : U \to \Omega_I$ in the Mitchell-Bénabou language of $\Set/[0,1]$:%definiamo alcuni insiemi di interesse per una data proposizione $p : U \to \Omega_I$ per questa scelta di $I$:
+	Given that $I=[0,1]$ endowed with its usual Euclidean topology is one of our most natural choices, we explicitly define some interesting sets obtained out of $\Omega_I$ or out of a proposition $p : U \to \Omega_I$ in the Mitchell-Bénabou language of $\Set/[0,1]$:%definiamo alcuni insiemi di interesse per una data proposizione $p : U \to \Omega_I$ per questa scelta di $I$:
 	\begin{itemize}
 		\item $A^\top = \{x : U \mid p(x) = (1,t_x), t_x > 0\} = p^\leftarrow(\{1\}\times (0,1])$ e $A^\perp = \{x : U \mid p(x) = (0,t_x), t_x > 0\}$; this is the subset of functions $u : U \to I$ such that $u^\leftarrow 0 = \varnothing$.
-		\item $B^\top = \{x : U \mid p(x) = (1,1)\} = p^\leftarrow((1,1))$ and $B^\perp = \{x : U \mid p(x) = (0,1)\}$ ``true''s and ``false''s; these are obtaiend as fibers over the maximal element of $I$.
+		\item $B^\top = \{x : U \mid p(x) = (1,1)\} = p^\leftarrow((1,1))$ and $B^\perp = \{x : U \mid p(x) = (0,1)\}$ ``true''s and ``false''s; these are obtained as fibers over the maximal element of $I$.
 		\item $E_t^\top = \{ x : U \mid p(x)=(1,t)\}$ e $E_t^\perp = \{ x : U \mid p(x)=(0,t)\}$.
 	\end{itemize}
 \end{remark}
@@ -82,11 +82,11 @@ In the present section we choose \emph{Fictions}, Borges' famous collection of n
 
 Borges' work generates ``impossible worlds'': the term as it is is used in various ways in paraconsistent semantics since the classic work of Rescher and Brandom \cite{10.2307/20127724}, where worlds are obtained starting from ``possible'' ones, through recursive operations on standard Kripkean worlds.
 
-Here we claim that interesting consequences stem from reversing this perspective: instead of removing from the realm of possibility those worlds that do not comply with sensorial experience tagging them as ``impossible'', we accept their existence, for bizarre that it may seem, and we try to deduce \emph{from their very existence} a kind of logic that can consistently generate them.
+Here we claim that interesting consequences stem from reversing this perspective: instead of removing from the realm of possibility those worlds that do not comply with sensory experience tagging them as ``impossible'', we accept their existence, for bizarre that it may seem, and we try to deduce \emph{from their very existence} a kind of logic that can consistently generate them.
 
 The results of our analysis are surprising:
 \begin{itemize}
-	\item we unravel how a mathematically deep universe Borges has inadvertedly created: of the many compromises we had to take in order to reconcile literature and the uniderlying mathematics,\footnote{See \autoref{our_beloved_interval} below: these ``compromises'' mainly amount to assumptions on the behaviour of space-time on Tl\"on and Babylon.} we believe no one is particularly far-fetched one;
+	\item we unravel how a mathematically deep universe Borges has inadvertently created: of the many compromises we had to take in order to reconcile literature and the underlying mathematics,\footnote{See \autoref{our_beloved_interval} below: these ``compromises'' mainly amount to assumptions on the behaviour of space-time on Tl\"on and Babylon.} we believe no one is particularly far-fetched one;
 	\item we unravel how \emph{relative} ontological assumptions are; they are not given: using category theory, ontology, far from being the presupposition on which it is based, is a byproduct of language itself. The more expressive language is, the more ontology; the fuzzier its capacity to assert truth, the fuzzier existence becomes;
 	\item ``Fuzziness'' of existence, i.e. the fact \emph{entia} exist less than completely, is hard-coded in the language (in the sense of \autoref{da_lang}) of the category we decide to work in from time to time;
 \end{itemize}
@@ -115,11 +115,11 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 	\begin{remark}\label{our_beloved_interval}
 		In this perspective, Tl\"on classifier of truth values can be taken as $\Omega_I = \{0<1\}\times I$, where $I$ is any set with more than one element; a minimal example can be $I=\{N,S\}$ (justifying this choice from inside Tl\"on is easy: the planet is subdivided into two emispheres; each of which now has its own logic ``line'' independent from the other), but as explained in \autoref{our_beloved_interval} a more natural choice for our purposes is the closed real interval $I=[0,1]$.
 
-		This allows for a continuum of possible forces with which a truth value can be true or false;  it is tobe noted that $[0,1]$ is also the most natural place on which to interpret fuzzy logic, albeit the interest for $[0,1]$ therein can be easily and better motivated starting from probability theory. (There are interesting perspective on how to develop basic measure theory out of $[0,1]$. For example, measures valued in things like Banach space and more general topological	vector spaces have been considered.)
+		This allows for a continuum of possible forces with which a truth value can be true or false;  it is to be noted that $[0,1]$ is also the most natural place on which to interpret fuzzy logic, albeit the interest for $[0,1]$ therein can be easily and better motivated starting from probability theory. (There are interesting perspective on how to develop basic measure theory out of $[0,1]$. For example, measures valued in things like Banach space and more general topological	vector spaces have been considered.)
 	\end{remark}
 	We now start to formalise properly what we said until now. To set our basic assumptions straight, we proceed as follows:
 	\begin{itemize}
-		\item Without loss of generality, we can assume the set $C = \{c_1,\dots,c_9\}$ of the nine coins to be totally orered and partitioned in such a way that the first two coins are those retrieved by $X$ on Tuesday, the subsequent four are those found by $Y$ on their way, and the other three are those seen by$Z$. So,
+		\item Without loss of generality, we can assume the set $C = \{c_1,\dots,c_9\}$ of the nine coins to be totally ordered and partitioned in such a way that the first two coins are those retrieved by $X$ on Tuesday, the subsequent four are those found by $Y$ on their way, and the other three are those seen by$Z$. So,
 		      \[C = C_X \sqcup C_Y \sqcup C_Z.\]
 		      and $C_X = \{c_{X1}, c_{X2}\}$, $C_Y = \{c_{Y1},c_{Y2},c_{Y3},c_{Y4}\}$, $C_Z= \{c_{Z1}, c_{Z2}, c_{Z3}\}$ As already said, the truth multiplier $I$ is the closed interval $[0,1]$ with its canonical order --so with its canonical structure of Heyting algebra, and if needed, endowed with the usual topology inherited by the real line.
 		\item Propositions of interest for us are of the following form:
@@ -163,7 +163,7 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 				\node[fill=gray!60] (cloud) at (1/4,1/2) {\large\color{black} \faCloud};
 				\draw[thick] (0,0) rectangle (1,1);
 			\end{tikzpicture}
-			\caption{A pictorial representation of the truth forces of coins in different days; we choose a minimally complex, piecewise linear model where strength of existence goes up and down linearly to join the points where \cite{tlonEN} gives complete information about the coins' configuration. $X$ is marked in red, $Z$ in yellow, $Y$ in blue. Time is considered as a continuum line, marked at weekdays for readability.}
+			\caption{A pictorial representation of the truth forces of coins in different days; we choose a minimally complex, piece-wise linear model where strength of existence goes up and down linearly to join the points where \cite{tlonEN} gives complete information about the coins' configuration. $X$ is marked in red, $Z$ in yellow, $Y$ in blue. Time is considered as a continuum line, marked at weekdays for readability.}
 			\label{fig_coins}
 		\end{figure}
 	\end{center}
@@ -185,7 +185,7 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 \begin{remark}[Continuity for a proposition]\label{continuiti}
 	Let $p : U \to \Omega_I$ be a proposition; here we investigate what does it mean for $p$ to be (globally) continuous with respect to the Euclidean topology on $I=[0,1]$, in the assumption that its domain of definition $U$ is metrisable (this is true for example when $U$ is a subset of space-time). The condition is that
 	\[ \forall \epsilon > 0,\,\exists \delta > 0 : |x-y|< \delta \To |px-py| < \epsilon \]
-	Da questo segue immediatamente che quando $p$ è continua nel suo dominio, i valori di verità di $p$ in configurazioni ``vicine'' in un senso opportuno sono dati con forze allo stesso modo vicine (chiaramente questa è una descrizione spannometrica della nozione di continuità\dots).
+	In layman terms: $p$ is continuous on its domain of definition if its strength over nearby events can't change dramatically.
 
 	All elementary topology results apply to such a proposition: for example the set of forces with which $p$ is true or false is a connected subset of $\Omega_I$, compact if $U$ was compact.
 \end{remark}
@@ -242,7 +242,7 @@ Another compelling example is that of the monotonicity of a proposition dependin
 \end{example}
 A last, somewhat dramatic example. What happens if we change topology on $I$? For example, we could brutally forget the Euclidean topology of the closed interval $[0,1]$, and regard $I$ as the disjoint union $\{ \{t\} \mid t: [0,1]\}$ of its points; so, the subobject classifier becomes the disjoint union of $[0,1]$ copies of $\{\perp,\top\}$. (See \autoref{fig:berkeley} below for a picture.)
 \begin{example}[Burning fields at the horizon]\label{incendiata}
-	The main tenet of the present paragraph is that Berkeley idealism of infinite and disconnected instants of time finds a natural home in our framework if the classifier is chosen to be the object $\Omega_I = \coprod_{t : [0,1]} \{ \perp,\top\}$. Such a peculiar logical framework allows for language to be reshaped in light of berkeleyan instantaneism: the various terms of the perceptual bundle are recorded and stockpiled by instantaneous accretion, by disjoint sum of their constituents. This is exactly what happens on Tl\"on for words like ``round airy-light on dark'' or ``pale-orange-of-the-sky''; objects are determined by their simultaneity, instead of their logical dependence: accretion superimposes fictitious meaning on a temporal sequence; it is just an illusion, a mistake of perception tricked into an illicit interpolation.
+	The main tenet of the present paragraph is that Berkeley idealism of infinite and disconnected instants of time finds a natural home in our framework if the classifier is chosen to be the object $\Omega_I = \coprod_{t : [0,1]} \{ \perp,\top\}$. Such a peculiar logical framework allows for language to be reshaped in light of Berkeleyan instantaneism: the various terms of the perceptual bundle are recorded and stockpiled by instantaneous accretion, by disjoint sum of their constituents. This is exactly what happens on Tl\"on for words like ``round airy-light on dark'' or ``pale-orange-of-the-sky''; objects are determined by their simultaneity, instead of their logical dependence: accretion superimposes fictitious meaning on a temporal sequence; it is just an illusion, a mistake of perception tricked into an illicit interpolation.
 	\begin{quote}
 		\hspace{.5em} Spinoza ascribes to his inexhaustible divinity the attributes of extension and thought; no one in Tlön would understand the juxtaposition of the first (which is typical only of certain states) and the second - which is a perfect synonym of the cosmos. In other words, they do not conceive that the spatial persists in time. The perception of a cloud of smoke on the horizon and then of the burning field and then of the half-extinguished cigarette that produced the blaze is considered an example of association of ideas.   \hfill\cite{tlonEN}
 	\end{quote}
