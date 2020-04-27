@@ -2,7 +2,7 @@
 \epigraph{
 	Explicaron que una cosa es \emph{igualdad}, y otra \emph{identidad}, y formularon una especie de \emph{reductio ad absurdum}, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches padecen un vivo dolor. ¿No sería ridículo -interrogaron- pretender que ese dolor es el mismo?
 }{JLB ---Tl\"on, Uqbar, Orbis Tertius}
-
+\subsection{Choosing an internal logic}
 According to our description of the Mitchell-Bénabou language in the category of variable sets, \emph{propositions} are morphisms of the form
 \[p : U \to \Omega_I\]
 
@@ -76,18 +76,19 @@ In order to aid the reader understand the explicit way in which $I$ ``multiplies
 \end{remark}
 A crucial decision at some point will be about the regularity with which the strength of $p$ depends with respect to the variables on its domain of definition. Without a continuous dependence, small changes in context $x : U$ might drastically change the truth value $p(x)$.\footnote{There is no a priori reason to maintain that $p$ is a continuous proposition; one might argue that discontinuous changes in truth value of $p$ happen all the time in ``real life''; see the family of paradoxes based on so-called \emph{separating instants}: how well-defined the notion of ``time of death'' is? How well-defined the notion of ``instant in time''?}
 \subsection{The unimaginable topos theory hidden in Borges' library}
-Jorge Luis Borges' literary work is well-known for being made by paradoxical worlds; oftentimes, seemingly absurd consequences follow by stretching to their limit ideas from logic and mathematics: time, infinite, self-referentiality, duplication, recursion, the relativity of time, the illusory nature of our perceptions, the limits of language, its capacity to generate worlds.
+Jorge Luis Borges' literary work is well-known to host paradoxical worlds; oftentimes, seemingly absurd consequences follow by stretching ideas from logic and mathematics to their limits: time, infinity, self-referentiality, duplication, recursion, the relativity of time, the illusory nature of our perceptions, eternity as a curse, the limits of language, and its capacity to generate worlds.
 
 In the present section we choose \emph{Fictions}, Borges' famous collection of novels, as source of inspiration for possible and impossible worlds and their ontology.
 
-Usualmente la costruzione di un ``mondo impossibile'' (variamente impiegato nelle semantiche paraconsistenti) va circa come segue: since the classic work of Rescher and Brandom [\cite{10.2307/20127724}] it is obtained with recursive operations on (kripkean) standard worlds \dots ; noi rovesciamo tale prospettiva, e invece di depennare dal computo degli universi i mondi le cui caratteristiche do not comply with sensorial experience, or imply paradoxical entities/constructs, we accept their existence for bizarre that it may seem, and we try to deduce what kind of logic can consistently generate such statements.
+Borges' work generates ``impossible worlds'': the term as it is is used in various ways in paraconsistent semantics since the classic work of Rescher and Brandom \cite{10.2307/20127724}, where worlds are obtained starting from ``possible'' ones, through recursive operations on standard Kripkean worlds.
 
-The interest in such a literary calembour is manifold, and the results are surprising:
+Here we claim that interesting consequences stem from reversing this perspective: instead of removing from the realm of possibility those worlds that do not comply with sensorial experience tagging them as ``impossible'', we accept their existence, for bizarre that it may seem, and we try to deduce \emph{from their very existence} a kind of logic that can consistently generate them.
+
+The results of our analysis are surprising:
 \begin{itemize}
-	\item we unravel how a mathematically deep universe Borges has inadvertently created: of the many compromises we had to take in order to reconcile literature and the uniderlying mathematics,\footnote{See \autoref{our_beloved_interval} below: these ``compromises'' mainly amount to assumptions on the behaviour of space-time on Tl\"on and Babylon.} we believe no one is particularly far-fetched one;
+	\item we unravel how a mathematically deep universe Borges has inadvertedly created: of the many compromises we had to take in order to reconcile literature and the uniderlying mathematics,\footnote{See \autoref{our_beloved_interval} below: these ``compromises'' mainly amount to assumptions on the behaviour of space-time on Tl\"on and Babylon.} we believe no one is particularly far-fetched one;
 	\item we unravel how \emph{relative} ontological assumptions are; they are not given: using category theory, ontology, far from being the presupposition on which it is based, is a byproduct of language itself. The more expressive language is, the more ontology; the fuzzier its capacity to assert truth, the fuzzier existence becomes;
 	\item ``Fuzziness'' of existence, i.e. the fact \emph{entia} exist less than completely, is hard-coded in the language (in the sense of \autoref{da_lang}) of the category we decide to work in from time to time;
-	\item ...
 \end{itemize}
 To sum up, readers willing to find an original result in this paper, might find it precisely here: we underline how Borges' alternative worlds (Babylon, Tl\"on \ dots) are mathematically consistent places, worthy of existence as much as our world, just based on a different internal logic. And they are so just thanks to a base-sensitive theory of existence --ontology breaks in a spectrum of ontolog\emph{ies}, one for each category/world.
 
@@ -123,7 +124,7 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 		      and $C_X = \{c_{X1}, c_{X2}\}$, $C_Y = \{c_{Y1},c_{Y2},c_{Y3},c_{Y4}\}$, $C_Z= \{c_{Z1}, c_{Z2}, c_{Z3}\}$ As already said, the truth multiplier $I$ is the closed interval $[0,1]$ with its canonical order --so with its canonical structure of Heyting algebra, and if needed, endowed with the usual topology inherited by the real line.
 		\item Propositions of interest for us are of the following form:
 		      \[\lambda gcd.p(g, c, d) : \{X,Y,Z\}\times C\times W \to \Omega_I\]
-		      where $W \subseteq \{\S,\M,\Tu,\W, \Th,\F,\Sa\}$ is a set of days (strictly speaking, the paradox involves just the interval $[\Tu,\F]$). The value $p(g,c,d)$ models how in $g$'s frame of existence the coin $c$ exists at day $d$ with strength $p(g,c,d)$.
+		      where $W \subseteq \{\S,\M,\Tu,\W, \Th,\F,\Sa\}$ is a set of days (strictly speaking, the paradox involves just the interval between \Tu (Tuesday) and \F (Friday). The value $p(g,c,d)$ models how in $g$'s frame of existence the coin $c$ exists at day $d$ with strength $p(g,c,d)$.
 	\end{itemize}
 	\begin{definition}[Admissible coins]
 		We now define an \emph{admissible} configuration of coins any arrangement of $C$ such that the following two conditions are satisfied:
