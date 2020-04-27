@@ -8,7 +8,7 @@ Precise references for the basic definitions can be found
 \begin{itemize}
 	\item for the definition of category, functor, and natural transformation, in \cite[1.2.1]{Bor1}, \cite[I.2]{McL}, \cite[1.2.2]{Bor1}, \cite[I.3]{McL}, \cite[1.3.1]{Bor1}.
 	\item The Yoneda lemma is stated as \cite[1.3.3]{Bor1}, \cite[III.2]{McL}.
-	\item For the definition of co/limit and adjunction, in \cite[2.6.2]{Bor1}, \cite[III.3]{McL}, \cite[2.6.6]{Bor1}, \cite[III.4]{McL}.
+	\item For the definition of co/limit and adjunction, in \cite[2.6.2]{Bor1}, \cite[III.3]{McL}, \cite[2.6.6]{Bor1}, \cite[III.4]{McL} (consider in particular the definitions of \emph{pullback}, \emph{product}, \emph{terminal object}).
 	\item For the definition of accessible and locally presentable category in \cite[5.3.1]{Bor2}, \cite[5.2.1]{Bor2}, \cite{Adamek1994}.%, \cite[]{}.
 	\item Basic facts about ordinal and cardinal numbers can be found in \cite{kunen}; another comprehensive reference on basic and non-basic set theory is \cite{jech2013set}.
 	\item The standard source for Lawvere functorial semantics is Lawvere's PhD thesis \cite{lawvere1963functorial}; more modern accounts are \cite{hyland2007category}.
@@ -75,7 +75,7 @@ The well-known \emph{Giraud theorem} gives a proof for the difficult implication
 (recall that a \emph{left exact reflection} of $\clC$ is a reflective subcategory $\clR\hookrightarrow \clC$ such that the reflector $r : \clC \to \clR$ preserves finite limits. It is a reasonably easy exercise to prove that a left exact reflection of a Grothendieck topos is again a Grothendieck topos; Giraud proved that all Grothendieck toposes arise this way.)
 \subsection{A little primer on algebraic theories}\label{funsemanzi}
 The scope of this short subsection is to collect a reasonably self-contained account of functorial semantics. It is unrealistic to aim at such a big target as providing a complete account of it in a single appendix; the reader is warmly invited to parallel their study with more classical references as \cite{lawvere1963functorial}.
-\begin{definition}[Lawvere theory]
+\begin{definition}[Lawvere theory]\label{lo_tiori}
 	A \emph{Lawvere theory} is a category having objects the natural numbers, and where the sum on natural numbers has the universal property of a categorical product, as defined e.g. in \cite[2.1.4]{Bor1}.
 \end{definition}
 Let us denote $[n]$ the typical object of $\clL$. Unwinding the definition, we deduce that in a Lawvere theory $\clL$ the sum of natural numbers $[n+m]$ is equipped with two morphisms $[n] \leftarrow [n+m] \to [m]$ exhibiting the universal property of the product.
@@ -156,3 +156,4 @@ The last technical remark that we collect sheds a light on the discorso prolisso
 	\end{enumtag}
 \end{definition}
 These axioms are meant to re-enact the definition of category, as an abstract ``object of objects'' and ``object of morphisms'', endowed with maps $s,t: A_1 \to A_0$ sending every morphism to its \emph{source} and \emph{target}, with an \emph{identity selector} map $i : A_0 \to A_1$ and with a composition partial binary operation $c : A_1 \times A_1 \to A_1$ whose domain is the object of \emph{composable} arrows. Cf. \cite[8]{Bor1} for a torough discussion.
+It has to be noted however that the theory of categories is \emph{not} an algebraic theory in the sense of our \autoref{lo_tiori}, and this just because the composition operation is only \emph{partially} defined over the domain of composable arrows, i.e. on the pullback $A_1\times_{A_0} A_1$. Theories whose syntax allows for a number of partially defined relation and function symbol are termed \emph{essentially algebraic}. See \cite{Adamek1994} for a torough discussion of the topic.
