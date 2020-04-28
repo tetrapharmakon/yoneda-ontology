@@ -29,14 +29,21 @@ As it is currently organised, our work will attempt to cover the following topic
 	\item A third chapter \cite{homot}, currently in preparation, addresses again the problem of identity, but this time through the lens of algebraic topology; in recent years homotopy theory defied a well\hyp{}established ontological assumptions such as the identity principle; the many commonalities between category theory and homotopy theory suggest that ``identity'' is not a primitive concept, but instead depends on our concrete representation of mathematical entities. When $X,Y$ are objects in a category $\clC$, there is often a class of ``equivalences'' $W \subseteq \hom(\clC)$ prescribing that $X,Y$ shouldn't be distinguished; equality (better, some sort of homotopy \emph{equivalence}) is then defined \emph{ex post} in terms of $W$, changing as the ambient category $\clC$ does; this yields a $W$-parametric notion of identity $\equiv_W$, allowing categories to be categorified versions of \emph{Bishop sets}, i.e. pairs $(S,\rho)$ where $\rho$ is an equivalence relation on $S$ prescribing a $\rho$-equality.
 \end{itemize}
 \subsection{On our choice of meta-theory and foundation}
-During '900 the direction of the evolution of mathematics brought the discipline to divide in different sub-disciplines at first, with their own specific objects and languages, to then find unexpected unification under a one an only notion, the notion of \emph{structure}, using the formal tool that has best characterized the concept, the \emph{categories}. This process has spontaneously led to epistemological revision of mathematics and has inspired, in the development of operational tools, a revision of both his foundations and his ontology. For many scholars is undeniable that
+During '900 the direction of the evolution of mathematics brought the discipline
+to divide in different sub-disciplines at first, with their own specific objects
+and languages, to then find unexpected unification under a one and only notion,
+the notion of \emph{structure}, using the formal tool that has best
+characterized the concept, the \emph{categories}. This process has spontaneously
+led to epistemological revision of mathematics and has inspired, in the
+development of operational tools, a revision of both its foundations and its ontology. For many scholars is undeniable that
 
 \begin{quote}
 	[the] mathematical uses of the tool \CT and epistemological
 	considerations having \CT as their object cannot be separated, neither historically
 	nor philosophically. \cite{kromer2007tool}
 \end{quote}
-The mathematical practice in the structuralist way produces a "natural" ontology, that same, later, felt the need to characterized more precisely. After all, similarly to what Carnap \footnote{Some words that philosophers should keep in mind, on the lawfulness of the use of abstract entities (specifically mathematical) in semantic reflection, also valid in ontology:
+The mathematical practice in the structuralist way produces a "natural"
+ontology which, later, felt the need to characterized more precisely. After all, similarly to what Carnap \footnote{Some words that philosophers should keep in mind, on the lawfulness of the use of abstract entities (specifically mathematical) in semantic reflection, also valid in ontology:
 	\begin{quote}
 		we take the position that the introduction of the new ways of speaking does not need any theoretical justification because it does not imply any assertion of reality [...].  it is a practical, not a theoretical question; it is the question of whether or not to accept the new linguistic forms. The acceptance cannot be judged as being either true or false because it is not an assertion. It can only be judged as being more or less expedient, fruitful, conducive to the aim for which the language is intended. Judgments of this kind supply the motivation for the decision of accepting or rejecting the kind of entities. \hfill \cite{carnap1956meaning}
 	\end{quote}} suggested regarding semantics,
@@ -46,7 +53,8 @@ The mathematical practice in the structuralist way produces a "natural" ontology
 \end{quote}
 Beyond the attempts (ever those of Bourbaki group), what matter is that the habit of reasoning in terms of structure has suggested implicit epistemological and ontological attitudes. This matter would deserve an exhausting independent inquiry.
 
-For our objectives it's enough to declare a differentiation that Kr\"omer elaborate, inspired by \cite{Cor96}: the difference between \emph{structuralism} and \emph{structural mathematics}:
+For our objectives it's enough to declare a differentiation that Kr\"omer
+elaborated, inspired by \cite{Cor96}: the difference between \emph{structuralism} and \emph{structural mathematics}:
 \begin{enumtag}{s}
 	\item \label{s:uno} Structuralism: \textit{the philosophical
 		position regarding structures as the subject matter of mathematics}
@@ -56,9 +64,12 @@ For our objectives it's enough to declare a differentiation that Kr\"omer elabor
 \begin{remark} \label{weak_structuralism}
 	Of course, \ref{s:uno} implies \ref{s:due} but the opposite is not always true.
 
-	That is, one can do structural mathematics without being structuralists; that is, taking different, or even opposite, positions with respect to structuralism itself. That it has often come spontaneously to embrace this position in the theoretical reflection in the recent history of mathematics is quite different (the "natural" ontology).
+	That is, one can do structural mathematics without being a structuralist; that is, taking different, or even opposite, positions with respect to structuralism itself. That it has often come spontaneously to embrace this position in the theoretical reflection in the recent history of mathematics is quite different (the "natural" ontology).
 
-	The use of \theory{CT} as meta-language, despite the historical link with structuralism, it doesn't nevertheless make automatic the transition from \ref{s:due} to  \ref{s:uno}, but suggests that the ontology is not only dependent to "ideology" (in Quinean sense) of the theory, namely it expressive power, but is influenced by the epistemological model inspired by use of formal language itself.
+	The use of \theory{CT} as meta-language, despite the historical link with
+    structuralism, doesn't nevertheless make automatic the transition from
+    \ref{s:due} to  \ref{s:uno}, but suggests that the ontology is not only
+    dependent on "ideology" (in Quinean sense) of the theory, namely it expressive power, but is influenced by the epistemological model inspired by use of formal language itself.
 \end{remark}
 The usefulness of Kr\"omer's distinction, however, is another: instead of stumbling in a possibly not ambiguous definition of \textit{structure} (with the unwanted consequences that could arise in the operational practice), the philosophy \ref{s:uno} can be reduce (or redefine) to the methodology \ref{s:due}, saying that:
 
@@ -67,17 +78,20 @@ The usefulness of Kr\"omer's distinction, however, is another: instead of stumbl
 		is essentially structural mathematics} \cite{kromer2007tool}
 \end{quote}
 
-(the operative practice that "intervenes" in definition of structuralism avoid the decade-long debate of the humanities on this concepts).
+(the operative practice that "intervenes" in the definition of structuralism avoids the decade-long debate of the humanities on this concepts).
 
 
 This is the same thing as saying: the structural practice is its philosophy itself.
 
-The historical attempts of explaining the term "structure" by Bourbaki in the years following publication of the \textit{Elements des Mathématiques}, had the first systematic elaboration of a philosophy that could accorded with rate of success of \textit{structural mathematics}. His target it is to "\textit{assembling of all possible ways in which given set can be endowed with certain structure}" \cite{kromer2007tool}, and to do so elaborate, in the programmatic paper \textit{The Architecture of Mathematics} (written by Dieudonné alone), published in 1950, a formal strategy. While specifying that "\textit{this definition is not sufficiently general for the needs of mathematics}" \cite{Bourb50}, he codifies a series of operational steps through which a structure on set is "assembled set-theoretically". Adopting therefore a reductionist perspective in which
+The historical attempts of explaining the term "structure" by Bourbaki in the
+years following publication of the \textit{Elements des Mathématiques}, had the
+first systematic elaboration of a philosophy that could accorded with rate of
+success of \textit{structural mathematics}. Its target is to "\textit{assembling of all possible ways in which given set can be endowed with certain structure}" \cite{kromer2007tool}, and to do so elaborate, in the programmatic paper \textit{The Architecture of Mathematics} (written by Dieudonné alone), published in 1950, a formal strategy. While specifying that "\textit{this definition is not sufficiently general for the needs of mathematics}" \cite{Bourb50}, he codifies a series of operational steps through which a structure on set is "assembled set-theoretically". Adopting therefore a reductionist perspective in which
 
 \begin{quote}
 	the structureless sets are the raw material of structure building which in Bourbaki’s analysis is ``unearthed'' in a quasi-archaeological, reverse manner; they are the most general objects which can, in a rewriting from scratch of mathematics, successively be endowed with ever more special and richer structures.\hfill  \cite{kromer2007tool}
 \end{quote}
-On balance in the Bourbaki's structuralism the notion of \emph{set} doesn't disappear definitively in front of the notion of structure. The path towards an ``integral'' structuralism was still long.
+On balance in Bourbaki's structuralism the notion of \emph{set} doesn't disappear definitively in front of the notion of structure. The path towards an ``integral'' structuralism was still long.
 
 In his influential paper \cite{lajolla} William Lawvere proposes a foundation of mathematics based on category theory. To appreciate the depth and breadth of such an impressive piece of work, however, the word ``foundation'' must be taken in the particular sense intended by mathematicians:
 \begin{quote}
