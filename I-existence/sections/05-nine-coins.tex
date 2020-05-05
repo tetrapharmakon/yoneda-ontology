@@ -30,7 +30,7 @@ The set $I$ in this context acts as a \emph{multiplier} of truth values, in that
 	(it must be a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the "variable domain" $U$. This is an important observation: the strength with which $p$ is true/false is completely determined by the structure of its domain, in the form of the function $u : U \to I$ that renders the pair $(U,u)$ an object of $\Set/I$.
 \end{remark}
 \begin{remark}\label{something_on_I}
-To get a grip of the different roles of various classes of propositions, and given that our interest will be limited to a certain class of particular propositions that we will construct \emph{ex nihilo}, it is now convenient to discuss what constraints we have to put on the structure of $I$: of course, the richest this structure is, the better will the category $\Set/I$ behave: it is for example possible to equip $I$ with an order structure, or a natural topology. Among different choices of truth multiplier, yielding different categories of variable sets, and different kinds of internal logic therein, we will privilege those that make $I$ behave like a space of strengths: a dense, linear order with LUP, thus not really far from being a closed, bounded subset of the real line.\footnote{There is another more philosophical reason for this assumption, that will appear clear throughout the section: density of $I$ is meant to allow intersubjective concordance between two interlocutors $X$ and $Y$. When forced in a debate on existence of the coins, they might diagree about the degree of existence of some of them; the assumption that $I$ is a dense order makes it possible to always find an intermediate strength between the one $p_X$, assigned by $X$, and the one $p_Y$ assigned by $Y$ to the same set of coins, as there must be a third truth value $z$ lying between the two.}
+	To get a grip of the different roles of various classes of propositions, and given that our interest will be limited to a certain class of particular propositions that we will construct \emph{ex nihilo}, it is now convenient to discuss what constraints we have to put on the structure of $I$: of course, the richest this structure is, the better will the category $\Set/I$ behave: it is for example possible to equip $I$ with an order structure, or a natural topology. Among different choices of truth multiplier, yielding different categories of variable sets, and different kinds of internal logic therein, we will privilege those that make $I$ behave like a space of strengths: a dense, linear order with LUP, thus not really far from being a closed, bounded subset of the real line.\footnote{There is another more philosophical reason for this assumption, that will appear clear throughout the section: density of $I$ is meant to allow intersubjective concordance between two interlocutors $X$ and $Y$. When forced in a debate on existence of the coins, they might diagree about the degree of existence of some of them; the assumption that $I$ is a dense order makes it possible to always find an intermediate strength between the one $p_X$, assigned by $X$, and the one $p_Y$ assigned by $Y$ to the same set of coins, as there must be a third truth value $z$ lying between the two.}
 \end{remark}
 The main result of the present section is a roundup of examples showing that it is possible to concoct categories of variable sets where some seemingly paradoxical constructions coming from J.L. Borges' literary world have, instead, a perfectly ``classical'' behaviour when looked with the lenses of the logic of variable set theory.
 
@@ -38,24 +38,24 @@ Each of the examples in our roundup \autoref{bla}, \ref{bli}, \ref{blu} is organ
 
 More than often, we use $I=[0,1]$ as base of variable sets; as already said, there are different reasons for this choice: the most intuitive is that if a truth value is given with a \emph{strength} $t: I$ it is a natural request to be able to \emph{compare} elements in this set; in particular, it should always be possible to assess what truth value is stronger.
 
-For this reason, even if this assumption is never strictly necessary (the only constraint is that $I$ is totally, or partially, ordered set by a relation $\le$), a natural choice for $I$ is a \emph{continuum} (=a dense total order with LUP --see \cite{moschovakis2009descriptive}). An alternative choice drops the density assumption: in that case the (unique) finite total order $\Delta[n] = \{0 < 1 <\dots < n\}$, or the countable total order $I=\omega = \bigcup_n \Delta[n]$ are all pretty natural choices for $I$ (although it is way more natural for $I$ to have a minimum \emph{and} a maximum element).\footnote{We're only interested in the notion of an abstract interval here: a continuum $X$ endowed with an operation $X \to X \vee X$ of ``zooming'', uniquely defined by this property. In a famous paper Freyd characterises ``the interval'' as the terminal interval coalgebra: see \cite[§1]{freyd2008algebraic}; for our purposes, note that $[0,1]$ is a natural choice: it is a frame, thus a Heyting algebra $\fkH =([0,1],\land,\lor,\Rightarrow)$ with respect to the pseudo-complement operation given by $(x \Rightarrow z) := \bigvee_{x\land y \le z} y$ (it is immediate that $x \land a \le b$ if and only if $a \le x \Rightarrow b$ for every $a,b: [0,1]$).} 
+For this reason, even if this assumption is never strictly necessary (the only constraint is that $I$ is totally, or partially, ordered set by a relation $\le$), a natural choice for $I$ is a \emph{continuum} (=a dense total order with LUP --see \cite{moschovakis2009descriptive}). An alternative choice drops the density assumption: in that case the (unique) finite total order $\Delta[n] = \{0 < 1 <\dots < n\}$, or the countable total order $I=\omega = \bigcup_n \Delta[n]$ are all pretty natural choices for $I$ (although it is way more natural for $I$ to have a minimum \emph{and} a maximum element).\footnote{We're only interested in the notion of an abstract interval here: a continuum $X$ endowed with an operation $X \to X \vee X$ of ``zooming'', uniquely defined by this property. In a famous paper Freyd characterises ``the interval'' as the terminal interval coalgebra: see \cite[§1]{freyd2008algebraic}; for our purposes, note that $[0,1]$ is a natural choice: it is a frame, thus a Heyting algebra $\fkH =([0,1],\land,\lor,\Rightarrow)$ with respect to the pseudo-complement operation given by $(x \Rightarrow z) := \bigvee_{x\land y \le z} y$ (it is immediate that $x \land a \le b$ if and only if $a \le x \Rightarrow b$ for every $a,b: [0,1]$).}
 \begin{remark}\label{fig_Omega}
 	In each of these cases ``classical'' logic is recovered as a projection: propositions $p$ can be true or false with strength $1$,\footnote{Here $I$ is represented as an interval whose minimal and maximal element are respectively $0$ and $1$; of course these are just placeholders, but it is harmless for the reader to visualise $I$ as the interval $[0,1]$.} the maximum element of $I$:
-\begin{center}
-	\begin{tikzpicture}
-		\draw[gray!70,dashed] (2,1.25) -- (2,-.25) node[below] {$\{\perp,\top\}$};
-		\draw[fill] (0,0) circle (1pt) node[left] {$0$};
-		\draw[fill] (2,0) circle (1pt) node[right] (dis) {$1$};
-		\draw (0,0) -- (2,0);
-		\begin{scope}[yshift=1cm]
+	\begin{center}
+		\begin{tikzpicture}
+			\draw[gray!70,dashed] (2,1.25) -- (2,-.25) node[below] {$\{\perp,\top\}$};
 			\draw[fill] (0,0) circle (1pt) node[left] {$0$};
-			\draw[fill] (2,0) circle (1pt) node[right] (dat) {$1$};
+			\draw[fill] (2,0) circle (1pt) node[right] (dis) {$1$};
 			\draw (0,0) -- (2,0);
-			\node[right of=dis] {$\{\top\}\times I$};
-			\node[right of=dat] {$\{\perp\}\times I$};
-		\end{scope}
-	\end{tikzpicture}
-\end{center}
+			\begin{scope}[yshift=1cm]
+				\draw[fill] (0,0) circle (1pt) node[left] {$0$};
+				\draw[fill] (2,0) circle (1pt) node[right] (dat) {$1$};
+				\draw (0,0) -- (2,0);
+				\node[right of=dis] {$\{\top\}\times I$};
+				\node[right of=dat] {$\{\perp\}\times I$};
+			\end{scope}
+		\end{tikzpicture}
+	\end{center}
 \end{remark}
 In order to aid the reader understand the explicit way in which $I$ ``multiplies'' truth values, we spell out explicitly the structure of the subobject classifier in $\Set/\Delta[2]$. In order to keep calling the minimum and maximum of $I$ respectively $0$ and $1$ we call $\frac{1}{2}$ the intermediate point of $\Delta[2]$.
 \begin{remark}
@@ -266,10 +266,10 @@ A last, somewhat dramatic example. What happens if we change topology on $I$? Fo
 		\end{figure}
 	\end{center}
 \end{example}
-	Instantaneism is, of course, way larger a topic to cover than a paragraph could do. However, we attempt to scratch the surface of this fascinating topic in our \autoref{berkelei} below, where we sketch a possible ``rebuttal to the idealist'': it is entirely possible the world is affected in some way by me closing my eyes: thus, Berkeley has a fragment of a point. Yet, it takes more than that to make it disappear; thus, Berkeley is obviously wrong.
+Instantaneism is, of course, way larger a topic to cover than a paragraph could do. However, we attempt to scratch the surface of this fascinating topic in our \autoref{berkelei} below, where we sketch a possible ``rebuttal to the idealist'': it is entirely possible the world is affected in some way by me closing my eyes: thus, Berkeley has a fragment of a point. Yet, it takes more than that to make it disappear; thus, Berkeley is obviously wrong.
 
-	As always, Truth lies in the middle (of a continuous interval): observation --or lack thereof-- affects beings (more: it affects \emph{Being}) so that something changes in the assertion $p$ that ``Everything exists'' with my eyes open, and with my eyes closed.
+As always, Truth lies in the middle (of a continuous interval): observation --or lack thereof-- affects beings (more: it affects \emph{Being}) so that something changes in the assertion $p$ that ``Everything exists'' with my eyes open, and with my eyes closed.
 
-	This difference shall be regarded as an infinitesimal dent on $p$'s strength of truth, so to let Berkeleyan idealism gain a little ground. Yet, it is improper to say that the world ``vanished''. It didn't for the rest of you. 
-	
-	The best we can say is that $p$ probably depends --monotonically-- on the number of open eyes. After all, objects on Tl\"on double, triple, they are cyclically reborn; they vanish as the doorway which survived ``so long it was visited by a beggar and disappeared at his death''.
+This difference shall be regarded as an infinitesimal dent on $p$'s strength of truth, so to let Berkeleyan idealism gain a little ground. Yet, it is improper to say that the world ``vanished''. It didn't for the rest of you.
+
+The best we can say is that $p$ probably depends --monotonically-- on the number of open eyes. After all, objects on Tl\"on double, triple, they are cyclically reborn; they vanish as the doorway which survived ``so long it was visited by a beggar and disappeared at his death''.
