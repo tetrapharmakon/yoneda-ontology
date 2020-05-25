@@ -8,14 +8,14 @@ Precise references for the basic definitions can be found
 \begin{itemize}
 	\item for the definition of category, functor, and natural transformation, in \cite[1.2.1]{Bor1}, \cite[I.2]{McL}, \cite[1.2.2]{Bor1}, \cite[I.3]{McL}, \cite[1.3.1]{Bor1}.
 	\item The Yoneda lemma is stated as \cite[1.3.3]{Bor1}, \cite[III.2]{McL}.
-	\item For the definition of co/limit and adjunction, in \cite[2.6.2]{Bor1}, \cite[III.3]{McL}, \cite[2.6.6]{Bor1}, \cite[III.4]{McL}.
+	\item For the definition of co/limit and adjunction, in \cite[2.6.2]{Bor1}, \cite[III.3]{McL}, \cite[2.6.6]{Bor1}, \cite[III.4]{McL} (consider in particular the definitions of \emph{pullback}, \emph{product}, \emph{terminal object}).
 	\item For the definition of accessible and locally presentable category in \cite[5.3.1]{Bor2}, \cite[5.2.1]{Bor2}, \cite{Adamek1994}.%, \cite[]{}.
 	\item Basic facts about ordinal and cardinal numbers can be found in \cite{kunen}; another comprehensive reference on basic and non-basic set theory is \cite{jech2013set}.
 	\item The standard source for Lawvere functorial semantics is Lawvere's PhD thesis \cite{lawvere1963functorial}; more modern accounts are \cite{hyland2007category}.
 	\item Standard references for topos theory are \cite{mac1992sheaves,JohnstonePT}. See in particular \cite[VI.5]{mac1992sheaves} and \cite[5.4]{JohnstonePT} for what concerns the Mitchell-Bénabou language of a topos.
 \end{itemize}
 \subsection{Toposes}\leavevmode
-For us, an \emph{ordinal number} will be any well\hyp{}ordered set, and a \emph{cardinal number} is any ordinal which is not in bijection with a smaller ordinal. Every set $X$ admits a unique \emph{cardinality}, i.e. a least ordinal $\kappa$ with a bijection $\kappa \cong X$ such that there are no bijections from a smaller ordinal. We freely employ results that depend on the axiom of choice when needed. A cardinal $\kappa$ is \emph{regular} if no set of cardinality $\kappa$ is the union of fewer than $\kappa$ sets of cardinality less than $\kappa$; all cardinals in the following subsection are assumed regular without further mention.
+For us, an \emph{ordinal number} will be an isomorphism class of well\hyp{}ordered sets, and a \emph{cardinal number} is any ordinal which is not in bijection with a smaller ordinal. Every set $X$ admits a unique \emph{cardinality}, i.e. a least ordinal $\kappa$ with a bijection $\kappa \cong X$ such that there are no bijections from a smaller ordinal. We freely employ results that depend on the axiom of choice when needed. A cardinal $\kappa$ is \emph{regular} if no set of cardinality $\kappa$ is the union of fewer than $\kappa$ sets of cardinality less than $\kappa$; all cardinals in the following subsection are assumed regular without further mention.
 
 Let $\kappa$ be a cardinal; we say that a category $\clA$ is $\kappa$\hyp{}filtered if for every category $\clJ\in\Qat_{<\kappa}$ with less than $\kappa$ objects, $\clA$ is injective with respect to the cone completion $\clJ\to \clJ^\rhd$; this means that every diagram
 \[
@@ -75,7 +75,7 @@ The well-known \emph{Giraud theorem} gives a proof for the difficult implication
 (recall that a \emph{left exact reflection} of $\clC$ is a reflective subcategory $\clR\hookrightarrow \clC$ such that the reflector $r : \clC \to \clR$ preserves finite limits. It is a reasonably easy exercise to prove that a left exact reflection of a Grothendieck topos is again a Grothendieck topos; Giraud proved that all Grothendieck toposes arise this way.)
 \subsection{A little primer on algebraic theories}\label{funsemanzi}
 The scope of this short subsection is to collect a reasonably self-contained account of functorial semantics. It is unrealistic to aim at such a big target as providing a complete account of it in a single appendix; the reader is warmly invited to parallel their study with more classical references as \cite{lawvere1963functorial}.
-\begin{definition}[Lawvere theory]
+\begin{definition}[Lawvere theory]\label{lo_tiori}
 	A \emph{Lawvere theory} is a category having objects the natural numbers, and where the sum on natural numbers has the universal property of a categorical product, as defined e.g. in \cite[2.1.4]{Bor1}.
 \end{definition}
 Let us denote $[n]$ the typical object of $\clL$. Unwinding the definition, we deduce that in a Lawvere theory $\clL$ the sum of natural numbers $[n+m]$ is equipped with two morphisms $[n] \leftarrow [n+m] \to [m]$ exhibiting the universal property of the product.
@@ -93,7 +93,7 @@ Every Lawvere theory comes equipped with a functor $p : \cate{Fin}^\op \to \clC$
 	The category $\textsf{Law}$ has no nonidentity 2-cells; this is a consequence of the fact that a natural transformation $\alpha : h \To k$ that makes the triangle ``commute'', i.e. $\alpha * p = \id_q$ must be the identity on all objects.
 \end{remark}
 \begin{example}[The trivial theories]
-	The category $\cate{Fin}^\op$, opposite to the category of finite sets and functions, is the initial object in the category  $\cate{Law}$; the terminal object is constructed as follows: the category $\clT$ has objects the natural numbers, and $\clT([n],[m])=\{*\}$ for every $n,m\in \bbN$. It is evident that given this definition, there is a unique identity-on-objects functor $\clL \to \clT$ for every other Lawvere theory $(p,\clL)$.
+	The category $\cate{Fin}^\op$, opposite to the category of finite sets and functions, is the initial object in the category  $\cate{Law}$; the terminal object is constructed as follows: the category $\clT$ has objects the natural numbers, and $\clT([n],[m])=\{*\}$ for every $n,m: \bbN$. It is evident that given this definition, there is a unique identity-on-objects functor $\clL \to \clT$ for every other Lawvere theory $(p,\clL)$.
 \end{example}
 \begin{definition}[Model of a Lawvere theory]
 	A \emph{model} for a Lawvere theory $(p ,\clL)$ consists of a product-preserving functor $L : \clL \to \Set$. The subcategory $[\clL,\Set]_\times \subset [\clL, \Set]$ of models of the theory $\clL$ is \emph{full}, i.e. a morphism of models $L \to L'$ consists of a natural transformation $\alpha : L \Rightarrow L'$ between the two functors.
@@ -139,14 +139,13 @@ The last technical remark that we collect sheds a light on the discorso prolisso
 \begin{proof}
 	The proof goes as follows: given a Lawvere theory $p : \textsf{Fin}^\op \to \clL$, we have shown that the functor $u : \cate{Mod}(p) \to \Set$ in the pullback square \autoref{da_pull} has a left adjoint $f : \Set \to \cate{Mod}(p)$; the composition $uf$ is thus a monad on $\Set$. This is functorial, when a morphism of monads is defined
 \end{proof}
-\todo[inline]{ category internal to a finitely complete universe}
 \begin{definition}
 	\label{internista}
-	Let  $\clC$ be a category with finite limits. An \emph{internal category} $\underline{A}$ consists of a pair $(A_0, A_1)$ of objects of $\clC$, endowed with morphisms $s,t,c,i$ as in the following diagram 
+	Let  $\clC$ be a category with finite limits. An \emph{internal category} $\underline{A}$ consists of a pair $(A_0, A_1)$ of objects of $\clC$, endowed with morphisms $s,t,c,i$ as in the following diagram
 	\[
-	\xymatrix{
+		\xymatrix{
 		A_1 \times_{A_0} A_1 \ar[r]|-c \ar@<6pt>[r]^-{p_0}  \ar@<-6pt>[r]_-{p_1} & A_1 \ar@<6pt>[r]^s  \ar@<-6pt>[r]_t & A_0 \ar[l]|i
-	}	
+		}
 	\]
 	where $A_1 \times_{A_0} A_1$ is obtained pulling back $s,t$. These data must satisfy the following axioms, resembling the category axioms:
 	\begin{enumtag}{ic}
@@ -157,3 +156,4 @@ The last technical remark that we collect sheds a light on the discorso prolisso
 	\end{enumtag}
 \end{definition}
 These axioms are meant to re-enact the definition of category, as an abstract ``object of objects'' and ``object of morphisms'', endowed with maps $s,t: A_1 \to A_0$ sending every morphism to its \emph{source} and \emph{target}, with an \emph{identity selector} map $i : A_0 \to A_1$ and with a composition partial binary operation $c : A_1 \times A_1 \to A_1$ whose domain is the object of \emph{composable} arrows. Cf. \cite[8]{Bor1} for a torough discussion.
+It has to be noted however that the theory of categories is \emph{not} an algebraic theory in the sense of our \autoref{lo_tiori}, and this just because the composition operation is only \emph{partially} defined over the domain of composable arrows, i.e. on the pullback $A_1\times_{A_0} A_1$. Theories whose syntax allows for a number of partially defined relation and function symbol are termed \emph{essentially algebraic}. See \cite{Adamek1994} for a torough discussion of the topic.

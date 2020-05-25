@@ -54,14 +54,15 @@
 
 %== authors' info
 \author{Dario Dentamaro}
-\address{ Dario \textsc{Dentamaro}: 
+\address{ Dario \textsc{Dentamaro}: Università degli Studi di Firenze, Dipartimento di Matematica e Informatica
         }
-\email{dio@cane.it}
+\email{dario.dentamaro@stud.unifi.it}
+\email{dariodentamaro26@gmail.com}
 %
 \author{Fosco Loregian}
-\address{ Fosco \textsc{Loregian}:%
-          Tallinn University of Technology,%
-          Institute of Cybernetics, Akadeemia tee 15/2,%
+\address{ Fosco \textsc{Loregian}: %
+          Tallinn University of Technology, %
+          Institute of Cybernetics, Akadeemia tee 15/2, %
           12618 Tallinn, Estonia%
         }
 \email{fosco.loregian@taltech.ee}
@@ -77,8 +78,37 @@
            , listings
            , anyfontsize
            , tikzsymbols
+          %  , fontspec
            }
+\usepackage{devanagari}
 
-\renewcommand*{\ttdefault}{cmvtt}
+\def\eye{\text{\faEye}}
+\def\noeye{\text{\faEyeSlash}}
+
+% \renewcommand*{\ttdefault}{cmvtt}
 
 \newenvironment{italian}{\color{green!60!black}}{\color{black}}
+
+
+\def\tlon{Tl\"on\@\xspace}
+\def\tlonian{Tl\"onian\@\xspace}
+\def\tlonians{Tl\"onians\@\xspace}
+
+\newcommand{\dia}[1]{
+\begin{tikzpicture}
+\node[draw,rounded corners=1, thin, inner sep=1pt] {\tiny #1};
+\end{tikzpicture}
+}
+
+\def\S{\dia{S}}
+\def\M{\dia{M}}
+\def\Tu{\dia{Tu}}
+\def\W{\dia{W}}
+\def\Th{\dia{Th}}
+\def\F{\dia{F}}
+\def\Sa{\dia{Sa}}
+\usepackage{CJKutf8}
+
+
+% \usepackage{fontspec}
+% \newfontfamily{\dev}[Script=Devanagari]{Halant Regular}

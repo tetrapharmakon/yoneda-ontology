@@ -1,0 +1,111 @@
+\section{Preliminaries on variable set theory}
+\epigraph{{\dn  a\326wy\3C4wAdFEn \8{B}tAEn \326wy\3C4wm@yAEn BArt . \\
+      a\326wy\3C4wEnDnA\306wy\?v t/ kA pErd\?vnA .. 28..}}
+% \epigraph{O scion of Bharat, all created beings are unmanifest before birth, manifest in life, and again unmanifest on death. So why grieve?}
+{Śrīmadbhagavadgītā II, 28}
+The present section introduces the main mathematical tool of our discussion: the theory of \emph{variable sets}. A variable set is just a family of sets indexed by another set $I$, i.e. (more formally) a class function $I \to \Set$. The collection of all such functions forms the object class of a category. Such categories are denoted as $\Set/I$ (read ``sets \emph{over} $I$'') and they are a particularly rich framework to re-enact mathematics in its entirety; here we explore the structure of $\Set/I$ in full detail.
+
+We begin by assessing the equivalence between two different but equivalent descriptions of the category of variable sets: as class functions $I \to \Set$, or as functions $h : A \to I$ with fixed codomain $I$ (cf. \cite[1.6.1]{Bor1}). In some of our proofs it will be crucial to blur such a distinction between the category of functors $I \to \Set$ and the \emph{slice} category $\Set/I$; once the following result is proved, we will freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
+\begin{proposition}\label{variabbo_set}
+  Let $I$ be a set, regarded as a discrete category, and let $\Set^I$ be the category of functors $F : I \to \Set$; moreover, let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism when a coherent choice of coproduct has been made: see \cite[1.5.1]{Bor1}) between $\Set^I$ and $\Set/I$.
+\end{proposition}
+\begin{proof}
+  Our proof is based on the fact that we can represent the category $\Set^I$ as the category of $I$-indexed families of objects, i.e. with the category whose objects are $(\underline X)_I := \{X_i\mid i: I\}$, and morphisms $(\underline X)_I\to (\underline Y)_I$ the families $\{f_i : X_i \to Y_i\mid i : I\}$. Given this, the two categories obviously identify, as a functor $F : I \to \Set$ amounts to a choice of sets $A_i := F(i)$, and functoriality reduces to the property that identity arrows in $I$ are mapped to identity functions $A_i \to A_i$.
+
+  Let us consider an object $h : X\to I$ of $\Set/I$, and define a function $i\mapsto h^\leftarrow(i)$; of course, $(X(h))_I := \{h^\leftarrow(i) \mid i : I\}$ is a $I$-indexed family, and since $I$ can be regarded as a discrete category, this is sufficient to define a functor $F_h : I \to \Set$.
+
+  Let us define a functor in the opposite direction: let $F : I \to \Set$ be a functor. This defines a function $h_F : \coprod_{i: I}Fi \to I$, where $\coprod_{i: I} Fi$ is the disjoint union of all the sets $Fi$.
+
+  The claim now follows from the fact that the correspondences $h\mapsto F_h$ and $F\mapsto h_F$ are mutually inverse.
+
+  This is easy to verify: the function $F_{h_F}$ sends $i: I$ to the set $h_F^\leftarrow(i)=Fi$, and the function $h_{F_h} : \Set/I$ has domain $\coprod_{i: I}F_h(i) = \coprod_{i: I}h^\leftarrow(i)=X$ (as $i$ runs over the set $I$, the disjoint union of all preimages $h^\leftarrow(i)$ equals the domain of $h$, i.e. the set $X$).
+\end{proof}
+\begin{notation}
+  The present remark is meant to establish a bit of terminology: by virtue of \autoref{variabbo_set} above, an object of the category of variable sets is equally denoted pair $(A,f : A \to I)$, as a function $h : I \to \Set$, or as the family of sets $\{h(i) \mid i : I\} = \{A_i\mid i: I\}$. We call the function $f$ the \emph{structure map} of the variable set $A$, and we call the function $F_h$ the functor \emph{associated}, or corresponding, to the variable set in study. Common parlance almost always blurs the distinction between these objects.
+\end{notation}
+\begin{remark}
+  A more abstract look at this result establishes the equivalence $\Set/I\cong \Set^I$ as a particular instance of the \emph{Grothendieck construction} (see \cite[1.1]{Leinster2004}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \cite[1.1]{Leinster2004}). In this case, the domain $\clC=I$ is a discrete category, hence all functors $\clE \to I$ are, trivially, discrete fibrations.
+\end{remark}
+\begin{remark}
+  The next crucial step of our analysis is the observation that the category of variable sets is a \emph{topos}: we break the result into the verification of the various axioms, as exposed in \autoref{eletop} and \autoref{grotop}. Our proof relies on the fact that the category of sets is itself a topos: in particular, it is cartesian closed, and admits the set $\{\perp,\top\}$ as subobject classifier.\footnote{We choose to employ a classical model of set theory, as opposed to an intuitionistic model where the classifier $\Omega$ consists of a more general Heyting algebra $H$; a general procedure to obtain a $\Omega$-many valued logic of set theory is to take the topos $\clE = \text{Sh}(H)$ of \emph{sheaves} on a Heyting algebra $H$: then, there is an isomorphism $\Omega_\clE\cong H$. The core of all our argument is very rarely affected by the choice to cut the complexity of our $\Omega$ to be the bare minimum; this is mainly due to expository reasons. The reader shall feel free to replace $\{\perp,\top\}$ with a more generic choice of Heyting algebra, and they are invited to adapt the arguments of section \autoref{sec_coins} accordingly.}
+\end{remark}
+\begin{proposition}\label{carclo}
+  The category of variable sets is Cartesian closed in the sense of \cite[p.335]{Bor1}.
+\end{proposition}
+\begin{proof}
+  We shall first show that the category of variable sets admits products: this is well-known as in $\Set/I$, products are precisely pullbacks (\cite[2.5.1]{Bor1}); note that \autoref{variabbo_set} gives an identification between the pullback $X\times_I Y$ as a set over $I$, and the $I$-indexed family of the preimages of $i$ under $h$:
+  \[\vcenter{\scriptsize\xymatrix@!=1mm{
+    & X\times_I Y \ar[dd]^h \ar@[lightgray][dr]\ar@[lightgray][dl]&  \\
+    {\color{lightgray} X} \ar@[lightgray][dr]_{\color{lightgray} f}&& {\color{lightgray} Y} \ar@[lightgray][dl]^{\color{lightgray} g}\\
+    & I &
+    }}\iff i\mapsto h^\leftarrow(i) = \Big\{(x,y) : X\times_I Y \mid h(x,y)=i\Big\}\]
+  Now, this yields a canonical bijection $h^\leftarrow(i)\cong f^\leftarrow(i)\times g^\leftarrow(i)$. This is exactly the definition of the product of the two associated functors $F_f, F_g : I\to \Set$.
+
+  To complete the proof, we shall show that each functor $\firstblank \times_I Y$ has a right adjoint $Y \pitchfork_I\firstblank$. The functor $\Set^I \to \Set^I : Z\mapsto Y\pitchfork_I Z$ where $Y\pitchfork_I Z : i \mapsto \Set(Y_i, Z_i)$ does the job. This, together with a straightforward verification, sets up the bijection
+  \[\begin{array}{c}
+      \xymatrix{X\times_I Y \ar[r] & Z}               \\ \hline
+      \xymatrix{X \ar[r]           & Y\pitchfork_I Z}
+    \end{array}\]
+  and by a completely analogous argument (the construction  $(A,B)\mapsto A \times_I B$ is of course symmetric in its two arguments), we get a bijection
+  \[\begin{array}{c}
+      \xymatrix{X\times_I Y \ar[r] & Z}                \\ \hline
+      \xymatrix{Y \ar[r]           & X\pitchfork_I Z;}
+    \end{array}\]
+  showing that also $X\times_I \firstblank$ has a right adjoint $X\pitchfork_I \firstblank$. This concludes the proof that the category of variable sets is Cartesian closed.
+\end{proof}
+\begin{proposition}\label{variable_sets_have_omega}
+  The category of variable sets has a subobject classifier.
+\end{proposition}
+\begin{proof}
+  From \autoref{eletop} we know that we shall find a variable set $\Omega$ such that there is a bijection
+  \[\begin{array}{c}
+      \xymatrix{ \chi : A \ar[r] & \Omega} \\ \hline
+      \textsf{Sub}_I(A)
+    \end{array}\]
+  where $\textsf{Sub}_I(A)$ denotes the set of isomorphism classes of monomorphisms into $A$, in the category of variable sets.\footnote{A monomorphism into $A$ as an object of $\Set^I$ is nothing but a family of injections $s_i : S_i \to A_i$; a monomorphism in $\Set/I$ is a set $S$ in a commutative triangle
+  \[\scriptsize
+    \xymatrix@!=1mm{S\ar[rr]\ar[dr]_s && A\ar[dl]^a \\ &I.&}\]}
+  For the sake of simplicity, for the rest of the proof we fix as category of variable sets the slice $\Set/I$.
+
+  From this we make the following guess: as an object of $\Set/I$, $\Omega$ is the canonical projection $\pi_I : I\times \{\perp,\top\} \to I$. We are thus left with the verification that $\pi_I$ has the correct structure and universal property.
+
+  First, we shall find a universal monomorphism $\true : * \to \Omega$ in $\Set/I$. Unwinding the definitions (in particular, since the identity function $\id_I : I \to I$ is evidently the terminal object in $\Set/I$), such a map amounts to an injective function $I\to \Omega$ having the projection $\pi_I : \Omega \times I \to I$ as left inverse.
+
+  It turns out that the function $I \to I\times \{\perp,\top\}$ choosing the top-level copy of $I\cong I\times \{\top\}$ plays the r\^ole of $\true$: in the following, we shortly denote $\Omega_I$ such a product set.
+
+  Now, a monomorphism $\cvar{S}{s}{I} \hookrightarrow \cvar{A}{a}{I}$ in $\Set/I$ is given by an injective function $S \hookrightarrow A$ that commutes with the structure maps of $S,A$; so, the commutative square
+  \[
+    \vcenter{\xymatrix{
+    S\ar[d]\ar[r] & I \ar[d]^{\true}\\
+    A \ar[r]_-{\chi_S} & \Omega_I
+    }}
+  \]
+  is easily seen to be a pullback; in fact, every morphism of variable sets $\chi_S : A \to \Omega_I$ must send the element $a : A$ to a pair $(i,\epsilon) : I\times \{\perp,\top\}$. The pullback of $\chi$ and $\true$, as defined above, consists of the subset of the product $A\times I$ such that $\chi(a)=\true(i)=(i,\top)$; this defines a variable set $S=(\chi(i,\top))_I$, and such a correspondence is clearly invertible: every variable set arises in this way, and defines a ``characteristic'' function $\chi_S : (A,\cvar{A}{f}{I}) \to (\Omega_I,\pi_I)$:
+  \[\chi_S(a) =
+    \begin{cases}
+      (f(a), \top)  & \text{ if } a: S                  \\
+      (f(a), \perp) & \text{ if } a : A\smallsetminus S
+    \end{cases}\]
+  This concludes the proof of the fact that $\Set/I$ admits a subobject classifier.
+\end{proof}
+\begin{remark}
+  A straightforward but important remark is now in order. The structure of subobject classifier of $\Omega_I$, and in particular the shape of a characteristic function $\chi_S : A \to \Omega_I$ for a subobject $S\subseteq A$ in $\Set/I$, is explicitly obtained using the structure map $f$ of the variable set $f : A\to I$.
+
+  This will turn out to be very useful along our main section, where we shall note that a proposition in the internal language of $\Set/I$ amounts to a function $p : U \to \Omega_I$, having as domain a variable set $u : U \to I$, whose structure map uniquely determines the ``strength'' (see \autoref{very_importanta_force}) of the proposition $p$. In a nutshell, $p(x)$ is a truth value in $\Omega_I$; the fact that $p$ is a morphism \emph{of variable sets} however forces this truth value to be $(u(x),\epsilon) : I\times \{\perp,\top\}$. We invite the baffled reader not to worry now; we will duly justify each of these conceptual steps along \autoref{sec_coins}.
+\end{remark}
+\begin{proposition}
+  The category of variable sets is cocomplete and accessible.
+\end{proposition}
+\begin{proof}
+  Cocompleteness can be shown appealing to a classical argument: if $\clC$ is a small category, and $\clD$ a cocomplete category, the category $\clD^\clC$ of all functors $F : \clC \to \clD$ is cocomplete, and colimits are computed pointwise, meaning that given a diagram $\clJ \to \clD^\clC$ of functors $F_j$, $\colim F_j : \clD^\clC$ is the functor $C \mapsto \colim_\clJ F_j(C)$ (that exists in $\clD$ by assumption).
+  Given that $\Set/I\cong \Set^I$, and that the category $\Set$ is cocomplete, we obtain the result.
+
+  Accessibility is a corollary of Yoneda in the following form: every $F : I \to \Set$ is a colimit of representables
+  \[
+    F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)
+  \]
+  (the category of elements \cite{Bor1} $\clE(F)$ of $F:\Set^I$ is small because in this case $\clE(F)\cong\coprod_{i: I}Fi$).
+\end{proof}
+\begin{corollary}
+  The category of variable sets is a Grothendieck topos.
+\end{corollary}
