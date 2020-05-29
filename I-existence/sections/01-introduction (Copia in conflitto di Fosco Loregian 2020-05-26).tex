@@ -1,0 +1,131 @@
+\section{Introduction}\label{sec_intro}
+\epigraph{El mundo, desgraciadamente, es real.}{\cite{confutacion}}
+This is the first piece of a series of works that will hopefully span through a certain amount of time, and touch a pretty wide range of topics. Its purpose is to adopt a wide-ranging approach to a fragment of elementary problems in a certain branch of contemporary philosophy. More in detail, our work aims to lay a foundation of a few problems in ontology employing pure mathematics; in particular, using the branch of mathematics known as category theory.
+
+As authors, we are aware that such an ambitious statement of purpose must be adequately motivated. This is the scope of the initial section of the present first manuscript.
+\subsection{What is this series}
+
+Since forever, mathematics studies three fundamental indefinite terms: form, measure, and inference. Apperception makes us recognise that there are extended entities in space, persisting in time. From this, the necessity to measure how much these entities are extended, and to build a web of conceptual relations between them, explaining how they arrange ``logically''.
+Contamination between these three archetypal processes is certainly possible and common; mathematics happens exactly at the crossroad where algebra, geometry and logic intersect.
+
+We can even say more: mathematics is a language; meta-mathematics that's done through mathematics (if such a thing even exists) exhibits the features of a \emph{ur-language}, a generative scheme for ``all'' possible languages. It is a language whose elements are the rules to give oneself a language, conveying information, and allowing to perform a deduction. It is a meta-object: a scheme to generate objects/languages.
+
+Taken this tentative definition, mathematics (not its history, not its philosophy, but its \emph{practice}) serves as a powerful tool to tackle the essential questions of ontology: what ``things'' are, what makes them what they are and not different.
+
+Quantitative thinking is a consistent (some would say ``honest'') way of approaching this deep problem, cogency of entities; yet, it is undeniable that a certain philosophical debate has become hostile to mathematical language. A tear in the veil that occurred a long time ago, due to different purposes and different specific vocabulary, can not be repaired by two people only. If, however, the reader of these notes asks for an extended motivation for our work, a wide-ranging project in which it fits, a long-term goal, in short, a \emph{program}, they will find it now: there is a piece of mathematics whose purpose is to solve philosophical problems, in the same way, certain mathematics ``solves'' the motion of celestial bodies. It does not annihilate the question: it proposes models within which one can reformulate it; it highlights what is a trivial consequence of the axioms of that model and what instead is not, and requires the language to expand, to be modified, sharpened. We aim to approach this never-mentioned discipline as mathematicians. But we do it without elaborating "new" theorems; we take notions already known in modern mathematics to use them in another contexts.
+
+Sure, solving once and for all the problems posited by ontology would be megalomaniac; we do not claim such a thing. Instead, more modestly, we propose a starting point unhinging some well-established beliefs (above all else, the idea that ontology is too general to be approached quantitatively); we humbly point the finger at some problems that prose is unable to notice, because it lacks a specific and technical language; we suggest that \emph{in such a language}, when words mean precise things and are tools of epistemic research instead of mere magic spells, a few essential questions of recent ontology dissolve in a thread of smoke, and others simply become ``the wrong question'': not false, just meaningless as the endeavour to attribute a temperature to consciousness or justice.
+
+We shall say at the outset that such a language is not mathematics, but mathematics has an enormous potential to hint at what the \emph{characteristica universalis} should be made of.
+
+It may seem suspicious to employ mathematics to tackle questions that traditionally pertain to philosophy: in doing so, we believe we can provide a more adequate language, taken from mathematics, within which to frame some deep ontological questions. The reader will allow a tongue-in-cheek here: when coming to ontology, it is not a matter of making a \emph{correct use of language}, but rather to \emph{use the correct language}.
+
+This correct language is inherently mathematical, as only mathematics has the power to substantiate an analysis in quantitative terms. This language is \emph{category theory}, as only category theory has the power to speak about a totality of structures of a given kind in a compelling way, treating mathematical \emph{theories} as mathematical \emph{objects}.
+
+As it is currently organised, our work will attempt to cover the following topics:
+\begin{itemize}
+    \item the present manuscript, \emph{Existence}, aims at providing a sufficiently expressive theory of existence. Having a foundational r\^ole, the scope of most of our remarks is, of course, more wide-ranging and aimed at building the fundamentals of our toolset (mainly, category theory and categorical logic, as developed in \cite{mac1992sheaves,JohnstonePT,lambek1988introduction}). As both a test-bench for our theory and a literary \emph{divertissement}, we propose a category-theoretic solution of Borges' paradoxes present in \cite{Borges1963}. In our final section, we relate our framework to more classical ancient and modern philosophers; we link topos theory to Berkeley's instantaneism and internal category theory to Quine's definition of the [domain of] existence of an entity as a domain of validity of quantifiers (intended as propositional functions, i.e. functions whose codomain is a space of truth values).
+    \item A second chapter \cite{black}, currently in preparation, addresses the problem of \emph{identity}, and in particular its context-dependent nature. Our proof of concept here consists of a rephrasing of Black's classical ``two spheres'' paradox \cite{papear_di_black} in the elementary terms of invariance under a group of admissible transformations; this time the solution is provided by Klein's famous \emph{Erlangen program} group-theoretic foundation for geometry: the two interlocutors of Black's imaginary dialogue respectively live in an Euclidean and an affine world: this difference, not perceived by means of language, affects their understanding of the ``two'' spheres, and irredeemably prevents them from mutual intelligente.
+    \item A third chapter \cite{homot}, currently in preparation, addresses again the problem of identity, but this time through the lens of algebraic topology, a branch of mathematics that in recent years defied well\hyp{}established ontological assumptions ; the many commonalities between category theory and homotopy theory suggest that ``identity'' is not a primitive concept, but instead depends on our concrete representation of mathematical entities. This can be formalised in various ways, among many the \emph{Homotopy Type Theory} foundation of \cite{hottbook,cwp}. \cite{homot} aims to be an introduction to the fundamental principles of HoTT \emph{ad usum delphini}: we investigate how when $X,Y : \clC$ are objects in a category, there often is a class of equivalences $W \subseteq \hom(\clC)$ prescribing that $X,Y$ shouldn't be distinguished in the associated ontology; equality is then defined \emph{ex post} in terms of $W$, varying as the ambient category $\clC$ does; this yields a $W$-parametric notion of identity $\equiv_W$, allowing categories to be categorified versions of \emph{Bishop sets}, i.e. pairs $(S,\rho)$ where $\rho$ is an equivalence relation on $S$ prescribing a $\rho$-equality.
+\end{itemize}
+\subsection{On our choice of meta-theory and foundation}
+During '900 the direction of the evolution of mathematics brought the discipline to divide into different sub-disciplines at first, with their specific objects and languages, to then find unexpected unification under a single notion, the notion of \emph{structure}, using the formal tool that has best characterized the concept, the \emph{categories}. This process has spontaneously led to an epistemological revision of mathematics and has inspired, in the development of operational tools, a revision of both its foundations and its ontology. For many scholars is undeniable that
+\begin{quote}
+    [the] mathematical uses of the tool \CT and epistemological considerations having \CT as their object cannot be separated, neither historically nor philosophically. \cite{kromer2007tool}
+\end{quote}
+Structural-mathematical practice produced a "natural" ontology which, later, felt the need to be characterized more precisely. Similarly to what Carnap\footnote{Some words that philosophers should keep in mind, on the lawfulness of the use of abstract entities (specifically mathematical) in semantic reflection, also valid in ontology:
+    \begin{quote}
+        we take the position that the introduction of the new ways of speaking does not need any theoretical justification because it does not imply any assertion of reality [...].  it is a practical, not a theoretical question; it is the question of whether or not to accept the new linguistic forms. The acceptance cannot be judged as being either true or false because it is not an assertion. It can only be judged as being more or less expedient, fruitful, conducive to the aim for which the language is intended. Judgments of this kind supply the motivation for the decision of accepting or rejecting the kind of entities. \hfill \cite{carnap1956meaning}
+    \end{quote}} suggested regarding semantics,
+\begin{quote}
+    mathematicians creating their discipline were not seeking to justify the constitution of the objects studied by making assumptions as to their ontology.\hfill  \cite{kromer2007tool}
+\end{quote}
+Beyond the attempts (ever those of Bourbaki group), what matters is that the habit of reasoning in terms of structures has suggested implicit epistemological and ontological attitudes. This matter would deserve an exhausting independent inquiry.
+
+For our objectives it's enough to declare a differentiation that Kr\"omer
+elaborated, inspired by \cite{Cor96}: the difference between \emph{structuralism} and \emph{structural mathematics}:
+\begin{enumtag}{s}
+    \item \label{s:uno} Structuralism: \textit{the philosophical
+        position regarding structures as the subject matter of mathematics}
+    \item \label{s:due} Structural Mathematics: \textit{the methodological approach to look in a given problem
+        “for the structure”}
+\end{enumtag}
+\begin{remark} \label{weak_structuralism}
+    Of course, \ref{s:uno} implies \ref{s:due} but the opposite is not always true.
+
+    That is, one can do structural mathematics without being a structuralist; that is, taking different, or even opposite, positions concerning structuralism itself. That it has often come spontaneously to embrace this position in the theoretical reflection in the recent history of mathematics is quite different (the "natural" ontology).
+
+    The use of \theory{CT} as meta-language, despite the historical link with structuralism, doesn't nevertheless make automatic the transition from
+    \ref{s:due} to  \ref{s:uno}, but suggests that the ontology is not only
+    dependent on "ideology" (in Quinean sense) of the theory, namely its expressive power, but is influenced by the epistemological model inspired by the use of formal language itself.
+\end{remark}
+The usefulness of Kr\"omer's distinction, however, is another: instead of stumbling in a possibly not ambiguous definition of \textit{structure} (with the unwanted consequences that could arise in the operational practice), the philosophy \ref{s:uno} can be reduced (or redefine) to the methodology \ref{s:due}, saying that:
+\begin{quote}
+    \emph{structuralism is the claim that mathematics
+        is essentially structural mathematics} \cite{kromer2007tool}
+\end{quote}
+(the operative practice that "intervenes" in the definition of structuralism avoids the decade-long debate of the humanities on these concepts).
+
+This is the same thing as saying: the structural practice already is its philosophy.
+
+Attempts to explain the term "structure" by Bourbaki in the years following the publication of the \textit{Elements des Mathématiques}, led to the first systematic elaboration of a philosophy that we could appropriately call \textit{structural mathematics}. Its target is to "\textit{assembling all possible ways in which given set can be endowed with certain structure}" \cite{kromer2007tool}, and to do so elaborate, in the programmatic paper \textit{The Architecture of Mathematics} (written by Dieudonné alone), published in 1950, a formal strategy. While specifying that "\textit{this definition is not sufficiently general for the needs of mathematics}" \cite{Bourb50}, he encoded a series of operational steps through which a structure on a collection is assembled set-theoretically. Adopting therefore a reductionist perspective in which
+\begin{quote}
+    the structureless sets are the raw material of structure building which in Bourbaki’s analysis is ``unearthed'' in a quasi-archaeological, reverse manner; they are the most general objects which can, in a rewriting from scratch of mathematics, successively be endowed with ever more special and richer structures.\hfill  \cite{kromer2007tool}
+\end{quote}
+On balance, in Bourbaki's structuralism, the notion of set doesn't disappear definitively in front of the notion of structure. The path towards an ``integral'' structuralism was still long.
+
+In his influential paper \cite{lajolla} William Lawvere proposes a foundation of mathematics based on category theory. To appreciate the depth and breadth of such an impressive piece of work, however, the word ``foundation'' must be taken in the particular sense intended by mathematicians:
+\begin{quote}
+    [\dots\unkern] a single system of first-order axioms in which all usual mathematical objects can be defined and all their usual properties proved.
+\end{quote}
+Such a position sounds at the same time a bit cryptic to unravel, and unsatisfactory; Lawvere's (and others') stance on the matter is that a foundation of mathematics is \emph{de facto} just a set $\clL$ of first-order axioms organised in a Gentzen-like deduction system. The deductive system so generated reproduces mathematics as we know and practice it, i.e. provides a formalisation for something that already exists and needs no further explanation, and that we call ``mathematics''.
+
+It is not a vacuous truth that $\clL$ exists somewhere: the fact that the theory so determined has a nontrivial model, i.e the fact that it can be interpreted inside a given familiar structure, is both the key assumption we make, and the less relevant aspect of the construction itself; showing that $\clL$ ``has a model'' is --although slightly improperly-- meant to ensure that, \emph{assuming the existence of a naive set theory} (i.e., assuming the prior existence of structures called ``sets''), axioms of $\clL$ can be satisfied by a naive set. Alternatively, and more crudely: assuming the existence of a model of ZFC, $\clL$ has a model \emph{inside that model of ZFC}.\footnote{However, ensuring that a given theory has a model isn't driven by psychological purposes only: on the one hand, purely syntactic mathematics would be very difficult to parse, as opposed to the more colloquial practice of mathematical development; on the other hand (and this is more important), the only things syntax can see are equality and truth. To prove that a given statement is false, one either has to check all possible syntactic derivations leading to $\varphi$, finding none --this is unpractical, to say the least-- or to \emph{find a model} where $\lnot\varphi$ holds.}
+
+A series of works attempting to unhinge some aspects of ontology through category theory should at least try to tackle such a simple and yet diabolic question as ``where'' are the symbols forming the first-order theory of ETCC. And yet, everyone just believes in sets and solves the issue of ``where'' they are with a leap of faith from which all else follows.
+
+This might appear somewhat circular: aren't sets in themselves already a mathematical object? How can they be a piece of the theory they aim to be a foundation of? In his \cite{lolli1977categorie} the author addresses the problem as follows:\footnote{Authors' translation: \emph{When mathematicians talk about models they do not have the impression to have exited a set-theoretic foundation. This impression is correct, and justified by the possibility to represent formal languages through set theory, to study the relations among structures and symbolic representations. When they turn their attention to models of a set theory, some philosophical questions can however no longer be avoided. The natural question of what is the relation between the sets that are models of a theory, and the sets of which the theory talks about is nothing but a question about the relation between the semantical, set-theoretic metatheory and the ``object theory'' we want to talk about. The two theories can coincide, and in fact the metatheory can even be a proper subtheory of the object theory.\\
+\indent We choose a set whose elements, usually finite sets, represent the symbols of the language we want to study, and then with a concatenation operation that can be the ``ordered pair'' construction we define the set of words $L$ of the well-formed formulas, of terms, and the operation that associates a free variable with a formula, and so on for all syntactic notions.}}
+\begin{quote}
+    Quando un matematico parla di modelli non ha [\dots\unkern] l'impressione di uscire dall'ambito insiemistico. Questa impressione, che è corretta, è giustificata dalla possibilità di rappresentare i linguaggi formali con gli oggetti della teoria degli insiemi, di studiare in essa le relazioni tra le strutture e le rappresentazioni dei simboli. Quando l'attenzione è rivolta ai modelli di una teoria degli insiemi, certe questioni sofistiche non possono però essere più evitate. La domanda spontanea sulla relazione che intercorre tra gli insiemi che so­no modelli di una teoria e gli insiemi di cui parla la teoria non è altro che una domanda sulla relazione tra la metateoria semantica insiemi­stica e la teoria in esame, o teoria oggetto. Le due teorie possono coincidere, anzi la metateoria può essere anche una sottoteoria pro­pria della teoria oggetto. [\dots\unkern]
+
+    Si sceglie un insieme i cui elementi, di solito insiemi finiti, rappresentano i simboli del linguaggio che si vuole studiare, quindi con una operazione di concatenazione che può essere la coppia ordinata si definisce l'insieme delle parole $L$ delle for­mule ben formate, dei termini, l'operazione che a una formula asso­cia le sue variabili libere, e così via per tutte le nozioni sintattiche.
+\end{quote}
+The idea that a subtheory $L'\subset L$ of the object theory can play the r\^ole of metatheory might appear baffling; in practice, the submodel doesn't exactly play such r\^ole: instead, there are two possible solutions. Pure Platonism assumes the existence of a hierarchy of universes harbouring the object theory; pure syntacticism exploits G\"odel's completeness theorem: every proof is a finite object, and every theorem proved in the metatheory is just a finite string of symbols. No need for a model.
+
+Platonism has limits: in a fixed a class theory $\sfC$ ($\sf MK$, Morse-Kelley(-Mostowski); or $\sf NBG$, Von Neumann-Bernays-G\"odel), there's an object $V$ that plays the r\^ole of the universe of sets; in $V$, all mathematics can be enacted. Of course, consistency of $\sfC$ is only granted by an act of faith.
+
+Syntacticism has limits: following it, one abjures any universality mathematics might claim. But syntacticism also has merits: undeniably (disgracefully, luckily) the World is real. And reality is complex enough to contain languages as purely syntactical objects; the percussion of a log with oxen bones, rather than prophecies over the entrails of a lamb, or intuitionistic type theory, all have the same purpose: intersubjective convection of meaning, deduced by a bundle of perceptions, so to gain an advantage, \emph{id est} some predictive power, over them. Of course: intuitionistic type theory is just \emph{slightly} more effective than hepatomancy.
+
+Knowledge is obtained by collision and retro-propagation between Reality and the perceptual bundle it generates.
+
+Accepting this, the urge to define seemingly abstract concepts like learning, conscience, and knowledge, together with precious continuous feedback coming from real objects, evidently determine an undeniable primacy of quantitative thinking, this time intended as machine learning and artificial intelligence, that sets (or should set if only more philosophers knew linear algebra) a new bar for research in philosophy of mind.
+
+However, we refrain from entering such a deep rabbit-hole, as it would have catastrophic consequences on the quality, length, and depth of our exposition.
+
+The usual choice for mathematicians is to assume that, wherever and whatever they are, these symbols ``are'', and our r\^ole in unveiling mathematics is \emph{descriptive} rather than generative.\footnote{Inside constructivism, it is not legitimate to posit that axioms ``create'' mathematical objects; from this, the legitimacy of the question of where they are, and the legitimate answer ``nowhere''. The only thing we can say is that they ``make precise, albeit implicitly, the \emph{meaning} of mathematical objects'' \cite{Agzz} (it seems to us that in mathematics as well as in philosophy of language, meaning and denotation are safely kept separate). We take this principle, and here we stop.}
+
+This state of affairs has, to the best of our moderate knowledge on the subject, various possible explanations:
+\begin{itemize}
+    \item On one hand, it constitutes the heritage of Bourbaki's authoritarian stance on formalism in pure mathematics;
+    \item on the other hand, a different position would result in barely any difference for the ``working-class''; mathematicians are irreducible pragmatists, somewhat blind to the consequences of their philosophical stances.
+\end{itemize}
+So, symbols and letters do not exist outside of the Gentzen-like deductive system we specified together with $\clL$.
+
+As arid as it may seem, this perspective proved itself to be quite useful in working mathematics; consider for example the type declaration rules of a typed functional programming language: such a concise declaration as
+\begin{lstlisting}[ language=Haskell
+                  , basicstyle=\ttfamily\small
+                  , keywordstyle=\color{blue!75}
+                  , morekeywords={S,Z}
+                  ]
+  data Nat = Z | S Nat
+\end{lstlisting}
+makes no assumption on ``what'' \verb|Z| and \verb|S:: Nat -> Nat| are; instead, it treats these constructors as meaningful formally (in terms of the admissible derivations a well-formed expression is subject to) and intuitively (in terms of the fact that they model natural numbers: every data structure that has those two constructors must be the type $\bbN$ of natural numbers).
+
+Taken as an operative rule, this reveals exactly what is our stance towards foundations: we are ``structuralist in the metatheory'', meaning that we treat the symbols of a first-order theory or the constructors of a type system regardless of their origin, provided the same relation occur between criptomorphic collections of labelled atoms.
+
+In this precise sense, we are thus structuralists in the metatheory, and yet we do so with a grain of salt, maintaining a transparent approach to the consequences and limits of this partialisation. On the one hand, pragmatism works; it generates rules of evaluation for the truth of sentences. On the other hand, this sounds like a Munchhausen-like explanation of its the value, in terms of itself. Yet there seems to be no way to do better: answering the initial question would give no less than a foundation of language.
+
+And this for no other reason than ``our'' metatheory is something near to a structuralist theory of language; thus, a foundation for such a metatheory shall inhabit a meta-metatheory\dots{} and so on.
+
+Thus, rather than trying to revert this state of affairs we silently comply to it as everyone else does; but we feel contempt after a brief and honest declaration of intents towards where our metatheory lives. Such a metatheory hinges again on work of Lawvere, and especially on the series of works on functorial semantics.
