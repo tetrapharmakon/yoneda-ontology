@@ -52,7 +52,7 @@
 \newcommand{\true}{\texttt{t}}
 \def\id{\text{id}}
 
-\input{blinded}
+\input{blinded.tex}
 
 %== metadata
 \title{Categorical ontology I}
@@ -64,7 +64,9 @@
            , listings
            , anyfontsize
            , tikzsymbols
-\usepackagdevanagari}
+          %  , fontspec
+           }
+\usepackage{devanagari}
 
 \def\eye{\text{\faEye}}
 \def\noeye{\text{\faEyeSlash}}
@@ -92,3 +94,7 @@
 \def\F{\dia{F}}
 \def\Sa{\dia{Sa}}
 \usepackage{CJKutf8}
+
+
+% \usepackage{fontspec}
+% \newfontfamily{\dev}[Script=Devanagari]{Halant Regular}
