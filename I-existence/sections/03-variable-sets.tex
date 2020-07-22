@@ -1,8 +1,11 @@
 \section{Preliminaries on variable set theory}
-\epigraph{{\dn  a\326wy\3C4wAdFEn \8{B}tAEn \326wy\3C4wm@yAEn BArt . \\
-      a\326wy\3C4wEnDnA\306wy\?v t/ kA pErd\?vnA .. 28..}}
+\epigraph
+  {{\dn  a\326wy\3C4wAdFEn \8{B}tAEn \326wy\3C4wm@yAEn BArt . \\
+  a\326wy\3C4wEnDnA\306wy\?v t/ kA pErd\?vnA .. 28..}}
 {Śrīmadbhagavadgītā II, 28}
-The present section introduces the main mathematical tool of our discussion: the theory of \emph{variable sets}. A variable set is just a family of sets indexed by another set $I$, i.e. (more formally) a class function $I \to \Set$. The collection of all such functions forms the object class of a category. Such categories are denoted as $\Set/I$ (read ``sets \emph{over} $I$'') and they are a particularly rich framework to re-enact mathematics in its entirety; here we explore the structure of $\Set/I$ in full detail.
+The present section introduces the main mathematical tool of our discussion: the theory of \emph{variable sets}. Shortly put, a variable set is a family of sets indexed by another set $I$, i.e. (more formally) a class function $I \to \Set$. 
+
+The collection of all such functions forms the object class of a category. Categories of the form `variable sets over $I$' are often denoted as $\Set/I$ (read ``sets \emph{over} $I$'') and they are a particularly rich framework to re-enact mathematics in its entirety; here and in the next section we explore their structure of $\Set/I$ in full detail.
 
 We begin by assessing the equivalence between two different but equivalent descriptions of the category of variable sets: as class functions $I \to \Set$, or as functions $h : A \to I$ with fixed codomain $I$ (cf. \cite[1.6.1]{Bor1}). In some of our proofs it will be crucial to blur such a distinction between the category of functors $I \to \Set$ and the \emph{slice} category $\Set/I$; once the following result is proved, we will freely refer to any of these two categories as the category of \emph{variable sets} (indexed by $I$).
 \begin{proposition}\label{variabbo_set}
@@ -90,7 +93,7 @@ We begin by assessing the equivalence between two different but equivalent descr
 \begin{remark}
   A straightforward but important remark is now in order. The structure of subobject classifier of $\Omega_I$, and in particular the shape of a characteristic function $\chi_S : A \to \Omega_I$ for a subobject $S\subseteq A$ in $\Set/I$, is explicitly obtained using the structure map $f$ of the variable set $f : A\to I$.
 
-  This will turn out to be very useful along our main section, where we shall note that a proposition in the internal language of $\Set/I$ amounts to a function $p : U \to \Omega_I$, having as domain a variable set $u : U \to I$, whose structure map uniquely determines the ``strength'' (see \autoref{very_importanta_force}) of the proposition $p$. In a nutshell, $p(x)$ is a truth value in $\Omega_I$; the fact that $p$ is a morphism \emph{of variable sets} however forces this truth value to be $(u(x),\epsilon) : I\times \{\perp,\top\}$. We invite the baffled reader not to worry now; we will duly justify each of these conceptual steps along \autoref{sec_coins}.
+  This will turn out to be very useful along our main section, where we shall note that a proposition in the internal language of $\Set/I$ amounts to a function $p : U \to \Omega_I$, having as domain a variable set $u : U \to I$, whose structure map uniquely determines the ``strength'' (see \autoref{very_importanta_force}) of the proposition $p$. In a nutshell, $p(x)$ is a truth value in $\Omega_I$; the fact that $p$ is a morphism \emph{of variable sets} however forces this truth value to be $(u(x),\epsilon) : I\times \{\perp,\top\}$. We invite the baffled reader not to worry now; we will duly justify each of these conceptual steps along \autoref{sec_coins} and \ref{int_lang}.
 \end{remark}
 \begin{proposition}
   The category of variable sets is cocomplete and accessible.
@@ -99,7 +102,7 @@ We begin by assessing the equivalence between two different but equivalent descr
   Cocompleteness can be shown appealing to a classical argument: if $\clC$ is a small category, and $\clD$ a cocomplete category, the category $\clD^\clC$ of all functors $F : \clC \to \clD$ is cocomplete, and colimits are computed pointwise, meaning that given a diagram $\clJ \to \clD^\clC$ of functors $F_j$, $\colim F_j : \clD^\clC$ is the functor $C \mapsto \colim_\clJ F_j(C)$ (that exists in $\clD$ by assumption).
   Given that $\Set/I\cong \Set^I$, and that the category $\Set$ is cocomplete, we obtain the result.
 
-  Accessibility is a corollary of Yoneda in the following form: every $F : I \to \Set$ is a colimit of representables
+  Accessibility is a corollary of Yoneda lemma in the following form: every $F : I \to \Set$ is a colimit of representables
   \[
     F \cong \colim\Big(\clE(F) \xto{\Sigma} I \xto{y} \Set^I\Big)
   \]

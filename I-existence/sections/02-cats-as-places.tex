@@ -143,8 +143,8 @@ If, following Quine, ontology studies `what there is', it then appears natural t
 
 Many approaches are possible to tackle this complicated and fundamental matter: 
 \begin{itemize}
-    \item in the Fregean perspective \cite{Frege} ''$x$ exists'' if and only if ''$x$ is identical to something [e.g., to itself]'', whereas 
-    \item for Quine \cite{Qui53} ''being is being the value of a [bounded] variable''.
+    \item in the Fregean perspective \cite{Frege} `$x$ exists' if and only if `$x$ is identical to something [e.g., to itself]', whereas 
+    \item for Quine \cite{Qui53} `being is being the value of a [bounded] variable'.
 \end{itemize}
 The first approach is affine to conceptual realism, but it has scarce informative power (what is equality? Frege defines existence as self-identity, an equally perilous concept, and even more, this is not the right track: identity isn't a thing; it is a \emph{judgment}. More: every identity is the result of an identification process, every equality is an equivalence relation performed \emph{onto} a pre-existing `thing' --of course, regarding existents as the result of a computation relies on the notion of Bishop set \cite{Bis67,hofmann2012extensional}): before the identification, a Bishop set $(S,\sim)$ has elements that are morally more than the elements of the quotient $S/\!\sim$. Evidently, turning this suggestion into a precise statement is complex enough a topic to dedicate it a separate chapter of the present polyptych (in fact, two: \cite{black,homot}). We will attribute to the topic due importance, in due course.
 
@@ -154,22 +154,28 @@ We will see in \autoref{metaon} that the Quinean conception fits in our categori
 
 There is a third way, less common in literature but seemingly less questionable: define existence through \emph{persistence over time}.
 
-Let's say that ''$x$ exists'' if and only if ''$x$ is identical to itself in every time frame $\la T, <\ra$'', where $T$ is a non-empty set whose elements are instants and $<$ a binary relation on $T$; existence is then a relation $ (x, t) \mapsto x \mathrel \inplus t $; `$ x $ exists in $ T $' if for every $ t: T $ we have $ x \mathrel \inplus t $).
+A \emph{time-frame} is a pair $\la T, <\ra$ where $T$ is a inhabited type whose terms are `instants' and $<$ a binary partial order relation. Every `temporal type' $X$ is endowed with a relation on $\inplus : X\times T : (x, t) \mapsto x \mathrel \inplus t $ that prescribes when a term $x$ `exists in the time-frame $T$': for each $t:T$ it must be true that $x\mathrel\inplus t$.
 
-This definition captures well the intuitive notion of existence, relying on both identity (with all the problems this might raise) and time, or rather an appropriate temporal logic $\sf *TL$ in which entities `persist'. (For example, it's easy to write down what the relationship `$x$ exists in $T$' means in terms of linear temporal logic, $\sf LTL$.)
+This definition captures well one of the intuitive aspects of existence, relying on both identity (with all the problems this might raise) and time, thus framed in an appropriate temporal logic $\sf *TL$ in which entities `persist'. (It's easy to write down what the relationship `$x$ exists in $T$' means in terms of linear temporal logic, $\sf LTL$.)
 
-One of the results of our work is that we can define existence in an equally intuitive way, but without appealing neither to an identity principle nor to a time-frame; in fact providing a more general concept within which others will also find themselves.
+One of the results of our work is that we can define existence in an equally intuitive way, but without appealing neither to an identity principle nor to a time-frame reference; in fact providing a more general concept within which others can also be retrieved.
 
-We will phrase the question as follows: what is variable relative to $x$ is the degree or \emph{strength} of its existence; `classical' existence is existence at the highest degree in the internal language of the topos that plays the r\^ole of the Universe (for us, a Borgesian universe); there we will be able to indicate the strength of existence of objects, without assuming to move through instants of time (as in the example of the nine copper coins of \cite{tlonEN} might suggest, cf. \autoref{bla}) or points in space (such as \emph{hr\"onir}, cf. \autoref{blu}).
+We will phrase the question as follows: what is variable relative to $x$ is the degree, or \emph{strength} of its existence; `classical' existence can be considered existence `at the highest degree' in the internal language of the category we live in (in our \autoref{sec_coins}, a Borgesian universe); there we will be able to indicate the strength of existence of objects, without assuming to move through instants of time (as in the example of the nine copper coins of \cite{tlonEN} might suggest, cf. \autoref{bla}) or points in space (such as \emph{hr\"onir}, cf. \autoref{blu}).
 
-Depending on the structure of the domain, we can choose the logic that is most suited to the context for the intuition we have of the universe in natural language.
+Depending on the structure of the domain, we can choose the logic that is most suited to the context for the intuition we have of the universe in natural language. Persistence over time is therefore not removed from the description, or denied; rather, it becomes an implicit part of it.
 
-Persistence over time is therefore not removed from the description, or denied; rather, it becomes part of it.
-
-Existence in this conception is nothing more than the mode of presence of the objects within a relational model. It is therefore literally defined by what we can \emph{do} with objects, how we can fit them in a sensible web of relations.
+Existence in this conception is nothing more than the `mode of presence' of the objects within a relational model. It is therefore literally defined by what we can \emph{do} with objects, how we can fit them in a sensible web of relations.
 
 This is not just an operational notion of existence, close to our common sense: things exist if we can touch them, see them, indirectly measure them if invisible, based on interactions they have with observable entities, describe them, count them, use them; and this is independent of \emph{how} they exist; rather, our possibility to probe them defines \emph{that} they exist.
 
 So, things exist since they belong to a category; based on our metatheoretical and foundational choices, existence concerns how things relate to each other. Here is the advantage of categorical thinking in a nutshell: to exploit structuralism to be able to bind not only our world but distant realities such as \tlon's, which is but an example of an element in an \emph{ontology scheme}.
 
-Existence is context-dependent as it varies according to the internal language of the theory/category in which we operate. This allows to formalize the obvious and powerful intuition, often belittled by ontologists, that existence on \tlon will presumably be different from our own. Changing ontology changes the concept of \emph{what is there} and \emph{how it's there}; we believe our work explicitly clarifies to what extent this happens, through mathematical language.
+The notion of existence on \tlon will presumably be different from our own:
+\begin{quote}
+    Things became duplicated in \tlon; they also tend to become effaced and lose their details when they are forgotten. \hfill\cite{Borges1963}
+\end{quote}
+such obvious and powerful intuition has often been belittled by ontologists. But once the idea is properly framed, it is possible to measure this difference precisely. Changing ontology changes the concept of \emph{what is there} and \emph{how it's there}; we believe our work explicitly clarifies to what extent this happens, through mathematical language.
+
+Mathematical language happens to be able to quantify how much Earth and \tlon are different, what is the parameter in the `furniture' of their respective worlds that has been hacked in order to admit the existence of impossible entities like group of coins that persist even though no one is observing them.
+
+In the next section, we begin to lay the foundation of mathematical language needed in §\ref{sec_coins}.
