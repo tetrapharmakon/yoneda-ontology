@@ -1,0 +1,247 @@
+\NeedsTeXFormat{LaTeX2e}[2018/12/01]
+\ProvidesPackage{fouche}
+  [Fouche's personal]
+
+\RequirePackage{xparse}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\makeabbrev}{mmm}
+ {
+  \yoruk_makeabbrev:nnn { #1 } { #2 } { #3 }
+ }
+
+\cs_new_protected:Npn \yoruk_makeabbrev:nnn #1 #2 #3
+ {
+  \clist_map_inline:nn { #3 }
+   {
+    \cs_new_protected:cpn { #2 } { #1 { ##1 } }
+   }
+ }
+\ExplSyntaxOff
+
+\makeabbrev{\textbf}{bf#1}{
+  a,b,c,d,e,g,h,i,j,k,l,m,n,o,p,q,r,t,u,v,w,x,y,z,%
+  A,B,C,D,E,G,H,I,J,K,L,M,N,O,P,Q,R,T,U,V,W,X,Y,Z }
+\makeabbrev{\boldsymbol}{bs#1}{%
+    a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
+    A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+\makeabbrev{\mathsf}{sf#1}{
+  a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
+  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+\makeabbrev{\mathfrak}{fk#1}{
+  a,b,c,d,e,f,g,h,j,k,i,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
+  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+\makeabbrev{\mathcal}{cl#1}{
+  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+\makeabbrev{\mathbb}{bb#1}{
+  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+
+\RequirePackage{amsthm}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T2A]{fontenc}
+\RequirePackage[svgnames]{xcolor}
+% \RequirePackage[pdftex]{graphicx}
+\RequirePackage{ amsfonts
+               , amsmath
+               , amssymb
+               , caption
+               , epigraph
+               , enumitem
+               , lipsum
+               , mathtools
+               , hyphenat
+               , tensor
+               , todonotes
+               , stackrel
+               , savesym
+               , setspace
+               , stmaryrd
+               , tikz-cd
+               , tcolorbox
+               , verbatim
+               , calligra
+               }
+
+\RequirePackage{tikz}
+	% \usetikzlibrary{calc}
+	% \usetikzlibrary{matrix,arrows}
+
+\RequirePackage[all,2cell]{xy}\UseAllTwocells
+
+\RequirePackage[
+   sort
+ , numbers
+]{natbib}
+
+\RequirePackage[%
+    hyperfootnotes=true
+  , bookmarksnumbered=true
+  , bookmarksopen=true
+  , breaklinks=true
+  , colorlinks%
+  , citecolor=blue!40!black%
+  , linkcolor=blue!40!black%
+  ]{hyperref}
+
+% \RequirePackage[%
+% 	  left=3.5cm
+% 	, right=3.5cm
+% 	, top=4cm
+% 	, bottom=6cm%
+% ]{geometry}
+
+\tikzset{commutative diagrams/.cd,arrow style=tikz,diagrams={>=stealth'}}
+\def\To{\Rightarrow}
+
+%per le formule nei titoli
+%-------------------------------------------------------------------------
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
+%-------------------------------------------------------------------------
+
+\renewcommand{\textbf}[1]{\text{\fontseries{b}\selectfont{\upshape #1}}}
+
+\def\cate#1{\mathsf{#1}}
+ \def\CAT{\cate{CAT}}
+ \def\Prof{\cate{Prof}}
+ \def\Qat{\cate{Cat}}
+ \def\caat{\cate{cat}}
+ \def\Set{\cate{Set}}
+ \def\Ab{\cate{Ab}}
+ \def\Grp{\cate{Grp}}
+ \def\Top{\cate{Top}}
+ \def\Vec{\cate{Vect}}
+ \def\sSet{\cate{sSet}}
+ \def\Ch{\cate{Ch}}
+ \def\Mfd{\cate{Mfd}}
+ \def\Mod{\cate{Mod}}
+ \def\Alg{\cate{Alg}}
+
+\makeatletter
+\def\defthm#1#2{%
+  \newtheorem{#1}{#2}[section]%
+  \expandafter\def\csname #1autorefname\endcsname{#2}%
+  \expandafter\let\csname c@#1\endcsname\c@theorem}
+\makeatother
+
+\DeclareOption{english}{
+\theoremstyle{definition}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+ \defthm{corollary}{Corollary}
+ \defthm{proposition}{Proposition}
+ \defthm{lemma}{Lemma}
+ \defthm{claim}{Claim}
+ \defthm{definition}{Definition}
+ \defthm{notation}{Notation}
+ \defthm{remark}{Remark}
+ \defthm{conjecture}{Conjecture}
+ \defthm{axiom}{Axiom}
+ \defthm{example}{Example}
+ \defthm{examples}{Examples}
+ \defthm{exercise}{Exercise}
+ \defthm{counterexample}{Counterexample}
+ \defthm{construction}{Construction}
+ \defthm{warning}{Warning}
+ \defthm{digression}{Digression}
+ \defthm{perspective}{Perspective}
+ \defthm{discussion}{Discussion}
+ \defthm{terminology}{Terminology}
+ \defthm{heuristics}{Heuristics}
+}
+
+\DeclareOption{italian}{
+\theoremstyle{definition}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Teorema}[section]
+ \defthm{corollary}{Corollario}
+ \defthm{proposition}{Proposizione}
+ \defthm{lemma}{Lemma}
+ \defthm{definition}{Definizione}
+ \defthm{notation}{Notazione}
+ \defthm{remark}{Osservazione}
+ \defthm{conjecture}{Congettura}
+ \defthm{axiom}{Assioma}
+ \defthm{example}{Esempio}
+ \defthm{examples}{Esempi}
+ \defthm{exercise}{Esercizi}
+ \defthm{counterexample}{Controesempio}
+ \defthm{construction}{Costruzione}
+ \defthm{warning}{Caveat}
+ \defthm{digression}{Digressione}
+ \defthm{perspective}{Prospettiva}
+ \defthm{discussion}{Discussione}
+ \defthm{terminology}{Terminologia}
+ \defthm{heuristics}{Euristica}
+}
+
+
+\ExecuteOptions{english}
+\ProcessOptions\relax
+
+\newcommand{\arXivPreprint}[1]{\href{http://arxiv.org/abs/#1}{arXiv:#1} preprint}
+
+\newlength{\seplen}
+\setlength{\seplen}{5pt}
+\newlength{\sepwid}
+\setlength{\sepwid}{.4pt}
+\def\firstblank{\,\rule{\seplen}{\sepwid}\,}
+\def\secondblank{\firstblank\llap{\raisebox{2pt}{\firstblank}}}
+
+\DeclareDocumentEnvironment{enumtag}{m}{%
+	\begin{enumerate}%
+		[ label = \textsc{#1}\oldstylenums{\arabic*}),%
+		  ref   = \textsc{#1}\oldstylenums{\arabic*}%
+	  ] }{ \end{enumerate} }
+
+\def\op{\text{op}}
+\def\co{\text{co}}
+\def\coop{\text{coop}}
+
+\newcommand{\celtag}[2][dr]{\ar[#1,white, "#2"{black,description}]}
+
+\def\ran{\mathrm{ran}}
+\def\Ran{\mathrm{Ran}}
+\def\RAN{\textsc{Ran}}
+\def\lan{\mathrm{lan}}
+\def\Lan{\mathrm{Lan}}
+\def\Yan{\mathrm{Yan}}
+\def\LAN{\textsc{Lan}}
+\def\rift{\mathrm{rift}}
+\def\Rift{\mathrm{Rift}}
+\def\RIFT{\textsc{Rift}}
+\def\leeft{\mathrm{lift}}
+\def\Lift{\mathrm{Lift}}
+\def\LIFT{\textsc{Lift}}
+\def\Nat{\textsf{Nat}}
+
+\let\xto\xrightarrow
+\let\xot\xleftarrow
+\newcommand{\Nearrow}{\rotatebox[origin=c]{45}{$\Rightarrow$}}
+\newcommand{\Nwarrow}{\rotatebox[origin=c]{135}{$\Rightarrow$}}
+\newcommand{\Searrow}{\rotatebox[origin=c]{-45}{$\Rightarrow$}}
+\newcommand{\Swarrow}{\rotatebox[origin=c]{225}{$\Rightarrow$}}
+\newcommand{\Sarrow}{\rotatebox[origin=c]{-90}{$\Rightarrow$}}
+\newcommand{\Narrow}{\rotatebox[origin=c]{90}{$\Rightarrow$}}
+
+\DeclareMathOperator{\colim}{colim}
+\DeclareMathOperator{\coker}{coker}
+
+% \makeatletter
+%   \def\@cite#1#2{[\textbf{#1}\if@tempswa , #2\fi]}
+%   \def\@biblabel#1{[\textsf{#1}]}
+% \makeatother
+
+% \tcbuselibrary{most}
+% \tcolorboxenvironment{quote}{ blanker
+%                             , before skip=10pt
+%                             , after skip=10pt
+%                             , borderline west={6mm}{5pt}{gray!15}
+%                             , breakable
+%                             }
+
+% \newcommand{\pto}{\mathop{\ooalign{\hfil\kern-2pt$\mapstochar$\hfil\cr\hfil$\to$\hfil}}}
+
+% \usepackage{turnstile}
+% \newcommand{\adjunct}[2]{\nsststile{#2}{#1}}
