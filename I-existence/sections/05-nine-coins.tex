@@ -2,16 +2,15 @@
 \epigraph{
   Explicaron que una cosa es \emph{igualdad}, y otra \emph{identidad}, y formularon una especie de \emph{reductio ad absurdum}, o sea el caso hipotético de nueve hombres que en nueve sucesivas noches padecen un vivo dolor. ¿No sería ridículo -interrogaron- pretender que ese dolor es el mismo?
 }{JLB ---\tlon, Uqbar, Orbis Tertius}
-The main result of the present section is a roundup of examples showing that it is possible to concoct categories of variable sets where some seemingly paradoxical constructions coming from J.L. Borges' literary world have, instead, a perfectly `classical' behaviour when looked with the lenses of the logic of variable set theory.
+The main result of the present section is a roundup of examples showing that it is possible to concoct categories of variable sets $\Set/I$ where some seemingly paradoxical constructions coming from J.L. Borges' literary world have, instead, a perfectly `classical' behaviour when looked in the internal logic of $\Set/I$.
 
-Each of the examples in our roundup \autoref{bla}, \ref{bli}, \ref{blu} is organised as follows: we recall the shape of a paradoxical statement in Borges' literary world. Then, we show in which topos this reduces to an intuitive statement expressed in the syntax of a variable set category.
+Each of the examples in our roundup \autoref{bla}, \ref{bli}, \ref{blu} is organised as follows: we recall the statement in Borges' words. Then, we exhibit a topos in which the statement becomes admissible, when expressed in Kripke-Joyal semantics.
 \subsection{Choosing an internal logic}
 According to our description of the Mitchell-Bénabou language in the category of variable sets, \emph{propositions} are morphisms of the form
 \[p : U \to \Omega_I\]
-
 where $\Omega_I$ is the subobject classifier of $\Set/I$ described in \autoref{variable_sets_have_omega}; now, recall that
 \begin{itemize}
-  \item the object $\Omega_I = \{0,1\}\times I \to I$ becomes an object of $\Set/I$ when endowed with the projection $\pi_I : \Omega_I \to I$ on the second factor of its domain;
+  \item the object $\Omega_I = \Omega_0\times I \to I$ becomes an object of $\Set/I$ when endowed with the projection $\pi_I : \Omega_I \to I$ on the second factor of its domain ($\Omega_0$ is the subobject classifier of $\Set$, having a top element $\top$ and a bottom element $\bot$);
   \item the universal monic $\tr : I \to \Omega_I$ consists of a section of $\pi_I$, precisely the one that sends $i : I$ to the pair $(i,1) : \Omega_I$;
   \item every subobject $U \hookrightarrow A$ of an object $A$ results as a pullback (in $\Set/I$) along $\tr$:
         \[\xymatrix@R=5mm@C=5mm{
@@ -19,18 +18,31 @@ where $\Omega_I$ is the subobject classifier of $\Set/I$ described in \autoref{v
           &I& \\
           A \ar[ur]\ar[rr]_{\chi_U}&& \ar[ul]\Omega_I
           }\]
-        (see \autoref{variable_sets_have_omega} for a complete proof)
+        (see \autoref{variable_sets_have_omega} for a complete proof).
 \end{itemize}
-The set $I$ in this context acts as a \emph{multiplier} of truth values, in that every proposition can have a pair $(\epsilon, i)$ as truth value. We introduce the following notation: a proposition $p : U \to \Omega_I$ is \emph{true}, in context $x :U$, with \emph{strength} $t$, if $p(x) =(1,t)$ (resp., $p(x)=(0,t)$).
+The set $I$ in this context acts as a \emph{multiplier} of truth values, in that every proposition can have a pair $(\epsilon, t)$ as truth value: $\epsilon$ is the truth value, `amplified' by $t : I$. 
+
+We introduce the following notation: a proposition $p : U \to \Omega_I$ is \emph{true} (resp. \emph{false}), in context $x :U$, with \emph{strength} $t$, if $p(x) =(1,t)$ (resp., $p(x)=(0,t)$). We say, in short, that $p$ is $t$-true in context $x:U$, and we denote these two judgments as 
+\[x:U\entails{t} p \qquad\qquad x:U\entails{t} \lnot p.\]
+This notation is extensible in the obvious way: 
+\begin{itemize}
+  \item $\vec x : U \entails{t} p$ means that $p(x_1,\dots,x_n) = (1,t)$ for $p : U= U_1\times\dots\times U_n\to \Omega_I$ and $\vec x = (x_1,\dots,x_n) : U$;
+  \item $x : U \entails{t} p_1,\dots, p_n$ means that for every $1\le i \le n$ one has $p_i(x)=(1,t)$;
+\end{itemize}
+Every other combination is similarly defined. This notation is chosen in order not to make explicit reference to the set of truth values we take for our background logic in $\Set$; all the results that we state independent from the assumption that the subobject classifier $\Omega_0$ of $\Set$ is the usual two-element Boolean algebra $\{0 < 1\}$. (This will be, however, our natural choice.)
 \begin{remark}\label{very_importanta_force}
   A proposition in the internal language of variable sets is a morphism of the following kind: a function $p : U \to \Omega_I$, defined on a certain domain, and such that
   \[
     \xymatrix{
-      U\ar[d]_u\ar[r]^-p  & \{0,1\}\times I \ar[d]^{\pi_I}\\
+      U\ar[d]_u\ar[r]^-p  & \Omega_0\times I \ar[d]^{\pi_I}\\
       I \ar@{=}[r]& I
     }
   \]
-  (it must be a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the `variable domain' $U$. This is an important observation: the strength with which $p$ is true/false is completely determined by the structure of its domain, in the form of the function $u : U \to I$ that renders the pair $(U,u)$ an object of $\Set/I$.
+  (it must be a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the `variable domain' $U$. We can succintly denote this fact in the above notation, writing
+  \[\infer{x : (U,u) \entails{u(x)} \epsilon_x\cdot p}{}\]
+  where $\epsilon_x \cdot p$ is $p$ if $\epsilon_x=1$, and $\lnot p$ otherwise.
+
+  This is an important observation: the strength with which $p$ is true/false is completely determined by the structure of its domain, in the form of the function $u : U \to I$ that renders the pair $(U,u)$ an object of $\Set/I$.
 \end{remark}
 \begin{remark}\label{something_on_I}
   To get a concrete grip on the different classes of propositions we  can build in an internal language, it is now convenient to restrain the structure of $I$ in order to satisfy our intuition that it is a space of \emph{strengths}: it is for example possible to equip $I$ with an order structure, or a natural topology. 
@@ -69,15 +81,30 @@ In order to aid the reader understand the explicit way in which $I$ `multiplies'
       \draw (0,0) rectangle (1,1);
       \draw (.5,1) -- (.5,0);
     \end{tikzpicture}\]
-  endowed with the product order. The resulting poset is partially ordered, and in fact a Heyting algebra, because it results as the product of two Heyting algebras: the Boole algebra $\{0<1\}$ and the frame of open subsets of the Sierpinski space $\{a,b\}$ (the topology is $\tau_S = \{\varnothing, \{a\}, \{a,b\}\}$).
+  endowed with the product order. The resulting poset is partially ordered, and in fact a Heyting algebra, because it results as the product of two Heyting algebras: the Boole algebra $\{0<1\}$ and the frame of open subsets of the Sierpiński space $\acute{S} =(\{a,b\}, \tau_S)$ (the topology is $\tau_S = \{\varnothing, \{a\}, \{a,b\}\}$).
 \end{remark}
 \begin{remark}\label{alcuni_set}
   Given that $I=[0,1]$ endowed with its usual Euclidean topology is one of our most natural choices, we explicitly define some interesting sets obtained out of $\Omega_I$ or out of a given proposition $p : U \to \Omega_I$ in the Mitchell-Bénabou language of $\Set/[0,1]$:
   \begin{itemize}
-    \item $A^\top = \{x : U \mid p(x) = (\top,t_x), t_x > 0\} = p^\leftarrow(\{\top\}\times (0,1])$ e $A^\perp = \{x : U \mid p(x) = (\bot,t_x), t_x > 0\}$; this set canonically identifies to the subset of structure functions $\cvar{U}{u}{I}$ such that $u^\leftarrow 0 = \varnothing$.
-    \item Similarly, we define $Z^\top = p^\leftarrow(\{\top\}\times [0,1))$ and its companion $Z^\bot$.
-    \item $B^\top = \{x : U \mid p(x) = (\top,1)\} = p^\leftarrow((\top,1))$ and $B^\perp = \{x : U \mid p(x) = (\bot,1)\}$ `true's and `false's; these are obtained as fibers over the maximal element of $I$.
-    \item $E_t^\top = \{ x : U \mid p(x)=(1,t)\}$ e $E_t^\perp = \{ x : U \mid p(x)=(0,t)\}$.
+    \item the two sets 
+    \begin{align*}
+      A^\top  &= \big\{x:U\entails{t_x} p,\, t_x > 0\big\}\subseteq U\\
+      A^\perp &= \big\{x:U \entails{t_x} \lnot p,\, t_x > 0\big\}\subseteq U
+    \end{align*}
+    the last set is canonically identifies to the subset of structure functions $\cvar{U}{u}{I}$ such that $u^\leftarrow 0 = \varnothing$.
+    % \item Similarly, we define $Z^\top = p^\leftarrow(\{\top\}\times [0,1))$ and its companion $Z^\bot$.
+    \item the two sets 
+    \begin{align*}
+      B^\top  &= \big\{ x:U \entails{1} p \big\}\subseteq U\\
+      B^\perp &= \big\{ x:U \entails{1} \lnot p \big\}\subseteq U
+    \end{align*}
+    these are obtained as fibers over the maximal element of $I$.
+    \item the two sets 
+    \begin{align*}
+      E_t^\top &= \{ x : U \entails{t} p\}\subseteq U\\
+      E_t^\perp &= \{ x : U \entails{t} \lnot p\}\subseteq U
+    \end{align*}
+    Clearly, $B^\top = \coprod_{t : I} E_t^\top$ and $B^\bot = \coprod_{t : I} E_t^\bot$.
   \end{itemize}
 \end{remark}
 A crucial decision at some point will be about the regularity with which the strength of $p$ depends with respect to the variables on its domain of definition. Without a continuous dependence, small changes in context $x : U$ might drastically change the truth value $p(x)$.\footnote{There is no a priori reason to maintain that $p$ is a continuous proposition; one might argue that discontinuous changes in truth value of $p$ happen all the time in `real life'; see the family of paradoxes based on so-called \emph{separating instants}: how well-defined the notion of `time of death' is? How well-defined the notion of `instant in time'?}
