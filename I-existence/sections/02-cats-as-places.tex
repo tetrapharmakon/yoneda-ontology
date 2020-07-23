@@ -40,7 +40,7 @@ Everything starts with the following definition:
     A \emph{type $\fkT$ of universal algebra} is a pair $(T,\underline{\alpha})$ where $T$ is a set called the (\emph{algebraic}) \emph{signature} of the theory, and $\underline\alpha$ a function $T \to \bbN$ that assigns to every element $t: T$ a natural number $n_t: \bbN$ called the \emph{arity} of the function symbol $t$.
 \end{definition}
 \begin{definition}
-    A (\emph{universal}) \emph{algebra} of type $\fkT$ is a pair $(A,f^A)$ where $A$ is a set and $f^A: T \to \prod_{t: T} \Set(A^{n_t},A )$ is a function that sends every function symbol $t: T$ to a function $f^A_t: A^{n_t} \to A$; $f^A_t$ is called the $n_t$-ary operation on $A$ associated to the function symbol $t: T$.
+    A (\emph{universal}) \emph{algebra} of type $\fkT$ is a pair $(A,f^A)$ where $A$ is a set and $f^A$ is a function that sends every function symbol $t: T$ to a function $f^A_t: A^{n_t} \to A$; $f^A_t$ is called the $n_t$-ary operation on $A$ associated to the function symbol $t: T$.
 \end{definition}
 We could evidently have replaces $\Set$ with another category $\clC$ of our choice, provided the object $A^n: \clC$ still has a meaning for every $n: \bbN$ (to this end, it suffices that $\clC$ has finite products; we call such a $\clC$ a \emph{Cartesian} category). A universal algebra of type $\fkT$ in $\clC$ is now a pair $(A,f^A)$ where $A: \clC$ and $f^A: \prod_{t: T} \clC(A^{n_t},A )$; it is however possible to go even further, enlarging the notion of `type of algebra' even more.
 
