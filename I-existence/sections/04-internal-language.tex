@@ -126,7 +126,7 @@ Quantifiers can be deduced in a similar way, starting from their general definit
   This recursively defines a function with the desired properties; it is clear that these requests uniquely determine $u$.
 \end{remark}
 Such a terse exposition does not exhaust such a vast topic as recursion theory conducted with category-theoretic tools. The interested reader shall consult \cite{jacobs1997tutorial} for a crystal-clear introductory account, and \cite{cockett2008introduction,cockett2014total} for more recent and modern development of recursion theory.
-
+\begin{remark}\label{dyn_sisy}
 The object of natural numbers of $\Set/I$ is easily seen to match the definition of the \emph{initial object} \cite[]{Bor1} of the category $\cate{Dyn}/I$ so defined:
 \begin{itemize}
   \item the objects of $\cate{Dyn}/I$ are \emph{dynamical systems} in $\Set/I$, i.e. the triples $(x,X,f)$, where $X : \Set/I$ (say, with structure map $\xi : X \to I$), $x : (I,\id_I) \to (X,\xi)$ and $f : X \to X$ is an endo-morphism of variable sets;
@@ -136,3 +136,4 @@ The object of natural numbers of $\Set/I$ is easily seen to match the definition
 The reason why such a triple $(x,X,f)$ identifies as a (discrete) dynamical system is easily seen: the function $x : I \to X$ works as initial seed for a recursive application of $f$, in such a way that every $f : X \to X$ defines a sequence
 \[u_{n+1} := f(u_n)\]
 of its iterates. The system now lends itself to all sorts of questions: is there a fixed point for \(u_n(x)\)? Does the limit of \(u_n(x)\) belong to \(X\) (not obvious: consider \(X=[0,1[\) and \(u_n(x)\equiv 1-\frac{1}{n}\))? Is \(u_n(x)\) continuous in \(x\)? Etc.
+\end{remark}

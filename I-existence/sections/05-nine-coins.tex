@@ -44,7 +44,7 @@ every other combination is similarly defined. This notation is chosen in order n
     }
   \]
   (it must be a morphism of variable sets!) This means that $\pi p(x : U) = u(x : U)$, so that $p(x) = (\epsilon_x, u(x))$ for $\epsilon_x =0,1$ and $u$ is uniquely determined by the `variable domain' $U$. We can succintly denote this fact in the above notation, writing
-  \[\infer{x : (U,u) \entails{u(x)} \epsilon_x\cdot p}{}\]
+  \begin{equation}\label{entailment} \infer{x : (U,u) \entails{u(x)} \epsilon_x\cdot p}{}\end{equation}
   where $\epsilon_x \cdot p$ is $p$ if $\epsilon_x=1$, and $\lnot p$ otherwise.
 
   This is an important observation: the strength with which $p$ is true/false is completely determined by the structure of its domain, in the form of the function $u : U \to I$ that renders the pair $(U,u)$ an object of $\Set/I$.
@@ -130,7 +130,7 @@ The results of our analysis are surprising:
 \end{itemize}
 To sum up, readers willing to find an original result in this paper might find it precisely here: we underline how Borges' alternative worlds (Babylon, \tlon \ dots) are mathematically consistent places, worthy of existence as much as our world, only based on a different internal logic. 
 
-The first paradox we aim to frame in the right topos is the famous nine copper coins argument, used by the philosophers of Tlön to construct an impossible object persisting to exist over time, even without a perceivent that maintains it in a state of being.
+\subsubsection{Nine copper coins} The first paradox we aim to frame in the right topos is the famous nine copper coins argument, used by the philosophers of Tlön to construct an impossible object persisting to exist over time, even without a perceivent that maintains it in a state of being.
 \begin{example}[Nine copper coins]\label{bla}
   First, we recall the exact statement of the paradox:\footnote{The paradox appears in a primitive, mostly unchanged version in \cite{borges1997otras}, where instead of nine copper coins, a single arrow, shot by an anonymous archer, disappears among the woods. For what concerns \tlon's  nine copper coins, our translation comes from \cite{tlonEN}:
     \begin{quote}
@@ -172,13 +172,11 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
       where we denote as `sum' the logical conjunction in $\Omega_I$: this means that day by day, the \emph{global} existence of the group of coins constantly attains the maximum; it is the \emph{local} existence that lowers when the initial conglomerate of coins is partitioned.
       \item \label{ad:due} Moreover,
       \[
-        \bsmat c_X:C_X\\ c_Y:C_Y\\ c_Z:C_Z\esmat \entails{} 
-        \bsmat p(X,\firstblank,\text{\F})\\ p(Y,\firstblank,\Th)\\ p(Z,\firstblank,\text{\F})\esmat
-        % \begin{cases}
-        %   \sum_{c_X: C_X} p(X,c_X,V) = (\top,1) \\
-        %   \sum_{c_Y: C_Y} p(Y,c_Y,G) = (\top,1) \\
-        %   \sum_{c_Z: C_Z} p(Z,c_Z,V) = (\top,1)
-        % \end{cases}
+        \begin{cases}
+          \sum_{c_X: C_X} p(X,c_X,V) = (\top,1) \\
+          \sum_{c_Y: C_Y} p(Y,c_Y,G) = (\top,1) \\
+          \sum_{c_Z: C_Z} p(Z,c_Z,V) = (\top,1)
+        \end{cases}
       \]
     \end{enumtag}
   \end{definition}
@@ -224,20 +222,24 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
 
   Certainly the reader will have fun finding different possible admissible configurations of coins, and building themselves additional details to enrich the bare story of $X,Y,Z$ (for example: can the cardinality of $\{X,Y,Z\}$ depend on $I$? If yes, how?).
 \end{example}
+\subsubsection{Continuity and discontinuity} Continuity and discontinuity of a proposition $p : U \to \Omega_{[0,1]}$ now capture quite well other pieces of Borges' literary universe: here we provide two examples. We refrain from a deep, quantitative analysis, and we invite the reader to fill the details of our reasoning as a pleasant re-reading exercise of \cite{babil} and \cite{tlonEN}.\footnote{The plot of \cite{babil} in a nutshell is: in Babylon, a lottery game infiltrates reality to the point that it ends up governing the actions of all men; liberating them from free will while coorting them into pawns of an infinite, inescapable, unknowable game, governed by an iron, seemingly chaotic, probabilistic logic.}
 \begin{remark}[Continuity for a proposition]\label{continuiti}
   Let $p : U \to \Omega_I$ be a proposition; here we investigate what does it mean for $p$ to be (globally) continuous with respect to the Euclidean topology on $I=[0,1]$, in the assumption that its domain of definition $U$ is metrisable (this is true for example when $U$ is a subset of space-time). The condition is that
-  \[ \forall \epsilon > 0,\,\exists \delta > 0 : |x-y|< \delta \To |px-py| < \epsilon \]
-  In layman terms: $p$ is continuous on its domain of definition if its strength over nearby events can't change dramatically.
+  \[ \forall \epsilon > 0,\,\exists \delta > 0 : |x-y|< \delta \To |px-py| < \epsilon. \]
+  In layman terms: $p$ is continuous on its domain of definition if its strength over nearby events can't change too dramatically.
 
-  All elementary topology results apply to such a proposition: for example, the set of forces with which $p$ is true or false is a connected subset of $\Omega_I$, compact if $U$ was compact.
+  All elementary topology results apply to such a proposition: for example, the set of forces with which $p$ is true or false is a connected subset of $\Omega_{[0,1]}$, compact if $U$ was compact.
 \end{remark}
-Continuity and discontinuity of a proposition $p : U \to \Omega_I$ now capture quite well other pieces of Borges' literary universe: here we provide two examples. We refrain from a deep, quantitative analysis, and we invite the reader to fill the details of our reasoning as a pleasant re-reading exercise of \cite{babil} and \cite{tlonEN}.\footnote{The plot of \cite{babil} in a nutshell is: in Babylon, a lottery game infiltrates reality to the point that it ends up governing the actions of all men; liberating them from free will while coorting them into pawns of an infinite, inescapable, unknowable game, governed by an iron, seemingly chaotic, probabilistic logic.}
 \begin{example}[Discontinuity, sapphire from Taprobana]\label{bli}
   Propositions $p : U \to \Omega_{[0,1]}$ that are allowed to be discontinuous in its variables depend unpredictably from their context: such propositions model seemingly chaotic events triggered as the end terms of a chain of disconnected prior events; in fact, if we assume a real base for the domain of $p$, its continuity as stated in \autoref{continuiti} roughly means that events in the same neighbourhood --`near' in space or temporally contiguous-- can't have too much different truth/strength values.
 
   A model for such a universe, where `terrible consequences' sometimes follow from the `impersonal drawings, whose purpose is unclear' characterising the Company's actions: seemingly disconnected (that `a sapphire from Taprobana be thrown into the waters of the Euphrates'; that `a bird be released from the top of a certain tower'; that `every hundred years a grain of sand be added to (or taken from) the countless grains of sand on a certain beach'), but generating nontrivial dynamics when inserted in a suitable sequence as in \autoref{fig_dynamics}.
 
-  Let us consider the dynamical system $(\nabla\circ p, [0,1])$ obtained from the iterates of the composition $\nabla \circ p : [0,1] \to [0,1]$ ($\nabla : I\amalg I \to I$ is the fold map of $I$, obtained from the identity of $I$ and the universal property of the coproduct). We start from a proposition $p$ depending on a free variable $t : I$; then, $p(t) = (u(t),\epsilon): \Omega_I$ consists of a strength and a truth value; but $p$ can be evaluated on $u(t)$ (although this is not its universal property, the fold map $\nabla$ just forgets the truth value, keeping the force): the process can thus be iterated as follows, exploiting the universal property of the natural number object in $\Set/I$:
+  Let us consider the dynamical system $([0,1],\nabla\circ p)$ (see \autoref{dyn_sisy}) obtained from the iterates of the composition $\nabla \circ p : [0,1] \to [0,1]$ ($\nabla : I\amalg I \to I$ is the fold map of $I$, obtained from the identity of $I$ and the universal property of the coproduct). We start from a proposition $p$ depending on a free variable $t : I$; then, $p(t) = (u(t),\epsilon): \Omega_I$ consists of a strength and a truth value; but $p$ can be evaluated on $u(t)$ because of \eqref{entailment} ($u$ is a continuous endomorphism of a compact metric space; although this is not its universal property, the fold map $\nabla$ just forgets the truth value, keeping the force):
+  \[
+    t : I\entails{u(t)} p \qquad u(t) :I \entails{uut} p \qquad \dots
+  \]
+  The process can thus be iterated as follows, exploiting the universal property of the natural number object in $\Set/I$:
   \begin{center}
     \begin{figure}[h]
       \def\line{\draw (0,0) -- (1,0); \draw (0,.5) -- (1,.5);}
@@ -256,7 +258,7 @@ Continuity and discontinuity of a proposition $p : U \to \Omega_I$ now capture q
       \label{fig_dynamics}
     \end{figure}
   \end{center}
-  It is clear that the limit behaviour of such a sequence strongly depends on the analytic properties of $f$ (cf. \cite{strogatz1996nonlinear} for an intro to one-dimensional dynamic systems and for their applications see \cite{wiggins2003introduction}). In a well-known procedure, a repeated series of drawings can chaotically deform the configuration space on which $p$ is evaluated.\footnote{There is of course countless termination conditions on such process $p$; the series can be periodic, it can stop when $p$ reaches maximum or minimum force, or a prescribed value, or is inside/outside a certain range of forces\dots; we leave such speculations to the mystagogues of the Company, or to the lions of Qaphqa.}
+  It is clear that the limit behaviour of such a sequence strongly depends on the analytic properties of $u$ (e.g., if $u$ is a contraction, it must have a single fixed point). A repeated series of drawings can chaotically deform the configuration space on which $p$ is evaluated. There is of course countless termination conditions on such process $p$; the series can be periodic, it can stop when $p$ reaches maximum or minimum force, or a prescribed value, when $u$ reaches its unique fixed point --if any, or is inside/outside a certain range of forces\dots; we leave such speculations to the mystagogues of the Company, or to the lions of Qaphqa.
 \end{example}
 Another compelling example is that of the monotonicity of a proposition depending, say, on a certain number of observers who acknowledge the `existence' of an object $R$ (be it physical or conceptual) in large numbers, from which very reason the existence of $R$ gains strength.
 \begin{example}[Continuity: a few birds, a horse]\label{blu}
@@ -265,7 +267,7 @@ Another compelling example is that of the monotonicity of a proposition dependin
     things became duplicated in Tlön; they also tend to become effaced and lose their details when they are forgotten. A classic example is the doorway which survived so long it was visited by a beggar and disappeared at his death. At times some birds, a horse, have saved the ruins of an amphitheater.  \hfill\cite{tlonEN}
   \end{quote}
   In such a situation, we can note that the strength of existence of some ruins --modeled as it is the more naive to do, like a rigid body $R$ in space-- depends on the number of its observers:
-  \[\textstyle p(R, n) = \big(\top, 1-\frac{1}{n}\big)\]
+  \[(R,n)\entails{1-\frac{1}{n}} p.\]%\textstyle p(R, n) = \big(\top, 1-\frac{1}{n}\big)\]
   \begin{figure}[h]
     \begin{center}
       \begin{tikzpicture}[xscale=1.25]
@@ -282,6 +284,7 @@ Another compelling example is that of the monotonicity of a proposition dependin
     \caption{On \tlon, there are things that exist stronger the more you believe in them. This is a consequence of the strength $p(\Tribar)$ monotonically depending on an increasing variable $n$ (`trust' in that existence, `belief' that the impossible tribar \Tribar exists.)}
   \end{figure}
 \end{example}
+\subsubsection{Changing the geometry of $I$}
 To conclude the section, a last --somewhat dramatic-- example. What happens if we change topology on $I$? For example, we could brutally forget the Euclidean topology of the closed interval $[0,1]$, and regard $I$ as the disjoint union $\{ \{t\} \mid t: [0,1]\}$ of its points; so, the subobject classifier becomes the disjoint union of $[0,1]$ copies of $\{\perp,\top\}$. (See \autoref{fig:berkeley} below for a picture.)
 \begin{example}[Burning fields at the horizon]\label{incendiata}
   The main tenet of the present paragraph is that Berkeley idealism of infinite and disconnected instants of time finds a natural home in our framework if the classifier is chosen to be the object $\Omega_I = \coprod_{t : [0,1]} \{ \perp,\top\}$. Such a peculiar logical framework allows for language to be reshaped in light of Berkeleyan instantaneism: the various terms of the perceptual bundle are recorded and stockpiled by instantaneous accretion, by disjoint sum of their constituents. This is exactly what happens on \tlon for words like `round airy-light on dark' or `pale-orange-of-the-sky'; objects are determined by their simultaneity, instead of their logical dependence: accretion superimposes fictitious meaning on a temporal sequence; it is just an illusion, a mistake of perception tricked into an illicit interpolation.
