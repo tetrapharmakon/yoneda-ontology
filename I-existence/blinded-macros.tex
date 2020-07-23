@@ -1,18 +1,18 @@
-\makeatletter
-\def\@settitle{\begin{center}%
-  \baselineskip14\p@\relax
-  \bfseries
-  \uppercasenonmath\@title
-  \@title
-  \ifx\@subtitle\@empty\else
-     \\[1ex]\uppercasenonmath\@subtitle
-     \footnotesize\mdseries\@subtitle
-  \fi
-  \end{center}%
-}
-\def\subtitle#1{\gdef\@subtitle{#1}}
-\def\@subtitle{}
-\makeatother
+% \makeatletter
+% \def\@settitle{\begin{center}%
+%   % \baselineskip14\p@\relax
+%   % \bfseries
+%   % \uppercasenonmath\@title
+%   \@title
+%   \ifx\@subtitle\@empty\else
+%      \\[1ex]\uppercasenonmath\@subtitle
+%      \footnotesize\mdseries\@subtitle
+%   \fi
+%   \end{center}%
+% }
+% \def\subtitle#1{\gdef\@subtitle{#1}}
+% \def\@subtitle{}
+% \makeatother
 
 \newcommand{\var}[3][]{%
 \left[%
@@ -55,8 +55,9 @@
 % \input{blinded.tex}
 
 %== metadata
-\title{Categorical ontology I}
-\subtitle{Existence}
+\title{Categorical Ontology I: Existence}
+
+\subjclass{18-03, 18B25, 18C10}
 
 \usepackage{ xspace
            , proof
