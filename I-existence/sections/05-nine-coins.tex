@@ -28,8 +28,13 @@ This notation is extensible in the obvious way:
 \begin{itemize}
   \item $\vec x : U \entails{t} p$ means that $p(x_1,\dots,x_n) = (1,t)$ for $p : U= U_1\times\dots\times U_n\to \Omega_I$ and $\vec x = (x_1,\dots,x_n) : U$;
   \item $x : U \entails{t} p_1,\dots, p_n$ means that for every $1\le i \le n$ one has $p_i(x)=(1,t)$;
+  \item $\vec x \entails{t} \vec p$, sometimes written at large
+  \[
+    \bsmat x_1\\\vdots\\x_n \esmat \entails{t} \bsmat p_1\\\vdots \\ p_n \esmat
+  \]
+  means that in context $x_1 : U_1,\dots, x_n : U_n$ one has $p_j(x_j) = (1,t)$ for all $1\le j\le n$;
 \end{itemize}
-Every other combination is similarly defined. This notation is chosen in order not to make explicit reference to the set of truth values we take for our background logic in $\Set$; all the results that we state independent from the assumption that the subobject classifier $\Omega_0$ of $\Set$ is the usual two-element Boolean algebra $\{0 < 1\}$. (This will be, however, our natural choice.)
+every other combination is similarly defined. This notation is chosen in order not to make explicit reference to the set of truth values we take for our background logic in $\Set$; all the results that we state independent from the assumption that the subobject classifier $\Omega_0$ of $\Set$ is the usual two-element Boolean algebra $\{0 < 1\}$. (This will be, however, our natural choice.)
 \begin{remark}\label{very_importanta_force}
   A proposition in the internal language of variable sets is a morphism of the following kind: a function $p : U \to \Omega_I$, defined on a certain domain, and such that
   \[
@@ -98,7 +103,7 @@ In order to aid the reader understand the explicit way in which $I$ `multiplies'
       B^\top  &= \big\{ x:U \entails{1} p \big\}\subseteq U\\
       B^\perp &= \big\{ x:U \entails{1} \lnot p \big\}\subseteq U
     \end{align*}
-    these are obtained as fibers over the maximal element of $I$.
+    these are obtained as fibers over the maximal element of $I$. A useful shorthand for the judgment $\entails{1}$ is just $\entails{}$.
     \item the two sets 
     \begin{align*}
       E_t^\top &= \{ x : U \entails{t} p\}\subseteq U\\
@@ -161,16 +166,19 @@ The first paradox we aim to frame in the right topos is the famous nine copper c
     \begin{enumtag}{ad}
       \item \label{ad:uno} for all day $d$ and coin $c$, we have
       \[
-        \sum_{u: \{X,Y,Z\}} p(u,c,d) = (\top, 1)
+      (g,c,d) : G\times C\times W \entails{} p  
+      %\sum_{u: \{X,Y,Z\}} p(u,c,d) = (\top, 1)
       \]
       where we denote as `sum' the logical conjunction in $\Omega_I$: this means that day by day, the \emph{global} existence of the group of coins constantly attains the maximum; it is the \emph{local} existence that lowers when the initial conglomerate of coins is partitioned.
       \item \label{ad:due} Moreover,
       \[
-        \begin{cases}
-          \sum_{c_X: C_X} p(X,c_X,V) = (\top,1) \\
-          \sum_{c_Y: C_Y} p(Y,c_Y,G) = (\top,1) \\
-          \sum_{c_Z: C_Z} p(Z,c_Z,V) = (\top,1)
-        \end{cases}
+        \bsmat c_X:C_X\\ c_Y:C_Y\\ c_Z:C_Z\esmat \entails{} 
+        \bsmat p(X,\firstblank,\text{\F})\\ p(Y,\firstblank,\Th)\\ p(Z,\firstblank,\text{\F})\esmat
+        % \begin{cases}
+        %   \sum_{c_X: C_X} p(X,c_X,V) = (\top,1) \\
+        %   \sum_{c_Y: C_Y} p(Y,c_Y,G) = (\top,1) \\
+        %   \sum_{c_Z: C_Z} p(Z,c_Z,V) = (\top,1)
+        % \end{cases}
       \]
     \end{enumtag}
   \end{definition}
