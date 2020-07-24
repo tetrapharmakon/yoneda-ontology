@@ -1,18 +1,18 @@
-\makeatletter
-\def\@settitle{\begin{center}%
-  \baselineskip14\p@\relax
-  \bfseries
-  \uppercasenonmath\@title
-  \@title
-  \ifx\@subtitle\@empty\else
-     \\[1ex]\uppercasenonmath\@subtitle
-     \footnotesize\mdseries\@subtitle
-  \fi
-  \end{center}%
-}
-\def\subtitle#1{\gdef\@subtitle{#1}}
-\def\@subtitle{}
-\makeatother
+% \makeatletter
+% \def\@settitle{\begin{center}%
+%   % \baselineskip14\p@\relax
+%   % \bfseries
+%   % \uppercasenonmath\@title
+%   \@title
+%   \ifx\@subtitle\@empty\else
+%      \\[1ex]\uppercasenonmath\@subtitle
+%      \footnotesize\mdseries\@subtitle
+%   \fi
+%   \end{center}%
+% }
+% \def\subtitle#1{\gdef\@subtitle{#1}}
+% \def\@subtitle{}
+% \makeatother
 
 \newcommand{\var}[3][]{%
 \left[%
@@ -52,11 +52,12 @@
 \newcommand{\true}{\texttt{t}}
 \def\id{\text{id}}
 
-\input{authors.tex}
+% \input{blinded.tex}
 
 %== metadata
-\title{Categorical ontology I}
-\subtitle{Existence}
+\title{Categorical Ontology I: Existence}
+
+\subjclass{18-03, 18B25, 18C10}
 
 \usepackage{ xspace
            , proof
@@ -64,14 +65,16 @@
            , listings
            , anyfontsize
            , tikzsymbols
-          %  , fontspec
+           , minted
            }
+\usemintedstyle{trac}
 \usepackage{devanagari}
 
 \def\eye{\text{\faEye}}
 \def\noeye{\text{\faEyeSlash}}
 
-% \renewcommand*{\ttdefault}{cmvtt}
+\usepackage[scaled=0.75]{DejaVuSansMono}
+\renewcommand*{\ttdefault}{DejaVuSansMono-TLF}
 
 \newenvironment{italian}{\color{green!60!black}}{\color{black}}
 
@@ -95,6 +98,14 @@
 \def\Sa{\dia{Sa}}
 \usepackage{CJKutf8}
 
+\newcommand{\entails}[1]{\;\mathrel{\sdtstile{\scriptscriptstyle #1}{}}\;}
 
+\newcommand{\bsmat}{\left[\begin{smallmatrix}}
+  \newcommand{\esmat}{\end{smallmatrix}\right]}
+%{\mathrel{\ooalign{$\vDash$\cr\hfil$\raisebox{-2pt}{$\scriptscriptstyle #1$}$\hfil}}}
 % \usepackage{fontspec}
 % \newfontfamily{\dev}[Script=Devanagari]{Halant Regular}
+
+\makeatletter
+\@addtoreset{footnote}{section}
+\makeatother
