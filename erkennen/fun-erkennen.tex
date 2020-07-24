@@ -2,7 +2,7 @@
 
 \usepackage{../fouche-copy}
 \input{../macros.tex}
-\title{Categorical Ontology I$\frac{1}{2}$: Erkennen}
+\title{Categorical Ontology I$\frac{1}{2}$: Functorial erkennen}
 \input{../authors.tex}
 \usepackage{booktabs}
 \begin{document}
@@ -52,6 +52,18 @@ The tongue-in-cheek here is, la scienza (nel senso usuale) non è una scienza (n
   \item Ottenere che `il linguaggio sia un sottospazio denso del mondo', con ciò intendendo che l'aggiunzione del punto precedente è sufficientemente well-behaved da descrivere il mondo come un frammento delle rappresentazioni semantiche del linguaggio $L$.
 \end{itemize}
 Evidentemente, la tensione qui è tra due opposte qualità che $L$ deve avere: non deve essere troppo esteso, per essere trattabile; non deve essere troppo ristretto, per parlare di ``tutto'' il mondo che si prefigge di descrivere.
+
+Cf. with this definition in mind \cite{biologia}:
+\begin{quote}
+  Lorem ipsum dolor sit amet
+\end{quote}
+We say that una \emph{teoria S-scientifica} è il dato di
+
+1. L un linguaggio formale
+2. TL la categoria sintattica di quel linguaggio
+3. La categoria dei funtori [TL, S]
+
+Dal momento che la categoria [TL,S] caratterizza completamente (up to Cauchy completion) $L$ e $TL$, facciamo una crasi e chiamiamo teoria $S$-scientifica semplicemente $[TL,S]$. Ecco allora he "una corrispondenza coerente che collega espressioni di F con espressioni semantiche" è semplicemente un funtore.
 \section{The tension between observational and theoretical}
 \label{sec:orge11c3c4}
 All based on the proportion
@@ -59,6 +71,10 @@ All based on the proportion
 truth values : proposition = section : presheaf
 
 The tension between observational and theoretical can be faithfully represented through profunctor theory;
+\begin{remark}
+  One can think of propositional functions as relations $(x,y)\in R$ iff the pair $x,y$ renders $phi$ true; we use this idea, suitably adapted to our purpose and categorified.
+\end{remark}
+Yadda yadda
 \begin{definition}
   Let $\clT,\clO$ be two categories, respectively the \emph{theoretical} and the \emph{observational} one. A \emph{$(1,1)$-ary Ramsey map} is a profunctor $\fkk : \clT \pto \clO$ (maybe ops have to be added for the sake of convention).
 \end{definition}

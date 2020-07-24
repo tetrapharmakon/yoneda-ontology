@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.12)  24 JUL 2020 14:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.12)  24 JUL 2020 15:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1183,7 +1183,88 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \c@heuristics=\count340
 \seplen=\skip67
 \sepwid=\skip68
-) (/home/fouche/texlive/texmf-dist/tex/latex/turnstile/turnstile.sty
+(/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
+Library (tcolorbox): 'tcbraster.code.tex' version '4.30'
+\c@tcbrastercolumn=\count341
+\c@tcbrasterrow=\count342
+\c@tcbraster=\count343
+) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '4.30'
+\tcb@waterbox=\box76
+(/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.30'
+)) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '4.30'
+\tcb@testbox=\box77
+\tcb@totalupperbox=\box78
+\tcb@totallowerbox=\box79
+) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
+Library (tcolorbox): 'tcbhooks.code.tex' version '4.30'
+) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
+Library (tcolorbox): 'tcbtheorems.code.tex' version '4.30'
+) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
+Library (tcolorbox): 'tcbfitting.code.tex' version '4.30'
+\tcbfitdim=\dimen325
+\tcb@lowerfitdim=\dimen326
+\tcb@upperfitdim=\dimen327
+\tcb@cur@hbadness=\count344
+) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbxparse.code.tex
+Library (tcolorbox): 'tcbxparse.code.tex' version '4.30'
+) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
+Library (tcolorbox): 'tcblistingsutf8.code.tex' version '4.30'
+(/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcblistings.code.tex
+Library (tcolorbox): 'tcblistings.code.tex' version '4.30'
+(/home/fouche/texlive/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count345
+\lst@gtempboxa=\box80
+\lst@token=\toks59
+\lst@length=\count346
+\lst@currlwidth=\dimen328
+\lst@column=\count347
+\lst@pos=\count348
+\lst@lostspace=\dimen329
+\lst@width=\dimen330
+\lst@newlines=\count349
+\lst@lineno=\count350
+\lst@maxwidth=\dimen331
+
+(/home/fouche/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count351
+\lst@skipnumbers=\count352
+\lst@framebox=\box81
+)
+(/home/fouche/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
+Library (tcolorbox): 'tcblistingscore.code.tex' version '4.30'
+(/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+Library (tcolorbox): 'tcbprocessing.code.tex' version '4.30'
+(/home/fouche/texlive/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+))
+\c@tcblisting=\count353
+))
+(/home/fouche/texlive/texmf-dist/tex/latex/listingsutf8/listingsutf8.sty
+Package: listingsutf8 2019-12-10 v1.5 Allow UTF-8 in listings input (HO)
+
+(/home/fouche/texlive/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)))
+(/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbexternal.code.tex
+Library (tcolorbox): 'tcbexternal.code.tex' version '4.30'
+) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbmagazine.code.tex
+Library (tcolorbox): 'tcbmagazine.code.tex' version '4.30'
+) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbvignette.code.tex
+Library (tcolorbox): 'tcbvignette.code.tex' version '4.30'
+) (/home/fouche/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
+Library (tcolorbox): 'tcbposter.code.tex' version '4.30'
+)) (/home/fouche/texlive/texmf-dist/tex/latex/turnstile/turnstile.sty
 Package: turnstile 2007/06/23 v1.0 turnstile file
 \firstwidth=\skip69
 \secondwidth=\skip70
@@ -1199,37 +1280,37 @@ Package: turnstile 2007/06/23 v1.0 turnstile file
 \verdistance=\skip80
 \lift=\skip81
 \lengthvar=\skip82
-\first=\box76
-\second=\box77
-\turnstilebox=\box78
+\first=\box82
+\second=\box83
+\turnstilebox=\box84
 )
 (../macros.tex (/home/fouche/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/lkproof/proof.sty
-\inferLineSkip=\dimen325
-\inferLabelSkip=\dimen326
-\@LeftOffset=\dimen327
-\@RightOffset=\dimen328
-\@SavedLeftOffset=\dimen329
-\UpperWidth=\dimen330
-\LowerWidth=\dimen331
-\LowerHeight=\dimen332
-\UpperLeftOffset=\dimen333
-\UpperRightOffset=\dimen334
-\UpperCenter=\dimen335
-\LowerCenter=\dimen336
-\UpperAdjust=\dimen337
-\RuleAdjust=\dimen338
-\LowerAdjust=\dimen339
-\RuleWidth=\dimen340
-\HLabelAdjust=\dimen341
-\VLabelAdjust=\dimen342
-\WidthAdjust=\dimen343
-\@UpperPart=\box79
-\@LowerPart=\box80
-\@LabelPart=\box81
-\ResultBox=\box82
+\inferLineSkip=\dimen332
+\inferLabelSkip=\dimen333
+\@LeftOffset=\dimen334
+\@RightOffset=\dimen335
+\@SavedLeftOffset=\dimen336
+\UpperWidth=\dimen337
+\LowerWidth=\dimen338
+\LowerHeight=\dimen339
+\UpperLeftOffset=\dimen340
+\UpperRightOffset=\dimen341
+\UpperCenter=\dimen342
+\LowerCenter=\dimen343
+\UpperAdjust=\dimen344
+\RuleAdjust=\dimen345
+\LowerAdjust=\dimen346
+\RuleWidth=\dimen347
+\HLabelAdjust=\dimen348
+\VLabelAdjust=\dimen349
+\WidthAdjust=\dimen350
+\@UpperPart=\box85
+\@LowerPart=\box86
+\@LabelPart=\box87
+\ResultBox=\box88
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/fontawesome/fontawesome.sty
 Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
@@ -1243,35 +1324,9 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 (/home/fouche/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-gener
 ic.tex)
 (/home/fouche/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdfte
-x.tex)) (/home/fouche/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count341
-\lst@gtempboxa=\box83
-\lst@token=\toks59
-\lst@length=\count342
-\lst@currlwidth=\dimen344
-\lst@column=\count343
-\lst@pos=\count344
-\lst@lostspace=\dimen345
-\lst@width=\dimen346
-\lst@newlines=\count345
-\lst@lineno=\count346
-\lst@maxwidth=\dimen347
-
-(/home/fouche/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count347
-\lst@skipnumbers=\count348
-\lst@framebox=\box84
-)
-(/home/fouche/texlive/texmf-dist/tex/latex/listings/listings.cfg
-File: listings.cfg 2020/03/24 1.8d listings configuration
-))
-Package: listings 2020/03/24 1.8d (Carsten Heinz)
-
-(/home/fouche/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
+x.tex)) (/home/fouche/texlive/texmf-dist/tex/latex/anyfontsize/anyfontsize.sty
 Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
-)
-(/home/fouche/texlive/texmf-dist/tex/latex/tikzsymbols/tikzsymbols.sty
+) (/home/fouche/texlive/texmf-dist/tex/latex/tikzsymbols/tikzsymbols.sty
 Package: tikzsymbols 2019/02/08 v4.10c Some symbols created using tikz and LaTe
 X3.
 
@@ -1285,7 +1340,7 @@ File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 (/home/fouche/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.cod
 e.tex
 File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen348
+\arrowsize=\dimen351
 ))
 (/home/fouche/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/t
 ikzlibrarydecorations.pathmorphing.code.tex
@@ -1293,16 +1348,16 @@ ikzlibrarydecorations.pathmorphing.code.tex
 ikzlibrarydecorations.code.tex
 (/home/fouche/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.c
 ode.tex
-\pgfdecoratedcompleteddistance=\dimen349
-\pgfdecoratedremainingdistance=\dimen350
-\pgfdecoratedinputsegmentcompleteddistance=\dimen351
-\pgfdecoratedinputsegmentremainingdistance=\dimen352
-\pgf@decorate@distancetomove=\dimen353
-\pgf@decorate@repeatstate=\count349
-\pgfdecorationsegmentamplitude=\dimen354
-\pgfdecorationsegmentlength=\dimen355
+\pgfdecoratedcompleteddistance=\dimen352
+\pgfdecoratedremainingdistance=\dimen353
+\pgfdecoratedinputsegmentcompleteddistance=\dimen354
+\pgfdecoratedinputsegmentremainingdistance=\dimen355
+\pgf@decorate@distancetomove=\dimen356
+\pgf@decorate@repeatstate=\count354
+\pgfdecorationsegmentamplitude=\dimen357
+\pgfdecorationsegmentlength=\dimen358
 )
-\tikz@lib@dec@box=\box85
+\tikz@lib@dec@box=\box89
 )
 (/home/fouche/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibra
 rydecorations.pathmorphing.code.tex))
@@ -1310,7 +1365,7 @@ rydecorations.pathmorphing.code.tex))
 ikzlibrarytrees.code.tex
 File: tikzlibrarytrees.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )
-\l__tikzsymbols_Moai_thickness_dim=\dimen356
+\l__tikzsymbols_Moai_thickness_dim=\dimen359
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
@@ -1320,11 +1375,11 @@ Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
 
 (/home/fouche/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2020/05/03 v3.6 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count350
+\FV@CodeLineNo=\count355
 \FV@InFile=\read5
-\FV@TabBox=\box86
-\c@FancyVerbLine=\count351
-\FV@StepNumber=\count352
+\FV@TabBox=\box90
+\c@FancyVerbLine=\count356
+\FV@StepNumber=\count357
 \FV@OutFile=\write7
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/upquote/upquote.sty
@@ -1333,48 +1388,44 @@ tim
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count353
+\linenopenalty=\count358
 \output=\toks60
-\linenoprevgraf=\count354
-\linenumbersep=\dimen357
-\linenumberwidth=\dimen358
-\c@linenumber=\count355
-\c@pagewiselinenumber=\count356
-\c@LN@truepage=\count357
-\c@internallinenumber=\count358
-\c@internallinenumbers=\count359
-\quotelinenumbersep=\dimen359
-\bframerule=\dimen360
-\bframesep=\dimen361
-\bframebox=\box87
+\linenoprevgraf=\count359
+\linenumbersep=\dimen360
+\linenumberwidth=\dimen361
+\c@linenumber=\count360
+\c@pagewiselinenumber=\count361
+\c@LN@truepage=\count362
+\c@internallinenumber=\count363
+\c@internallinenumbers=\count364
+\quotelinenumbersep=\dimen362
+\bframerule=\dimen363
+\bframesep=\dimen364
+\bframebox=\box91
 LaTeX Info: Redefining \\ on input line 3056.
 )
-\c@FV@TrueTabGroupLevel=\count360
-\c@FV@TrueTabCounter=\count361
-\FV@TabBox@Group=\box88
+\c@FV@TrueTabGroupLevel=\count365
+\c@FV@TrueTabCounter=\count366
+\FV@TabBox@Group=\box92
 \FV@TmpLength=\skip83
-\c@FV@HighlightLinesStart=\count362
-\c@FV@HighlightLinesStop=\count363
-\FV@LoopCount=\count364
-\FV@NCharsBox=\box89
-\FV@BreakIndent=\dimen362
-\FV@BreakIndentNChars=\count365
-\FV@BreakSymbolSepLeft=\dimen363
-\FV@BreakSymbolSepLeftNChars=\count366
-\FV@BreakSymbolSepRight=\dimen364
-\FV@BreakSymbolSepRightNChars=\count367
-\FV@BreakSymbolIndentLeft=\dimen365
-\FV@BreakSymbolIndentLeftNChars=\count368
-\FV@BreakSymbolIndentRight=\dimen366
-\FV@BreakSymbolIndentRightNChars=\count369
-\c@FancyVerbLineBreakLast=\count370
-\FV@LineBox=\box90
-\FV@LineIndentBox=\box91
-\FV@LineWidth=\dimen367
-)
-(/home/fouche/texlive/texmf-dist/tex/latex/tools/shellesc.sty
-Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+\c@FV@HighlightLinesStart=\count367
+\c@FV@HighlightLinesStop=\count368
+\FV@LoopCount=\count369
+\FV@NCharsBox=\box93
+\FV@BreakIndent=\dimen365
+\FV@BreakIndentNChars=\count370
+\FV@BreakSymbolSepLeft=\dimen366
+\FV@BreakSymbolSepLeftNChars=\count371
+\FV@BreakSymbolSepRight=\dimen367
+\FV@BreakSymbolSepRightNChars=\count372
+\FV@BreakSymbolIndentLeft=\dimen368
+\FV@BreakSymbolIndentLeftNChars=\count373
+\FV@BreakSymbolIndentRight=\dimen369
+\FV@BreakSymbolIndentRightNChars=\count374
+\c@FancyVerbLineBreakLast=\count375
+\FV@LineBox=\box94
+\FV@LineIndentBox=\box95
+\FV@LineWidth=\dimen370
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
@@ -1391,45 +1442,45 @@ runsystem(rm -- "fun-erkennen.w18")...executed.
 )
 (/home/fouche/texlive/texmf-dist/tex/generic/xstring/xstring.sty
 (/home/fouche/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count371
-\decimalpart=\count372
+\integerpart=\count376
+\decimalpart=\count377
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip84
-\fb@frw=\dimen368
-\fb@frh=\dimen369
-\FrameRule=\dimen370
-\FrameSep=\dimen371
+\fb@frw=\dimen371
+\fb@frh=\dimen372
+\FrameRule=\dimen373
+\FrameSep=\dimen374
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count373
+\c@float@type=\count378
 \float@exts=\toks61
-\float@box=\box92
+\float@box=\box96
 \@float@everytoks=\toks62
-\@floatcapt=\box93
+\@floatcapt=\box97
 )
 \minted@appexistsfile=\read6
-\minted@bgbox=\box94
+\minted@bgbox=\box98
 \minted@code=\write8
-\c@minted@FancyVerbLineTemp=\count374
-\c@minted@pygmentizecounter=\count375
+\c@minted@FancyVerbLineTemp=\count379
+\c@minted@pygmentizecounter=\count380
 \@float@every@listing=\toks63
-\c@listing=\count376
+\c@listing=\count381
 )
 runsystem(mkdir -p _minted-fun-erkennen)...executed.
 
 
 (/home/fouche/texlive/texmf-dist/tex/latex/velthuis/devanagari.sty
 Package: devanagari 2019/03/05 v2.17.1 LaTeX macros for Velthuis Devanagari
-\dev@chnum=\count377
-\itdim=\dimen372
+\dev@chnum=\count382
+\itdim=\dimen375
 LaTeX Info: Redefining \dn@commands on input line 238.
-\anudep=\dimen373
-\anuwid=\dimen374
+\anudep=\dimen376
+\anuwid=\dimen377
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/dejavu/DejaVuSansMono.sty
 Package: DejaVuSansMono 2011/06/01 Style file for DejaVuSansMono.
@@ -1511,30 +1562,30 @@ Now handling font encoding C62 ...
 ... no UTF-8 mapping file for font encoding C62
 )
 LaTeX Info: Redefining \selectfont on input line 755.
-\CJK@indent=\box95
+\CJK@indent=\box99
 )
 (/home/fouche/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 ))) (../authors.tex) (/home/fouche/texlive/texmf-dist/tex/latex/booktabs/bookta
 bs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen375
-\lightrulewidth=\dimen376
-\cmidrulewidth=\dimen377
-\belowrulesep=\dimen378
-\belowbottomsep=\dimen379
-\aboverulesep=\dimen380
-\abovetopsep=\dimen381
-\cmidrulesep=\dimen382
-\cmidrulekern=\dimen383
-\defaultaddspace=\dimen384
-\@cmidla=\count378
-\@cmidlb=\count379
-\@aboverulesep=\dimen385
-\@belowrulesep=\dimen386
-\@thisruleclass=\count380
-\@lastruleclass=\count381
-\@thisrulewidth=\dimen387
+\heavyrulewidth=\dimen378
+\lightrulewidth=\dimen379
+\cmidrulewidth=\dimen380
+\belowrulesep=\dimen381
+\belowbottomsep=\dimen382
+\aboverulesep=\dimen383
+\abovetopsep=\dimen384
+\cmidrulesep=\dimen385
+\cmidrulekern=\dimen386
+\defaultaddspace=\dimen387
+\@cmidla=\count383
+\@cmidlb=\count384
+\@aboverulesep=\dimen388
+\@belowrulesep=\dimen389
+\@thisruleclass=\count385
+\@lastruleclass=\count386
+\@thisrulewidth=\dimen390
 )
 runsystem(which pygmentize && touch fun-erkennen.aex)...executed.
 
@@ -1645,16 +1696,16 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 8
 (/home/fouche/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 (/home/fouche/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count382
-\scratchdimen=\dimen388
-\scratchbox=\box96
-\nofMPsegments=\count383
-\nofMParguments=\count384
+\scratchcounter=\count387
+\scratchdimen=\dimen391
+\scratchbox=\box100
+\nofMPsegments=\count388
+\nofMParguments=\count389
 \everyMPshowfont=\toks64
-\MPscratchCnt=\count385
-\MPscratchDim=\dimen389
-\MPnumerator=\count386
-\makeMPintoPDFobject=\count387
+\MPscratchCnt=\count390
+\MPscratchDim=\dimen392
+\MPnumerator=\count391
+\makeMPintoPDFobject=\count392
 \everyMPtoPDFconversion=\toks65
 ) (/home/fouche/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1706,7 +1757,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 ABD: EveryShipout initializing macros
 Package xypdf Info: Line width: 0.39998pt on input line 8.
-\AtBeginShipoutBox=\box97
+\AtBeginShipoutBox=\box101
 Package hyperref Info: Link coloring ON on input line 8.
 
 (/home/fouche/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
@@ -1718,7 +1769,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/home/fouche/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count388
+\c@section@level=\count393
 )
 LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
@@ -1727,65 +1778,73 @@ LaTeX Info: Redefining \nameref on input line 8.
 \@outlinefile=\write9
 \openout9 = `fun-erkennen.out'.
 
-\c@lstlisting=\count389
- (./fun-erkennen.toc)
+\c@lstlisting=\count394
+
+Overfull \hbox (3.90392pt too wide) in paragraph at lines 11--11
+[]\T2A/cmr/bx/n/17.28 Categorical On-tol-ogy I$[]$: Func-to-rial erken-
+ []
+
+(./fun-erkennen.toc)
 \tf@toc=\write10
 \openout10 = `fun-erkennen.toc'.
 
- <xymatrix 2x1
-51>
-
-LaTeX Warning: Reference `' on page 1 undefined on input line 34.
-
-[1
+ <xymatrix 2x1 51> [1
 Non-PDF special ignored!
 <special> papersize=15.5cm,23.5cm
-{/home/fouche/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] <xymatrix
-2x1 44> <xymatrix 2x1 80>
+{/home/fouche/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+
+LaTeX Warning: Reference `' on page 2 undefined on input line 34.
+
+<xymatrix 2x1 44> <xymatrix 2x1 80>
 
 LaTeX Warning: Reference `' on page 2 undefined on input line 47.
 
-LaTeX Font Info:    Trying to load font information for U+euf on input line 63.
 
-(/home/fouche/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
+LaTeX Warning: Citation `biologia' on page 2 undefined on input line 56.
+
+
 Overfull \vbox (1.49002pt too high) has occurred while \output is active []
 
 
 [2]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 79.
 
-LaTeX Warning: Reference `' on page 3 undefined on input line 83.
+ (/home/fouche/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+
+LaTeX Warning: Reference `' on page 3 undefined on input line 99.
 
 
-LaTeX Warning: Reference `' on page 3 undefined on input line 83.
+LaTeX Warning: Reference `' on page 3 undefined on input line 99.
 
 
-LaTeX Warning: Reference `' on page 3 undefined on input line 83.
+LaTeX Warning: Reference `' on page 3 undefined on input line 99.
 
-<xymatrix 2x1 80> <xymatrix 3x2 22>
+
 Overfull \vbox (1.44843pt too high) has occurred while \output is active []
 
 
-[3]
+[3] <xymatrix 2x1 80> <xymatrix 3x2 22>
 LaTeX Font Info:    Trying to load font information for T2A+DejaVuSansMono-TLF 
-on input line 103.
- (/home/fouche/texlive/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
+on input line 119.
+
+(/home/fouche/texlive/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
 File: T2ADejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T2A/DejaVuSansMo
 no-TLF.
 )
 LaTeX Font Info:    Font shape `T2A/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 6.75pt on input line 103.
+(Font)              scaled to size 6.75pt on input line 119.
 
 Overfull \vbox (1.49002pt too high) has occurred while \output is active []
 
 
 [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 103.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 103.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 119.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 119.
  (./fun-erkennen.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 103.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 103.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 119.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 119.
 Package rerunfilecheck Info: File `fun-erkennen.out' has not changed.
 (rerunfilecheck)             Checksum: 89386E65441C4F586F4858E3C3D6CE1A;364.
 
@@ -1794,13 +1853,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36913 strings out of 480471
- 683440 string characters out of 5900862
- 1167229 words of memory out of 5000000
- 51960 multiletter control sequences out of 15000+600000
+ 39858 strings out of 480471
+ 768560 string characters out of 5900862
+ 1291911 words of memory out of 5000000
+ 54848 multiletter control sequences out of 15000+600000
  561082 words of font info for 107 fonts, out of 8000000 for 9000
  1303 hyphenation exceptions out of 8191
- 76i,16n,88p,3290b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 76i,16n,103p,3290b,980s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/fouche/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t2a.enc}{/
 home/fouche/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</home
 /fouche/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb></home/
@@ -1829,10 +1888,10 @@ f-dist/fonts/type1/public/cm-super/sfrm1200.pfb></home/fouche/texlive/texmf-dis
 t/fonts/type1/public/cm-super/sfti1000.pfb></home/fouche/texlive/texmf-dist/fon
 ts/type1/public/xypic/xyatip10.pfb></home/fouche/texlive/texmf-dist/fonts/type1
 /public/xypic/xybtip10.pfb>
-Output written on fun-erkennen.pdf (4 pages, 318482 bytes).
+Output written on fun-erkennen.pdf (4 pages, 323715 bytes).
 PDF statistics:
- 199 PDF objects out of 1000 (max. 8388607)
- 148 compressed objects within 2 object streams
- 17 named destinations out of 1000 (max. 500000)
- 149 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 212 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
+ 197 words of extra memory for PDF output out of 10000 (max. 10000000)
 
