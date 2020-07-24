@@ -3,3 +3,4 @@
 \contentsline {section}{\tocsection {}{3}{Theories and models}}{1}{section.3}%
 \contentsline {section}{\tocsection {}{4}{The tension between observational and theoretical}}{2}{section.4}%
 \contentsline {section}{\tocsection {}{5}{Ramseyfication and beyond: generalised profunctors}}{3}{section.5}%
+\contentsline {subsection}{\tocsubsection {}{5.1}{On the bicategory of generalised profunctors}}{4}{subsection.5.1}%
