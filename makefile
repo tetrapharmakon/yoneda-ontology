@@ -5,8 +5,12 @@ I:
 	latexmk -pdf -shell-escape I-existence.tex
 	latexmk -c
 lu:
-	cd logica-univ-submission/; \
+	cd I-existence/logica-univ-submission/; \
 	  latexmk -pdf -shell-escape luniv-ontology1.tex
+	  latexmk -c
+er:
+	cd erkennen/; \
+	  latexmk -pdf -shell-escape fun-erkennen.tex
 	  latexmk -c
 git:
 	bash -c 'git add -A'
