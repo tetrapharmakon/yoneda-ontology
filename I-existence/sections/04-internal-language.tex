@@ -4,9 +4,9 @@
   The internal language of a topos $\clE$ is a formal language defined by \emph{types} and \emph{terms}; suitable terms form the class of variables. Other terms form the class of \emph{formul\ae}.
   \begin{itemize}
     \item \emph{Types} are the objects of $\clE$
-    \item \emph{Terms} of type $X$ are morphisms of codomain $X$, usually denoted $\alpha,\beta,\sigma,\tau : U \to X$.
+    \item \emph{Terms} of type $X$ are morphisms of codomain $X$, usually denoted with Greek letters $\alpha,\beta,\sigma,\tau ,\ldots : U \to X$.
           \begin{itemize}
-            \item Suitable terms are variables: the identity arrow of $X\in\clE$ is the variable  $x : X \to X$. For technical reasons we shall keep a countable number of variables of the same type distinguished:\footnote{These technical reasons lie on the evident necessity to be free to refer to the same free variable an unbounded number of times. This can be formalised in various ways: we refer the reader to \cite{lambek1988introduction} and \cite{JohnstonePT}.} $x,x',x'',\dots : X \to X$ are all interpreted as $1_X$.
+            \item Suitable terms are variables: the identity arrow of $X\in\clE$ is the variable  $x : X \to X$. For technical reasons we shall keep a countable number of variables of the same type distinguished:\footnote{These technical reasons lie on the evident necessity to be free to refer to the same free variable an unbounded number of times. This can be formalised in various ways: we refer the reader to \cite{lambek1988introduction} and \cite{JohnstonePT}.} $x,x',x'',\ldots : X \to X$ are all interpreted as $1_X$.
           \end{itemize}
     \item Generic terms may depend on multiple variables; the domain of a term of type $X$ is the \emph{domain of definition} of a term.
   \end{itemize}
@@ -31,13 +31,13 @@
           obtained as the mate of $\sigma$.
   \end{itemize}
   These rules can of course be also presented as the formation rules for a Gentzen-like deductive system: let us rewrite them in this formalism.
-  \[ \begin{array}{cc}
-      \infer{1_X : X \to X}{}                                                              &
-      \infer{\lr{\sigma}{\tau} : W\lr{\theta}{\sigma} \to X \times Y }{\sigma : U \to X    &   & \tau : V \to Y}             \\[1em]
-      \infer{[\sigma=\tau] : W \to \Omega}{\sigma : U \to X                                &   & \tau : V \to X}           &
-      \infer{f[\sigma] : U \to Y}{\sigma : U \to X                                         &   & f : X \to Y}                \\[1em]
-      \infer{W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y}{\theta :  V \to Y^X &   & \sigma : U\to X}          &
-      \infer{\lambda x.\sigma = \sigma^X\circ\eta : U \to (X\times U)^X \to Z^X}{ x: X     &   & \sigma : X\times U \to Z}
+  \[ \small \begin{array}{cc}
+      \infer[\textsc{id}]{1_X : X \to X}{}                                                              &
+      \infer[\Pi]{\lr{\sigma}{\tau} : W\lr{\theta}{\sigma} \to X \times Y }{\sigma : U \to X    &   & \tau : V \to Y}             \\[1em]
+      \infer[\textsc{eq}]{[\sigma=\tau] : W \to \Omega}{\sigma : U \to X                                &   & \tau : V \to X}           &
+      \infer[\textsc{comp}]{f[\sigma] : U \to Y}{\sigma : U \to X                                         &   & f : X \to Y}                \\[1em]
+      \infer[\textsc{ev}]{W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y}{\theta :  V \to Y^X &   & \sigma : U\to X}          &
+      \infer[\lambda\textsc{-abs}]{\lambda x.\sigma = \sigma^X\circ\eta : U \to (X\times U)^X \to Z^X}{ x: X     &   & \sigma : X\times U \to Z}
     \end{array}\]
   To formulas of the language of $\clE$ we apply the usual operations and rules of first-order logic: logical connectives are induced by the structure of internal Heyting algebra of $\Omega$: given formulas $\varphi,\psi$ we define
   \begin{itemize}
@@ -127,7 +127,7 @@ Quantifiers can be deduced in a similar way, starting from their general definit
 \end{remark}
 Such a terse exposition does not exhaust such a vast topic as recursion theory conducted with category-theoretic tools. The interested reader shall consult \cite{jacobs1997tutorial} for a crystal-clear introductory account, and \cite{cockett2008introduction,cockett2014total} for more recent and modern development of recursion theory.
 \begin{remark}\label{dyn_sisy}
-The object of natural numbers of $\Set/I$ is easily seen to match the definition of the \emph{initial object} \cite[]{Bor1} of the category $\cate{Dyn}/I$ so defined:
+The object of natural numbers of $\Set/I$ is easily seen to match the definition of the \emph{initial object} \cite[2.3.1]{Bor1} of the category $\cate{Dyn}/I$ so defined:
 \begin{itemize}
   \item the objects of $\cate{Dyn}/I$ are \emph{dynamical systems} in $\Set/I$, i.e. the triples $(x,X,f)$, where $X : \Set/I$ (say, with structure map $\xi : X \to I$), $x : (I,\id_I) \to (X,\xi)$ and $f : X \to X$ is an endo-morphism of variable sets;
   \item given two dynamical systems $(x,X,f)$ and $(y,Y,g)$ a \emph{morphism} between them is a function $u  :X \to Y$ such that the diagram

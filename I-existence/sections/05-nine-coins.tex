@@ -185,7 +185,7 @@ To sum up, readers willing to find an original result in this paper might find i
           (Y,\Th) &\entails{} \textstyle \sum_{c_Y} p(\firstblank,c_Y,\secondblank)\\
           (Z,\F) &\entails{} \textstyle \sum_{c_Z} p(\firstblank,c_Z,\secondblank),
         \end{align*}
-        meaning that, for example in the first case, $p(X,c_X,\F) = (\top,1)$.
+        meaning that, for example in the first case, $\sum_{c_X} p(X,c_X,\F) = (\top,1)$.
     \end{enumtag}
   \end{definition}
   In an admissible configuration the subsets $ C_X, C_Y, C_Z $ can only attain an existence $p(g,c,d) \lneq (\top,1)$; that is to say, \emph{no coin completely exists locally}. But for an hypothetical external observer, capable of observing the system, adding up the forces with which the various parts of $C$ exist, the coins \emph{globally} exist ` in some secret way, of understanding forbidden to men' (or rather, to $ X, Y, Z $).
@@ -245,7 +245,7 @@ To sum up, readers willing to find an original result in this paper might find i
 
   Let us consider the dynamical system $([0,1],\nabla\circ p)$ (see \autoref{dyn_sisy}) obtained from the iterates of the composition $\nabla \circ p : [0,1] \to [0,1]$ ($\nabla : I\amalg I \to I$ is the fold map of $I$, obtained from the identity of $I$ and the universal property of the coproduct). We start from a proposition $p$ depending on a free variable $t : I$; then, $p(t) = (u(t),\epsilon): \Omega_I$ consists of a strength and a truth value; but $p$ can be evaluated on $u(t)$ because of \eqref{entailment} ($u$ is a continuous endomorphism of a compact metric space; although this is not its universal property, the fold map $\nabla$ just forgets the truth value, keeping the force):
   \[
-    t : I\entails{u(t)} p \qquad u(t) :I \entails{uut} p \qquad \dots
+    t : I\entails{u(t)} p \qquad u(t) :I \entails{u(u(t))} p \qquad \dots
   \]
   The process can thus be iterated as follows, exploiting the universal property of the natural number object in $\Set/I$:
   \begin{center}

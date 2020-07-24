@@ -1577,7 +1577,7 @@ meta-bol-ic me-tab-o-lism meta-lan-guage me-trop-o-lis
 met-ro-pol-i-tan mi-nut-est mol-e-cule mono-chrome mono-pole
 mo-nop-oly mono-spline mo-not-o-nous mul-ti-fac-eted mul-ti-plic-able
 non-euclid-ean non-iso-mor-phic non-smooth par-a-digm par-a-bol-ic
-pa-rab-o-loid pa-ram-e-trize para-mount pen-ta-gon phe-nom-e-non
+pa-rab-o-loid pa-ram-e-trize para-mount mo-no-mor-phism pen-ta-gon phe-nom-e-non
 post-script pre-am-ble pro-ce-dur-al pro-hib-i-tive pro-hib-i-tive-ly
 pseu-do-dif-fer-en-tial pseu-do-fi-nite pseu-do-nym qua-drat-ic
 quad-ra-ture qua-si-smooth qua-si-sta-tion-ary qua-si-tri-an-gu-lar
