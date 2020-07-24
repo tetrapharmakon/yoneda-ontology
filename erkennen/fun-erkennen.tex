@@ -1,29 +1,10 @@
-% Created 2020-07-23 N 23:26
-% Intended LaTeX compiler: pdflatex
-\documentclass[11pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{graphicx}
-\usepackage{grffile}
-\usepackage{longtable}
-\usepackage{wrapfig}
-\usepackage{rotating}
-\usepackage[normalem]{ulem}
-\usepackage{amsmath}
-\usepackage{textcomp}
-\usepackage{amssymb}
-\usepackage{capt-of}
-\usepackage{hyperref}
-\author{fouche}
-\date{\today}
-\title{Functorial erkennen}
-\hypersetup{
- pdfauthor={fouche},
- pdftitle={Functorial erkennen},
- pdfkeywords={},
- pdfsubject={},
- pdfcreator={Emacs 26.3 (Org mode 9.3.6)}, 
- pdflang={English}}
+\documentclass[a4paper]{../birkjour}
+
+\usepackage{../fouche-copy}
+\input{../macros.tex}
+\title{Categorical Ontology I$\frac{1}{2}$: Erkennen}
+\input{../authors.tex}
+\usepackage{booktabs}
 \begin{document}
 
 \maketitle
@@ -32,10 +13,45 @@
 
 \section{Profunctors / Grothendieck construction}
 \label{sec:org7dd09e1}
+Sezione tecnica con solo robe di CT.
 \section{Nerve and realisations}
 \label{sec:org1a423df}
+Sezione tecnica con solo robe di CT.
 \section{Theories and models}
 \label{sec:orge02f333}
+Qui esploitiamo il linguaggio introdotto nelle precedenti due sezioni;
+\begin{definition}[Theory]
+  A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite{}) of a first-order, finitely axiomatisable language $L$.
+\end{definition}
+\begin{definition}
+  A \emph{world} is a large category $\clW$; a \emph{universe} is a world that, as a category, admits all small colimits.
+\end{definition}
+Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor 
+\[\xymatrix{\clL \ar[r]^\phi & \clW.}\]
+
+A canvas $\phi : \clL \to \clW$ is a \emph{science} if $\phi$ is a dense functor.
+\begin{remark}
+  The NR paradigm exposed in \autoref{} now entails that 
+  \begin{itemize}
+    \item If $\clW$ is a world, we obtain a \emph{representation} functor 
+    \[ \xymatrix{\clW \ar[r] & [\clL^\op, \Set];} \]
+    this means: given a canvas $\phi$ of the world, the latter leaves an image on the canvas.
+    \item If $\clW$ is a universe, we obtain a NR-adjunction
+    \[\xymatrix{\clW \ar@<3pt>[r] & \ar@<3pt>[l] [\clL^\op, \Set];}\]
+    this means: if $\clW$ is sufficiently expressive, then models of the theory that explains $\clW$ through $\phi$ can be used to acquire a two-way knowledge. Phenomena have a theoretical counterpart in $[\clL^\op,\Set]$ via the nerve; theoretical objects strive to describe phenomena via their realisation.
+    \item If an $\clL$-canvas $\phi : \clL \to \clW$ is a science, `the world' is a full subcategory of the modes in which `language' can create interpretation.
+  \end{itemize}
+\end{remark}
+The terminology is chosen to inspire the following idea in the reader: science strives to define \emph{theories} that allow for the creation of representations of the world; said representations are descriptive when there is dialectic opposition between world and models; when such representation is faithful, we have reduced `the world' to a piece of the models created to represent it.
+
+The tongue-in-cheek here is, la scienza (nel senso usuale) non è una scienza (nel senso della definizione \autoref{}), se non in potenza; i tentativi di generare pensiero scientifico sono i tentativi di 
+\begin{itemize}
+  \item Riconoscere un mondo $\clW$ come un oggetto sufficientemente espressivo da contenere fenomeni e informazione;
+  \item Creare un linguaggio $L$, sufficientemente `compatto', la cui categoria sintattica permette di rappresentare nel mondo;
+  \item Ottenere una aggiunzione tra $\clW$ e modelli del mondo $[\clL^\op,\Set]$ ottenuti dal linguaggio $\clL$, per generare modelli a partire da fenomeni, e per prevedere fenomeni a partire da modelli;
+  \item Ottenere che `il linguaggio sia un sottospazio denso del mondo', con ciò intendendo che l'aggiunzione del punto precedente è sufficientemente well-behaved da descrivere il mondo come un frammento delle rappresentazioni semantiche del linguaggio $L$.
+\end{itemize}
+Evidentemente, la tensione qui è tra due opposte qualità che $L$ deve avere: non deve essere troppo esteso, per essere trattabile; non deve essere troppo ristretto, per parlare di ``tutto'' il mondo che si prefigge di descrivere.
 \section{The tension between observational and theoretical}
 \label{sec:orge11c3c4}
 \section{Ramseyfication and beyond: generalised profunctors}
