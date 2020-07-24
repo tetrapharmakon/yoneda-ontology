@@ -1,5 +1,12 @@
 # Fdb version 3
-["pdflatex"] 1595604779 "fun-erkennen.tex" "fun-erkennen.pdf" "fun-erkennen" 1595604780
+["bibtex fun-erkennen"] 1595625601 "fun-erkennen.aux" "fun-erkennen.bbl" "fun-erkennen" 1595625602
+  "../allofthem.bib" 1595625512 377348 31d7621031fae55d7b1ea35aee609e0c ""
+  "/home/fouche/texlive/texmf-dist/bibtex/bst/amscls/amsplain.bst" 1513722769 25798 9b3546f2f237ee0ce4724eed95f954f4 ""
+  "fun-erkennen.aux" 1595625601 2335 2ed2964042645f1c41ed6372f43a5240 "pdflatex"
+  (generated)
+  "fun-erkennen.blg"
+  "fun-erkennen.bbl"
+["pdflatex"] 1595625601 "fun-erkennen.tex" "fun-erkennen.pdf" "fun-erkennen" 1595625602
   "../authors.tex" 1595589736 487 c65016eaf4892e2e02bd375a4dc7f7c6 ""
   "../birkjour.cls" 1595589753 66070 35204f1a1d1fabdaac9d88c5d1248e72 ""
   "../fouche-copy.sty" 1595604550 6775 53a93d65bfe413839455b4c5eda83871 ""
@@ -20,6 +27,7 @@
   "/home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/larm1000.tfm" 1595252170 3220 0e417eaf233b160335902e97259a6c77 ""
   "/home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm" 1595436347 3240 c2435f2b5cd66d4930bc29b8df87967e ""
   "/home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/larm1728.tfm" 1595525422 3252 92d08740ce00199d6cf9ff4aaada81d1 ""
+  "/home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lati0900.tfm" 1595334624 3528 9a6e36225f5d1c1540f120e54b292925 ""
   "/home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lati1000.tfm" 1595252177 3528 defd551e32c4af414f9b54b8101bfa9b ""
   "/home/fouche/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc" 1136849721 3141 82d5616418ed8d5de703b3951bedecb4 ""
   "/home/fouche/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t2a.enc" 1380151016 2543 b8e80f91f5cb4da5c116032ab9c8dcf9 ""
@@ -93,6 +101,7 @@
   "/home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb" 1215737283 149037 995a6f1e12c1d647b99b1cf55db78699 ""
   "/home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb" 1215737283 138258 6525c253f16cededa14c7fd0da7f67b2 ""
   "/home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1215737283 136101 f533469f523533d38317ab5729d00c8a ""
+  "/home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb" 1215737283 183673 6df73819bb3e1246a6315a4913a2d331 ""
   "/home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb" 1215737283 186554 e8f0fa8ca05e038f257a06405232745f ""
   "/home/fouche/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb" 1380151016 312325 85c023034126deea32957eb3470d975f ""
   "/home/fouche/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb" 1381187214 17164 ec38b53842f4384705514c6703fa9108 ""
@@ -348,13 +357,14 @@
   "/home/fouche/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1594591856 4870798 624f7a086a3f3121c86bdff8c2fff3a4 ""
   "/home/fouche/texlive/texmf-var/web2c/pdftex/pdflatex.fmt" 1594591895 2435113 1b712545fa22123afe850c4c106118b7 ""
   "/home/fouche/texlive/texmf.cnf" 1594591852 496 01ab80fa0036a81d2df86fb0ac70c709 ""
-  "fun-erkennen.aux" 1595604779 2104 b964882d7bc870994ca06f32037183b4 "pdflatex"
-  "fun-erkennen.out" 1595604779 364 89386e65441c4f586f4858e3c3d6ce1a "pdflatex"
-  "fun-erkennen.tex" 1595604777 7784 4beba19c5b7d0c4d08056cd3588e1777 ""
-  "fun-erkennen.toc" 1595604779 596 c608f4b07cf05e03ec1c8158277fb62b "pdflatex"
+  "fun-erkennen.aux" 1595625601 2335 2ed2964042645f1c41ed6372f43a5240 "pdflatex"
+  "fun-erkennen.bbl" 1595625601 556 d9f3c76620d11035bc1bd0183a6def6b "bibtex fun-erkennen"
+  "fun-erkennen.out" 1595625601 409 f65fc00e3690a8d023b78b19ad2157d5 "pdflatex"
+  "fun-erkennen.tex" 1595625598 7867 2aa28291c987b44877c760a20c1737d2 ""
+  "fun-erkennen.toc" 1595625601 666 d3ae8a1ce75e4d7208ed54180a2257d2 "pdflatex"
   (generated)
+  "fun-erkennen.log"
+  "fun-erkennen.toc"
   "fun-erkennen.out"
   "fun-erkennen.pdf"
   "fun-erkennen.aux"
-  "fun-erkennen.toc"
-  "fun-erkennen.log"

@@ -531,6 +531,9 @@ INPUT /home/fouche/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
+INPUT fun-erkennen.bbl
+INPUT fun-erkennen.bbl
+INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lati0900.tfm
 INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lacc0900.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
@@ -577,6 +580,7 @@ INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
+INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfti0900.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb
