@@ -505,6 +505,12 @@ INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/larm0500.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/cm/cmss10.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
+INPUT /home/fouche/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /home/fouche/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
+INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
+INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lacc1000.tfm
 INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lacc0900.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
@@ -514,11 +520,12 @@ INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/cm/cmss9.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
+INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary9.tfm
 INPUT /home/fouche/texlive/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
 INPUT /home/fouche/texlive/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/dejavu/DejaVuSansMono-tlf-t2a.tfm
-INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lacc1000.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/vf/public/dejavu/DejaVuSansMono-tlf-t2a.vf
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/dejavu/DejaVuSansMono-tlf-t2a--base.tfm
 INPUT fun-erkennen.aux
@@ -537,6 +544,7 @@ INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb

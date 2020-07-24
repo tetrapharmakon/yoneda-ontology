@@ -54,10 +54,31 @@ The tongue-in-cheek here is, la scienza (nel senso usuale) non è una scienza (n
 Evidentemente, la tensione qui è tra due opposte qualità che $L$ deve avere: non deve essere troppo esteso, per essere trattabile; non deve essere troppo ristretto, per parlare di ``tutto'' il mondo che si prefigge di descrivere.
 \section{The tension between observational and theoretical}
 \label{sec:orge11c3c4}
-\section{Ramseyfication and beyond: generalised profunctors}
-\label{sec:org50db6c2}
-
 All based on the proportion
 
 truth values : proposition = section : presheaf
+
+The tension between observational and theoretical can be faithfully represented through profunctor theory;
+\begin{definition}
+  Let $\clT,\clO$ be two categories, respectively the \emph{theoretical} and the \emph{observational} one. A \emph{$(1,1)$-ary Ramsey map} is a profunctor $\fkk : \clT \pto \clO$ (maybe ops have to be added for the sake of convention).
+\end{definition}
+There is nothing, in their mere syntactical presentation, that allows to tell the observational and the theoretical category apart; justify with the self-involution of $\Prof$.
+
+The set $\fkk(\underline T, \underline O)$ represents the type of proofs that the observational tuple $\underline O$ admits a description in terms of the theoretical tuple $\underline T$.
+
+A limitation of the above definition is that in practice all sorts of configurations are possible:
+\begin{itemize}
+  \item una singola $O$ si lascia descrivere da due $T$, e non meno
+  \item una stesso $T$ descrive due $O$ diverse
+  \item etc
+  \item etc
+\end{itemize}
+Thus we have to admit multiple arguments in domain and codomain.
+\section{Ramseyfication and beyond: generalised profunctors}
+\label{sec:org50db6c2}
+We can generalise the definition above to encompass Ramsey sentences:
+\begin{definition}
+  Let $\clT,\clO$ be two categories; a \emph{Ramsey map}, or a \emph{$(n,m)$-ary Ramsey map} is a profunctor $\fkK : \clT^n \pto \clO^m$
+\end{definition}
+This formalism allows to speak about particular worlds, obtained as presheaf categories over observational $\clO$; if $\clT, \clO$ is a theoretic pair, we can instantiate \autoref{} above in the particular case where $\clW = [\clO^\op, \Set]$; observe that $\clW$ is a universe!
 \end{document}
