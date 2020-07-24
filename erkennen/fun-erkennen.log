@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.12)  24 JUL 2020 13:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.12)  24 JUL 2020 13:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1783,10 +1783,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 36904 strings out of 480471
- 683369 string characters out of 5900862
+ 36905 strings out of 480471
+ 683385 string characters out of 5900862
  1166229 words of memory out of 5000000
- 51953 multiletter control sequences out of 15000+600000
+ 51954 multiletter control sequences out of 15000+600000
  561082 words of font info for 107 fonts, out of 8000000 for 9000
  1303 hyphenation exceptions out of 8191
  76i,15n,88p,3290b,565s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1817,7 +1817,7 @@ texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></home/fouche/texlive/texmf
 /fonts/type1/public/cm-super/sfti1000.pfb></home/fouche/texlive/texmf-dist/font
 s/type1/public/xypic/xyatip10.pfb></home/fouche/texlive/texmf-dist/fonts/type1/
 public/xypic/xybtip10.pfb>
-Output written on fun-erkennen.pdf (3 pages, 304904 bytes).
+Output written on fun-erkennen.pdf (3 pages, 304972 bytes).
 PDF statistics:
  190 PDF objects out of 1000 (max. 8388607)
  141 compressed objects within 2 object streams
