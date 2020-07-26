@@ -10,7 +10,7 @@ lu:
 	  latexmk -c
 er:
 	cd erkennen/; \
-	  latexmk -pdf -shell-escape fun-erkennen.tex
+	  latexmk -pdf -pvc -shell-escape fun-erkennen.tex
 	  latexmk -c
 git:
 	bash -c 'git add -A'

@@ -86,14 +86,13 @@ Yadda yadda on how questo è facile da categorificare; consideriamo la relazione
     \item core oss e core teo sono sempre equivalenti; come sopra, il fatto è che si cerca un modo di allargare quanto piu possibile l'equcat.
   \end{itemize}
 \end{remark}
-There is nothing, in their mere syntactical presentation, that allows to tell the observational and the theoretical category apart; justify with the self-involution of $\Prof$.
+There is nothing, in their mere syntactical presentation, that allows to tell the observational and the theoretical category apart; justify with the self-involution of $\Prof$. Also, questo dà conto dell'``esistenza degli oggetti di finzione''. Sherlock Holmes è l'oggetto di una categoria teorica. Gandhi è l'oggetto di una categoria osservazionale. In quanto oggetti linguistici essi non possono essere distinti, la differenza tra loro che li etichetta uno come oggetto di finzione e l'altro come personaggio storico è la specifica di un profuntore che permette di embeddare Sherlock Holmes nella realtà (di postulare, cioè, come esso compia azioni quotidiane nella Londra vittoriana), e di rappresentare un personaggio storico in un modello finzionale (scrivendo, ad esempio, un libro sulla vita di Gandhi).
 
 A limitation of the above definition is that in practice all sorts of configurations are possible:
 \begin{itemize}
   \item una singola $O$ si lascia descrivere da due $T$, e non meno
   \item una stesso $T$ descrive due $O$ diverse
-  \item etc
-  \item etc
+  \item ogni altra combinazione numerica possibile
 \end{itemize}
 Thus we have to admit multiple arguments in domain and codomain.
 \section{Ramseyfication and beyond: generalised profunctors}
@@ -102,7 +101,7 @@ We can generalise the definition above to encompass Ramsey sentences:
 \begin{definition}
   Let $\clT,\clO$ be two categories; a \emph{Ramsey map}, or a \emph{$(n,m)$-ary Ramsey map} is a profunctor $\fkK : \clT^n \pto \clO^m$
 \end{definition}
-The set $\fkk(\underline T, \underline O)$ represents the type of proofs that the observational tuple $\underline O$ admits a description in terms of the theoretical tuple $\underline T$.
+The set $\fkk(\uT, \uO)$ represents the type of proofs that the observational tuple $\uO$ admits a description in terms of the theoretical tuple $\uT$.
 
 This formalism allows to speak about particular worlds, obtained as presheaf categories over observational $\clO$; if $\clT, \clO$ is a theoretic pair, we can instantiate \autoref{} above in the particular case where $\clW = [\clO^\op, \Set]$; observe that $\clW$ is a universe! We can thus address a certain number of questions, arising from the canonical adjunction obtained by virtue of \autoref{} and \ref{}:
 \[
@@ -111,16 +110,16 @@ This formalism allows to speak about particular worlds, obtained as presheaf cat
 Vale la pena notare che siccome il triangolo
 \[
 \vcenter{\xymatrix{
-  (\clO^m)^\op && [(\clT^n)^\op, \Set] \\
+  (\clO^m)^\op \ar[rr]\ar[dr]&& [(\clT^n)^\op, \Set] \ar[dl]\\
   & [(\clO^m)^\op, \Set]
 }}
 \]
 pseudocommuta, allora la composizione $L\circ y$ fa esattamente (mate di) $\fkK$. Ciò significa: gli $\clO$-modelli, interpretati nei $\clT$-modelli, hanno rappresentazioni corrispondenti ai termini osservazionali interpretati nei $\clT$-modelli; ovvero, la rappresentazione è `coerente' sui generatori dei modelli osservazionali, ovvero\dots
 
 Può essere che l'operazione 
-\[\exists \underline X . \fkk(\underline O, \underline X)\]
+\[\exists \uX . \fkk(\uO, \uX)\]
 si traduca come 
-\[\lambda \underline O.\fkk(\underline O, F\underline O)\]
+\[\lambda \uO.\fkk(\uO, F\uO)\]
 quando c'è una aggiunzione $F : \clO \leftrightarrows \clT : G$? Ossia, invece di saturare i termini teorici in una ipotetica tupla (operazione priva di senso senza una specificazione di condizione sulla tupla quantificata esistenzialmente) si sta considerando solo la controparte osservazionale ma trasportata nel modello mediante $F$ (ed è tutto da vedere se $F$ è fedele) cosicché la dipendenza di $\fkk$ da $T$ viene `eliminata' per mezzo di una aggiunzione (cf. `elimination of imaginaries')
 \subsection{On the bicategory of generalised profunctors}
 Puta caso questo è un oggetto interessante di per sé.
