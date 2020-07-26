@@ -1,17 +1,17 @@
 # Fdb version 3
-["bibtex fun-erkennen"] 1595625601 "fun-erkennen.aux" "fun-erkennen.bbl" "fun-erkennen" 1595625602
+["bibtex fun-erkennen"] 1595765968 "fun-erkennen.aux" "fun-erkennen.bbl" "fun-erkennen" 1595765969
   "../allofthem.bib" 1595625512 377348 31d7621031fae55d7b1ea35aee609e0c ""
   "/home/fouche/texlive/texmf-dist/bibtex/bst/amscls/amsplain.bst" 1513722769 25798 9b3546f2f237ee0ce4724eed95f954f4 ""
-  "fun-erkennen.aux" 1595625601 2335 2ed2964042645f1c41ed6372f43a5240 "pdflatex"
+  "fun-erkennen.aux" 1595765969 2335 6e59c033085c8faa91bd83d2f4791533 "pdflatex"
   (generated)
   "fun-erkennen.blg"
   "fun-erkennen.bbl"
-["pdflatex"] 1595625601 "fun-erkennen.tex" "fun-erkennen.pdf" "fun-erkennen" 1595625602
+["pdflatex"] 1595765968 "fun-erkennen.tex" "fun-erkennen.pdf" "fun-erkennen" 1595765969
   "../authors.tex" 1595589736 487 c65016eaf4892e2e02bd375a4dc7f7c6 ""
   "../birkjour.cls" 1595589753 66070 35204f1a1d1fabdaac9d88c5d1248e72 ""
   "../fouche-copy.sty" 1595604550 6775 53a93d65bfe413839455b4c5eda83871 ""
   "../macros.tex" 1595596774 2414 646e1df02f746950de295e94f9784a69 ""
-  "/dev/null" 1595521261 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/dev/null" 1595751600 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/labx0800.tfm" 1595334612 3312 b8ab24c48b05dd87fb4dc8a3f4f2271a ""
   "/home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/labx0900.tfm" 1595334614 3308 0e40fe47c68a93146385123973edfb65 ""
   "/home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/labx1000.tfm" 1595252173 3300 6abb8e321227ead2a8e929e5abc72bd3 ""
@@ -357,14 +357,14 @@
   "/home/fouche/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1594591856 4870798 624f7a086a3f3121c86bdff8c2fff3a4 ""
   "/home/fouche/texlive/texmf-var/web2c/pdftex/pdflatex.fmt" 1594591895 2435113 1b712545fa22123afe850c4c106118b7 ""
   "/home/fouche/texlive/texmf.cnf" 1594591852 496 01ab80fa0036a81d2df86fb0ac70c709 ""
-  "fun-erkennen.aux" 1595625601 2335 2ed2964042645f1c41ed6372f43a5240 "pdflatex"
-  "fun-erkennen.bbl" 1595625601 556 d9f3c76620d11035bc1bd0183a6def6b "bibtex fun-erkennen"
-  "fun-erkennen.out" 1595625601 409 f65fc00e3690a8d023b78b19ad2157d5 "pdflatex"
-  "fun-erkennen.tex" 1595625598 7867 2aa28291c987b44877c760a20c1737d2 ""
-  "fun-erkennen.toc" 1595625601 666 d3ae8a1ce75e4d7208ed54180a2257d2 "pdflatex"
+  "fun-erkennen.aux" 1595765969 2335 6e59c033085c8faa91bd83d2f4791533 "pdflatex"
+  "fun-erkennen.bbl" 1595765968 556 d9f3c76620d11035bc1bd0183a6def6b "bibtex fun-erkennen"
+  "fun-erkennen.out" 1595765969 409 f65fc00e3690a8d023b78b19ad2157d5 "pdflatex"
+  "fun-erkennen.tex" 1595765423 8507 e8e2d08f0da086832bc49d115edf2553 ""
+  "fun-erkennen.toc" 1595765969 666 6cddeb7501d800f5fe0f055195316bcb "pdflatex"
   (generated)
-  "fun-erkennen.log"
-  "fun-erkennen.toc"
-  "fun-erkennen.out"
-  "fun-erkennen.pdf"
   "fun-erkennen.aux"
+  "fun-erkennen.log"
+  "fun-erkennen.out"
+  "fun-erkennen.toc"
+  "fun-erkennen.pdf"
