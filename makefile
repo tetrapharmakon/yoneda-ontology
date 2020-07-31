@@ -7,6 +7,24 @@ Ip:
 	cd I-existence/logica-univ-submission/; \
 	  latexmk -pdf -pvc -shell-escape luniv-ontology1.tex
 
+II:
+	cd II-spheres
+	  # latexmk -pdf -shell-escape luniv-ontology1.tex
+	  # latexmk -c
+
+IIp:
+	cd II-spheres
+	  # latexmk -pdf -pvc -shell-escape luniv-ontology1.tex
+
+III:
+	cd III-homot/
+	  # latexmk -pdf -shell-escape luniv-ontology1.tex
+	  # latexmk -c
+
+IIIp:
+	cd III-homot/
+	  # latexmk -pdf -pvc -shell-escape luniv-ontology1.tex
+
 er:
 	cd erkennen/; \
 	  latexmk -pdf -shell-escape fun-erkennen.tex
