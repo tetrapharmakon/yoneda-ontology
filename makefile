@@ -44,5 +44,5 @@ git:
 	bash -c 'git push'
 
 zipI:
-	rm zipped-I.zip
-	zip -r zipped-I . -x .gitignore 'logica-univ-submission/*' *.pdf *.bib *.bat makefile
+	rm -f zipped-I.zip
+	zip -r zipped-I I-existence/logica-univ-submission/ -x .gitignore .git *.pdf *.bib *.bat makefile
