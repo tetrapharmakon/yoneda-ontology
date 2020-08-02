@@ -29,7 +29,7 @@ We begin by assessing the equivalence between two different but equivalent descr
   A more abstract look at this result establishes the equivalence $\Set/I\cong \Set^I$ as a particular instance of the \emph{Grothendieck construction} (see \cite[1.1]{Leinster2004}): for every small category $\clC$, the category of functors $\clC\to\Set$ is equivalent to the category of \emph{discrete fibrations} on $\clC$ (see \cite[1.1]{Leinster2004}). In this case, the domain $\clC=I$ is a discrete category, hence all functors $\clE \to I$ are, trivially, discrete fibrations.
 \end{remark}
 \begin{remark}
-  The next crucial step of our analysis is the observation that the category of variable sets is a \emph{topos}: we break the result into the verification of the various axioms, as exposed in \autoref{eletop} and \autoref{grotop}. Our proof relies on the fact that the category of sets is itself a topos: in particular, it is cartesian closed, and admits the set $\{\perp,\top\}$ as subobject classifier.\footnote{We choose to employ a classical model of set theory, as opposed to an intuitionistic model where the classifier $\Omega$ consists of a more general Heyting algebra $H$; a general procedure to obtain a $\Omega$-many valued logic of set theory is to take the topos $\clE = \text{Sh}(H)$ of \emph{sheaves} on a Heyting algebra $H$: then, there is an isomorphism $\Omega_\clE\cong H$. The core of all our argument is very rarely affected by the choice to cut the complexity of our $\Omega$ to be the bare minimum; this is mainly due to expository reasons. The reader shall feel free to replace $\{\perp,\top\}$ with a more generic choice of Heyting algebra, and they are invited to adapt the arguments of section \autoref{sec_coins} accordingly.}
+  The next crucial step of our analysis is the observation that the category of variable sets is a \emph{topos}: we break the result into the verification of the various axioms. Our proof relies on the fact that the category of sets is itself a topos: in particular, it is cartesian closed, and admits the set $\{\perp,\top\}$ as subobject classifier.\footnote{We choose to employ a classical model of set theory, as opposed to an intuitionistic model where the classifier $\Omega$ consists of a more general Heyting algebra $H$; a general procedure to obtain a $\Omega$-many valued logic of set theory is to take the topos $\clE = \text{Sh}(H)$ of \emph{sheaves} on a Heyting algebra $H$: then, there is an isomorphism $\Omega_\clE\cong H$. The core of all our argument is very rarely affected by the choice to cut the complexity of our $\Omega$ to be the bare minimum; this is mainly due to expository reasons. The reader shall feel free to replace $\{\perp,\top\}$ with a more generic choice of Heyting algebra, and they are invited to adapt the arguments of section \autoref{sec_coins} accordingly.}
 \end{remark}
 \begin{proposition}\label{carclo}
   The category of variable sets is Cartesian closed in the sense of \cite[p.335]{Bor1}.
@@ -59,7 +59,7 @@ We begin by assessing the equivalence between two different but equivalent descr
   The category of variable sets has a subobject classifier.
 \end{proposition}
 \begin{proof}
-  From \autoref{eletop} we know that we shall find a variable set $\Omega$ such that there is a bijection
+  We shall find a variable set $\Omega$ such that there is a bijection
   \[\begin{array}{c}
       \xymatrix{ \chi : A \ar[r] & \Omega} \\ \hline
       \textsf{Sub}_I(A)

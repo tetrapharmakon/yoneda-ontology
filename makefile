@@ -7,6 +7,10 @@ Ip:
 	cd I-existence/logica-univ-submission/; \
 	  latexmk -pdf -pvc -shell-escape luniv-ontology1.tex
 
+vI:
+	cd I-existence/logica-univ-submission/; \
+	  evince luniv-ontology1.pdf &
+
 II:
 	cd II-spheres
 	  # latexmk -pdf -shell-escape luniv-ontology1.tex
