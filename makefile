@@ -1,33 +1,33 @@
 I:
 	cd I-existence/; \
-	  latexmk -pdf -shell-escape luniv-ontology1.tex
+	  latexmk -pdf -shell-escape ontology1.tex
 	  latexmk -c
 
 Ip:
 	cd I-existence/; \
-	  latexmk -pdf -pvc -shell-escape luniv-ontology1.tex
+	  latexmk -pdf -pvc -shell-escape ontology1.tex
 
 vI:
 	cd I-existence/; \
-	  evince luniv-ontology1.pdf &
+	  evince ontology1.pdf &
 
 II:
 	cd II-spheres/; \
-	  # latexmk -pdf -shell-escape luniv-ontology1.tex
+	  # latexmk -pdf -shell-escape ontology1.tex
 	  # latexmk -c
 
 IIp:
 	cd II-spheres/; \
-	  # latexmk -pdf -pvc -shell-escape luniv-ontology1.tex
+	  # latexmk -pdf -pvc -shell-escape ontology1.tex
 
 III:
 	cd III-homot/; \
-	  # latexmk -pdf -shell-escape luniv-ontology1.tex
+	  # latexmk -pdf -shell-escape ontology1.tex
 	  # latexmk -c
 
 IIIp:
 	cd III-homot/; \
-	  # latexmk -pdf -pvc -shell-escape luniv-ontology1.tex
+	  # latexmk -pdf -pvc -shell-escape ontology1.tex
 
 er:
 	cd erkennen/; \
