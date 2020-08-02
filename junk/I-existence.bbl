@@ -1,0 +1,298 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{{nLa}20b}
+
+\bibitem[Aga12]{Agzz}
+E.~Agazzi, \emph{Ragioni e limiti del formalismo. saggi di filosofia della
+  logica e della matematica}, Franco Angeli, 2012.
+
+\bibitem[AR94]{Adamek1994}
+J.~Ad{\'a}mek and J.~Rosick{\'y}, \emph{Locally presentable and accessible
+  categories}, London Mathematical Society Lecture Note Series, vol. 189,
+  Cambridge University Press, Cambridge, 1994.
+
+\bibitem[Auta]{black}
+Blinded Authors, \emph{Categorical ontology \textsc{ii}: A geometric look on
+  identity}, in preparation.
+
+\bibitem[Autb]{homot}
+\bysame, \emph{Categorical ontology \textsc{iii}: No identity without
+  homotopy}, in preparation.
+
+\bibitem[Bai13]{bain2013category}
+J.~Bain, \emph{Category-theoretic structure and radical ontic structural
+  realism}, Synthese \textbf{190} (2013), no.~9, 1621--1635.
+
+\bibitem[Bis67]{Bis67}
+E.~Bishop, \emph{Foundations of constructive analysis}, McGraw-Hill, New York,
+  1967.
+
+\bibitem[Bla52]{papear_di_black}
+M.~Black, \emph{{T}he {I}dentity of {I}ndiscernibles}, Mind \textbf{61} (1952),
+  no.~242, 153--164.
+
+\bibitem[Bor]{fenix}
+J.L. Borges, \emph{The sect of the {P}hoenix}, Collected Fictions.
+
+\bibitem[Bor44]{Borges1963}
+\bysame, \emph{Ficciones}, Editorial Sur, Buenos Aires, 1944.
+
+\bibitem[Bor53]{confutacion}
+\bysame, \emph{Nueva refutación del tiempo}, Otras inquisiciones, Sur, 1953.
+
+\bibitem[Bor75]{arena}
+\bysame, \emph{La rosa de paracelso}, El libro de arena, Emecé, 1975.
+
+\bibitem[Bor94a]{Bor1}
+F.~Borceux, \emph{Handbook of categorical algebra. 1}, Encyclopedia of
+  Mathematics and its Applications, vol.~50, Cambridge University Press,
+  Cambridge, 1994, Basic category theory.
+
+\bibitem[Bor94b]{Bor2}
+\bysame, \emph{Handbook of categorical algebra. 2}, Encyclopedia of Mathematics
+  and its Applications, vol.~51, Cambridge University Press, Cambridge, 1994,
+  Categories and structures.
+
+\bibitem[Bor97]{borges1997otras}
+J.L. Borges, \emph{Otras inquisiciones}, Biblioteca Borges, Alianza, 1997.
+
+\bibitem[Bor99a]{babil}
+\bysame, \emph{{T}he lottery in {B}abylon}, Collected Fictions, Penguin Books,
+  1999.
+
+\bibitem[Bor99b]{tlonEN}
+\bysame, \emph{Tl\"{o}n, {U}qbar, {O}rbis {T}ertius}, Collected Fictions,
+  Penguin Books, 1999.
+
+\bibitem[Bou50]{Bourb50}
+N.~Bourbaki, \emph{The architecture of mathematics}, The American Mathematical
+  Monthly \textbf{57} (1950), no.~4, 221--232.
+
+\bibitem[BS10]{baez2010lectures}
+J.C. Baez and M.~Shulman, \emph{Lectures on n-categories and cohomology},
+  Towards higher categories, Springer, 2010, pp.~1--68.
+
+\bibitem[Car56]{carnap1956meaning}
+R.~Carnap, \emph{Meaning and necessity, enlarged edition}, University of
+  Chicago, Chicago (1956).
+
+\bibitem[CH08]{cockett2008introduction}
+J.R.B. Cockett and P.J.W. Hofstra, \emph{Introduction to {T}uring categories},
+  Annals of pure and applied logic \textbf{156} (2008), no.~2-3, 183--209.
+
+\bibitem[CH14]{cockett2014total}
+\bysame, \emph{Total maps of {T}uring categories}, Electronic Notes in
+  Theoretical Computer Science \textbf{308} (2014), 129--146.
+
+\bibitem[Che57]{book337527}
+C.C. Chevalley, \emph{Fundamental concepts of algebra}, Pure and applied
+  mathematics, vol.7, Academic Press Inc.,U.S., 1957.
+
+\bibitem[CL84]{coppey1984leccons}
+L.~Coppey and C.~Lair, \emph{Le{\c{c}}ons de th{\'e}orie des esquisses},
+  Diagrammes \textbf{12} (1984), i--38.
+
+\bibitem[Cor96]{Cor96}
+L.~Corry, \emph{Modern algebra and the rise of mathematical structures},
+  Science Network Historical Studies, Birkh\"auser, 1996.
+
+\bibitem[Ehr68]{ehresmann1968esquisses}
+C.~Ehresmann, \emph{Esquisses et types des structures alg{\'e}briques...},
+  1968.
+
+\bibitem[EM45]{gtone}
+S.~Eilenberg and S.~MacLane, \emph{General theory of natural equivalences},
+  Trans. Amer. Math. Soc. \textbf{58} (1945), 231--294.
+
+\bibitem[Eva16]{eva2016category}
+B.~Eva, \emph{Category theory and physical structuralism}, European Journal for
+  Philosophy of Science \textbf{6} (2016), no.~2, 231--246.
+
+\bibitem[FK72]{FK}
+P.J. Freyd and G.M. Kelly, \emph{Categories of continuous functors. {I}}, J.
+  Pure Appl. Algebra \textbf{2} (1972), 169--191.
+
+\bibitem[Fre79]{Frege}
+G.~Frege, \emph{Posthumous writings}, 1st edition ed., University of Chicago
+  Press, 1979.
+
+\bibitem[Fre08]{freyd2008algebraic}
+P.J. Freyd, \emph{Algebraic real analysis}, Theory and Applications of
+  Categories \textbf{20} (2008), no.~10, 215--306.
+
+\bibitem[Gam91]{gamut1991logic}
+L.T.F. Gamut, \emph{Logic, language, and meaning, volume 1: Introduction to
+  logic}, vol.~1, University of Chicago Press, 1991.
+
+\bibitem[Gow07]{gowers2007}
+T.~Gowers, \emph{One way of looking at cauchy’s theorem},
+  \href{https://gowers.wordpress.com/2007/09/19/one-way-of-looking-at-cauchys-theorem/}{Gowers'
+  Weblog}, September 2007.
+
+\bibitem[Gri07]{grillet2007abstract}
+P.A. Grillet, \emph{Abstract algebra}, vol. 242, Springer Science \& Business
+  Media, 2007.
+
+\bibitem[Hof12]{hofmann2012extensional}
+M.~Hofmann, \emph{Extensional constructs in intensional type theory}, Springer
+  Science \& Business Media, 2012.
+
+\bibitem[HP07]{hyland2007category}
+M.~Hyland and J.~Power, \emph{The category theoretic understanding of universal
+  algebra: Lawvere theories and monads}, Electronic Notes in Theoretical
+  Computer Science \textbf{172} (2007), 437--458.
+
+\bibitem[Jec13]{jech2013set}
+T.~Jech, \emph{Set theory}, Springer Science \& Business Media, 2013.
+
+\bibitem[Joh77]{JohnstonePT}
+P.T. Johnstone, \emph{Topos theory}, LMS Mathematical Monographs, no.~10,
+  Academic Press, London, 1977.
+
+\bibitem[JPT04]{Janelidze2004}
+G.~Janelidze, B.~Pareigis, and W.~Tholen, \emph{Galois theory, {H}opf algebras,
+  and semiabelian categories}, Fields Institute Communications, vol.~43,
+  American Mathematical Society, Providence, RI, 2004, Papers from the Workshop
+  on Categorical Structures.
+
+\bibitem[JR97]{jacobs1997tutorial}
+B.~Jacobs and J.~Rutten, \emph{A tutorial on (co) algebras and (co) induction},
+  Bulletin-European Association for Theoretical Computer Science \textbf{62}
+  (1997), 222--259.
+
+\bibitem[Kr{\"{o}}07]{kromer2007tool}
+R.~Kr{\"{o}}mer, \emph{Tool and object: a history and philosophy of category
+  theory}, 2007 ed., Science networks historical studies 32, Birkhäuser, 2007.
+
+\bibitem[Kun83]{kunen}
+K.~Kunen, \emph{Set theory. an introduction to independence proofs}, 1 ed.,
+  Studies in Logic and the Foundations of Mathematics 102, North Holland, 1983.
+
+\bibitem[Lan17]{cwp}
+E.~Landry, \emph{Categories for the working philosopher}, Oxford University
+  Press, 2017.
+
+\bibitem[Law63]{lawvere1963functorial}
+F.W. Lawvere, \emph{Functorial semantics of algebraic theories}, Proceedings of
+  the National Academy of Sciences of the United States of America \textbf{50}
+  (1963), no.~5, 869.
+
+\bibitem[Law64]{lawvere1964elementary}
+F~William Lawvere, \emph{An elementary theory of the category of sets},
+  Proceedings of the National academy of Sciences of the United States of
+  America \textbf{52} (1964), no.~6, 1506.
+
+\bibitem[Law66]{lajolla}
+F.W. Lawvere, \emph{The category of categories as a foundation for
+  mathematics}, Proceedings of the Conference on Categorical Algebra (Berlin,
+  Heidelberg) (S.~Eilenberg, D.~K. Harrison, S.~MacLane, and H.~R{\"o}hrl,
+  eds.), Springer Berlin Heidelberg, 1966, pp.~1--20.
+
+\bibitem[Law96]{lawvere1996unity}
+\bysame, \emph{Unity and identity of opposites in calculus and physics},
+  Applied categorical structures \textbf{4} (1996), no.~2-3, 167--174.
+
+\bibitem[Lei04]{Leinster2004}
+T.~Leinster, \emph{Higher operads, higher categories}, London Mathematical
+  Society Lecture Note Series, vol. 298, Cambridge University Press, Cambridge,
+  2004.
+
+\bibitem[Lei14]{leinster2014basic}
+\bysame, \emph{Basic category theory}, vol. 143, Cambridge University Press,
+  2014.
+
+\bibitem[Lol77]{lolli1977categorie}
+G.~Lolli, \emph{Categorie, universi e principi di riflessione}, Boringhieri,
+  1977.
+
+\bibitem[LS88]{lambek1988introduction}
+J.~Lambek and P.J. Scott, \emph{Introduction to higher-order categorical
+  logic}, Cambridge Studies in Advanced Mathematics, Cambridge University
+  Press, 1988.
+
+\bibitem[Man12]{manes2012algebraic}
+E.G. Manes, \emph{Algebraic theories}, vol.~26, Springer Science \& Business
+  Media, 2012.
+
+\bibitem[Mar97]{Marquis1997}
+J.-P. Marquis, \emph{Category theory and structuralism in mathematics:
+  Syntactical considerations}, pp.~123--136, Springer Netherlands, Dordrecht,
+  1997.
+
+\bibitem[Mar08]{marquis2008geometrical}
+Jean-Pierre Marquis, \emph{From a geometrical point of view: a study of the
+  history and philosophy of category theory}, vol.~14, Springer Science \&
+  Business Media, 2008.
+
+\bibitem[ML98]{McL}
+S.~Mac~Lane, \emph{Categories for the working mathematician}, second ed.,
+  Graduate Texts in Mathematics, vol.~5, Springer-Verlag, New York, 1998.
+
+\bibitem[MLM92]{mac1992sheaves}
+S.~Mac~Lane and I.~Moerdijk, \emph{Sheaves in geometry and logic: A first
+  introduction to topos theory}, Springer, 1992.
+
+\bibitem[Mos09]{moschovakis2009descriptive}
+Y.N. Moschovakis, \emph{Descriptive set theory}, no. 155, American Mathematical
+  Soc., 2009.
+
+\bibitem[MZ10]{marquis2010category}
+J.-P. Marquis and E.N. Zalta, \emph{What is category theory}, What is category
+  theory, 2010, pp.~221--255.
+
+\bibitem[{nLa}11]{nlab:neg-think}
+{nLab authors}, \emph{{N}egative thinking}, March 2011,
+  \href{https://ncatlab.org/nlab/revision/negative+thinking/9}{revision 9}.
+
+\bibitem[{nLa}17]{nlab:category-order}
+\bysame, \emph{{C}ategory theory vs order theory}, March 2017,
+  \href{https://ncatlab.org/nlab/revision/category+theory+vs+order+theory/12}{revision
+  12}.
+
+\bibitem[{nLa}20a]{free_topos}
+\bysame, \emph{{Free topos}}, April 2020,
+  \href{http://ncatlab.org/nlab/revision/free%20topos/14}{Revision 14}.
+
+\bibitem[{nLa}20b]{syntax-semantics_duality}
+\bysame, \emph{{Syntax-Semantics duality}}, April 2020,
+  \href{http://ncatlab.org/nlab/revision/syntax-semantics%20duality/11}{Revision
+  11}.
+
+\bibitem[PR00]{Paseka2000}
+J.~Paseka and J.~Rosick{\'y}, \emph{Quantales}, pp.~245--262, Springer
+  Netherlands, 2000.
+
+\bibitem[Qui48]{quine1948there}
+Willard~V Quine, \emph{On what there is}, The review of metaphysics (1948),
+  21--38.
+
+\bibitem[Qui53]{Qui53}
+W.V.O. Quine, \emph{From a logical point of view}, Harvard University Press,
+  1953.
+
+\bibitem[RB82]{10.2307/20127724}
+N.~Rescher and R.~Brandom, The Review of Metaphysics \textbf{35} (1982), no.~3,
+  627--629.
+
+\bibitem[Rie17]{riehlcontext}
+E.~Riehl, \emph{Category theory in context}, Courier Dover Publications, 2017.
+
+\bibitem[SB81]{sankappanavar}
+H.P.~Sankappanavar S.~Burris, H. P.~Sankappanavar, \emph{A course in universal
+  algebra}, 1 ed., Graduate Texts in Mathematics, Springer, 1981.
+
+\bibitem[Sim11]{simmons2011introduction}
+H.~Simmons, \emph{An introduction to category theory}, Cambridge University
+  Press, 2011.
+
+\bibitem[{Uni}13]{hottbook}
+The {Univalent Foundations Program}, \emph{Homotopy type theory: Univalent
+  foundations of mathematics}, \url{http://homotopytypetheory.org/book},
+  Institute for Advanced Study, 2013.
+
+\end{thebibliography}
