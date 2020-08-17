@@ -10,6 +10,46 @@
 \maketitle
 \tableofcontents
 
+\section{Introduction}
+Qui spiegare il senso del lavoro: fornire gli strumenti per una semantica funtoriale delle teorie, che non siano solo scientifiche. Il lavoro si inserisce parzialmente nel nostro tentativo di fornire strumenti matematici adeguati per trattare problemi di natura filosofica. In questo caso si prende una delle parti meglio sviluppate della filosofia della scienza e la si adegua anche a teorie metafisiche o ontologiche, in più migliorando l'approccio agli oggetti di cui normalmente ci si occupa in questo campo (teorie fisiche e biologiche). Partirei con frase a effetto sul problema del rapporto tra teoria e mondo.
+
+\subsection{Semantical conception of theories}
+
+During the XXth century it was considered necessary to develop a formal treatment of scientific theories. The Wiener Kreis verificationist paradigm/account, and the Neurath theory of "protocollar statements", was the input to elaborate a completely semantical framework for working with scientific theories, and the clue of a pan-linguistic vision of philosophy of science. 
+
+For the sake of strictness the formal account in which Carnap and associates provide their notion of "theory" is known in literature as \emph{syntactical conception of theories} \cite{.} while the introduction of term "semantic" is due to later developments. But the field of epistemology that the logical neopositivism started one can call "semantics of theories", because some characteristics, and above all the underlying ideology, are the same from Carnap to Beth to Suppes, up to the recent canonical uses of physical handbooks. 
+
+[scrivere quali sono queste caratteristiche]
+
+[sintesi delle varie concezioni; le teorie come classi di modelli $\mathcal{K}$; le teorie come oggetti formali]
+
+semantica non standard per teorie empiriche in cui le teorie sono sistemi formali e tutte le nozioni diventano oggetti matematici; più propriamente una \emph{teoria} diventa una struttura $(F_{\mathcal{L}}, \mathcal{K})$ dove $F_{\mathcal{L}}$ è il vero sistema formale e $\mathcal{K}$ è la classe di tutti i suoi modelli. La nostra strategia è separare ulteriormente $F_{\mathcal{L}}$ in due "vocabolari" (categorie sintattiche) $P_{F_{\mathcal{L}}}$ che rappresenta i termini puri (nel senso di Plantinga) e $A_{F_{\mathcal{L}}}$ che rappresenta i termini \emph{applicati}. Ergo una teoria $\mathbf{T}$ sarà una tripla $\braket{(P_{F_{\mathcal{L}}},A_{F_{\mathcal{L}}}), \mathcal{K}}$ in cui la prima coppia configura una logica (o meglio configura uno spazio degli stati che configura una logica). La specificazione del dominio di $A_{F_{\mathcal{L}}}$ determina il tipo di teoria che stiamo considerando (scientifica, strettamente empirica, logico-matematica, metafisica). 
+
+Dire che $A_{F_{\mathcal{L}}}$ determina le \emph{tipizzazioni} della teoria significa dire che svolge lo stesso ruolo della legge $\beta$ nella semantica dello spazio degli stati, mentre la classe $\mathcal{K}$ è isomorfa all'insieme $\mathcal{M}$ dello spazio degli stati. Il tipo di $\beta$ determina il tipo di $\mathcal{M}$ che determina il tipo di $\mathbf{T} = (\mathcal{M}, \beta)$. Idem nel nostro approccio: $A_{F_{\mathcal{L}}} = \{\alpha_1,\dots,\alpha_n\}$ determina il tipo, che implementa una logica che determina la classe $\mathcal{K}$.
+
+
+
+\subsubsection{The Two Dictionaries}
+
+Nella concezione neopositivistica la distinzione tra legge teorica e legge empirica non è dovuta alla natura ipotetica della prima (anche una legge empirica può esserlo) quanto dal fatto che i due tipi di legge contengono tipi differenti di termini \cite{}. La distinzione è quindi formale, e indica una approccio prettamente linguistico a questioni epistemologiche. 
+
+Anche in questa visione "sintattica" \cite{ } una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\mathcal{K}$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità "osservazionali" e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\mathcal{V_T}$ che contiene \emph{termini teorici} e $\mathcal{V_O}$ che contiene \emph{termini osservativi}. Intuitivamente $\mathcal{F_L} = \mathcal{V_T} \cup \mathcal{V_O}$.
+
+Per derivare una legge empirica da una teorica Carnap introduce delle \emph{correspondance rules} ma senza definirle adeguatamente. Possiamo analogamente fornire il framework "viennese" di una \emph{funzione di traduzione} $\varphi: \mathcal{V_O} \to \mathcal{V_T}$ tale che ogni termine osservativo $\omega_j$ viene sostituito da un corrispondente teorico $\varphi (\omega_j)$ \footnote{In generale Carnap sembra assumere che $\mathcal{V_O} \subset \mathcal{V_T}$ ma specifica comunque che è errato dire che gli O-terms siano esempi di T-terms.}. 
+
+\begin{definition} [Wiener Definition]
+	Una teoria $\mathbf{T}$ è una coppia $\braket{\tau_i, \varphi (\omega_j)}$ dove $\tau_i \in \mathcal{V_T}$ e $\omega_j \in \mathcal{V_O}$
+\end{definition}
+
+
+
+[\cite{} Carnap da pag. 299; importante la 314]
+
+\subsubsection{\emph{Was Sind und was sollen die Erkennen?}}
+
+La strategia carnapiana è figlia della distinzione di Moritz Schlick \cite{.} tra \emph{kennen} e \emph{erkennen} ... [spiegare la manfrina e la nostra "traduzione"]
+
+In questo paragrafo parlerei della questione "sì ma cosa sono gli "osservativi" nella nostra semantica funtoriale?", dell'arbitrarietà della divisione in due categorie sintattiche, per comodità nel trattamento di determinate teorie, e introdurrei alla tensione tra teorico e osservazionale che si sviluppa formalmente in seguito (cenno storico in nota al perchè i neopositivisti fanno la ramseyfication e perchè a noi non interessa (citare lo Weinberg)).  
 
 \section{Profunctors / Grothendieck construction}
 \label{sec:org7dd09e1}
