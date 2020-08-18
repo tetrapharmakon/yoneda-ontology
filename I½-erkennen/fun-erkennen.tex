@@ -5,7 +5,9 @@
 \title{Categorical Ontology I$\frac{1}{2}$: Functorial erkennen}
 \input{../authors.tex}
 \usepackage{booktabs}
-\usepackage{braket}
+% \usepackage{braket}
+%== `braket' confligge con alcune macro già esistenti 
+\newcommand{\bk}[1]{\langle #1\rangle}
 \begin{document}
 
 \maketitle
@@ -19,16 +21,16 @@ What about
 \epigraph{Life is the life of the world to come, which a man earns by means of the letters.}{Sefer Ozar Eden Ganuz}
 
 \section{Semantical conception of theories}
-During the XXth century it was considered necessary to develop a formal treatment of scientific theories. The Wiener Kreis verificationist paradigm/account, and the Neurath theory of "protocollar statements", was the input to elaborate a completely semantical framework for working with scientific theories, and the clue of a pan-linguistic vision of philosophy of science. 
+During the XXth century it was considered necessary to develop a formal treatment of scientific theories. The Wiener Kreis verificationist paradigm/account, and the Neurath theory of ``protocollar statements'', was the input to elaborate a completely semantical framework for working with scientific theories, and the clue of a pan-linguistic vision of philosophy of science. 
 
-For the sake of strictness the formal account in which Carnap and associates provide their notion of "theory" is known in literature as \emph{syntactical conception of theories} \cite{.} while the introduction of term "semantic" is due to later developments. But the field of epistemology that the logical neopositivism started one can call "semantics of theories", because some characteristics, and above all the underlying ideology, are the same from Carnap to Beth to Suppes, up to the recent canonical uses of physical handbooks. 
+For the sake of strictness the formal account in which Carnap and associates provide their notion of ``theory'' is known in literature as \emph{syntactical conception of theories} \cite{.} while the introduction of term ``semantic'' is due to later developments. But the field of epistemology that the logical neopositivism started one can call ``semantics of theories'', because some characteristics, and above all the underlying ideology, are the same from Carnap to Beth to Suppes, up to the recent canonical uses of physical handbooks. 
 
 [scrivere quali sono queste caratteristiche]
 
 [sintesi delle varie concezioni; le teorie come classi di modelli $\clK$; 
 le teorie come oggetti formali]
 
-semantica non standard per teorie empiriche in cui le teorie sono sistemi formali e tutte le nozioni diventano oggetti matematici; più propriamente una \emph{teoria} diventa una struttura $(F_\clL, \clK)$ dove $F_\clL$ è il vero sistema formale e $\clK$ è la classe di tutti i suoi modelli. La nostra strategia è separare ulteriormente $F_\clL$ in due "vocabolari" (per noi, le categorie sintattiche di teorie al primo ordine), uno $P_{F_\clL}$ che rappresenta i termini puri (nel senso di Plantinga) e uno $A_{F_\clL}$ che rappresenta i termini \emph{applicati}. Ergo una teoria $\mathbf{T}$ sarà una particolare tripla $\braket{(P_{F_\clL},A_{F_\clL}), \clK}$ in cui la prima coppia configura una logica (uno ``spazio degli stati'' che configura una logica). 
+semantica non standard per teorie empiriche in cui le teorie sono sistemi formali e tutte le nozioni diventano oggetti matematici; più propriamente una \emph{teoria} diventa una struttura $(F_\clL, \clK)$ dove $F_\clL$ è il vero sistema formale e $\clK$ è la classe di tutti i suoi modelli. La nostra strategia è separare ulteriormente $F_\clL$ in due ``vocabolari'' (per noi, le categorie sintattiche di teorie al primo ordine), uno $P_{F_\clL}$ che rappresenta i termini puri (nel senso di Plantinga) e uno $A_{F_\clL}$ che rappresenta i termini \emph{applicati}. Ergo una teoria $\mathbf{T}$ sarà una particolare tripla $\bk{(P_{F_\clL},A_{F_\clL}), \clK}$ in cui la prima coppia configura una logica (uno ``spazio degli stati'' che configura una logica). 
 
 La coppia $(P_{F_\clL},A_{F_\clL})$ è poi soggetta a una ulteriore condizione di ammissibilità, cf. \ref{}, chiedendo che esista un profuntore tra le due categorie sintattiche $P_{F_\clL},A_{F_\clL}$.
 
@@ -44,12 +46,12 @@ la classe $\clK$.
 \subsection{The Two Dictionaries}
 Nella concezione neopositivistica la distinzione tra legge teorica e legge empirica non è dovuta alla natura ipotetica della prima (anche una legge empirica può esserlo) quanto dal fatto che i due tipi di legge contengono tipi differenti di termini \cite{}. La distinzione è quindi formale, e indica una approccio prettamente linguistico a questioni epistemologiche. 
 
-Anche in questa visione "sintattica" \cite{ } una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\clK$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità "osservazionali" e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\mathcal{V_T}$ che contiene \emph{termini teorici} e $\mathcal{V_O}$ che contiene \emph{termini osservativi}. Intuitivamente $\mathcal{F_L} = \mathcal{V_T} \cup \mathcal{V_O}$.
+Anche in questa visione ``sintattica'' \cite{ } una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\clK$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità ``osservazionali'' e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\mathcal{V_T}$ che contiene \emph{termini teorici} e $\mathcal{V_O}$ che contiene \emph{termini osservativi}. Intuitivamente $\mathcal{F_L} = \mathcal{V_T} \cup \mathcal{V_O}$, ma piu precisamente $\mathcal{F_L} = \mathcal{V_T} \uplus_\varphi \mathcal{V_O}$.
 
-Per derivare una legge empirica da una teorica Carnap introduce delle \emph{correspondance rules} ma senza definirle adeguatamente. Possiamo analogamente fornire il framework "viennese" di una \emph{funzione di traduzione} $\varphi: \mathcal{V_O} \to \mathcal{V_T}$ tale che ogni termine osservativo $\omega_j$ viene sostituito da un corrispondente teorico $\varphi (\omega_j)$ \footnote{In generale Carnap sembra assumere che $\mathcal{V_O} \subset \mathcal{V_T}$ ma specifica comunque che è errato dire che gli O-terms siano esempi di T-terms.}. 
+Per derivare una legge empirica da una teorica Carnap introduce delle \emph{correspondance rules} ma senza definirle adeguatamente. Possiamo analogamente fornire il framework ``viennese'' di una \emph{funzione di traduzione} $\varphi: \mathcal{V_O} \to \mathcal{V_T}$ tale che ogni termine osservativo $\omega_j$ viene sostituito da un corrispondente teorico $\varphi (\omega_j)$ \footnote{In generale Carnap sembra assumere che $\mathcal{V_O} \subset \mathcal{V_T}$ ma specifica comunque che è errato dire che gli O-terms siano esempi di T-terms.}. 
 
 \begin{definition} [Wiener Definition]
-	Una teoria $\mathbf{T}$ è una coppia $\braket{\tau_i, \varphi (\omega_j)}$ dove $\tau_i \in \mathcal{V_T}$ e $\omega_j \in \mathcal{V_O}$
+	Una teoria $\mathbf{T}$ è una coppia $\bk{\tau_i, \varphi (\omega_j)}$ dove $\tau_i \in \mathcal{V_T}$ e $\omega_j \in \mathcal{V_O}$
 \end{definition}
 
 
@@ -58,9 +60,9 @@ Per derivare una legge empirica da una teorica Carnap introduce delle \emph{corr
 
 \subsection{\emph{Was Sind und was sollen die Erkennen?}}
 
-La strategia carnapiana è figlia della distinzione di Moritz Schlick \cite{.} tra \emph{kennen} e \emph{erkennen} ... [spiegare la manfrina e la nostra "traduzione"]
+La strategia carnapiana è figlia della distinzione di Moritz Schlick \cite{.} tra \emph{kennen} e \emph{erkennen} ... [spiegare la manfrina e la nostra ``traduzione'']
 
-In questo paragrafo parlerei della questione "sì ma cosa sono gli "osservativi" nella nostra semantica funtoriale?", dell'arbitrarietà della divisione in due categorie sintattiche, per comodità nel trattamento di determinate teorie, e introdurrei alla tensione tra teorico e osservazionale che si sviluppa formalmente in seguito (cenno storico in nota al perchè i neopositivisti fanno la ramseyfication e perchè a noi non interessa (citare lo Weinberg)).  
+In questo paragrafo parlerei della questione ``sì ma cosa sono gli ``osservativi'' nella nostra semantica funtoriale?'', dell'arbitrarietà della divisione in due categorie sintattiche, per comodità nel trattamento di determinate teorie, e introdurrei alla tensione tra teorico e osservazionale che si sviluppa formalmente in seguito (cenno storico in nota al perchè i neopositivisti fanno la ramseyfication e perchè a noi non interessa (citare lo Weinberg)).  
 
 \section{Profunctors / Grothendieck construction}
 \label{sec:org7dd09e1}
@@ -70,12 +72,12 @@ Sezione tecnica con solo robe di CT.
 Sezione tecnica con solo robe di CT.
 \section{Theories and models}
 \label{sec:orge02f333}
-Qui esploitiamo il linguaggio introdotto nelle precedenti due sezioni;
+In this section we exploit the terminology established before.
 \begin{definition}[Theory]
   A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite{lambek1988introduction}) of a first-order, finitely axiomatisable language $L$.
 \end{definition}
-\begin{definition}
-  A \emph{world} is a large category $\clW$; a \emph{universe} is a world that, as a category, admits all small colimits.
+\begin{definition}[World, Yaldabaoth]
+  A \emph{world} is a large category $\clW$; a \emph{Yaldabaoth} is a world that, as a category, admits all small colimits.\footnote{Also known as \emph{Yaltabaoth} or \emph{Ialdabaoth}\dots}
 \end{definition}
 Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor 
 \[\xymatrix{\clL \ar[r]^\phi & \clW.}\]
@@ -87,7 +89,7 @@ A canvas $\phi : \clL \to \clW$ is a \emph{science} if $\phi$ is a dense functor
     \item If $\clW$ is a world, we obtain a \emph{representation} functor 
     \[ \xymatrix{\clW \ar[r] & [\clL^\op, \Set];} \]
     this means: given a canvas $\phi$ of the world, the latter leaves an image on the canvas.
-    \item If $\clW$ is a universe, we obtain a NR-adjunction
+    \item If in addition $\clW$ is a Yaldabaoth, we obtain a NR-adjunction
     \[\xymatrix{\clW \ar@<3pt>[r] & \ar@<3pt>[l] [\clL^\op, \Set];}\]
     this means: if $\clW$ is sufficiently expressive, then models of the theory that explains $\clW$ through $\phi$ can be used to acquire a two-way knowledge. Phenomena have a theoretical counterpart in $[\clL^\op,\Set]$ via the nerve; theoretical objects strive to describe phenomena via their realisation.
     \item If an $\clL$-canvas $\phi : \clL \to \clW$ is a science, `the world' is a full subcategory of the modes in which `language' can create interpretation.
@@ -106,24 +108,28 @@ Evidentemente, la tensione qui è tra due opposte qualità che $L$ deve avere: n
 
 Cf. with this definition in mind \cite{biologia}:
 \begin{quote}
-  Lorem ipsum dolor sit amet
+  Copiare la def di teoria verbatim dal libro di evoluzione
 \end{quote}
 We say that una \emph{teoria S-scientifica} è il dato di
+\begin{enumerate}
+\item un linguaggio formale $\clL$;
+\item la categoria sintattica $T_\clL$ di quel linguaggio;
+\item La categoria dei funtori $[T_\clC, \Set]$.
+\end{enumerate}
+Dal momento che la categoria $[T_\clC, \Set]$ caratterizza completamente (up to Cauchy completion) $\clL$ e $T_\clL$, facciamo una crasi e chiamiamo \emph{teoria $S$-scientifica} il solo dato della categoria di modelli $[T_\clC, \Set]$. 
 
-1. L un linguaggio formale
-2. TL la categoria sintattica di quel linguaggio
-3. La categoria dei funtori [TL, S]
+Ecco allora he ``una corrispondenza coerente che collega espressioni di F con espressioni semantiche'' è semplicemente un funtore.
 
-Dal momento che la categoria [TL,S] caratterizza completamente (up to Cauchy completion) $L$ e $TL$, facciamo una crasi e chiamiamo teoria $S$-scientifica semplicemente $[TL,S]$. Ecco allora he "una corrispondenza coerente che collega espressioni di F con espressioni semantiche" è semplicemente un funtore.
+Questo è compatibile con yadda yadda.
 \section{The tension between observational and theoretical}
 \label{sec:orge11c3c4}
-All based on the proportion
-
+Everything is based on the proportion
+\begin{verbatim}
 truth values : proposition = section : presheaf
-
+\end{verbatim}
 The tension between observational and theoretical can be faithfully represented through profunctor theory;
 \begin{remark}
-  One can think of propositional functions as relations $(x,y)\in R$ iff the pair $x,y$ renders $phi$ true; we use this idea, suitably adapted to our purpose and categorified.
+  One can think of propositional functions as relations $(x,y)\in R$ iff the pair $x,y$ renders $\phi$ true; we use this idea, suitably adapted to our purpose and categorified.
 \end{remark}
 Yadda yadda on how questo è facile da categorificare; consideriamo la relazione $R : T \times O \to \{0,1\}$ per cui $tRo \iff \dots$
 \begin{definition}
@@ -154,7 +160,7 @@ We can generalise the definition above to encompass Ramsey sentences:
 \end{definition}
 The set $\fkk(\uT, \uO)$ represents the type of proofs that the observational tuple $\uO$ admits a description in terms of the theoretical tuple $\uT$.
 
-This formalism allows to speak about particular worlds, obtained as presheaf categories over observational $\clO$; if $\clT, \clO$ is a theoretic pair, we can instantiate \autoref{} above in the particular case where $\clW = [\clO^\op, \Set]$; observe that $\clW$ is a universe! We can thus address a certain number of questions, arising from the canonical adjunction obtained by virtue of \autoref{} and \ref{}:
+This formalism allows to speak about particular worlds, obtained as presheaf categories over observational $\clO$; if $\clT, \clO$ is a theoretic pair, we can instantiate \autoref{} above in the particular case where $\clW = [\clO^\op, \Set]$; observe that $\clW$ is a Yaldabaoth! We can thus address a certain number of questions, arising from the canonical adjunction obtained by virtue of \autoref{} and \ref{}:
 \[
   \xymatrix{ [(\clO^m)^\op, \Set] \ar@<3pt>[r] & \ar@<3pt>[l] [(\clT^n)^\op, \Set];}
 \]

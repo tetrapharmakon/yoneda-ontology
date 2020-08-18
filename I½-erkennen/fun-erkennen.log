@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.12)  17 AUG 2020 22:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.12)  18 AUG 2020 19:04
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **fun-erkennen.tex
 (./fun-erkennen.tex
@@ -1245,7 +1245,7 @@ Library (tcolorbox): 'tcblistingscore.code.tex' version '4.30'
 Library (tcolorbox): 'tcbprocessing.code.tex' version '4.30'
 (/home/fouche/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 ))
 \c@tcblisting=\count353
 ))
@@ -1480,107 +1480,108 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@lastruleclass=\count359
 \@thisrulewidth=\dimen375
 )
-(/home/fouche/texlive/texmf-dist/tex/latex/braket/braket.sty)
 (./fun-erkennen.aux)
 \openout1 = `fun-erkennen.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for U/dn/m/n on input line 9.
-LaTeX Font Info:    Trying to load font information for U+dn on input line 9.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/dn/m/n on input line 11.
+LaTeX Font Info:    Trying to load font information for U+dn on input line 11.
  (/home/fouche/texlive/texmf-dist/tex/latex/velthuis/udn.fd
 File: Udn.fd 2004/08/03 v2.14
 )
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 9.
-LaTeX Font Info:    ... okay on input line 9.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T2A/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+
  (/home/fouche/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+
 
 (/home/fouche/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 9
-.
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 1
+1.
 
 (/home/fouche/texlive/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 (/home/fouche/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1648,9 +1649,9 @@ ABD: EveryShipout initializing macros
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-Package xypdf Info: Line width: 0.39998pt on input line 9.
+Package xypdf Info: Line width: 0.39998pt on input line 11.
 \AtBeginShipoutBox=\box92
-Package hyperref Info: Link coloring ON on input line 9.
+Package hyperref Info: Link coloring ON on input line 11.
 
 (/home/fouche/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -1663,16 +1664,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count366
 )
-LaTeX Info: Redefining \ref on input line 9.
-LaTeX Info: Redefining \pageref on input line 9.
-LaTeX Info: Redefining \nameref on input line 9.
+LaTeX Info: Redefining \ref on input line 11.
+LaTeX Info: Redefining \pageref on input line 11.
+LaTeX Info: Redefining \nameref on input line 11.
  (./fun-erkennen.out) (./fun-erkennen.out)
 \@outlinefile=\write7
 \openout7 = `fun-erkennen.out'.
 
 \c@lstlisting=\count367
 
-Overfull \hbox (3.90392pt too wide) in paragraph at lines 12--12
+Overfull \hbox (3.90392pt too wide) in paragraph at lines 14--14
 []\T2A/cmr/bx/n/17.28 Categorical On-tol-ogy I$[]$: Func-to-rial erken-
  []
 
@@ -1685,13 +1686,13 @@ Non-PDF special ignored!
 <special> papersize=15.5cm,23.5cm
 {/home/fouche/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
-LaTeX Warning: Citation `.' on page 2 undefined on input line 24.
+LaTeX Warning: Citation `.' on page 2 undefined on input line 26.
 
 
-LaTeX Warning: Reference `' on page 2 undefined on input line 33.
+LaTeX Warning: Reference `' on page 2 undefined on input line 35.
 
 
-LaTeX Warning: Citation `' on page 2 undefined on input line 47.
+LaTeX Warning: Citation `' on page 2 undefined on input line 49.
 
 
 Overfull \vbox (1.49002pt too high) has occurred while \output is active []
@@ -1699,7 +1700,7 @@ Overfull \vbox (1.49002pt too high) has occurred while \output is active []
 
 [2]
 
-LaTeX Warning: Citation `.' on page 3 undefined on input line 61.
+LaTeX Warning: Citation `.' on page 3 undefined on input line 63.
 
 <xymatrix 2x1 51>
 Overfull \vbox (1.44843pt too high) has occurred while \output is active []
@@ -1707,23 +1708,38 @@ Overfull \vbox (1.44843pt too high) has occurred while \output is active []
 
 [3]
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 85.
+LaTeX Warning: Reference `' on page 4 undefined on input line 87.
 
 <xymatrix 2x1 44> <xymatrix 2x1 80>
 
-LaTeX Warning: Reference `' on page 4 undefined on input line 98.
+LaTeX Warning: Reference `' on page 4 undefined on input line 100.
 
 
-LaTeX Warning: Citation `biologia' on page 4 undefined on input line 107.
+LaTeX Warning: Citation `biologia' on page 4 undefined on input line 109.
 
 
 Overfull \vbox (1.49002pt too high) has occurred while \output is active []
 
 
 [4]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 130
+Overfull \hbox (6.00735pt too wide) in paragraph at lines 119--120
+\T2A/cmr/m/n/10 Cauchy com-ple-tion) $\OMS/cmsy/m/n/10 L$ \T2A/cmr/m/n/10 e $\O
+ML/cmm/m/it/10 T[]$\T2A/cmr/m/n/10 , fac-ciamo una crasi e chi-ami-amo \T2A/cmr
+/m/it/10 teo-ria $\OML/cmm/m/it/10 S$\T2A/cmr/m/it/10 -scientifica
+ []
+
+LaTeX Font Info:    Trying to load font information for T2A+DejaVuSansMono-TLF 
+on input line 127.
+(/home/fouche/texlive/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
+File: T2ADejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T2A/DejaVuSansMo
+no-TLF.
+)
+LaTeX Font Info:    Font shape `T2A/DejaVuSansMono-TLF/m/n' will be
+(Font)              scaled to size 7.5pt on input line 127.
+LaTeX Font Info:    Trying to load font information for U+euf on input line 136
 .
- (/home/fouche/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+
+(/home/fouche/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 Overfull \vbox (1.44843pt too high) has occurred while \output is active []
@@ -1731,38 +1747,31 @@ Overfull \vbox (1.44843pt too high) has occurred while \output is active []
 
 [5]
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 157.
+LaTeX Warning: Reference `' on page 6 undefined on input line 163.
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 157.
+LaTeX Warning: Reference `' on page 6 undefined on input line 163.
 
 
-LaTeX Warning: Reference `' on page 6 undefined on input line 157.
+LaTeX Warning: Reference `' on page 6 undefined on input line 163.
 
 <xymatrix 2x1 80> <xymatrix 3x2 124>
 Overfull \vbox (1.49002pt too high) has occurred while \output is active []
 
 
 [6] (./fun-erkennen.bbl)
-LaTeX Font Info:    Trying to load font information for T2A+DejaVuSansMono-TLF 
-on input line 190.
-
-(/home/fouche/texlive/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
-File: T2ADejaVuSansMono-TLF.fd 2011/06/01 Font definitions for T2A/DejaVuSansMo
-no-TLF.
-)
 LaTeX Font Info:    Font shape `T2A/DejaVuSansMono-TLF/m/n' will be
-(Font)              scaled to size 6.75pt on input line 190.
+(Font)              scaled to size 6.75pt on input line 196.
 
 Overfull \vbox (1.44843pt too high) has occurred while \output is active []
 
 
 [7]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 196.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 196.
  (./fun-erkennen.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 196.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 196.
 Package rerunfilecheck Info: File `fun-erkennen.out' has not changed.
 (rerunfilecheck)             Checksum: EBF17C38EB4F591FBFE66E209B429DC2;583.
 
@@ -1771,15 +1780,15 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 37442 strings out of 480471
- 714109 string characters out of 5900862
- 1191367 words of memory out of 5000000
- 52446 multiletter control sequences out of 15000+600000
- 564703 words of font info for 115 fonts, out of 8000000 for 9000
+ 37427 strings out of 480471
+ 713908 string characters out of 5900862
+ 1191133 words of memory out of 5000000
+ 52429 multiletter control sequences out of 15000+600000
+ 566180 words of font info for 118 fonts, out of 8000000 for 9000
  1303 hyphenation exceptions out of 8191
  76i,16n,103p,3290b,979s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/home/fouche/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t2a.enc}{/
-home/fouche/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}</home
+{/home/fouche/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/
+home/fouche/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t2a.enc}</home
 /fouche/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb></home/
 fouche/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/fouc
 he/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/fouche/t
@@ -1808,13 +1817,14 @@ ts/type1/public/cm-super/sfrm0800.pfb></home/fouche/texlive/texmf-dist/fonts/ty
 pe1/public/cm-super/sfrm0900.pfb></home/fouche/texlive/texmf-dist/fonts/type1/p
 ublic/cm-super/sfrm1000.pfb></home/fouche/texlive/texmf-dist/fonts/type1/public
 /cm-super/sfrm1200.pfb></home/fouche/texlive/texmf-dist/fonts/type1/public/cm-s
-uper/sfti0900.pfb></home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/
-sfti1000.pfb></home/fouche/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10
-.pfb></home/fouche/texlive/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on fun-erkennen.pdf (7 pages, 430021 bytes).
+uper/sfti0800.pfb></home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/
+sfti0900.pfb></home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1
+000.pfb></home/fouche/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb>
+</home/fouche/texlive/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
+Output written on fun-erkennen.pdf (7 pages, 446141 bytes).
 PDF statistics:
- 284 PDF objects out of 1000 (max. 8388607)
- 215 compressed objects within 3 object streams
- 33 named destinations out of 1000 (max. 500000)
+ 296 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 37 named destinations out of 1000 (max. 500000)
  229 words of extra memory for PDF output out of 10000 (max. 10000000)
 
