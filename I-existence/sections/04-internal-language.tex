@@ -1,67 +1,67 @@
 \section{The internal language of variable sets}\label{int_lang}
 \epigraph{I am hard but I am fair; there is no racial bigotry here. [\dots\unkern] Here you are all equally worthless.}{GySgt Hartman}
 \begin{definition}\label{da_lang}
-  The internal language of a topos $\clE$ is a formal language defined by \emph{types} and \emph{terms}; suitable terms form the class of variables. Other terms form the class of \emph{formul\ae}.
-  \begin{itemize}
-    \item \emph{Types} are the objects of $\clE$
-    \item \emph{Terms} of type $X$ are morphisms of codomain $X$, usually denoted with Greek letters $\alpha,\beta,\sigma,\tau ,\ldots : U \to X$.
-          \begin{itemize}
-            \item Suitable terms are variables: the identity arrow of $X\in\clE$ is the variable  $x : X \to X$. For technical reasons we shall keep a countable number of variables of the same type distinguished:\footnote{These technical reasons lie on the evident necessity to be free to refer to the same free variable an unbounded number of times. This can be formalised in various ways: we refer the reader to \cite{lambek1988introduction} and \cite{JohnstonePT}.} $x,x',x'',\ldots : X \to X$ are all interpreted as $1_X$.
-          \end{itemize}
-    \item Generic terms may depend on multiple variables; the domain of a term of type $X$ is the \emph{domain of definition} of a term.
-  \end{itemize}
-  A number of inductive clauses define the other terms of the language:
-  \begin{itemize}
-    \item the identity arrow of an object $X\in\clE$ is a term of type $X$;
-    \item given terms $\sigma : U \to X$ and $\tau :  V\to Y$ there exists a term $\lr{\sigma}{\tau}$ of type $X\times Y$ obtained from the pullback
-          \[\xymatrix{
-            W \ar[d]\ar[r]\ar[dr]|{\lr{\sigma}{\tau}} & X \times V \ar[d]\\
-            U\times Y \ar[r]& X\times Y
-            }\]
-    \item Given terms $\sigma : U \to X, \tau : V \to X$ of the same type $X$, there is a term $[\sigma = \tau] : W \xto{\lr{\sigma}{\tau}} X\times X \xto{\delta_X} \Omega$, where $\delta_X : X\times X \to \Omega$ is defined as the classifying map of the mono $X \hookrightarrow X\times X$.
-    \item Given a term $\sigma : U \to X$ and a term $f : X \to Y$, there is a term $f[\sigma] := f\circ\sigma : U \to Y$.
-    \item Given terms $\theta :  V \to Y^X$ and $\sigma : U\to X$, there is a term
-          \[
-            W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y
-          \]
-    \item In the particular case $Y=\Omega$, the term above is denoted
-          \[[\sigma\in\theta] : W\lr{\theta}{\sigma} \to \Omega\]
-    \item If $x$ is a variable of type $X$, and $\sigma : X\times U \to Z$, there is a term
-          \[\lambda x.\sigma : U \xto{\eta} (X\times U)^X \xto{\sigma^X} Z^X\]
-          obtained as the mate of $\sigma$.
-  \end{itemize}
-  These rules can of course be also presented as the formation rules for a Gentzen-like deductive system: let us rewrite them in this formalism.
-  \[ \small \begin{array}{cc}
-      \infer[\textsc{id}]{1_X : X \to X}{}                                                              &
-      \infer[\Pi]{\lr{\sigma}{\tau} : W\lr{\theta}{\sigma} \to X \times Y }{\sigma : U \to X    &   & \tau : V \to Y}             \\[1em]
-      \infer[\textsc{eq}]{[\sigma=\tau] : W \to \Omega}{\sigma : U \to X                                &   & \tau : V \to X}           &
-      \infer[\textsc{comp}]{f[\sigma] : U \to Y}{\sigma : U \to X                                         &   & f : X \to Y}                \\[1em]
-      \infer[\textsc{ev}]{W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y}{\theta :  V \to Y^X &   & \sigma : U\to X}          &
-      \infer[\lambda\textsc{-abs}]{\lambda x.\sigma = \sigma^X\circ\eta : U \to (X\times U)^X \to Z^X}{ x: X     &   & \sigma : X\times U \to Z}
-    \end{array}\]
-  To formulas of the language of $\clE$ we apply the usual operations and rules of first-order logic: logical connectives are induced by the structure of internal Heyting algebra of $\Omega$: given formulas $\varphi,\psi$ we define
-  \begin{itemize}
-    \item $\varphi\lor \psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\lor} \Omega$;
-    \item $\varphi\land\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\land} \Omega$;
-    \item $\varphi\Rightarrow\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\Rightarrow} \Omega$;
-    \item $\lnot\varphi$ is the formula $U \to \Omega \xto{\lnot} \Omega$.
-  \end{itemize}
+	The internal language of a topos $\clE$ is a formal language defined by \emph{types} and \emph{terms}; suitable terms form the class of variables. Other terms form the class of \emph{formul\ae}.
+	\begin{itemize}
+		\item \emph{Types} are the objects of $\clE$
+		\item \emph{Terms} of type $X$ are morphisms of codomain $X$, usually denoted with Greek letters $\alpha,\beta,\sigma,\tau ,\ldots : U \to X$.
+		      \begin{itemize}
+			      \item Suitable terms are variables: the identity arrow of $X\in\clE$ is the variable  $x : X \to X$. For technical reasons we shall keep a countable number of variables of the same type distinguished:\footnote{These technical reasons lie on the evident necessity to be free to refer to the same free variable an unbounded number of times. This can be formalised in various ways: we refer the reader to \cite{lambek1988introduction} and \cite{JohnstonePT}.} $x,x',x'',\ldots : X \to X$ are all interpreted as $1_X$.
+		      \end{itemize}
+		\item Generic terms may depend on multiple variables; the domain of a term of type $X$ is the \emph{domain of definition} of a term.
+	\end{itemize}
+	A number of inductive clauses define the other terms of the language:
+	\begin{itemize}
+		\item the identity arrow of an object $X\in\clE$ is a term of type $X$;
+		\item given terms $\sigma : U \to X$ and $\tau :  V\to Y$ there exists a term $\lr{\sigma}{\tau}$ of type $X\times Y$ obtained from the pullback
+		      \[\xymatrix{
+			      W \ar[d]\ar[r]\ar[dr]|{\lr{\sigma}{\tau}} & X \times V \ar[d]\\
+			      U\times Y \ar[r]& X\times Y
+			      }\]
+		\item Given terms $\sigma : U \to X, \tau : V \to X$ of the same type $X$, there is a term $[\sigma = \tau] : W \xto{\lr{\sigma}{\tau}} X\times X \xto{\delta_X} \Omega$, where $\delta_X : X\times X \to \Omega$ is defined as the classifying map of the mono $X \hookrightarrow X\times X$.
+		\item Given a term $\sigma : U \to X$ and a term $f : X \to Y$, there is a term $f[\sigma] := f\circ\sigma : U \to Y$.
+		\item Given terms $\theta :  V \to Y^X$ and $\sigma : U\to X$, there is a term
+		      \[
+			      W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y
+		      \]
+		\item In the particular case $Y=\Omega$, the term above is denoted
+		      \[[\sigma\in\theta] : W\lr{\theta}{\sigma} \to \Omega\]
+		\item If $x$ is a variable of type $X$, and $\sigma : X\times U \to Z$, there is a term
+		      \[\lambda x.\sigma : U \xto{\eta} (X\times U)^X \xto{\sigma^X} Z^X\]
+		      obtained as the mate of $\sigma$.
+	\end{itemize}
+	These rules can of course be also presented as the formation rules for a Gentzen-like deductive system: let us rewrite them in this formalism.
+	\[ \small \begin{array}{cc}
+			\infer[\textsc{id}]{1_X : X \to X}{}                                                                   &
+			\infer[\Pi]{\lr{\sigma}{\tau} : W\lr{\theta}{\sigma} \to X \times Y }{\sigma : U \to X                 &   & \tau : V \to Y}             \\[1em]
+			\infer[\textsc{eq}]{[\sigma=\tau] : W \to \Omega}{\sigma : U \to X                                     &   & \tau : V \to X}           &
+			\infer[\textsc{comp}]{f[\sigma] : U \to Y}{\sigma : U \to X                                            &   & f : X \to Y}                \\[1em]
+			\infer[\textsc{ev}]{W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y}{\theta :  V \to Y^X      &   & \sigma : U\to X}          &
+			\infer[\lambda\textsc{-abs}]{\lambda x.\sigma = \sigma^X\circ\eta : U \to (X\times U)^X \to Z^X}{ x: X &   & \sigma : X\times U \to Z}
+		\end{array}\]
+	To formulas of the language of $\clE$ we apply the usual operations and rules of first-order logic: logical connectives are induced by the structure of internal Heyting algebra of $\Omega$: given formulas $\varphi,\psi$ we define
+	\begin{itemize}
+		\item $\varphi\lor \psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\lor} \Omega$;
+		\item $\varphi\land\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\land} \Omega$;
+		\item $\varphi\Rightarrow\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\Rightarrow} \Omega$;
+		\item $\lnot\varphi$ is the formula $U \to \Omega \xto{\lnot} \Omega$.
+	\end{itemize}
 \end{definition}
 Universal quantifiers admit an interpretation in the Mitchell-Bénabou language of $\clE$: the following definition comes from \cite[VI]{mac1992sheaves}.
 \begin{definition}\label{quantifezzi}
-  Let $\clE$ be a topos, and let $\varphi : U\times V \to \Omega$ be a formula defined on a product type $U\times V$. The variable $u:U$ can be now quantified over yielding a new formula
-  \[\forall u.\varphi(u,v) : V \to \Omega\]
-  which no longer contains $u$ as a free variable.
+	Let $\clE$ be a topos, and let $\varphi : U\times V \to \Omega$ be a formula defined on a product type $U\times V$. The variable $u:U$ can be now quantified over yielding a new formula
+	\[\forall u.\varphi(u,v) : V \to \Omega\]
+	which no longer contains $u$ as a free variable.
 
-  The term $\forall u.\varphi(u,v)$ is obtained by composition of $\lambda u.\varphi(u,v) : V \to V\to\Omega^U$ with the unique right adjoint $\forall_t : \Omega^U \to \Omega$ to the precomposition $t^*:\Omega \to \Omega^U$\footnote{The arrow $t:U\to 1$ is the \emph{t}erminal map, and $t^* : \Omega^1\to \Omega^U$ is induced by precomposition; it sends a term $x : \Omega$ to the constant function $t^*x=\lambda u.x$.} in the diagram
-  \[\xymatrix{
-      V \ar[r]^{\lambda u.\varphi} & \Omega^U \ar[r]^{\forall_t} & \Omega
-    }\]
-  (see \cite[IV.9]{mac1992sheaves}). Similarly, we obtain a term $\exists u.\varphi(u,v)$ from the composition
-  \[\xymatrix{
-      V \ar[r]^{\lambda u.\varphi} & \Omega^U \ar[r]^{\exists_t} & \Omega
-    }\]
-  with the left adjoint $\exists_t \dashv t$.
+	The term $\forall u.\varphi(u,v)$ is obtained by composition of $\lambda u.\varphi(u,v) : V \to V\to\Omega^U$ with the unique right adjoint $\forall_t : \Omega^U \to \Omega$ to the precomposition $t^*:\Omega \to \Omega^U$\footnote{The arrow $t:U\to 1$ is the \emph{t}erminal map, and $t^* : \Omega^1\to \Omega^U$ is induced by precomposition; it sends a term $x : \Omega$ to the constant function $t^*x=\lambda u.x$.} in the diagram
+	\[\xymatrix{
+			V \ar[r]^{\lambda u.\varphi} & \Omega^U \ar[r]^{\forall_t} & \Omega
+		}\]
+	(see \cite[IV.9]{mac1992sheaves}). Similarly, we obtain a term $\exists u.\varphi(u,v)$ from the composition
+	\[\xymatrix{
+			V \ar[r]^{\lambda u.\varphi} & \Omega^U \ar[r]^{\exists_t} & \Omega
+		}\]
+	with the left adjoint $\exists_t \dashv t$.
 \end{definition}
 Each formula $\varphi : U \to \Omega$ defines a subobject $\{x\mid \varphi\} \subseteq U$ of its domain of definition; this is the subobject classified by $\varphi$, and must be thought as the subobject where ``$\varphi$ is true''.
 
@@ -69,71 +69,71 @@ If $\varphi : U\to\Omega$ is a formula, we say that $\varphi$ is \emph{universal
 
 Examples of universally valid formulas:
 \begin{itemize}
-  \item $\clE\Vdash [x=x]$
-  \item $\clE\Vdash [(x \in_X \{x\mid\varphi\}) \iff \varphi]$
-  \item $\clE\Vdash \varphi$ if and only if $\clE \Vdash \forall x.\varphi$
-  \item $\clE\Vdash [\varphi \Rightarrow \lnot\lnot\varphi]$
+	\item $\clE\Vdash [x=x]$
+	\item $\clE\Vdash [(x \in_X \{x\mid\varphi\}) \iff \varphi]$
+	\item $\clE\Vdash \varphi$ if and only if $\clE \Vdash \forall x.\varphi$
+	\item $\clE\Vdash [\varphi \Rightarrow \lnot\lnot\varphi]$
 \end{itemize}
 Let us now glance at the internal language of variable sets. This will turn out to be the cornerstone for the analysis in \autoref{sec_coins}.
 
 Here we just unwind \autoref{da_lang} at its very surface; we invite the reader to endeavour in the instructive exercise to fill all details properly.
 \begin{definition}
-  Types and terms of $\clL(\Set/I)$ are respectively arrows $\var{U}{I}$ with codomain $I$, and commutative triangles
-  \[\xymatrix{
-      U \ar[rr]^\sigma \ar[dr]_u && X\ar[dl]^x \\
-      &I&
-    }\]
-  Given this, we define
-  \begin{itemize}
-    \item \emph{product terms} as functions $\sigma : U_1\times_I U_2 \times_I\dots \times_I U_n \to X$;
-    \item terms $\la \sigma,\tau\ra$ obtained as the (diagonal map in the) pullback
-          \[\xymatrix{
-            W\la \sigma,\tau\ra \pb \ar[d]\ar[r]& X \times_I V \ar[d]\ar@[lightgray]@/^1pc/[ddr]\\
-            U \times_I Y \ar[r]\ar@[lightgray]@/_1pc/[drr] & X \times_I Y \ar@[lightgray][dr]\\
-            &&**[r] \color{lightgray} I \times_I I\cong I
-            }\]
-    \item terms $[\sigma=\tau]$, obtained as compositions
-          \[\xymatrix{ W\la \sigma,\tau\ra \ar[r]^{\la \sigma,\tau\ra} & X \times_I Y \ar[r]^{\delta_X} & \Omega_I }\]
-          where $\delta_X : X \times_I X \to \Omega$ classifies the mono $m : X \to X\times_I X$ obtained by the universal property of the pullback $X\times_I X$ as the kernel pair of $\cvar{X}{x}{I}$.
-  \end{itemize}
-  The cartesian closed structure of $\Set/I$ (cf. \autoref{carclo}) yields terms (we denote $B^A:= A\pitchfork B$ in the notation of \autoref{carclo})
-  \begin{itemize}
-    \item $[\sigma\in\theta] : W\la \theta,\sigma\ra \to Y^X \times_I X \to \Omega_I$ from suitable $\sigma,\theta$;
-    \item $U \to (X\times_I U)^X \xto{\sigma^X} Z^X$ ($\lambda$-abstraction on $x : X$) from a suitable $\sigma : X\times_I U \to Z$.
-  \end{itemize}
+	Types and terms of $\clL(\Set/I)$ are respectively arrows $\var{U}{I}$ with codomain $I$, and commutative triangles
+	\[\xymatrix{
+			U \ar[rr]^\sigma \ar[dr]_u && X\ar[dl]^x \\
+			&I&
+		}\]
+	Given this, we define
+	\begin{itemize}
+		\item \emph{product terms} as functions $\sigma : U_1\times_I U_2 \times_I\dots \times_I U_n \to X$;
+		\item terms $\la \sigma,\tau\ra$ obtained as the (diagonal map in the) pullback
+		      \[\xymatrix{
+			      W\la \sigma,\tau\ra \pb \ar[d]\ar[r]& X \times_I V \ar[d]\ar@[lightgray]@/^1pc/[ddr]\\
+			      U \times_I Y \ar[r]\ar@[lightgray]@/_1pc/[drr] & X \times_I Y \ar@[lightgray][dr]\\
+			      &&**[r] \color{lightgray} I \times_I I\cong I
+			      }\]
+		\item terms $[\sigma=\tau]$, obtained as compositions
+		      \[\xymatrix{ W\la \sigma,\tau\ra \ar[r]^{\la \sigma,\tau\ra} & X \times_I Y \ar[r]^{\delta_X} & \Omega_I }\]
+		      where $\delta_X : X \times_I X \to \Omega$ classifies the mono $m : X \to X\times_I X$ obtained by the universal property of the pullback $X\times_I X$ as the kernel pair of $\cvar{X}{x}{I}$.
+	\end{itemize}
+	The cartesian closed structure of $\Set/I$ (cf. \autoref{carclo}) yields terms (we denote $B^A:= A\pitchfork B$ in the notation of \autoref{carclo})
+	\begin{itemize}
+		\item $[\sigma\in\theta] : W\la \theta,\sigma\ra \to Y^X \times_I X \to \Omega_I$ from suitable $\sigma,\theta$;
+		\item $U \to (X\times_I U)^X \xto{\sigma^X} Z^X$ ($\lambda$-abstraction on $x : X$) from a suitable $\sigma : X\times_I U \to Z$.
+	\end{itemize}
 \end{definition}
 Quantifiers can be deduced in a similar way, starting from their general definition in \autoref{quantifezzi}.
 \begin{remark}
-  Like every other Grothendieck topos, the category $\Set/I$ has a \emph{natural number object} (see \cite[VI.1]{mac1992sheaves}, \cite[p.46]{lambek1988introduction}); here we shall outline its construction. It is a general fact that such a natural number object in the category of variable sets, consists of the constant functor on $\bbN : \Set$, when we realise variable sets as functors $I \to \Set$: thus, in fibered terms, the natural number object is just $\pi_I : \bbN \times I \to I$.
+	Like every other Grothendieck topos, the category $\Set/I$ has a \emph{natural number object} (see \cite[VI.1]{mac1992sheaves}, \cite[p.46]{lambek1988introduction}); here we shall outline its construction. It is a general fact that such a natural number object in the category of variable sets, consists of the constant functor on $\bbN : \Set$, when we realise variable sets as functors $I \to \Set$: thus, in fibered terms, the natural number object is just $\pi_I : \bbN \times I \to I$.
 
-  A natural number object provides the category $\clE$ it lives in with a notion of \emph{recursion} and with a notion of $\clE$-induction principle: namely, we can interpret the sentence
-  \[\textstyle\big(Q0\land \bigwedge_{i\le n} Qi\Rightarrow Q(i+1)\big)\Rightarrow \bigwedge_{n : \bbN} Qn\]
-  for every $Q : \bbN \to \Omega_I$.
+	A natural number object provides the category $\clE$ it lives in with a notion of \emph{recursion} and with a notion of $\clE$-induction principle: namely, we can interpret the sentence
+	\[\textstyle\big(Q0\land \bigwedge_{i\le n} Qi\Rightarrow Q(i+1)\big)\Rightarrow \bigwedge_{n : \bbN} Qn\]
+	for every $Q : \bbN \to \Omega_I$.
 
-  In the category of variable sets, the universal property of $\pi_I : \bbN\times I \to I$ amounts to the following fact: given any diagram of solid arrows
-  \begin{equation}\label{natnumeq}
-    \vcenter{\xymatrix{
-        I \ar[r]^0 \ar@{=}[d] & \bbN\times I\ar@{.>}[d]^u \ar[r]^{s\times I} & \bbN \times I\ar@{.>}[d]^u \\
-        I \ar[r]_x & X \ar[r]_f & X
-      }}
-  \end{equation}
-  where every arrow carry a structure of morphism over $I$ (and $0 : i \mapsto (0,i)$, $s\times I : (n,i) \mapsto (n+1,i)$), there is a unique way to complete it with the dotted arrow, i.e. with a function $u : \bbN \times I \to X$ such that
-  \[u \circ (s\times I) = f \circ u.\]
-  Clearly, $u$ must be defined by induction: if it exists, the commutativity of the left square amounts to the request that $u(0,i)=x(i)$ for every $i : I$. Given this, the inductive step is
-  \[
-    u(s(n,i)) = u(n+1,i) = f(u(n,i)).
-  \]
-  This recursively defines a function with the desired properties; it is clear that these requests uniquely determine $u$.
+	In the category of variable sets, the universal property of $\pi_I : \bbN\times I \to I$ amounts to the following fact: given any diagram of solid arrows
+	\begin{equation}\label{natnumeq}
+		\vcenter{\xymatrix{
+				I \ar[r]^0 \ar@{=}[d] & \bbN\times I\ar@{.>}[d]^u \ar[r]^{s\times I} & \bbN \times I\ar@{.>}[d]^u \\
+				I \ar[r]_x & X \ar[r]_f & X
+			}}
+	\end{equation}
+	where every arrow carry a structure of morphism over $I$ (and $0 : i \mapsto (0,i)$, $s\times I : (n,i) \mapsto (n+1,i)$), there is a unique way to complete it with the dotted arrow, i.e. with a function $u : \bbN \times I \to X$ such that
+	\[u \circ (s\times I) = f \circ u.\]
+	Clearly, $u$ must be defined by induction: if it exists, the commutativity of the left square amounts to the request that $u(0,i)=x(i)$ for every $i : I$. Given this, the inductive step is
+	\[
+		u(s(n,i)) = u(n+1,i) = f(u(n,i)).
+	\]
+	This recursively defines a function with the desired properties; it is clear that these requests uniquely determine $u$.
 \end{remark}
 Such a terse exposition does not exhaust such a vast topic as recursion theory conducted with category-theoretic tools. The interested reader shall consult \cite{jacobs1997tutorial} for a crystal-clear introductory account, and \cite{cockett2008introduction,cockett2014total} for more recent and modern development of recursion theory.
 \begin{remark}\label{dyn_sisy}
-The object of natural numbers of $\Set/I$ is easily seen to match the definition of the \emph{initial object} \cite[2.3.1]{Bor1} of the category $\cate{Dyn}/I$ so defined:
-\begin{itemize}
-  \item the objects of $\cate{Dyn}/I$ are \emph{dynamical systems} in $\Set/I$, i.e. the triples $(x,X,f)$, where $X : \Set/I$ (say, with structure map $\xi : X \to I$), $x : (I,\id_I) \to (X,\xi)$ and $f : X \to X$ is an endo-morphism of variable sets;
-  \item given two dynamical systems $(x,X,f)$ and $(y,Y,g)$ a \emph{morphism} between them is a function $u  :X \to Y$ such that the diagram
-        in \eqref{natnumeq} commutes in all its parts.
-\end{itemize}
-The reason why such a triple $(x,X,f)$ identifies as a (discrete) dynamical system is easily seen: the function $x : I \to X$ works as initial seed for a recursive application of $f$, in such a way that every $f : X \to X$ defines a sequence
-\[u_{n+1} := f(u_n)\]
-of its iterates. The system now lends itself to all sorts of questions: is there a fixed point for \(u_n(x)\)? Does the limit of \(u_n(x)\) belong to \(X\) (not obvious: consider \(X=[0,1[\) and \(u_n(x)\equiv 1-\frac{1}{n}\))? Is \(u_n(x)\) continuous in \(x\)? Etc.
+	The object of natural numbers of $\Set/I$ is easily seen to match the definition of the \emph{initial object} \cite[2.3.1]{Bor1} of the category $\cate{Dyn}/I$ so defined:
+	\begin{itemize}
+		\item the objects of $\cate{Dyn}/I$ are \emph{dynamical systems} in $\Set/I$, i.e. the triples $(x,X,f)$, where $X : \Set/I$ (say, with structure map $\xi : X \to I$), $x : (I,\id_I) \to (X,\xi)$ and $f : X \to X$ is an endo-morphism of variable sets;
+		\item given two dynamical systems $(x,X,f)$ and $(y,Y,g)$ a \emph{morphism} between them is a function $u  :X \to Y$ such that the diagram
+		      in \eqref{natnumeq} commutes in all its parts.
+	\end{itemize}
+	The reason why such a triple $(x,X,f)$ identifies as a (discrete) dynamical system is easily seen: the function $x : I \to X$ works as initial seed for a recursive application of $f$, in such a way that every $f : X \to X$ defines a sequence
+	\[u_{n+1} := f(u_n)\]
+	of its iterates. The system now lends itself to all sorts of questions: is there a fixed point for \(u_n(x)\)? Does the limit of \(u_n(x)\) belong to \(X\) (not obvious: consider \(X=[0,1[\) and \(u_n(x)\equiv 1-\frac{1}{n}\))? Is \(u_n(x)\) continuous in \(x\)? Etc.
 \end{remark}

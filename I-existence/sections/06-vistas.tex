@@ -1,8 +1,12 @@
 \section{Vistas on ontologies}\label{vistas}
-\epigraph{¿No basta un solo término repetido para desbaratar y confundir la serie del tiempo? ¿Los fervorosos que se entregan a una línea de Shakespeare no son, literalmente, Shakespeare?}{\cite{confutacion}}
-Reached this point, the reader will agree with us that Borges' literary world underlies deep mathematical structure, and that this structure is best appreciated through elementary algebra, analysis and geometry (to assess the \emph{form} and \emph{measure} of the universe), and through category theory (to assess the inferential rules governing form and measure). This literary \emph{divertissement}, as naive as it may be, has nonetheless the power to show ontology can be made a quantitative theory. 
+\epigraph{¿No basta un solo término repetido para desbaratar y confundir la serie del tiempo? ¿Los fervorosos que se entregan a una línea de Shakespeare no son, literalmente, Shakespeare?\\[2mm]
+\footnotesize\emph{--- Is not one single repeated terminal point
+enough to disrupt and confound the series in time? Are the enthusiasts who
+devote themselves to a line of Shakespeare not literally Shakespeare?}
+}{\cite{confutacion}}
+Reached this point, the reader will agree with us that Borges' literary world underlies deep mathematical structure, and that this structure is best appreciated through elementary algebra, analysis and geometry (to assess the \emph{form} and \emph{measure} of the universe), and through category theory (to assess the inferential rules governing form and measure). This literary \emph{divertissement}, as naive as it may be, has nonetheless the power to show ontology can be made a quantitative theory.
 
-We can go further, discussing the --not so-- tangential connection that Borges' work has with classical idealism \emph{à la} Berkeley. With our \autoref{incendiata} in mind, we can safely say Borges has often been fascinated by, and mocked, classical idealism (see \cite{confutacion} for an example of how fascination and derision mix in the same essay). 
+We can go further, discussing the --not so-- tangential connection that Borges' work has with classical idealism \emph{à la} Berkeley. With our \autoref{incendiata} in mind, we can safely say Borges has often been fascinated by, and mocked, classical idealism (see \cite{confutacion} for an example of how fascination and derision mix in the same essay).
 
 Even though endeavouring on such a wide ground as classical idealism isn't the purpose of our work, Borges regards \tlon's language and philosophy as a concrete realisation of Berkeley's theory of knowledge. We thus find natural to explore such link with a classical piece of philosophy, as far as it can be taken, with the eyes of a category theorist.
 
@@ -10,53 +14,53 @@ In the following subsections, we sketch a more wide-ranging plan; surely a less 
 \subsection{Answers to the idealist}\label{berkelei}
 Let us reconsider \autoref{bla}; we have already mentioned Berkeley's famous view of experience as a perceptual bundle of stimuli that are incapable to cohere.
 
-In whatever sense it accepts that there are nine coins, Berkeleyan instantaneism asks to cut every `non-total' existence $p(g,c,d) < (\top,1)$ at the purely false value, so that our notion of admissibility for a configuration of coins becomes untenable (because we can't have $(c,d) \entails{} \sum_u p(u,\firstblank)$ for every $(c,d)$). 
+In whatever sense it accepts that there are nine coins, Berkeleyan instantaneism asks to cut every `non-total' existence $p(g,c,d) < (\top,1)$ at the purely false value, so that our notion of admissibility for a configuration of coins becomes untenable (because we can't have $(c,d) \entails{} \sum_u p(u,\firstblank)$ for every $(c,d)$).
 
 Only what exists completely deserves to be called being. On our side of the barricade however instantaneism is untenable.  Idealism is equally untenable, when the word is intended as `the belief that what lacks a percipient conscience must suddenly disappear in thin air' (and thus, to ensure the world to exist, there must be God).
 
 However, as strange and counter-intuitive as it may seem, instantaneism and idealism have their point on \tlon:\footnote{Somehow, \cite{tlonEN} isn't far from an artificial world built to mock idealism; cf. also \cite{borges1997otras} and the famous essay \cite{confutacion} therein.} we should then be able to find a tenable justification for both of them, possibly from within topos theory; possibly, `making no pact with the impostor Jesus Christ' (cf. \cite{tlonEN}).
 
-In the internal language of variable sets $\Set/I$ a proposition $p$ takes its truth values in a much wide spectrum of values, as wide as $I$; thus, existence gives way to a more nuanced notion that can be (in)valid with a certain strength $t : I$. The language we introduced so far was precisely meant to quantify this stray from classical logic. 
+In the internal language of variable sets $\Set/I$ a proposition $p$ takes its truth values in a much wide spectrum of values, as wide as $I$; thus, existence gives way to a more nuanced notion that can be (in)valid with a certain strength $t : I$. The language we introduced so far was precisely meant to quantify this stray from classical logic.
 
 Here, it is meant to quantify how much Berkeley's `cut' in \autoref{incendiata} is a blunt one, easily falsifiable (to say the least) even on \tlon.
 
-To put it shortly, 
-\begin{enumtag}{i} 
-  \item instantaneism is what we get from the subobject classifier $\Omega_I$ forgetting the topology and order structure on $I$ (cf. \autoref{something_on_I}), and 
-  \item idealism arises from quotienting one of the copy $I\times \{\top\}$ of $I\times \{\top,\perp\}$ to a point (cf. \autoref{fig_Omega}). 
+To put it shortly,
+\begin{enumtag}{i}
+	\item instantaneism is what we get from the subobject classifier $\Omega_I$ forgetting the topology and order structure on $I$ (cf. \autoref{something_on_I}), and
+	\item idealism arises from quotienting one of the copy $I\times \{\top\}$ of $I\times \{\top,\perp\}$ to a point (cf. \autoref{fig_Omega}).
 \end{enumtag}
 The problem is thus phrased in a way that makes its solution completely natural: just don't be a 18$^\text{th}$ century Irish empiricist; if the subobject classifier of a topos carries additional structure, don't forget it.
 
-To fix ideas, let's consider an example. Let's say two empiricists, that for lack of a better name are called David and George, discuss about the truth of the proposition (say, $p$) `the World is there'. 
+To fix ideas, let's consider an example. Let's say two empiricists, that for lack of a better name are called David and George, discuss about the truth of the proposition (say, $p$) `the World is there'.
 
-Let us assume that $p : U \to \Omega_I$ depends on a certain number of variables $\vec x$; now, when saying that closing their eyes the world disappears, David and George claim that $p(\eye,\firstblank) \neq p(\noeye,\firstblank)$, and even more, that $\entails{} \lnot p(\noeye,\firstblank)$. (Note that this is the strongest possible sense in which $p$ `is not true': for every context $x:U$, $p(\noeye, x) =(\bot,1)$.) 
+Let us assume that $p : U \to \Omega_I$ depends on a certain number of variables $\vec x$; now, when saying that closing their eyes the world disappears, David and George claim that $p(\eye,\firstblank) \neq p(\noeye,\firstblank)$, and even more, that $\entails{} \lnot p(\noeye,\firstblank)$. (Note that this is the strongest possible sense in which $p$ `is not true': for every context $x:U$, $p(\noeye, x) =(\bot,1)$.)
 
 A certain number of implicit assumptions are already made here:
-\begin{itemize} 
-  \item First, that $p$'s domain of definition splits into a product $E\times U'$, where $E = \{\eye,\noeye\}$ is a space of parameters taking into account the state of George and David's eyes, and $U'$ takes into account `the rest of the world'; so $p$ is evaluated on pairs $(e,\vec y)$. 
-  \item Second, that every force $p(\noeye,\vec y) < (\top,1)$ collapses to the minimum value `completely false' so that at any $(\noeye,\vec y)$ configuration the World is \emph{not} there. 
+\begin{itemize}
+	\item First, that $p$'s domain of definition splits into a product $E\times U'$, where $E = \{\eye,\noeye\}$ is a space of parameters taking into account the state of George and David's eyes, and $U'$ takes into account `the rest of the world'; so $p$ is evaluated on pairs $(e,\vec y)$.
+	\item Second, that every force $p(\noeye,\vec y) < (\top,1)$ collapses to the minimum value `completely false' so that at any $(\noeye,\vec y)$ configuration the World is \emph{not} there.
 \end{itemize}
 Formally, George and David collapsed a certain subset of the classifier $\Omega_I$ to a point, by means of a quotient map $Q$, pictorially represented as
 \[
-  \begin{tikzpicture}
-    \draw[gray!70,dashed] (2,1.25) -- (2,-.25) node[below] {$\{\perp,\top\}$};
-    \draw[fill] (0,0) circle (1pt) node[left] {$0$};
-    \draw[fill] (2,0) circle (1pt) node[right] (dis) {$1$};
-    \draw (0,0) -- (2,0);
-    \begin{scope}[yshift=1cm]
-      \draw[fill] (0,0) circle (1pt) node[left] {$0$};
-      \draw[fill] (2,0) circle (1pt) node[right] (dat) {$1$};
-      \draw (0,0) -- (2,0);
-    \end{scope}
-    \node at (3,.5) {$\overset{Q}\longrightarrow$};
-    \begin{scope}[xshift=4cm]
-      \fill[gray!20] (0,0) -| (2,1);
-      \draw[gray!70,dashed] (2,1.25) -- (2,-.25) node[below] {$\{\perp,\top\}$};
-      \draw[fill] (0,1) circle (1pt) node[left] {$0$};
-      \draw[fill] (2,1) circle (1pt) node[right] (dis) {$1$};
-      \draw (0,1) -- (2,1);
-    \end{scope}
-  \end{tikzpicture}
+	\begin{tikzpicture}
+		\draw[gray!70,dashed] (2,1.25) -- (2,-.25) node[below] {$\{\perp,\top\}$};
+		\draw[fill] (0,0) circle (1pt) node[left] {$0$};
+		\draw[fill] (2,0) circle (1pt) node[right] (dis) {$1$};
+		\draw (0,0) -- (2,0);
+		\begin{scope}[yshift=1cm]
+			\draw[fill] (0,0) circle (1pt) node[left] {$0$};
+			\draw[fill] (2,0) circle (1pt) node[right] (dat) {$1$};
+			\draw (0,0) -- (2,0);
+		\end{scope}
+		\node at (3,.5) {$\overset{Q}\longrightarrow$};
+		\begin{scope}[xshift=4cm]
+			\fill[gray!20] (0,0) -| (2,1);
+			\draw[gray!70,dashed] (2,1.25) -- (2,-.25) node[below] {$\{\perp,\top\}$};
+			\draw[fill] (0,1) circle (1pt) node[left] {$0$};
+			\draw[fill] (2,1) circle (1pt) node[right] (dis) {$1$};
+			\draw (0,1) -- (2,1);
+		\end{scope}
+	\end{tikzpicture}
 \]
 (An even more drastic choice would have been to take just the fiber $\{\perp,\top\}\cong \{\perp,\top\}\times \{1\}$, thus falling into classical logic; but we have no information about George and David's stance on falsehood.)
 
@@ -68,8 +72,8 @@ From inside \tlon, this gives way to the epistemic vision of its inhabitants, wh
 
 Even this superficial analysis is already sufficient to make our point, that George and David peculiar theory of existence isn't barred from our model; on the contrary, it arises as a very specific example of internal logic. How this is done, follows from a standard procedure in problem-solving:
 \begin{itemize}
-  \item First, identify the constraints forcing your choice of $I$ (`what logic shapes your $I$?' and vice versa `what $I$ best approximates the logic you want to describe?');
-  \item Given an explicit description of $\Omega_I$, compute proposition strength (`where are you seeking $p$ to be true/false', and at which strength?)
+	\item First, identify the constraints forcing your choice of $I$ (`what logic shapes your $I$?' and vice versa `what $I$ best approximates the logic you want to describe?');
+	\item Given an explicit description of $\Omega_I$, compute proposition strength (`where are you seeking $p$ to be true/false', and at which strength?)
 \end{itemize}
 Points of evaluation can be provided by a temporal, spatial or any other kind of reference whatsoever: we are completely agnostic towards the shape of space-time, towards the structure or the properties of the set it forms; moreover, every configuration respecting the prescribed constraints is `correct' from within the topos. Finally, our approach is computational: given the initial piece of data (for the nine coins: the observer, a subset of coins, a day of the week) all else necessarily follows from a calculation.
 
