@@ -1,10 +1,13 @@
-tex:
+t:
 	latexmk -pdf -shell-escape fun-erkennen.tex
 
-view:
+p:
+	latexmk -pdf -shell-escape -pvc fun-erkennen.tex
+
+v:
 	evince fun-erkennen.pdf &
 
-clean:
+c:
 	latexmk -C
 
 git:

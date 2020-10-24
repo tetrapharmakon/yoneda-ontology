@@ -66,7 +66,24 @@ In questo paragrafo parlerei della questione ``sì ma cosa sono gli ``osservativ
 
 \section{Profunctors / Grothendieck construction}
 \label{sec:org7dd09e1}
-Sezione tecnica con solo robe di CT.
+Ci sono due competing pictures che descivono una relazione $R$ che sussiste tra due insiemi $A,B$
+\begin{enumtag}{r}
+\item \label{r_1} a relation $R$ is a subset of the cartesian product $A\times B$;
+\item \label{r_2} a relation $R$ is a function $A\times B \to \{0,1\}$.
+\end{enumtag}
+Note that the notion of ``relation between $A$ and $B$'' is inherently symmetric, in the sense that such $R$ can be regarded both as a relation ``from'' $A$ ``to'' $B$, and as a relation ``from'' $B$ ``to'' $A$.
+
+The second important preliminary remark is that every relation $R$ between sets $A,B$ gives rise to a \emph{Galois connection} 
+\[R^* :PA \leftrightarrows PB : R_*\]
+between the powersets $PA=2^A$ and $PB = 2^B$: the set $U\subset A$ goes to the set $R^*U$ of all $b$ such that $(a,b)\in R$ for all $a\in U$; in an exactly symmetric way, a set $V\subseteq B$ goes to the set $R_*V = \{a\in A\mid (a,b) \in R,\, \forall b\in V\}$.
+
+From here, using a process known as ``categorification'' \cite{baez_catego}, we can replace a two-valued relation $R\subseteq A\times B$ with a \emph{set-valued} functor $\clA^\op\times\clB \to \Set$ between two (small) categories $\clA,\clB$.\footnote{The reason why the category $\clA$ is twisted with an ``$^\op$'' functor is \foo{yadda yadda hom profunctor, diagonal relation}} More precisely, we can give the following definition.
+\begin{definition}[Profunctor]\label{def_profu}
+  
+\end{definition}
+The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs che tra $(A,B)\in\clA^\op\times\clB$ sussiste la `relazione generalizzata' $\fkR$. This intuition agrees with the fact that when instead of $\Set$ a profunctor $\fkR$ takes values in the 0-dimensional category $\{0\le 1\}$, then the type of proofs that $R(A,B)$ is a yes/no kind of space.
+
+From here, one can build a rich and expressive theory; we are contempt with a careful analysis of the analogue of \ref{r_2} above: this is the scope of the next section.
 \section{Nerve and realisations}
 \label{sec:org1a423df}
 Sezione tecnica con solo robe di CT.
@@ -77,32 +94,32 @@ In this section we exploit the terminology established before.
   A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite{lambek1988introduction}) of a first-order, finitely axiomatisable language $L$.
 \end{definition}
 \begin{definition}[World, Yaldabaoth]
-  A \emph{world} is a large category $\clW$; a \emph{Yaldabaoth} is a world that, as a category, admits all small colimits.\footnote{Also known as \emph{Yaltabaoth} or \emph{Ialdabaoth}\dots}
+  A \emph{world} is a large category $\clW$; a \emph{Yaldabaoth} is a world that, as a category, admits all small colimits.\footnote{Also known as \emph{Yaltabaoth} or \emph{Ialdabaoth}, \dots}
 \end{definition}
 Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor 
 \[\xymatrix{\clL \ar[r]^\phi & \clW.}\]
 
-A canvas $\phi : \clL \to \clW$ is a \emph{science} if $\phi$ is a dense functor.
+A canvas $\phi : \clL \to \clW$ is a \emph{\science} if $\phi$ is a dense functor.
 \begin{remark}
-  The NR paradigm exposed in \autoref{} now entails that 
+  The NR paradigm exposed in \autoref{} now entails that given a canvas $\phi : \clL \to \clW$
   \begin{itemize}
     \item If $\clW$ is a world, we obtain a \emph{representation} functor 
     \[ \xymatrix{\clW \ar[r] & [\clL^\op, \Set];} \]
     this means: given a canvas $\phi$ of the world, the latter leaves an image on the canvas.
     \item If in addition $\clW$ is a Yaldabaoth, we obtain a NR-adjunction
     \[\xymatrix{\clW \ar@<3pt>[r] & \ar@<3pt>[l] [\clL^\op, \Set];}\]
-    this means: if $\clW$ is sufficiently expressive, then models of the theory that explains $\clW$ through $\phi$ can be used to acquire a two-way knowledge. Phenomena have a theoretical counterpart in $[\clL^\op,\Set]$ via the nerve; theoretical objects strive to describe phenomena via their realisation.
-    \item If an $\clL$-canvas $\phi : \clL \to \clW$ is a science, `the world' is a full subcategory of the modes in which `language' can create interpretation.
+    this has to be interpreted as: if $\clW$ is sufficiently expressive, then models of the theory that explains $\clW$ through $\phi$ can be used to acquire a two-way knowledge. Phenomena have a theoretical counterpart in $[\clL^\op,\Set]$ via the nerve; theoretical objects strive to describe phenomena via their realisation.
+    \item If an $\clL$-canvas $\phi : \clL \to \clW$ is a \science, `the world' is a full subcategory of the class of all modes in which `language' can create interpretation.
   \end{itemize}
 \end{remark}
-The terminology is chosen to inspire the following idea in the reader: science strives to define \emph{theories} that allow for the creation of representations of the world; said representations are descriptive when there is dialectic opposition between world and models; when such representation is faithful, we have reduced `the world' to a piece of the models created to represent it.
+The terminology is chosen to inspire the following idea in the reader: science strives to define \emph{theories} that allow for the creation of world representations; said representations are descriptive when there is dialectic opposition between world and models; when such representation is faithful, we have reduced `the world' to a piece of the models created to represent it.
 
-The tongue-in-cheek here is, la scienza (nel senso usuale) non è una scienza (nel senso della definizione \autoref{}), se non in potenza; i tentativi di generare pensiero scientifico sono i tentativi di 
+The tongue-in-cheek here is, a science (in the usual sense of the world) can never attain the status of a \science, if not potentially; attempts to generate scientific knowledge are the attempts of
 \begin{itemize}
-  \item Riconoscere un mondo $\clW$ come un oggetto sufficientemente espressivo da contenere fenomeni e informazione;
-  \item Creare un linguaggio $L$, sufficientemente `compatto', la cui categoria sintattica permette di rappresentare nel mondo;
-  \item Ottenere una aggiunzione tra $\clW$ e modelli del mondo $[\clL^\op,\Set]$ ottenuti dal linguaggio $\clL$, per generare modelli a partire da fenomeni, e per prevedere fenomeni a partire da modelli;
-  \item Ottenere che `il linguaggio sia un sottospazio denso del mondo', con ciò intendendo che l'aggiunzione del punto precedente è sufficientemente well-behaved da descrivere il mondo come un frammento delle rappresentazioni semantiche del linguaggio $L$.
+  \item recognizing the world $\clW$ as a sufficiently expressive object for it to contain phenomena and information;
+  \item carve a language $L$, if necessary from a small subset of $\clC$, that is sufficiently `compact', but also sufficiently expressive for its syntactic category to admit a representation into the world;
+  \item obtaining an \emph{adjunction} between $\clW$ and models of the worlds obtained as models of the syntactic theory $\clL$; this is meant to generate models starting from observed phenomena, and to predict new phenomena starting from models;
+  \item obtaining that `language is a dense subset of the world', by this meaning that the adjunction outlined above is sufficiently well-behaved to describethe world as a fragment of the semantic interpretations obtained from~$\clL$.
 \end{itemize}
 Evidentemente, la tensione qui è tra due opposte qualità che $L$ deve avere: non deve essere troppo esteso, per essere trattabile; non deve essere troppo ristretto, per parlare di ``tutto'' il mondo che si prefigge di descrivere.
 

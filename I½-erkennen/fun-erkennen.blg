@@ -5,10 +5,11 @@ The style file: amsplain.bst
 Database file #1: ../allofthem.bib
 Warning--I didn't find a database entry for "."
 Warning--I didn't find a database entry for ""
+Warning--I didn't find a database entry for "baez_catego"
 Warning--I didn't find a database entry for "biologia"
 You've used 1 entry,
             2213 wiz_defined-function locations,
-            506 strings with 4100 characters,
+            507 strings with 4111 characters,
 and the built_in function-call counts, 284 in all, are:
 = -- 19
 > -- 13
@@ -47,4 +48,4 @@ warning$ -- 0
 while$ -- 2
 width$ -- 2
 write$ -- 18
-(There were 3 warnings)
+(There were 4 warnings)
