@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex fun-erkennen"] 1603622146 "fun-erkennen.aux" "fun-erkennen.bbl" "fun-erkennen" 1603622147
+["bibtex fun-erkennen"] 1603635520 "fun-erkennen.aux" "fun-erkennen.bbl" "fun-erkennen" 1603635741
   "../allofthem.bib" 1603617181 377646 0c819ba0e1b28ff79f93359cee7f8a27 ""
   "/home/fouche/texlive/texmf-dist/bibtex/bst/amscls/amsplain.bst" 1513722769 25798 9b3546f2f237ee0ce4724eed95f954f4 ""
-  "fun-erkennen.aux" 1603622147 4439 e68c549db859399737f02aee3ace26b3 "pdflatex"
+  "fun-erkennen.aux" 1603635741 4439 e68c549db859399737f02aee3ace26b3 "pdflatex"
   (generated)
   "fun-erkennen.bbl"
   "fun-erkennen.blg"
-["pdflatex"] 1603622146 "fun-erkennen.tex" "fun-erkennen.pdf" "fun-erkennen" 1603622147
+["pdflatex"] 1603635740 "fun-erkennen.tex" "fun-erkennen.pdf" "fun-erkennen" 1603635741
   "../authors.tex" 1598020312 505 264e48d13653580f4d029bacb1680334 ""
   "../birkjour.cls" 1595589753 66070 35204f1a1d1fabdaac9d88c5d1248e72 ""
   "../fouche-copy.sty" 1598020369 6941 2e744504f2b590f68da49d7cd3bc470a ""
@@ -377,14 +377,15 @@
   "/home/fouche/texlive/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1594591856 4870798 624f7a086a3f3121c86bdff8c2fff3a4 ""
   "/home/fouche/texlive/texmf-var/web2c/pdftex/pdflatex.fmt" 1594591895 2435113 1b712545fa22123afe850c4c106118b7 ""
   "/home/fouche/texlive/texmf.cnf" 1594591852 496 01ab80fa0036a81d2df86fb0ac70c709 ""
-  "fun-erkennen.aux" 1603622147 4439 e68c549db859399737f02aee3ace26b3 "pdflatex"
-  "fun-erkennen.bbl" 1603622146 951 c54813548b0e1dec3d8ab25d7407cbc4 "bibtex fun-erkennen"
-  "fun-erkennen.out" 1603622147 583 ebf17c38eb4f591fbfe66e209b429dc2 "pdflatex"
-  "fun-erkennen.tex" 1603622140 28303 04d9cd1188f5cc4018c742f1793f192e ""
-  "fun-erkennen.toc" 1603622147 1423 d2b18f2b08a643fe51a9bdd63c4296bd "pdflatex"
+  "disegno.eps" 1603619158 14748 5b050c42434ebad213bc8fedfbac987c ""
+  "fun-erkennen.aux" 1603635741 4439 e68c549db859399737f02aee3ace26b3 "pdflatex"
+  "fun-erkennen.bbl" 1603635520 951 c54813548b0e1dec3d8ab25d7407cbc4 "bibtex fun-erkennen"
+  "fun-erkennen.out" 1603635741 583 ebf17c38eb4f591fbfe66e209b429dc2 "pdflatex"
+  "fun-erkennen.tex" 1603635739 28385 688777f73b3bfac8d410d5c917c73e33 ""
+  "fun-erkennen.toc" 1603635741 1423 d2b18f2b08a643fe51a9bdd63c4296bd "pdflatex"
   (generated)
-  "fun-erkennen.aux"
   "fun-erkennen.out"
-  "fun-erkennen.pdf"
-  "fun-erkennen.toc"
+  "fun-erkennen.aux"
   "fun-erkennen.log"
+  "fun-erkennen.toc"
+  "fun-erkennen.pdf"

@@ -547,6 +547,15 @@ INPUT /home/fouche/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm5.tfm
+INPUT disegno.eps
+INPUT ./disegno.eps
+INPUT ./disegno.eps
+INPUT ./disegno-eps-converted-to.pdf
+INPUT ./disegno-eps-converted-to.pdf
+INPUT ./disegno.eps
+INPUT ./disegno-eps-converted-to.pdf
+INPUT ./disegno-eps-converted-to.pdf
+INPUT ./disegno-eps-converted-to.pdf
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm10.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/amsfonts/euler/eufm7.tfm
 INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lati0800.tfm
