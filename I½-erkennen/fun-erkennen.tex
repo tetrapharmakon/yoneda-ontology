@@ -83,7 +83,9 @@ From here, using a process known as ``categorification'' \cite{baez_catego}, we 
 \end{definition}
 The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs che tra $(A,B)\in\clA^\op\times\clB$ sussiste la `relazione generalizzata' $\fkR$. This intuition agrees with the fact that when instead of $\Set$ a profunctor $\fkR$ takes values in the 0-dimensional category $\{0\le 1\}$, then the type of proofs that $R(A,B)$ is a yes/no kind of space.
 
-From here, one can build a rich and expressive theory; we are contempt with a careful analysis of the analogue of \ref{r_2} above: this is the scope of the next section.
+From here, one can build a rich and expressive theory; we are contempt with a careful analysis of the analogue of \ref{r_2} above: this is the scope of \autoref{sec:org1a423df}.
+\subsection{Grothendieck construction}
+The Grothendieck construction is the tool allowing to formalise the equivalence between a relation understood as a function $R : A\times B \to \{0,1\}$, and a subset $R\subseteq A\times B$, when `relation' is understood in the sense of \autoref{} above, i.e. a profunctor $\fkR : \clA \pto \clB$. Each such $\fkR$ can be realised as a suitable `fibration' $p_\fkR : \clE \to \clA^\op\times\clB$, that in turn uniquely determines $\fkR$.
 \section{Nerve and realisations}
 \label{sec:org1a423df}
 Sezione tecnica con solo robe di CT.
@@ -121,23 +123,28 @@ The tongue-in-cheek here is, a science (in the usual sense of the world) can nev
   \item obtaining an \emph{adjunction} between $\clW$ and models of the worlds obtained as models of the syntactic theory $\clL$; this is meant to generate models starting from observed phenomena, and to predict new phenomena starting from models;
   \item obtaining that `language is a dense subset of the world', by this meaning that the adjunction outlined above is sufficiently well-behaved to describethe world as a fragment of the semantic interpretations obtained from~$\clL$.
 \end{itemize}
-Evidentemente, la tensione qui è tra due opposte qualità che $L$ deve avere: non deve essere troppo esteso, per essere trattabile; non deve essere troppo ristretto, per parlare di ``tutto'' il mondo che si prefigge di descrivere.
+It is evident that there is a tension between two opposite feature that $\clL$ must exhibit; it has to be not too large to remain tractable, but on the other hand it must be large enough in order to be able to speak about `everything' it aims to describe.
 
-Cf. with this definition in mind \cite{biologia}:
-\begin{quote}
-  Copiare la def di teoria verbatim dal libro di evoluzione
-\end{quote}
-We say that una \emph{teoria S-scientifica} è il dato di
-\begin{enumerate}
-\item un linguaggio formale $\clL$;
-\item la categoria sintattica $T_\clL$ di quel linguaggio;
-\item La categoria dei funtori $[T_\clC, \Set]$.
-\end{enumerate}
-Dal momento che la categoria $[T_\clC, \Set]$ caratterizza completamente (up to Cauchy completion) $\clL$ e $T_\clL$, facciamo una crasi e chiamiamo \emph{teoria $S$-scientifica} il solo dato della categoria di modelli $[T_\clC, \Set]$. 
+Regarding our definition of \science, we can't help but admit we had this definition in mind \cite[2.1]{biologia}:
+\begin{definition}[\protect{\cite[2.1]{biologia}}]
+  A \emph{scientific theory} $\clT$ consists of a formal structure $F$ and a class of interpretations $M_i$, shortly denoted as $\clT=\langle F,M_i\mid i\in I\rangle$. The structure $F$ consists on its won right of 
+  \begin{itemize}
+    \item a language $\clL$, in which it is possible to formulate propositions. If $\clL$ is fully formalised, it will consist of a finite set of symbols, and a finite set of rules to determine which expressions are well-formed. This is commonly called \emph{technical language};
+    \item A set $A$ of `axioms' or `postulates' in $\clL^\star$;
+    \item A \emph{logical apparatus} $R$, whose elements are rules of inference and logical axioms, allowing to prove propositions.
+  \end{itemize}
+\end{definition}
+The language of category theory allows for a refined rephrasing of the previous definition: we say that a \emph{$\clS$-scientific theory} is the following arrangement of data:
+\begin{enumtag}{st}
+\item a formal language $\clL$;
+\item the syntactic category $T_\clL$, obtained as in \cite{lambek1988introduction};
+\item the category of functors $\Qat[T_\clC, \clS]$, whose codomain is a Yaldabaoth.
+\end{enumtag}
+More than often, our theories will be $\Set$-scientific: in such case we just omit the specification of the semantic Yaldabaoth, and call them \emph{scientfic theories}.
 
-Ecco allora he ``una corrispondenza coerente che collega espressioni di F con espressioni semantiche'' è semplicemente un funtore.
+Since the category $\Qat[T_\clC, \Set]$ determines $\clL$ and $T_\clL$ completely, up to Cauchy-completion \cite{borceuso-cauchy}, we can see that the triple $(\clL, T_\clL, \Qat[T_\clL,\Set])$ can uniquely be recovered from its model category $\Qat[T_\clC, \Set]$. We thus comply to the additional abuse of notation to call `scientific theory' the category $\Qat[T_\clL,\Set]$ for some $T_\clL$.
 
-Questo è compatibile con yadda yadda.
+So, a ``coherent correspondence linking expressions of $\clF$ with semantic expressions'' boils down to a functor; this is compatible with \cite[2.1]{biologia}, and in fact an improvement (the mass of results in category theory become readily available to speak about --scientific-- theories; not to mention that the concept of `formal structure' is never rigorously defined throughout \cite{biologia})
 \section{The tension between observational and theoretical}
 \label{sec:orge11c3c4}
 Everything is based on the proportion

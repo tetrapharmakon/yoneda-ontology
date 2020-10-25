@@ -7,6 +7,15 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{1}
 
+\bibitem{biologia}
+Armando Bazzani, Marcello Buiatti, and Paolo Freguglia, \emph{Metodi matematici
+  per la teoria dell’evoluzione}, Springer Science \& Business Media, 2011.
+
+\bibitem{borceuso-cauchy}
+F.~Borceux and D.~Dejean, \emph{Cauchy completion in category theory}, Cahiers
+  de Topologie et G{\'e}om{\'e}trie Diff{\'e}rentielle Cat{\'e}goriques
+  \textbf{27} (1986), no.~2, 133--146.
+
 \bibitem{lambek1988introduction}
 J.~Lambek and P.J. Scott, \emph{Introduction to higher-order categorical
   logic}, Cambridge Studies in Advanced Mathematics, Cambridge University

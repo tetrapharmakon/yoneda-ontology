@@ -6,46 +6,45 @@ Database file #1: ../allofthem.bib
 Warning--I didn't find a database entry for "."
 Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "baez_catego"
-Warning--I didn't find a database entry for "biologia"
-You've used 1 entry,
+You've used 3 entries,
             2213 wiz_defined-function locations,
-            507 strings with 4111 characters,
-and the built_in function-call counts, 284 in all, are:
-= -- 19
-> -- 13
+            518 strings with 4425 characters,
+and the built_in function-call counts, 888 in all, are:
+= -- 71
+> -- 44
 < -- 0
-+ -- 5
-- -- 4
-* -- 18
-:= -- 52
-add.period$ -- 1
-call.type$ -- 1
-change.case$ -- 5
++ -- 17
+- -- 14
+* -- 69
+:= -- 152
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 16
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 12
-empty$ -- 25
-format.name$ -- 4
-if$ -- 54
+cite$ -- 3
+duplicate$ -- 35
+empty$ -- 77
+format.name$ -- 14
+if$ -- 178
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 3
-newline$ -- 13
-num.names$ -- 2
-pop$ -- 9
+int.to.str$ -- 3
+missing$ -- 8
+newline$ -- 19
+num.names$ -- 6
+pop$ -- 24
 preamble$ -- 1
-purify$ -- 4
+purify$ -- 13
 quote$ -- 0
-skip$ -- 7
+skip$ -- 20
 stack$ -- 0
-substring$ -- 5
-swap$ -- 1
+substring$ -- 40
+swap$ -- 3
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2
+type$ -- 8
 warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 18
-(There were 4 warnings)
+while$ -- 8
+width$ -- 4
+write$ -- 35
+(There were 3 warnings)
