@@ -271,18 +271,22 @@ In simple terms, categorifying a proposition $P : X\to \{0,1\}$ that can or cann
 The important point for us is that the dialectical tension between observational and theoretical can be faithfully represented through profunctor theory; one can think of propositional functions as relations $(x,y)\in R$ iff the pair $x,y$ renders $\phi$ true; we use this idea, suitably adapted to our purpose and categorified. This very natural extension of propositional calculus, pushed to its limit, yields the following reformulation of the `tension between observational and theoretical' of \cite{u,v,w}
 \begin{definition}
   Let $\clT,\clO$ be two small categories, dubbed respectively the \emph{theoretical} and the \emph{observational} settings. A \emph{$(1,1)$-ary Ramsey map} is merely a profunctor 
-  \[\fkK : \clT \pto \clO\]
-  or, spelled out completely, a functor $\fkK : \clT^\op\times \clO \to \Set$.
+  \[\fkK : \clT^\op \pto \clO\]
+  or, spelled out completely, a functor $\fkK : \clT\times \clO \to \Set$.
+\end{definition}
+Particular $(1,1)$-ary Ramsey maps can be obtained by elementary means:
+\begin{example}
+ Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_*$ and a profunctor $F^*$; the two functors are mutually adjoint. This defines \emph{representable} Ramsey maps. \foo{Say more; also, why (1,1)-ary? Wait and see}
+\end{example}
+\begin{definition}[Observational and theoretical core]
+  Let $\fkR : \clT^\op\times \clO \to\Set$ be a Ramsey map. Let 
+  \[ \Lan_{\yon_\clO}\hat R : [\clO^\op,\Set] \leftrightarrows [\clT^\op,\Set] : N_{\hat R} \]
+  be the adjunction between presheaf categories determined in \autoref{}. Let us consider the equivalence of categories between the fixpoints of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$; this is the equivalence between the \emph{observational core} $Fix(T)\subseteq [\clO^\op,\Set]$ and the \emph{theoretical core} $Fix(S)\subseteq [\clT^\op,\Set]$.
 \end{definition}
 \begin{remark}
-  Particolar 1,1-ary Ramsey maps si ottengono mediante aggiunzioni; definiamo
-  \begin{itemize}
-    \item l'aggiunzione in Prof indotta dall'aggiunzione in Cat;
-    \item il ``core osservazionale'' e il ``core teoretico'' come le subcat di dominio e codominio che sono rese equivalenti dall'aggiunzia col trucco dei punti fissi;
-    \item core oss e core teo sono sempre equivalenti; come sopra, il fatto è che si cerca un modo di allargare quanto piu possibile l'equcat.
-  \end{itemize}
+Observational core and theoretical core are always equivalent; the tension in creating a satisfying image of reality as it is observed oscillates between the desre to enlarge as much as possible the subcategory of $[\clO^\op,\Set]$ with which our theoretical model is equivalent, where we can have access to $\clT, [\clT^\op, \Set]$ only.
 \end{remark}
-There is nothing, in their mere syntactical presentation, that allows to tell the observational and the theoretical category apart; justify with the self-involution of $\Prof$. Also, questo dà conto dell'``esistenza degli oggetti di finzione''. Sherlock Holmes è l'oggetto di una categoria teorica. Gandhi è l'oggetto di una categoria osservazionale. In quanto oggetti linguistici essi non possono essere distinti, la differenza tra loro che li etichetta uno come oggetto di finzione e l'altro come personaggio storico è la specifica di un profuntore che permette di embeddare Sherlock Holmes nella realtà (di postulare, cioè, come esso compia azioni quotidiane nella Londra vittoriana), e di rappresentare un personaggio storico in un modello finzionale (scrivendo, ad esempio, un libro sulla vita di Gandhi).
+As we have defined them, there is nothing, in their mere syntactical presentation, that allows to tell apart the observational and the theoretical category; justify with the self-involution of $\Prof$. Also, questo dà conto dell'``esistenza degli oggetti di finzione''. Sherlock Holmes è l'oggetto di una categoria teorica. Gandhi è l'oggetto di una categoria osservazionale. In quanto oggetti linguistici essi non possono essere distinti, la differenza tra loro che li etichetta uno come oggetto di finzione e l'altro come personaggio storico è la specifica di un profuntore che permette di embeddare Sherlock Holmes nella realtà (di postulare, cioè, come esso compia azioni quotidiane nella Londra vittoriana), e di rappresentare un personaggio storico in un modello finzionale (scrivendo, ad esempio, un libro sulla vita di Gandhi).
 
 A limitation of the above definition is that in practice all sorts of configurations are possible:
 \begin{itemize}
