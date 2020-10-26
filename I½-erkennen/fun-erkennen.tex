@@ -115,6 +115,10 @@ With this terminology at hand, we can consider the \emph{category of elements} \
 	\]
 	defined by the correspondence sending $F\in\Qat(\clC,\Set)$ to its \emph{fibration of elements}  $\Sigma_F : \elts{\clC}{F} \to \clC$.
 \end{theorem}
+The inverse correspondence sends a discrete fibration $\Phi : \clE \to \clC$ to the functor whose action on objects and morphisms is depicted in the following image:
+\begin{center}
+  \includegraphics[width=.325\textwidth]{disegno.eps}
+\end{center}
 \begin{corollary}
   Given a profunctor $\fkR : \clA \pto \clB$, regarded as a functor $R : \clA^\op\times \clB \to \Set$, we can consider the category of elements $\elts{\clA^\op\times\clB}{R}$; this is often called the \emph{collage} or the \emph{graph} of $R$.
 \end{corollary}
@@ -145,11 +149,18 @@ Given a NR context $F$, we can prove the following result:
 	is a left adjoint, $L_F\dashv N_F$. $L_F$ is called the $\clW$-\emph{realisation functor} or the \emph{Yoneda extension} of $F$, and its right adjoint the $\clW$-\emph{coherent nerve}.
 \end{proposition}
 \begin{proof}
-	From a straightforward computation, it follows that if we define $N_F(D)$ to be $C\mapsto \clW(F C,D)$, this last set becomes canonically isomorphic to $[\clC^\op,\Set](P,N_F(D))$.
+	From a straightforward computation, it follows that if we define $N_F(D)$ to be $C\mapsto \clW(F C,D)$, this last set becomes canonically isomorphic to $[\clC^\op,\Set](P,N_F(D))$. We can thus denote $\clW(F,1)$ the functor $N_F : D\mapsto \lambda C.\clW(F C,D)$.
 \end{proof}
-\begin{center}
-  \includegraphics[width=.325\textwidth]{disegno.eps}
-\end{center}
+Now, let's review the way in which a profunctorial analogue of \ref{} can be obtained: \autoref{nervereal} yields that a functor 
+\[ \fkR : \clA^\op\times \clB \to \Set \]
+whose mate under the adjunction $\Qat()\cong\Qat()$ is a functor 
+\[ \hat R : \clB \to \Qat(\clA^\op,\Set) \]
+determines a NR paradigm, and thus gives rise to a pair of adjoint functor 
+\[ \Lan_{\yon_\clB} \hat R : \Qat(\clB^\op,\Set) \leftrightarrows \Qat(\clA^\op,\Set) : [\clA^\op,\Set](\hat R,1). \]
+We have just proved 
+\begin{proposition}
+  There is an equivalence of categories between $\Prof(\clA,\clB)$ and the category of colimit preserving functors $\Qat(\clB^\op,\Set) \to \Qat(\clA^\op,\Set)$.
+\end{proposition}
 % \begin{proof*}
 % 	The first claim asserts that the following are equivalent:
 % 	\begin{itemize}
