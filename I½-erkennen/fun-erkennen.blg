@@ -6,9 +6,15 @@ Database file #1: ../allofthem.bib
 Warning--I didn't find a database entry for "."
 Warning--I didn't find a database entry for ""
 Warning--I didn't find a database entry for "baez_catego"
+Warning--I didn't find a database entry for "a"
+Warning--I didn't find a database entry for "b"
+Warning--I didn't find a database entry for "c"
+Warning--I didn't find a database entry for "u"
+Warning--I didn't find a database entry for "v"
+Warning--I didn't find a database entry for "w"
 You've used 3 entries,
             2213 wiz_defined-function locations,
-            518 strings with 4425 characters,
+            524 strings with 4431 characters,
 and the built_in function-call counts, 888 in all, are:
 = -- 71
 > -- 44
@@ -47,4 +53,4 @@ warning$ -- 0
 while$ -- 8
 width$ -- 4
 write$ -- 35
-(There were 3 warnings)
+(There were 9 warnings)

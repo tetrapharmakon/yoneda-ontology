@@ -562,11 +562,6 @@ INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lati0800.tfm
 INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lati0700.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcti0700.tfm
 INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm
-INPUT /home/fouche/texlive/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
-INPUT /home/fouche/texlive/texmf-dist/tex/latex/dejavu/T2ADejaVuSansMono-TLF.fd
-INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/dejavu/DejaVuSansMono-tlf-t2a.tfm
-INPUT /home/fouche/texlive/texmf-dist/fonts/vf/public/dejavu/DejaVuSansMono-tlf-t2a.vf
-INPUT /home/fouche/texlive/texmf-dist/fonts/tfm/public/dejavu/DejaVuSansMono-tlf-t2a--base.tfm
 INPUT fun-erkennen.bbl
 INPUT fun-erkennen.bbl
 INPUT /home/fouche/.texlive2020/texmf-var/fonts/tfm/lh/lh-t2a/lati0900.tfm
@@ -574,9 +569,7 @@ INPUT fun-erkennen.aux
 INPUT ./fun-erkennen.out
 INPUT ./fun-erkennen.out
 INPUT /home/fouche/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc
-INPUT /home/fouche/texlive/texmf-dist/fonts/enc/dvips/dejavu/dejavumono_t2a.enc
 INPUT /home/fouche/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/dejavu/DejaVuSansMono.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /home/fouche/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb

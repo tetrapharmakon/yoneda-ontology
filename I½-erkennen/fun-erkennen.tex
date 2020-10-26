@@ -260,17 +260,19 @@ Since the category $\Qat[T_\clC, \Set]$ determines $\clL$ and $T_\clL$ completel
 So, a ``coherent correspondence linking expressions of $\clF$ with semantic expressions'' boils down to a functor; this is compatible with \cite[2.1]{biologia}, and in fact an improvement (the mass of results in category theory become readily available to speak about --scientific-- theories; not to mention that the concept of `formal structure' is never rigorously defined throughout \cite{biologia})
 \section{The tension between observational and theoretical}
 \label{sec:orge11c3c4}
-Everything is based on the proportion
-\begin{verbatim}
-truth values : proposition = section : presheaf
-\end{verbatim}
-The tension between observational and theoretical can be faithfully represented through profunctor theory;
-\begin{remark}
-  One can think of propositional functions as relations $(x,y)\in R$ iff the pair $x,y$ renders $\phi$ true; we use this idea, suitably adapted to our purpose and categorified.
-\end{remark}
-Yadda yadda on how questo è facile da categorificare; consideriamo la relazione $R : T \times O \to \{0,1\}$ per cui $tRo \iff \dots$
+When working with categorified relations, it is unnatural and somewhat restrictive considerare lo spazio per i valori che la proposizione `$(a,b)\in R$' può assumere come avente solo due valori; instead we would like to consider the entire \emph{space} of values that a proposition can take, or rather the type of proofs that $(a,b)\in R$ is true.
+
+This intuition is based on the proportion
+\begin{center}
+  truth values : proposition = section : presheaf
+\end{center}
+In simple terms, categorifying a proposition $P : X\to \{0,1\}$ that can or cannot hold for an element $x$ of a set $X$, we shall marry the constructive church and say that there is an entire \emph{type} $PC$, image of an object $C\in\clC$ under a functor $P : \clC \to \Set$, whose \emph{terms} are the \emph{proofs} that $PC$ holds true. This is nothing but the propositions-as-types pilosophy, in (not so much) disguise: \cite{a,b,c}
+
+The important point for us is that the dialectical tension between observational and theoretical can be faithfully represented through profunctor theory; one can think of propositional functions as relations $(x,y)\in R$ iff the pair $x,y$ renders $\phi$ true; we use this idea, suitably adapted to our purpose and categorified. This very natural extension of propositional calculus, pushed to its limit, yields the following reformulation of the `tension between observational and theoretical' of \cite{u,v,w}
 \begin{definition}
-  Let $\clT,\clO$ be two categories, respectively the \emph{theoretical} and the \emph{observational} one. A \emph{$(1,1)$-ary Ramsey map} is a profunctor $\fkk : \clT \pto \clO$ (maybe ops have to be added for the sake of convention).
+  Let $\clT,\clO$ be two small categories, dubbed respectively the \emph{theoretical} and the \emph{observational} settings. A \emph{$(1,1)$-ary Ramsey map} is merely a profunctor 
+  \[\fkK : \clT \pto \clO\]
+  or, spelled out completely, a functor $\fkK : \clT^\op\times \clO \to \Set$.
 \end{definition}
 \begin{remark}
   Particolar 1,1-ary Ramsey maps si ottengono mediante aggiunzioni; definiamo
