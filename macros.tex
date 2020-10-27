@@ -108,7 +108,12 @@
 \def\foo#1{\textcolor{red}{#1}}
 \def\copyright{\textsuperscript{\textcopyright}}
 \def\science{science\copyright}
-\def\elts#1#2{#1|#2}
+\newcommand{\elts}[2]{
+  \mathchoice{#1 \rotatebox[origin=c]{15}{$\int$} #2}
+  {#1 \rotatebox[origin=c]{15}{$\int$} #2}
+  {#1 \rotatebox[origin=c]{15}{\scriptsize$\int$} #2}
+  {#1 \rotatebox[origin=c]{15}{\tiny$\int$} #2}}
+
 \def\DFib{\text{DFib}}
 
 \def\[{\begin{equation}}

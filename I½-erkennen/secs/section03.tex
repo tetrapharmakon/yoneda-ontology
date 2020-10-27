@@ -1,15 +1,17 @@
 \section{Profunctors / Grothendieck construction}
 \label{sec:org7dd09e1}
-Ci sono due competing pictures che descivono una relazione $R$ che sussiste tra due insiemi $A,B$
+There are two possible ways to define a relation $R$ between two sets $A,B$:
 \begin{enumtag}{r}
 \item \label{r_1} a relation $R$ is a subset of the cartesian product $A\times B$;
 \item \label{r_2} a relation $R$ is a function $A\times B \to \{0,1\}$.
 \end{enumtag}
 Note that the notion of `relation between $A$ and $B$' is inherently symmetric, in the sense that such $R$ can be regarded both as a relation `from' $A$ `to' $B$, and as a relation `from' $B$ `to' $A$.
 
-The second important preliminary remark is that every relation $R$ between sets $A,B$ gives rise to a \emph{Galois connection} 
-\[R^* :PA \leftrightarrows PB : R_* \label{adjunzia} \]
-between the powersets $PA=2^A$ and $PB = 2^B$: the set $U\subset A$ goes to the set $R^*U$ of all $b$ such that $(a,b)\in R$ for all $a\in U$; in an exactly symmetric way, a set $V\subseteq B$ goes to the set $R_*V = \{a\in A\mid (a,b) \in R,\, \forall b\in V\}$.
+Furthermore, every relation $R$ between sets $A,B$ gives rise to a \emph{Galois connection} 
+\[R^* :PA^\op \leftrightarrows PB : R_* \label{adjunzia} \]
+between the powersets $PA=2^A$ and $PB = 2^B$: the set $U\subset A$ goes to the set $R^*U$ of all $b$ such that $(a,b)\in R$ for all $a\in U$; in an exactly symmetric way, a set $V\subseteq B$ goes to the set 
+\[R_*V = \{a\in A\mid (a,b) \in R,\, \forall b\in V\}.\]
+Unwinding the definition, it is asy to see that $R^* \dashv R_*$.
 
 From here, using a process known as `categorification' \cite{baez_catego}, we can replace a two-valued relation $R\subseteq A\times B$ with a \emph{set-valued} functor $\clA^\op\times\clB \to \Set$ between two (small) categories $\clA,\clB$.\footnote{The reason why the category $\clA$ is twisted with an `$^\op$' functor is that we want to bestow the hom functor $\hom_{\clA} : \clA^\op\times\clA \to \Set$ with the r\^ole of identity arrow; in the categorification perspective, hom plays the r\^ole of the diagonal relation $R=\Delta : A\to A\times A$.} More precisely, we can give the following definition.
 \begin{definition}[Profunctor]\label{def_profu}
