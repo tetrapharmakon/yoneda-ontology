@@ -165,43 +165,6 @@ We have just proved
 \begin{proposition}
   There is an equivalence of categories between $\Prof(\clA,\clB)$ and the category of colimit preserving functors $\Qat(\clB^\op,\Set) \to \Qat(\clA^\op,\Set)$.
 \end{proposition}
-% \begin{proof*}
-% 	The first claim asserts that the following are equivalent:
-% 	\begin{itemize}
-% 		\item every $F : \clC \to\clW$ extends uniquely to $\hat F : [\clC^\op, \Set]\to \clW$ (this in turn means that there is such an $\hat F$ and that if $\hat F', \hat F$ both extend $F$, they are canonically isomorphic);
-% 		\item there exist an adjunction $\Lan_{\yon_\clC} \adjunct{\epsilon}{\id} \firstblank\circ\yon_{\clC}$ that has invertible unit.
-% 	\end{itemize}
-% 	Proving these claims amounts more or less to playing with definitions, and to notice that that since $\hat F$ is unique up to isomorphism, the correspondence $F\mapsto \hat F$ is a functor determined up to isomorphism. Given the universal property of $\hat F = \Lan_\yon F$, the counit of the adjunction is determined by the fact that there is a unique $\epsilon : \widehat{G \circ\yon} = \Lan_\yon(G\yon)\to G$ induced by the pasting diagram of 2-cells
-% 	\[
-% 		\vcenter{\xymatrix{
-% 				&\clC \ar[dl]_{\yon_\clC}\ar[dr]^{Gy} & \\
-% 				**[r] [\clC^\op, \Set] \ar[rr] \rrlowertwocell_G{}&
-% 				\utwocell<\omit>{\eta} & \A
-% 			}}
-% 	\]
-% 	half of the triangle identities is simply the fact that the above triangle factors the identity of $G\circ\yon_\clC$. The unit of the adjunction is invertible, as a consequence of a general fact: if the extendant arrow $y$ is a fully faithful functor, then there is a canonical isomorphism $\Lan_y(F)\circ y\cong F$ (in case $y=\yon$ is the Yoneda embedding, there's an easy coend proof for this: find it using the ninja Yoneda lemma).
-
-% 	Now, we shall prove that the counit $\epsilon_G : \Lan_{\yon_\clC}(G\circ \yon_{\clC}) \To G$ of the above adjunction is invertible if and only if the functor $G$ is cocontinuous.
-
-% 	Let $G$ be cocontinuous; then since the counit is obtained as the canonical map
-% 	\begin{align*}
-% 		\Lan_\yon(G\yon)(P) & \cong \int^X PX \times G(\hom(\firstblank,X))          \\
-% 		                    & \to G\left(\int^X PX \times \hom(\firstblank,X)\right) \\
-% 		                    & \cong GP
-% 	\end{align*}
-% 	it's easy to see that $G$ is cocontinuous if this is an isomorphism. Vice versa, if the counit gives an isomorphism $G \cong \Lan_\yon(G\yon)$ then
-% 	\begin{align*}
-% 		G(\colim_J P_j) & \cong \int^X \colim_J P_j X \times G(\hom(\firstblank,X)) \\
-% 		                & \cong  \colim_J\int^X P_j X \times G(\hom(\firstblank,X)) \\
-% 		                & \cong \colim_J G(P_j)
-% 	\end{align*}
-% 	(this is in fact a consequence of a more general result: \emph{every} functor that is of the form $\Lan_\yon F$ is cocontinuous; prove this more general fact using the commutation of coends and colimits).
-
-% 	To complete the proof, we just observe that a cocontinuous functor $L : [\clC^\op, \Set] \to [\clE^\op, \Set]$ between presheaf categories has a right adjoint given by the coend
-% 	\[
-% 		\int^{C \in \clC} [\clE^\op, \Set](LC, X) \otimes C,
-% 	\] where $\otimes$ is a tensor in the sense of \ref{tenscotens}.
-% \end{proof*}
 \section{Theories and models}
 \label{sec:orge02f333}
 In this section we exploit the terminology established before.
@@ -310,14 +273,14 @@ This formalism allows to speak about particular worlds, obtained as presheaf cat
 \[
   \xymatrix{ [(\clO^m)^\op, \Set] \ar@<3pt>[r] & \ar@<3pt>[l] [(\clT^n)^\op, \Set];}
 \]
-Vale la pena notare che siccome il triangolo
+It is worth to mention that since the diagram
 \[
 \vcenter{\xymatrix{
   (\clO^m)^\op \ar[rr]\ar[dr]&& [(\clT^n)^\op, \Set] \ar[dl]\\
   & [(\clO^m)^\op, \Set]
 }}
 \]
-pseudocommuta, allora la composizione $L\circ y$ fa esattamente (mate di) $\fkK$. Ciò significa: gli $\clO$-modelli, interpretati nei $\clT$-modelli, hanno rappresentazioni corrispondenti ai termini osservazionali interpretati nei $\clT$-modelli; ovvero, la rappresentazione è `coerente' sui generatori dei modelli osservazionali, ovvero\dots
+is pseudocommutative, the composition $L\circ y$ s equal to (the mate of) $\fkK$. This means: $\clO$-models, when interpreted inside $\clT$-models, carry representations corrisponding to the observational tokens interpreted in $\clT$-models; that is, the representation is coherent over observational tokens, that is\dots
 
 Può essere che l'operazione 
 \[\exists \uX . \fkk(\uO, \uX)\]
