@@ -253,7 +253,7 @@ The reader might have observed, now, that there is nothing in their mere syntact
 
 
 
-This might help to solve the conundrum posed by the existence of `fictional objects'. Sherlock Holmes clearly is the object of a theoretical category. Gandhi is the object of an observational category. But as linguistic objects they can't be told apart completely; they can be at most separated by a profunctor embedding the former in a realistic model (that is, for example, the Reichenbach falls), and representing the latter as part of a fictional model (for example, as part of a movie directed by R. Attenborough).
+This might help to solve the conundrum posed by the existence of `fictional objects'. Sherlock Holmes clearly is the object of a theoretical category. Gandhi is the object of an observational category. But as linguistic objects they can't be told apart completely; they can be at most separated by a profunctor embedding the former in a realistic but fictitious model (that is, for example, the Reichenbach falls), and representing the latter as part of a fictional model (for example, as part of a movie directed by R. Attenborough).
 
 The notion of Ramsey map as given above is unnecessarily restrictive, and does not account for many sorts of configurations that can occur in practice:
 \begin{itemize}
@@ -281,14 +281,16 @@ It is worth to mention that since the diagram
 }}
 \]
 is pseudocommutative, the composition $L\circ y$ s equal to (the mate of) $\fkK$. This means: $\clO$-models, when interpreted inside $\clT$-models, carry representations corrisponding to the observational tokens interpreted in $\clT$-models; that is, the representation is coherent over observational tokens, that is\dots
-
-Può essere che l'operazione 
-\[\exists \uX . \fkk(\uO, \uX)\]
-si traduca come 
-\[\lambda \uO.\fkk(\uO, F\uO)\]
-quando c'è una aggiunzione $F : \clO \leftrightarrows \clT : G$? Ossia, invece di saturare i termini teorici in una ipotetica tupla (operazione priva di senso senza una specificazione di condizione sulla tupla quantificata esistenzialmente) si sta considerando solo la controparte osservazionale ma trasportata nel modello mediante $F$ (ed è tutto da vedere se $F$ è fedele) cosicché la dipendenza di $\fkk$ da $T$ viene `eliminata' per mezzo di una aggiunzione (cf. `elimination of imaginaries')
-\subsection{On the bicategory of generalised profunctors}
-Puta caso questo è un oggetto interessante di per sé.
+\begin{remark}
+  The operation
+  \[\exists \uX . \fkK(\uO, \uX)\]
+  translates into
+  \[\lambda \uO.\fkK(\uO, F\uO)\]
+  whenever there is an adjunction $F : \clO \leftrightarrows \clT : G$ between the theoretical and the observable. This, together with the fact that $F\dashv G$ iff $F^*\cong G_*$ iff $G^*\cong F_*$, suggests the following intuition: in presence of a `botched isomorphism' between observational and theoretical, witnessed by the adjunction $(F,G)$, we consider the theoretical trace left by the (image under $F$ of the) observational tokens, so that the dependency of $\fkK$ from $\uT$ is `eliminated' by means of the adjunction.
+  
+  Clearly, the opposite procedure is possible: the adjunction $(F,G)$ allows to consider the observational trace left by the image of a theoretical token $\uT$ under $G$, so that 
+  \[ \exists \uX . \fkK(\uO, \uX) \equiv \lambda \uO.\fkK(G\uT, \uT) \]
+\end{remark}
 
 \section{Concluding remarks}
 
