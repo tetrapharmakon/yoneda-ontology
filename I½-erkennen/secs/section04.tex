@@ -1,0 +1,39 @@
+\section{Nerve and realisations}
+\label{sec:org1a423df}
+We start by recalling the universal property of the category of presheaves over $\clC$:
+let $\clC$ be a small category, $\clW$ a cocomplete category; then, precomposition with the Yoneda embedding $\yon_{\clC} : \clC \to [\clC^\op, \Set]$ determines a functor
+\[\Qat([\clC^\op, \Set], \clW)\xto{\firstblank\circ \yon_{\clC}} \Qat(\clC,\clW),\]
+that restricts a functor $G : [\clC^\op, \Set]\to \clW$ to act only on representable functors, confused with objects of $\clC$, thanks to the fact that $\yon_\clC$ is fully faithful. We then have that
+\begin{theorem}\label{yext_are_good}\leavevmode
+	\begin{enumtag}{ye}
+		\item The universal property of the category $[\clC^\op, \Set]$ amounts to the existence of a left adjoint $\Lan_{\yon_{\clC}}$ to precomposition, that has invertible unit (so, the left adjoint is fully faithful).
+	\end{enumtag}
+	This means that $\Qat(\clC,\clW)$ is a full subcategory of $\Qat([\clC^\op, \Set], \clW)$. Moreover
+	\begin{enumtag}{yi}
+		\item The essential image of $\Lan_{\yon_{\clC}}$ consists of those $F : [\clC^\op, \Set] \to \clW$ that preserve all colimits.
+		\item If $\clW = [\clE^\op, \Set]$, this essential image is equivalent to the subcategory of left adjoints $F : [\clC^\op, \Set] \to [\clE^\op, \Set]$.
+	\end{enumtag}
+\end{theorem}
+As a consequence of this,
+\begin{definition}[Nerve and realisation contexts]\label{nr_para}\index{Nerve!--- context}
+	Any functor $F : \clC\to \clW$ from a small category $\clC$ to a (locally small) \emph{cocomplete} category $\clW$ is called a \emph{nerve\hyp{}realisation context} (a NR \emph{context} for short).
+\end{definition}
+Given a NR context $F$, we can prove the following result:
+\begin{proposition}[Nerve-realisation paradigm]\label{nervereal}
+	The left Kan extension of $F$ along the Yoneda embedding $\yon_\clC : \clC\to [\clC^\op, \Set]$, i.e. the functor
+	\[L_F=\Lan_{\yon_\clC} F : [\clC^\op, \Set]\to \clW\]
+	is a left adjoint, $L_F\dashv N_F$. $L_F$ is called the $\clW$-\emph{realisation functor} or the \emph{Yoneda extension} of $F$, and its right adjoint the $\clW$-\emph{coherent nerve}.
+\end{proposition}
+\begin{proof}
+	From a straightforward computation, it follows that if we define $N_F(D)$ to be $C\mapsto \clW(F C,D)$, this last set becomes canonically isomorphic to $[\clC^\op,\Set](P,N_F(D))$. We can thus denote $\clW(F,1)$ the functor $N_F : D\mapsto \lambda C.\clW(F C,D)$.
+\end{proof}
+Now, let's review the way in which a profunctorial analogue of \eqref{adjunzia} can be obtained: \autoref{nervereal} yields that a functor 
+\[ \fkR : \clA^\op\times \clB \to \Set \]
+whose mate under the adjunction $\Qat(\clA^\op\times \clB ,\Set)\cong\Qat(\clB,[\clA^\op,\Set])$ is a functor 
+\[ \hat R : \clB \to \Qat(\clA^\op,\Set) \]
+determines a NR paradigm, and thus gives rise to a pair of adjoint functor 
+\[ \Lan_{\yon_\clB} \hat R : \Qat(\clB^\op,\Set) \leftrightarrows \Qat(\clA^\op,\Set) : [\clA^\op,\Set](\hat R,1). \]
+We have just proved 
+\begin{proposition}\label{equ_prof_cocont}
+  There is an equivalence of categories between $\Prof(\clA,\clB)$ and the category of colimit preserving functors $\Qat(\clB^\op,\Set) \to \Qat(\clA^\op,\Set)$.
+\end{proposition}
