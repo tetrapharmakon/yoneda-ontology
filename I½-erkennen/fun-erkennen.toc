@@ -8,8 +8,7 @@
 \contentsline {section}{\tocsection {}{5}{Theories and models}}{6}{section.5}%
 \contentsline {section}{\tocsection {}{6}{The tension between observational and theoretical}}{8}{section.6}%
 \contentsline {section}{\tocsection {}{7}{Ramseyfication and beyond: generalised profunctors}}{10}{section.7}%
-\contentsline {subsection}{\tocsubsection {}{7.1}{On the bicategory of generalised profunctors}}{11}{subsection.7.1}%
 \contentsline {section}{\tocsection {}{8}{Concluding remarks}}{11}{section.8}%
 \contentsline {subsection}{\tocsubsection {}{8.1}{The Dummett-Plantinga problem}}{11}{subsection.8.1}%
 \contentsline {subsection}{\tocsubsection {}{8.2}{Naturalizing Epistemology}}{11}{subsection.8.2}%
-\contentsline {section}{\tocsection {}{}{References}}{11}{section*.2}%
+\contentsline {section}{\tocsection {}{}{References}}{12}{section*.2}%

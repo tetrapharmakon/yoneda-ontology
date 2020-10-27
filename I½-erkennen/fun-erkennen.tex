@@ -89,7 +89,7 @@ The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} 
 
 From here, one can build a rich and expressive theory; we are contempt with a careful analysis of the analogue of \ref{r_2} and \eqref{adjunzia} above: the latter is the scope of \autoref{sec:org1a423df}, we now concentrate on describing an ubiquitary technical tool in category theory.
 \subsection{Grothendieck construction}
-The Grothendieck construction is the tool allowing to formalise the equivalence between a relation understood as a function $R : A\times B \to \{0,1\}$, and a subset $R\subseteq A\times B$, when `relation' is understood in the sense of \autoref{} above, i.e. a profunctor $\fkR : \clA \pto \clB$. Each such $\fkR$ can be realised as a suitable `fibration' $p_\fkR : \clE \to \clA^\op\times\clB$, that in turn uniquely determines $\fkR$.
+The Grothendieck construction is the tool allowing to formalise the equivalence between a relation understood as a function $R : A\times B \to \{0,1\}$, and a subset $R\subseteq A\times B$, when `relation' is understood in the sense of \autoref{def_profu} above, i.e. a profunctor $\fkR : \clA \pto \clB$. Each such $\fkR$ can be realised as a suitable `fibration' $p_\fkR : \clE \to \clA^\op\times\clB$, that in turn uniquely determines $\fkR$.
 We now recall a few basic definitions.
 \begin{definition}\label{eltsf}
 	Let $\clC$ be an ordinary category, and let $W : \clC\to \Set$ be a functor; the \emph{category of elements} $\elts{\clC}{W}$ of $W$ is the category which results from the pullback
@@ -111,7 +111,7 @@ Taking as morphisms between discrete fibrations the morphisms in $\Qat/\clC$, we
 \begin{proposition}\label{fibelem}
 	The category of elements $\elts{\clC}{W}$ of a functor $W : \clC\to \Set$ comes equipped with a canonical \emph{discrete fibration} to the domain of $W$, which we denote $\Sigma : \elts{\clC}{W}\to \clC$, defined forgetting the distinguished element $u\in Wc$.
 \end{proposition}
-With this terminology at hand, we can consider the \emph{category of elements} \ref{eltsf} of a functor $F : \clC\to \Set$; this sets up a functor from $\Qat(\clC,\Set)$ to the category of discrete fibrations over $\clC$: the Grothendieck construction asserts that this is an equivalence of categories, as defined in \ref{def:equcat}.
+With this terminology at hand, we can consider the \emph{category of elements} \ref{eltsf} of a functor $F : \clC\to \Set$; this sets up a functor from $\Qat(\clC,\Set)$ to the category of discrete fibrations over $\clC$: the Grothendieck construction asserts that this is an equivalence of categories.%, as defined in \ref{def:equcat}.
 \begin{theorem}\label{thm:equconfib}
 	There is an equivalence of categories
 	\[
@@ -143,7 +143,7 @@ that restricts a functor $G : [\clC^\op, \Set]\to \clW$ to act only on represent
 	\end{enumtag}
 \end{theorem}
 As a consequence of this,
-\begin{definition}[Nerve and realisation contexts]\label{nr-para}\index{Nerve!--- context}
+\begin{definition}[Nerve and realisation contexts]\label{nr_para}\index{Nerve!--- context}
 	Any functor $F : \clC\to \clW$ from a small category $\clC$ to a (locally small) \emph{cocomplete} category $\clW$ is called a \emph{nerve\hyp{}realisation context} (a NR \emph{context} for short).
 \end{definition}
 Given a NR context $F$, we can prove the following result:
@@ -155,23 +155,23 @@ Given a NR context $F$, we can prove the following result:
 \begin{proof}
 	From a straightforward computation, it follows that if we define $N_F(D)$ to be $C\mapsto \clW(F C,D)$, this last set becomes canonically isomorphic to $[\clC^\op,\Set](P,N_F(D))$. We can thus denote $\clW(F,1)$ the functor $N_F : D\mapsto \lambda C.\clW(F C,D)$.
 \end{proof}
-Now, let's review the way in which a profunctorial analogue of \ref{} can be obtained: \autoref{nervereal} yields that a functor 
+Now, let's review the way in which a profunctorial analogue of \eqref{adjunzia} can be obtained: \autoref{nervereal} yields that a functor 
 \[ \fkR : \clA^\op\times \clB \to \Set \]
 whose mate under the adjunction $\Qat(\clA^\op\times \clB ,\Set)\cong\Qat(\clB,[\clA^\op,\Set])$ is a functor 
 \[ \hat R : \clB \to \Qat(\clA^\op,\Set) \]
 determines a NR paradigm, and thus gives rise to a pair of adjoint functor 
 \[ \Lan_{\yon_\clB} \hat R : \Qat(\clB^\op,\Set) \leftrightarrows \Qat(\clA^\op,\Set) : [\clA^\op,\Set](\hat R,1). \]
 We have just proved 
-\begin{proposition}
+\begin{proposition}\label{equ_prof_cocont}
   There is an equivalence of categories between $\Prof(\clA,\clB)$ and the category of colimit preserving functors $\Qat(\clB^\op,\Set) \to \Qat(\clA^\op,\Set)$.
 \end{proposition}
 \section{Theories and models}
 \label{sec:orge02f333}
 In this section we exploit the terminology established before.
-\begin{definition}[Theory]
+\begin{definition}[Theory]\label{teoria}
   A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite{lambek1988introduction}) of a first-order, finitely axiomatisable language $L$.
 \end{definition}
-\begin{definition}[World, Yaldabaoth]
+\begin{definition}[World, Yaldabaoth]\label{mondo_yalda}
   A \emph{world} is a large category $\clW$; a \emph{Yaldabaoth} is a world that, as a category, admits all small colimits.\footnote{Also known as \emph{Yaltabaoth} or \emph{Ialdabaoth}, \dots}
 \end{definition}
 Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor 
@@ -179,7 +179,7 @@ Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a 
 
 A canvas $\phi : \clL \to \clW$ is a \emph{\science} if $\phi$ is a dense functor.
 \begin{remark}
-  The NR paradigm exposed in \autoref{} now entails that given a canvas $\phi : \clL \to \clW$
+  The NR paradigm exposed in \autoref{nr_para} now entails that given a canvas $\phi : \clL \to \clW$
   \begin{itemize}
     \item If $\clW$ is a world, we obtain a \emph{representation} functor 
     \[ \xymatrix{\clW \ar[r] & [\clL^\op, \Set];} \]
@@ -239,17 +239,17 @@ The important point for us is that the dialectical tension between observational
 \end{definition}
 Particular $(1,1)$-ary Ramsey maps can be obtained by elementary means:
 \begin{example}
- Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_* := \clB(1,F) : \clB^\op\times \clA\to\Set$ and a profunctor $F^* := \clB(F,1) : \clA^\op\times\clB \to \Set$ as in \autoref{}; the two functors are mutually adjoint, $F^*\dashv F_*$, see \cite{}. This yield an example of what we call \emph{representable} Ramsey maps. \foo{Say more; also, why (1,1)-ary? Wait and see}
+ Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_* := \clB(1,F) : \clB^\op\times \clA\to\Set$ and a profunctor $F^* := \clB(F,1) : \clA^\op\times\clB \to \Set$ as in \autoref{nervereal}; the two functors are mutually adjoint, $F^*\dashv F_*$, see \cite{}. This yield an example of what we call \emph{representable} Ramsey maps. \foo{Say more; also, why (1,1)-ary? Wait and see}
 \end{example}
 \begin{definition}[Observational and theoretical core]
   Let $\fkR : \clT^\op\times \clO \to\Set$ be a Ramsey map, and $\hat R$ the associated canvas. Let 
   \[ \Lan_{\yon_\clO}\hat R : [\clO^\op,\Set] \leftrightarrows [\clT^\op,\Set] : N_{\hat R} \]
-  be the adjunction between presheaf categories determined in \autoref{}. Let us consider the equivalence of categories between the fixpoints of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$; this is the equivalence between the \emph{observational core} $Fix(T)\subseteq [\clO^\op,\Set]$ and the \emph{theoretical core} $Fix(S)\subseteq [\clT^\op,\Set]$.
+  be the adjunction between presheaf categories determined by virtue of \autoref{equ_prof_cocont}. Let us consider the equivalence of categories between the fixpoints of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$; this is the equivalence between the \emph{observational core} $Fix(T)\subseteq [\clO^\op,\Set]$ and the \emph{theoretical core} $Fix(S)\subseteq [\clT^\op,\Set]$.
 \end{definition}
 \begin{remark}
 Observational core and theoretical core always form equivalent categories; the tension in creating a satisfying image of reality as it is observed oscillates between the desre to enlarge as much as possible the subcategory of $[\clO^\op,\Set]$ with which our theoretical model is equivalent, where we can have access to $\clT, [\clT^\op, \Set]$ only.
 \end{remark}
-The reader might have observed, now, that there is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$. 
+The reader might have observed, now, that there is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{def_profu} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$. 
 
 
 
@@ -265,11 +265,11 @@ Thus we must admit \emph{multiple} arguments for the domain and codomain of a Ra
 \label{sec:org50db6c2}
 We can generalise the definition above to encompass Ramsey sentences:
 \begin{definition}
-  Let $\clT,\clO$ be two categories; a \emph{Ramsey map}, or a \emph{$(n,m)$-ary Ramsey map} is a profunctor $\fkK : \clT^n \pto \clO^m$
+  Let $\clT,\clO$ be two categories; a \emph{Ramsey map}, or a \emph{$(n,m)$-ary Ramsey map} is a profunctor $\fkK : \clT^n \pto \clO^m$; note that we allow $n,m$ to be zero; in that case, $\clA^0$ is understood to be the terminal category $\boldsymbol{1}$.
 \end{definition}
-Given $\uT\in\clT^n, \uO\in\clO^m$, the set $\fkK(\uT, \uO)$ represents the type of proofs that the observational tuple $\uO$ admits a description in terms of the theoretical tuple $\uT$.
+The intuition behind this definition is as follows: given $\uT\in\clT^n, \uO\in\clO^m$, the set $\fkK(\uT, \uO)$ represents the type of proofs that the observational tuple $\uO$ admits a description in terms of the theoretical tuple $\uT$.
 
-This formalism allows to speak about particular worlds, obtained as presheaf categories over observational $\clO$; if $\clT, \clO$ is a theoretic pair, we can instantiate \autoref{} above in the particular case where $\clW = [\clO^\op, \Set]$; observe that $\clW$ is a Yaldabaoth! We can thus address a certain number of questions, arising from the canonical adjunction obtained by virtue of \autoref{} and \ref{}:
+This formalism allows to speak about particular worlds, obtained as presheaf categories over observational $\clO$; if $\clT, \clO$ is a theoretical pair, we can instantiate \autoref{nervereal} above in the particular case where $\clW = [\clO^\op, \Set]$ (observe that in this case $\clW$ is a Yaldabaoth). We can thus address a certain number of questions, arising from the canonical adjunction obtained by virtue of \autoref{equ_prof_cocont}:% and \autoref{}:
 \[
   \xymatrix{ [(\clO^m)^\op, \Set] \ar@<3pt>[r] & \ar@<3pt>[l] [(\clT^n)^\op, \Set];}
 \]
@@ -291,7 +291,10 @@ is pseudocommutative, the composition $L\circ y$ s equal to (the mate of) $\fkK$
   Clearly, the opposite procedure is possible: the adjunction $(F,G)$ allows to consider the observational trace left by the image of a theoretical token $\uT$ under $G$, so that 
   \[ \exists \uX . \fkK(\uO, \uX) \equiv \lambda \uO.\fkK(G\uT, \uT) \]
 \end{remark}
-
+When the pair arity coarity of a 
+\begin{remark}
+  The presence of a (generalised) Ramsey map
+\end{remark}
 \section{Concluding remarks}
 
 \subsection{The Dummett-Plantinga problem}

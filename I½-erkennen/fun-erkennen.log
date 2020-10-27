@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.12)  27 OCT 2020 13:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.7.12)  27 OCT 2020 14:25
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1819,20 +1819,14 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 88.
 
  (/home/fouche/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-
-LaTeX Warning: Reference `' on page 4 undefined on input line 92.
-
-<xymatrix 2x2 172>
+) <xymatrix 2x2
+172>
 Overfull \hbox (4.00429pt too wide) in paragraph at lines 110--111
 []\T2A/cmr/m/n/10 Taking as mor-phisms be-tween dis-crete fi-bra-tions the mor-
 phisms in $[]\OML/cmm/m/it/10 =\OMS/cmsy/m/n/10 C$\T2A/cmr/m/n/10 ,
  []
 
 [4]
-
-LaTeX Warning: Reference `def:equcat' on page 5 undefined on input line 114.
-
 Package epstopdf Info: Source file: <disegno.eps>
 (epstopdf)                    date: 2020-10-25 11:45:58
 (epstopdf)                    size: 14748 bytes
@@ -1843,7 +1837,7 @@ Package epstopdf Info: Source file: <disegno.eps>
 f disegno.eps>
 (epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
-<disegno-eps-converted-to.pdf, id=161, 453.695pt x 488.82625pt>
+<disegno-eps-converted-to.pdf, id=163, 453.695pt x 488.82625pt>
 File: disegno-eps-converted-to.pdf Graphic file (type pdf)
 <use disegno-eps-converted-to.pdf>
 Package pdftex.def Info: disegno-eps-converted-to.pdf  used on input line 124.
@@ -1859,14 +1853,7 @@ we de-fine $\OML/cmm/m/it/10 N[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 D\OT1/cmr/m/n
 /10 )$
  []
 
-
-LaTeX Warning: Reference `' on page 6 undefined on input line 158.
-
-[6] <xymatrix 2x1 51>
-
-LaTeX Warning: Reference `' on page 7 undefined on input line 182.
-
-<xymatrix 2x1 44> <xymatrix 2x1 80>
+[6] <xymatrix 2x1 51> <xymatrix 2x1 44> <xymatrix 2x1 80>
 Overfull \vbox (1.44843pt too high) has occurred while \output is active []
 
 
@@ -1897,51 +1884,40 @@ s:
  []
 
 
-LaTeX Warning: Reference `' on page 9 undefined on input line 242.
-
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 247.
-
-
-LaTeX Warning: Reference `' on page 9 undefined on input line 252.
-
-
 Overfull \vbox (1.44843pt too high) has occurred while \output is active []
 
 
 [9]
 
-LaTeX Warning: Reference `' on page 10 undefined on input line 272.
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+(Font)              using `U/stmry/m/n' instead on input line 268.
 
-
-LaTeX Warning: Reference `' on page 10 undefined on input line 272.
-
-
-LaTeX Warning: Reference `' on page 10 undefined on input line 272.
-
-<xymatrix 2x1 80> <xymatrix 3x2 124> [10] (./fun-erkennen.bbl)
+<xymatrix 2x1 80> <xymatrix 3x2 124> [10] (./fun-erkennen.bbl
 Overfull \vbox (1.44843pt too high) has occurred while \output is active []
 
 
-[11] [12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 307.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 307.
+[11]) [12]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 308.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 308.
  (./fun-erkennen.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 307.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 307.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 308.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 308.
 Package rerunfilecheck Info: File `fun-erkennen.out' has not changed.
 (rerunfilecheck)             Checksum: EBF17C38EB4F591FBFE66E209B429DC2;583.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 39996 strings out of 480471
- 769011 string characters out of 5900862
- 1293418 words of memory out of 5000000
- 54913 multiletter control sequences out of 15000+600000
- 565824 words of font info for 116 fonts, out of 8000000 for 9000
+ 40013 strings out of 480471
+ 769197 string characters out of 5900862
+ 1293532 words of memory out of 5000000
+ 54924 multiletter control sequences out of 15000+600000
+ 567654 words of font info for 122 fonts, out of 8000000 for 9000
  1303 hyphenation exceptions out of 8191
  76i,16n,103p,3290b,980s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/home/fouche/texlive/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t2a.enc}{/
@@ -1981,10 +1957,10 @@ rm1200.pfb></home/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfti070
 me/fouche/texlive/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></home/fo
 uche/texlive/texmf-dist/fonts/type1/public/xypic/xyatip10.pfb></home/fouche/tex
 live/texmf-dist/fonts/type1/public/xypic/xybtip10.pfb>
-Output written on fun-erkennen.pdf (12 pages, 511784 bytes).
+Output written on fun-erkennen.pdf (12 pages, 512474 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 318 compressed objects within 4 object streams
+ 409 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
  82 named destinations out of 1000 (max. 500000)
  234 words of extra memory for PDF output out of 10000 (max. 10000000)
 
