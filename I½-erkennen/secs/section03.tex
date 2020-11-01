@@ -16,7 +16,14 @@ Unwinding the definition, it is asy to verify that $V\subseteq{}^RU$ if and only
 
 From here, using a process known as `categorification' \cite{baez_catego}, we can replace a two-valued relation $R : A\times B \to \{0,1\}$ with a \emph{set-valued} functor $\clA^\op\times\clB \to \Set$ between two (small) categories $\clA,\clB$.\footnote{The reason why the category $\clA$ is twisted with an `$^\op$' functor is that we want to bestow the hom functor $\hom_{\clA} : \clA^\op\times\clA \to \Set$ with the r\^ole of identity `profunctor'; in the categorification perspective, hom plays the r\^ole of the diagonal relation $R=\Delta : A\to A\times A$.} More precisely, we can give the following definition.
 \begin{definition}[Profunctor]\label{def_profu}
-  \todo[inline]{}
+  Let $\clA,\clB$ be two categories; a \emph{profunctor} $\fkR : \clA \pto \clB$ is a functor $\clA^\op\times\clB \to \Set$; we define the \emph{bicategory of profunctors} $\Prof$ having 
+  \begin{enumtag}{p}
+   \item objects the small categories $\clA,\clB,\clC,\dots$;
+   \item 1-cells the profunctors $\fkR : \clA \pto \clB$, and composition law between $\clA \overset{\fkR}{\pto} \clB \overset{\fkP}{\pto} \clC$ given by the assignment 
+   \[ (A,C)\mapsto \int^B \fkR(A,B)\times\fkP(B,C) \]
+   (see \cite{} for the definition). The identity 1-cell is the hom functor $\hom_\clA : \clA^\op\times\clA \to \Set$;
+   \item 2-cells $\fkR\To\fkR'$ the natural transfomations $\alpha : \xymatrix{\clA^\op\times\clB \rtwocell^{\fkR}_{\fkR'}{\alpha}& \Set}$.
+  \end{enumtag}
 \end{definition}
 The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs that $(A,B)\in\clA^\op\times\clB$ are in a  `generalised relation' $\fkR$. This intuition agrees with the fact that when instead of $\Set$ a profunctor $\fkR$ takes values in the 0-dimensional category $\{0\le 1\}$, then the type of proofs that $R(A,B)$ is a yes/no space.
 
@@ -58,6 +65,29 @@ The inverse correspondence sends a discrete fibration $\Phi : \clE \to \clC$ to 
 \begin{center}
   \includegraphics[width=.325\textwidth]{disegno.eps}
 \end{center}
+There is of course a similar correspondence for \emph{covariant} functors; the situation is conveniently depicted by the table 
+\begin{center}
+  \begin{tabular}{ccc}
+    \textbf{name} & \textbf{variance} & \textbf{condition} \\ \toprule
+    fibration   & $\clC\to\Set$       & 
+    $
+    \vcenter{\tiny \xymatrix@R=5mm{
+      X \ar[r] \ar@{.}[d] & X'\ar@{.}[d]\\ \midrule
+      pX \ar[r]_f & C'
+      }}
+      $
+      \\ \midrule
+      opfibration & $\clC^\op \to \Set$ & 
+      $
+      \vcenter{\tiny \xymatrix@R=5mm{
+        X \ar[r] \ar@{.}[d] & X'\ar@{.}[d]\\ \midrule
+        C \ar[r]_f & pX'
+        }}
+        $
+        \\ \bottomrule
+      \end{tabular}  
+    \end{center}
+    \todo[inline]{La notazione va uniformata a questa scelta}
 \begin{corollary}
   Given a profunctor $\fkR : \clA \pto \clB$, regarded as a functor $R : \clA^\op\times \clB \to \Set$, we can consider the category of elements $\elts{\clA^\op\times\clB}{R}$; this is often called the \emph{collage} or the \emph{graph} of $R$. In this case, we denote the category $\elts{\clA^\op\times\clB}{R}$ as $\clA\uplus_R\clB$, to stress the intuition that $R$ prescribes a way to glue together two categories $\clA,\clB$ specifying a set of `fake' arrows $R(A,B)$ that consistently interact with the arrows in $\clA,\clB$ (compare with \autoref{hint_at_collage}, and with \autoref{11_ramsey} below).
 \end{corollary}
@@ -70,3 +100,4 @@ The inverse correspondence sends a discrete fibration $\Phi : \clE \to \clC$ to 
    \item empty in every other case.
   \end{enumtag}
 \end{remark}
+Thus, we have obtained a concrete model for a category that realises the generalised relation between $\clA,\clB$; the structure $\clA\uplus_R\clB$ is `carved' from $\clA,\clB$ separately, starting from (semi-)free relations witnessing the fact that $\fkR$ connects $\clA,\clB$ in a weak way. For example, if $\fkR : \clA^\op\times \clB \to \Set$ is the empty functor, then $\clA\uplus_R\clB$ is just he disjoint union of $\clA,\clB$; and if $\fkR$ is the functor constant at the singleton set, then $\clA\uplus_R\clB$ is the \emph{join} of $\clA,\clB$, i.e. the category $\clA\coprod\clB$ where exactly a single new morphism is added between each and every object of $\clA$ and of $\clB$ (but not in the opposite direction).
