@@ -63,7 +63,22 @@ With this terminology at hand, we can consider the \emph{category of elements} \
 \end{theorem}
 The inverse correspondence sends a discrete fibration $\Phi : \clE \to \clC$ to the functor whose action on objects and morphisms is depicted in the following image: an object $C\in\clC$ goes to the fiber $\Phi^{-1}C$ in $\clE$, that since $\Phi$ is a discrete fibration is a discrete subcategory of $\clE$, hence a set; a morphism $u : C\to C'$ defines a function $\Phi^{-1}C' \to \Phi^{-1}C$: the object $X'\in\Phi^{-1}C'$ goes to the (unique) object $X$ in the fiber over $C$, that is the domain of the arrow $v$ such that $\Phi v=u$. 
 \begin{center}
-  \includegraphics[width=.325\textwidth]{disegno.eps}
+  % \includegraphics[width=.325\textwidth]{disegno.eps}
+  \begin{tikzpicture}[>=stealth]
+    \fill[gray!20,rounded corners] (0,0) rectangle (2,1);
+    \node[font=\scriptsize] (C) at  (.25,.25) {$C$};
+    \node[font=\scriptsize] (C') at (1.5,.5)  {$C'$};
+    \draw[->] (C) -- (C') node[above, pos=.5] {$u$};
+    %
+    \draw[line width=4pt, gray!50, cap=round] (C) -- +(0,2);
+    \draw[line width=4pt, gray!50, cap=round] (C') -- +(0,2.5);
+    %
+    \fill (1.5,2) circle (1pt) node (X') {};
+    \fill (.25,1.5) circle (1pt) node (X) {};
+    \draw[dashed,->] (X') -- (X);
+    \node[above, font=\scriptsize] at (X') {$X'$};
+    \node[above, font=\scriptsize] at (X) {$X$};
+    \end{tikzpicture}
 \end{center}
 There is of course a similar correspondence for \emph{covariant} functors; the situation is conveniently depicted by the table 
 \begin{center}
