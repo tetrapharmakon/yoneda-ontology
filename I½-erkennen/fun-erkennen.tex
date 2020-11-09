@@ -3,6 +3,14 @@
 \usepackage{../fouche-copy}
 \input{../macros.tex}
 
+\def\ang#1{\langle #1 \rangle}
+\def\lsem{\textcolor{gray!60}{[}}
+\def\rsem{\textcolor{gray!60}{]}}
+\def\trn#1{\lsem #1\rsem}
+
+\newcounter{quad_i}
+\newcommand{\qd}[1][]{\ifthenelse{\equal{#1}{}}{\quad}{\setcounter{quad_i}{0}\whiledo{\value{quad_i}<#1}{\quad\stepcounter{quad_i}}}}
+\newcommand{\funsp}[2]{(#1 \Rightarrow #2)}
 
 \title{Categorical Ontology I$\frac{1}{2}$: Functorial erkennen}
 \input{../authors.tex}

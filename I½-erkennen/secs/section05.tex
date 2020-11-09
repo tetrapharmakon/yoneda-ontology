@@ -2,54 +2,82 @@
 \label{sec:orge02f333}
 In this section we exploit the terminology established before.
 \begin{definition}[Theory]\label{teoria}
-  A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite{lambek1988introduction}) of a type theory $L$.
+	A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite{lambek1988introduction}) of a type theory $L$.
 \end{definition}
 It is worth to mention how the construction of $\clT_L$ goes, from \cite{lambek1988introduction,abramskyno}, in the case $L$ has product types and function types:
-\todo[inline]{bla}
+
+From $\clT_L$ it is possible to carve a cartesian closed category, whose obects are denoted $\tilde{b}$ as $b$ runs over the basic types of $L$. Then, we define recursively a \emph{semantic translation} operation as follows:
+\[ \trn{b}:=\tilde{b} \,,\qd \trn{T\times U}:=\trn{T}\times\trn{U} \,,\qd \trn{T\to U}:=\trn{T}\Rightarrow\trn{U}\,, \]
+and on typed terms as the set of rules:
+\begin{gather*}
+	\begin{array}{cc}
+		\infer{\trn{\Gamma,x:T\vdash x:T} := \pi_2:\trn{\Gamma}\times\trn{T}\to\trn{T}}{}
+		 &
+		\infer{\trn{\Gamma\vdash\pi_1 t:T}:=\trn{\Gamma}\overset{f}{\to}\trn{T}\times\trn{U}\overset{\pi_1}{\to}\trn{T}}{%
+			\trn{\Gamma\vdash t:T\times U}=f:\trn{\Gamma}\to\trn{T}\times\trn{U}}
+	\end{array}\\
+	\infer{\trn{\Gamma\vdash \ang{t,u}:T\times U}:=\trn{\Gamma}\overset{\ang{f,g}}{\to}\trn{T}\times\trn{U}}{%
+		\trn{\Gamma\vdash t:T}=f:\trn{\Gamma}\to\trn{T}\qd[2]\trn{\Gamma\vdash u:U}=g:\trn{\Gamma}\to\trn{U}}
+	\\
+	\begin{array}{cc}
+		\infer{\trn{\Gamma\vdash\lambda x.\,t:T\to U}:=\Lambda(f):\trn{\Gamma}\to\funsp{\trn{T}}{\trn{U}}}{%
+			\trn{\Gamma,x:T\vdash t:U}=f:\trn{\Gamma}\times\trn{T}\to\trn{U}}
+		 &
+		\infer{\trn{\Gamma\vdash t\,u: U}:=\trn{\Gamma}\overset{\ang{f,g}}{\to}\funsp{\trn{T}}{\trn{U}}\times\trn{T}
+			\overset{\text{ev}}{\to}\trn{U}}{%
+			\trn{\Gamma\vdash t:T\to U}=f\qd[2]\trn{\Gamma\vdash u:T}=g}
+	\end{array}
+\end{gather*}
+\todo[inline]{gotta fix}
+The resulting categorical semantics is \emph{sound}, i.e.
+\[ t=_\lambda u \implies \trn{t}=\trn{u} \]
+for every term $t,u$. It is however not \emph{complete}, in the sense that
+\[ \lsem t \rsem = \lsem u \rsem \text{\qd yet \qd} t\neq_\lambda u\,. \]
+It is possible to build a new category $\clC_\lambda$ providing a sound and complete term model of (a fragment of simply-typed) $\lambda$-calculus; yet, the specifics of this construction are of little interest for the present discussion.
 \begin{definition}[World, Yaldabaoth]\label{mondo_yalda}
-  A \emph{world} is a large category $\clW$; a \emph{Yaldabaoth} is a world that, as a category, admits all small colimits.\footnote{Also known as \emph{Yaltabaoth} or \emph{Ialdabaoth}, \dots}
+	A \emph{world} is a large category $\clW$; a \emph{Yaldabaoth} is a world that, as a category, admits all small colimits.\footnote{Also known as \emph{Yaltabaoth} or \emph{Ialdabaoth}, \dots}
 \end{definition}
-Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor 
+Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor
 \[\xymatrix{\clL \ar[r]^\phi & \clW.}\]
 
 A canvas $\phi : \clL \to \clW$ is a \emph{\science} if $\phi$ is a dense functor.
 \begin{remark}
-  The NR paradigm exposed in \autoref{nr_para} now entails that given a canvas $\phi : \clL \to \clW$
-  \begin{itemize}
-    \item If $\clW$ is a world, we obtain a \emph{representation} functor 
-    \[ \xymatrix{\clW \ar[r] & [\clL^\op, \Set];} \]
-    this means: given a canvas $\phi$ of the world, the latter leaves an image on the canvas.
-    \item If in addition $\clW$ is a Yaldabaoth, we obtain a NR-adjunction
-    \[\xymatrix{\clW \ar@<3pt>[r] & \ar@<3pt>[l] [\clL^\op, \Set];}\]
-    this has to be interpreted as: if $\clW$ is sufficiently expressive, then models of the theory that explains $\clW$ through $\phi$ can be used to acquire a two-way knowledge. Phenomena have a theoretical counterpart in $[\clL^\op,\Set]$ via the nerve; theoretical objects strive to describe phenomena via their realisation.
-    \item If an $\clL$-canvas $\phi : \clL \to \clW$ is a \science, `the world' is a full subcategory of the class of all modes in which `language' can create interpretation.
-  \end{itemize}
+	The NR paradigm exposed in \autoref{nr_para} now entails that given a canvas $\phi : \clL \to \clW$
+	\begin{itemize}
+		\item If $\clW$ is a world, we obtain a \emph{representation} functor
+		      \[ \xymatrix{\clW \ar[r] & [\clL^\op, \Set];} \]
+		      this means: given a canvas $\phi$ of the world, the latter leaves an image on the canvas.
+		\item If in addition $\clW$ is a Yaldabaoth, we obtain a NR-adjunction
+		      \[\xymatrix{\clW \ar@<3pt>[r] & \ar@<3pt>[l] [\clL^\op, \Set];}\]
+		      this has to be interpreted as: if $\clW$ is sufficiently expressive, then models of the theory that explains $\clW$ through $\phi$ can be used to acquire a two-way knowledge. Phenomena have a theoretical counterpart in $[\clL^\op,\Set]$ via the nerve; theoretical objects strive to describe phenomena via their realisation.
+		\item If an $\clL$-canvas $\phi : \clL \to \clW$ is a \science, `the world' is a full subcategory of the class of all modes in which `language' can create interpretation.
+	\end{itemize}
 \end{remark}
 The terminology is chosen to inspire the following idea in the reader: science strives to define \emph{theories} that allow for the creation of world representations; said representations are descriptive when there is dialectic opposition between world and models; when such representation is faithful, we have reduced `the world' to a piece of the models created to represent it.
 
 The tongue-in-cheek here is, a science (in the usual sense of the world) can never attain the status of a \science, if not potentially; attempts to generate scientific knowledge are the attempts of
 \begin{itemize}
-  \item recognizing the world $\clW$ as a sufficiently expressive object for it to contain phenomena and information;
-  \item carve a language $L$, if necessary from a small subset of $\clC$, that is sufficiently `compact', but also sufficiently expressive for its syntactic category to admit a representation into the world;
-  \item obtaining an \emph{adjunction} between $\clW$ and models of the worlds obtained as models of the syntactic theory $\clL$; this is meant to generate models starting from observed phenomena, and to predict new phenomena starting from models;
-  \item obtaining that `language is a dense subset of the world', by this meaning that the adjunction outlined above is sufficiently well-behaved to describethe world as a fragment of the semantic interpretations obtained from~$\clL$.
+	\item recognizing the world $\clW$ as a sufficiently expressive object for it to contain phenomena and information;
+	\item carve a language $L$, if necessary from a small subset of $\clC$, that is sufficiently `compact', but also sufficiently expressive for its syntactic category to admit a representation into the world;
+	\item obtaining an \emph{adjunction} between $\clW$ and models of the worlds obtained as models of the syntactic theory $\clL$; this is meant to generate models starting from observed phenomena, and to predict new phenomena starting from models;
+	\item obtaining that `language is a dense subset of the world', by this meaning that the adjunction outlined above is sufficiently well-behaved to describethe world as a fragment of the semantic interpretations obtained from~$\clL$.
 \end{itemize}
 It is evident that there is a tension between two opposite feature that $\clL$ must exhibit; it has to be not too large to remain tractable, but on the other hand it must be large enough in order to be able to speak about `everything' it aims to describe.
 
 Regarding our definition of \science, we can't help but admit we had this definition in mind \cite[2.1]{biologia}:
 \begin{definition}[\protect{\cite[2.1]{biologia}}]
-  A \emph{scientific theory} $\clT$ consists of a formal structure $F$ and a class of interpretations $M_i$, shortly denoted as $\clT=\langle F,M_i\mid i\in I\rangle$. The structure $F$ consists on its won right of 
-  \begin{itemize}
-    \item a language $\clL$, in which it is possible to formulate propositions. If $\clL$ is fully formalised, it will consist of a finite set of symbols, and a finite set of rules to determine which expressions are well-formed. This is commonly called \emph{technical language};
-    \item A set $A$ of `axioms' or `postulates' in $\clL^\star$;
-    \item A \emph{logical apparatus} $R$, whose elements are rules of inference and logical axioms, allowing to prove propositions.
-  \end{itemize}
+	A \emph{scientific theory} $\clT$ consists of a formal structure $F$ and a class of interpretations $M_i$, shortly denoted as $\clT=\langle F,M_i\mid i\in I\rangle$. The structure $F$ consists on its won right of
+	\begin{itemize}
+		\item a language $\clL$, in which it is possible to formulate propositions. If $\clL$ is fully formalised, it will consist of a finite set of symbols, and a finite set of rules to determine which expressions are well-formed. This is commonly called \emph{technical language};
+		\item A set $A$ of `axioms' or `postulates' in $\clL^\star$;
+		\item A \emph{logical apparatus} $R$, whose elements are rules of inference and logical axioms, allowing to prove propositions.
+	\end{itemize}
 \end{definition}
 The language of category theory allows for a refined rephrasing of the previous definition: we say that a \emph{$\clS$-scientific theory} is the following arrangement of data:
 \begin{enumtag}{st}
-\item a formal language $\clL$;
-\item the syntactic category $T_\clL$, obtained as in \cite{lambek1988introduction};
-\item the category of functors $\Qat[T_\clC, \clS]$, whose codomain is a Yaldabaoth.
+	\item a formal language $\clL$;
+	\item the syntactic category $T_\clL$, obtained as in \cite{lambek1988introduction};
+	\item the category of functors $\Qat[T_\clC, \clS]$, whose codomain is a Yaldabaoth.
 \end{enumtag}
 More than often, our theories will be $\Set$-scientific: in such case we just omit the specification of the semantic Yaldabaoth, and call them \emph{scientfic theories}.
 

@@ -7,6 +7,10 @@
 \providecommand{\href}[2]{#2}
 \begin{thebibliography}{1}
 
+\bibitem{abramskyno}
+Samson Abramsky and Nikos Tzevelekos, \emph{Introduction to categories and
+  categorical logic}, New structures for physics, Springer, 2010, pp.~3--94.
+
 \bibitem{biologia}
 Armando Bazzani, Marcello Buiatti, and Paolo Freguglia, \emph{Metodi matematici
   per la teoria dell’evoluzione}, Springer Science \& Business Media, 2011.

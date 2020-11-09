@@ -2,33 +2,33 @@
 \label{sec:org50db6c2}
 We can generalise the definition above to encompass Ramsey sentences:
 \begin{definition}
-  Let $\clT,\clO$ be two categories; a \emph{Ramsey map}, or a \emph{$(n,m)$-ary Ramsey map} is a profunctor $\fkK : \clT^n \pto \clO^m$; note that we allow $n,m$ to be zero; in that case, $\clA^0$ is understood to be the terminal category $\boldsymbol{1}$.
+	Let $\clT,\clO$ be two categories; a \emph{Ramsey map}, or a \emph{$(n,m)$-ary Ramsey map} is a profunctor $\fkK : \clT^n \pto \clO^m$; note that we allow $n,m$ to be zero; in that case, $\clA^0$ is understood to be the terminal category $\boldsymbol{1}$.
 \end{definition}
 The intuition behind this definition is as follows: given $\uT\in\clT^n, \uO\in\clO^m$, the set $\fkK(\uT, \uO)$ represents the type of proofs that the observational tuple $\uO$ admits a description in terms of the theoretical tuple $\uT$.
 
 This formalism allows to speak about particular worlds, obtained as presheaf categories over observational $\clO$; if $\clT, \clO$ is a theoretical pair, we can instantiate \autoref{nervereal} above in the particular case where $\clW = [\clO^\op, \Set]$ (observe that in this case $\clW$ is a Yaldabaoth). We can thus address a certain number of questions, arising from the canonical adjunction obtained by virtue of \autoref{equ_prof_cocont}:% and \autoref{}:
 \[
-  \xymatrix{ [(\clO^m)^\op, \Set] \ar@<3pt>[r] & \ar@<3pt>[l] [(\clT^n)^\op, \Set];}
+	\xymatrix{ [(\clO^m)^\op, \Set] \ar@<3pt>[r] & \ar@<3pt>[l] [(\clT^n)^\op, \Set];}
 \]
 It is worth to mention that since the diagram
 \[
-\vcenter{\xymatrix{
-  (\clO^m)^\op \ar[rr]\ar[dr]&& [(\clT^n)^\op, \Set] \ar[dl]\\
-  & [(\clO^m)^\op, \Set]
-}}
+	\vcenter{\xymatrix{
+			(\clO^m)^\op \ar[rr]\ar[dr]&& [(\clT^n)^\op, \Set] \ar[dl]\\
+			& [(\clO^m)^\op, \Set]
+		}}
 \]
 is pseudocommutative, the composition $L\circ y$ s equal to (the mate of) $\fkK$. This means: $\clO$-models, when interpreted inside $\clT$-models, carry representations corrisponding to the observational tokens interpreted in $\clT$-models; that is, the representation is coherent over observational tokens, that is\dots
 \begin{remark}
-  The operation
-  \[\exists \uX . \fkK(\uO, \uX)\]
-  translates into
-  \[\lambda \uO.\fkK(\uO, F\uO)\]
-  whenever there is an adjunction $F : \clO \leftrightarrows \clT : G$ between the theoretical and the observable. This, together with the fact that $F\dashv G$ iff $F^*\cong G_*$ iff $G^*\cong F_*$, suggests the following intuition: in presence of a `botched isomorphism' between observational and theoretical, witnessed by the adjunction $(F,G)$, we consider the theoretical trace left by the (image under $F$ of the) observational tokens, so that the dependency of $\fkK$ from $\uT$ is `eliminated' by means of the adjunction.
-  
-  Clearly, the opposite procedure is possible: the adjunction $(F,G)$ allows to consider the observational trace left by the image of a theoretical token $\uT$ under $G$, so that 
-  \[ \exists \uX . \fkK(\uO, \uX) \equiv \lambda \uO.\fkK(G\uT, \uT) \]
+	The operation
+	\[\exists \uX . \fkK(\uO, \uX)\]
+	translates into
+	\[\lambda \uO.\fkK(\uO, F\uO)\]
+	whenever there is an adjunction $F : \clO \leftrightarrows \clT : G$ between the theoretical and the observable. This, together with the fact that $F\dashv G$ iff $F^*\cong G_*$ iff $G^*\cong F_*$, suggests the following intuition: in presence of a `botched isomorphism' between observational and theoretical, witnessed by the adjunction $(F,G)$, we consider the theoretical trace left by the (image under $F$ of the) observational tokens, so that the dependency of $\fkK$ from $\uT$ is `eliminated' by means of the adjunction.
+
+	Clearly, the opposite procedure is possible: the adjunction $(F,G)$ allows to consider the observational trace left by the image of a theoretical token $\uT$ under $G$, so that
+	\[ \exists \uX . \fkK(\uO, \uX) \equiv \lambda \uO.\fkK(G\uT, \uT) \]
 \end{remark}
-When the pair arity coarity of a 
+When the pair arity coarity of a
 \begin{remark}
-  The presence of a (generalised) Ramsey map
+	The presence of a (generalised) Ramsey map
 \end{remark}

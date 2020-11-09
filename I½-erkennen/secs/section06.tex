@@ -4,29 +4,29 @@ When working with categorified relations, it is unnatural and somewhat restricti
 
 This intuition is based on the proportion
 \begin{center}
-  truth values : proposition = section : presheaf
+	truth values : proposition = section : presheaf
 \end{center}
 In simple terms, categorifying a proposition $P : X\to \{0,1\}$ that can or cannot hold for an element $x$ of a set $X$, we shall marry the constructive church and say that there is an entire \emph{type} $PC$, image of an object $C\in\clC$ under a functor $P : \clC \to \Set$, whose \emph{terms} are the \emph{proofs} that $PC$ holds true. This is nothing but the propositions-as-types philosophy, in (not so much) disguise: \cite{a,b,c}
 
 The important point for us is that the dialectical tension between observational and theoretical can be faithfully represented through profunctor theory; one can think of propositional functions as relations $(x,y)\in R$ iff the pair $x,y$ renders $\phi$ true; we use this idea, suitably adapted to our purpose and categorified. This very natural extension of propositional calculus, pushed to its limit, yields the following reformulation of the `tension between observational and theoretical' of \cite{u,v,w}
 \begin{definition}\label{11_ramsey}
-  Let $\clT,\clO$ be two small categories, dubbed respectively the \emph{theoretical} and the \emph{observational} settings. A \emph{$(1,1)$-ary Ramsey map} is merely a profunctor 
-  \[\fkK : \clT^\op \pto \clO\]
-  or, spelled out completely, a functor $\fkK : \clT\times \clO \to \Set$.
+	Let $\clT,\clO$ be two small categories, dubbed respectively the \emph{theoretical} and the \emph{observational} settings. A \emph{$(1,1)$-ary Ramsey map} is merely a profunctor
+	\[\fkK : \clT^\op \pto \clO\]
+	or, spelled out completely, a functor $\fkK : \clT\times \clO \to \Set$.
 \end{definition}
 Particular $(1,1)$-ary Ramsey maps can be obtained by elementary means:
 \begin{example}
- Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_* := \clB(1,F) : \clB^\op\times \clA\to\Set$ and a profunctor $F^* := \clB(F,1) : \clA^\op\times\clB \to \Set$ as in \autoref{nervereal}; the two functors are mutually adjoint, $F^*\dashv F_*$, see \cite{}. This yield an example of what we call \emph{representable} Ramsey maps. \foo{Say more; also, why (1,1)-ary? Wait and see}
+	Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_* := \clB(1,F) : \clB^\op\times \clA\to\Set$ and a profunctor $F^* := \clB(F,1) : \clA^\op\times\clB \to \Set$ as in \autoref{nervereal}; the two functors are mutually adjoint, $F^*\dashv F_*$, see \cite{}. This yield an example of what we call \emph{representable} Ramsey maps. \foo{Say more; also, why (1,1)-ary? Wait and see}
 \end{example}
 \begin{definition}[Observational and theoretical nucleus]
-  Let $\fkR : \clT^\op\times \clO \to\Set$ be a Ramsey map, and $\hat R$ the associated canvas. Let 
-  \[ \Lan_{\yon_\clO}\hat R : [\clO^\op,\Set] \leftrightarrows [\clT^\op,\Set] : N_{\hat R} \]
-  be the adjunction between presheaf categories determined by virtue of \autoref{equ_prof_cocont}. Let us consider the equivalence of categories between the fixpoints of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$; this is the equivalence between the \emph{observational nucleus} $Fix(T)\subseteq [\clO^\op,\Set]$ and the \emph{theoretical nucleus} $Fix(S)\subseteq [\clT^\op,\Set]$.
+	Let $\fkR : \clT^\op\times \clO \to\Set$ be a Ramsey map, and $\hat R$ the associated canvas. Let
+	\[ \Lan_{\yon_\clO}\hat R : [\clO^\op,\Set] \leftrightarrows [\clT^\op,\Set] : N_{\hat R} \]
+	be the adjunction between presheaf categories determined by virtue of \autoref{equ_prof_cocont}. Let us consider the equivalence of categories between the fixpoints of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$; this is the equivalence between the \emph{observational nucleus} $Fix(T)\subseteq [\clO^\op,\Set]$ and the \emph{theoretical nucleus} $Fix(S)\subseteq [\clT^\op,\Set]$.
 \end{definition}
 \begin{remark}
-Observational nucleus and theoretical nucleus always form equivalent categories; the tension in creating a satisfying image of reality as it is observed oscillates between the desre to enlarge as much as possible the subcategory of $[\clO^\op,\Set]$ with which our theoretical model is equivalent, where we can have access to $\clT, [\clT^\op, \Set]$ only.
+	Observational nucleus and theoretical nucleus always form equivalent categories; the tension in creating a satisfying image of reality as it is observed oscillates between the desre to enlarge as much as possible the subcategory of $[\clO^\op,\Set]$ with which our theoretical model is equivalent, where we can have access to $\clT, [\clT^\op, \Set]$ only.
 \end{remark}
-The reader might have observed, now, that there is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{def_profu} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$. 
+The reader might have observed, now, that there is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{def_profu} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$.
 
 
 
@@ -34,8 +34,8 @@ This might help to solve the conundrum posed by the existence of `fictional obje
 
 The notion of Ramsey map as given above is unnecessarily restrictive, and does not account for many sorts of configurations that can occur in practice:
 \begin{itemize}
-  \item a single observational token $O$ can't be described by a single theoretical token $T_1$, but instead needs $T_1,\dots,T_r$;
-  \item inverting the r\^oles, a single theoretical token describes not only $O$, but different $O_1,\dots,O_s$.
+	\item a single observational token $O$ can't be described by a single theoretical token $T_1$, but instead needs $T_1,\dots,T_r$;
+	\item inverting the r\^oles, a single theoretical token describes not only $O$, but different $O_1,\dots,O_s$.
 \end{itemize}
 Thus we must admit \emph{multiple} arguments for the domain and codomain of a Ramsey map. This yields the notion of a \emph{$(n,m)$-ary Ramsey map}.
 \subsection{Speakable and unspeakable: more on nuclei}
