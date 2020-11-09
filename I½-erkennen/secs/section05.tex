@@ -8,27 +8,8 @@ It is worth to mention how the construction of $\clT_L$ goes, from \cite{lambek1
 
 From $\clT_L$ it is possible to carve a cartesian closed category, whose obects are denoted $\tilde{b}$ as $b$ runs over the basic types of $L$. Then, we define recursively a \emph{semantic translation} operation as follows:
 \[ \trn{b}:=\tilde{b} \,,\qd \trn{T\times U}:=\trn{T}\times\trn{U} \,,\qd \trn{T\to U}:=\trn{T}\Rightarrow\trn{U}\,, \]
-and on typed terms as the set of rules:
-\begin{gather*}
-	\begin{array}{cc}
-		\infer{\trn{\Gamma,x:T\vdash x:T} := \pi_2:\trn{\Gamma}\times\trn{T}\to\trn{T}}{}
-		 &
-		\infer{\trn{\Gamma\vdash\pi_1 t:T}:=\trn{\Gamma}\overset{f}{\to}\trn{T}\times\trn{U}\overset{\pi_1}{\to}\trn{T}}{%
-			\trn{\Gamma\vdash t:T\times U}=f:\trn{\Gamma}\to\trn{T}\times\trn{U}}
-	\end{array}\\
-	\infer{\trn{\Gamma\vdash \ang{t,u}:T\times U}:=\trn{\Gamma}\overset{\ang{f,g}}{\to}\trn{T}\times\trn{U}}{%
-		\trn{\Gamma\vdash t:T}=f:\trn{\Gamma}\to\trn{T}\qd[2]\trn{\Gamma\vdash u:U}=g:\trn{\Gamma}\to\trn{U}}
-	\\
-	\begin{array}{cc}
-		\infer{\trn{\Gamma\vdash\lambda x.\,t:T\to U}:=\Lambda(f):\trn{\Gamma}\to\funsp{\trn{T}}{\trn{U}}}{%
-			\trn{\Gamma,x:T\vdash t:U}=f:\trn{\Gamma}\times\trn{T}\to\trn{U}}
-		 &
-		\infer{\trn{\Gamma\vdash t\,u: U}:=\trn{\Gamma}\overset{\ang{f,g}}{\to}\funsp{\trn{T}}{\trn{U}}\times\trn{T}
-			\overset{\text{ev}}{\to}\trn{U}}{%
-			\trn{\Gamma\vdash t:T\to U}=f\qd[2]\trn{\Gamma\vdash u:T}=g}
-	\end{array}
-\end{gather*}
-\todo[inline]{gotta fix}
+and on typed terms as the set of rules in \cite[1.6.5]{abramskyno}.
+
 The resulting categorical semantics is \emph{sound}, i.e.
 \[ t=_\lambda u \implies \trn{t}=\trn{u} \]
 for every term $t,u$. It is however not \emph{complete}, in the sense that
