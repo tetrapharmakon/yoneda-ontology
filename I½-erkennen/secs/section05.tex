@@ -15,8 +15,8 @@ The resulting categorical semantics is \emph{sound}, i.e.
 for every term $t,u$. It is however not \emph{complete}, in the sense that
 \[ \lsem t \rsem = \lsem u \rsem \text{\qd yet \qd} t\neq_\lambda u\,. \]
 It is possible to build a new category $\clC_\lambda$ providing a sound and complete term model of (a fragment of simply-typed) $\lambda$-calculus; yet, the specifics of this construction are of little interest for the present discussion.
-\begin{definition}[World, Yaldabaoth]\label{mondo_yalda}
-	A \emph{world} is a large category $\clW$; a \emph{Yaldabaoth} is a world that, as a category, admits all small colimits.\footnote{Also known as \emph{Yaltabaoth} or \emph{Ialdabaoth}, \dots}
+\begin{definition}[World, Yuggoth]\label{mondo_yalda}
+	A \emph{world} is a large category $\clW$; a \emph{Yuggoth} is a world that, as a category, admits all small colimits.
 \end{definition}
 Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor
 \[\xymatrix{\clL \ar[r]^\phi & \clW.}\]
@@ -28,7 +28,7 @@ A canvas $\phi : \clL \to \clW$ is a \emph{\science} if $\phi$ is a dense functo
 		\item If $\clW$ is a world, we obtain a \emph{representation} functor
 		      \[ \xymatrix{\clW \ar[r] & [\clL^\op, \Set];} \]
 		      this means: given a canvas $\phi$ of the world, the latter leaves an image on the canvas.
-		\item If in addition $\clW$ is a Yaldabaoth, we obtain a NR-adjunction
+		\item If in addition $\clW$ is a Yuggoth, we obtain a NR-adjunction
 		      \[\xymatrix{\clW \ar@<3pt>[r] & \ar@<3pt>[l] [\clL^\op, \Set];}\]
 		      this has to be interpreted as: if $\clW$ is sufficiently expressive, then models of the theory that explains $\clW$ through $\phi$ can be used to acquire a two-way knowledge. Phenomena have a theoretical counterpart in $[\clL^\op,\Set]$ via the nerve; theoretical objects strive to describe phenomena via their realisation.
 		\item If an $\clL$-canvas $\phi : \clL \to \clW$ is a \science, `the world' is a full subcategory of the class of all modes in which `language' can create interpretation.
@@ -58,9 +58,9 @@ The language of category theory allows for a refined rephrasing of the previous 
 \begin{enumtag}{st}
 	\item a formal language $\clL$;
 	\item the syntactic category $T_\clL$, obtained as in \cite{lambek1988introduction};
-	\item the category of functors $\Qat[T_\clC, \clS]$, whose codomain is a Yaldabaoth.
+	\item the category of functors $\Qat[T_\clC, \clS]$, whose codomain is a Yuggoth.
 \end{enumtag}
-More than often, our theories will be $\Set$-scientific: in such case we just omit the specification of the semantic Yaldabaoth, and call them \emph{scientfic theories}.
+More than often, our theories will be $\Set$-scientific: in such case we just omit the specification of the semantic Yuggoth, and call them \emph{scientfic theories}.
 
 Since the category $\Qat[T_\clC, \Set]$ determines $\clL$ and $T_\clL$ completely, up to Cauchy-completion \cite{borceuso-cauchy}, we can see that the triple $(\clL, T_\clL, \Qat[T_\clL,\Set])$ can uniquely be recovered from its model category $\Qat[T_\clC, \Set]$. We thus comply to the additional abuse of notation to call `scientific theory' the category $\Qat[T_\clL,\Set]$ for some $T_\clL$.
 
