@@ -27,7 +27,7 @@
                , verbatim
                , calligra
               %  , inconsolata
-              %  , minted
+               , minted
                }
 \RequirePackage{tikz}
 	% \usetikzlibrary{calc}
@@ -199,5 +199,7 @@
 
 % \newcommand{\pto}{\mathop{\ooalign{\hfil\kern-2pt$\mapstochar$\hfil\cr\hfil$\to$\hfil}}}
 
-\usepackage{turnstile}
+% \usepackage{turnstile}
 % \newcommand{\adjunct}[2]{\nsststile{#2}{#1}}
+
+\newcommand{\mil}[1]{\mintinline{haskell}{#1}}
