@@ -1,49 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}[2018/12/01]
-\ProvidesPackage{fouche}
+\ProvidesPackage{fouche-copy}
   [Fouche's personal]
 
-\RequirePackage{xparse}
-
-\ExplSyntaxOn
-\NewDocumentCommand{\makeabbrev}{mmm}
- {
-  \yoruk_makeabbrev:nnn { #1 } { #2 } { #3 }
- }
-
-\cs_new_protected:Npn \yoruk_makeabbrev:nnn #1 #2 #3
- {
-  \clist_map_inline:nn { #3 }
-   {
-    \cs_new_protected:cpn { #2 } { #1 { ##1 } }
-   }
- }
-\ExplSyntaxOff
-
-\makeabbrev{\textbf}{bf#1}{
-  a,b,c,d,e,g,h,i,j,k,l,m,n,o,p,q,r,t,u,v,w,x,y,z,%
-  A,B,C,D,E,G,H,I,J,K,L,M,N,O,P,Q,R,T,U,V,W,X,Y,Z }
-\makeabbrev{\boldsymbol}{bs#1}{%
-    a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
-    A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
-\makeabbrev{\mathsf}{sf#1}{
-  a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
-  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
-\makeabbrev{\mathfrak}{fk#1}{
-  a,b,c,d,e,f,g,h,j,k,i,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
-  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
-\makeabbrev{\mathcal}{cl#1}{
-  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
-\makeabbrev{\mathbb}{bb#1}{
-  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
-\makeabbrev{\underline}{u#1}{
-  a,b,c,d,e,f,g,h,j,k,i,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
-  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
-
+% \RequirePackage[pdftex]{graphicx}
 \RequirePackage{amsthm}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T2A]{fontenc}
 \RequirePackage[svgnames]{xcolor}
-% \RequirePackage[pdftex]{graphicx}
 \RequirePackage{ amsfonts
                , amsmath
                , amssymb
@@ -54,7 +17,7 @@
                , mathtools
                , hyphenat
                , tensor
-               , todonotes
+              %  , todonotes
                , stackrel
                , savesym
                , setspace
@@ -63,19 +26,14 @@
                , tcolorbox
                , verbatim
                , calligra
-               , inconsolata
-               , minted
+              %  , inconsolata
+              %  , minted
                }
 \RequirePackage{tikz}
 	% \usetikzlibrary{calc}
 	% \usetikzlibrary{matrix,arrows}
 
 \RequirePackage[all,2cell]{xy}\UseAllTwocells
-
-% \RequirePackage[
-%    sort
-%  , numbers
-% ]{natbib}
 
 \RequirePackage[%
     hyperfootnotes=true
@@ -87,13 +45,6 @@
   , linkcolor=blue!40!black%
   , urlcolor=blue!40!black%
   ]{hyperref}
-
-% \RequirePackage[%
-% 	  left=3.5cm
-% 	, right=3.5cm
-% 	, top=4cm
-% 	, bottom=6cm%
-% ]{geometry}
 
 \tikzset{commutative diagrams/.cd,arrow style=tikz,diagrams={>=stealth'}}
 \def\To{\Rightarrow}

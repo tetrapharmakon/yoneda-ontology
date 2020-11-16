@@ -1,12 +1,52 @@
 \documentclass[a4paper]{../birkjour}
 
 \usepackage{../fouche-copy}
+\RequirePackage{xparse}
+
+\ExplSyntaxOn
+\NewDocumentCommand{\makeabbrev}{mmm}
+ {
+  \yoruk_makeabbrev:nnn { #1 } { #2 } { #3 }
+ }
+
+\cs_new_protected:Npn \yoruk_makeabbrev:nnn #1 #2 #3
+ {
+  \clist_map_inline:nn { #3 }
+   {
+    \cs_new_protected:cpn { #2 } { #1 { ##1 } }
+   }
+ }
+\ExplSyntaxOff
+
+\makeabbrev{\textbf}{bf#1}{
+  a,b,c,d,e,g,h,i,j,k,l,m,n,o,p,q,r,t,u,v,w,x,y,z,%
+  A,B,C,D,E,G,H,I,J,K,L,M,N,O,P,Q,R,T,U,V,W,X,Y,Z }
+\makeabbrev{\boldsymbol}{bs#1}{%
+    a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
+    A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+\makeabbrev{\mathsf}{sf#1}{
+  a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
+  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+\makeabbrev{\mathfrak}{fk#1}{
+  a,b,c,d,e,f,g,h,j,k,i,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
+  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+\makeabbrev{\mathcal}{cl#1}{
+  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+\makeabbrev{\mathbb}{bb#1}{
+  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+\makeabbrev{\underline}{u#1}{
+  a,b,c,d,e,f,g,h,j,k,i,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,%
+  A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z }
+
+
 \input{../macros.tex}
 
 \def\ang#1{\langle #1 \rangle}
 \def\lsem{\textcolor{gray!60}{[}}
 \def\rsem{\textcolor{gray!60}{]}}
 \def\trn#1{\lsem #1\rsem}
+
+\def\f#1{\textcolor{red}{#1}}
 
 \newcounter{quad_i}
 \newcommand{\qd}[1][]{\ifthenelse{\equal{#1}{}}{\quad}{\setcounter{quad_i}{0}\whiledo{\value{quad_i}<#1}{\quad\stepcounter{quad_i}}}}
@@ -18,8 +58,8 @@
 % \usepackage{braket}
 %== `braket' confligge con alcune macro già esistenti 
 \newcommand{\bk}[1]{\langle #1\rangle}
-\begin{document} 
-% \scriptsize
+\begin{document}
+\scriptsize
 \input{secs/abstract.tex}
 \maketitle
 
