@@ -21,8 +21,8 @@ From here, using a process known as `categorification' \cite{baez_catego}, we ca
 		\item objects the small categories $\clA,\clB,\clC,\dots$;
 		\item 1-cells the profunctors $\fkR : \clA \pto \clB$, and composition law between $\clA \overset{\fkR}{\pto} \clB \overset{\fkP}{\pto} \clC$ given by the assignment
 		\[ (A,C)\mapsto \int^B \fkR(A,B)\times\fkP(B,C) \]
-		(see \cite{} for the definition). The identity 1-cell is the hom functor $\hom_\clA : \clA^\op\times\clA \to \Set$;
-		\item 2-cells $\fkR\To\fkR'$ the natural transfomations $\alpha : \xymatrix{\clA^\op\times\clB \rtwocell^{\fkR}_{\fkR'}{\alpha}& \Set}$.
+		(see \cite[6.2.10]{Bor2} for the definition). The identity 1-cell is the hom functor $\hom_\clA : \clA^\op\times\clA \to \Set$;
+		\item 2-cells $\fkR\To\fkR'$ the natural transfomations $\alpha : \xymatrix{**[l] \clA^\op\times\clB \rtwocell^{\fkR}_{\fkR'}{\alpha}& **[r] \Set}$.
 	\end{enumtag}
 \end{definition}
 The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs that $(A,B)\in\clA^\op\times\clB$ are in a  `generalised relation' $\fkR$. This intuition agrees with the fact that when instead of $\Set$ a profunctor $\fkR$ takes values in the 0-dimensional category $\{0\le 1\}$, then the type of proofs that $R(A,B)$ is a yes/no space.
@@ -53,7 +53,7 @@ Taking as morphisms between discrete fibrations the morphisms in $\Qat/\clC$, we
 \begin{proposition}\label{fibelem}
 	The category of elements $\elts{\clC}{W}$ of a functor $W : \clC\to \Set$ comes equipped with a canonical \emph{discrete fibration} to the domain of $W$, which we denote $\Sigma : \elts{\clC}{W}\to \clC$, defined forgetting the distinguished element $u\in Wc$.
 \end{proposition}
-With this terminology at hand, we can consider the \emph{category of elements} \ref{eltsf} of a functor $F : \clC\to \Set$; this sets up a functor from $\Qat(\clC,\Set)$ to the category of discrete fibrations over $\clC$: the Grothendieck construction asserts that this is an equivalence of categories.%, as defined in \ref{def:equcat}.
+With this terminology at hand, we can consider the \emph{category of elements} \autoref{eltsf} of a functor $F : \clC\to \Set$; this sets up a functor from $\Qat(\clC,\Set)$ to the category of discrete fibrations over $\clC$: the Grothendieck construction asserts that this is an equivalence of categories.%, as defined in \ref{def:equcat}.
 \begin{theorem}\label{thm:equconfib}
 	There is an equivalence of categories
 	\[
@@ -102,7 +102,7 @@ There is of course a similar correspondence for \emph{covariant} functors; the s
 		\\ \bottomrule
 	\end{tabular}
 \end{center}
-\f{La notazione va uniformata a questa scelta}
+% \f{La notazione va uniformata a questa scelta}
 \begin{corollary}
 	Given a profunctor $\fkR : \clA \pto \clB$, regarded as a functor $R : \clA^\op\times \clB \to \Set$, we can consider the category of elements $\elts{\clA^\op\times\clB}{R}$; this is often called the \emph{collage} or the \emph{graph} of $R$. In this case, we denote the category $\elts{\clA^\op\times\clB}{R}$ as $\clA\uplus_R\clB$, to stress the intuition that $R$ prescribes a way to glue together two categories $\clA,\clB$ specifying a set of `fake' arrows $R(A,B)$ that consistently interact with the arrows in $\clA,\clB$ (compare with \autoref{hint_at_collage}, and with \autoref{11_ramsey} below).
 \end{corollary}
