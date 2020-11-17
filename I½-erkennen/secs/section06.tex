@@ -18,9 +18,11 @@ The important point for us is that the dialectical tension between observational
 	\[\fkK : \clT^\op \pto \clO\]
 	or, spelled out completely, a functor $\fkK : \clT\times \clO \to \Set$.
 \end{definition}
-Particular $(1,1)$-ary Ramsey maps can be obtained by elementary means:
+By accepting the prefix ``$(1,1)$-'' we ask the reader the leap of faith that \autoref{11_ramsey} is but a particular instance of a more general definition, \autoref{mn_ramsey}. 
+
+Before delving into this generalisation, however, a more elementary remark is in order: there is a particularly elementary recipe to generate $(1,1)$-ary Ramsey maps.
 \begin{example}
-	Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_* := \clB(1,F) : \clB^\op\times \clA\to\Set$ and a profunctor $F^* := \clB(F,1) : \clA^\op\times\clB \to \Set$ as in \autoref{nervereal}; the two functors are mutually adjoint, $F^*\dashv F_*$, see \cite{}. This yield an example of what we call \emph{representable} Ramsey maps. \foo{Say more; also, why (1,1)-ary? Wait and see}
+	Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_* := \clB(1,F) : \clB^\op\times \clA\to\Set$ and a profunctor $F^* := \clB(F,1) : \clA^\op\times\clB \to \Set$ as in \autoref{nervereal}; the two functors are mutually adjoint, $F^*\dashv F_*$, see \cite[6.2]{Bor2}. This yield an example of what we call \emph{representable} Ramsey maps.
 \end{example}
 \begin{definition}[Observational and theoretical nucleus]
 	Let $\fkR : \clT^\op\times \clO \to\Set$ be a Ramsey map, and $\hat R$ the associated canvas. Let
@@ -31,8 +33,6 @@ Particular $(1,1)$-ary Ramsey maps can be obtained by elementary means:
 	Observational nucleus and theoretical nucleus always form equivalent categories; the tension in creating a satisfying image of reality as it is observed oscillates between the desre to enlarge as much as possible the subcategory of $[\clO^\op,\Set]$ with which our theoretical model is equivalent, where we can have access to $\clT, [\clT^\op, \Set]$ only.
 \end{remark}
 The reader might have observed, now, that there is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{def_profu} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$.
-
-
 
 This might help to solve the conundrum posed by the existence of `fictional objects'. Sherlock Holmes clearly is the object of a theoretical category. Gandhi is the object of an observational category. But as linguistic objects they can't be told apart completely; they can be at most separated by a profunctor embedding the former in a realistic but fictitious model (that is, for example, the Reichenbach falls), and representing the latter as part of a fictional model (for example, as part of a movie directed by R. Attenborough).
 
