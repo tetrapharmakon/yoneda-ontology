@@ -1,7 +1,9 @@
 \section{Semantical conception of theories}
-During the XXth century it was considered necessary to develop a formal treatment of scientific theories. The Wiener Kreis verificationist paradigm/account, and the Neurath theory of `protocollar statements', was the input to elaborate a completely semantical framework for working with scientific theories, and the clue of a pan-linguistic vision of philosophy of science.
+Along the XXth century there have been many attempts towards a formal definition of a scientific theory. The \emph{Wiener Kreis} verificationist paradigm/account, and Neurath's theory of `protocollar statements', has given the initial input to elaborate a completely semantic framework for scientific theories, and spurred the search for a pan-linguistic vision of philosophy of science.
 
-For the sake of strictness the formal account in which Carnap and associates provide their notion of `theory' is known in literature as \emph{syntactical conception of theories} \cite{?} while the introduction of term `semantic' is due to later developments. But the field of epistemology that the logical neopositivism started one can call `semantics of theories', because some characteristics, and above all the underlying ideology, are the same from Carnap to Beth to Suppes, up to the recent canonical uses of physical handbooks.
+The formal account in which e.g. Carnap \cite{?} provides his notion of `theory' is known in the literature as \emph{syntactical conception of theories} \cite{?}, while the term `semantic' is due to later developments. Yet, the field of epistemology that the logical neopositivism started can legitimately be called a `semantics of theories', because some of its features, if not the underlying ideology, are the same throughout the works of Carnap \cite{?},  Beth \cite{?}, and Suppes \cite{?}, all the way up to the recent canonical uses of physical handbooks.
+
+{\color{red} Non è chiarissimo cosa ci sia scritto\dots}
 
 	[scrivere quali sono queste caratteristiche]
 
@@ -31,10 +33,12 @@ Nella concezione neopositivistica la distinzione tra legge teorica e legge empir
 \end{remark}
 
 
-\begin{definition} [Wiener Theory]
-	A theory $T$ consists in a formal system $\mathcal{F_L}$ and a class of models $\{\mathcal{K}_n | n \in \N \}$. The formal system consists in:
+\begin{definition}[Wiener Theory]
+	A theory $(\clF_\clL, \clK_\bullet)$ consists of a formal system $\clF_\clL$ and a class of models $\{\mathcal{K}_n \mid n \in \N \}$ indexed by the set of natural numbers. 
+	{\color{red} Qual è l'intuizione dietro questa definizione? Perché vuoi un insieme numerabile di modelli?\dots}
+	The formal system $\clF_\clL$ consists in its own right of:
 	\begin{itemize}
-		\item A language $\mathcal{L}$
+		\item A formal language $\mathcal{L}$ \fo{of what kind?}
 		\item Two vocabularies: $\mathcal{V_T}$ for theoretical terms and $\mathcal{V_O}$ for observational terms 
 		\item Given $\mathsf{L}$ a first-order logic $\mathcal{V}_{\mathcal{T}}^L = \mathcal{V_T} \cup \mathsf{L}$ is a logical vocabulary of $T$
 	\end{itemize}    
