@@ -50,8 +50,8 @@ In termini profuntoriali infatti la distinzione tra osservazionale e teoretico s
 	\clT  && \clO 
 }} \] (cf. \autoref{def:dfib} and in particular \autoref{collage_explaned}) che permette di ricostruire i termini teoretici e osservazionali per proiezione.
 \begin{remark}\label{hint_at_collage}
-	Anche in questa visione `sintattica' \cite{giunti2016} una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\clK$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità `osservazionali' e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\clV_\clT$ che contiene \emph{termini teorici} e $\clV_\clO$ che contiene \emph{termini osservativi}. 
-	%Intuitivamente $\mathcal{F_L} = \clV_\clT \cup \clV_\clO$, ma piu precisamente $\mathcal{F_L} = \clV_\clT \uplus_\varphi \clV_\clO$.
+	Anche in questa visione `sintattica' \cite{giunti2016} una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\clK$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità `osservazionali' e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\clT$ che contiene \emph{termini teorici} e $\clO$ che contiene \emph{termini osservativi}. 
+	%Intuitivamente $\mathcal{F_L} = \clT \cup \clO$, ma piu precisamente $\mathcal{F_L} = \clT \uplus_\varphi \clO$.
 \end{remark}
 
 
@@ -61,32 +61,28 @@ In termini profuntoriali infatti la distinzione tra osservazionale e teoretico s
 	The formal system $\clF_\clL$ consists in its own right of:
 	\begin{itemize}
 		\item A formal language $\mathcal{L}$ \fo{of what kind?}
-		\item Two vocabularies: $\clV_\clT$ for theoretical terms and $\clV_\clO$ for observational terms 
-		\item Given $\mathsf{L}$ a first-order logic $\mathcal{V}_{\mathcal{T}}^L = \clV_\clT \cup \mathsf{L}$ is a logical vocabulary of $T$
+		\item Two vocabularies: $\clT$ for theoretical terms and $\clO$ for observational terms 
+		\item Given $\mathsf{L}$ a first-order logic $\mathcal{V}_{\mathcal{T}}^L = \clT \cup \mathsf{L}$ is a logical vocabulary of $T$
 	\end{itemize}    
 \end{definition}
 The vocabularies exhaust all the terms of formal system in the sense that 
-\[\mathcal{F_L} = \clV_\clT \cup \clV_\clO \cup \mathcal{V}_{\mathcal{T}}^L.\]
+\[\mathcal{F_L} = \clT \cup \clO \cup \mathcal{V}_{\mathcal{T}}^L.\]
 
 In carnapian, and in general neopositivistic, account a theory is expressible as a sentence formed by terms $\tau_1, \dots, \tau_k$ taken from one of the two dictionaries \cite{?}. 
 
-Non è chiaro cosa siano i termini di $\clV_\clO$ nell'epistemologia viennese: Carnap ritiene che nella sentence-form della teoria debbano intervenire delle correspondance rules che associno ad ogni termine di $\clV_\clO$, o O-term, il proprio corrispondente elemento di $\clV_\clT$ o T-term. \footnote{In generale Carnap sembra assumere che $\clV_\clO \subset \clV_\clT$ ma è ambiguo sul non identificare gli O-terms come tipologie di T-terms}
+In the Wiener Kreis paradigm, the formal specification of $\clO$ is left unclear; Carnap \cite{} posits the existence of \emph{correspondance rules} between $\clO$ and $\clT$, associating to each term $o$ of $\clO$, or O-term, its companion in $\clT$, or the T-term $\tau$ derived from $o$.\footnote{In general, Carnap holds that $\clO \subset \clT$, but at the same time he blurs the features of this identification of observational terms as `types of T-terms'.}
 
-Noi possiamo mantenere la stessa idea usando, più agevolmente, una \emph{translate function} $\varphi$ che "traduca" gli O-terms in T-terms. 
+We can maintain a similar idea, just phrased in a slightly more precise way: we posit the existence of a function $\varphi$ that translates O-terms into T-terms.\footnote{In passing, it is worth to notice that Carnap's intuition fits nicely in our functorial framework: assume $\clO,\clT$ exhibit some kind of structure, and that $i : \clO\subseteq\clT$ \emph{as substructures} (e.g., assume that they are some sort of ordered sets, and that the order on $\clO$ is induced by the inclusion); then, a \emph{left} (resp., \emph{right}) \emph{translation function} $\varphi_L$ (resp., $\varphi_R$), is a left (resp., right) adjoint for the inclusion $i : \clO\hookrightarrow \clT$. We will not expand further on this idea.}
 
-So, a Wiener definition of a theory is 
-
-\[  T = \{ \pi_i, \varphi (\omega_j)\}_{\pi_i \in \clV_\clT, \omega_j \in \clV_\clO}
-\] 
-where $\varphi: \clV_\clO \to \clV_\clT$ such that $\omega_j \mapsto \varphi (\omega_j)$ for all $\omega_j \in \clV_\clO$. In this way it is trivial that all the terms of a theory are in the first dictionary.
+So, a Wiener definition of a theory is a suitable set of pairs $\{\bk{\tau,\varphi(\omega)} \mid \tau\in\clT, \omega \in\clO\}\subseteq \clT\times\clT$, where $\varphi: \clO \to \clT$ is called a \emph{translation function}. In this way it is trivially true that all the terms of a theory are in the first dictionary. This is akin to the \emph{graph} of the translation function $\varphi$, and not by chance: see \autoref{da_collage}.
 
 L'ulteriore idea neopositivistica è quella di costruire una versione "osservazionale" della teoria $T$ secondo un procedimento ispirato da un lavoro di Ramsey \cite{?}.
 
 
-Più semplicemente, usando def 2.1, e considerando che $\clV_\clO \subset \clV_\clT$, ci pare che la ramseyfication, non potendo nessun termine $\tau_k \in T$ uscire dal vocabolario teorico, sia un ri-tradurre nel linguaggio di $\clV_\clO$ il contenuto della teoria, sostituendo i termini teorici "puri" con delle variabili \cite{?}.
+Più semplicemente, usando def 2.1, e considerando che $\clO \subset \clT$, ci pare che la ramseyfication, non potendo nessun termine $\tau_k \in T$ uscire dal vocabolario teorico, sia un ri-tradurre nel linguaggio di $\clO$ il contenuto della teoria, sostituendo i termini teorici "puri" con delle variabili \cite{?}.
 \begin{definition}
-	Data una \emph{funzione di applicazione} $\psi: \clV_\clT \to \clV_\clO$ tale che $\pi_i \mapsto \psi (\pi_i) $ per ogni $\pi_i \in \clV_\clT$, a Ramsey-sentence of a theory $T$ is 
-	\[ \overline{T} = \{[\pi_i/x_i], \psi (\varphi (\omega_j))\} 
+	Given an \emph{application function} $\psi: \clT \to \clO$, a Ramsey-sentence of a theory $T$ is 
+	\[ \overline{T} = \{[t_i/x_i], \psi (\varphi (\omega_j))\} 
 	\]
 \end{definition}
 
@@ -101,7 +97,7 @@ Non ci pare, al di là degli intenti riduzionistici del Wiener Kreis \cite{Weinb
 
 Già agli albori dell'applicazione di metodi formali in filosofia della scienza è evidente la difficoltà di ignorare la tesi duhemeana secondo la quale "tutta l'osservazione [in fisica] è carica di teoria". 
 
-Le ambiguità carnapiane sul dominio di oggetti sui quali verterebbe la definizione viennese noi, coerenti col testo, le risolviamo indicando come dominio $\clV_\clT$. Cosa sia il mondo puro delle osservazioni al quale farebbe riferimento la Ramsey-version della teoria non è chiaro, se non un altro sotto-dizionario teorico, per l'appunto. Non a caso il neopositivismo da un iniziale fisicalismo approda ad un'ottica convenzionalista \cite{?}, in seguito ai falliti tentativi di formalizzazione di un contesto osservazionale extra-teorico. 
+Le ambiguità carnapiane sul dominio di oggetti sui quali verterebbe la definizione viennese noi, coerenti col testo, le risolviamo indicando come dominio $\clT$. Cosa sia il mondo puro delle osservazioni al quale farebbe riferimento la Ramsey-version della teoria non è chiaro, se non un altro sotto-dizionario teorico, per l'appunto. Non a caso il neopositivismo da un iniziale fisicalismo approda ad un'ottica convenzionalista \cite{?}, in seguito ai falliti tentativi di formalizzazione di un contesto osservazionale extra-teorico. 
 
 Seguendo \cite{psillos} il realismo strutturalista che ispira questi attempts si riduce ad affermare che una teoria $T$ is logically equivalent to the conjunction
 \[\overline{T} \land (\overline{T} \rightarrow T)
