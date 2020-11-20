@@ -57,8 +57,7 @@
 \title{Categorical Ontology: Functorial erkennen}
 \input{../authors.tex}
 \usepackage{booktabs}
-% \usepackage{braket}
-%== `braket' confligge con alcune macro già esistenti 
+
 \newcommand{\bk}[1]{\langle #1\rangle}
 \newcommand{\numberset}{\mathbb}
 \newcommand{\N}{\numberset{N}}
@@ -67,8 +66,8 @@
 \input{secs/abstract.tex}
 \maketitle
 
-\tableofcontents
-
+{\footnotesize\tableofcontents}
+\newpage
 % \input{secs/section01.tex}
 \input{secs/section02.tex}
 \input{secs/section03.tex}
@@ -78,4 +77,6 @@
 \input{secs/section07.tex}
 \input{secs/section08.tex}
 
+\bibliography{../allofthem}{}
+\bibliographystyle{siam}
 \end{document}
