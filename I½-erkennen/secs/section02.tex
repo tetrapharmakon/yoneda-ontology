@@ -10,23 +10,45 @@ The formal account in which e.g. Carnap \cite{?} provides his notion of `theory'
 	[sintesi delle varie concezioni; le teorie come classi di modelli $\clK$;
 		le teorie come oggetti formali]
 
-semantica non standard per teorie empiriche in cui le teorie sono sistemi formali e tutte le nozioni diventano oggetti matematici; più propriamente una \emph{teoria} diventa una struttura $(F_\clL, \clK)$ dove $F_\clL$ è il vero sistema formale e $\clK$ è la classe di tutti i suoi modelli. La nostra strategia è separare ulteriormente $F_\clL$ in due `vocabolari' (per noi, le categorie sintattiche di teorie al primo ordine), uno $P_{F_\clL}$ che rappresenta i termini puri (nel senso di Plantinga) e uno $A_{F_\clL}$ che rappresenta i termini \emph{applicati}. Ergo una teoria $\mathbf{T}$ sarà una particolare tripla $\bk{(P_{F_\clL},A_{F_\clL}), \clK}$ in cui la prima coppia configura una logica (uno `spazio degli stati' che configura una logica).
+semantica non standard per teorie empiriche in cui le teorie sono sistemi formali e tutte le nozioni diventano oggetti matematici; 
 
-La coppia $(P_{F_\clL},A_{F_\clL})$ è poi soggetta a una ulteriore condizione di ammissibilità, cf. \ref{}, chiedendo che esista un profuntore tra le due categorie sintattiche $P_{F_\clL},A_{F_\clL}$.
+More properly, a \emph{theory} becomes a structure $(F_\clL, \clK)$ where $F_\clL$ is a formal system, and $\clK$ the totality of all its interpretations. Our strategy is to further separate $F_\clL$ into two `vocabularies' (intended as syntactic categories of first order theories), one of them representing the \emph{pure} or \emph{theoretical} terms (see Plantinga \cite{}), and the other representing the \emph{applied} or \emph{observational} terms. 
 
-La specificazione del dominio di $A_{F_\clL}$ determina il tipo di teoria che stiamo considerando (scientifica, strettamente empirica, logico-matematica, metafisica).
+Thus, for us a scientific theory is a triple $\bk{(\clT,\clO), \clK}$ whose first two elements form the logic $F_\clL=(\clT,\clO)$.% cui la prima coppia configura una logica (uno `spazio degli stati' che configura una logica).
 
-Dire che $A_{F_\clL}$ determina le \emph{tipizzazioni} della teoria significa
-dire che svolge lo stesso ruolo della legge $\beta$ nella semantica dello spazio degli
-stati, mentre la classe $\clK$ è isomorfa all'insieme $\mathcal{M}$ dello spazio
-degli stati. Il tipo di $\beta$ determina il tipo di $\mathcal{M}$ che determina il
-tipo di $T = (\mathcal{M}, \beta)$. Idem nel nostro approccio: $A_{F_\clL}
-	= \{\alpha_1,\dots,\alpha_n\}$ determina il tipo, che implementa una logica che determina
-la classe $\clK$.
+The pair $(\clT,\clO)$ is subject to an additional admissibility condition, that is the existence of a meaningful relation between the theoretical world $\clT$ and the observational world $\clO$; the notion of `meaningful relation' between structured high-level systems is captured by a well-known mathematical object, a \emph{profunctor} between the two syntactic categories $\clT,\clO$. 
+
+Having outlined a general theory of scientific theories in terms of profunctors is the main contribution of the present work.
+
+Concludiamo questa sezione introduttiva con una discussione a proposito della `natura' di $\clT,\clO$.
+
+Come facciamo osservare in \cite{canont1}, il problema di dove siano situati gli oggetti sintattici che incarnano una teoria linguistica può essere risolto agilmente in una prospettiva epserienzialista: il mondo esiste in maniera innegabile, ed è una struttura sufficientemente complessa da contenere al suo interno sufficienti oggetti costituenti `concreti' di un sistema formale. E' quindi semplicemente da una porzione del mondo che ricaviamo i simboli primitivi del linguaggio.
+
+Questo problema, e la sua soluzione, si riflettono inevitabilmente nella maniera in cui le categorie $\clT$ e $\clO$ sono specificate. Nel nostro modello `il mondo' è una categoria $\clW$, unfathomable and given since the beginning of time, a cui non abbiamo altro modo di accedere se non attraverso funtori $\phi : \clL \to \clW$ (cf. \autoref{}) che rappresentano sottocategorie piccole costruite a partire dalle porzioni di $\clW$ a cui abbiamo accesso. La richiesta che $\clW$ sia sufficientemente espressiva si traduce nella richiesta (cf. \autoref{}) che $\clW$ ammetta tutti i colimiti (nel senso di \cite[??]{Bor1}). Una tale categoria si dice uno \emph{Yuggoth}, dal nome del finto pianeta dove i Mi-Go sono localizzati.
+
+When things are put in this perspective, a few remarks are in order: 
+\begin{itemize}
+	\item La specificazione del dominio di $\clO$ determina il tipo di teoria che stiamo considerando (scientifica, strettamente empirica, logico-matematica, metafisica).
+	\item Dire che $\clO$ determina le \emph{tipizzazioni} della teoria significa dire che svolge lo stesso ruolo della legge $\beta$ {\color{red} chi è beta?} nella semantica dello spazio degli stati, mentre la classe $\clK$ è isomorfa all'insieme $\mathcal{M}$ dello spazio degli stati. Il tipo di $\beta$ determina il tipo di $\mathcal{M}$ che determina il tipo di $T = (\mathcal{M}, \beta)$. Idem nel nostro approccio: $\clO 	= \{\alpha_1,\dots,\alpha_n\}$ determina il tipo, che implementa una logica che determina la classe $\clK$.
+\end{itemize}
+Questo chiude il cerchio sul problema della rappresentazione di un mondo $\clW$ in termini di una sua porzione $\clT$ a cui abbiamo accesso ermeneutico e da cui abbiamo ricavato un linguaggio.
+
+Questa rappresentazione avviene mediante funtori $\clL \to \clW$ che, grazie alla proprietà di cocompletezza di $\clW$, si estendono a funtori di rappresentazione $[\clL^\op,\Set] \leftrightarrows \clW$; il mondo del resto è inconoscibile strictly speaking: invece che a $\clW$ noi abbiamo accesso ad un suo frammento osservazionale $\clL$, da cui ricaviamo, sempre grazie alla cocompletezza di $\clW$, una ulteriore rappresentazione $[\clL^\op,\Set] \leftrightarrows \clW$. In generale, questo è tutto quello che si può dire. 
+
+Ad ipotesi aggiuntive (cf. \autoref{canvas_scienza}) sull'inclusione $\clL\subseteq \clW$, tuttavia, possiamo inferire che la totalità dei modelli $[\clL^\op,\Set]$ \emph{contiene una copia} di $\clW$. In questo senso, alle ipotesi di \autoref{canvas_scienza}, the unfathomable world is a full subcategory of the class of all modes in which language can create interpretation. Questo rovescia la prospettiva classica, e per quanto bold a statement it might seem, non è senza conseguenze: si vedano \autoref{remark_yuggoth_1}, \autoref{remark_yuggoth_2}.
 %si può generalizzare tutto ciò dicendo appunto che a seconda di come è strutturata la classe $A_{\mathcal{F_L}}$ noi possiamo distinguere le teorie anche al di fuori dell'ambito strettamente scientifico. Questa considerazione va a scomparire proprio con ciò che emerge in sezione 6: eliminando questa distinzione ottieni un account più generale di trattamento delle teorie%
 
 \subsection{The Two Dictionaries}
-Nella concezione neopositivistica la distinzione tra legge teorica e legge empirica non è dovuta alla natura ipotetica della prima (anche una legge empirica può esserlo) quanto dal fatto che i due tipi di legge contengono tipi differenti di termini \cite{?}. La distinzione è quindi formale, e indica una approccio prettamente linguistico a questioni epistemologiche.
+Nella concezione neopositivistica la distinzione tra legge teorica e legge empirica non è dovuta alla natura ipotetica della prima (anche una legge empirica può esserlo) quanto dal fatto che i due tipi di legge contengono tipi differenti di termini \cite{?}. La distinzione è quindi formale, e indica una approccio prettamente linguistico a questioni epistemologiche. La formulazione profuntoriale delle teorie scientifiche annulla con ancora maggior forza la distinzione tra l'impianto osservativo e quello teoretico/linguistico di una teoria; the two categories $\clO,\clT$ are carved out of the same substance of their Father $\clW$: one is just a portion of the world we can better control and describe.
+
+Il presente lavoro intende argomentare nella seguente direzione: primo, la distinzione tra osservazionale e teoretico è veramente figmentale. Secondo, sposando questa tesi l'impianto matematico atto a descrivere una teoria generale delle teorie scientifiche diventa piu agile e fedele.
+
+In termini profuntoriali infatti la distinzione tra osservazionale e teoretico svanisce in virtù di \autoref{da_collage} e di argomenti direttamente correlati: per prima cosa, la bicategoria dei profuntori, come definita in \autoref{}, mutuando da \cite{benabou2000distributors}, è auto-duale; ciò significa che un dato profuntore $p : \clT \pto \clO$ ammette una immagine speculare $p^\op : \clO \pto \clT$;\footnote{Questo fatto è reminiscent del fatto che bla bla una relazione non ha un dominio di definizione privilegiato; chiaramente, la categoria $\Cat$ ha una involuzione non banale data dall'opping, e questo rende leggermente più visibile, ma non meno tautologica, l'auto-involuzione di $\Prof$.} in secondo luogo, e certamente in maniera piu decisiva per la nostra tesi, come spiegato in \autoref{resoudre_la_tension} dato un generico profuntore $p : \clT \pto\clO$ possiamo costruire il ``collage'' di $\clT,\clO$ lungo $p$, ossia una nuova categoria $\clT\uplus_p\clO$, fitting in a span 
+\[ \vcenter{\xymatrix{
+	& \clT\uplus_p \clO \ar[dr]\ar[dl]& \\ 
+	\clT  && \clO 
+}} \] (cf. \autoref{def:dfib})
+che permette di ricostruire i termini teoretici e osservazionali per proiezione.
 \begin{remark}\label{hint_at_collage}
 	Anche in questa visione `sintattica' \cite{giunti2016} una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\clK$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità `osservazionali' e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\clV_\clT$ che contiene \emph{termini teorici} e $\clV_\clO$ che contiene \emph{termini osservativi}. 
 	%Intuitivamente $\mathcal{F_L} = \clV_\clT \cup \clV_\clO$, ma piu precisamente $\mathcal{F_L} = \clV_\clT \uplus_\varphi \clV_\clO$.
@@ -43,7 +65,8 @@ Nella concezione neopositivistica la distinzione tra legge teorica e legge empir
 		\item Given $\mathsf{L}$ a first-order logic $\mathcal{V}_{\mathcal{T}}^L = \clV_\clT \cup \mathsf{L}$ is a logical vocabulary of $T$
 	\end{itemize}    
 \end{definition}
-The vocabularies exhaust all the terms of formal system: $\mathcal{F_L} = \clV_\clT \cup \clV_\clO \cup \mathcal{V}_{\mathcal{T}}^L$.
+The vocabularies exhaust all the terms of formal system in the sense that 
+\[\mathcal{F_L} = \clV_\clT \cup \clV_\clO \cup \mathcal{V}_{\mathcal{T}}^L.\]
 
 In carnapian, and in general neopositivistic, account a theory is expressible as a sentence formed by terms $\tau_1, \dots, \tau_k$ taken from one of the two dictionaries \cite{?}. 
 
@@ -95,6 +118,3 @@ Il meaning postulate non era altro che the Wiener Kreis' version of the famous d
 Tolti i due estremi, gli enunciati protocollari da un lato \cite{?}, i discorsi di Heidegger dall'altro \cite{?}, esistono tutti i casi intermedi per i quali a meaning criterion (o una operazione come la drastica traduzione dei costrutti teorici in "referti osservativi puri" tramite ramseyfication) impedisce concretamente di individuare la demarcazione. Classical objections range from Popper \cite{?} to more recent sociology of science.
 
 Mostreremo, in section 5-6, come nel nostro framework si chiariscano i rapporti tra i due dizionari e quanto sia inutile il tentativo di stabilire il primato di uno dei due sull'altro (remark 5.3). Una nozione larga di \emph{teoria} richiede una efficace descrizione degli interscambi, vale a dire delle aggiunzioni, tra i due dizionari, cioè tra le due categorie sintattiche; il privilegio di una a favore dell'altra lascerebbe fuori le molte teorie scientifiche che non si occupano d'altro che di oggetti teorici oppure le altrettante che si identificano quasi totalmente con l'interpretazione di una serie di dati. 
-
-
-

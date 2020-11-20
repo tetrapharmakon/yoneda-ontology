@@ -81,6 +81,13 @@
   \expandafter\let\csname c@#1\endcsname\c@theorem}
 \makeatother
 
+\makeatletter
+\def\defthmStar#1#2{%
+  \newtheorem*{#1}{#2}%[section]%
+  \expandafter\def\csname #1autorefname\endcsname{#2}%
+  \expandafter\let\csname c@#1\endcsname\c@theorem}
+\makeatother
+
 \DeclareOption{english}{
 \theoremstyle{definition}
 \numberwithin{equation}{section}
@@ -105,6 +112,7 @@
  \defthm{discussion}{Discussion}
  \defthm{terminology}{Terminology}
  \defthm{heuristics}{Heuristics}
+ \defthmStar{definition*}{Definition}
 }
 
 \DeclareOption{italian}{

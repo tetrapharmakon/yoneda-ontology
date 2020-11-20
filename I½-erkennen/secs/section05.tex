@@ -18,11 +18,13 @@ It is possible to build a new category $\clC_\lambda$ providing a sound and comp
 \begin{definition}[World, Yuggoth]\label{mondo_yalda}
 	A \emph{world} is a large category $\clW$; a \emph{Yuggoth}\footnote{\emph{Yuggoth} (also \emph{Iukkoth}, {\yugg} in Chtuvian language) is an enormous trans-Neptunian planet whose orbit is perpendicular to the ecliptic plane of the solar system. A Yuggoth is a world so big to inspire a sense of unfathomable awe.} is a world that, as a category, admits all small colimits.
 \end{definition}
-Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor
-\[\xymatrix{\clL \ar[r]^\phi & \clW.}\]
-
-A canvas $\phi : \clL \to \clW$ is a \emph{\science} if $\phi$ is a dense functor.
-\begin{remark}
+\begin{definition}[Canvas, science]\label{canvas_scienza}
+	Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor
+	\[\xymatrix{\clL \ar[r]^\phi & \clW.}\]
+	
+	A canvas $\phi : \clL \to \clW$ is a \emph{\science} if $\phi$ is a dense functor.
+\end{definition}
+	\begin{remark}\label{remark_yuggoth_1}
 	The NR paradigm exposed in \autoref{nr_para} now entails that given a canvas $\phi : \clL \to \clW$
 	\begin{itemize}
 		\item If $\clW$ is a world, we obtain a \emph{representation} functor
@@ -34,6 +36,7 @@ A canvas $\phi : \clL \to \clW$ is a \emph{\science} if $\phi$ is a dense functo
 		\item If an $\clL$-canvas $\phi : \clL \to \clW$ is a \science, `the world' is a full subcategory of the class of all modes in which `language' can create interpretation.
 	\end{itemize}
 \end{remark}
+\begin{remark}\label{remark_yuggoth_2}
 The terminology is chosen to inspire the following idea in the reader: science strives to define \emph{theories} that allow for the creation of world representations; said representations are descriptive when there is dialectic opposition between world and models; when such representation is faithful, we have reduced `the world' to a piece of the models created to represent it.
 
 The tongue-in-cheek here is, a science (in the usual sense of the world) can never attain the status of a \science, if not potentially; attempts to generate scientific knowledge are the attempts of
@@ -44,16 +47,16 @@ The tongue-in-cheek here is, a science (in the usual sense of the world) can nev
 	\item obtaining that `language is a dense subset of the world', by this meaning that the adjunction outlined above is sufficiently well-behaved to describethe world as a fragment of the semantic interpretations obtained from~$\clL$.
 \end{itemize}
 It is evident that there is a tension between two opposite feature that $\clL$ must exhibit; it has to be not too large to remain tractable, but on the other hand it must be large enough in order to be able to speak about `everything' it aims to describe.
-
+\end{remark}
 Regarding our definition of \science, we can't help but admit we had this definition in mind \cite[2.1]{biologia}:
-\begin{definition}[\protect{\cite[2.1]{biologia}}]
+\begin{definition*}[\protect{\cite[2.1]{biologia}}]
 	A \emph{scientific theory} $\clT$ consists of a formal structure $F$ and a class of interpretations $M_i$, shortly denoted as $\clT=\langle F,M_i\mid i\in I\rangle$. The structure $F$ consists on its won right of
 	\begin{itemize}
 		\item a language $\clL$, in which it is possible to formulate propositions. If $\clL$ is fully formalised, it will consist of a finite set of symbols, and a finite set of rules to determine which expressions are well-formed. This is commonly called \emph{technical language};
 		\item A set $A$ of `axioms' or `postulates' in $\clL^\star$;
 		\item A \emph{logical apparatus} $R$, whose elements are rules of inference and logical axioms, allowing to prove propositions.
 	\end{itemize}
-\end{definition}
+\end{definition*}
 The language of category theory allows for a refined rephrasing of the previous definition: we say that a \emph{$\clS$-scientific theory} is the following arrangement of data:
 \begin{enumtag}{st}
 	\item a formal language $\clL$;
