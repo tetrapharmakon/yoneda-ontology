@@ -26,7 +26,7 @@ Before delving into this generalisation in \autoref{multiramsey}, however, a mor
 \begin{example}
 	Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_* := \clB(1,F) : \clB^\op\times \clA\to\Set$ and a profunctor $F^* := \clB(F,1) : \clA^\op\times\clB \to \Set$ as in \autoref{nervereal}; the two functors are mutually adjoint, $F^*\dashv F_*$, see \cite[6.2]{Bor2}. This yield an example of what we call \emph{representable} Ramsey maps.
 \end{example}
-\begin{definition}[Observational and theoretical nucleus]
+\begin{definition}[Observational and theoretical nucleus]\label{nuclei}
 	Let $\fkR : \clT^\op\times \clO \to\Set$ be a Ramsey map, and $\hat R : \clO \to [\clT^\op,\Set]$ the associated canvas. Let
 	\[ \Lan_{\yon_\clO}\hat R : [\clO^\op,\Set] \leftrightarrows [\clT^\op,\Set] : N_{\hat R} \]
 	be the adjunction between presheaf categories determined by virtue of \autoref{equ_prof_cocont}. Let us consider the equivalence of categories between the fixpoints of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$.
