@@ -1,11 +1,12 @@
-\section{Profunctors / Grothendieck construction}
+\section{Profunctors and the Grothendieck construction}
 \label{sec:org7dd09e1}
+We start from a simple observation.
 There are two possible ways to define a relation $R$ between two sets $A,B$:
 \begin{enumtag}{r}
 	\item \label{r_1} a relation $R$ is a subset of the cartesian product $A\times B$;
 	\item \label{r_2} a relation $R$ is a function $A\times B \to \{0,1\}$.
 \end{enumtag}
-Note that the notion of `relation between $A$ and $B$' is inherently symmetric, in the sense that such $R$ can be regarded both as a relation `from' $A$ `to' $B$, and as a relation `from' $B$ `to' $A$.
+This notion of `relation between $A$ and $B$' is inherently symmetric, in the sense that such $R$ can be regarded both as a kind of map $A \rightsquigarrow B$ or $B\rightsquigarrow A$.
 
 Furthermore, every relation $R$ between sets $A,B$ gives rise to a \emph{Galois connection}
 \[{}^R(\firstblank) :PA^\op \leftrightarrows PB : (\firstblank)^R \label{adjunzia} \]
@@ -25,13 +26,13 @@ From here, using a process known as `categorification' \cite{baez_catego}, we ca
 		\item 2-cells $\fkR\To\fkR'$ the natural transfomations $\alpha : \xymatrix{**[l] \clA^\op\times\clB \rtwocell^{\fkR}_{\fkR'}{\alpha}& **[r] \Set}$.
 	\end{enumtag}
 \end{definition}
-The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs that $(A,B)\in\clA^\op\times\clB$ are in a  `generalised relation' $\fkR$. This intuition agrees with the fact that when instead of $\Set$ a profunctor $\fkR$ takes values in the 0-dimensional category $\{0\le 1\}$, then the type of proofs that $R(A,B)$ is a yes/no space.
+The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs that $(A,B)\in\clA^\op\times\clB$ are in a  `generalised relation' $\fkR$. This intuition agrees with the fact that when instead of $\Set$ a profunctor $\fkR$ takes values in the category $\{0\le 1\}$, then the type of proofs that $R(A,B)$ is a yes/no space of answers.
 
-From here, one can build a rich and expressive theory; for our purposes, we are contempt with a careful analysis of the analogue of \ref{r_2} and \eqref{adjunzia} above: the latter is the scope of \autoref{sec:org1a423df}, we now concentrate on describing an ubiquitary technical tool in category theory.
+From here, one can build a rich and expressive theory; for our purposes, we are contempt with a careful analysis of the analogue of \ref{r_2} and \eqref{adjunzia} above: the latter is the scope of \autoref{sec:org1a423df}, we now concentrate on describing an ubiquitary technical tool in category theory, called \emph{Grothendieck construction}, suited to categorify the equivalence between \ref{r_1} and \ref{r_2}.
+
 \subsection{Grothendieck construction}
-The Grothendieck construction is the tool allowing to formalise the equivalence between a relation understood as a function $R : A\times B \to \{0,1\}$, and a subset $R\subseteq A\times B$, when `relation' is understood in the sense of \autoref{def_profu} above, i.e. a profunctor $\fkR : \clA \pto \clB$.
 
-Each such $\fkR$ can be realised as a suitable `fibration' $p_\fkR : \clE \to \clA^\op\times\clB$, that in turn uniquely determines $\fkR$.
+Each profunctor $\fkR : \clA \pto \clB$ can be realised as a suitable `fibration' $p_\fkR : \clE \to \clA^\op\times\clB$, that in turn uniquely determines $\fkR$.
 We now recall a few basic definitions.
 \begin{definition}\label{eltsf}
 	Let $\clC$ be an ordinary category, and let $W : \clC\to \Set$ be a functor; the \emph{category of elements} $\elts{\clC}{W}$ of $W$ is the category which results from the pullback

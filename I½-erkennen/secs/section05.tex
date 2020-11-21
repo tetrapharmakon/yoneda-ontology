@@ -6,13 +6,13 @@ In this section we exploit the terminology established before.
 \end{definition}
 It is worth to mention how the construction of $\clT_L$ goes, from \cite{lambek1988introduction,abramskyno}, in the case $L$ has product types and function types:
 
-From $\clT_L$ it is possible to carve a cartesian closed category, whose obects are denoted $\tilde{b}$ as $b$ runs over the basic types of $L$. Then, we define recursively a \emph{semantic translation} operation from basic types $\trn{B} := B$ and
+From $\clT_L$ it is possible to carve a cartesian closed category, whose obects are denoted $\trn{B}$ as $B$ runs over the basic types of $L$. Then, we define recursively a \emph{semantic translation} operation from basic types $\trn{B} := B$ and
 \[\trn{T\times U}:=\trn{T}\times\trn{U} \,,\qd \trn{T\to U}:=\trn{T}\Rightarrow\trn{U}\,, \]
 and on typed terms as the set of rules in \cite[1.6.5]{abramskyno}.
 
 The resulting categorical semantics is \emph{sound}, i.e.
 \[ t=_\lambda u \implies \trn{t}=\trn{u} \]
-for every term $t,u$. It is however not \emph{complete}, in the sense that
+for every term $t,u$, and $=_\lambda$ is $\lambda$-reduction. It is however not \emph{complete}, in the sense that
 \[ \lsem t \rsem = \lsem u \rsem \text{\qd yet \qd} t\neq_\lambda u\,. \]
 It is possible to build a new category $\clC_\lambda$ providing a sound and complete term model of (a fragment of simply-typed) $\lambda$-calculus; yet, the specifics of this construction are of little interest for the present discussion.
 \begin{definition}[World, Yuggoth]\label{mondo_yalda}
@@ -61,10 +61,10 @@ The language of category theory allows for a refined rephrasing of the previous 
 \begin{enumtag}{st}
 	\item a formal language $\clL$;
 	\item the syntactic category $T_\clL$, obtained as in \cite{lambek1988introduction};
-	\item the category of functors $\Qat[T_\clC, \clS]$, whose codomain is a Yuggoth.
+	\item the category of functors $[T_\clC, \clS]$, whose codomain is a Yuggoth.
 \end{enumtag}
 More than often, our theories will be $\Set$-scientific: in such case we just omit the specification of the semantic Yuggoth, and call them \emph{scientfic theories}.
 
-Since the category $\Qat[T_\clC, \Set]$ determines $\clL$ and $T_\clL$ completely, up to Cauchy-completion \cite{borceuso-cauchy}, we can see that the triple $(\clL, T_\clL, \Qat[T_\clL,\Set])$ can uniquely be recovered from its model category $\Qat[T_\clC, \Set]$. We thus comply to the additional abuse of notation to call `scientific theory' the category $\Qat[T_\clL,\Set]$ for some $T_\clL$.
+Since the category $[T_\clC, \Set]$ determines $\clL$ and $T_\clL$ completely, up to Cauchy-completion \cite{borceuso-cauchy}, we can see that the triple $(\clL, T_\clL, [T_\clL,\Set])$ can uniquely be recovered from its model category $[T_\clC, \Set]$. We thus comply to the additional abuse of notation to call `scientific theory' the category $[T_\clL,\Set]$ for some $T_\clL$.
 
 So, a `coherent correspondence linking expressions of $\clF$ with semantic expressions' boils down to a functor; this is compatible with \cite[2.1]{biologia}, and in fact an improvement (the mass of results in category theory become readily available to speak about --scientific-- theories; not to mention that the concept of `formal structure' is never rigorously defined throughout \cite{biologia})
