@@ -1,39 +1,111 @@
-\section{Nerve and realisations}
-\label{sec:org1a423df}
-We start by recalling the universal property of the category of presheaves over $\clC$:
-let $\clC$ be a small category, $\clW$ a cocomplete category; then, precomposition with the Yoneda embedding $\yon_{\clC} : \clC \to [\clC^\op, \Set]$ determines a functor
-\[\Qat([\clC^\op, \Set], \clW)\xto{\firstblank\circ \yon_{\clC}} \Qat(\clC,\clW),\]
-that restricts a functor $G : [\clC^\op, \Set]\to \clW$ to act only on representable functors, confused with objects of $\clC$, thanks to the fact that $\yon_\clC$ is fully faithful. We then have that
-\begin{theorem}\label{yext_are_good}\leavevmode
-	\begin{enumtag}{ye}
-		\item The universal property of the category $[\clC^\op, \Set]$ amounts to the existence of a left adjoint $\Lan_{\yon_{\clC}}$ to precomposition, that has invertible unit (so, the left adjoint is fully faithful).
-	\end{enumtag}
-	This means that $\Qat(\clC,\clW)$ is a full subcategory of $\Qat([\clC^\op, \Set], \clW)$. Moreover
-	\begin{enumtag}{yi}
-		\item The essential image of $\Lan_{\yon_{\clC}}$ consists of those $F : [\clC^\op, \Set] \to \clW$ that preserve all colimits.
-		\item If $\clW = [\clE^\op, \Set]$, this essential image is equivalent to the subcategory of left adjoints $F : [\clC^\op, \Set] \to [\clE^\op, \Set]$.
-	\end{enumtag}
-\end{theorem}
-As a consequence of this,
-\begin{definition}[Nerve and realisation contexts]\label{nr_para}\index{Nerve!--- context}
-	Any functor $F : \clC\to \clW$ from a small category $\clC$ to a (locally small) \emph{cocomplete} category $\clW$ is called a \emph{nerve\hyp{}realisation context} (a NR \emph{context} for short).
+\section{Theories and models}
+\label{sec:orge02f333}
+In this section we exploit the terminology established before.
+\begin{definition}[Theory]\label{teoria}
+	A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite{lambek1988introduction}) of a type theory $L$.
 \end{definition}
-Given a NR context $F$, we can prove the following result:
-\begin{proposition}[Nerve-realisation paradigm]\label{nervereal}
-	The left Kan extension of $F$ along the Yoneda embedding $\yon_\clC : \clC\to [\clC^\op, \Set]$, i.e. the functor
-	\[L_F=\Lan_{\yon_\clC} F : [\clC^\op, \Set]\to \clW\]
-	is a left adjoint, $L_F\dashv N_F$. $L_F$ is called the $\clW$-\emph{realisation functor} or the \emph{Yoneda extension} of $F$, and its right adjoint the $\clW$-\emph{coherent nerve}.
-\end{proposition}
-\begin{proof}
-	From a straightforward computation, it follows that if we define $N_F(D)$ to be $C\mapsto \clW(F C,D)$, this last set becomes canonically isomorphic to $[\clC^\op,\Set](P,N_F(D))$. We can thus denote $\clW(F,1)$ the functor $N_F : D\mapsto \lambda C.\clW(F C,D)$.
-\end{proof}
-Now, let's review the way in which a profunctorial analogue of \eqref{adjunzia} can be obtained: \autoref{nervereal} yields that a functor
-\[ \fkR : \clA^\op\times \clB \to \Set \]
-whose mate under the adjunction $\Qat(\clA^\op\times \clB ,\Set)\cong\Qat(\clB,[\clA^\op,\Set])$ is a functor
-\[ \hat R : \clB \to \Qat(\clA^\op,\Set) \]
-determines a NR paradigm, and thus gives rise to a pair of adjoint functor
-\[ \Lan_{\yon_\clB} \hat R : \Qat(\clB^\op,\Set) \leftrightarrows \Qat(\clA^\op,\Set) : [\clA^\op,\Set](\hat R,1). \]
-We have just laid down all the terminology needed to prove that
-\begin{proposition}\label{equ_prof_cocont}
-	There is an equivalence of categories between $\Prof(\clA,\clB)$ and the category of colimit preserving functors $\Qat(\clB^\op,\Set) \to \Qat(\clA^\op,\Set)$.
-\end{proposition}
+It is worth to mention how the construction of $\clT_L$ goes, from \cite{lambek1988introduction} or \cite{abramskyno}, in the simple case $L$ has product and function types:
+
+From $\clT_L$ it is possible to carve a cartesian closed category, whose obects are denoted $\trn{B}$ as $B$ runs over the basic types of $L$. Then, we define recursively a \emph{semantic translation} operation from basic types $\trn{B} := B$ and
+\[\trn{T\times U}:=\trn{T}\times\trn{U} \,,\qd \trn{T\to U}:=\trn{T}\Rightarrow\trn{U}\,, \]
+and on typed terms as the set of rules in \cite[1.6.5]{abramskyno}.
+
+The resulting categorical semantics is \emph{sound}, i.e.
+\[ t=_\lambda u \implies \trn{t}=\trn{u} \]
+for every term $t,u$, and $=_\lambda$ is $\lambda$-reduction. It is however not \emph{complete}, in the sense that
+\[ \lsem t \rsem = \lsem u \rsem \text{\qd yet \qd} t\neq_\lambda u\,. \]
+It is possible to build a new category $\clC_\lambda$ providing a sound and complete term model of (a fragment of simply-typed) $\lambda$-calculus; yet, the specifics of this construction are of little interest for the present discussion.
+\begin{definition}[World, Yuggoth]\label{mondo_yalda}
+	A \emph{world} is a large category $\clW$; a \emph{Yuggoth}\footnote{\emph{Yuggoth} (also \emph{Iukkoth}, {\yugg} in Chtuvian language) is an enormous trans-Neptunian planet whose orbit is perpendicular to the ecliptic plane of the solar system. A Yuggoth is a world so big to inspire a sense of unfathomable awe.} is a world that, as a category, admits all small colimits.
+\end{definition}
+\begin{definition}[Canvas, science]\label{canvas_scienza}
+	Given a theory $\clL$ and a world $\clW$, a $\clL$-\emph{canvas} of $\clW$ is a functor
+	\[\xymatrix{\clL \ar[r]^\phi & \clW.}\]
+	
+	A canvas $\phi : \clL \to \clW$ is a \emph{\science} if $\phi$ is a dense functor.
+\end{definition}
+	\begin{remark}\label{remark_yuggoth_1}
+	The NR paradigm exposed in \autoref{nr_para} now entails that given a canvas $\phi : \clL \to \clW$
+	\begin{itemize}
+		\item If $\clW$ is a world, we obtain a \emph{representation} functor
+		      \[ \xymatrix{\clW \ar[r] & [\clL^\op, \Set];} \label{mvndvs}\]
+		      this means: given a canvas $\phi$ of the world, the latter leaves an image on the canvas.
+		\item If in addition $\clW$ is a Yuggoth, we obtain a NR-adjunction
+		      \[\xymatrix{\clW \ar@<3pt>[r] & \ar@<3pt>[l] [\clL^\op, \Set];}\]
+		      this has to be interpreted as: if $\clW$ is sufficiently expressive, then models of the theory that explains $\clW$ through $\phi$ can be used to acquire a two-way knowledge. Phenomena have a theoretical counterpart in $[\clL^\op,\Set]$ via the nerve; theoretical objects strive to describe phenomena via their realisation.
+		\item If an $\clL$-canvas $\phi : \clL \to \clW$ is a \science, `the world' is a full subcategory of the class of all modes in which `language' can create interpretation.
+	\end{itemize}
+\end{remark}
+\begin{remark}\label{remark_yuggoth_2}
+The terminology is chosen to inspire the following idea in the reader: science strives to define \emph{theories} that allow for the creation of world representations; said representations are descriptive when there is dialectic opposition between world and models; when such representation is faithful, we have reduced `the world' to a piece of the models created to represent it.
+
+The tongue-in-cheek here is, a science (in the usual sense of the world) can never attain the status of a \science, if not potentially; attempts to generate scientific knowledge are the attempts of
+\begin{itemize}
+	\item recognizing the world $\clW$ as a sufficiently expressive object for it to contain phenomena and information;
+	\item carve a language $L$, if necessary from a small subset of $\clC$, that is sufficiently `compact', but also sufficiently expressive for its syntactic category to admit a representation into the world;
+	\item obtaining an \emph{adjunction} between $\clW$ and models of the worlds obtained as models of the syntactic theory $\clL$; this is meant to generate models starting from observed phenomena, and to predict new phenomena starting from models;
+	\item obtaining that `language is a dense subset of the world', by this meaning that the adjunction outlined above is sufficiently well-behaved to describethe world as a fragment of the semantic interpretations obtained from~$\clL$.
+\end{itemize}
+It is evident that there is a tension between two opposite feature that $\clL$ must exhibit; it has to be not too large to remain tractable, but on the other hand it must be large enough in order to be able to speak about `everything' it aims to describe.
+\end{remark}
+Regarding our definition of \science, we can't help but admit we had this definition in mind \cite[2.1]{biologia}:
+\begin{definition*}[\protect{\cite[2.1]{biologia}}]
+	A \emph{scientific theory} $\clT$ consists of a formal structure $F$ and a class of interpretations $M_i$, shortly denoted as $\clT=\langle F,M_i\mid i\in I\rangle$. The structure $F$ consists on its won right of
+	\begin{itemize}
+		\item a language $\clL$, in which it is possible to formulate propositions. If $\clL$ is fully formalised, it will consist of a finite set of symbols, and a finite set of rules to determine which expressions are well-formed. This is commonly called \emph{technical language};
+		\item A set $A$ of `axioms' or `postulates' in $\clL^\star$;
+		\item A \emph{logical apparatus} $R$, whose elements are rules of inference and logical axioms, allowing to prove propositions.
+	\end{itemize}
+\end{definition*}
+The language of category theory allows for a refined rephrasing of the previous definition: we say that a \emph{$\clS$-scientific theory} is the following arrangement of data:
+\begin{enumtag}{st}
+	\item a formal language $\clL$;
+	\item the syntactic category $T_\clL$, obtained as in \cite{lambek1988introduction};
+	\item the category of functors $[T_\clC, \clS]$, whose codomain is a Yuggoth.
+\end{enumtag}
+More than often, our theories will be $\Set$-scientific: in such case we just omit the specification of the semantic Yuggoth, and call them \emph{scientfic theories}.
+
+Since the category $[T_\clC, \Set]$ determines $\clL$ and $T_\clL$ completely, up to Cauchy-completion \cite{borceuso-cauchy}, we can see that the triple $(\clL, T_\clL, [T_\clL,\Set])$ can uniquely be recovered from its model category $[T_\clC, \Set]$. We thus comply to the additional abuse of notation to call `scientific theory' the category $[T_\clL,\Set]$ for some $T_\clL$.
+
+So, a `coherent correspondence linking expressions of $\clF$ with semantic expressions' boils down to a functor; this is compatible with \cite[2.1]{biologia}, and in fact an improvement (the mass of results in category theory become readily available to speak about --scientific-- theories; not to mention that the concept of `formal structure' is never rigorously defined throughout \cite{biologia}).
+\subsection{The first rough attempt of some infant god}
+Let us consider two categories $\clO,\clT$, respectively the \emph{observational} and the \emph{theoretical}. Even though their origin is never examined further, it is fruitful to think that $\clO,\clT\subseteq \clW$, i.e. that they are `carved' from the world, building respectively on the tangible experience (for $\clO$) and on a linguistic structure (for $\clL$).
+
+If $\clW$ is a Yuggoth each pair of canvases
+\[ \xymatrix{
+	\clO \ar[r]^-\psi & \clW & \ar[l]_-\phi \clT
+} \label{2_canvases}\] gives rise, according to \eqref{mvndvs}, to representations 
+\[ \xymatrix{
+	[\clO^\op,\Set] \ar[r]^-{N_\psi} & \clW & \ar[l]_-{N_\phi} [\clT^\op,\Set]
+} \label{2_reps}\]
+The leftmost category is the category we have experimental access, starting from the fragment $\clO \subseteq \clW$ we can observe. The rightmost category is the category of symbols we can speak of, trying to reproduce the observed behaviour. 
+\begin{definition}
+	We refine the terminology introduced above to speak of a \emph{theoretical} (resp., a \emph{observational}) \emph{science}, assuming that $\phi$ (resp., $\psi$) is a \science.
+\end{definition}
+Assuming that $\phi : \clT \to \clW$ is a theoretical \science, now, the representation functor $\clW \to [\clT^\op,\Set]$ above acquires a left adjoint.
+
+We end the section with an important remark that shows how new structure comes `almost for free' when things are interpreted this way.
+\begin{remark}[Inducing an hermeneutics]\label{inducing_herme}
+Consider the diagram of solid arrows
+\[ \vcenter{\xymatrix{
+	& \clW \ar[dr]\ar[dl]& \\ 
+	[\clT^\op,\Set] \ar@{.>}[rr] && [\clO^\op,\Set]
+}}	 \label{discuss_0}\]
+given by the theoretical and observational nerves. We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a meaningful 2-cell in either direction. Observe that the two functors
+\[
+\vcenter{\xymatrix{
+	**[l] \clO^\op \times \clT \rtwocell^{\psi^*\diamond\phi_*}_{R}{\alpha}& \Set
+}}	
+\label{discuss_2}\]
+where the functor $\psi^*\diamond\phi_*$ is just $\clW(\psi,\phi)$, are parallel: from basic properties of the mating operation we can deduce the existence of a chain of isomorphisms 
+\[
+\begin{array}{c}
+	\psi^*\diamond\phi_* \To R \\ \hline 
+	\psi^*\To \Ran_{\phi_*}R \\ \hline 
+	\psi^* \To R\diamond\phi^*
+\end{array}	
+\label{discuss_3}\]
+so that a 2-cell $\psi^*\diamond\phi_* \To R$ can uniquely be obtained from a 2-cell $\psi^* \To R(\phi,1)$, i.e. by a natural transformation
+\[\hat\varpi : \clW(\psi,1) \To R(\phi,1).\]
+Given this, the latter cell induces a natural transformation that closes the triangle \eqref{discuss_0}.
+\end{remark}

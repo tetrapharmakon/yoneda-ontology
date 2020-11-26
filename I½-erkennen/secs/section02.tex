@@ -1,119 +1,124 @@
-\epigraph{Life is the life of the world to come, which a man earns by means of the letters.}{Ozar Eden Ganuz}
-\section{Semantical conception of theories}
-Along the XXth century there have been many attempts towards a formal definition of a scientific theory. The \emph{Wiener Kreis} verificationist paradigm/account, and Neurath's theory of `protocollar statements', has given the initial input to elaborate a completely semantic framework for scientific theories, and spurred the search for a pan-linguistic vision of philosophy of science.
+\section{Profunctors and the Grothendieck construction}
+\label{sec:org7dd09e1}
+We start from a simple observation.
+There are two possible ways to define a relation $R$ between two sets $A,B$:
+\begin{enumtag}{r}
+	\item \label{r_1} a relation $R$ is a subset of the cartesian product $A\times B$;
+	\item \label{r_2} a relation $R$ is a function $A\times B \to \{0,1\}$.
+\end{enumtag}
+This notion of `relation between $A$ and $B$' is inherently symmetric, in the sense that such $R$ can be regarded both as a kind of map $A \rightsquigarrow B$ or $B\rightsquigarrow A$.
 
-The formal account in which e.g. Carnap \cite{?} provides his notion of `theory' is known in the literature as \emph{syntactical conception of theories} \cite{?}, while the term `semantic' is due to later developments. Yet, the field of epistemology that the logical neopositivism started can legitimately be called a `semantics of theories', because some of its features, if not the underlying ideology, are the same throughout the works of Carnap \cite{?},  Beth \cite{?}, and Suppes \cite{?}, all the way up to the recent canonical uses of physical handbooks.
+Furthermore, every relation $R$ between sets $A,B$ gives rise to a \emph{Galois connection}
+\[{}^R(\firstblank) :PA^\op \leftrightarrows PB : (\firstblank)^R \label{adjunzia} \]
+between the powersets $PA=2^A$ and $PB = 2^B$: the set $U\subset A$ goes to the set ${}^RU$ of all $b$ such that $(a,b)\in R$ for all $a\in U$; in an exactly symmetric way, a set $V\subseteq B$ goes to the set
+\[V^R = \{a\in A\mid (a,b) \in R,\, \forall b\in V\}.\]
+Unwinding the definition, it is asy to verify that $V\subseteq{}^RU$ if and only if $U\subseteq V^R$, if and only if $U\times V\subseteq R$.
+%\todo[inline]{La varianza di sta roba va controllata}
 
-{\color{red} Non è chiarissimo cosa ci sia scritto\dots}
+From here, using a process known as `categorification' \cite{baez1998categorification}, we can replace a two-valued relation $R : A\times B \to \{0,1\}$ with a \emph{set-valued} functor $\clA^\op\times\clB \to \Set$ between two (small) categories $\clA,\clB$.\footnote{The reason why the category $\clA$ is twisted with an `$^\op$' functor is that we want to bestow the hom functor $\hom_{\clA} : \clA^\op\times\clA \to \Set$ with the r\^ole of identity `profunctor'; in the categorification perspective, hom plays the r\^ole of the diagonal relation $R=\Delta : A\to A\times A$. The category of sets (i.e., of discrete categories) has no nontrivial involution on objects, so in the case of sets the opping operation is hidden.} More precisely, we can give the following definition.
+\begin{definition}[Profunctor]\label{def_profu}
+	Let $\clA,\clB$ be two categories; a \emph{profunctor} $\fkR : \clA \pto \clB$ is a functor $\clA^\op\times\clB \to \Set$; we define the \emph{bicategory of profunctors} $\Prof$ having
+	\begin{enumtag}{p}
+		\item objects the small categories $\clA,\clB,\clC,\dots$;
+		\item 1-cells the profunctors $\fkR : \clA \pto \clB$, and composition law between $\clA \overset{\fkR}{\pto} \clB \overset{\fkP}{\pto} \clC$ given by the assignment
+		\[ (A,C)\mapsto \int^B \fkR(A,B)\times\fkP(B,C) \]
+		(see \cite[6.2.10]{Bor2} for the definition). The identity 1-cell is the hom functor $\hom_\clA : \clA^\op\times\clA \to \Set$;
+		\item 2-cells $\fkR\To\fkR'$ the natural transfomations $\alpha : \xymatrix{**[l] \clA^\op\times\clB \rtwocell^{\fkR}_{\fkR'}{\alpha}& **[r] \Set}$.
+	\end{enumtag}
+\end{definition}
+The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs that $(A,B)\in\clA^\op\times\clB$ are in a  `generalised relation' $\fkR$. This intuition agrees with the fact that when instead of $\Set$ a profunctor $\fkR$ takes values in the category $\{0\le 1\}$, then the type of proofs that $R(A,B)$ is a yes/no space of answers.
 
-	[scrivere quali sono queste caratteristiche]
+From here, one can build a rich and expressive theory; for our purposes, we are contempt with a careful analysis of the analogue of \ref{r_2} and \eqref{adjunzia} above: the latter is the scope of \autoref{sec:org1a423df}, we now concentrate on describing an ubiquitary technical tool in category theory, called \emph{Grothendieck construction}, suited to categorify the equivalence between \ref{r_1} and \ref{r_2}.
 
-	[sintesi delle varie concezioni; le teorie come classi di modelli $\clK$;
-		le teorie come oggetti formali]
+\subsection{Grothendieck construction}
 
-semantica non standard per teorie empiriche in cui le teorie sono sistemi formali e tutte le nozioni diventano oggetti matematici; 
+Each profunctor $\fkR : \clA \pto \clB$ can be realised as a suitable `fibration' $p_\fkR : \clE \to \clA^\op\times\clB$, that in turn uniquely determines $\fkR$.
+We now recall a few basic definitions.
+\begin{definition}\label{eltsf}
+	Let $\clC$ be an ordinary category, and let $W : \clC\to \Set$ be a functor; the \emph{category of elements} $\elts{\clC}{W}$ of $W$ is the category which results from the pullback
+	\[
+		\xymatrix{
+			\elts{\clC}{W}\ar[r]\ar[d] \pb & \Set_* \ar[d]^U \\
+			\clC \ar[r]_W & \Set
+		}
+	\]
+	where $U : \Set_*\to\Set$ is the forgetful functor which sends a pointed set to its underlying set.
 
-More properly, a \emph{theory} becomes a structure $(F_\clL, \clK)$ where $F_\clL$ is a formal system, and $\clK$ the totality of all its interpretations. Our strategy is to further separate $F_\clL$ into two `vocabularies' (intended as two syntactic categories of two first order theories), one of them representing the \emph{pure} or \emph{theoretical} terms (see Plantinga \cite{?}), and the other representing the \emph{applied} or \emph{observational} terms. 
-
-Thus, for us a ``scientific theory'' is a triple $\bk{(\clT,\clO), \clK}$ whose first two elements form the logic $F_\clL=(\clT,\clO)$ and where $\clK$ is a (possibly large) category of models or ``interpretations''. This is of course not a new idea, in fact permeating classical universal algebra, as well as categorical logic, and other disciplines. This approach has been used to ``axiomatise'' a notion of evolutionary theory in \cite{biologia}.
-
-In our discussion, however, we require $(\clT,\clO)$ to satisfy an additional admissibility condition, that is the existence of a meaningful relation between the theoretical world $\clT$ and the observational world $\clO$; this notion of `meaningful relation' between structured high-level systems is again captured a well-known mathematical object, a \emph{profunctor} \cite{benabou2000distributors} between the two syntactic categories $\clT,\clO$.
-
-Proposing the fundamental features of a ``general theory of scientific theories'' in terms of profunctors is the main contribution of the present work.
-
-\medskip
-We conclude this introductory section with a paragraph discussing about the ``nature''' of the categories $\clT,\clO$.
-
-As we already observed in a previous work \cite{catont1}, the problem of locating the syntactic objects embodying a linguistic theory can be easily solved from an esperientialist stance: the world undeniably exists, and it is a sufficiently complex structure to contain the ``concrete'' constituents of a formal system. Therefore, we derive the primitive symbols of language from a portion of the world.
-
-This problem, and its proposed solution, reflect unavoidably on the way in which the categories $\clT,\clO$ are built. In our model the world is a (possibly large) category $\clW$, unfathomable and given since the beginning of time, to which we can only access through \emph{probing} functors $\phi : \clL \to \clW$ (cf. \autoref{canvas_scienza}) representing small `accessible' categories construed from parts of $\clW$ that we can experience. Te request that $\clW$ is sufficiently expressive now translates into the request that as a category $\clW$ contains enough ``traces'' of functors like $\phi$; this (cf. \autoref{mondo_yalda}) translates formally in the request that any such $\phi$ admits a \emph{colimit} (cf. \cite[]{}) in $\clW$.
-
-When things are put in this perspective, a few remarks are in order: 
-\color{blue!40}
-\begin{itemize}
-	\item La specificazione del dominio di $\clO$ determina il tipo di teoria che stiamo considerando (scientifica, strettamente empirica, logico-matematica, metafisica).
-	\item Dire che $\clO$ determina le \emph{tipizzazioni} della teoria significa dire che svolge lo stesso ruolo della legge $\beta$ {\color{red} chi è beta?} nella semantica dello spazio degli stati, mentre la classe $\clK$ è isomorfa all'insieme $\mathcal{M}$ dello spazio degli stati. Il tipo di $\beta$ determina il tipo di $\mathcal{M}$ che determina il tipo di $T = (\mathcal{M}, \beta)$. Idem nel nostro approccio: $\clO 	= \{\alpha_1,\dots,\alpha_n\}$ determina il tipo, che implementa una logica che determina la classe $\clK$.
-\end{itemize}
-\color{black}
-This closes the circle over the problem of representation of a world $\clW$ in terms of a portion $\clT$ to which we have hermeneutical access, and from which we have carved a language. In fact, such a representation happens through `canvas functors' $\phi : \clL \to \clW$ that, thanks to the cocompleteness property of $\clW$, extend uniquely to representation functors $[\clL^\op,\Set] \leftrightarrows \clW$. 
-
-On the other hand, `the world' as a whole is unknowable, strictly speaking: instead of $\clW$, we can access to an `observational fragment' $\clO$, from which we recover, now exploiting the cocompleteness of $[\clO^\op,\Set]$, a further representation $[\clL^\op,\Set] \leftrightarrows [\clO^\op,\Set]$. In general, this is all that can be said; such a picture is already capable of determining, by elementary means, an equivalence of categories (i.e., an equivalence of models) between the observational and the theoretical \emph{nuclei} of $[\clT^\op,\Set] \leftrightarrows [\clO^\op,\Set]$: we discuss the matter in \autoref{nuclei}, and \autoref{resoudre_la_tension}.
-
-Additional assumptions on the canvas $\phi : \clL\to \clW$, however, can refine our analysis: we can infer that the totality of models $[\clL^\op,\Set]$ \emph{contains a copy} of the world $\clW$. In this precise sense, assuming what is outlined in the definition of \science in \autoref{canvas_scienza}, language prevails: the unfathomable world is a full subcategory of the class of all modes in which the language of $\clT$ can be interpreted. 
-
-As bold a statement as it might seem, this has fruitful consequences: see for example \autoref{remark_yuggoth_1}, \autoref{remark_yuggoth_2}.
-
-\subsection{The Two Dictionaries}
-From a neo-positivistic stance, the distinction between theoretical and empirical is purely formal: it is not due to the hypothetical nature of the former (even an empirical law can be hypothetical), but to the fact that the two kinds of law contain different types of terms \cite{?}. This purports a purely linguistic approach to epistemological issues. 
-
-In fact, the present work pushes in this direction even more: the profunctorial formulation of scientific theories deletes even more forcefully any intrinsic distinction that might be between the observational and the theoretical\fshyp{}linguistic structure of a theory.
-
-In profunctorial terms, thanks to \autoref{da_collage} and standard category\hyp{}theoretic arguments, the distinction between observational and theoretical vanishes \emph{in the mathematical model}: first of all, the bicategory defined in \autoref{}, with a mutuation from \cite{benabou2000distributors}, is auto-dual; this means that a profunctor $\fkR : \clT \pto \clO$ admits a `mirror image' $\fkR^\op : \clO \pto \clT$;\footnote{This is reminiscent of the fact that, as observed in \autoref{sec:org7dd09e1}, a relation has not a privileged domain of definition; clearly, the category $\mathsf{Cat}$ has a nontrivial involution given by $\op$ing a category, and this renders the auto-duality slightly more visible in the case of categorified relations (i.e., profunctors).} second, and certainly more decisive a comment towards our thesis, as outlined in \autoref{resoudre_la_tension} a generic profunctor $\fkR : \clT \pto\clO$ yields the ``collage'' of the observational and theoretical categories $\clT,\clO$ `glued along' $\fkR$; in simple terms, a new category $\clT\uplus_p\clO$, fitting in a span 
-\[ \vcenter{\xymatrix{
-	& \clT\uplus_p \clO \ar[dr]\ar[dl]& \\ 
-	\clT  && \clO 
-}} \] (cf. \autoref{def:dfib} and in particular \autoref{collage_explaned}) allowing to recover the theoretical and observational terms.
-\color{blue!40}
-\begin{remark}\label{hint_at_collage}
-	Anche in questa visione `sintattica' \cite{giunti2016} una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\clK$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità `osservazionali' e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\clT$ che contiene \emph{termini teorici} e $\clO$ che contiene \emph{termini osservativi}. 
-	%Intuitivamente $\mathcal{F_L} = \clT \cup \clO$, ma piu precisamente $\mathcal{F_L} = \clT \uplus_\varphi \clO$.
+	More explicitly, $\elts{\clC}{W}$ has objects the pairs $(C\in\clC, u\in WC)$, and morphisms $(C,u)\to (C',v)$ those $f\in \clC(C,C')$ such that $W(f)(u)=v$.
+\end{definition}
+\begin{definition}[Discrete fibration]
+	\label{def:dfib}
+	A \emph{discrete fibration} of categories is a functor $G : \clE \to \clC$ with the property that for every object $E\in\clE$ and every arrow $p : C\to GE$ in $\clC$ there is a unique $q : E'\to E$ `over $p$', i.e. such that $Gq=p$.
+\end{definition}
+Taking as morphisms between discrete fibrations the morphisms in $\Qat/\clC$, we can define the category $\DFib(\clC)$ of discrete fibrations \emph{over} $\clC$.
+\begin{proposition}\label{fibelem}
+	The category of elements $\elts{\clC}{W}$ of a functor $W : \clC\to \Set$ comes equipped with a canonical \emph{discrete fibration} to the domain of $W$, which we denote $\Sigma : \elts{\clC}{W}\to \clC$, defined forgetting the distinguished element $u\in Wc$.
+\end{proposition}
+With this terminology at hand, we can consider the \emph{category of elements} \autoref{eltsf} of a functor $F : \clC\to \Set$; this sets up a functor from $\Qat(\clC,\Set)$ to the category of discrete fibrations over $\clC$: the Grothendieck construction asserts that this is an equivalence of categories.%, as defined in \ref{def:equcat}.
+\begin{theorem}\label{thm:equconfib}
+	There is an equivalence of categories
+	\[
+		\Qat(\clC^\op,\Set) \to \DFib(\clC)
+	\]
+	defined by the correspondence sending $F\in\Qat(\clC,\Set)$ to its \emph{fibration of elements}  $\Sigma_F : \elts{\clC}{F} \to \clC$.
+\end{theorem}
+The inverse correspondence sends a discrete fibration $\Phi : \clE \to \clC$ to the functor whose action on objects and morphisms is depicted in the following image: an object $C\in\clC$ goes to the fiber $\Phi^{-1}C$ in $\clE$, that since $\Phi$ is a discrete fibration is a discrete subcategory of $\clE$, hence a set; a morphism $u : C\to C'$ defines a function $\Phi^{-1}C' \to \Phi^{-1}C$: the object $X'\in\Phi^{-1}C'$ goes to the (unique) object $X$ in the fiber over $C$, that is the domain of the arrow $v$ such that $\Phi v=u$.
+\begin{center}
+	% \includegraphics[width=.325\textwidth]{disegno.eps}
+	\begin{tikzpicture}[>=stealth]
+		\fill[gray!20,rounded corners] (0,0) rectangle (2,1);
+		\node[font=\scriptsize] (C) at  (.25,.25) {$C$};
+		\node[font=\scriptsize] (C') at (1.5,.5)  {$C'$};
+		\draw[->] (C) -- (C') node[above, pos=.5] {$u$};
+		%
+		\draw[line width=4pt, gray!50, cap=round] (C) -- +(0,2);
+		\draw[line width=4pt, gray!50, cap=round] (C') -- +(0,2.5);
+		%
+		\fill (1.5,2) circle (1pt) node (X') {};
+		\fill (.25,1.5) circle (1pt) node (X) {};
+		\draw[dashed,->] (X') -- (X);
+		\node[above, font=\scriptsize] at (X') {$X'$};
+		\node[above, font=\scriptsize] at (X) {$X$};
+	\end{tikzpicture}
+\end{center}
+There is of course a similar correspondence for \emph{covariant} functors; the situation is conveniently depicted by the table
+\begin{center}
+	\begin{tabular}{ccc}
+		\textbf{name}       & \textbf{variance}   & \textbf{condition} \\ \toprule
+		fibration           & $\clC\to\Set$       &
+		$
+			\vcenter{\tiny \xymatrix@R=5mm{
+		X \ar[r] \ar@{.}[d] & X'\ar@{.}[d]                             \\ \midrule
+		pX \ar[r]_f         & C'
+			}}
+		$
+		\\ \midrule
+		opfibration         & $\clC^\op \to \Set$ &
+		$
+			\vcenter{\tiny \xymatrix@R=5mm{
+		X \ar[r] \ar@{.}[d] & X'\ar@{.}[d]                             \\ \midrule
+		C \ar[r]_f          & pX'
+			}}
+		$
+		\\ \bottomrule
+	\end{tabular}
+\end{center}
+% \f{La notazione va uniformata a questa scelta}
+\begin{corollary}\label{da_collage}
+	Given a profunctor $\fkR : \clA \pto \clB$, regarded as a functor $R : \clA^\op\times \clB \to \Set$, we can consider the category of elements $\elts{\clA^\op\times\clB}{R}$; this is often called the \emph{collage} or the \emph{graph} of $R$. In this case, we denote the category $\elts{\clA^\op\times\clB}{R}$ as $\clA\uplus_R\clB$, to stress the intuition that $R$ prescribes a way to glue together two categories $\clA,\clB$ specifying a set of `fake' arrows $R(A,B)$ that consistently interact with the arrows in $\clA,\clB$ (compare with \autoref{hint_at_collage}, and with \autoref{11_ramsey} below).
+\end{corollary}
+\begin{remark}\label{collage_explaned}
+	The above definition deserves to be expanded a little more: from \autoref{elts} we get that the category $\clA\uplus_R\clB$ results as the category whose objects are those of the disjoint union $\clA_o\sqcup\clB_o$, and where the hom-set $\clA\uplus_R\clB(X,Y)$ is equal to
+	\begin{enumtag}{c}
+		\item $\clA(A,A')$ if $(X,Y)=(A,A')$ is a pair of objects in $\clA$;
+		\item $\clB(B,B')$ if $(X,Y)=(B,B')$ is a pair of objects in $\clB$;
+		\item $R(A,B)$ if $X=A$ is an object of $\clA$, and $Y=B$ is an object of $\clB$;
+		\item empty in every other case.
+	\end{enumtag}
+	From this definition, it is evident that every profunctor $\fkR : \clA \pto \clB$ gives rise via its fibration of elements to a span 
+	\[ \vcenter{\xymatrix{
+	& \clA\uplus_\fkR \clB \ar[dr]\ar[dl]& \\ 
+	\clA  && \clB
+}} \]
 \end{remark}
-
-
-\begin{definition}[Wiener Theory]
-	A theory $(\clF_\clL, \clK_\bullet)$ consists of a formal system $\clF_\clL$ and a class of models $\{\mathcal{K}_n \mid n \in \N \}$ indexed by the set of natural numbers. 
-	{\color{red} Qual è l'intuizione dietro questa definizione? Perché vuoi un insieme numerabile di modelli?\dots}
-	The formal system $\clF_\clL$ consists in its own right of:
-	\begin{itemize}
-		\item A formal language $\mathcal{L}$ \fo{of what kind?}
-		\item Two vocabularies: $\clT$ for theoretical terms and $\clO$ for observational terms 
-		\item Given $\mathsf{L}$ a first-order logic $\mathcal{V}_{\mathcal{T}}^L = \clT \cup \mathsf{L}$ is a logical vocabulary of $T$
-	\end{itemize}    
-\end{definition}
-The vocabularies exhaust all the terms of formal system in the sense that 
-\[\mathcal{F_L} = \clT \cup \clO \cup \mathcal{V}_{\mathcal{T}}^L.\]
-
-In carnapian, and in general neopositivistic, account a theory is expressible as a sentence formed by terms $\tau_1, \dots, \tau_k$ taken from one of the two dictionaries \cite{?}. 
-
-In the Wiener Kreis paradigm, the formal specification of $\clO$ is left unclear; Carnap \cite{} posits the existence of \emph{correspondance rules} between $\clO$ and $\clT$, associating to each term $o$ of $\clO$, or O-term, its companion in $\clT$, or the T-term $\tau$ derived from $o$.\footnote{In general, Carnap holds that $\clO \subset \clT$, but at the same time he blurs the features of this identification of observational terms as `types of T-terms'.}
-
-We can maintain a similar idea, just phrased in a slightly more precise way: we posit the existence of a function $\varphi$ that translates O-terms into T-terms.\footnote{In passing, it is worth to notice that Carnap's intuition fits nicely in our functorial framework: assume $\clT, \clO$ exhibit some kind of structure, and that $i : \clO\subseteq\clT$ \emph{as substructures} (e.g., assume that they are some sort of ordered sets, and that the order on $\clO$ is induced by the inclusion); then, a \emph{left} (resp., \emph{right}) \emph{translation function} $\varphi_L$ (resp., $\varphi_R$), is a left (resp., right) adjoint for the inclusion $i : \clO\hookrightarrow \clT$. We will not expand further on this idea, but see \autoref{carnap_translation_functors}.}
-
-So, a Wiener definition of a theory is a suitable set of pairs $\{\bk{\tau,\varphi(\omega)} \mid \tau\in\clT, \omega \in\clO\}\subseteq \clT\times\clT$, where $\varphi: \clO \to \clT$ is called a \emph{translation function}. In this way it is trivially true that all the terms of a theory are in the first dictionary. This is akin to the \emph{graph} of the translation function $\varphi$, and not by chance: see \autoref{da_collage}.
-
-The neopositivistic approach is to build an observational version of a theory $T$ following a procedure first outlined by Ramsey \cite{?}.
-
-Più semplicemente, usando \autoref{}, e considerando che $\clO \subset \clT$, ci pare che la ramseyfication, non potendo nessun termine $\tau_k \in T$ uscire dal vocabolario teorico, sia un ri-tradurre nel linguaggio di $\clO$ il contenuto della teoria, sostituendo i termini teorici "puri" con delle variabili \cite{?}.
-\begin{definition}
-	Given an \emph{application function} $\psi: \clT \to \clO$, the \emph{Ramseyfication} $T^\text{Ra}$ (at $\xi\in\clT$) of a theory $T$ is obtained as  
-	\[ 
-		T^\text{Ra} = \{\bk{[\tau/\xi], \psi(\varphi (\omega))} \mid \omega\in\clO\} 
-	\] {\color{red} chi è $x$?}
-\end{definition}
-In questa semantica si dice allora che $T^\text{Ra}$ rappresenta il \emph{contenuto osservativo} della teoria e in generale vale che: $T \cong T^\text{Ra}$. 
-
-
-
-Non ci pare, al di là degli intenti riduzionistici del Wiener Kreis \cite{Weinb}, che ci siano motivi epistemologicamente validi per eseguire un tale procedimento, che del resto non ha avuto molto seguito nella storia successiva, ma la distinzione carnapiana ripresa nel nostro framework, per trarre alcune conclusioni on relations between theoretical and observational core.
-%spiegare meglio perché la Ramsey-sentence da sola è un fallimento del riduzionismo viennese%
-
-Già agli albori dell'applicazione di metodi formali in filosofia della scienza è evidente la difficoltà di ignorare la tesi duhemeana secondo la quale "tutta l'osservazione [in fisica] è carica di teoria". 
-
-Le ambiguità carnapiane sul dominio di oggetti sui quali verterebbe la definizione viennese noi, coerenti col testo, le risolviamo indicando come dominio $\clT$. Cosa sia il mondo puro delle osservazioni al quale farebbe riferimento la Ramsey-version della teoria non è chiaro, se non un altro sotto-dizionario teorico, per l'appunto. Non a caso il neopositivismo da un iniziale fisicalismo approda ad un'ottica convenzionalista \cite{?}, in seguito ai falliti tentativi di formalizzazione di un contesto osservazionale extra-teorico. 
-
-Seguendo \cite{psillos} il realismo strutturalista che ispira questi attempts si riduce ad affermare che una teoria $T$ is logically equivalent to the conjunction
-\[\overline{T} \land (\overline{T} \rightarrow T)
-\] where the second member is the \emph{meaning postulate}:
-\begin{quotation}
-	Carnap notes that this conditional has no factual content and takes it to be a meaning postulates \cite{psillos}
-\end{quotation}
-[spiegare con un esempio tipo paper Psillos].
-
-This kind of realism is an if-then form: non è il mondo l'oggetto della scientific knowledge ma le condizioni che, date certe premesse, si verificano nel mondo strutturale di cui parlano le teorie. [esempio del tipo: non è più "la terra gira intorno al sole" ma "dati la terra e il sole, se si verificano (nella realtà) le condizioni $x_1,x_2,x_3$ allora sarà vero il fenomeno della rotazione terrestre". Da cui emerge anche la natura predittiva]. 
-
-Il meaning postulate non era altro che the Wiener Kreis' version of the famous demarcation problem between science and metaphysics: the secular attempt to elaborate a precise criterion to distinguish a proposition belonging to empirical sciences from a metaphysical (or, at large, not scientifical) proposition. Un criterio che, a seconda dei contesti, è sempre risultato troppo stretto o troppo largo. 
-
-Tolti i due estremi, gli enunciati protocollari da un lato \cite{?}, i discorsi di Heidegger dall'altro \cite{?}, esistono tutti i casi intermedi per i quali a meaning criterion (o una operazione come la drastica traduzione dei costrutti teorici in "referti osservativi puri" tramite ramseyfication) impedisce concretamente di individuare la demarcazione. Classical objections range from Popper \cite{?} to more recent sociology of science.
-\subsubsection*{Structure of the paper}
-Section 2 and 3 outline the mathematical background we need throughout the work; section 4 introduces our mai notions: a canvas, a world, a theory, a science. Sections 5 and 6 will provide evidence that the two dictionaries, theoretical and observable, live in a very tight relation; a broadly intended meaning for the notion of \emph{theory} asks for a precise understanding of the category of adjunctions between the theoretical and observational side.
-\color{black}
+Thus, we have obtained a concrete model for a category that realises the generalised relation between $\clA,\clB$; the structure $\clA\uplus_R\clB$ is `carved' from $\clA,\clB$ separately, starting from (semi-)free relations witnessing the fact that $\fkR$ connects $\clA,\clB$ in a weak way. For example, if $\fkR : \clA^\op\times \clB \to \Set$ is the empty functor, then $\clA\uplus_R\clB$ is just he disjoint union of $\clA,\clB$; and if $\fkR$ is the functor constant at the singleton set, then $\clA\uplus_R\clB$ is the \emph{join} of $\clA,\clB$, i.e. the category $\clA\coprod\clB$ where exactly a single new morphism is added between each and every object of $\clA$ and of $\clB$ (but not in the opposite direction).
