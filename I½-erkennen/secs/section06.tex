@@ -31,12 +31,11 @@ is pseudocommutative, the composition $L\circ y$ s equal to (the mate of) $\fkK$
 	\[\lambda \uO\lambda\uX . \fkK(\uO, \uX)\]
 	can be pre-composed with $F$ obtaining
 	\[\lambda \uO\lambda\uO'.\fkK(\uO, F\uO').\]
-	We say that a translation adjunction $(L,F)$ is `$\fkK$-admissible' when there is a natural isomorphism $\fkK(L,1)\cong\fkK(1,F)$.
+	We say that a translation adjunction $(L,F)$ is `$\fkK$-admissible' (denoted $L \dashv_\fkK F$) when there is a natural isomorphism $\fkK(L,1)\cong\fkK(1,F)$.
 \end{remark}
-\color{red}
-Qui sarebbe utile cercare di tracciare un parallelo tra l'ammissibilità e la rappresentabilità: mi aspetto che caratterizzare quali funtori $(F,G)$ formano aggiunzioni $\fkK$-ammissibili sia complicato. Ma ci sono proprietà interessanti di questa relazione: per esempio,
+The property of $\fkK$-admissibility for a pair of functors is in general difficult to assess; nevertheless, there are interesting properties for the relation $F\dashv_\fkK G$: for example
 \begin{theorem}
-	Let $F : \clA \leftrightarrows \clB: G$ be a pair of functors in opposite directions; let $\fkK : \clB \pto \clA$ be a profunctor; if $(F,G)$ is a $\fkK$-admissible pair, then there is a `genuine' adjunction 
-	\[ F^e : \clA\uplus_\fkK\clB \leftrightarrows \clA\uplus_\fkK\clB : G^e. \]
+	Let $F : \clA \leftrightarrows \clB: G$ be a pair of functors in opposite directions; let $\fkK : \clB \pto \clA$ be a profunctor; if $F\dashv_\fkK G$, then there is a `genuine' adjunction 
+	\[ F^e : \clA\uplus_\fkK\clB \leftrightarrows \clA\uplus_\fkK\clB : G^e \]
+	`extended' to the category of elements of $\fkK$.
 \end{theorem}
-\color{black}
