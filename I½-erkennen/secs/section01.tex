@@ -43,8 +43,8 @@ Additional assumptions on the canvas $\phi : \clL\to \clW$, however, can refine 
 
 As bold a statement as it might seem, this has fruitful consequences: see for example \autoref{remark_yuggoth_1}, \autoref{remark_yuggoth_2}.
 
-\subsection{The Two Dictionaries}
-From a neo-positivistic stance, the distinction between theoretical and empirical is purely formal: it is not due to the hypothetical nature of the former (even an empirical law can be hypothetical), but to the fact that the two kinds of law contain different types of terms \cite{?}. This purports a purely linguistic approach to epistemological issues. 
+\subsection{The Two Dictionaries and the Ramsey-sentence}
+From a neo-positivistic stance, the distinction between theoretical and empirical is purely formal: it is not due to the hypothetical nature of the former (even an empirical law can be hypothetical), but to the fact that the two kinds of law contain different types of terms \cite{carnapfound}. This purports a purely linguistic approach to epistemological issues. 
 
 In fact, the present work pushes in this direction even more: the profunctorial formulation of scientific theories deletes even more forcefully any intrinsic distinction that might be between the observational and the theoretical\fshyp{}linguistic structure of a theory.
 
@@ -75,7 +75,7 @@ The vocabularies exhaust all the terms of formal system in the sense that
 
 In carnapian, and in general neopositivistic, account a theory is expressible as a sentence formed by terms $\tau_1, \dots, \tau_k$ taken from one of the two dictionaries \cite{?}. 
 
-In the Wiener Kreis paradigm, the formal specification of $\clO$ is left unclear; Carnap \cite{} posits the existence of \emph{correspondance rules} between $\clO$ and $\clT$, associating to each term $o$ of $\clO$, or O-term, its companion in $\clT$, or the T-term $\tau$ derived from $o$.\footnote{In general, Carnap holds that $\clO \subset \clT$, but at the same time he blurs the features of this identification of observational terms as `types of T-terms'.}
+In the Wiener Kreis paradigm, the formal specification of $\clO$ is left unclear; Carnap \cite{carnapfound} posits the existence of \emph{correspondance rules} between $\clO$ and $\clT$, associating to each term $o$ of $\clO$, or O-term, its companion in $\clT$, or the T-term $\tau$ derived from $o$.\footnote{In general, Carnap holds that $\clO \subset \clT$, but at the same time he blurs the features of this identification of observational terms as `types of T-terms'.}
 
 We can maintain a similar idea, just phrased in a slightly more precise way: we posit the existence of a function $\varphi$ that translates O-terms into T-terms.\footnote{In passing, it is worth to notice that Carnap's intuition fits nicely in our functorial framework: assume $\clT, \clO$ exhibit some kind of structure, and that $i : \clO\subseteq\clT$ \emph{as substructures} (e.g., assume that they are some sort of ordered sets, and that the order on $\clO$ is induced by the inclusion); then, a \emph{left} (resp., \emph{right}) \emph{translation function} $\varphi_L$ (resp., $\varphi_R$), is a left (resp., right) adjoint for the inclusion $i : \clO\hookrightarrow \clT$. We will not expand further on this idea, but see \autoref{carnap_translation_functors}.}
 
@@ -87,7 +87,7 @@ Più semplicemente, usando \autoref{}, e considerando che $\clO \subset \clT$, c
 \begin{definition}
 	Given an \emph{application function} $\psi: \clT \to \clO$, the \emph{Ramseyfication} $T^\text{Ra}$ (at $\xi\in\clT$) of a theory $T$ is obtained as  
 	\[ 
-		T^\text{Ra} = \{\bk{[\tau/\xi], \psi(\varphi (\omega))} \mid \omega\in\clO\} 
+		T^\text{Ra} = \{\bk{[\tau/\xi_i], \psi(\varphi (\omega))} \mid \omega\in\clO\} 
 	\] {\color{red} chi è $x$?}
 \end{definition}
 In questa semantica si dice allora che $T^\text{Ra}$ rappresenta il \emph{contenuto osservativo} della teoria e in generale vale che: $T \cong T^\text{Ra}$. 
@@ -97,12 +97,12 @@ In questa semantica si dice allora che $T^\text{Ra}$ rappresenta il \emph{conten
 Non ci pare, al di là degli intenti riduzionistici del Wiener Kreis \cite{Weinb}, che ci siano motivi epistemologicamente validi per eseguire un tale procedimento, che del resto non ha avuto molto seguito nella storia successiva, ma la distinzione carnapiana ripresa nel nostro framework, per trarre alcune conclusioni on relations between theoretical and observational core.
 %spiegare meglio perché la Ramsey-sentence da sola è un fallimento del riduzionismo viennese%
 
-Già agli albori dell'applicazione di metodi formali in filosofia della scienza è evidente la difficoltà di ignorare la tesi duhemeana secondo la quale "tutta l'osservazione [in fisica] è carica di teoria". 
+Già agli albori dell'applicazione di metodi formali in filosofia della scienza è evidente la difficoltà di uscire da $clT$: parafrasando Duhem si può dire che "tutta l'osservazione [in fisica] avviene nella categoria sintattica $clT$". 
 
 Le ambiguità carnapiane sul dominio di oggetti sui quali verterebbe la definizione viennese noi, coerenti col testo, le risolviamo indicando come dominio $\clT$. Cosa sia il mondo puro delle osservazioni al quale farebbe riferimento la Ramsey-version della teoria non è chiaro, se non un altro sotto-dizionario teorico, per l'appunto. Non a caso il neopositivismo da un iniziale fisicalismo approda ad un'ottica convenzionalista \cite{?}, in seguito ai falliti tentativi di formalizzazione di un contesto osservazionale extra-teorico. 
 
 Seguendo \cite{psillos} il realismo strutturalista che ispira questi attempts si riduce ad affermare che una teoria $T$ is logically equivalent to the conjunction
-\[\overline{T} \land (\overline{T} \rightarrow T)
+\[ T^\text{Ra} \land (T^\text{Ra} \rightarrow T)
 \] where the second member is the \emph{meaning postulate}:
 \begin{quotation}
 	Carnap notes that this conditional has no factual content and takes it to be a meaning postulates \cite{psillos}
@@ -117,3 +117,4 @@ Tolti i due estremi, gli enunciati protocollari da un lato \cite{?}, i discorsi 
 \subsubsection*{Structure of the paper}
 Section 2 and 3 outline the mathematical background we need throughout the work; section 4 introduces our mai notions: a canvas, a world, a theory, a science. Sections 5 and 6 will provide evidence that the two dictionaries, theoretical and observable, live in a very tight relation; a broadly intended meaning for the notion of \emph{theory} asks for a precise understanding of the category of adjunctions between the theoretical and observational side.
 \color{black}
+
