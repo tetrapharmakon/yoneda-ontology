@@ -118,3 +118,46 @@ Tolti i due estremi, gli enunciati protocollari da un lato \cite{?}, i discorsi 
 Section 2 and 3 outline the mathematical background we need throughout the work; section 4 introduces our mai notions: a canvas, a world, a theory, a science. Sections 5 and 6 will provide evidence that the two dictionaries, theoretical and observable, live in a very tight relation; a broadly intended meaning for the notion of \emph{theory} asks for a precise understanding of the category of adjunctions between the theoretical and observational side.
 \color{black}
 
+
+1.2
+From a neo-positivistic stance, the distinction between theoretical and empirical is purely formal: it is not due to the hypothetical nature of the former (even an empirical law can be hypothetical), but to the fact that the two kinds of law contain different types of terms \cite{carnap56}. This purports a purely linguistic approach to epistemological issues. 
+
+In fact, the present work pushes in this direction even more: the profunctorial formulation of scientific theories deletes even more forcefully any intrinsic distinction that might be between the observational and the theoretical\fshyp{}linguistic structure of a theory.
+
+In profunctorial terms, thanks to \autoref{da_collage} and standard category\hyp{}theoretic arguments, the distinction between observational and theoretical vanishes \emph{in the mathematical model}: first of all, the bicategory defined in \autoref{def_profu}, with a mutuation from \cite{benabou2000distributors}, is auto-dual; this means that a profunctor $\fkR : \clT \pto \clO$ admits a `mirror image' $\fkR^\op : \clO \pto \clT$;\footnote{This is reminiscent of the fact that, as observed in \autoref{sec:org7dd09e1}, a relation has not a privileged domain of definition; clearly, the category $\mathsf{Cat}$ has a nontrivial involution given by $\op$ing a category, and this renders the auto-duality slightly more visible in the case of categorified relations (i.e., profunctors).} second, and certainly more decisive a comment towards our thesis, as outlined in \autoref{resoudre_la_tension} a generic profunctor $\fkR : \clT \pto\clO$ yields the ``collage'' of the observational and theoretical categories $\clT,\clO$ `glued along' $\fkR$; in simple terms, a new category $\clT\uplus_p\clO$, fitting in a span 
+\[ \vcenter{\xymatrix{
+	& \clT\uplus_p \clO \ar[dr]\ar[dl]& \\ 
+	\clT  && \clO 
+}} \] (cf. \autoref{def:dfib} and in particular \autoref{collage_explaned}) allowing to recover the theoretical and observational terms.
+TAGLIARE
+\color{blue!40}
+%\begin{remark}\label{hint_at_collage}
+	%Anche in questa visione `sintattica' una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\clK$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità `osservazionali' e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\clT$ che contiene \emph{termini teorici} e $\clO$ che contiene \emph{termini osservativi}. 
+	%Intuitivamente $\mathcal{F_L} = \clT \cup \clO$, ma piu precisamente $\mathcal{F_L} = \clT \uplus_\varphi \clO$.
+%\end{remark}
+In our discussion, however, we require $(\clT,\clO)$ to satisfy an additional admissibility condition, that is the existence of a meaningful relation between the theoretical world $\clT$ and the observational world $\clO$; this notion of `meaningful relation' between structured high-level systems is again captured a well-known mathematical object, a \emph{profunctor} \cite{benabou2000distributors} between the two syntactic categories $\clT,\clO$.
+
+Proposing the fundamental features of a ``general theory of scientific theories'' in terms of profunctors is the main contribution of the present work.
+
+\medskip
+We conclude this introductory section with a paragraph discussing about the ``nature''' of the categories $\clT,\clO$.
+
+As we already observed in a previous work \cite{catont1}, the problem of locating the syntactic objects embodying a linguistic theory can be easily solved from an esperientialist stance: the world undeniably exists, and it is a sufficiently complex structure to contain the ``concrete'' constituents of a formal system. Therefore, we derive the primitive symbols of language from a portion of the world.
+
+This problem, and its proposed solution, reflect unavoidably on the way in which the categories $\clT,\clO$ are built. In our model the world is a (possibly large) category $\clW$, unfathomable and given since the beginning of time, to which we can only access through \emph{probing} functors $\phi : \clL \to \clW$ (cf. \autoref{canvas_scienza}) representing small `accessible' categories construed from parts of $\clW$ that we can experience. Te request that $\clW$ is sufficiently expressive now translates into the request that as a category $\clW$ contains enough ``traces'' of functors like $\phi$; this (cf. \autoref{mondo_yalda}) translates formally in the request that any such $\phi$ admits a \emph{colimit} (cf. \cite[Ch. 2]{Bor1}) in $\clW$.
+
+When things are put in this perspective, a few remarks are in order: 
+%\color{blue!40}
+%\begin{itemize}
+%	\item La specificazione del dominio di $\clO$ determina il tipo di teoria che stiamo considerando (scientifica, strettamente empirica, logico-matematica, metafisica).
+%	\item Dire che $\clO$ determina le \emph{tipizzazioni} della teoria significa dire che svolge lo stesso ruolo della legge $\beta$ {\color{red} chi è beta?} nella semantica dello spazio degli stati, mentre la classe $\clK$ è isomorfa all'insieme $\mathcal{M}$ dello spazio degli stati. Il tipo di $\beta$ determina il tipo di $\mathcal{M}$ che determina il tipo di $T = (\mathcal{M}, \beta)$. Idem nel nostro approccio: $\clO 	= \{\alpha_1,\dots,\alpha_n\}$ determina il tipo, che implementa una logica che determina la classe $\clK$.
+%\end{itemize}
+%\color{black}
+This closes the circle over the problem of representation of a world $\clW$ in terms of a portion $\clT$ to which we have hermeneutical access, and from which we have carved a language. In fact, such a representation happens through `canvas functors' $\phi : \clL \to \clW$ that, thanks to the cocompleteness property of $\clW$, extend uniquely to representation functors $[\clL^\op,\Set] \leftrightarrows \clW$. 
+
+On the other hand, `the world' as a whole is unknowable, strictly speaking: instead of $\clW$, we can access to an `observational fragment' $\clO$, from which we recover, now exploiting the cocompleteness of $[\clO^\op,\Set]$, a further representation $[\clL^\op,\Set] \leftrightarrows [\clO^\op,\Set]$. In general, this is all that can be said; such a picture is already capable of determining, by elementary means, an equivalence of categories (i.e., an equivalence of models) between the observational and the theoretical \emph{nuclei} of $[\clT^\op,\Set] \leftrightarrows [\clO^\op,\Set]$: we discuss the matter in \autoref{nuclei}, and \autoref{resoudre_la_tension}.
+
+Additional assumptions on the canvas $\phi : \clL\to \clW$, however, can refine our analysis: we can infer that the totality of models $[\clL^\op,\Set]$ \emph{contains a copy} of the world $\clW$. In this precise sense, assuming what is outlined in the definition of \science in \autoref{canvas_scienza}, language prevails: the unfathomable world is a full subcategory of the class of all modes in which the language of $\clT$ can be interpreted. 
+
+As bold a statement as it might seem, this has fruitful consequences: see for example \autoref{remark_yuggoth_1}, \autoref{remark_yuggoth_2}
+
