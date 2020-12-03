@@ -3,46 +3,43 @@
 \subsection{The Two Dictionaries}
 Along the XXth century there have been many attempts towards a formal definition of a scientific theory. The \emph{Wiener Kreis}' verificationist paradigm, and Neurath's theory of `protocollar statements', has given the initial input to elaborate a completely semantic framework for scientific theories, and spurred the search for a pan-linguistic vision of philosophy of science \cite{Weinb}.
 
-The formal account in which e.g. Carnap \cite{carnapfound} provides his notion of `theory' is known in the literature as \emph{syntactical conception of theories} or 'received view' \cite{krause-foundation,krause2011axiomatization,giunti2016}, while the term `semantic' is due to later developments. Yet, the field of epistemology that the logical neopositivism started can legitimately be called a `semantics of theories', because some of its features, if not the underlying ideology, are the same throughout the works of Carnap \cite{carnap56,carnapfound},  Beth \cite{?}, and Suppe \cite{suppe89}.
+The formal account in which --among others-- Carnap \cite{carnapfound} provided his notion of `theory' is known in the literature as \emph{syntactical conception of theories} or 'received view' \cite{krause-foundation,krause2011axiomatization,giunti2016}. Albeit the term `semantic' is due to later developments, the field of epistemology that logical neopositivism started can legitimately be labeled a `semantics of theories', because some of its features, if not the underlying ideology, are the same throughout the work of Carnap \cite{carnap56,carnapfound},  Beth \cite{?}, and Suppe \cite{suppe89}.
 
-More properly, a \emph{theory} becomes a structure $(F_\clL, \clK)$ where $F_\clL$ is a formal system, and $\clK$ the totality of all its interpretations. Our strategy, originally inspired by carnapian approach, is to further separate $F_\clL$ into two `vocabularies' (intended as two syntactic categories of two first order theories), one of them representing the \emph{pure} or \emph{theoretical} terms, and the other representing the \emph{applied} or \emph{observational} terms. 
+In this approach, a `theory' becomes a structure $(F_\clL, \clK)$ where $F_\clL$ is a formal system, and $\clK$ the totality of all its interpretations, or \emph{models}. We take this as the starting point of our analysis, originally inspired by Carnapian views, and we separate further $F_\clL$ into two `vocabularies' $(\clT,\clO)$ (intended, in modern terms, as two syntactic categories carved from two first order theories), one of them representing the \emph{pure} or \emph{theoretical} terms, and the other representing the \emph{applied} or \emph{observational} terms. 
 
-Thus, for us a ``scientific theory'' is a triple $\bk{(\clT,\clO), \clK}$ whose first two elements form the logic $F_\clL=(\clT,\clO)$ and where $\clK$ is a (possibly large) category of models or ``interpretations''. This is of course not a new idea, in fact permeating classical universal algebra, as well as categorical logic, and other disciplines. This approach has been used to ``axiomatise'' a notion of evolutionary theory in \cite{biologia}.
+In short, for us a ``scientific theory'' is a triple $\bk{(\clT,\clO), \clK}$ whose first two elements form the `underlying logic' $F_\clL=(\clT,\clO)$ and where $\clK$ is a (possibly large) category of models or ``interpretations''. This is not a new idea, as the habit of identifying a sort of mathematical structure, in a way that is independent from the cohort of its syntactic presentations, permeates classical universal algebra since the early work of Lawvere (see also \cite{,} for applications to categorical logic and other disciplines). 
 
-\begin{definition}[Wiener Theory] \cite{krause-foundation}
+Tangentially, a similar approach has been used to `axiomatise' a notion of evolutionary theory in \cite{biologia}; we also mention the pioneering work of Rosen \cite{} towards the axiomatisation of structures of living systems using category theory.
+\begin{definition}[Wiener Circle theory] \cite{krause-foundation}
 	A theory $T$ consists of:
 	\begin{itemize}
-	\item A formal language $\clF_\clL$ whose a non-logical vocabulary $\overline{\clV}$ is divided in two sub-vocabularies: $\clT$ for theoretical terms and $\clO$ for observational terms \footnote{Non sono ammesse restrizioni sul linguaggio in questo approccio, e questo implica che 
+	\item {\color{blue!30}A formal language $\clF_\clL$ whose a non-logical vocabulary $\overline{\clV}$ is divided in two sub-vocabularies: $\clT$ for theoretical terms and $\clO$ for observational terms \footnote{Non sono ammesse restrizioni sul linguaggio in questo approccio, e questo implica che 
 	\begin{quotation}
 		one already commits the theory with being characterized not only by its postulates and correspondence rules but also with a specific vocabulary and language. [...] Given that a theory is identified with its linguistic formulation (in axiomatic terms), it would result in impossible formulations of the same theory in alternative vocabularies \cite{krause-foundation}.
-	\end{quotation}}. 
-	\item A logical vocabulary, namely a set of logical axioms with derivation rules and a notion of consequence relation, called $\clV$. So $\clF_\clL= \clV \cup \overline{\clV}$.
+	\end{quotation}}.}
+	\item {\color{blue!30} A logical vocabulary, namely a set of logical axioms with derivation rules and a notion of consequence relation, called $\clV$. So $\clF_\clL= \clV \cup \overline{\clV}$.}
 	\item A set of sentences in $\clT$ called \emph{theoretical postulates}.
 	\item An informal semantics for observational terms whose relating terms of $\clO$ with observable objects and events \footnote{Questo è fortemente dipendente dalla meaning theory neopositivistica \cite{} ed è un passaggio problematico per motivi chiariti più avanti}. 
 	\item A set of sentences called \emph{correspondance rules} relating theoretical terms with observational terms. 
 	\end{itemize}    
 \end{definition}
-
-
-In carnapian, and in general neopositivistic, account a theory is expressible as a sentence formed by terms $\tau_1, \dots, \tau_k$ taken from both the dictionaries of $\clF_clL$. 
+In the Carnapian --and in general te neopositivistic-- account a theory can be expressed as a sentence formed by terms $\tau_1, \dots, \tau_k$ taken from both the dictionaries of $\clF_\clL$. 
 
 In the Wiener Kreis paradigm, the formal specification of $\clO$ is left unclear; Carnap \cite{carnapfound} posits the existence of \emph{correspondance rules} between $\clO$ and $\clT$, associating to each term $o$ of $\clO$, or O-term, its companion in $\clT$, or the T-term $\tau$ derived from $o$.\footnote{In general, Carnap holds that $\clO \subset \clT$, but at the same time he blurs the features of this identification of observational terms as `types of T-terms'.}
 
-We can maintain a similar idea, just phrased in a slightly more precise way: we posit the existence of a function $\varphi$ that translates O-terms into T-terms.\footnote{In passing, it is worth to notice that Carnap's intuition fits nicely in our functorial framework: assume $\clT, \clO$ exhibit some kind of structure, and that $i : \clO\subseteq\clT$ \emph{as substructures} (e.g., assume that they are some sort of ordered sets, and that the order on $\clO$ is induced by the inclusion); then, a \emph{left} (resp., \emph{right}) \emph{translation function} $\varphi_L$ (resp., $\varphi_R$), is a left (resp., right) adjoint for the inclusion $i : \clO\hookrightarrow \clT$. We will not expand further on this idea, but see \autoref{carnap_translation_functors}.}
-
-So, a Wiener definition of a theory is a suitable set of pairs $\{\bk{\tau,\varphi(\omega)} \mid \tau\in\clT, \omega \in\clO\}\subseteq \clT\times\clT$, where $\varphi: \clO \to \clT$ is called a \emph{translation function}. In this way it is trivially true that all the terms of a theory are in the first dictionary. This is akin to the \emph{graph} of the translation function $\varphi$, and not by chance: see \autoref{da_collage}.
+We can maintain a similar idea, just phrased in a slightly more precise way: we posit the existence of a function $\varphi$ that translates O-terms into T-terms. So, a Wiener definition of a theory is a suitable set of pairs $\{\bk{\tau,\varphi(\tau)} \mid \tau\in\clT\}\subseteq \clT\times\clO$, where $\varphi: \clT \to \clO$ is called a \emph{translation function}. In this way it is trivially true that all the terms of a theory are in the first dictionary. This is akin to the \emph{graph} of the translation function $\varphi$, and not by chance: see \autoref{da_collage}.\footnote{In passing, it is worth to notice that Carnap's intuition fits nicely in our functorial framework: assume $\clT, \clO$ exhibit some kind of structure, and that $i : \clO\subseteq\clT$ \emph{as substructures} (e.g., assume that they are some sort of ordered sets, and that the order on $\clO$ is induced by the inclusion); then, a \emph{left} (resp., \emph{right}) \emph{translation function} $\varphi_L$ (resp., $\varphi_R$), is a left (resp., right) adjoint for the inclusion $i : \clO\hookrightarrow \clT$. We will not expand further on this idea, but see \autoref{carnap_translation_functors}.}
 
 The neopositivistic approach is to build an observational version of a theory $T$ following a procedure first outlined by Ramsey \cite{?}. La Ramsey-sentence of a theory, non potendo nessun termine $\tau_k \in \clF_\clL$ uscire da $\clT$, sia un ri-tradurre nel linguaggio di $\clO$ il contenuto della teoria, sostituendo i termini teorici "puri" con delle variabili (dimenticando di specificare un dominio di oggetti da cui prenderle).
 \begin{definition} [Ramsey sentence]
-	Given an \emph{application function} $\psi: \clT \to \clO$, the \emph{Ramsey sentence} $T^\text{Ra}$ (at $\xi\in\clT$) of a theory $T$ is obtained as  
+	Given a translation function $\varphi: \clT \to \clO$, the \emph{Ramsey sentence} $T^\text{Ra}$ (at $\xi\in\clT$) of a theory $T$ is obtained as  
 	\[ 
-		T^\text{Ra} = \{\bk{[\tau/\xi], \psi(\varphi (\omega))} \mid \omega\in\clO\} 
+		T^\text{Ra} = \{\bk{[\tau/\xi], \varphi([\tau/\xi])} \mid \tau\in\clT\} 
 	\]
 \end{definition}
 In questa semantica si dice allora che $T^\text{Ra}$ rappresenta il \emph{contenuto osservativo} della teoria e in generale vale che: $T \cong T^\text{Ra}$. 
+{\color{red} Cosa vuol dire questo?}
 
-
-
+\medskip
 Non ci pare, al netto degli obiettivi riduzionistici del Wiener Kreis \cite{}, che ci siano motivi epistemologicamente validi per eseguire un tale procedimento, che del resto non ha avuto molto seguito nella letteratura successiva, ma la distinzione carnapiana è ripresa nel nostro framework, per trarre alcune conclusioni on relations between theoretical and observational core \autoref{sec:orge11c3c4} e su come allargare la nozione stessa di teoria \autoref{}.
 
 I termini di $\clO$ si riferiscono a fenomeni ma sono appunto 'termini': anche nei futuri sviluppi semantici il trattamento formale impedisce di uscire davvero dalla sintassi. Parafrasando Duhem si potrebbe dire che già agli albori della semantics of theory "tutta l'osservazione [in fisica] è carica di teoria" dove per teoria si intende la categoria sintattica $\clT$.
@@ -56,10 +53,9 @@ Seguendo \cite{psillos} si può dare una lettura strutturalista a questi attempt
 	Carnap notes that this conditional has no factual content and takes it to be a meaning postulates \cite{psillos}
 \end{quotation}
 
-This is a kind of 'if-then' realism: non è il mondo l'oggetto della scientific knowledge ma le condizioni che, date certe premesse, si verificano nel mondo strutturale di cui parlano le teorie. 
-%i la terra e il sole, se si verificano (nella realtà) le condizioni $x_1,x_2,x_3$ allora sarà vero il fenomeno della rotazione terrestre". Da cui emerge anche la natura predittiva]. 
+This is a kind of 'if-then' realism: the subject of study of scientific knowledge is not the world, but instead the conditions that, given certain assumptions, happen to be true in the structural world that the theories describe.
 
-Il meaning postulate non era altro che the Wiener Kreis' version of the famous demarcation problem between science and metaphysics: the secular attempt to elaborate a precise criterion to distinguish a proposition belonging to empirical sciences from a metaphysical (or, at large, not scientifical) proposition. Un criterio che, a seconda dei contesti, è sempre risultato troppo stretto o troppo largo. 
+The meaning postulate is nothing but the Wiener Kreis' version of the famous \emph{demarcation problem} between science and metaphysics: the attempt to elaborate a distinguishability criterion between a proposition belonging to empirical sciences, and a metaphysical (or, more broadly, a non-scientifical) one. Such criteria have always been either too strict (taking sensorial experience as ultimate judge of a scientific statement), or too large (from \cite{schwarz2009twisted}: \emph{Physics is a part of Mathematics devoted to the calculation of integrals of the form $\int g(x) e^{f(x)}dx$}): our approach addresses this problem.
 
 Tolti i due estremi, gli enunciati protocollari da un lato \cite{?}, i discorsi di Heidegger dall'altro \cite{?}, esistono tutti i casi intermedi per i quali a meaning criterion (o una operazione come la drastica traduzione dei costrutti teorici in "referti osservativi puri" tramite ramseyfication) impedisce concretamente di individuare la demarcazione. 
 %Classical objections range from Popper \cite{?} to more recent sociology of science.
@@ -78,11 +74,7 @@ In profunctorial terms, thanks to \autoref{da_collage} and standard category\hyp
 	& \clT\uplus_p \clO \ar[dr]\ar[dl]& \\ 
 	\clT  && \clO 
 }} \] (cf. \autoref{def:dfib} and in particular \autoref{collage_explaned}) allowing to recover the theoretical and observational terms.
-\color{blue!40}
-%\begin{remark}\label{hint_at_collage}
-	%Anche in questa visione `sintattica' una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\clK$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità `osservazionali' e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\clT$ che contiene \emph{termini teorici} e $\clO$ che contiene \emph{termini osservativi}. 
-	%Intuitivamente $\mathcal{F_L} = \clT \cup \clO$, ma piu precisamente $\mathcal{F_L} = \clT \uplus_\varphi \clO$.
-%\end{remark}
+
 In our discussion, however, we require $(\clT,\clO)$ to satisfy an additional admissibility condition, that is the existence of a meaningful relation between the theoretical world $\clT$ and the observational world $\clO$; this notion of `meaningful relation' between structured high-level systems is again captured a well-known mathematical object, a \emph{profunctor} \cite{benabou2000distributors} between the two syntactic categories $\clT,\clO$.
 
 Proposing the fundamental features of a ``general theory of scientific theories'' in terms of profunctors is the main contribution of the present work.
@@ -95,20 +87,11 @@ As we already observed in a previous work \cite{catont1}, the problem of locatin
 This problem, and its proposed solution, reflect unavoidably on the way in which the categories $\clT,\clO$ are built. In our model the world is a (possibly large) category $\clW$, unfathomable and given since the beginning of time, to which we can only access through \emph{probing} functors $\phi : \clL \to \clW$ (cf. \autoref{canvas_scienza}) representing small `accessible' categories construed from parts of $\clW$ that we can experience. Te request that $\clW$ is sufficiently expressive now translates into the request that as a category $\clW$ contains enough ``traces'' of functors like $\phi$; this (cf. \autoref{mondo_yalda}) translates formally in the request that any such $\phi$ admits a \emph{colimit} (cf. \cite[Ch. 2]{Bor1}) in $\clW$.
 
 When things are put in this perspective, a few remarks are in order: 
-%\color{blue!40}
-%\begin{itemize}
-%	\item La specificazione del dominio di $\clO$ determina il tipo di teoria che stiamo considerando (scientifica, strettamente empirica, logico-matematica, metafisica).
-%	\item Dire che $\clO$ determina le \emph{tipizzazioni} della teoria significa dire che svolge lo stesso ruolo della legge $\beta$ {\color{red} chi è beta?} nella semantica dello spazio degli stati, mentre la classe $\clK$ è isomorfa all'insieme $\mathcal{M}$ dello spazio degli stati. Il tipo di $\beta$ determina il tipo di $\mathcal{M}$ che determina il tipo di $T = (\mathcal{M}, \beta)$. Idem nel nostro approccio: $\clO 	= \{\alpha_1,\dots,\alpha_n\}$ determina il tipo, che implementa una logica che determina la classe $\clK$.
-%\end{itemize}
-%\color{black}
-This closes the circle over the problem of representation of a world $\clW$ in terms of a portion $\clT$ to which we have hermeneutical access, and from which we have carved a language. In fact, such a representation happens through `canvas functors' $\phi : \clL \to \clW$ that, thanks to the cocompleteness property of $\clW$, extend uniquely to representation functors $[\clL^\op,\Set] \leftrightarrows \clW$. 
-
-On the other hand, `the world' as a whole is unknowable, strictly speaking: instead of $\clW$, we can access to an `observational fragment' $\clO$, from which we recover, now exploiting the cocompleteness of $[\clO^\op,\Set]$, a further representation $[\clL^\op,\Set] \leftrightarrows [\clO^\op,\Set]$. In general, this is all that can be said; such a picture is already capable of determining, by elementary means, an equivalence of categories (i.e., an equivalence of models) between the observational and the theoretical \emph{nuclei} of $[\clT^\op,\Set] \leftrightarrows [\clO^\op,\Set]$: we discuss the matter in \autoref{nuclei}, and \autoref{resoudre_la_tension}.
-
-Additional assumptions on the canvas $\phi : \clL\to \clW$, however, can refine our analysis: we can infer that the totality of models $[\clL^\op,\Set]$ \emph{contains a copy} of the world $\clW$. In this precise sense, assuming what is outlined in the definition of \science in \autoref{canvas_scienza}, language prevails: the unfathomable world is a full subcategory of the class of all modes in which the language of $\clT$ can be interpreted. 
-
-As bold a statement as it might seem, this has fruitful consequences: see for example \autoref{remark_yuggoth_1}, \autoref{remark_yuggoth_2}
-
+\begin{itemize}
+	\item This closes the circle over the problem of representation of a world $\clW$ in terms of a portion $\clT$ to which we have hermeneutical access, and from which we have carved a language. In fact, such a representation happens through `canvas functors' $\phi : \clL \to \clW$ that, thanks to the cocompleteness property of $\clW$, extend uniquely to representation functors $[\clL^\op,\Set] \leftrightarrows \clW$. 
+	\item On the other hand, `the world' as a whole is unknowable, strictly speaking: instead of $\clW$, we can access to an `observational fragment' $\clO$, from which we recover, now exploiting the cocompleteness of $[\clO^\op,\Set]$, a further representation $[\clL^\op,\Set] \leftrightarrows [\clO^\op,\Set]$. In general, this is all that can be said; such a picture is already capable of determining, by elementary means, an equivalence of categories (i.e., an equivalence of models) between the observational and the theoretical \emph{nuclei} of $[\clT^\op,\Set] \leftrightarrows [\clO^\op,\Set]$: we discuss the matter in \autoref{nuclei}, and \autoref{resoudre_la_tension}.
+	\item Additional assumptions on the canvas $\phi : \clL\to \clW$, however, can refine our analysis: we can infer that the totality of models $[\clL^\op,\Set]$ \emph{contains a copy} of the world $\clW$. In this precise sense, assuming what is outlined in the definition of \science in \autoref{canvas_scienza}, language prevails: the unfathomable world is a full subcategory of the class of all modes in which the language of $\clT$ can be interpreted. 
+\end{itemize}
+As bold a statement as it might seem, this has fruitful consequences: see for example \autoref{remark_yuggoth_1}, \autoref{remark_yuggoth_2}.
 \subsubsection*{Structure of the paper}
 Section 2 and 3 outline the mathematical background we need throughout the work; section 4 introduces our mai notions: a canvas, a world, a theory, a science. Sections 5 and 6 will provide evidence that the two dictionaries, theoretical and observable, live in a very tight relation; a broadly intended meaning for the notion of \emph{theory} asks for a precise understanding of the category of adjunctions between the theoretical and observational side.
-\color{black}
