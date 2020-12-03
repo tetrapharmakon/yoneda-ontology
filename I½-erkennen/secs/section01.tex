@@ -10,15 +10,19 @@ More properly, a \emph{theory} becomes a structure $(F_\clL, \clK)$ where $F_\cl
 Thus, for us a ``scientific theory'' is a triple $\bk{(\clT,\clO), \clK}$ whose first two elements form the logic $F_\clL=(\clT,\clO)$ and where $\clK$ is a (possibly large) category of models or ``interpretations''. This is of course not a new idea, in fact permeating classical universal algebra, as well as categorical logic, and other disciplines. This approach has been used to ``axiomatise'' a notion of evolutionary theory in \cite{biologia}.
 
 \begin{definition}[Wiener Theory] \cite{krause-foundation}
-	A theory consists of:
+	A theory $T$ consists of:
 	\begin{itemize}
-	\item A formal language $\clF_\clL$ whose a non-logical vocabulary $\overline{\clV}$ is divided in two sub-vocabularies: $\clT$ for theoretical terms and $\clO$ for observational terms \footnote{I termini di $\clO$ si riferiscono a fenomeni ma sono appunto 'termini': anche nei futuri sviluppi semantici il trattamento formale impedisce di uscire davvero dalla sintassi. Questo comporta i problemi di cui si discute nel resto della sezione}. 
+	\item A formal language $\clF_\clL$ whose a non-logical vocabulary $\overline{\clV}$ is divided in two sub-vocabularies: $\clT$ for theoretical terms and $\clO$ for observational terms \footnote{Non sono ammesse restrizioni sul linguaggio in questo approccio, e questo implica che 
+	\begin{quotation}
+		one already commits the theory with being characterized not only by its postulates and correspondence rules but also with a specific vocabulary and language. [...] Given that a theory is identified with its linguistic formulation (in axiomatic terms), it would result in impossible formulations of the same theory in alternative vocabularies \cite{\krause-foundation}.
+	\end{quotation}}. 
 	\item A logical vocabulary, namely a set of logical axioms with derivation rules and a notion of consequence relation, called $\clV$. So $\clF_\clL= \clV \cup \overline{\clV}$.
 	\item A set of sentences in $\clT$ called \emph{theoretical postulates}.
 	\item An informal semantics for observational terms whose relating terms of $\clO$ with observable objects and events \footnote{Questo è fortemente dipendente dalla meaning theory neopositivistica \cite{} ed è un passaggio problematico per motivi chiariti più avanti}. 
 	\item A set of sentences called \emph{correspondance rules} relating theoretical terms with observational terms. 
 	\end{itemize}    
 \end{definition}
+
 
 In carnapian, and in general neopositivistic, account a theory is expressible as a sentence formed by terms $\tau_1, \dots, \tau_k$ taken from both the dictionaries of $\clF_clL$. 
 
@@ -39,25 +43,30 @@ In questa semantica si dice allora che $T^\text{Ra}$ rappresenta il \emph{conten
 
 
 
-Non ci pare, al netto degli obiettivi riduzionistici del Wiener Kreis \cite{}, che ci siano motivi epistemologicamente validi per eseguire un tale procedimento, che del resto non ha avuto molto seguito nella storia successiva, ma la distinzione carnapiana è ripresa nel nostro framework, per trarre alcune conclusioni on relations between theoretical and observational core.
+Non ci pare, al netto degli obiettivi riduzionistici del Wiener Kreis \cite{}, che ci siano motivi epistemologicamente validi per eseguire un tale procedimento, che del resto non ha avuto molto seguito nella letteratura successiva, ma la distinzione carnapiana è ripresa nel nostro framework, per trarre alcune conclusioni on relations between theoretical and observational core \autoref{sec:orge11c3c4} e su come allargare la nozione stessa di teoria \autoref{}.
 
-Già agli albori dell'applicazione di metodi formali in filosofia della scienza è evidente la difficoltà di uscire da $clT$: parafrasando Duhem si può dire che "tutta l'osservazione [in fisica] avviene nella categoria sintattica $clT$". 
+I termini di $\clO$ si riferiscono a fenomeni ma sono appunto 'termini': anche nei futuri sviluppi semantici il trattamento formale impedisce di uscire davvero dalla sintassi. Parafrasando Duhem si potrebbe dire che già agli albori della semantics of theory "tutta l'osservazione [in fisica] è carica di teoria" dove per teoria si intende la categoria sintattica $\clT$.
 
 Le ambiguità carnapiane sul dominio di oggetti sui quali verterebbe la definizione viennese noi, coerenti col testo, le risolviamo indicando come dominio $\clT$. Cosa sia il mondo puro delle osservazioni al quale farebbe riferimento la Ramsey-version della teoria non è chiaro, se non un altro sotto-dizionario teorico, per l'appunto. Non a caso il neopositivismo da un iniziale fisicalismo approda ad un'ottica convenzionalista \cite{?}, in seguito ai falliti tentativi di formalizzazione di un contesto osservazionale extra-teorico. 
 
-Seguendo \cite{psillos} il realismo strutturalista che ispira questi attempts si riduce ad affermare che una teoria $T$ is logically equivalent to the conjunction
-\[ T^\text{Ra} \land (T^\text{Ra} \rightarrow T)
+Seguendo \cite{psillos} si può dare una lettura strutturalista a questi attempts. Si può dire che una teoria $T$ is logically equivalent to the conjunction
+\[T^\text{Ra} \land (T^\text{Ra} \rightarrow T)
 \] where the second member is the \emph{meaning postulate}:
 \begin{quotation}
 	Carnap notes that this conditional has no factual content and takes it to be a meaning postulates \cite{psillos}
 \end{quotation}
-[spiegare con un esempio tipo paper Psillos].
 
-This kind of realism is an if-then form: non è il mondo l'oggetto della scientific knowledge ma le condizioni che, date certe premesse, si verificano nel mondo strutturale di cui parlano le teorie. [esempio del tipo: non è più "la terra gira intorno al sole" ma "dati la terra e il sole, se si verificano (nella realtà) le condizioni $x_1,x_2,x_3$ allora sarà vero il fenomeno della rotazione terrestre". Da cui emerge anche la natura predittiva]. 
+This is a kind of 'if-then' realism: non è il mondo l'oggetto della scientific knowledge ma le condizioni che, date certe premesse, si verificano nel mondo strutturale di cui parlano le teorie. 
+%i la terra e il sole, se si verificano (nella realtà) le condizioni $x_1,x_2,x_3$ allora sarà vero il fenomeno della rotazione terrestre". Da cui emerge anche la natura predittiva]. 
 
 Il meaning postulate non era altro che the Wiener Kreis' version of the famous demarcation problem between science and metaphysics: the secular attempt to elaborate a precise criterion to distinguish a proposition belonging to empirical sciences from a metaphysical (or, at large, not scientifical) proposition. Un criterio che, a seconda dei contesti, è sempre risultato troppo stretto o troppo largo. 
 
-Tolti i due estremi, gli enunciati protocollari da un lato \cite{?}, i discorsi di Heidegger dall'altro \cite{?}, esistono tutti i casi intermedi per i quali a meaning criterion (o una operazione come la drastica traduzione dei costrutti teorici in "referti osservativi puri" tramite ramseyfication) impedisce concretamente di individuare la demarcazione. Classical objections range from Popper \cite{?} to more recent sociology of science.
+Tolti i due estremi, gli enunciati protocollari da un lato \cite{?}, i discorsi di Heidegger dall'altro \cite{?}, esistono tutti i casi intermedi per i quali a meaning criterion (o una operazione come la drastica traduzione dei costrutti teorici in "referti osservativi puri" tramite ramseyfication) impedisce concretamente di individuare la demarcazione. 
+%Classical objections range from Popper \cite{?} to more recent sociology of science.
+
+Negli anni, oltre a tramontare le aspirazioni fisicaliste della cosiddetta received view, si sono dissolti anche gli approcci generali al problema del trattamento formale delle teorie scientifiche, e si sono moltiplicati gli studi su linguaggi specifici dell'impresa scientifica \cite{}. 
+
+Proveremo che a profunctorial approach è un modo per riconsiderare nozioni più larghe e 'universali', costeggiando anche il demarcation problem. In più chiarendo come si induce una interpretazione sulla categoria 'mondo' e quale ruolo svolgono le versioni funtoriali degli strumenti classici di questo campo, fin qui criticati \autoref{inducing_herme}. 
 
 \subsection{Our contribution}
 From a neo-positivistic stance, the distinction between theoretical and empirical is purely formal: it is not due to the hypothetical nature of the former (even an empirical law can be hypothetical), but to the fact that the two kinds of law contain different types of terms \cite{carnap56}. This purports a purely linguistic approach to epistemological issues. 
@@ -69,7 +78,6 @@ In profunctorial terms, thanks to \autoref{da_collage} and standard category\hyp
 	& \clT\uplus_p \clO \ar[dr]\ar[dl]& \\ 
 	\clT  && \clO 
 }} \] (cf. \autoref{def:dfib} and in particular \autoref{collage_explaned}) allowing to recover the theoretical and observational terms.
-TAGLIARE
 \color{blue!40}
 %\begin{remark}\label{hint_at_collage}
 	%Anche in questa visione `sintattica' una teoria è sempre una struttura che contiene un sistema formale $\mathcal{F_L}$ e la classe $\clK$ dei suoi modelli. La strategia carnapiana per rendere conto della presenza di entità `osservazionali' e quindi, a rigore, non formalizzabili, all'interno di teorie scientifiche è quella di considerare due diversi dizionari: $\clT$ che contiene \emph{termini teorici} e $\clO$ che contiene \emph{termini osservativi}. 
@@ -104,4 +112,3 @@ As bold a statement as it might seem, this has fruitful consequences: see for ex
 \subsubsection*{Structure of the paper}
 Section 2 and 3 outline the mathematical background we need throughout the work; section 4 introduces our mai notions: a canvas, a world, a theory, a science. Sections 5 and 6 will provide evidence that the two dictionaries, theoretical and observable, live in a very tight relation; a broadly intended meaning for the notion of \emph{theory} asks for a precise understanding of the category of adjunctions between the theoretical and observational side.
 \color{black}
-
