@@ -28,7 +28,7 @@ Before delving into this generalisation in \autoref{multiramsey}, however, a mor
 \end{example}
 \begin{definition}[Observational and theoretical nucleus]\label{nuclei}
 	Let $\fkR : \clT^\op\times \clO \to\Set$ be a Ramsey map, and $\hat R : \clO \to [\clT^\op,\Set]$ the associated canvas. Let
-	\[ \Lan_{\yon_\clO}\hat R : [\clO^\op,\Set] \leftrightarrows [\clT^\op,\Set] : N_{\hat R} \]
+	\[ \label{lalan} \Lan_{\yon_\clO}\hat R : [\clO^\op,\Set] \leftrightarrows [\clT^\op,\Set] : N_{\hat R} \]
 	be the adjunction between presheaf categories determined by virtue of \autoref{equ_prof_cocont}. Let us consider the equivalence of categories between the fixpoints of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$.
 	
 	This is the equivalence between the \emph{observational nucleus} $Fix(T)\subseteq [\clO^\op,\Set]$ and the \emph{theoretical nucleus} $Fix(S)\subseteq [\clT^\op,\Set]$.
@@ -36,16 +36,45 @@ Before delving into this generalisation in \autoref{multiramsey}, however, a mor
 \begin{remark}
 	Observational nucleus and theoretical nucleus always form equivalent categories; the tension in creating a satisfying image of reality as it is observed oscillates between the desire to enlarge as much as possible the subcategory of $[\clO^\op,\Set]$ with which our theoretical model is equivalent, where we can have access to $\clT, [\clT^\op, \Set]$ only.
 \end{remark}
-The chain of observations in \autoref{inducing_herme} motivates the following definition.
+{\color{blue} Tutta sta roba va rivista}
+
+\color{red}
+The following remark shows how new structure comes `almost for free' when things are interpreted this way. Assume $\phi : \clT \to \clW$ and $\psi : \clO \to \clW$ are canvases, $\fkR$ is a Ramsey map, and $\Lan_{y_{\clO}}\hat R$ the functor corresponding to $\fkR$ under the construction in \eqref{lalan}; in this notation, we can state a condition of compatibility between the theory identified by $(\phi,\psi)$ and te Ramsey map $\fkR$.
+\begin{remark}[Inducing an hermeneutics]\label{inducing_herme}
+Consider the diagram
+\[ \vcenter{\xymatrix{
+	& \clW \ar[dl]_{N_\phi} \ar[dr]^{N_\psi} & \\ 
+	[\clT^\op,\Set] \ar[rr]_R && [\clO^\op,\Set]
+}}	 \label{discuss_0}\]
+given by the theoretical and observational nerves. We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a meaningful 2-cell $N_\psi \To R\diamond N_\phi$. Observe that the two functors
+\[
+\vcenter{\xymatrix{
+	**[l] \clO^\op \times \clT \rtwocell^{N_\psi\diamond\phi_*}_{R}{\alpha}& \Set
+}}	
+\label{discuss_2}\]
+where the functor $N_\psi\diamond\phi_*$ is just $\clW(\psi,\phi)$, are parallel: from basic properties of the mating operation we can deduce the existence of a chain of isomorphisms 
+\[
+\begin{array}{c}
+	N_\psi\diamond\phi_* \To R \\ \hline 
+	N_\psi\To \Ran_{\phi_*}R \\ \hline 
+	N_\psi \To R\diamond N_\phi
+\end{array}	
+\label{discuss_3}\]
+so that a 2-cell $N_\psi\diamond\phi_* \To R$ can uniquely be obtained from a 2-cell $N_\psi \To R(\phi,1)$, i.e. by a natural transformation
+\[\hat\varpi : \clW(\psi,1) \To R(\phi,1).\]
+Given this, the latter cell induces a natural transformation that closes the triangle \eqref{discuss_0}.
+\end{remark}
 \begin{definition}
 	In a display of categories like \eqref{2_canvases} we say that 
 	\begin{itemize}
-		\item A \emph{fundamental cell} is a natural transformation $\psi^* \To R(\phi,1)$;
-		\item In $\clW$ \emph{hermeneutics is possible} if the right Kan extension $\bk{\phi,\psi} := \Ran_{\phi^*}\psi^*$ exists \emph{as a functor} (note that it always exists as a profunctor).
+		\item A \emph{fundamental cell} is a natural transformation $N_\psi \To R(\phi,1)$;
+		\item In $\clW$ \emph{hermeneutics is possible} if the right Kan extension $\bk{\phi,\psi} := \Ran_{ N_\phi}N_\psi$ exists \emph{as a functor} (note that it always exists as a profunctor).
 	\end{itemize}
 	If hermeneutics is possible in $\clW$, and $R : \clO \pto \clT$ is a Ramsey map, any fundamental cell induces a natural transformation 
 	\[ \varpi : N_{\hat R} \To \bk{\phi,\psi} \]
+	obtained exploiting the universal property of $\bk{\phi,\psi}$.
 \end{definition}
+\color{black}
 \begin{remark}
 	The reader might have observed, now, that there is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{def_profu} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$.
 	

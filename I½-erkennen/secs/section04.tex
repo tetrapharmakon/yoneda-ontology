@@ -68,7 +68,8 @@ More than often, our theories will be $\Set$-scientific: in such case we just om
 Since the category $[T_\clC, \Set]$ determines $\clL$ and $T_\clL$ completely, up to Cauchy-completion \cite{borceuso-cauchy}, we can see that the triple $(\clL, T_\clL, [T_\clL,\Set])$ can uniquely be recovered from its model category $[T_\clC, \Set]$. We thus comply to the additional abuse of notation to call `scientific theory' the category $[T_\clL,\Set]$ for some $T_\clL$.
 
 So, a `coherent correspondence linking expressions of $\clF$ with semantic expressions' boils down to a functor; this is compatible with \cite[2.1]{biologia}, and in fact an improvement (the mass of results in category theory become readily available to speak about --scientific-- theories; not to mention that the concept of `formal structure' is never rigorously defined throughout \cite{biologia}).
-\subsection{The first rough attempt of some infant god}
+
+%\subsection{The first rough attempt of some infant god}
 Let us consider two categories $\clO,\clT$, respectively the \emph{observational} and the \emph{theoretical}. Even though their origin is never examined further, it is fruitful to think that $\clO,\clT\subseteq \clW$, i.e. that they are `carved' from the world, building respectively on the tangible experience (for $\clO$) and on a linguistic structure (for $\clL$).
 
 If $\clW$ is a Yuggoth each pair of canvases
@@ -83,29 +84,3 @@ The leftmost category is the category we have experimental access, starting from
 	We refine the terminology introduced above to speak of a \emph{theoretical} (resp., a \emph{observational}) \emph{science}, assuming that $\phi$ (resp., $\psi$) is a \science.
 \end{definition}
 Assuming that $\phi : \clT \to \clW$ is a theoretical \science, now, the representation functor $\clW \to [\clT^\op,\Set]$ above acquires a left adjoint.
-
-We end the section with an important remark that shows how new structure comes `almost for free' when things are interpreted this way. Assume $\phi : \clT \to \clW$ and $\psi : \clO \to \clW$ are canvases
-\begin{remark}[Inducing an hermeneutics]\label{inducing_herme}
-Consider the diagram of solid arrows
-\[ \vcenter{\xymatrix{
-	& \clW \ar[dr]\ar[dl]& \\ 
-	[\clT^\op,\Set] \ar@{.>}[rr] && [\clO^\op,\Set]
-}}	 \label{discuss_0}\]
-given by the theoretical and observational nerves. We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a meaningful 2-cell in either direction. Observe that the two functors
-\[
-\vcenter{\xymatrix{
-	**[l] \clO^\op \times \clT \rtwocell^{\psi^*\diamond\phi_*}_{R}{\alpha}& \Set
-}}	
-\label{discuss_2}\]
-where the functor $\psi^*\diamond\phi_*$ is just $\clW(\psi,\phi)$, are parallel: from basic properties of the mating operation we can deduce the existence of a chain of isomorphisms 
-\[
-\begin{array}{c}
-	\psi^*\diamond\phi_* \To R \\ \hline 
-	\psi^*\To \Ran_{\phi_*}R \\ \hline 
-	\psi^* \To R\diamond\phi^*
-\end{array}	
-\label{discuss_3}\]
-so that a 2-cell $\psi^*\diamond\phi_* \To R$ can uniquely be obtained from a 2-cell $\psi^* \To R(\phi,1)$, i.e. by a natural transformation
-\[\hat\varpi : \clW(\psi,1) \To R(\phi,1).\]
-Given this, the latter cell induces a natural transformation that closes the triangle \eqref{discuss_0}.
-\end{remark}
