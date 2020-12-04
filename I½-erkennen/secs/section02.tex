@@ -22,7 +22,8 @@ From here, using a process known as `categorification' \cite{baez1998categorific
 		\item objects the small categories $\clA,\clB,\clC,\dots$;
 		\item 1-cells the profunctors $\fkR : \clA \pto \clB$, and composition law between $\clA \overset{\fkR}{\pto} \clB \overset{\fkP}{\pto} \clC$ given by the assignment
 		\[ (A,C)\mapsto \int^B \fkR(A,B)\times\fkP(B,C) \]
-		(see \cite[6.2.10]{Bor2} for the definition). The identity 1-cell is the hom functor $\hom_\clA : \clA^\op\times\clA \to \Set$;
+		(see \cite[6.2.10]{Bor2} for the definition: representing a profunctor as a matrix of sets, this universal construction is the matrix product whose $(A,C)$-entry is the generalised sum $\sum_B \fkR(A,B)\times\fkP(B,C)$ modded out for a certain equivalence relation); 
+		\item the identity 1-cell is the hom functor $\hom_\clA : \clA^\op\times\clA \to \Set$;
 		\item 2-cells $\fkR\To\fkR'$ the natural transfomations $\alpha : \xymatrix{**[l] \clA^\op\times\clB \rtwocell^{\fkR}_{\fkR'}{\alpha}& **[r] \Set}$.
 	\end{enumtag}
 \end{definition}

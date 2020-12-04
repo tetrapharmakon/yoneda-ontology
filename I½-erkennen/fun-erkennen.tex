@@ -9,7 +9,7 @@
 \def\trn#1{\lsem #1\rsem}
 
 \def\f#1{\textcolor{red}{#1}}
-
+\let\phi\varphi
 \newcounter{quad_i}
 \newcommand{\qd}[1][]{\ifthenelse{\equal{#1}{}}{\quad}{\setcounter{quad_i}{0}\whiledo{\value{quad_i}<#1}{\quad\stepcounter{quad_i}}}}
 \newcommand{\funsp}[2]{(#1 \Rightarrow #2)}
