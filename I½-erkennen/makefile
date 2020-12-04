@@ -1,8 +1,10 @@
 t:
 	latexmk -pdf -shell-escape fun-erkennen.tex
+	latexmk -c
 
 title:
 	latexmk -pdf -shell-escape titlepage.tex
+	latexmk -c
 
 p:
 	latexmk -pdf -shell-escape -pvc fun-erkennen.tex
