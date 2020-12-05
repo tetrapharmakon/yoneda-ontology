@@ -39,41 +39,35 @@ Before delving into this generalisation in \autoref{multiramsey}, however, a mor
 {\color{blue} Tutta sta roba va rivista}
 
 \color{red}
-The following remark shows how new structure comes `almost for free' when things are interpreted this way. Assume $\phi : \clT \to \clW$ and $\psi : \clO \to \clW$ are canvases, $\fkR$ is a Ramsey map, and $\Lan_{y_{\clO}}\hat R$ the functor corresponding to $\fkR$ under the construction in \eqref{lalan}; in this notation, we can state a condition of compatibility between the theory identified by $(\phi,\psi)$ and te Ramsey map $\fkR$.
+The following remark shows how new structure comes `almost for free' when things are interpreted this way. 
+
+Assume $\phi : \clT \to \clW$ and $\psi : \clO \to \clW$ are canvases, $\fkR$ is a Ramsey map, and $\Lan_{y_{\clO}}\hat R$ the functor corresponding to $\fkR$ under the construction in \eqref{lalan}; in this notation, we can state a tight condition of compatibility between the theory identified by $(\phi,\psi)$ and te Ramsey map $\fkR$. We employ freely the presence of adjunction 
+\[L_\phi\dashv N_\phi \qquad 
+L_\psi \dashv N_\psi \qquad 
+L_{\hat R} \dashv N_{\hat R}.\]
 \begin{remark}[Inducing an hermeneutics]\label{inducing_herme}
 Consider the diagram
 \[ \vcenter{\xymatrix{
 	& \clW \ar[dl]_{N_\phi} \ar[dr]^{N_\psi} & \\ 
-	[\clT^\op,\Set] \ar[rr]_R && [\clO^\op,\Set]
+	[\clT^\op,\Set] \ar@<-.5em>[rr]_{N_{\hat R}} && \ar@<-.5em>[ll]_{L_{\hat R}} [\clO^\op,\Set]
 }}	 \label{discuss_0}\]
-given by the theoretical and observational nerves. We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a meaningful 2-cell $N_\psi \To R\diamond N_\phi$. Observe that the two functors
-\[
-\vcenter{\xymatrix{
-	**[l] \clO^\op \times \clT \rtwocell^{N_\psi\diamond\phi_*}_{R}{\alpha}& \Set
-}}	
-\label{discuss_2}\]
-where the functor $N_\psi\diamond\phi_*$ is just $\clW(\psi,\phi)$, are parallel: from basic properties of the mating operation we can deduce the existence of a chain of isomorphisms 
-\[
-\begin{array}{c}
-	N_\psi\diamond\phi_* \To R \\ \hline 
-	N_\psi\To \Ran_{\phi_*}R \\ \hline 
-	N_\psi \To R\diamond N_\phi
-\end{array}	
-\label{discuss_3}\]
-so that a 2-cell $N_\psi\diamond\phi_* \To R$ can uniquely be obtained from a 2-cell $N_\psi \To R(\phi,1)$, i.e. by a natural transformation
-\[\hat\varpi : \clW(\psi,1) \To R(\phi,1).\]
-Given this, the latter cell induces a natural transformation that closes the triangle \eqref{discuss_0}.
+given by the theoretical and observational nerves, plus the Ramsey adjunction mentioned above.
+
+We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a suitable natural transformation $N_{\hat \fkR} \circ N_\phi \To N_\psi$: it is well-known from basic proper of the mating operation, and standard results on adjoint functors, that this is a way to fill at the same time the triangles on the left and on the right here: 
+\[oinoguao\]
 \end{remark}
-\begin{definition}
+The possibility to find a well-behaved 2-cell $N_{\hat \fkR} \circ N_\phi \To N_\psi$ amounts to a tameness property of the system: this is made precise by the following
+\begin{definition}[Fundamental cell, Hermeneutics]
 	In a display of categories like \eqref{2_canvases} we say that 
 	\begin{itemize}
-		\item A \emph{fundamental cell} is a natural transformation $N_\psi \To R(\phi,1)$;
-		\item In $\clW$ \emph{hermeneutics is possible} if the right Kan extension $\bk{\phi,\psi} := \Ran_{ N_\phi}N_\psi$ exists \emph{as a functor} (note that it always exists as a profunctor).
+		\item A \emph{fundamental cell} is a natural transformation $R_*\circ N_\psi \To N_\phi$;
+		\item we say that in the world $\clW$ \emph{hermeneutics is possible} if the right extension $\bk{\phi,\psi} := \Ran_{ N_\phi}N_\psi$ exists \emph{as a functor} (note that it always exists as a profunctor, but this might not be representable).
 	\end{itemize}
 	If hermeneutics is possible in $\clW$, and $R : \clO \pto \clT$ is a Ramsey map, any fundamental cell induces a natural transformation 
-	\[ \varpi : N_{\hat R} \To \bk{\phi,\psi} \]
-	obtained exploiting the universal property of $\bk{\phi,\psi}$.
+	\[ \varpi : N_{\hat R} \To \bk{\phi/\psi} \]
+	obtained exploiting the universal property of $\bk{\phi/\psi}$. 
 \end{definition}
+If the right extension is representable in the sense above, this amounts to a higher type map (in the sense of the internal language of a closed category) comparing `generalised formulas' of kind $\fkR \To \clW(\phi,\psi)$.
 \color{black}
 \begin{remark}
 	The reader might have observed, now, that there is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{def_profu} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$.
