@@ -36,12 +36,9 @@ Before delving into this generalisation in \autoref{multiramsey}, however, a mor
 \begin{remark}
 	Observational nucleus and theoretical nucleus always form equivalent categories; the tension in creating a satisfying image of reality as it is observed oscillates between the desire to enlarge as much as possible the subcategory of $[\clO^\op,\Set]$ with which our theoretical model is equivalent, where we can have access to $\clT, [\clT^\op, \Set]$ only.
 \end{remark}
-{\color{blue} Tutta sta roba va rivista}
-
-\color{red}
 The following remark shows how new structure comes `almost for free' when things are interpreted this way. 
 
-Assume $\phi : \clT \to \clW$ and $\psi : \clO \to \clW$ are canvases, $\fkR$ is a Ramsey map, and $\Lan_{y_{\clO}}\hat R$ the functor corresponding to $\fkR$ under the construction in \eqref{lalan}; in this notation, we can state a tight condition of compatibility between the theory identified by $(\phi,\psi)$ and te Ramsey map $\fkR$. We employ freely the presence of adjunction 
+Assume $\phi : \clT \to \clW$ and $\psi : \clO \to \clW$ are canvases, $\fkR$ is a Ramsey map, and $\Lan_{y_{\clO}}\hat R$ the functor corresponding to $\fkR$ under the construction in \eqref{lalan}; in this notation, we can state a tight condition of compatibility between the theory identified by $(\phi,\psi)$ and the Ramsey map $\fkR$. We employ freely the presence of adjunction 
 \[L_\phi\dashv N_\phi \qquad 
 L_\psi \dashv N_\psi \qquad 
 L_{\hat R} \dashv N_{\hat R}.\]
@@ -68,13 +65,30 @@ The possibility to find a well-behaved 2-cell $N_{\hat \fkR} \circ N_\phi \To N_
 	obtained exploiting the universal property of $\bk{\phi/\psi}$. 
 \end{definition}
 If the right extension is representable in the sense above, this amounts to a higher type map (in the sense of the internal language of a closed category) comparing `generalised formulas' of kind $\fkR \To \clW(\phi,\psi)$.
+\begin{remark}
+If we follow the customary practice to identify a morphism of a category as an entailment between sequents in a deductive system, it is easy to see that the condition that the possibility of hermeneutics captures is that we can embody sequents of the form $\llbracket \tau\vdash o\rrbracket \in \fkR(\tau,o)$ in the internal language of $\clW$; more precisely, if we think of $\fkR(\tau,o)$ as the type of all proofs that some theoretical terms describe an observational phenomenon, then the map $\varpi$ above can be represented as the higher order entailment relation between $\llbracket \tau\vdash o\rrbracket$ and the entailment $\phi(\tau) \to \psi(o)$ \emph{valid in $\clW$}:
+\[ \begin{array}{c}
+	\varpi_{\tau,o} : \fkR(\tau,o) \to \clW(\phi(\tau),\psi(o)) \\ \hline 
+	\llbracket \tau\vdash o\rrbracket \Vdash (\Phi[\tau] \vdash \Psi[o])
+\end{array} \] 
+where $\Phi[\tau]$ is a shorthand for $\phi[\vec x/\tau]$, the context of premises saturated by the theoretical terms, and same for $\Psi[o]$, the context of deductions saturated by the observational terms. 
+\end{remark}
+All in all, the map $\varpi_{\tau,o}$ exhibits a \emph{witness} of the expressibility of the entailment `$\llbracket \tau\vdash o\rrbracket$' in the world $\clW$, through the Ramsey map.
+
+More is true: significa che c'è un modo categoriale di dire "se (p -> q) nel modello, allora [P] -> [Q] nel mondo", dove [P] e [Q] corrispondono nel mondo a quel che p e q sono nel linguaggio
+
+Se un calcolo afferma che una palla di cannone seguirà un moto parabolico, allora questo è quello che effettivamente osservo nel mondo, sebbene nel mondo non ci siano le parabole (che sono un'astrazione linguistica di una media di ricorrenze percettive)
+
+Queste ipotesi implicano che "l'ermeneutica è possibile". Proprio perché puoi interpretare i fatti linguistici e le derivazioni in un sistema deduttivo come effettive implicazioni all'interno del mondo
 \color{black}
 \begin{remark}
-	The reader might have observed, now, that there is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{def_profu} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$.
+	There is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{def_profu} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$.
 	
 	This is perhaps of some help in solving the conundrum posed by the existence of `fictional objects'. Sherlock Holmes clearly is the object of a theoretical category. Gandhi is the object of an observational category. But as linguistic objects they can't be told apart completely; they can be at most separated by a profunctor embedding the former in a realistic counterpart of fictitious model (that is, for example, the Reichenbach falls), and representing the latter as part of a fictional model (for example, as part of a movie directed by R. Attenborough).
 
-	Si può indagare lo statuto ontologico di questi oggetti (magari nel modello fornito in \cite{catont1}). Ma è chiaro che, ad esempio, nel mondo 'sherlockiano' $\clW^{Sh}$ Sherlock debba esistere, per qualche nozione di esistenza interna al mondo, altrimenti non potrebbe morire nelle Reichenbach falls; esse sono anche un oggetto del nostro mondo $\clW^@$ e quindi è utile considerare le aggiunzioni tra le due categorie sintattiche equivalentemente a come il problema è studiato in termini di accessibilità tra mondi nella semantica modale dei non-esistenti \cite{} \footnote{Nel secondo esempio la questione è più sottile perché riguarda la nozione di rappresentazione: il Gandhi di Attenborough non è propriamente un oggetto di $\clW^@$ ma quello di un sub-mondo che si vuole isomorfo a esso. Anche qui esistono approcci collaudati in letteratura, in termini di modal relations}. L'intero dibattito è quindi profunctionalizzabile: dopotutto i mondi finzionali o narrativi non sono altro che teorie su strutture di mondi. 
+	We can surely discuss what is the ontological status of each such object; maybe even exploiting the model of \cite{catont1}. If it is clear that in the universe of Conan Doyle, an individual named Sherlock Holmes lives at 221b Baker Street, it is also clear that it `projects' its existence in the actual world $\clW^@$; undoubtedly there are relations between Conan Doyle's Sherlock Holmes and its shadow in $\clW^@$; it is possible to rephrase there relations in terms of the syntactic categories presenting/describing the two universes, in the way that we have sketched. For a related topic, see the notion of metakosmial accessibility between worlds \cite{} or modal semantics of the non-existents \cite{}; as interesting as the topic may seem, we refrain to go further in this analysis, leaving the stage open for future discussion.
+	
+	The question deserves a deeper analysis: Attenborough's Gandhi isn't exactly an object inside $\clW^@$, but instead of an accessible sub-world $\clU_\text{G} \subseteq \clW^@$ that works as canvas; it might be that many well-tested approaches to the theory of modal relations might become more streamlined when expressed in our language: fictional worlds are just \emph{particular ways} to build canvases and representations thereof. 
 \end{remark}
 \begin{remark}\label{multiramsey}
 	The notion of Ramsey map as given above is unnecessarily restrictive, and does not account for many sorts of configurations that can occur in practice:
