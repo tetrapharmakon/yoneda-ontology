@@ -10,9 +10,9 @@ This notion of `relation between $A$ and $B$' is inherently symmetric, in the se
 
 Furthermore, every relation $R$ between sets $A,B$ gives rise to a \emph{Galois connection}
 \[{}^R(\firstblank) :PA^\op \leftrightarrows PB : (\firstblank)^R \label{adjunzia} \]
-between the powersets $PA=2^A$ and $PB = 2^B$: the set $U\subset A$ goes to the set ${}^RU$ of all $b$ such that $(a,b)\in R$ for all $a\in U$; in an exactly symmetric way, a set $V\subseteq B$ goes to the set
+between the power-sets $PA=2^A$ and $PB = 2^B$: the set $U\subset A$ goes to the set ${}^RU$ of all $b$ such that $(a,b)\in R$ for all $a\in U$; in an exactly symmetric way, a set $V\subseteq B$ goes to the set
 \[V^R = \{a\in A\mid (a,b) \in R,\, \forall b\in V\}.\]
-Unwinding the definition, it is asy to verify that $V\subseteq{}^RU$ if and only if $U\subseteq V^R$, if and only if $U\times V\subseteq R$.
+Unwinding the definition, it is easy to verify that $V\subseteq{}^RU$ if and only if $U\subseteq V^R$, if and only if $U\times V\subseteq R$.
 %\todo[inline]{La varianza di sta roba va controllata}
 
 From here, using a process known as `categorification' \cite{baez1998categorification}, we can replace a two-valued relation $R : A\times B \to \{0,1\}$ with a \emph{set-valued} functor $\clA^\op\times\clB \to \Set$ between two (small) categories $\clA,\clB$.\footnote{The reason why the category $\clA$ is twisted with an `$^\op$' functor is that we want to bestow the hom functor $\hom_{\clA} : \clA^\op\times\clA \to \Set$ with the r\^ole of identity `profunctor'; in the categorification perspective, hom plays the r\^ole of the diagonal relation $R=\Delta : A\to A\times A$. The category of sets (i.e., of discrete categories) has no nontrivial involution on objects, so in the case of sets the opping operation is hidden.} More precisely, we can give the following definition.
@@ -24,12 +24,12 @@ From here, using a process known as `categorification' \cite{baez1998categorific
 		\[ (A,C)\mapsto \int^B \fkR(A,B)\times\fkP(B,C) \]
 		(see \cite[6.2.10]{Bor2} for the definition: representing a profunctor as a matrix of sets, this universal construction is the matrix product whose $(A,C)$-entry is the generalised sum $\sum_B \fkR(A,B)\times\fkP(B,C)$ modded out for a certain equivalence relation); 
 		\item the identity 1-cell is the hom functor $\hom_\clA : \clA^\op\times\clA \to \Set$;
-		\item 2-cells $\fkR\To\fkR'$ the natural transfomations $\alpha : \xymatrix{**[l] \clA^\op\times\clB \rtwocell^{\fkR}_{\fkR'}{\alpha}& **[r] \Set}$.
+		\item 2-cells $\fkR\To\fkR'$ the natural transformations $\alpha : \xymatrix{**[l] \clA^\op\times\clB \rtwocell^{\fkR}_{\fkR'}{\alpha}& **[r] \Set}$.
 	\end{enumtag}
 \end{definition}
 The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs that $(A,B)\in\clA^\op\times\clB$ are in a  `generalised relation' $\fkR$. This intuition agrees with the fact that when instead of $\Set$ a profunctor $\fkR$ takes values in the category $\{0\le 1\}$, then the type of proofs that $R(A,B)$ is a yes/no space of answers.
 
-From here, one can build a rich and expressive theory; for our purposes, we are contempt with a careful analysis of the analogue of \ref{r_2} and \eqref{adjunzia} above: the latter is the scope of \autoref{sec:org1a423df}, we now concentrate on describing an ubiquitary technical tool in category theory, called \emph{Gro\-then\-dieck construction}, suited to categorify the equivalence between \ref{r_1} and \ref{r_2}.
+From here, one can build a rich and expressive theory; for our purposes, we are contempt with a careful analysis of the analogue of \ref{r_2} and \eqref{adjunzia} above: the latter is the scope of \autoref{sec:org1a423df}, we now concentrate on describing an ubiquitous technical tool in category theory, called \emph{Gro\-then\-dieck construction}, suited to categorify the equivalence between \ref{r_1} and \ref{r_2}.
 
 \subsection{Gro\-then\-dieck construction}
 

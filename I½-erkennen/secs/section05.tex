@@ -14,22 +14,19 @@ This intuition is based on the well-known proportion
 \end{center}
 inspired by the `proposition as types' paradigm. In simple terms, categorifying a proposition $P : X\to \{0,1\}$ that can or cannot hold for an element $x$ of a set $X$, we shall marry the constructive church and say that there is an entire \emph{type} $PC$, image of an object $C\in\clC$ under a functor $P : \clC \to \Set$, whose \emph{terms} are the \emph{proofs} that $PC$ holds true. This is nothing but the propositions-as-types philosophy, in (not so much) disguise: \cite{hottbook,wadler,martin1984intuitionistic}
 
-The important point for us is that the dialectical tension between observational and theoretical can be faithfully represented through profunctor theory; one can think of propositional functions as relations $(x,y)\in R$ iff the pair $x,y$ renders $\phi$ true; we use this idea, suitably adapted to our purpose and categorified. This very natural extension of propositional calculus, pushed to its limit, yields the following reformulation of the `tension between observational and theoretical'.% of \cite{u,v,w}
+The important point for us is that the dialectical tension between observational and theoretical can be faithfully represented through profunctor theory; one can think of propositional functions as relations $(x,y)\in R$ if and only if the pair $x,y$ renders $\phi$ true; we use this idea, suitably adapted to our purpose and categorified. This very natural extension of propositional calculus, pushed to its limit, yields the following reformulation of the `tension between observational and theoretical'.% of \cite{u,v,w}
 \begin{definition}\label{11_ramsey}
-	Let $\clT,\clO$ be two small categories, dubbed respectively the \emph{theoretical} and the \emph{observational} settings. A \emph{$(1,1)$-ary Ramsey map} is merely a profunctor
+	Let $\clT,\clO$ be two small categories, dubbed respectively the \emph{theoretical} and the \emph{observational} settings. A \emph{Ramsey map} is merely a profunctor
 	\[\fkK : \clT^\op \pto \clO\]
 	or, spelled out completely, a functor $\fkK : \clT\times \clO \to \Set$.
-\end{definition}
-By accepting the prefix ``$(1,1)$-'' we ask the reader the leap of faith that \autoref{11_ramsey} is but a particular instance of a more general definition, \autoref{mn_ramsey}. 
-
-Before delving into this generalisation in \autoref{multiramsey}, however, a more elementary remark is in order: there is a particularly elementary recipe to generate $(1,1)$-ary Ramsey maps.
+\end{definition} 
 \begin{example}
 	Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_* := \clB(1,F) : \clB^\op\times \clA\to\Set$ and a profunctor $F^* := \clB(F,1) : \clA^\op\times\clB \to \Set$ as in \autoref{nervereal}; the two functors are mutually adjoint, $F^*\dashv F_*$, see \cite[6.2]{Bor2}. This yield an example of what we call \emph{representable} Ramsey maps.
 \end{example}
 \begin{definition}[Observational and theoretical nucleus]\label{nuclei}
 	Let $\fkR : \clT^\op\times \clO \to\Set$ be a Ramsey map, and $\hat R : \clO \to [\clT^\op,\Set]$ the associated canvas. Let
 	\[ \label{lalan} \Lan_{\yon_\clO}\hat R : [\clO^\op,\Set] \leftrightarrows [\clT^\op,\Set] : N_{\hat R} \]
-	be the adjunction between presheaf categories determined by virtue of \autoref{equ_prof_cocont}. Let us consider the equivalence of categories between the fixpoints of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$.
+	be the adjunction between presheaf categories determined by virtue of \autoref{equ_prof_cocont}. Let us consider the equivalence of categories between the fix-points of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$.
 	
 	This is the equivalence between the \emph{observational nucleus} $Fix(T)\subseteq [\clO^\op,\Set]$ and the \emph{theoretical nucleus} $Fix(S)\subseteq [\clT^\op,\Set]$.
 \end{definition}
@@ -51,7 +48,7 @@ Consider the diagram
 given by the theoretical and observational nerves, plus the Ramsey adjunction mentioned above.
 \end{remark}
 We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a suitable natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$: such a 2-cell will force a tameness property on the system described by the two canvases $(\phi,\psi)$: this is made precise by the following
-\begin{definition}[Fundamental cell, Hermeneutics]
+\begin{definition}[Fundamental cell, Hermeneutics]\label{funcell_herme}
 	In a display of categories like \eqref{2_canvases} we say that 
 	\begin{itemize}
 		\item A \emph{fundamental cell} is a natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$;
@@ -62,7 +59,7 @@ We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a s
 	obtained exploiting the universal property of $\bk{\phi/\psi}$. 
 \end{definition}
 If the right extension is representable in the sense above, this amounts to a higher type map (in the sense of the internal language of a closed category) comparing `generalised formulas' of kind $\fkR \To \clW(\phi,\psi)$.
-\begin{remark}
+\begin{remark}\label{herme_explained}
 If we follow the customary practice to identify a morphism of a category as an entailment between sequents in a deductive system, it is easy to see that the condition that the possibility of hermeneutics captures is that we can embody sequents of the form $\llbracket T\vdash O\rrbracket \in \fkR(T,O)$ in the internal language of $\clW$; more precisely, if we think of $\fkR(T,O)$ as the type of all proofs that some theoretical terms describe an observational phenomenon, then the map $\varpi$ above can be represented as the higher order entailment relation between $\llbracket T\vdash O\rrbracket$ and the entailment $\phi(T) \to \psi(O)$ \emph{valid in $\clW$}:
 \[ \begin{array}{c}
 	\varpi_{T,O} : \fkR(T,O) \to \clW(\phi(T),\psi(O)) \\ \hline 
