@@ -49,18 +49,15 @@ Consider the diagram
 	[\clT^\op,\Set] \ar@<-.5em>[rr]_{N_{\hat R}} && \ar@<-.5em>[ll]_{L_{\hat R}} [\clO^\op,\Set]
 }}	 \label{discuss_0}\]
 given by the theoretical and observational nerves, plus the Ramsey adjunction mentioned above.
-
-We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a suitable natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$: it is well-known from basic proper of the mating operation, and standard results on adjoint functors, that this is a way to fill at the same time the triangles on the left and on the right here: 
-\[oinoguao\]
 \end{remark}
-The possibility to find a well-behaved 2-cell $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$ amounts to a tameness property of the system: this is made precise by the following
+We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a suitable natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$: such a 2-cell will force a tameness property on the system described by the two canvases $(\phi,\psi)$: this is made precise by the following
 \begin{definition}[Fundamental cell, Hermeneutics]
 	In a display of categories like \eqref{2_canvases} we say that 
 	\begin{itemize}
 		\item A \emph{fundamental cell} is a natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$;
 		\item we say that in the world $\clW$ \emph{hermeneutics is possible} if the right extension $\bk{\phi/\psi} := \Ran_{ N_\phi}N_\psi$ exists \emph{as a functor} (note that it always exists as a profunctor, but this might not be representable).
 	\end{itemize}
-	If hermeneutics is possible in $\clW$, and $R : \clO \pto \clT$ is a Ramsey map, any fundamental cell induces a natural transformation 
+	If hermeneutics is possible in $\clW$, and $R : \clT \pto \clO$ is a Ramsey map, any fundamental cell induces a natural transformation 
 	\[ \varpi : N_{\hat R} \To \bk{\phi/\psi} \]
 	obtained exploiting the universal property of $\bk{\phi/\psi}$. 
 \end{definition}
@@ -109,10 +106,10 @@ Such assumptions imply that "hermeneutics is possible", in the very sense of the
 	\]
 	between the theoretical and the observable. Following Carnap, we might assume that $F : \clO \hookrightarrow \clT$, and thus $G$ is a right translation functor for $(\clT, \clO)$.
 
-	In these assumptions, given a Ramsey map $\fkK : \clO \pto\clT$ the function term
-	\[\lambda \uO\lambda\uX . \fkK(\uO, \uX)\]
+	In these assumptions, given a Ramsey map $\fkK : \clT \pto \clO$ the function term
+	\[\lambda O\lambda X . \fkK(O, X)\]
 	can be pre-composed with $F$ obtaining
-	\[\lambda \uO\lambda\uO'.\fkK(\uO, F\uO').\]
+	\[\lambda  O\lambda O'.\fkK( O, F O').\]
 	We say that a translation adjunction $(L,F)$ is `$\fkK$-admissible' (denoted $L \dashv_\fkK F$) when there is a natural isomorphism $\fkK(L,1)\cong\fkK(1,F)$.
 \end{remark}
 The property of $\fkK$-admissibility for a pair of functors is in general difficult to assess; nevertheless, there are interesting properties for the relation $F\dashv_\fkK G$: for example
