@@ -50,15 +50,15 @@ Consider the diagram
 }}	 \label{discuss_0}\]
 given by the theoretical and observational nerves, plus the Ramsey adjunction mentioned above.
 
-We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a suitable natural transformation $N_{\hat \fkR} \circ N_\phi \To N_\psi$: it is well-known from basic proper of the mating operation, and standard results on adjoint functors, that this is a way to fill at the same time the triangles on the left and on the right here: 
+We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a suitable natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$: it is well-known from basic proper of the mating operation, and standard results on adjoint functors, that this is a way to fill at the same time the triangles on the left and on the right here: 
 \[oinoguao\]
 \end{remark}
-The possibility to find a well-behaved 2-cell $N_{\hat \fkR} \circ N_\phi \To N_\psi$ amounts to a tameness property of the system: this is made precise by the following
+The possibility to find a well-behaved 2-cell $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$ amounts to a tameness property of the system: this is made precise by the following
 \begin{definition}[Fundamental cell, Hermeneutics]
 	In a display of categories like \eqref{2_canvases} we say that 
 	\begin{itemize}
-		\item A \emph{fundamental cell} is a natural transformation $R_*\circ N_\psi \To N_\phi$;
-		\item we say that in the world $\clW$ \emph{hermeneutics is possible} if the right extension $\bk{\phi,\psi} := \Ran_{ N_\phi}N_\psi$ exists \emph{as a functor} (note that it always exists as a profunctor, but this might not be representable).
+		\item A \emph{fundamental cell} is a natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$;
+		\item we say that in the world $\clW$ \emph{hermeneutics is possible} if the right extension $\bk{\phi/\psi} := \Ran_{ N_\phi}N_\psi$ exists \emph{as a functor} (note that it always exists as a profunctor, but this might not be representable).
 	\end{itemize}
 	If hermeneutics is possible in $\clW$, and $R : \clO \pto \clT$ is a Ramsey map, any fundamental cell induces a natural transformation 
 	\[ \varpi : N_{\hat R} \To \bk{\phi/\psi} \]
@@ -66,14 +66,14 @@ The possibility to find a well-behaved 2-cell $N_{\hat \fkR} \circ N_\phi \To N_
 \end{definition}
 If the right extension is representable in the sense above, this amounts to a higher type map (in the sense of the internal language of a closed category) comparing `generalised formulas' of kind $\fkR \To \clW(\phi,\psi)$.
 \begin{remark}
-If we follow the customary practice to identify a morphism of a category as an entailment between sequents in a deductive system, it is easy to see that the condition that the possibility of hermeneutics captures is that we can embody sequents of the form $\llbracket \tau\vdash o\rrbracket \in \fkR(\tau,o)$ in the internal language of $\clW$; more precisely, if we think of $\fkR(\tau,o)$ as the type of all proofs that some theoretical terms describe an observational phenomenon, then the map $\varpi$ above can be represented as the higher order entailment relation between $\llbracket \tau\vdash o\rrbracket$ and the entailment $\phi(\tau) \to \psi(o)$ \emph{valid in $\clW$}:
+If we follow the customary practice to identify a morphism of a category as an entailment between sequents in a deductive system, it is easy to see that the condition that the possibility of hermeneutics captures is that we can embody sequents of the form $\llbracket T\vdash O\rrbracket \in \fkR(T,O)$ in the internal language of $\clW$; more precisely, if we think of $\fkR(T,O)$ as the type of all proofs that some theoretical terms describe an observational phenomenon, then the map $\varpi$ above can be represented as the higher order entailment relation between $\llbracket T\vdash O\rrbracket$ and the entailment $\phi(T) \to \psi(O)$ \emph{valid in $\clW$}:
 \[ \begin{array}{c}
-	\varpi_{\tau,o} : \fkR(\tau,o) \to \clW(\phi(\tau),\psi(o)) \\ \hline 
-	\llbracket \tau\vdash o\rrbracket \Vdash (\Phi[\tau] \vdash \Psi[o])
+	\varpi_{T,O} : \fkR(T,O) \to \clW(\phi(T),\psi(O)) \\ \hline 
+	\llbracket T\vdash O\rrbracket \Vdash (\Phi[T] \vdash \Psi[O])
 \end{array} \] 
-where $\Phi[\tau]$ is a shorthand for $\phi[\vec x/\tau]$, the context of premises saturated by the theoretical terms, and same for $\Psi[o]$, the context of deductions saturated by the observational terms. 
+where $\Phi[T]$ is a shorthand for $\phi[\vec x/T]$, the context of premises saturated by the theoretical terms, and same for $\Psi[O]$, the context of deductions saturated by the observational terms. 
 \end{remark}
-All in all, the map $\varpi_{\tau,o}$ exhibits a \emph{witness} of the expressibility of the entailment `$\llbracket \tau\vdash o\rrbracket$' in the world $\clW$, through the Ramsey map.
+All in all, the map $\varpi_{T,O}$ exhibits a \emph{witness} of the expressibility of the entailment `$\llbracket T\vdash o\rrbracket$' in the world $\clW$, through the Ramsey map.
 
 More is true: the presence of a fundamental cell means that we can find a way to assert that the entailment $T\to O$ is actually embodied in the world by an entailment $\phi(T)\to \psi(O)$ in the internal language of $\clW$.
 
