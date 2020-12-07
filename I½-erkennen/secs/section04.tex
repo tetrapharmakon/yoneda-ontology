@@ -4,17 +4,17 @@ In this section we exploit the terminology established before.
 \begin{definition}[Theory]\label{teoria}
 	A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite{lambek1988introduction}) of a type theory $L$.
 \end{definition}
-It is worth to mention how the construction of $\clT_L$ goes, from \cite{lambek1988introduction} or \cite{abramskyno}, in the simple case $L$ has product and function types:
+The reader interested in how the construction of $\clT_L$ goes can take from \cite{lambek1988introduction} as standard reference, or \cite{abramskyno} for a shorter survey, in the simple case $L$ admits product and function types:
 
-From $\clT_L$ it is possible to carve a cartesian closed category, whose obects are denoted $\trn{B}$ as $B$ runs over the basic types of $L$. Then, we define recursively a \emph{semantic translation} operation from basic types $\trn{B} := B$ and
-\[\trn{T\times U}:=\trn{T}\times\trn{U} \,,\qd \trn{T\to U}:=\trn{T}\Rightarrow\trn{U}\,, \]
-and on typed terms as the set of rules in \cite[1.6.5]{abramskyno}.
+% From $\clT_L$ it is possible to carve a cartesian closed category, whose obects are denoted $\trn{B}$ as $B$ runs over the basic types of $L$. Then, we define recursively a \emph{semantic translation} operation from basic types $\trn{B} := B$ and
+% \[\trn{T\times U}:=\trn{T}\times\trn{U} \,,\qd \trn{T\to U}:=\trn{T}\Rightarrow\trn{U}\,, \]
+% and on typed terms as the set of rules in \cite[1.6.5]{abramskyno}.
 
-The resulting categorical semantics is \emph{sound}, i.e.
-\[ t=_\lambda u \implies \trn{t}=\trn{u} \]
-for every term $t,u$, and $=_\lambda$ is $\lambda$-reduction. It is however not \emph{complete}, in the sense that
-\[ \lsem t \rsem = \lsem u \rsem \text{\qd yet \qd} t\neq_\lambda u\,. \]
-It is possible to build a new category $\clC_\lambda$ providing a sound and complete term model of (a fragment of simply-typed) $\lambda$-calculus; yet, the specifics of this construction are of little interest for the present discussion.
+% The resulting categorical semantics is \emph{sound}, i.e.
+% \[ t=_\lambda u \implies \trn{t}=\trn{u} \]
+% for every term $t,u$, and $=_\lambda$ is $\lambda$-reduction. It is however not \emph{complete}, in the sense that
+% \[ \lsem t \rsem = \lsem u \rsem \text{\qd yet \qd} t\neq_\lambda u\,. \]
+% It is possible to build a new category $\clC_\lambda$ providing a sound and complete term model of (a fragment of simply-typed) $\lambda$-calculus; yet, the specifics of this construction are of little interest for the present discussion.
 \begin{definition}[World, Yuggoth]\label{mondo_yalda}
 	A \emph{world} is a large category $\clW$; a \emph{Yuggoth}\footnote{\emph{Yuggoth} (also \emph{Iukkoth}, or {\yugg} in Chtuvian language) is an enormous trans-Neptunian planet whose orbit is perpendicular to the ecliptic plane of the solar system. A Yuggoth is a world so big to inspire a sense of unfathomable awe.} is a world that, as a category, admits all small colimits.
 \end{definition}
