@@ -1,6 +1,6 @@
 \section{The tension between observational and theoretical}
 \label{sec:orge11c3c4}
-When working with categorified relations, it is unnatural and somewhat restrictive to take into account a two-element set for the possible values a proposition(al function) `$(a,b)\in R$' can assume; instead we would like to consider an entire \emph{space} of such values, or rather a type of proofs that $(a,b)\in R$ is true. Again, this idea is best appreciated when thinking that the same proposition 
+When working with categorified relations, it is unnatural and somewhat restrictive to take into account a two-element set for the possible values a proposition(al function) `$(a,b)\in R$' can assume; instead we would like to consider an entire \emph{space} of such values, or rather a type of proofs that $(a,b)\in R$ is true. Again, this idea is best appreciated when thinking that the same proposition
 \begin{center}
 	\begin{minted}{haskell}
 	(n : Nat) -> (m : Nat) ->  n + m = m + n 
@@ -19,7 +19,7 @@ The important point for us is that the dialectical tension between observational
 	Let $\clT,\clO$ be two small categories, dubbed respectively the \emph{theoretical} and the \emph{observational} settings. A \emph{Ramsey map} is merely a profunctor
 	\[\fkK : \clT^\op \pto \clO\]
 	or, spelled out completely, a functor $\fkK : \clT\times \clO \to \Set$.
-\end{definition} 
+\end{definition}
 \begin{example}
 	Every functor $F : \clA \to \clB$ gives rise to a profunctor $F_* := \clB(1,F) : \clB^\op\times \clA\to\Set$ and a profunctor $F^* := \clB(F,1) : \clA^\op\times\clB \to \Set$ as in \autoref{nervereal}; the two functors are mutually adjoint, $F^*\dashv F_*$, see \cite[6.2]{Bor2}. This yield an example of what we call \emph{representable} Ramsey maps.
 \end{example}
@@ -27,45 +27,45 @@ The important point for us is that the dialectical tension between observational
 	Let $\fkR : \clT^\op\times \clO \to\Set$ be a Ramsey map, and $\hat R : \clO \to [\clT^\op,\Set]$ the associated canvas. Let
 	\[ \label{lalan} \Lan_{\yon_\clO}\hat R : [\clO^\op,\Set] \leftrightarrows [\clT^\op,\Set] : N_{\hat R} \]
 	be the adjunction between presheaf categories determined by virtue of \autoref{equ_prof_cocont}. Let us consider the equivalence of categories between the fix-points of the monad $T = N_{\hat R}\circ\Lan_{\yon_\clO}\hat R$ and the comonad $S=\Lan_{\yon_\clO}\hat R\circ N_{\hat R}$.
-	
+
 	This is the equivalence between the \emph{observational nucleus} $Fix(T)\subseteq [\clO^\op,\Set]$ and the \emph{theoretical nucleus} $Fix(S)\subseteq [\clT^\op,\Set]$.
 \end{definition}
 \begin{remark}
 	Observational nucleus and theoretical nucleus always form equivalent categories; the tension in creating a satisfying image of reality as it is observed oscillates between the desire to enlarge as much as possible the subcategory of $[\clO^\op,\Set]$ with which our theoretical model is equivalent, where we can have access to $\clT, [\clT^\op, \Set]$ only.
 \end{remark}
-The following remark shows how new structure comes `almost for free' when things are interpreted this way. 
+The following remark shows how new structure comes `almost for free' when things are interpreted this way.
 
-Assume $\phi : \clT \to \clW$ and $\psi : \clO \to \clW$ are canvases, $\fkR$ is a Ramsey map, and $\Lan_{y_{\clO}}\hat R$ the functor corresponding to $\fkR$ under the construction in \eqref{lalan}; in this notation, we can state a tight condition of compatibility between the theory identified by $(\phi,\psi)$ and the Ramsey map $\fkR$. We employ freely the presence of adjunction 
-\[L_\phi\dashv N_\phi \qquad 
-L_\psi \dashv N_\psi \qquad 
-L_{\hat R} \dashv N_{\hat R}.\]
+Assume $\phi : \clT \to \clW$ and $\psi : \clO \to \clW$ are canvases, $\fkR$ is a Ramsey map, and $\Lan_{y_{\clO}}\hat R$ the functor corresponding to $\fkR$ under the construction in \eqref{lalan}; in this notation, we can state a tight condition of compatibility between the theory identified by $(\phi,\psi)$ and the Ramsey map $\fkR$. We employ freely the presence of adjunction
+\[L_\phi\dashv N_\phi \qquad
+	L_\psi \dashv N_\psi \qquad
+	L_{\hat R} \dashv N_{\hat R}.\]
 \begin{remark}[Inducing an hermeneutics]\label{inducing_herme}
-Consider the diagram
-\[ \vcenter{\xymatrix{
-	& \clW \ar[dl]_{N_\phi} \ar[dr]^{N_\psi} & \\ 
-	[\clT^\op,\Set] \ar@<-.5em>[rr]_{N_{\hat R}} && \ar@<-.5em>[ll]_{L_{\hat R}} [\clO^\op,\Set]
-}}	 \label{discuss_0}\]
-given by the theoretical and observational nerves, plus the Ramsey adjunction mentioned above.
+	Consider the diagram
+	\[ \vcenter{\xymatrix{
+		& \clW \ar[dl]_{N_\phi} \ar[dr]^{N_\psi} & \\
+		[\clT^\op,\Set] \ar@<-.5em>[rr]_{N_{\hat R}} && \ar@<-.5em>[ll]_{L_{\hat R}} [\clO^\op,\Set]
+		}}	 \label{discuss_0}\]
+	given by the theoretical and observational nerves, plus the Ramsey adjunction mentioned above.
 \end{remark}
 We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a suitable natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$: such a 2-cell will force a tameness property on the system described by the two canvases $(\phi,\psi)$: this is made precise by the following
 \begin{definition}[Fundamental cell, Hermeneutics]\label{funcell_herme}
-	In a display of categories like \eqref{2_canvases} we say that 
+	In a display of categories like \eqref{2_canvases} we say that
 	\begin{itemize}
 		\item A \emph{fundamental cell} is a natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$;
 		\item we say that in the world $\clW$ \emph{hermeneutics is possible} if the right extension $\bk{\phi/\psi} := \Ran_{ N_\phi}N_\psi$ exists \emph{as a functor} (note that it always exists as a profunctor, but this might not be representable).
 	\end{itemize}
-	If hermeneutics is possible in $\clW$, and $R : \clT \pto \clO$ is a Ramsey map, any fundamental cell induces a natural transformation 
+	If hermeneutics is possible in $\clW$, and $R : \clT \pto \clO$ is a Ramsey map, any fundamental cell induces a natural transformation
 	\[ \varpi : N_{\hat R} \To \bk{\phi/\psi} \]
-	obtained exploiting the universal property of $\bk{\phi/\psi}$. 
+	obtained exploiting the universal property of $\bk{\phi/\psi}$.
 \end{definition}
 If the right extension is representable in the sense above, this amounts to a higher type map (in the sense of the internal language of a closed category) comparing `generalised formulas' of kind $\fkR \To \clW(\phi,\psi)$.
 \begin{remark}\label{herme_explained}
-If we follow the customary practice to identify a morphism of a category as an entailment between sequents in a deductive system, it is easy to see that the condition that the possibility of hermeneutics captures is that we can embody sequents of the form $\llbracket T\vdash O\rrbracket \in \fkR(T,O)$ in the internal language of $\clW$; more precisely, if we think of $\fkR(T,O)$ as the type of all proofs that some theoretical terms describe an observational phenomenon, then the map $\varpi$ above can be represented as the higher order entailment relation between $\llbracket T\vdash O\rrbracket$ and the entailment $\phi(T) \to \psi(O)$ \emph{valid in $\clW$}:
-\[ \begin{array}{c}
-	\varpi_{T,O} : \fkR(T,O) \to \clW(\phi(T),\psi(O)) \\ \hline 
-	\llbracket T\vdash O\rrbracket \Vdash (\Phi[T] \vdash \Psi[O])
-\end{array} \] 
-where $\Phi[T]$ is a shorthand for $\phi[\vec x/T]$, the context of premises saturated by the theoretical terms, and same for $\Psi[O]$, the context of deductions saturated by the observational terms. 
+	If we follow the customary practice to identify a morphism of a category as an entailment between sequents in a deductive system, it is easy to see that the condition that the possibility of hermeneutics captures is that we can embody sequents of the form $\llbracket T\vdash O\rrbracket \in \fkR(T,O)$ in the internal language of $\clW$; more precisely, if we think of $\fkR(T,O)$ as the type of all proofs that some theoretical terms describe an observational phenomenon, then the map $\varpi$ above can be represented as the higher order entailment relation between $\llbracket T\vdash O\rrbracket$ and the entailment $\phi(T) \to \psi(O)$ \emph{valid in $\clW$}:
+	\[ \begin{array}{c}
+			\varpi_{T,O} : \fkR(T,O) \to \clW(\phi(T),\psi(O)) \\ \hline
+			\llbracket T\vdash O\rrbracket \Vdash (\Phi[T] \vdash \Psi[O])
+		\end{array} \]
+	where $\Phi[T]$ is a shorthand for $\phi[\vec x/T]$, the context of premises saturated by the theoretical terms, and same for $\Psi[O]$, the context of deductions saturated by the observational terms.
 \end{remark}
 All in all, the map $\varpi_{T,O}$ exhibits a \emph{witness} of the expressibility of the entailment `$\llbracket T\vdash o\rrbracket$' in the world $\clW$, through the Ramsey map.
 
@@ -76,12 +76,12 @@ If after a computation we find that a cannonball will follow a parabolic traject
 Such assumptions imply that "hermeneutics is possible", in the very sense of the word: we can interpret linguistic facts about the world, and derivations in the former system correspond to variations in the latter.
 \begin{remark}
 	There is nothing in their mere syntactical presentation allowing to tell apart the observational and the theoretical category; this can be justified with the fact that the bicategory $\Prof$ of \autoref{def_profu} is endowed with a canonical self-involution, exchanging the r\^ole of domain and codomain of 1-cells, and thus of the theoretical and observational category $\clT,\clO$.
-	
+
 	This is perhaps of some help in solving the conundrum posed by the existence of `fictional objects'. Sherlock Holmes clearly is the object of a theoretical category. Gandhi is the object of an observational category. But as linguistic objects they can't be told apart completely; they can be at most separated by a profunctor embedding the former in a realistic counterpart of fictitious model (that is, for example, the Reichenbach falls), and representing the latter as part of a fictional model (for example, as part of a movie directed by R. Attenborough).
 
 	We can surely discuss what is the ontological status of each such object; maybe even exploiting the model of \cite{catont1}. If it is clear that in the universe of Conan Doyle, an individual named Sherlock Holmes lives at 221b Baker Street, it is also clear that it `projects' its existence in the actual world $\clW^@$; undoubtedly there are relations between Conan Doyle's Sherlock Holmes and its shadow in $\clW^@$; it is possible to rephrase there relations in terms of the syntactic categories presenting/describing the two universes, in the way that we have sketched. For a related topic, see the notion of metakosmial accessibility between worlds \cite{} or modal semantics of the non-existents \cite{}; as interesting as the topic may seem, we refrain to go further in this analysis, leaving the stage open for future discussion.
-	
-	The question deserves a deeper analysis: Attenborough's Gandhi isn't exactly an object inside $\clW^@$, but instead of an accessible sub-world $\clU_\text{G} \subseteq \clW^@$ that works as canvas; it might be that many well-tested approaches to the theory of modal relations might become more streamlined when expressed in our language: fictional worlds are just \emph{particular ways} to build canvases and representations thereof. 
+
+	The question deserves a deeper analysis: Attenborough's Gandhi isn't exactly an object inside $\clW^@$, but instead of an accessible sub-world $\clU_\text{G} \subseteq \clW^@$ that works as canvas; it might be that many well-tested approaches to the theory of modal relations might become more streamlined when expressed in our language: fictional worlds are just \emph{particular ways} to build canvases and representations thereof.
 \end{remark}
 % \begin{remark}\label{multiramsey}
 % 	The notion of Ramsey map as given above is unnecessarily restrictive, and does not account for many sorts of configurations that can occur in practice:
@@ -97,8 +97,8 @@ Such assumptions imply that "hermeneutics is possible", in the very sense of the
 
 \fo{Vanno messi a posto tutti i domini qua}
 \begin{remark}[Ramseyfication and translation functors]\label{carnap_translation_functors}
-	Assume that there exists an adjunction 
-	\[ 
+	Assume that there exists an adjunction
+	\[
 		L : \clT \leftrightarrows \clO : F
 	\]
 	between the theoretical and the observable. Following Carnap, we might assume that $F : \clO \hookrightarrow \clT$, and thus $G$ is a right translation functor for $(\clT, \clO)$.
@@ -111,7 +111,7 @@ Such assumptions imply that "hermeneutics is possible", in the very sense of the
 \end{remark}
 The property of $\fkK$-admissibility for a pair of functors is in general difficult to assess; nevertheless, there are interesting properties for the relation $F\dashv_\fkK G$: for example
 \begin{theorem}
-	Let $F : \clA \leftrightarrows \clB: G$ be a pair of functors in opposite directions; let $\fkK : \clB \pto \clA$ be a profunctor; if $F\dashv_\fkK G$, then there is a `genuine' adjunction 
+	Let $F : \clA \leftrightarrows \clB: G$ be a pair of functors in opposite directions; let $\fkK : \clB \pto \clA$ be a profunctor; if $F\dashv_\fkK G$, then there is a `genuine' adjunction
 	\[ F^e : \clA\uplus_\fkK\clB \leftrightarrows \clA\uplus_\fkK\clB : G^e \]
 	`extended' to the category of elements of $\fkK$.
 \end{theorem}

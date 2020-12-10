@@ -2,16 +2,16 @@ Along the XXth century there have been many attempts towards a formal definition
 
 The formal account in which e.g. Carnap \cite{carnap56} provides his notion of `theory' is known in the literature as \emph{syntactical conception of theories} \cite{?}, while the term `semantic' is due to later developments. Yet, the field of epistemology that the logical neopositivism started can legitimately be called a `semantics of theories', because some of its features, if not the underlying ideology, are the same throughout the works of Carnap \cite{carnap56,carnapfound,carnap1956meaning},  Beth \cite{?}, and Suppes \cite{suppes2002representation}, all the way up to the recent canonical uses of physical handbooks.
 
-	{\color{red} Non è chiarissimo cosa ci sia scritto\dots}
+{\color{red} Non è chiarissimo cosa ci sia scritto\dots}
 
 	[scrivere quali sono queste caratteristiche]
 
 	[sintesi delle varie concezioni; le teorie come classi di modelli $\clK$;
 		le teorie come oggetti formali]
 
-semantica non standard per teorie empiriche in cui le teorie sono sistemi formali e tutte le nozioni diventano oggetti matematici;
+semantica non standard per teorie empiriche in cui le teorie sono sistemi formali e tutte le nozioni diventano oggetti matematici; 
 
-More properly, a \emph{theory} becomes a structure $(F_\clL, \clK)$ where $F_\clL$ is a formal system, and $\clK$ the totality of all its interpretations. Our strategy is to further separate $F_\clL$ into two `vocabularies' (intended as two syntactic categories of two first order theories), one of them representing the \emph{pure} or \emph{theoretical} terms (see Plantinga \cite{?}), and the other representing the \emph{applied} or \emph{observational} terms.
+More properly, a \emph{theory} becomes a structure $(F_\clL, \clK)$ where $F_\clL$ is a formal system, and $\clK$ the totality of all its interpretations. Our strategy is to further separate $F_\clL$ into two `vocabularies' (intended as two syntactic categories of two first order theories), one of them representing the \emph{pure} or \emph{theoretical} terms (see Plantinga \cite{?}), and the other representing the \emph{applied} or \emph{observational} terms. 
 
 Thus, for us a ``scientific theory'' is a triple $\bk{(\clT,\clO), \clK}$ whose first two elements form the logic $F_\clL=(\clT,\clO)$ and where $\clK$ is a (possibly large) category of models or ``interpretations''. This is of course not a new idea, in fact permeating classical universal algebra, as well as categorical logic, and other disciplines. This approach has been used to ``axiomatise'' a notion of evolutionary theory in \cite{biologia}.
 
@@ -26,17 +26,17 @@ As we already observed in a previous work \cite{catont1}, the problem of locatin
 
 This problem, and its proposed solution, reflect unavoidably on the way in which the categories $\clT,\clO$ are built. In our model the world is a (possibly large) category $\clW$, unfathomable and given since the beginning of time, to which we can only access through \emph{probing} functors $\phi : \clL \to \clW$ (cf. \autoref{canvas_scienza}) representing small `accessible' categories construed from parts of $\clW$ that we can experience. Te request that $\clW$ is sufficiently expressive now translates into the request that as a category $\clW$ contains enough ``traces'' of functors like $\phi$; this (cf. \autoref{mondo_yalda}) translates formally in the request that any such $\phi$ admits a \emph{colimit} (cf. \cite[Ch. 2]{Bor1}) in $\clW$.
 
-When things are put in this perspective, a few remarks are in order:
+When things are put in this perspective, a few remarks are in order: 
 \color{blue!40}
 \begin{itemize}
 	\item La specificazione del dominio di $\clO$ determina il tipo di teoria che stiamo considerando (scientifica, strettamente empirica, logico-matematica, metafisica).
 	\item Dire che $\clO$ determina le \emph{tipizzazioni} della teoria significa dire che svolge lo stesso ruolo della legge $\beta$ {\color{red} chi è beta?} nella semantica dello spazio degli stati, mentre la classe $\clK$ è isomorfa all'insieme $\mathcal{M}$ dello spazio degli stati. Il tipo di $\beta$ determina il tipo di $\mathcal{M}$ che determina il tipo di $T = (\mathcal{M}, \beta)$. Idem nel nostro approccio: $\clO 	= \{\alpha_1,\dots,\alpha_n\}$ determina il tipo, che implementa una logica che determina la classe $\clK$.
 \end{itemize}
 \color{black}
-This closes the circle over the problem of representation of a world $\clW$ in terms of a portion $\clT$ to which we have hermeneutical access, and from which we have carved a language. In fact, such a representation happens through `canvas functors' $\phi : \clL \to \clW$ that, thanks to the cocompleteness property of $\clW$, extend uniquely to representation functors $[\clL^\op,\Set] \leftrightarrows \clW$.
+This closes the circle over the problem of representation of a world $\clW$ in terms of a portion $\clT$ to which we have hermeneutical access, and from which we have carved a language. In fact, such a representation happens through `canvas functors' $\phi : \clL \to \clW$ that, thanks to the cocompleteness property of $\clW$, extend uniquely to representation functors $[\clL^\op,\Set] \leftrightarrows \clW$. 
 
 On the other hand, `the world' as a whole is unknowable, strictly speaking: instead of $\clW$, we can access to an `observational fragment' $\clO$, from which we recover, now exploiting the cocompleteness of $[\clO^\op,\Set]$, a further representation $[\clL^\op,\Set] \leftrightarrows [\clO^\op,\Set]$. In general, this is all that can be said; such a picture is already capable of determining, by elementary means, an equivalence of categories (i.e., an equivalence of models) between the observational and the theoretical \emph{nuclei} of $[\clT^\op,\Set] \leftrightarrows [\clO^\op,\Set]$: we discuss the matter in \autoref{nuclei}, and \autoref{resoudre_la_tension}.
 
-Additional assumptions on the canvas $\phi : \clL\to \clW$, however, can refine our analysis: we can infer that the totality of models $[\clL^\op,\Set]$ \emph{contains a copy} of the world $\clW$. In this precise sense, assuming what is outlined in the definition of \science in \autoref{canvas_scienza}, language prevails: the unfathomable world is a full subcategory of the class of all modes in which the language of $\clT$ can be interpreted.
+Additional assumptions on the canvas $\phi : \clL\to \clW$, however, can refine our analysis: we can infer that the totality of models $[\clL^\op,\Set]$ \emph{contains a copy} of the world $\clW$. In this precise sense, assuming what is outlined in the definition of \science in \autoref{canvas_scienza}, language prevails: the unfathomable world is a full subcategory of the class of all modes in which the language of $\clT$ can be interpreted. 
 
 As bold a statement as it might seem, this has fruitful consequences: see for example \autoref{remark_yuggoth_1}, \autoref{remark_yuggoth_2}.
