@@ -1,41 +1,33 @@
-\section{Ramseyfication and beyond: generalised profunctors}
-\label{sec:org50db6c2}
-We can generalise the definition above to encompass Ramsey sentences:
-\begin{definition}\label{mn_ramsey}
-	Let $\clT,\clO$ be two categories; a \emph{Ramsey map}, or a \emph{$(n,m)$-ary Ramsey map} is a profunctor $\fkK : \clT^n \pto \clO^m$; note that we allow $n,m$ to be zero; in that case, $\clA^0$ is understood to be the terminal category $\boldsymbol{1}$.
-\end{definition}
-The intuition behind this definition is as follows: given $\uT\in\clT^n, \uO\in\clO^m$, the set $\fkK(\uT, \uO)$ represents the type of proofs that the observational tuple $\uO$ admits a description in terms of the theoretical tuple $\uT$.
+\section{A universal notion of theory}\label{sec_6_universal}
+This concluding section wraps up the various topics touched along the paper.
 
-This formalism allows to speak about particular worlds, obtained as presheaf categories over observational $\clO$; if $\clT, \clO$ is a theoretical pair, we can instantiate \autoref{nervereal} above in the particular case where $\clW = [\clO^\op, \Set]$ (observe that in this case $\clW$ is a Yuggoth). We can thus address a certain number of questions, arising from the canonical adjunction obtained by virtue of \autoref{equ_prof_cocont}:% and \autoref{}:
-\[
-	\xymatrix{ [(\clO^m)^\op, \Set] \ar@<3pt>[r] & \ar@<3pt>[l] [(\clT^n)^\op, \Set];}
-\]
-It is worth to mention that since the diagram
-\[
-	\vcenter{\xymatrix{
-			(\clO^m)^\op \ar[rr]\ar[dr]&& [(\clT^n)^\op, \Set] \ar[dl]\\
-			& [(\clO^m)^\op, \Set]
-		}}
-\]
-is pseudocommutative, the composition $L\circ y$ s equal to (the mate of) $\fkK$. This means: $\clO$-models, when interpreted inside $\clT$-models, carry representations corrisponding to the observational tokens interpreted in $\clT$-models; that is, the representation is coherent over observational tokens, that is\dots
+\medskip
+%\color{blue!40}
 
-% \fo{Vanno messi a posto tutti i domini qua}
-% \begin{remark}[Ramseyfication and translation functors]\label{carnap_translation_functors}
-% 	Assume that there exists an adjunction 
-% 	\[ 
-% 		L : \clT \leftrightarrows \clO : F
-% 	\]
-% 	between the theoretical and the observable. Following Carnap, we might assume that $F : \clO \hookrightarrow \clT$, and thus $G$ is a right translation functor for $(\clT, \clO)$.
+%\subsection{The Dummett-Plantinga problem}
+%La manfrina su semantica pura e applicata, applicazione concreta del framework, problema delle modalities, trattare semantica applicata (tipo Lewis) come \emph{teoria} nel senso funtoriale evitando ontological committment bla bla bla (qualche riferimento su sta cosa, remember)
 
-% 	In these assumptions, given a Ramsey map $\fkK : \clT \pto \clO$ the function term
-% 	\[\lambda \uO\lambda\uX . \fkK(\uO, \uX)\]
-% 	can be pre-composed with $F$ obtaining
-% 	\[\lambda \uO\lambda\uO'.\fkK(\uO, F\uO').\]
-% 	We say that a translation adjunction $(L,F)$ is `$\fkK$-admissible' (denoted $L \dashv_\fkK F$) when there is a natural isomorphism $\fkK(L,1)\cong\fkK(1,F)$.
-% \end{remark}
-% The property of $\fkK$-admissibility for a pair of functors is in general difficult to assess; nevertheless, there are interesting properties for the relation $F\dashv_\fkK G$: for example
-% \begin{theorem}
-% 	Let $F : \clA \leftrightarrows \clB: G$ be a pair of functors in opposite directions; let $\fkK : \clB \pto \clA$ be a profunctor; if $F\dashv_\fkK G$, then there is a `genuine' adjunction 
-% 	\[ F^e : \clA\uplus_\fkK\clB \leftrightarrows \clA\uplus_\fkK\clB : G^e \]
-% 	`extended' to the category of elements of $\fkK$.
-% \end{theorem}
+%\subsection{Naturalizing Epistemology}
+%cenni alla questione della incommensurabilità delle teorie, sia tesi Duhem-Quine che accezione radicale di Feyerabend, e come questo framework la risolve (creazione di un linguaggio-ter che non è nè quello del "testo" di partenza nè quello del "testo" di arrivo).
+%\color{black}
+As we have seen in \autoref{resoudre_la_tension}, profunctor theory is just a mathematization of the well-known tenet that epistemology is a relational theory: scientific theories are but well-behaved adjunctions between the part of the world that we want to model (this part doesn't have to be physical), the part of the world to which we have experimental access, and the linguistic paraphernalia that we use to represent the latter in terms of the former.
+
+Theories can't be told apart in terms of their objects of study; instead, they can be classified in terms of the web of relations that they entertain together with others theories/categories.
+
+This entails that
+\begin{itemize}
+	\item There is no substantial difference between the syntactic categories $\clT,\clO\subset \clW$, i.e. between observative and theoretical terms. Far from being a step back towards an efficient representation of reality, this elegantly gets rid of the early gawky attempts towards a `naturalisation of epistemology', originally thought to even happen \emph{inside syntax}.
+
+	      No theory can exit language; this does not mean that a theory isn't telling something about the world: instead, theories --and metatheories about the world-- are linguistic objects above all else. The way in which this linguistic practice unravels, on the other hand, is too loose to be functional; it is, instead, relational.
+	\item Being able to exchange the r\^oles of $\clT,\clO$ is reflected in the model in the property of every profunctor (i.e. Ramsey map) $\fkR : \clT \pto \clO$ to be `swapped' into a Ramsey map $\fkR^\op : \clO \pto \clT$. The observational and theoretical categories bear this name as a result of nothing but an arbitrary labeling. This gives way to all sorts of fruitful interpretations: it becomes possible to label as `sciences' sufficiently expressive descriptions of possible worlds (few would object that the complicated hierarchy of sub-worlds in which Eä is divided, or the narration by which it became the world as we know it, form a `science'), or the --strictly speaking-- inobservable phenomena that occur in Physics as well as in theology.
+
+	      Being `scientific' is thus not a property of the object we want to describe; instead, `scientificity' is a measure of the faithfulness of described phenomena in a `world' $\clW$, and of the ability of descriptions to cast predictions on the behaviour of the system. This is akin to scientific practice: if quantum mechanics gave more correct predictions about the world accepting that uncertainty is induced by an \emph{ogbanje}, physicists would study Igbo mythology instead of functional analysis.
+
+	      % \item Una 'teoria delle teorie' non sarà object-dependent ma context-dependent, dove context è l'insieme delle aggiunzioni che si stabiliscono tra le categorie dentro le quali scegliamo di muoverci. 
+\end{itemize}
+
+% Una teoria è qualcosa, perciò, di più largo, per noi, di quello che risulta essere di norma in epistemologia. è un oggetto sintattico descrittivo e predittivo su qualunque porzione di mondo ci si voglia occupare.
+
+% Stabilire una demarcazione tra teorie scientifiche e non in questo contesto è vano: una teoria biologica non è necessariamente più 'predittiva' o 'reale' di una ontologica \footnote{O, ancora meglio, non ha senso porsi la domanda in questi termini}: dipende da cosa avviene dentro $\clW$. 
+
+% La 'scientificità' di una teoria non è qualcosa di indagabile dal punto di vista della concezione semantica, ammesso che sia una questione indagabile e non un reperto storico. Ma ragionare in a categorical perspective aiuta a dotarsi di una struttura universale, che non gerarchizza le teorie o le loro sentence-versions.   
