@@ -1,24 +1,24 @@
 \epigraph{[\dots\unkern] Le rôle essentiel c'est cette transition qu'il y a entre ce quelque chose qui est écrit, qui parait incompréhensible, et les images mentales qui l'on crée.}{A. Connes}
 \section{Semantic conception of theories}\label{sec_1_intro}
-The present work approaches a well-established problem in epistemology: what is the way in which we build representations of the world from perception? What is, if any, the relation between the two `worlds', one depicted in our minds, and one on our fingertips? Sometimes, such a representation results in a faithful image of the perceived world (we call it `science'); sometimes it doesn't (we call it `superstition'). 
+The present work approaches a well-established problem in epistemology: what is the way in which we build representations of the world from perception? What is, if any, the relation between the two `worlds', one depicted in our minds, and one on our fingertips? Sometimes, such a representation results in a faithful image of the perceived world (we call it `science'); sometimes it doesn't (we call it `superstition').
 
 We propose a sense in which science and superstition can be told apart using a mathematical theory, or even a mathematical object.
 \subsection{A convincing notion of theory: two dictionaries}
-Along the XXth century there have been many attempts towards a formal definition of a scientific theory. 
+Along the XXth century there have been many attempts towards a formal definition of a scientific theory.
 
 Examples are the \emph{Wiener Kreis}' verificationist paradigm, and Neurath's theory of `protocollar statements', that gave an initial input towards the elaboration of a semantic framework for scientific theories, and spurred the search for a pan-linguistic vision of philosophy of science \cite{Weinb}.
 
 The formal account in which --among others-- Carnap \cite{carnapfound} provided his notion of `theory' is known in the literature as \emph{syntactical conception of theories} or `received view' \cite{krause-foundation,krause2011axiomatization,giunti2016}. Albeit the term `semantic' is due to later developments, the field of epistemology that logical neopositivism started can legitimately be labeled a `semantics of theories', because some of its features, if not the underlying ideology, are the same throughout the work of Carnap \cite{carnap56,carnapfound},  Beth \cite{?}, and Suppe \cite{suppe89}.
 
-Thus, a `Wiener Kreis' theory' is understood as a structure $(F_\clL, \clK)$ where $F_\clL$ is a formal language, and $\clK$ the totality of all its interpretations, or \emph{models}. 
+Thus, a `Wiener Kreis' theory' is understood as a structure $(F_\clL, \clK)$ where $F_\clL$ is a formal language, and $\clK$ the totality of all its interpretations, or \emph{models}.
 
-The idea to separate further $F_\clL$ into two `vocabularies' $(\clT,\clO)$ (intended, in modern terms, as two syntactic categories carved from two first order theories) first appears in Carnap \cite{}; these are respectively the \emph{pure} or $\clT$\emph{heoretical} terms, and the \emph{applied} or $\clO$\emph{bservational} terms \cite{refs_on_erkennen}. 
+The idea to separate further $F_\clL$ into two `vocabularies' $(\clT,\clO)$ (intended, in modern terms, as two syntactic categories carved from two first order theories) first appears in Carnap \cite{}; these are respectively the \emph{pure} or $\clT$\emph{heoretical} terms, and the \emph{applied} or $\clO$\emph{bservational} terms \cite{refs_on_erkennen}.
 
 It is a commonly accepted belief --albeit rarely formalised-- that scientific theories arise from some kind of tension between the theoretical and the observational world. Our aim here is to try and `resolve the tension', acknowledging $\clT,\clO$ and their mutual relations as concrete mathematical object, rooted in category theory \cite{McL,pedicchiofoundations,riehlcontext,leinster2014basic}.
 
-As elementary as it may seem, this idea seems fruitful to us: building on Carnap, 
+As elementary as it may seem, this idea seems fruitful to us: building on Carnap,
 \begin{remark*}
-	A reasonable notion of `scientific theory' is a triple $\bk{(\clT,\clO), \clK}$ whose first two elements form the `underlying logic' $F_\clL=(\clT,\clO)$ and where $\clK$ is a (possibly large) category of models or `interpretations'. 
+	A reasonable notion of `scientific theory' is a triple $\bk{(\clT,\clO), \clK}$ whose first two elements form the `underlying logic' $F_\clL=(\clT,\clO)$ and where $\clK$ is a (possibly large) category of models or `interpretations'.
 \end{remark*}
 This is in fact a familiar old idea for mathematicians, as the habit of identifying a sort of mathematical structure in a way that is independent from the cohort of its syntactic presentations, permeates classical universal algebra since the early work of Lawvere \cite{lawvere1963functorial,lawvere1996unity} (see also \cite{abramskyno,Borceux1994,makkai1989accessible} for applications to logic and other disciplines).
 
@@ -40,7 +40,7 @@ In the Carnapian --and in general the neopositivistic-- account a theory can be 
 
 In the Wiener Kreis paradigm, the formal specification of $\clO$ is left unclear; Carnap \cite{carnapfound} posits the existence of \emph{correspondence rules} between $\clO$ and $\clT$, associating to each term $o$ of $\clO$, or O-term, its companion in $\clT$, or the T-term $\tau$ derived from $o$. In general, Carnap holds that $\clO \subset \clT$, but at the same time he blurs the features of this identification of observational terms as `types of T-terms'.
 
-We can maintain a similar idea, just phrased in a slightly more precise way: we posit the existence of a function $\varphi$ that translates O-terms into T-terms. So, a Wiener definition of a theory is a suitable set of pairs $\{\bk{\tau,\varphi(\tau)} \mid \tau\in\clT\}\subseteq \clT\times\clO$, where $\varphi: \clT \to \clO$ is called a \emph{translation function}. In this way it is trivially true that all the terms of a theory are in the first dictionary. 
+We can maintain a similar idea, just phrased in a slightly more precise way: we posit the existence of a function $\varphi$ that translates O-terms into T-terms. So, a Wiener definition of a theory is a suitable set of pairs $\{\bk{\tau,\varphi(\tau)} \mid \tau\in\clT\}\subseteq \clT\times\clO$, where $\varphi: \clT \to \clO$ is called a \emph{translation function}. In this way it is trivially true that all the terms of a theory are in the first dictionary.
 \begin{remark*}
 	A reasonable notion of scientific theory must take into account `meaningful relations' between the observable world $\clO$ and the theoretical world $\clT$; the Carnapian request that there is a functional correspondence between the two is, however, too restrictive when $\clT,\clO$ are thought as categories.
 \end{remark*}
@@ -48,12 +48,12 @@ In fact, the set of pairs of a Carnap translation function $\varphi$ is precisel
 
 Now, the neopositivistic current of epistemologists was the first to observe that one can build an observational version of a theory $T$ following a procedure first outlined by Ramsey \cite{?} and colloquially called \emph{Ramseyfication} of a theory; the nature of this operation seems quite elusive to those approaching it: colloquially, it can be thought as the process of replacement of each observational term of a theory with a `corresponding' theoretical term. The nature of this replacement, the syntactic domain of terms, and the sense in which the process makes a theory $F_\clL$ and its `Ramseyfied' analogue $F_\clL^\text{Ra}$ equivalent are however quite elusive.
 
-In the language of category theory --and especially through our profunctorial approach-- instead things become clearer: under mild assumptions on a diagram 
+In the language of category theory --and especially through our profunctorial approach-- instead things become clearer: under mild assumptions on a diagram
 \[ \vcenter{\xymatrix{
 	& \clW \ar[dl]_{N_\phi} \ar[dr]^{N_\psi} & \\
 	[\clT^\op,\Set] \ar[rr]_{N_{\hat R}} && [\clO^\op,\Set]
 	}} \notag\]
-of categories and profunctors, if a `deduction' entails a certain interaction or a certain behaviour for the theoretical category over the observational one, then there exists a particularly well behaved natural transformation 
+of categories and profunctors, if a `deduction' entails a certain interaction or a certain behaviour for the theoretical category over the observational one, then there exists a particularly well behaved natural transformation
 \[ \varpi : N_{\hat R} \To \bk{\phi/\psi}\notag \]
 filling the triangle above; in non\hyp{}mathematical terms, this means that the entailment of a theoretical prediction into an observed system (i.e. a term $\tau$ of type $\fkR(T,O)$) yields an entailment $\varphi(T) \to \psi(O)$ \emph{in the world}. The details of this construction, that we consider the heart of the paper, are contained in \autoref{inducing_herme}, \autoref{funcell_herme}, and heavily rely on the terminology introduced in Sections \ref{sec_2_profu} and \ref{sec_3_nervi}.
 
