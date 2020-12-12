@@ -1,23 +1,24 @@
 \section{Profunctors and the Gro\-then\-dieck construction}\label{sec_2_profu}
 \label{sec:org7dd09e1}
-We start from a simple observation.
-There are two possible ways to define a relation $R$ between two sets $A,B$:
+There are two possible ways to define a \emph{relation} $R$ between two sets $A,B$:
 \begin{enumtag}{r}
 	\item \label{r_1} a relation $R$ is a subset of the cartesian product $A\times B$;
 	\item \label{r_2} a relation $R$ is a function $A\times B \to \{0,1\}$.
 \end{enumtag}
-This notion of `relation between $A$ and $B$' is inherently symmetric, in the sense that such $R$ can be regarded both as a kind of map $A \rightsquigarrow B$ or $B\rightsquigarrow A$.
+This notion of `relation between $A$ and $B$' is inherently symmetric, in the sense that such $R$ can be regarded both as a kind of `botched' map $A \rightsquigarrow B$ or $B\rightsquigarrow A$: a relation between $A$ and $B$ is equally a function $B\to PA$ or $A\to PB$.
 
-Furthermore, every relation $R$ between sets $A,B$ gives rise to a \emph{Galois connection}
+Because of this, every relation $R$ between sets $A,B$ gives rise to a \emph{Galois connection}
 \[{}^R(\firstblank) :PA^\op \leftrightarrows PB : (\firstblank)^R \label{adjunzia} \]
 between the power-sets $PA=2^A$ and $PB = 2^B$: the set $U\subset A$ goes to the set ${}^RU$ of all $b$ such that $(a,b)\in R$ for all $a\in U$; in an exactly symmetric way, a set $V\subseteq B$ goes to the set
 \[V^R = \{a\in A\mid (a,b) \in R,\, \forall b\in V\}.\]
-Unwinding the definition, it is easy to verify that $V\subseteq{}^RU$ if and only if $U\subseteq V^R$, if and only if $U\times V\subseteq R$.
+Unwinding the definition, it is easy to verify that $V\subseteq{}^RU$ if and only if $U\subseteq V^R$, if and only if $U\times V\subseteq R$, so the adjunction rules of \cite[??]{??} are satisfied.
 %\todo[inline]{La varianza di sta roba va controllata}
 
-From here, using a process known as `categorification' \cite{baez1998categorification}, we can replace a two-valued relation $R : A\times B \to \{0,1\}$ with a \emph{set-valued} functor $\clA^\op\times\clB \to \Set$ between two (small) categories $\clA,\clB$.\footnote{The reason why the category $\clA$ is twisted with an `$^\op$' functor is that we want to bestow the hom functor $\hom_{\clA} : \clA^\op\times\clA \to \Set$ with the r\^ole of identity `profunctor'; in the categorification perspective, hom plays the r\^ole of the diagonal relation $R=\Delta : A\to A\times A$. The category of sets (i.e., of discrete categories) has no nontrivial involution on objects, so in the case of sets the opping operation is hidden.} More precisely, we can give the following definition.
+Now, using a process known as `categorification' \cite{baez1998categorification}, we can replace a \emph{two-valued} relation $R : A\times B \to \{0,1\}$ with a \emph{set-valued} functor $\clA^\op\times\clB \to \Set$ between two (small) categories $\clA,\clB$.\footnote{The reason why the category $\clA$ is twisted with an `$^\op$' functor is that we want to bestow the hom functor $\hom_{\clA} : \clA^\op\times\clA \to \Set$ with the r\^ole of identity `profunctor'; in the categorification perspective, hom plays the r\^ole of the diagonal relation $R=\Delta : A\to A\times A$. The category of sets (i.e., of discrete categories) has no nontrivial involution on objects, so in the case of sets the opping operation is hidden.} In this perspective, the truth value for the proposition $aRb$=`$(a,b) \in R$' is considered too poor an information about $R$ (it is also usually wise to approach mathematics rejecting two-valued logic); because of this, instead of the mere truth value of the proposition $aRb$ we consider the \emph{type} of all \emph{proofs} that $aRb$.
+
+More precisely, we can give the following definition.
 \begin{definition}[Profunctor]\label{def_profu}
-	Let $\clA,\clB$ be two categories; a \emph{profunctor} $\fkR : \clA \pto \clB$ is a functor $\clA^\op\times\clB \to \Set$; we define the \emph{bicategory of profunctors} $\Prof$ having
+	Let $\clA,\clB$ be two small categories; a \emph{profunctor} $\fkR : \clA \pto \clB$ is, by definition, a functor $\clA^\op\times\clB \to \Set$; we define the \emph{bicategory of profunctors} $\Prof$ having
 	\begin{enumtag}{p}
 		\item objects the small categories $\clA,\clB,\clC,\dots$;
 		\item 1-cells the profunctors $\fkR : \clA \pto \clB$, and composition law between $\clA \overset{\fkR}{\pto} \clB \overset{\fkP}{\pto} \clC$ given by the assignment
@@ -27,21 +28,31 @@ From here, using a process known as `categorification' \cite{baez1998categorific
 		\item 2-cells $\fkR\To\fkR'$ the natural transformations $\alpha : \xymatrix{**[l] \clA^\op\times\clB \rtwocell^{\fkR}_{\fkR'}{\alpha}& **[r] \Set}$.
 	\end{enumtag}
 \end{definition}
-The intuition behind \autoref{def_profu} is that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs that $(A,B)\in\clA^\op\times\clB$ are in a  `generalised relation' $\fkR$. This intuition agrees with the fact that when instead of $\Set$ a profunctor $\fkR$ takes values in the category $\{0\le 1\}$, then the type of proofs that $R(A,B)$ is a yes/no space of answers.
+This formalises the above intuition that $\fkR(A,B)$ is the \emph{type} whose terms are all proofs that $(A,B)\in\clA^\op\times\clB$ are in a  `generalised relation' $\fkR$. This intuition agrees with the fact that a profunctor between discrete categories is precisely a relation between the sets that those two categories are.
 
-From here, one can build a rich and expressive theory; for our purposes, we are contempt with a careful analysis of the analogue of \ref{r_2} and \eqref{adjunzia} above: the latter is the scope of \autoref{sec:org1a423df}, we now concentrate on describing an ubiquitous technical tool in category theory, called \emph{Gro\-then\-dieck construction}, suited to categorify the equivalence between \ref{r_1} and \ref{r_2}.
+Starting from here, one can build a rich and expressive theory; for our purposes, we are contempt with a careful analysis of the analogue of \ref{r_2} and \eqref{adjunzia} above: the latter is the scope of \autoref{sec:org1a423df}, we now concentrate on describing an ubiquitous technical tool in category theory, called \emph{Gro\-then\-dieck construction}, suited to categorify the equivalence between \ref{r_1} and \ref{r_2}.
 
+Every function is a particular relation: this means that the category of sets and functions embed into the category of relations, and that a relation is just a function satisfying a suitable rigidity request; something similar happens to profunctors, and we will freely employ the notation that the following definition sets up throughout the paper (cf. for example \autoref{uan}, \autoref{ciu}, \autoref{funcell_herme}).
+\begin{definition}[The upper and lower image of a functor]\label{upper_n_lower}
+	Let $F : \clA \to \clB$ be a functor; we define 
+	\begin{enumtag}{im}
+		\item the \emph{upper image} $F^*$ of $F$ is $\Prof$ to be the functor 
+		\[ \clB(F,1) : \clA^\op\times\clB \to\Set : (A,B)\mapsto \clB(FA,B) \]
+		\item the \emph{lower image} $F_*$ of $F$ is $\Prof$ to be the functor 
+		\[ \clB(1,F) : \clB^\op\times\clA \to\Set : (B,A)\mapsto \clB(B,FA) \]
+	\end{enumtag}
+	The correspondence $F\mapsto F^*$ is a functor, covariant on 1-cells and contravariant on 2-cells; the correspondence $F\mapsto F_*$ is a functor, contravariant on 1-cells, and covariant on 2-cells.
+\end{definition}
 \subsection{Gro\-then\-dieck construction}
-
 Each profunctor $\fkR : \clA \pto \clB$ can be realised as a suitable `fibration' $p_\fkR : \clE \to \clA^\op\times\clB$, that in turn uniquely determines $\fkR$.
 We now recall a few basic definitions.
 \begin{definition}\label{eltsf}
 	Let $\clC$ be an ordinary category, and let $W : \clC\to \Set$ be a functor; the \emph{category of elements} $\elts{\clC}{W}$ of $W$ is the category which results from the pullback
 	\[
-		\xymatrix{
+		\vcenter{\xymatrix{
 			\elts{\clC}{W}\ar[r]\ar[d] \pb & \Set_* \ar[d]^U \\
 			\clC \ar[r]_W & \Set
-		}
+		}}
 	\]
 	where $U : \Set_*\to\Set$ is the forgetful functor which sends a pointed set to its underlying set.
 
@@ -53,9 +64,9 @@ We now recall a few basic definitions.
 \end{definition}
 Taking as morphisms between discrete fibrations the morphisms in $\Qat/\clC$, we can define the category $\DFib(\clC)$ of discrete fibrations \emph{over} $\clC$.
 \begin{proposition}\label{fibelem}
-	The category of elements $\elts{\clC}{W}$ of a functor $W : \clC\to \Set$ comes equipped with a canonical \emph{discrete fibration} to the domain of $W$, which we denote $\Sigma : \elts{\clC}{W}\to \clC$, defined forgetting the distinguished element $u\in Wc$.
+	The category of elements $\elts{\clC}{W}$ of a functor $W : \clC\to \Set$ comes equipped with a canonical \emph{discrete fibration} to the domain of $W$, which we denote $\Sigma : \elts{\clC}{W}\to \clC$, defined forgetting the distinguished element $u\in WC$.
 \end{proposition}
-With this terminology at hand, we can consider the \emph{category of elements} \autoref{eltsf} of a functor $F : \clC\to \Set$; this sets up a functor from $\Qat(\clC,\Set)$ to the category of discrete fibrations over $\clC$: the Gro\-then\-dieck construction asserts that this is an equivalence of categories.%, as defined in \ref{def:equcat}.
+With this terminology at hand, we can consider the category of elements of a functor $F : \clC\to \Set$; this sets up a functor from $\Qat(\clC,\Set)$ to the category of discrete fibrations over $\clC$: the Gro\-then\-dieck construction asserts that this is assignment sets up an equivalence of categories.%, as defined in \ref{def:equcat}.
 \begin{theorem}\label{thm:equconfib}
 	There is an equivalence of categories
 	\[
@@ -106,7 +117,7 @@ There is of course a similar correspondence for \emph{covariant} functors; the s
 \end{center}
 % \f{La notazione va uniformata a questa scelta}
 \begin{corollary}\label{da_collage}
-	Given a profunctor $\fkR : \clA \pto \clB$, regarded as a functor $R : \clA^\op\times \clB \to \Set$, we can consider the category of elements $\elts{\clA^\op\times\clB}{R}$; this is often called the \emph{collage} or the \emph{graph} of $R$. In this case, we denote the category $\elts{\clA^\op\times\clB}{R}$ as $\clA\uplus_R\clB$, to stress the intuition that $R$ prescribes a way to glue together two categories $\clA,\clB$ specifying a set of `fake' arrows $R(A,B)$ that consistently interact with the arrows in $\clA,\clB$ (compare with \autoref{hint_at_collage}, and with \autoref{11_ramsey} below).
+	Given a profunctor $\fkR : \clA \pto \clB$, regarded as a functor $R : \clA^\op\times \clB \to \Set$, we can consider the category of elements $\elts{\clA^\op\times\clB}{R}$; this is often called the \emph{collage} or the \emph{graph} of $R$. In this case, we denote the category $\elts{\clA^\op\times\clB}{R}$ as $\clA\uplus_R\clB$, to stress the intuition that $R$ prescribes a way to glue together two categories $\clA,\clB$ specifying a set of `fake' arrows $R(A,B)$ that consistently interact with the arrows in $\clA,\clB$ (compare this with \autoref{11_ramsey} below).
 \end{corollary}
 \begin{remark}\label{collage_explaned}
 	The above definition deserves to be expanded a little more: from \autoref{eltsf} we get that the category $\clA\uplus_R\clB$ results as the category whose objects are those of the disjoint union $\clA_o\sqcup\clB_o$, and where the hom-set $\clA\uplus_R\clB(X,Y)$ is equal to
@@ -123,7 +134,9 @@ There is of course a similar correspondence for \emph{covariant} functors; the s
 			}} \]
 \end{remark}
 Thus, we have obtained a concrete model for a category that realises the generalised relation between $\clA,\clB$; the structure $\clA\uplus_R\clB$ is `carved' from $\clA,\clB$ separately, starting from (semi-)free relations witnessing the fact that $\fkR$ connects $\clA,\clB$ in a weak way. For example, if $\fkR : \clA^\op\times \clB \to \Set$ is the empty functor, then $\clA\uplus_R\clB$ is just he disjoint union of $\clA,\clB$; and if $\fkR$ is the functor constant at the singleton set, then $\clA\uplus_R\clB$ is the \emph{join} of $\clA,\clB$, i.e. the category $\clA\coprod\clB$ where exactly a single new morphism is added between each and every object of $\clA$ and of $\clB$ (but not in the opposite direction).
-\begin{proposition}
+
+The extremely rich features of the Grothendieck construction can be at least partly explained resorting to a dual construction for $\elts{\clC}{F}$: more in detail,
+\begin{proposition}\label{uan}
 	The collage construction of \autoref{da_collage} enjoys the following universal property: the category $\clA\uplus_R\clB$ fits into a cospan
 	\[ \xymatrix{\clA \ar[r]^-J & \clA\uplus_R\clB & \ar[l]_-K \clB} \]
 	where both functors $J,K$ are the obvious embeddings, and there exists a canonical natural transformation $\gamma : K_* \diamond \fkR \To J_*$ which is initial among all these: this means that given any other arrangement of profunctors 
