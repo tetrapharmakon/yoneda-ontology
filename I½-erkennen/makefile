@@ -19,3 +19,6 @@ git:
 	bash -c 'git add -A'
 	bash -c 'git commit -m "standard commit perché denta non sa usare bash"'
 	bash -c 'git push'
+
+wc:
+	./count.sh
