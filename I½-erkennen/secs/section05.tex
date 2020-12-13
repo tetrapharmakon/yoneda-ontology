@@ -83,14 +83,6 @@ Such assumptions imply that "hermeneutics is possible", in the very sense of the
 
 	The question deserves a deeper analysis: Attenborough's Gandhi isn't exactly an object inside $\clW^@$, but instead of an accessible sub-world $\clU_\text{G} \subseteq \clW^@$ that works as canvas; it might be that many well-tested approaches to the theory of modal relations might become more streamlined when expressed in our language: fictional worlds are just \emph{particular ways} to build canvases and representations thereof.
 \end{remark}
-% \begin{remark}\label{multiramsey}
-% 	The notion of Ramsey map as given above is unnecessarily restrictive, and does not account for many sorts of configurations that can occur in practice:
-% 	\begin{itemize}
-% 		\item a single observational token $O$ can't be described by a single theoretical token $T_1$, but instead needs $T_1,\dots,T_r$;
-% 		\item inverting the r\^oles, a single theoretical token describes not only $O$, but different $O_1,\dots,O_s$.
-% 	\end{itemize}
-% 	Thus we must admit \emph{multiple} arguments for the domain and codomain of a Ramsey map. This yields the notion of a \emph{$(n,m)$-ary Ramsey map}.
-% \end{remark}
 \begin{remark}\label{resoudre_la_tension}
 	The clearest possible sense in which the profunctorial approach `resolves' the tension between observational and theoretical is that the Gro\-then\-dieck construction associated to a profunctor $\fkR : \clT \pto \clO$ yields a category where the two `worlds', one carved from perception, and the other concocted from language, live harmoniously together. All in all, said tension is just an incarnation of the tension between speakable and unspeakable: given a Ramsey map $\fkR : \clT \pto \clO$, the equivalence between its theoretical and observational nuclei is an equivalence between the speakable (subclass of $[\clT^\op,\Set]$), with the observable (subclass of $[\clO^\op,\Set]$); what lies outside this equivalence in the latter category is observable but `unspeakable' in the strongest possible sense.
 \end{remark}
@@ -102,9 +94,9 @@ Such assumptions imply that "hermeneutics is possible", in the very sense of the
 	between the theoretical and the observable categories. Following Carnap, we might assume that $F : \clO \hookrightarrow \clT$, and thus $G$ is a right translation functor for $(\clT, \clO)$.
 
 	In these assumptions, given a Ramsey map $\fkK : \clT \pto \clO$ the function term
-	\[\lambda O\lambda X . \fkK(O, X)\]
+	\[(O,X) \mapsto \fkK(O, X)\]
 	can be pre-composed with $F$ obtaining
-	\[\lambda  O\lambda O'.\fkK( F O, O').\]
+	\[(O,O')\mapsto \fkK( F O, O').\]
 	We say that a translation adjunction $(F,G)$ is `$\fkK$-admissible' relative to a Ramsey map $\fkR$ (denoted $F \dashv_\fkK G$) when there is a natural isomorphism $\fkK(F,1)\cong\fkK(1,G)$.
 \end{remark}
 The property of $\fkK$-admissibility for a pair of functors is in general difficult to assess; nevertheless, there are interesting properties for the relation $F\dashv_\fkK G$: for example

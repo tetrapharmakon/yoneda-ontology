@@ -2,19 +2,9 @@
 \label{sec:orge02f333}
 In this section we exploit the terminology established before.
 \begin{definition}[Theory]\label{teoria}
-	A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite{lambek1988introduction}) of a type theory $L$.
+	A \emph{theory} $\clL$ is the syntactic category $\clT_L$ (cf. \cite[II.11]{lambek1988introduction}) of a type theory $L$.
 \end{definition}
 The reader interested in how the construction of $\clT_L$ goes can take from \cite{lambek1988introduction} as standard reference, or \cite{abramskyno} for a shorter survey, in the simple case $L$ admits product and function types.
-
-% From $\clT_L$ it is possible to carve a cartesian closed category, whose obects are denoted $\trn{B}$ as $B$ runs over the basic types of $L$. Then, we define recursively a \emph{semantic translation} operation from basic types $\trn{B} := B$ and
-% \[\trn{T\times U}:=\trn{T}\times\trn{U} \,,\qd \trn{T\to U}:=\trn{T}\Rightarrow\trn{U}\,, \]
-% and on typed terms as the set of rules in \cite[1.6.5]{abramskyno}.
-
-% The resulting categorical semantics is \emph{sound}, i.e.
-% \[ t=_\lambda u \implies \trn{t}=\trn{u} \]
-% for every term $t,u$, and $=_\lambda$ is $\lambda$-reduction. It is however not \emph{complete}, in the sense that
-% \[ \lsem t \rsem = \lsem u \rsem \text{\qd yet \qd} t\neq_\lambda u\,. \]
-% It is possible to build a new category $\clC_\lambda$ providing a sound and complete term model of (a fragment of simply-typed) $\lambda$-calculus; yet, the specifics of this construction are of little interest for the present discussion.
 \begin{definition}[World, Yuggoth]\label{mondo_yalda}
 	A \emph{world} is a large category $\clW$; a \emph{Yuggoth}\footnote{\emph{Yuggoth} (also \emph{Iukkoth}, or {\yugg} in Chtuvian language) is an enormous trans-Neptunian planet whose orbit is perpendicular to the ecliptic plane of the solar system. A Yuggoth is a world so big to inspire a sense of unfathomable awe.} is a world that, as a category, admits all small colimits.
 \end{definition}
@@ -39,7 +29,9 @@ The reader interested in how the construction of $\clT_L$ goes can take from \ci
 \begin{remark}\label{remark_yuggoth_2}
 	The terminology is chosen to inspire the following idea in the reader: science strives to define \emph{theories} that allow for the creation of world representations; said representations are descriptive when there is dialectic opposition between world and models; when such representation is faithful, we have reduced `the world' to a piece of the models created to represent it.
 
-	The tongue-in-cheek here is, a science (in the usual sense of the world) can never attain the status of a \science, if not potentially; attempts to generate scientific knowledge are the attempts of
+	The tongue-in-cheek here is: a science in the usual sense of the world can never attain the status of a \science, if not potentially; this because all of its attempts at describing the world are partial. But if the chosen language is powerful enough, even a small fragment of it can result in a `free linguistic category' (precisely $[\clL^\op,\Set]$) that is large enough to encompass $\clW$ completely.
+	
+	In this perspective, attempts to generate scientific knowledge are the attempts of
 	\begin{itemize}
 		\item recognizing the world $\clW$ as a sufficiently expressive object for it to contain phenomena and information;
 		\item carve a language $L$, if necessary from a small subset of $\clC$, that is sufficiently `compact', but also sufficiently expressive for its syntactic category to admit a representation into the world;
@@ -48,7 +40,7 @@ The reader interested in how the construction of $\clT_L$ goes can take from \ci
 	\end{itemize}
 	It is evident that there is a tension between two opposite feature that $\clL$ must exhibit; it has to be not too large to remain tractable, but on the other hand it must be large enough in order to be able to speak about `everything' it aims to describe.
 \end{remark}
-Regarding our definition of \science, we can't help but admit we had this definition in mind \cite[2.1]{biologia}:
+Regarding our definition of \science, we can't help but admit we had the following definition in mind \cite[2.1]{biologia}, regarded with a pair of category theorist' goggles:
 \begin{definition*}[\protect{\cite[2.1]{biologia}}]
 	A \emph{scientific theory} $\clT$ consists of a formal structure $F$ and a class of interpretations $M_i$, shortly denoted as $\clT=\langle F,M_i\mid i\in I\rangle$. The structure $F$ consists on its won right of
 	\begin{itemize}
@@ -60,7 +52,7 @@ Regarding our definition of \science, we can't help but admit we had this defini
 The language of category theory allows for a refined rephrasing of the previous definition: we say that a \emph{$\clS$-scientific theory} is the following arrangement of data:
 \begin{enumtag}{st}
 	\item a formal language $\clL$;
-	\item the syntactic category $T_\clL$, obtained as in \cite{lambek1988introduction};
+	\item the syntactic category $T_\clL$, obtained as in \cite[II.11]{lambek1988introduction};
 	\item the category of functors $[T_\clC, \clS]$, whose codomain is a Yuggoth.
 \end{enumtag}
 More than often, our theories will be $\Set$-scientific: in such case we just omit the specification of the semantic Yuggoth, and call them \emph{scientific theories}.
