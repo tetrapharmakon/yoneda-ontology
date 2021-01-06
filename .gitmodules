@@ -1,0 +1,6 @@
+[submodule "junk/fouche-sty"]
+	path = junk/fouche-sty
+	url = https://github.com/tetrapharmakon/fouche-sty
+[submodule "fouche-sty"]
+	path = fouche-sty
+	url = https://github.com/tetrapharmakon/fouche-sty
