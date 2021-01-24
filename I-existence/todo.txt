@@ -1,0 +1,35 @@
+
+1. the writing is not at the level that one would expect from a top philosophy journal; there are a number of places where it is unclear and/or awkward. 
+
+2. The paper also strikes one as *over* ambitious for a philosophy journal article. 
+
+3. There is no single clear target that the paper is arguing against; rather it reads as a bit disjointed. 
+
+4. It jumps from some technical developments in category/topos theory to structuralism in mathematics to Berkeley to Quine's criterion of ontological commitment to Borges, and one has a hard time following the thread is that connects these discussions. 
+
+5. I wonder if it wouldn't be a better idea to break it into smaller chunks. In its present form the paper is, after all, much longer than one would expect from a standard philosophy journal article. 
+
+6. more should be done on that front before it's publishable.
+
+7. As far as the content of the paper is concerned, it strikes me as if the author has overstated their claim. Their central claim is that "ontologies are mathematical objects". The hope is then that one can use just the tools of mathematics to solve problems in ontology. This strikes me as a bit far-fetched. 
+
+8. The author does use the apparatus of category / topos theory to define something called an 'ontology', but it is not entirely clear what relation this bears to the ontology -- namely, the collection of things that exist -- that philosophers are concerned with; it seems to me that we've just changed the topic of discussion here. 
+
+9. One instance from the paper is helpful in illustrating this: The author writes that they want to argue against "the belief that ontology is too general to be approached quantitatively". There are two issues I have with this. First, the 'generality' of ontology is not the problem that most philosophers will have with this project, I'd estimate. 
+
+10. Rather, it's that the question of *what exists* cannot be answered by simply doing pure mathematics; math (alone) will not tell us that tables and chairs exist. Second, there's a sense in which a great many philosophers (from Quine on!) *have* been approaching the question of what exists quantitatively. The present paper does not yet situate itself well enough in this tradition.
+
+
+-----
+
+
+1. Reviewer #2: Overall, I like this paper. What I take to be its core, namely sections 3, 4 and 5, contitutes an interesting and original contribution to the applications of categorical logic, more precisely topos theory. The reasons I believe the paper should be revised have to do with the other sections. For one thing, I am not convinced they are necessary (as they are) for the present paper to make sense. 
+
+2. Quite the contrary, I believe they introduce important dissonances with the main results given in sections 3, 4 and 5 (and 6). The very first section informs the reader that the submitted paper is part of a larger program. This is fine, but I believe that one could be informed of the existence of the program in a footnote and that it would not affect the present paper. 
+
+3. The author could still explain how categories are taken to do some ontological work in the first section, but by concentrating on the conclusions extracted directly from the work done in the following sections and not the overall program. (One general remark: some authors, like Fernando Zalamea, argue that for ontological purposes, topos theory is particularly apt, a claim that goes in the same direction than the one made in the paper.) 
+
+4. Moreover, by cutting substantially in the first section, the paper would be shorter and easier to read. Thus, I would recommend to cut or at least rewrite sections 1.2, 1.3, and a lot of section 2. Although interesting, the latter contains nothing new per se and it might even repel some readers. Thus, sections 2.1 and 2.2 can be shortened quite a bit. It might be useful to recall some of the main ingredients of Borges's work in section 2.3. I am not sure that everyone remember the details of that story.
+
+5. As I said, sections 3 and 4 are very clear and instructive. Section 5 is just as clear and fun to read. Section 6 could more or less be left as it is. To put it another way: I am not sure that the results presented in sections 3, 4 and 5 are sufficient to justify the more ambitious claims made in the first section and ontology and existence. Some readers might unfortunately ignore the results presented because of these claims made at the beginning. A more modest analytical framework might serve the paper and the program better.
+
