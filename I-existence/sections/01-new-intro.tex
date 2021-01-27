@@ -1,0 +1,45 @@
+\section{Introduction}\label{sec_intro}
+\epigraph{El mundo, desgraciadamente, es real.\\[2mm]
+\footnotesize\emph{---Disgracefully, the world is real.}
+}{\cite{confutacion}}
+La blanket assumption per questo lavoro è che `l'universo' consista di una categoria $\clE$ le cui proprietà specificano le proprietà del mondo attraverso quello che si chiama il \emph{linguaggio interno} (o Mitchell-Bénabou language) di $\clE$. La proposta di utilizzare la teoria delle categorie come fondazione della matematica non è nuova, e dates back al pioneering work di Lawvere \cite{lawvere1964elementary,lajolla,lawvere1969adjointness,lawvere1963functorial}: in  \cite{lajolla} the author W. Lawvere builds a formal language \theory{ETAC} encompassing `elementary' category theory, and a theory \theory{ETCC} for the category of all categories, yielding a model for \theory{ETAC}. In this perspective category theory has a syntax in which categories are just terms. Besides, we are provided with a \emph{meta}theory, in which we can consider categories of categories, etc.:
+\begin{quote}
+	If $\Phi$ is any theorem of the elementary theory of abstract categories, then $\forall \clA (\clA \models \Phi)$ is a theorem of the basic theory of the category of all categories. \hfill \cite{lajolla}
+\end{quote}
+After this, the author makes the rather ambiguous statement that `\textit{every object in a world described by basic theory is, at least, a category}'. We posit that the statement shall be interpreted as follows: categories in Mathematics carry a double nature. They surely are the structures in which the entities we are interested to describe organise themselves; but on the other hand, they inhabit a single, big (meta)category of all categories. Such a big structure is fixed once and for all, at the outset of our discussion, and it is the \emph{place} in which we can provide concrete models for `small' categories.
+
+In other words categories live on different, almost opposite, grounds: as -small- syntactic objects, that can be used to model \emph{language}, and as -big- semantic objects, that can be used to model \emph{meaning}.
+
+There surely is such a thing as `the category of groups'. But on the other hand, groups are just very specific kinds of sets, so groups are but a substructure of `the only category that exists'.
+
+Sure, such an approach is quite unsatisfactory from a structural perspective. It bestows the category of sets with a privileged role that it does not have: sets are just \emph{one} of the possible choices for a foundation of Mathematics. Instead, we would like to disengage the (purely syntactic) notion of structure from the (semantic) notion of interpretation.
+
+This is where Lawvere's intuition comes into play: the `categories as places' philosophy now provides such a disengagement, to approach the foundation of Mathematics agnostically: whatever the semantic universe $\clC$ is, it is just a parameter in our general theory of all possible semantic\emph{s}.
+
+Various research tracks in categorical algebra, \cite{Janelidze2004}, functorial semantics \cite{lawvere1963functorial,hyland2007category}, categorical logic \cite{lambek1988introduction}, and topos theory \cite{JohnstonePT} that characterised the last sixty years of research in category theory fit into this perspective.
+
+We accept this circle of ideas and try to push them to the limit, in order to defend the following tripartite claim: 
+\begin{quote}
+  There are many different ontologies; each ontology is a mathematical object; the study of ontologies can thus be fruitfully approached mathematically.
+\end{quote}
+Each ontology is a certain category $\clO$, inside which `existence' unravels as the sum of all statements that the internal language of $\clO$ can concoct.
+
+Evidently, the more expressive is this language the more expressive the resulting theory of existence will turn out to be. Our presupposition here is that trying to let ontology speak about `\emph{all} that there is' (the accent is on the adverb, on this famous quote of Quine \cite{quine1948there}) can lead to annoying paradoxes and ambiguities. 
+
+Instead, research shall concentrate on clarifying what the \emph{verb} means: in what sense, `what there is' \emph{is}? \emph{What is is-ness?} As category theorists, our answer --again mimicking Quine-- is that
+\begin{quote}
+	being is \emph{being the object of a category}.
+\end{quote}
+Explaining why this is exactly Quine's motto, just shifted one universe higher, is the content of our §\ref{metaon}.
+\subsubsection{Structure of the paper}
+The remaining part of the first section draws a picture as accurate as possible, of the wheres and whys of structural Mathematics; its implications are the subject of several essays on the philosophy of Mathematics, like \cite{kromer2007tool,Marquis1997,marquis2010category,marquis2008geometrical}. This section has several different purposes: it provides an explicit statement of purposes for the entire polyptych \cite{black,homot}; it declares our stance on the foundation we choose, clarifying assumptions that we feel are usually neglected on essays on the topic (`where are the objects that Mathematics aims to describe? Where is the language by means of which this description is possible?') -of course without claiming to have solved the matter once and for all; we provide pointers as specific as possible in order to help the reader navigate the relevant literature.
+
+The second section delves into the first major point of our presentation: large categories are universes where `Existence', intended as the sum of information acquired from the perceptual bundle we experience, that language organises and conceptualises. `Language' here is a shortcut to denote the power of a fixed large category $\clC$ to express well-formed formulas of (a certain fragment of) logic. Objects and morphisms of $\clC$ shall be considered respectively as types and terms of a language, \emph{the} internal language of $\clC$; now, the richer $\clC$ is, the more it is able to faithfully represent the cosmos we're thrown into. Among many possible choices for $\clC$, we take \emph{toposes} as the class of categories harbouring `set theories': the internal language of a topos is powerful enough to re-enact set theory, and subsequently propositional logic.
+
+The third section deals with a specific example of a topos, useful for later examination: the categories of objects parameterised by a fixed `space of parameters' $I$. The `slice' category $\Set/I$ is a topos, and its internal language, namely its internal logic, is tightly linked to set-theoretic properties of the slicing set $I$. The logic we obtain in $\Set/I$ by casting the general definitions of subobject classifier (and internal language) is genuinely non-classical.
+
+The fourth section contains a careful analysis of the internal language of $\Set/I$.
+
+The fifth section contains an application of the tools we exposed until now: the seemingly paradoxical `nine copper coins' problem exposed in Jorge Luis Borges' \cite{Borges1963}, far from being paradoxical, admits a natural interpretation as a statement in $\Set/I$, for a suitable choice of $I$, and thus of the induced internal logic. We propose other examples of seemingly paradoxical statements in Borges' literary work that instead are admissible statements in the internal logic of \emph{some} topos: on Tl\"on entities may disappear if neglected: this means that $I$ is linearly ordered; Babylon's chaotic lottery resembles, with their obscure, impenetrable purposes, the chaotic behaviour of a dynamical system: this means that $I$ carries a semigroup action; Tl\"on's instantaneism, mimicking/mocking Berkeley, can be obtained assuming $I$ is a discrete, uncountable set.
+
+We close the paper with a section on future development, vistas for future applications, and with a wrap-up of the discussion as we have unraveled so far. Ideally, §\ref{sec_prelim} and §\ref{int_lang} shall be skipped by readers already having some acquaintance with category theory; the second half of the paper makes however heavy use of the notation established before.

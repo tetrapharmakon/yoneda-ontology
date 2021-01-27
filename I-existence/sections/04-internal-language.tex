@@ -1,36 +1,37 @@
 \section{The internal language of variable sets}\label{int_lang}
 \epigraph{I am hard but I am fair; there is no racial bigotry here. [\dots\unkern] Here you are all equally worthless.}{GySgt Hartman}
-\begin{definition}\label{da_lang}
-	The internal language of a topos $\clE$ is a formal language defined by \emph{types} and \emph{terms}; suitable terms form the class of variables. Other terms form the class of \emph{formul\ae}.
-	\begin{itemize}
-		\item \emph{Types} are the objects of $\clE$
-		\item \emph{Terms} of type $X$ are morphisms of codomain $X$, usually denoted with Greek letters $\alpha,\beta,\sigma,\tau ,\ldots : U \to X$.
-		      \begin{itemize}
-			      \item Suitable terms are variables: the identity arrow of $X\in\clE$ is the variable  $x : X \to X$. For technical reasons we shall keep a countable number of variables of the same type distinguished:\footnote{These technical reasons lie on the evident necessity to be free to refer to the same free variable an unbounded number of times. This can be formalised in various ways: we refer the reader to \cite{lambek1988introduction} and \cite{JohnstonePT}.} $x,x',x'',\ldots : X \to X$ are all interpreted as $1_X$.
-		      \end{itemize}
-		\item Generic terms may depend on multiple variables; the domain of a term of type $X$ is the \emph{domain of definition} of a term.
-	\end{itemize}
-	A number of inductive clauses define the other terms of the language:
-	\begin{itemize}
-		\item the identity arrow of an object $X\in\clE$ is a term of type $X$;
-		\item given terms $\sigma : U \to X$ and $\tau :  V\to Y$ there exists a term $\lr{\sigma}{\tau}$ of type $X\times Y$ obtained from the pullback
-		      \[\xymatrix{
-			      W \ar[d]\ar[r]\ar[dr]|{\lr{\sigma}{\tau}} & X \times V \ar[d]\\
-			      U\times Y \ar[r]& X\times Y
-			      }\]
-		\item Given terms $\sigma : U \to X, \tau : V \to X$ of the same type $X$, there is a term $[\sigma = \tau] : W \xto{\lr{\sigma}{\tau}} X\times X \xto{\delta_X} \Omega$, where $\delta_X : X\times X \to \Omega$ is defined as the classifying map of the mono $X \hookrightarrow X\times X$.
-		\item Given a term $\sigma : U \to X$ and a term $f : X \to Y$, there is a term $f[\sigma] := f\circ\sigma : U \to Y$.
-		\item Given terms $\theta :  V \to Y^X$ and $\sigma : U\to X$, there is a term
-		      \[
-			      W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y
-		      \]
-		\item In the particular case $Y=\Omega$, the term above is denoted
-		      \[[\sigma\in\theta] : W\lr{\theta}{\sigma} \to \Omega\]
-		\item If $x$ is a variable of type $X$, and $\sigma : X\times U \to Z$, there is a term
-		      \[\lambda x.\sigma : U \xto{\eta} (X\times U)^X \xto{\sigma^X} Z^X\]
-		      obtained as the mate of $\sigma$.
-	\end{itemize}
-	These rules can of course be also presented as the formation rules for a Gentzen-like deductive system: let us rewrite them in this formalism.
+We borrow the terminology about the internal language of a topos from \cite[VI]{mac1992sheaves}, \cite{lambek1988introduction,JohnstonePT}.
+% \begin{definition}\label{da_lang}
+% 	The internal language of a topos $\clE$ is a formal language defined by \emph{types} and \emph{terms}; suitable terms form the class of variables. Other terms form the class of \emph{formul\ae}.
+% 	\begin{itemize}
+% 		\item \emph{Types} are the objects of $\clE$
+% 		\item \emph{Terms} of type $X$ are morphisms of codomain $X$, usually denoted with Greek letters $\alpha,\beta,\sigma,\tau ,\ldots : U \to X$.
+% 		      \begin{itemize}
+% 			      \item Suitable terms are variables: the identity arrow of $X\in\clE$ is the variable  $x : X \to X$. For technical reasons we shall keep a countable number of variables of the same type distinguished:\footnote{These technical reasons lie on the evident necessity to be free to refer to the same free variable an unbounded number of times. This can be formalised in various ways: we refer the reader to \cite{lambek1988introduction} and \cite{JohnstonePT}.} $x,x',x'',\ldots : X \to X$ are all interpreted as $1_X$.
+% 		      \end{itemize}
+% 		\item Generic terms may depend on multiple variables; the domain of a term of type $X$ is the \emph{domain of definition} of a term.
+% 	\end{itemize}
+% 	A number of inductive clauses define the other terms of the language:
+% 	\begin{itemize}
+% 		\item the identity arrow of an object $X\in\clE$ is a term of type $X$;
+% 		\item given terms $\sigma : U \to X$ and $\tau :  V\to Y$ there exists a term $\lr{\sigma}{\tau}$ of type $X\times Y$ obtained from the pullback
+% 		      \[\xymatrix{
+% 			      W \ar[d]\ar[r]\ar[dr]|{\lr{\sigma}{\tau}} & X \times V \ar[d]\\
+% 			      U\times Y \ar[r]& X\times Y
+% 			      }\]
+% 		\item Given terms $\sigma : U \to X, \tau : V \to X$ of the same type $X$, there is a term $[\sigma = \tau] : W \xto{\lr{\sigma}{\tau}} X\times X \xto{\delta_X} \Omega$, where $\delta_X : X\times X \to \Omega$ is defined as the classifying map of the mono $X \hookrightarrow X\times X$.
+% 		\item Given a term $\sigma : U \to X$ and a term $f : X \to Y$, there is a term $f[\sigma] := f\circ\sigma : U \to Y$.
+% 		\item Given terms $\theta :  V \to Y^X$ and $\sigma : U\to X$, there is a term
+% 		      \[
+% 			      W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y
+% 		      \]
+% 		\item In the particular case $Y=\Omega$, the term above is denoted
+% 		      \[[\sigma\in\theta] : W\lr{\theta}{\sigma} \to \Omega\]
+% 		\item If $x$ is a variable of type $X$, and $\sigma : X\times U \to Z$, there is a term
+% 		      \[\lambda x.\sigma : U \xto{\eta} (X\times U)^X \xto{\sigma^X} Z^X\]
+% 		      obtained as the mate of $\sigma$.
+% 	\end{itemize}
+	The proof thory of such categories can be presented via a Gentzen-like deductive system: for future reference, we collect them here:%let us rewrite them in this formalism.
 	\[ \small \begin{array}{cc}
 			\infer[\textsc{id}]{1_X : X \to X}{}                                                                   &
 			\infer[\Pi]{\lr{\sigma}{\tau} : W\lr{\theta}{\sigma} \to X \times Y }{\sigma : U \to X                 &   & \tau : V \to Y}             \\[1em]
@@ -39,15 +40,15 @@
 			\infer[\textsc{ev}]{W\lr{\theta}{\sigma} \xto{}Y^X\times X \xto{\text{ev}} Y}{\theta :  V \to Y^X      &   & \sigma : U\to X}          &
 			\infer[\lambda\textsc{-abs}]{\lambda x.\sigma = \sigma^X\circ\eta : U \to (X\times U)^X \to Z^X}{ x: X &   & \sigma : X\times U \to Z}
 		\end{array}\]
-	To formulas of the language of $\clE$ we apply the usual operations and rules of first-order logic: logical connectives are induced by the structure of internal Heyting algebra of $\Omega$: given formulas $\varphi,\psi$ we define
-	\begin{itemize}
-		\item $\varphi\lor \psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\lor} \Omega$;
-		\item $\varphi\land\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\land} \Omega$;
-		\item $\varphi\Rightarrow\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\Rightarrow} \Omega$;
-		\item $\lnot\varphi$ is the formula $U \to \Omega \xto{\lnot} \Omega$.
-	\end{itemize}
-\end{definition}
-Universal quantifiers admit an interpretation in the Mitchell-Bénabou language of $\clE$: the following definition comes from \cite[VI]{mac1992sheaves}.
+% 	To formulas of the language of $\clE$ we apply the usual operations and rules of first-order logic: logical connectives are induced by the structure of internal Heyting algebra of $\Omega$: given formulas $\varphi,\psi$ we define
+% 	\begin{itemize}
+% 		\item $\varphi\lor \psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\lor} \Omega$;
+% 		\item $\varphi\land\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\land} \Omega$;
+% 		\item $\varphi\Rightarrow\psi$ is the formula $W\lr{\varphi}{\psi} \to \Omega\times \Omega \xto{\Rightarrow} \Omega$;
+% 		\item $\lnot\varphi$ is the formula $U \to \Omega \xto{\lnot} \Omega$.
+% 	\end{itemize}
+% \end{definition}
+Recall also that \emph{universal quantifiers} admit an interpretation in the Mitchell-Bénabou language of $\clE$: the following definition comes from \cite[VI]{mac1992sheaves}.
 \begin{definition}\label{quantifezzi}
 	Let $\clE$ be a topos, and let $\varphi : U\times V \to \Omega$ be a formula defined on a product type $U\times V$. The variable $u:U$ can be now quantified over yielding a new formula
 	\[\forall u.\varphi(u,v) : V \to \Omega\]
@@ -75,8 +76,6 @@ Examples of universally valid formulas:
 	\item $\clE\Vdash [\varphi \Rightarrow \lnot\lnot\varphi]$
 \end{itemize}
 Let us now glance at the internal language of variable sets. This will turn out to be the cornerstone for the analysis in \autoref{sec_coins}.
-
-Here we just unwind \autoref{da_lang} at its very surface; we invite the reader to endeavour in the instructive exercise to fill all details properly.
 \begin{definition}
 	Types and terms of $\clL(\Set/I)$ are respectively arrows $\var{U}{I}$ with codomain $I$, and commutative triangles
 	\[\xymatrix{
