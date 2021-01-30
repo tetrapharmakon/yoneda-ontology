@@ -12,8 +12,8 @@ The present section sets up the notation for the subsequent discussion: we sketc
 \begin{proposition}\label{variabbo_set}
 	Let $I$ be a set, regarded as a discrete category, and let $\Set^I$ be the category of functors $F : I \to \Set$; moreover, let $\Set/I$ the slice category. Then, there is an equivalence (actually, an isomorphism when a coherent choice of coproduct has been made: see \cite[1.5.1]{Bor1}) between $\Set^I$ and $\Set/I$.
 \end{proposition}
-\begin{proof}
-	{\color{red} metti una ref}
+% \begin{proof}
+	% {\color{red} metti una ref}
 	% Our proof is based on the fact that we can represent the category $\Set^I$ as the category of $I$-indexed families of objects, i.e. with the category whose objects are $(\underline X)_I := \{X_i\mid i: I\}$, and morphisms $(\underline X)_I\to (\underline Y)_I$ the families $\{f_i : X_i \to Y_i\mid i : I\}$. Given this, the two categories obviously identify, as a functor $F : I \to \Set$ amounts to a choice of sets $A_i := F(i)$, and functoriality reduces to the property that identity arrows in $I$ are mapped to identity functions $A_i \to A_i$.
 
 	% Let us consider an object $h : X\to I$ of $\Set/I$, and define a function $i\mapsto h^\leftarrow(i)$; of course, $(X(h))_I := \{h^\leftarrow(i) \mid i : I\}$ is a $I$-indexed family, and since $I$ can be regarded as a discrete category, this is sufficient to define a functor $F_h : I \to \Set$.
@@ -23,7 +23,7 @@ The present section sets up the notation for the subsequent discussion: we sketc
 	% The claim now follows from the fact that the correspondences $h\mapsto F_h$ and $F\mapsto h_F$ are mutually inverse.
 
 	% This is easy to verify: the function $F_{h_F}$ sends $i: I$ to the set $h_F^\leftarrow(i)=Fi$, and the function $h_{F_h} : \Set/I$ has domain $\coprod_{i: I}F_h(i) = \coprod_{i: I}h^\leftarrow(i)=X$ (as $i$ runs over the set $I$, the disjoint union of all preimages $h^\leftarrow(i)$ equals the domain of $h$, i.e. the set $X$).
-\end{proof}
+% \end{proof}
 \begin{notation}
 	The present remark is meant to establish a bit of terminology: by virtue of \autoref{variabbo_set} above, an object of the category of variable sets is equally denoted pair $(A,f : A \to I)$, as a function $h : I \to \Set$, or as the family of sets $\{h(i) \mid i : I\} = \{A_i\mid i: I\}$. We call the function $f$ the \emph{structure map} of the variable set $A$, and we call the function $F_h$ the functor \emph{associated}, or corresponding, to the variable set in study. Common parlance almost always blurs the distinction between these objects.
 \end{notation}
@@ -33,7 +33,7 @@ The present section sets up the notation for the subsequent discussion: we sketc
 \begin{remark}
 	The next crucial step of our analysis is the observation that the category of variable sets is a \emph{topos}: we break the result into the verification of the various axioms. Our proof relies on the fact that the category of sets is itself a topos: in particular, it is cartesian closed, and admits the set $\{\perp,\top\}$ as subobject classifier.\footnote{We choose to employ a classical model of set theory, as opposed to an intuitionistic model where the classifier $\Omega$ consists of a more general Heyting algebra $H$; a general procedure to obtain a $\Omega$-many valued logic of set theory is to take the topos $\clE = \text{Sh}(H)$ of \emph{sheaves} on a Heyting algebra $H$: then, there is an isomorphism $\Omega_\clE\cong H$. The core of all our argument is very rarely affected by the choice to cut the complexity of our $\Omega$ to be the bare minimum; this is mainly due to expository reasons. The reader shall feel free to replace $\{\perp,\top\}$ with a more generic choice of Heyting algebra, and they are invited to adapt the arguments of section \autoref{sec_coins} accordingly.}
 \end{remark}
-{\color{red} give refs once and for all for these}
+The following results pertain to the classical literature on topos theory.
 \begin{proposition}\label{carclo}
 	The category of variable sets is Cartesian closed in the sense of \cite[p.335]{Bor1}.
 \end{proposition}
