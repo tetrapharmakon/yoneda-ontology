@@ -1,8 +1,8 @@
 \epigraph{[\dots\unkern] Le rôle essentiel [du travail de mathématicien] c'est cette transition qu'il y a entre ce quelque chose qui est écrit, qui parait incompréhensible, et les images mentales que l'on crée.}{A. Connes}
 \section{Semantic conception of theories}\label{sec_1_intro}
-The present work approaches a well-established problem in epistemology: how do we build representations of the world from perception? What is, if any, the relation between the two `worlds', one depicted in our minds, and one on our fingertips? Sometimes, such a representation results in a faithful image of the perceived world (we call it `science'); sometimes it doesn't.% (we call it `superstition').
+The present work approaches a well-established problem in a somwhat novel way: how do we build representations of the world starting from perception? What is, if any, the relation between the two `worlds', one depicted in our minds, and one at the top of our fingertips? Sometimes, such a representation results in a faithful image of the perceived world (we call it `science'); sometimes it doesn't.
 
-We hereby propose a sense in which science and non-science can be told apart using a mathematical theory, or even a mathematical object.
+We hereby propose a sense in which science and non-science can be told apart using a mathematical theory, or even a mathematical object whose nature is modeled on the idea that it captures the `obstruction' to a theory to faithfully represent the world.
 \subsection{A convincing notion of theory: two dictionaries}
 Along the XXth century, there have been many attempts towards a formal definition of a scientific theory.
 
@@ -14,7 +14,7 @@ Thus, a `Wiener Kreis' theory' is understood as a structure $(F_\clL, \clK)$ whe
 
 The idea to separate further $F_\clL$ into two `vocabularies' $(\clT,\clO)$ (intended, in modern terms, as two syntactic categories carved from two first order theories) first appears in Carnap; these are respectively the \emph{pure} or $\clT$\emph{heoretical} terms, and the \emph{applied} or $\clO$\emph{bservational} terms \cite{carnap56}.
 
-It is a commonly accepted belief --albeit rarely formalised-- that scientific theories arise from some kind of tension between the theoretical and the observational world. Our aim here is to try and `resolve the tension', acknowledging $\clT,\clO$ and their mutual relations as a concrete mathematical object, rooted in category theory \cite{McL,pedicchiofoundations,riehlcontext,leinster2014basic}.
+It is a commonly accepted belief --albeit rarely formalised-- that scientific theories arise from some kind of tension between the theoretical and the observational world. Our aim here is to try and `resolve the tension', acknowledging $\clT,\clO$ and their mutual relations as a concrete mathematical object, rooted in category theory \cite{working-categories,pedicchiofoundations,riehlcontext,leinster2014basic}.
 
 As elementary as it may seem, this idea seems fruitful to us: building on Carnap,
 \begin{remark*}
@@ -28,40 +28,45 @@ In the Wiener Kreis paradigm, the formal specification of $\clO$ is left unclear
 
 We can maintain a similar idea, just phrased in a slightly more precise way: we posit the existence of a function $\varphi$ that translates O-terms into T-terms. So, a Wiener definition of a theory is a suitable set of pairs $\{\bk{\tau,\varphi(\tau)} \mid \tau\in\clT\}\subseteq \clT\times\clO$, where $\varphi: \clT \to \clO$ is called a \emph{translation function}. In this way, it is trivially true that all the terms of a theory are in the first dictionary.
 \begin{remark*}
-  A reasonable notion of scientific theory must take into account `meaningful relations' between the observable world $\clO$ and the theoretical world $\clT$; the Carnapian request that there is a functional correspondence between the two is, however, too restrictive when $\clT,\clO$ are thought as categories.
+  A reasonable notion of scientific theory must take into account `meaningful relations' between the observable world $\clO$ and the theoretical world $\clT$. 
 \end{remark*}
-In fact, the set of pairs of a Carnap translation function $\varphi$ is precisely the \emph{graph} of $\varphi$, and not by chance: cf. our \autoref{da_collage}.\footnote{In passing, it is worth to notice that Carnap's intuition fits even more nicely in our functorial framework: assume $\clT, \clO$ exhibit some kind of structure, and that $i : \clO\subseteq\clT$ \emph{as substructures} (e.g., assume that they are some sort of ordered sets, and that the order on $\clO$ is induced by the inclusion); then, a \emph{left} (resp., \emph{right}) \emph{translation function} $\varphi_L$ (resp., $\varphi_R$), is a left (resp., right) adjoint for the inclusion $i : \clO\hookrightarrow \clT$. We will not expand further on this idea, but see \autoref{carnap_translation_functors}.}
+The Carnapian request that there is a functional correspondence between the two is, however, too restrictive when $\clT,\clO$ are thought as categories.
 
-Now, the neopositivistic current of epistemologists was the first to observe that one can build an observational version of a theory $T$ following a procedure first outlined by Ramsey \cite{ramsey1931foundations} and colloquially called \emph{Ramseyfication} of a theory; the nature of this operation seems quite elusive to those approaching it: colloquially, it can be thought as the process of replacement of each observational term of a theory with a `corresponding' theoretical term. The nature of this replacement, the syntactic domain of terms, and the sense in which the process makes a theory $F_\clL$ and its `Ramseyfied' analogue $F_\clL^\text{Ra}$ equivalent are however quite elusive.
+In fact, the set of pairs of a Carnap translation function $\varphi$ is precisely the \emph{graph} of $\varphi$, and not by chance: cf. our \autoref{da_collage}.\footnote{In passing, it is worth to notice that Carnap's intuition fits even more nicely in our functorial framework: assume $\clT, \clO$ exhibit some kind of structure, and that $i : \clO\subseteq\clT$ \emph{as substructures} (e.g., assume that they are some sort of ordered sets, and that the order on $\clO$ is induced by the inclusion); then, a \emph{left} (resp., \emph{right}) \emph{translation function} $\varphi_L$ (resp., $\varphi_R$), is a left (resp., right) adjoint for the inclusion $i : \clO\hookrightarrow \clT$. We will not expand further on this idea, but see \autoref{carnap_translation_functors}.} This is where \emph{profunctors} come into play: simply put, a profunctor stands to a functor in the same relation in which a relation stands to a function. These are the `meaningful relations' we want to consider.
 
-In the language of category theory --and especially through our profunctorial approach-- instead things become clearer: under mild assumptions on a diagram
+Now, the neopositivistic current of epistemologists was the first to observe that one can build an observational version of a theory $T$ following a procedure first outlined by Ramsey \cite{ramsey1931foundations} and colloquially called \emph{Ramseyfication} of a theory; the nature of this operation seems quite elusive to those approaching it: colloquially, it can be thought as the process of replacement of each observational term of a theory with a `corresponding' theoretical term. 
+
+The nature of this replacement, the syntactic domain of terms, and the sense in which the process makes a theory $F_\clL$ and its `Ramseyfied' analogue $F_\clL^\text{Ra}$ equivalent are however quite elusive.
+
+This is exactly where having rephrased the building blocks of the theory in terms of category theory --and especially in a profunctorial approach-- comes to the rescue: things become clearer, in the sense that mild assumptions on a diagram
 \[ \vcenter{\xymatrix{
   & \clW \ar[dl]_{N_\phi} \ar[dr]^{N_\psi} & \\
   [\clT^\op,\Set] \ar[rr]_{N_{\hat R}} && [\clO^\op,\Set]
   }} \notag\]
-of categories and profunctors, if a `deduction' entails a certain interaction or a certain behaviour for the theoretical category over the observational one, then there exists a particularly well behaved natural transformation
+of categories and functors, are enough to ensure that if a `deduction' entails a certain interaction or a certain behaviour for the theoretical category over the observational one, then there exists a particularly well behaved natural transformation
 \[ \varpi : N_{\hat R} \To \bk{\phi/\psi}\notag \]
-filling the triangle above; in non\hyp{}mathematical terms, this means that the entailment of a theoretical prediction into an observed system (i.e. a term $\tau$ of type $\fkR(T,O)$) yields an entailment $\varphi(T) \to \psi(O)$ \emph{in the world}. The details of this construction, that we consider the heart of the paper, are contained in \autoref{inducing_herme}, \autoref{funcell_herme}, and heavily rely on the terminology introduced in Sections \ref{sec_2_profu} and \ref{sec_3_nervi}.
+filling the triangle above; in non\hyp{}mathematical terms, this means that the entailment of a theoretical prediction into an observed system (i.e. a term $\tau$ of type $\fkR(T,O)$) yields an entailment $\varphi(T) \to \psi(O)$ \emph{in the world}. 
 
-The next subsection offers a birds-eye view of the structure of the paper.
-\subsection{Our contribution}
-The first remarks that we made in the introductory subsection motivate at least our tentative definition for a `pre-scientific' theory: it is some sort of correspondence of categories $R : \clT \pto \clO$, between an observational and a theoretical category.
+The reader is of course not expected to grasp the technical aspect of this construction at this stage: the details of this construction, that we consider the heart of the paper, are contained in \autoref{inducing_herme}, \autoref{funcell_herme}, and heavily rely on the terminology introduced in Sections \ref{sec_2_profu} and \ref{sec_3_nervi}.
 
-Another important point throughout the above discussion however is that from a neo-positivistic stance the distinction between theoretical and empirical is purely formal.
+% The next subsection offers a birds-eye view of the structure of the paper.
+\subsection{A closer look at `profunctorial erkennen'}
+The remarks in our introductory subsection motivate at least our tentative definition for a `pre-scientific' theory: it is some sort of correspondence of categories $R : \clT \pto \clO$, between an observational and a theoretical category; a profunctor is nothing more than a `relation between categories'.
 
-This is not due to the hypothetical nature of the former (empirical laws can be hypothetical), but to the fact that the two kinds of law contain different types of terms, as first observed in \cite{carnap56}. This purports a purely linguistic approach to epistemological issues, that we want to take at the extreme.
+Another important point to make is that from a neo-positivistic stance the distinction between theoretical and empirical is purely formal: this is not due to the hypothetical nature of the former (empirical laws can be hypothetical), but to the fact that the two kinds of law contain different types of terms, as first observed in \cite{carnap56}. This purports a purely linguistic approach to epistemological issues, that we want to take at the extreme: the profunctorial formulation of scientific theories deletes even more forcefully any intrinsic distinction that might be between the observational and the theoretical\fshyp{}linguistic structure of a theory.
 
-In fact, our work pushes in this direction even more: the profunctorial formulation of scientific theories deletes even more forcefully any intrinsic distinction that might be between the observational and the theoretical\fshyp{}linguistic structure of a theory.
+In profunctorial terms, thanks to our \autoref{da_collage} and standard category\hyp{}theoretic arguments, there is a direct counterpart \emph{in the mathematical model} for the vanishing of the distinction between `observational' and `theoretical'.
 
-In profunctorial terms, thanks to \autoref{da_collage} and standard category\hyp{}theoretic arguments, there is a direct counterpart \emph{in the mathematical model} for the vanishing of the distinction between observational and theoretical.
-
-First of all, the bicategory defined in \autoref{def_profu}, taking from \cite{benabou2000distributors}, is self-dual; this means that every profunctor $\fkR : \clT \pto \clO$ admits a `mirror image' $\fkR^\op : \clO \pto \clT$;\footnote{This is reminiscent of the fact that, as observed in \autoref{sec:org7dd09e1}, a relation has not a privileged domain of definition; clearly, the category $\mathsf{Cat}$ has a nontrivial involution given by $\op$ing a category, and this renders the auto-duality slightly more visible in the case of categorified relations (i.e., profunctors).} second, and certainly more decisive a comment towards our thesis, as outlined in \autoref{resoudre_la_tension} a generic profunctor $\fkR : \clT \pto\clO$ yields the `collage' of the observational and theoretical categories $\clT,\clO$ `glued along' $\fkR$; in simple terms, the collage of $\clT,\clO$ along $\fkR$ is a new category $\clT\uplus_p\clO$, fitting in a span
-\[ \vcenter{\xymatrix{
+Borrowing from \cite{benabou2000distributors} the observation tha the bicategory defined in \autoref{def_profu} is self-dual, we get that every profunctor $\fkR : \clT \pto \clO$ admits a `mirror image' $\fkR^\op : \clO \pto \clT$;\footnote{This is reminiscent of the fact that, as observed in \autoref{sec:org7dd09e1}, a relation has not a privileged domain of definition; clearly, the category $\mathsf{Cat}$ has a nontrivial involution given by $\op$ing a category, and this renders the auto-duality slightly more visible in the case of categorified relations (i.e., profunctors).} second, and certainly more decisive a comment towards our thesis, as outlined in \autoref{resoudre_la_tension} a generic profunctor $\fkR : \clT \pto\clO$ yields the `collage' of the observational and theoretical categories $\clT,\clO$ `glued along' $\fkR$; in simple terms, the collage of $\clT,\clO$ along $\fkR$ is a new category $\clT\uplus_p\clO$, fitting in a span
+\[ 
+  \vcenter{\xymatrix{
       & \clT\uplus_p \clO \ar[dr]\ar[dl]& \\
       \clT  && \clO
-    }} \] having suitable fibrational properties (cf. \autoref{def:dfib} and in particular \autoref{collage_explaned}) allowing to recover the theoretical and observational terms as `lying over' $(T,O)\in\clT\times\clO$.
+    }} 
+\] 
+having suitable fibrational properties (cf. \autoref{def:dfib} and in particular \autoref{collage_explaned}) allowing to recover the theoretical and observational terms as `lying over' $(T,O)\in\clT\times\clO$.
 
-From this perspective, it seems obvious why we require the pair $(\clT,\clO)$ to admit a profunctor in either direction; profunctors categorify the notion of `meaningful relation' between structured high-level systems, i.e. two syntactic categories $\clT,\clO$ `modelling' the environment to which we have access.
+From this perspective, it seems obvious why we require the pair $(\clT,\clO)$ to admit a profunctor in either direction; as already said profunctors categorify the notion of `meaningful relation' between structured high-level systems, i.e. two syntactic categories $\clT,\clO$ `modelling' the environment to which we have access.
 
 Proposing the fundamental features of a `general theory of scientific theories' stated in terms of profunctors is the main contribution of the present work.
 
@@ -80,13 +85,15 @@ When things are put in this perspective, a few remarks are in order:
         In fact, such a representation happens through `canvas functors' $\phi : \clL \to \clW$ that, thanks to the cocompleteness property of $\clW$, extend uniquely to representation functors $[\clL^\op,\Set] \leftrightarrows \clW$.
   \item On the other hand, `the world' as a whole is unknowable: instead of $\clW$, we can access to an observational fragment $\clO$, from which we recover, exploiting the cocompleteness of $[\clO^\op,\Set]$, a further representation $[\clL^\op,\Set] \leftrightarrows [\clO^\op,\Set]$. In general, this is all that can be said; such a picture is already capable of determining, by elementary means, an equivalence of categories (i.e., an equivalence of models) between the observational and the theoretical \emph{nuclei} of $[\clT^\op,\Set] \leftrightarrows [\clO^\op,\Set]$: we discuss the matter in \autoref{nuclei}, and \autoref{resoudre_la_tension}.
   \item Additional assumptions on the canvas $\phi : \clL\to \clW$, however, can refine our analysis: we can infer that the totality of models $[\clL^\op,\Set]$ \emph{contains a copy} of the world $\clW$. In this precise sense, assuming what is outlined in the definition of \science in \autoref{canvas_scienza}, language prevails: the unfathomable world is a full subcategory of the class of all modes in which the language of $\clT$ can be interpreted.
-  \item Under very mild assumptions on the arrangement of functors
+  \item As sketched above, under very mild assumptions on the arrangement of functors
         \[\notag\vcenter{\xymatrix{
           & \clW \ar[dr]^{N_\psi}\ar[dl]_{N_\phi} & \\
           [\clT^\op,\Set] \ar[rr]_{N_{\hat R}} && [\clO^\op,\Set]
           }}\]
-        (cf. \autoref{nervereal}) where $\phi,\psi$ are two canvases, respectively on the theoretical and observational side, we can find a natural 2-cell filling the triangle; this amounts to a `concretisation' of the canvases (see \autoref{funcell_herme} and \autoref{herme_explained}) into an implication between (a trace that) the theoretical terms (left in the world via $\phi$) and the observational terms (to which we have experimental access) in $\clW$. This last sentence is `the Ramsey sentence' that the canvases carve into the world, expressed in the internal language of $\clW$.
+        (cf. \autoref{nervereal}) where $\phi,\psi$ are two canvases, respectively on the theoretical and observational side, we can find a natural 2-cell filling the triangle; this amounts to a `concretisation' of the canvases (see \autoref{funcell_herme} and \autoref{herme_explained}) into an implication between (a trace that) the theoretical terms (left in the world via $\phi$) and the observational terms (to which we have experimental access) in $\clW$. 
+        
+        This last sentence is `the Ramsey sentence' that the canvases carve into the world, expressed in the internal language of $\clW$.
 \end{itemize}
 % As bold a statement as it might seem, this has fruitful consequences: see for example \autoref{remark_yuggoth_1}, \autoref{remark_yuggoth_2}.
 \subsubsection*{Structure of the paper}
-Section \ref{sec_2_profu} and \ref{sec_3_nervi} outline the mathematical background we need throughout the work; the focus is not on proofs, but we refrain from delivering a terse account of the mathematical paraphernalia without any intuition. Section \ref{sec_4_theories} introduces our main notions: a canvas, i.e. a functor $\phi : \clL \to \clW$ representing a small category in a `world', a big category $\clW$; a theory, and a science, i.e. a well-behaved canvas. Sections \ref{sec_5_tension} and \ref{sec_6_universal} will conclude the discussion; we propose some vistas for future investigation.
+Section \ref{sec_2_profu} and \ref{sec_3_nervi} outline the mathematical background we need throughout the work; the focus is not on proofs, but we wanted to refrain from delivering a terse account of the mathematical paraphernalia without any intuition (all the more because the necessary theoretical remarks are scattered throughout a variety of areas of mathematical logic, representation theory, monoidal categories and computer science: \cite{benabou2000distributors,cattani2005profunctors,pickering2017profunctor,curiennone,tambara2006distributors}). Section \ref{sec_4_theories} introduces our main notions: a canvas, i.e. a functor $\phi : \clL \to \clW$ representing a small category in a `world', a big category $\clW$; a theory, and a science, i.e. a well-behaved canvas. Sections \ref{sec_5_tension} and \ref{sec_6_universal} will conclude the discussion; we propose some vistas for future investigation.

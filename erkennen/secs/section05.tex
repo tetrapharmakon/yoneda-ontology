@@ -49,18 +49,18 @@ Assume $\phi : \clT \to \clW$ and $\psi : \clO \to \clW$ are canvases, $\fkR$ is
 \end{remark}
 We seek sufficient conditions in order for \eqref{discuss_0} to be filled by a suitable natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$: such a 2-cell will force a tameness property on the system described by the two canvases $(\phi,\psi)$: this is made precise by the following
 \begin{definition}[Fundamental cell, Hermeneutics]\label{funcell_herme}
-  In a display of categories like \eqref{2_canvases} we say that
+  In a display of categories like \eqref{2_canvases}, and referring diagram \eqref{discuss_0}, we say that
   \begin{itemize}
     \item A \emph{fundamental cell} is a natural transformation $\omega : N_{\hat \fkR} \circ N_\phi \To N_\psi$;
-    \item we say that in the world $\clW$ \emph{hermeneutics is possible} if the right extension $\bk{\phi/\psi} := \Ran_{ N_\phi}N_\psi$ exists \emph{as a functor} (note that it always exists as a profunctor, but this might not be representable).
+    \item we say that in the world $\clW$ \emph{hermeneutics is possible} if the right extension $\bk{\phi/\psi} := \Ran_{ N_\phi}N_\psi$ in the sense of \cite[§3.7]{Borceux1994} exists \emph{as a functor} (note that it always exists as a profunctor, but this might not be representable in the sense of \autoref{upper_n_lower}).
   \end{itemize}
   If hermeneutics is possible in $\clW$, and $R : \clT \pto \clO$ is a Ramsey map, any fundamental cell induces a natural transformation
   \[ \varpi : N_{\hat R} \To \bk{\phi/\psi} \]
   obtained exploiting the universal property of $\bk{\phi/\psi}$.
 \end{definition}
-If the right extension is representable in the sense above, this amounts to a higher type map (in the sense of the internal language of a closed category) comparing `generalised formulas' of kind $\fkR \To \clW(\phi,\psi)$.
+If the right extension is representable in the sense above, this amounts to a higher type map (in the sense of the internal language of a closed category, \cite{Eilenberg1966}) comparing `generalised formulas' of kind $\fkR \To \clW(\phi,\psi)$.
 \begin{remark}\label{herme_explained}
-  If we follow the customary practice to identify a morphism of a category as an entailment between sequents in a deductive system, it is easy to see that the condition that the possibility of hermeneutics captures is that we can embody sequents of the form $\llbracket T\vdash O\rrbracket \in \fkR(T,O)$ in the internal language of $\clW$; more precisely, if we think of $\fkR(T,O)$ as the type of all proofs that some theoretical terms describe an observational phenomenon, then the map $\varpi$ above can be represented as the higher order entailment relation between $\llbracket T\vdash O\rrbracket$ and the entailment $\phi(T) \to \psi(O)$ \emph{valid in $\clW$}:
+  If we follow the customary practice to identify a morphism of a category as an entailment between sequents in a deductive system, it is easy to see that the condition of `possibility of hermeneutics' captures is saying we can embody sequents of the form $\llbracket T\vdash O\rrbracket \in \fkR(T,O)$ in the internal language of $\clW$; more precisely, if following the beginning of \autoref{sec_5_tension} we think of $\fkR(T,O)$ as the type of all proofs that some theoretical terms describe an observational phenomenon, then the map $\varpi$ above can be represented as the higher order entailment relation between $\llbracket T\vdash O\rrbracket$ and the entailment $\phi(T) \to \psi(O)$ \emph{valid in $\clW$}:
   \[ \begin{array}{c}
       \varpi_{T,O} : \fkR(T,O) \to \clW(\phi(T),\psi(O)) \\ \hline
       \llbracket T\vdash O\rrbracket \Vdash (\Phi[T] \vdash \Psi[O])
