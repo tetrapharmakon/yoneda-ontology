@@ -14,26 +14,102 @@
 \begin{definition}[Groupoid]
 A \emph{groupoid} is a category where all morphisms are invertible; a \emph{group} is a groupoid with a single object $\star$. Endomorphisms of $G$ are the \emph{elements} of the group; the set of elements of $G$ becomes a monoid under composition.
 \end{definition}
-\begin{definition}[Actegory]
-Let $\clC$ be a category, and $\clG$ be a groupoid; a (left) actegory structure on $\clC$ consists of a functor
-\[
-\lambda : \clG \times \clC \to \clC
-\]
-such that
-\begin{itemize}
-  \item
-\end{itemize}
-This amounts to the choice of an \emph{action} of the groupoid $\clG$ over the categry $\clC$, i.e. of a strong monoidal functor $\lambda : \clG \to [\clC,\clC]$.
+\begin{definition}[Actegory]\label{actegory}
+	Let $\clC$ be a monoidal category; a (left) \emph{actegory} $(\clM,\rho)$ over $\clC$ consists of a category $\clM$ and a strong monoidal functor $\rho : \clC \to [\clM,\clM]$ called \emph{action}, where the codomain is endowed with the composition monoidal structure. A \emph{right} actegory is defined the same way, excepted that $\rho : \clC^o \to [\clM,\clM]$ has domain the opposite monoidal category of $\clC$ (this is \emph{not} $\clC^\op$ but instead $\clC^\text{co}$ if we regard $\clC$ as a one\hyp{}object bicategory).
 \end{definition}
-\begin{remark}
-  A \emph{right} actegory structure consists not of a functor $\rho : \clC \times \clG \to \clC$ such that axioms ... are satisfied; instead it consists of a left actegory structure with respect to the groupoid $\clG^\op$. This complies with the fact that in classical algebra a right group action is a left action of the opposite group $G^\op$.
-\end{remark}
-\begin{notation}
-  We denote a left $\clG$-actegory structure on $\clC$ as $\lhd_\clG$ or simply $\lhd$; so, the action of $G \in\clG$ on $C \in \clC$ is denoted $G\lhd C$, and similarly for $\varphi\lhd f$. In particular, the action of a group $G$ on $\clC$ is completely determined by a homomorphism from $G$ to the group of self-equivalences of $\clC$.
+\begin{notation}\label{acte_notation}
+	A left actegory over $\clC$ will be often called a left $\clC$-module; similarly we define a right $\clC$-module. The action $\rho(C)$ on $M$ will be denoted with an infix operator, $C\lact M$ (if left) or $M\ract C$ (if right).
+
+	A \emph{$\clC$-bimodule} consists of a category $\clM$ with coproducts endowed with compatible left and right actions $\lact,\ract$; `compatible' means that the left and right actions are such that
+	\[
+		(C\lact M)\ract C'\cong C\lact (M\ract C'),
+	\]
+	and that the bifunctors $\firstblank\lact\firstblank : \clC \times \clM \to \clM$ and $\firstblank\ract\firstblank : \clM \times \clC \to \clM$
+	commute with coproducts in the $\clM$ component (or in both components, if $\clC$ is a 2-rig).
+
+	This second condition translates into: the functor $\rho : \clC \to [\clM,\clM]$ factors through $[\clM,\clM]_\amalg$, and it is a morphism o 2-rigs if $\clC$ is a 2-rig.
 \end{notation}
-\begin{definition}[Action groupoid of an actegory]
-Let $(\clC,\lhd_\clG)$ be an actegory; we define the \emph{action groupoid} of $(\clC,\lhd_\clG)$ as the category having the same objects of $\clC$, and where there is a morphism $X\to G\lhd X$ for every $X\in\clC, G\in\clG$.
+% \begin{definition}[$\clM$-derivation]\label{m_deriv}
+% 	Let $\clC$ be a 2-rig, and $\clM$ be a $\clC$-bimodule; an $\clM$-valued derivation is a functor $\d : \clC \to \clM$ with the property (`\emph{bimodule Leibniz rule}') that
+% 	\[ \d C\ract C' \cup C\lact \d C' \cong \d(C\otimes C')
+% 	\]
+% \end{definition}
+% \begin{remark}\label{gamma_der}
+% 	Derivations valued in a $\clC$-bimodule are the most general ones; by specialising \ref{m_deriv} to the case where $\clM=\clC$ and the two actions are the left and right \emph{regular representations} obtained tensoring by a fixed object, we obtain back \ref{def_derivation}; if $\clM=\clC$ but instead the left module structure is obtained by change of base under an endofunctor $\gamma : \clC \to \clC$ we obtain the notion of $\gamma$-derivation (or `derivation twisted by $\gamma$'): a twisted derivation $\d : (\clC,\otimes,\cup) \to (\clC,\otimes,\cup)$ is such that
+% 	\[ \d(X\otimes Y) \cong \gamma(X)\otimes \d Y \cup \d X \otimes Y.
+% 	\]
+% \end{remark}
+% \begin{remark}
+% 	The coherence conditions for a derivation in the sense of \ref{def_derivation} can be extended to the case of a derivation valued in a module, suitably replacing the tensor of Equation \eqref{nizzator} in the leibnizator map with left and right actions: a module-valued leibnizator is then an isomorphism
+% 	\[ \d C\ract C' \cup C\lact \d C' \cong \d(C\otimes C')
+% 	\]
+% 	obtained as coproduct of maps
+% 	\[ \xymatrix{\d C\ract C' \ar[r] & \d(C\otimes C') & C\lact \d C' \ar[r] & \d(C\otimes C'). }
+% 	\]
+% 	The notion of morphism of derivations (\cf Definition \ref{moroder}) carries over as well to this more general setting, suitably replacing monoidal products with actions; this yields the definition of the category $\Der(\clC,\clM)$ of derivations valued in a $\clC$-module $\clM$.
+% \end{remark}
+\begin{definition}[Morphism of $\clC$-modules]\label{moromod}
+	Let $\clM,\clN$ be two $\clC$-bimodules in the sense of \ref{acte_notation}. A \emph{morphism of $\clC$-bimodules} $F : \clM \to \clN$ is a functor $\clM\to\clN$, commuting wth coproducts, and endowed with isomorphisms
+	\[
+		\xymatrix{
+		C\lact FM \ar[r]^-{\xi^{\l}} & F(C\lact M) &
+		FM\ract C' \ar[r]^-{\xi^{\r}} & F(M\ract C') &
+		I\lact M \ar[r]^j & M
+		}
+	\]
+	for every $C,C'\in\clC$ and $M\in\clM$ ($I$ is the monoidal unit of $\clC$).
+
+	These isomorphisms must satisfy the following coherence conditions:
+	\begin{itemize}
+		\item naturality in both components; the diagrams
+		      \[\xymatrix{
+			      F(C\lact M) \ar@{<-}[r]^-{\xi^{\l}}\ar[d]_{F(f\lact u)} & C \lact FM \ar[d]^{f\lact Fu}& F(M\ract C) \ar@{<-}[r]^-{\xi^{\r}}\ar[d]_{F(u\ract f)}&  FM\ract C\ar[d]^{Fu\ract f}\\
+			      F(C'\lact M') \ar@{<-}[r]_-{\xi^{\l}} & C' \lact FM' & F(M'\ract C') \ar@{<-}[r]_-{\xi^{\r}}& FM'\ract C'
+			      }\]
+		      are commutative, for every pair of morphisms $f : C\to C'$ in $\clC$ and $u : M\to M'$ in $\clM$.
+		\item compatibility with the coproduct preserving action maps; the diagrams
+		      \[\xymatrix{
+			      F(C\lact M) \cup F(C'\lact M)\ar[r]\ar[d]_{\xi^{\l}\cup \xi^{\l}} & F(C\lact M \cup C'\lact M) \ar[r]& F((C\cup C')\lact M) \ar[d]^{\xi^{\l}}\\ C\lact FM \cup C'\lact FM \ar[rr] && (C\cup C')\lact FM
+			      }\]
+		      \[\xymatrix{
+			      F(C\lact M) \cup F(C\lact M') \ar[r]\ar[d]_{\xi^{\l}\cup \xi^{\l}}& F(C\lact M \cup C\lact M')\ar[r] & F(C\lact (M\cup M'))\ar[d]^{\xi^{\l}} \\
+			      C\lact FM \cup C\lact FM' \ar[r]]& F(C\lact M\cup C\lact M')\ar[r] & C\lact F(M\cup M')
+			      }\]
+		      are commutative for every $C,C'\in\clC$, $M,M'\in\clM$. (Plus similar diagrams for right actions, that we do not draw.)
+		\item compatibility with the monoidality of the action maps, in the form of compatibility with the isomorphisms $C\lact (C'\lact M)\cong (C\otimes C')\lact M$ witnessing the strong monoidality of the action functor and $I\lact M\cong M$: the two diagrams
+		      \[\vcenter{\xymatrix{
+			      &F(I\lact M)\ar[dr]^{Fj}\ar[dl]_{\xi^{\l}}& \\
+			      I\lact FM \ar[rr]_j && FM
+			      }}\quad
+			      \vcenter{\xymatrix{
+			      F((C\otimes C')\lact M) \ar[r]\ar[d]_{\xi^{\l}}& F(C\lact (C'\lact M))\ar[d]^{\xi^{\l}} \\
+			      (C\otimes C')\lact FM \ar[d]& C\lact F(C'\lact M)\ar[d]^{\xi^{\l}} \\
+			      C\lact (C'\lact FM) \ar@{=}[r] & C\lact (C'\lact FM)
+			      }}\]
+		      are commutative, for $C, C'\in\clC$, $M\in\clM$.% (the unnamed arrows in the right diagram witness the strong monoidality of the action functor, in the form of isomorphisms).
+	\end{itemize}
 \end{definition}
+
+% \begin{definition}[Actegory]
+% Let $\clC$ be a category, and $\clG$ be a groupoid; a (left) actegory structure on $\clC$ consists of a functor
+% \[
+% \lambda : \clG \times \clC \to \clC
+% \]
+% such that
+% \begin{itemize}
+%   \item
+% \end{itemize}
+% This amounts to the choice of an \emph{action} of the groupoid $\clG$ over the categry $\clC$, i.e. of a strong monoidal functor $\lambda : \clG \to [\clC,\clC]$.
+% \end{definition}
+% \begin{remark}
+%   A \emph{right} actegory structure consists not of a functor $\rho : \clC \times \clG \to \clC$ such that axioms ... are satisfied; instead it consists of a left actegory structure with respect to the groupoid $\clG^\op$. This complies with the fact that in classical algebra a right group action is a left action of the opposite group $G^\op$.
+% \end{remark}
+% \begin{notation}
+%   We denote a left $\clG$-actegory structure on $\clC$ as $\lhd_\clG$ or simply $\lhd$; so, the action of $G \in\clG$ on $C \in \clC$ is denoted $G\lhd C$, and similarly for $\varphi\lhd f$. In particular, the action of a group $G$ on $\clC$ is completely determined by a homomorphism from $G$ to the group of self-equivalences of $\clC$.
+% \end{notation}
+% \begin{definition}[Action groupoid of an actegory]
+% Let $(\clC,\lhd_\clG)$ be an actegory; we define the \emph{action groupoid} of $(\clC,\lhd_\clG)$ as the category having the same objects of $\clC$, and where there is a morphism $X\to G\lhd X$ for every $X\in\clC, G\in\clG$.
+% \end{definition}
 \begin{example}
 un po' di esempi
 \end{example}

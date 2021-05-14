@@ -13,17 +13,20 @@ vI:
 
 II:
 	cd II-spheres/; \
-	  # latexmk -pdf -shell-escape ontology1.tex
-	  # latexmk -c
+	  latexmk -pdf -shell-escape main.tex
+	  latexmk -c
 
 IIp:
 	cd II-spheres/; \
-	  # latexmk -pdf -pvc -shell-escape ontology1.tex
+	  latexmk -pdf -pvc -shell-escape main.tex
+
+IIv:
+	evince II-spheres/main.pdf &
 
 III:
 	cd III-homot/; \
-	  # latexmk -pdf -shell-escape ontology1.tex
-	  # latexmk -c
+	  latexmk -pdf -shell-escape III-homot.tex
+	  latexmk -c
 
 IIIp:
 	cd III-homot/; \

@@ -1,5 +1,5 @@
 \contentsline {section}{\tocsection {}{1}{Introduction: two exactly similar spheres}}{1}{section.1}%
 \contentsline {section}{\tocsection {}{2}{The actual work}}{5}{section.2}%
-\contentsline {subsection}{\tocsubsection {}{2.1}{Klein program, with groupoids}}{6}{subsection.2.1}%
-\contentsline {section}{\tocsection {}{3}{Two exactly similar spheres, again}}{6}{section.3}%
-\contentsline {subsubsection}{\tocsubsubsection {}{3.0.1}{Existence: Persistence of Identity?}}{6}{subsubsection.3.0.1}%
+\contentsline {subsection}{\tocsubsection {}{2.1}{Klein program, with groupoids}}{7}{subsection.2.1}%
+\contentsline {section}{\tocsection {}{3}{Two exactly similar spheres, again}}{7}{section.3}%
+\contentsline {subsubsection}{\tocsubsubsection {}{3.0.1}{Existence: Persistence of Identity?}}{7}{subsubsection.3.0.1}%
